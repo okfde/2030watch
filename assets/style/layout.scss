@@ -12,6 +12,10 @@ $width-desktop: 60vw;
       stroke-width: 1px;
       stroke: #aaa;
     }
+
+    &.red {
+      fill: red;
+    }
   }
 }
 

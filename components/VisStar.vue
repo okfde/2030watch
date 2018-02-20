@@ -1,39 +1,45 @@
 <template>
-  <svg class="vis-star" :style="{ width: size[0] + margin * 2 + 'px', height: size[1] + margin * 2 + 'px' }">
+  <svg class="vis-star"
+    :style="{ width: size[0] + margin[0] * 2 + 'px', height: size[1] + margin[1] * 2 + 'px' }">
     <circle
       v-for="circle in circles"
       :r="circle"
-      :cx="size[0] / 2 + margin"
-      :cy="size[0] / 2 + margin"
+      :cx="size[0] / 2 + margin[0]"
+      :cy="size[0] / 2 + margin[1]"
       class="tick" />
     <g :transform="'translate(' + 0 + ',' + 0 + ')'">
-      <g v-for="(sdg, slug) in sdgs" :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin) + ',' + (size[1] / 2 + margin) + ')'">
+      <g v-for="(sdg, slug) in sdgs" :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin[0]) + ',' + (size[1] / 2 + margin[1]) + ')'">
         <circle
           r="4"
-          :cx="size[0] / 2 + margin"
-          :cy="margin + ysPercent[sdg.n][0] / 100 * size[1]" />
+          :cx="size[0] / 2 + margin[0]"
+          :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
         <circle
           r="4"
-          :cx="size[0] / 2 + margin"
-          :cy="margin + ysPercent[sdg.n][1] / 100 * size[1]" />
+          :cx="size[0] / 2 + margin[0]"
+          :cy="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]" />
         <text
-          :transform="'rotate(' + (360 / 17 * sdg.n * -1) + ',' + (size[0] / 2 + margin) + ',' + (margin / 2) + ')'"
-          :x="size[0] / 2 + margin"
-          :y="40"
+          :transform="'rotate(' + (360 / 17 * sdg.n * -1) + ',' + (size[0] / 2 + margin[0]) + ',' + (textDistance) + ')'"
+          :y="textDistance + getTextAnchor(sdg.n)"
           alignment-baseline="middle"
           :text-anchor="sdg.n < 17 / 2 ? 'start' : 'end'">
           <tspan
-            v-for="line in sdg.labels"
-            :x="size[0] / 2 + margin"
-            dy="1.2em">
+            v-for="(line, n) in sdg.labels"
+            :x="size[0] / 2 + margin[0]"
+            :dy="n * 1 + 'em'">
             {{ line }}
           </tspan>
         </text>
+        <circle
+          r="3"
+          :cx="size[0] / 2 + margin[0]"
+          :cy="textDistance"
+          class="red"
+        />
         <line
-          :x1="size[0] / 2 + margin"
-          :y1="margin + lines[1] / 100 * size[1]"
-          :x2="size[0] / 2 + margin"
-          :y2="margin + lines[0] / 100 * size[1]"  />
+          :x1="size[0] / 2 + margin[0]"
+          :y1="margin[1] + lines[1] / 100 * size[1]"
+          :x2="size[0] / 2 + margin[0]"
+          :y2="margin[1] + lines[0] / 100 * size[1]"  />
       </g>
     </g>
   </svg>
@@ -89,7 +95,8 @@
       return {
         range: [25, 100],
         size: [500, 500],
-        margin: 100
+        margin: [300, 100],
+        textDistance: 80
         // shapes: [],
         // shapi: [],
         // points: [],
@@ -147,12 +154,11 @@
         // 'makeActiveColour',
         // 'makeActiveTab'
       ]),
-      getResolution () {
-        // this.resolution = [this.$refs.vis.clientWidth, this.$refs.vis.clientHeight]
-        // // console.log(this.resolution)
-        // this.calcShapes()
-        // this.calcPoints()
-        // this.calcLegendPlacement()
+      getTextAnchor (n) {
+        const scaleRight = new Scale().domain([0, 8.5]).range([-18, 12])
+        const scaleLeft = new Scale().domain([8.5, 17]).range([12, -18])
+        // console.log(scale.map(n))
+        return n < 9 ? scaleRight.map(n) : scaleLeft.map(n)
       },
       handleResize () {
         // console.log('resized')
