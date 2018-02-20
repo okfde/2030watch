@@ -1,27 +1,27 @@
 <template>
   <div class="container">
-    <h2>SDG</h2>
+    <h2>SDG - {{ sdg.label }}</h2>
     <p>{{ sdg }}</p>
   </div>
 </template>
 
 <script>
   export default {
-    // validate ({ params, store }) {
-    //   // if this function returns false an 404 is printed
-    //   // console.log(params)
-    //   // console.log(store.getters.slugs, params.photos)
-    //   // return true
-    //   return store.getters.sdgsSlugs.includes(params.sdg)
-    //   // return !params.slug || params.slug === 'active' || params.slug === 'completed'
-    // },
-    // head () {
-    //   // console.log(this.editedTodo, this.project.title)
-    //   return {
-    //     title: this.project.title || 'all',
-    //     titleTemplate: '2030 Watch - %s'
-    //   }
-    // },
+    validate ({ params, store }) {
+      // if this function returns false an 404 is printed
+      console.log(params, 'Test')
+      // console.log(store.getters.slugs, params.photos)
+      // return true
+      return store.getters.sdgsSlugs.includes(params.sdg)
+      // return !params.slug || params.slug === 'active' || params.slug === 'completed'
+    },
+    head () {
+      // console.log(this.editedTodo, this.project.title)
+      return {
+        // title: this.project.title || 'all',
+        titleTemplate: '2030 Watch - %s'
+      }
+    },
     data () {
       return {
         editedTodo: 'hallo'
