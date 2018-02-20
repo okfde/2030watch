@@ -60,6 +60,90 @@ function formatPercent (v) {
   return _.round(v * 100, 1)
 }
 
+function calcStandardDeviation (values) {
+  const avg = calcAverage(values)
+
+  const squareDiffs = values.map(value => {
+    const diff = value - avg
+    const sqrDiff = diff * diff
+    return sqrDiff
+  })
+
+  const avgSquareDiff = calcAverage(squareDiffs)
+
+  const stdDev = Math.sqrt(avgSquareDiff)
+  return stdDev
+}
+
+function calcAverage (data) {
+  const sum = data.reduce((sum, value) => {
+    return sum + value
+  }, 0)
+
+  const avg = sum / data.length
+  return avg
+}
+
+function countChunksLength (arr) {
+  return arr.reduce((sum, n) => {
+    return sum + n.length
+  }, 0)
+}
+
+function countDifference (arr) {
+  return calcStandardDeviation(arr)
+}
+
+function countPartsLength (parts, n) {
+  const chunks = divideArray(parts, n)
+  const sizes = _.map(chunks, chunk => {
+    return countChunksLength(chunk)
+  })
+  return sizes
+}
+
+function divideArray (arr, n) {
+  const leftSide = _.clone(arr).splice(0, n)
+  const rightSide = _.clone(arr).splice(n, arr.length - n)
+  return [leftSide, rightSide]
+}
+
+function checkBreakPoint (parts, position) {
+  const sizes = countPartsLength(parts, position)
+  const difference = countDifference(sizes)
+  return {
+    [position]: difference
+  }
+}
+
+function countPossibleBreakPoints (parts) {
+  const nParts = parts.length
+  return nParts - 1
+}
+
+function getBestBreakPoints (arr) {
+  return parseInt(_.keys(_.first(_.sortBy(arr, v => {
+    return _.values(v)[0]
+  })))[0])
+}
+
+function insertLineBreak (parts, breakPoint) {
+  return _.map(divideArray(parts, breakPoint), part => {
+    return part.join(' ')
+  })
+}
+
+function insertLineBreaks (str) {
+  const parts = str.split(' ')
+  const nPossibleBreaks = countPossibleBreakPoints(parts)
+  const possibilities = _.times(nPossibleBreaks, n => {
+    const position = n + 1
+    return checkBreakPoint(parts, position)
+  })
+  const bestBreakPoint = getBestBreakPoints(possibilities)
+  return insertLineBreak(parts, bestBreakPoint)
+}
+
 const store = () => new Vuex.Store({
   state: {
     data: data
@@ -88,12 +172,14 @@ const store = () => new Vuex.Store({
         const _sdg = {
           'n': n,
           'label': _.first(items)['sdg'],
+          'labels': insertLineBreaks(_.first(items)['sdg']),
           'okf': formatPercent(getAverage(okfs)),
           'dns': formatPercent(getAverage(dnss)),
           'total': formatPercent(getAverage(items)),
           'items': items
         }
         n += 1
+        console.log(_sdg)
         return [sdg, _sdg]
       })
       return _.fromPairs(list)

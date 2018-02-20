@@ -17,8 +17,18 @@
           :cx="size[0] / 2 + margin"
           :cy="margin + ysPercent[sdg.n][1] / 100 * size[1]" />
         <text
+          :transform="'rotate(' + (360 / 17 * sdg.n * -1) + ',' + (size[0] / 2 + margin) + ',' + (margin / 2) + ')'"
           :x="size[0] / 2 + margin"
-          :y="margin / 2">{{ sdg.label }}</text>
+          :y="40"
+          alignment-baseline="middle"
+          :text-anchor="sdg.n < 17 / 2 ? 'start' : 'end'">
+          <tspan
+            v-for="line in sdg.labels"
+            :x="size[0] / 2 + margin"
+            dy="1.2em">
+            {{ line }}
+          </tspan>
+        </text>
         <line
           :x1="size[0] / 2 + margin"
           :y1="margin + lines[1] / 100 * size[1]"
