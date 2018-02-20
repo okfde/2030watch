@@ -18,7 +18,7 @@
     head () {
       // console.log(this.editedTodo, this.project.title)
       return {
-        // title: this.project.title || 'all',
+        title: this.sdg.label || 'all',
         titleTemplate: '2030 Watch - %s'
       }
     },
