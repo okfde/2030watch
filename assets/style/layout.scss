@@ -1,5 +1,15 @@
 $width-desktop: 60vw;
 
+.vis-star {
+  width: 500px;
+  height: 500px;
+
+  line {
+    stroke-width: 2px;
+    stroke: #222;
+  }
+}
+
 .page, header, nav, footer, .columns {
   display: flex;
   justify-content: space-between;

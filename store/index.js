@@ -81,16 +81,19 @@ const store = () => new Vuex.Store({
     },
     sdgs (state) {
       const sdgs = _.groupBy(state.data, 'slugSdg')
+      let n = 0
       const list = _.map(sdgs, (items, sdg) => {
         const okfs = _.filter(items, { 'origin': 'OKF' })
         const dnss = _.filter(items, { 'origin': 'DNS' })
         const _sdg = {
+          'n': n,
           'label': _.first(items)['sdg'],
           'okf': formatPercent(getAverage(okfs)),
           'dns': formatPercent(getAverage(dnss)),
           'total': formatPercent(getAverage(items)),
           'items': items
         }
+        n += 1
         return [sdg, _sdg]
       })
       return _.fromPairs(list)
