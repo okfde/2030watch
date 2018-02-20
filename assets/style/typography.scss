@@ -1,0 +1,45 @@
+h1 {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  color: $color-accent;
+  margin-bottom: $spacing / 2;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  color: $color-accent;
+}
+
+table {
+  thead {
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  tbody {
+    font-size: 0.85rem;
+  }
+}
+
+.btn {
+  color: $color-accent;
+  border: 2px solid $color-accent;
+  padding: $spacing / 2 $spacing;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent;
+    color: #fff;
+  }
+}
