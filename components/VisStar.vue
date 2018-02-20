@@ -1,9 +1,30 @@
 <template>
-  <svg class="vis-star">
-    <g v-for="(sdg, slug) in sdgs" :transform="'rotate(' + (360 / 17 * sdg.n) + ', 250, 250)'">
-      <circle r="4" cx="50%" :cy="ysPercent[sdg.n][0] + '%'" />
-      <circle r="4" cx="50%" :cy="ysPercent[sdg.n][1] + '%'" />
-      <line x1="50%" :y1="lines[1] + '%'" x2="50%" :y2="lines[0] + '%'"  />
+  <svg class="vis-star" :style="{ width: size[0] + margin * 2 + 'px', height: size[1] + margin * 2 + 'px' }">
+    <circle
+      v-for="circle in circles"
+      :r="circle"
+      :cx="size[0] / 2 + margin"
+      :cy="size[0] / 2 + margin"
+      class="tick" />
+    <g :transform="'translate(' + 0 + ',' + 0 + ')'">
+      <g v-for="(sdg, slug) in sdgs" :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin) + ',' + (size[1] / 2 + margin) + ')'">
+        <circle
+          r="4"
+          :cx="size[0] / 2 + margin"
+          :cy="margin + ysPercent[sdg.n][0] / 100 * size[1]" />
+        <circle
+          r="4"
+          :cx="size[0] / 2 + margin"
+          :cy="margin + ysPercent[sdg.n][1] / 100 * size[1]" />
+        <text
+          :x="size[0] / 2 + margin"
+          :y="margin / 2">{{ sdg.label }}</text>
+        <line
+          :x1="size[0] / 2 + margin"
+          :y1="margin + lines[1] / 100 * size[1]"
+          :x2="size[0] / 2 + margin"
+          :y2="margin + lines[0] / 100 * size[1]"  />
+      </g>
     </g>
   </svg>
 </template>
@@ -56,7 +77,9 @@
   export default {
     data: function () {
       return {
-        range: [30, 100]
+        range: [25, 100],
+        size: [500, 500],
+        margin: 100
         // shapes: [],
         // shapi: [],
         // points: [],
@@ -83,14 +106,23 @@
       ]),
       lines (state) {
         const scale = new Scale().domain([0, 100]).range([50, 0])
-        console.log(this.range[0], [scale.map(this.range[0]), scale.map(this.range[1])])
         return [scale.map(this.range[0]), scale.map(this.range[1])]
       },
       ysPercent (state) {
-        const scale = new Scale().domain([0, 100]).range([35, 0]) // generate this pair
+        console.log(this.lines)
+        const scale = new Scale().domain([0, 100]).range(this.lines)
         return _.map(this.sdgs, sdg => {
-          return [scale.map(sdg.okf), scale.map(sdg.dns)]
+          return [scale.map(sdg.okf), scale.map(sdg.dns), 1]
         })
+      },
+      circles (state) {
+        const outer = Math.min(...this.size) / 2 * (100 - this.lines[1] * 2) / 100
+        const inner = Math.min(...this.size) / 2 * (100 - this.lines[0] * 2) / 100
+        const scale = new Scale().domain([0, 100]).range([inner, outer])
+        return _.map([0, 25, 50, 75, 100], n => {
+          return scale.map(n)
+        })
+        // return [outer, inner]
       }
     },
     watch: {

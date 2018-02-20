@@ -1,12 +1,17 @@
 $width-desktop: 60vw;
 
 .vis-star {
-  width: 500px;
-  height: 500px;
-
   line {
     stroke-width: 2px;
     stroke: #222;
+  }
+
+  circle {
+    &.tick {
+      fill: none;
+      stroke-width: 1px;
+      stroke: #aaa;
+    }
   }
 }
 
