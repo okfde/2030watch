@@ -98,6 +98,9 @@ const store = () => new Vuex.Store({
     sdgsSlugs (state, getters) {
       return Object.keys(getters.sdgs)
     },
+    indicatorsSlugs (state, getters) {
+      return Object.keys(getters.indicators)
+    },
     domains (state) {
       // let rankScores = _.map(state.data, 'scores.rank')
       // let hdiScores = _.map(state.data, 'scores.hdi')

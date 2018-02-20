@@ -1,7 +1,8 @@
 <template>
   <div class="container">
-    <h2>SDG - {{ sdg.label }}</h2>
-    <p>{{ sdg }}</p>
+    <h2>Indicator - {{ indicator.topic }}</h2>
+    <h3><nuxt-link :to="'../sdg/' + indicator.slugSdg">← {{ indicator.sdg }}</nuxt-link></h3>
+    <span>{{ indicator.labelValue }}</span>
   </div>
 </template>
 
@@ -9,16 +10,15 @@
   export default {
     validate ({ params, store }) {
       // if this function returns false an 404 is printed
-      console.log(params, 'Test')
-      // console.log(store.getters.slugs, params.photos)
+      console.log(params)
       // return true
-      return store.getters.sdgsSlugs.includes(params.sdg)
+      return store.getters.indicatorsSlugs.includes(params.indicator)
       // return !params.slug || params.slug === 'active' || params.slug === 'completed'
     },
     head () {
       // console.log(this.editedTodo, this.project.title)
       return {
-        title: this.sdg.label || 'all',
+        title: this.indicator.topic || 'all',
         titleTemplate: '2030 Watch - %s'
       }
     },
@@ -37,9 +37,10 @@
       // Slick
     },
     computed: {
-      sdg () {
+      indicator () {
         // This property gets calculated every time. It finds the corresponding project in the store
-        return this.$store.getters.sdgs[this.$route.params.sdg]
+        console.log(this.$route.params.indicator, this.$store.getters.indicators)
+        return this.$store.getters.indicators[this.$route.params.indicator]
       }
     }
   }

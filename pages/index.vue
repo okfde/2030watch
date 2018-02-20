@@ -13,7 +13,7 @@
       <div>
         <h2>Sonnen-Grafik</h2>
         <ul>
-          <li v-for="(sdg, slug) in sdgs"><nuxt-link :to="slug">{{ sdg.label }} {{ sdg.dns }}% vs. {{ sdg.okf }}% vs. {{ sdg.total }}%</nuxt-link></li>
+          <li v-for="(sdg, slug) in sdgs"><nuxt-link :to="'sdg/' + slug">{{ sdg.label }} {{ sdg.dns }}% vs. {{ sdg.okf }}% vs. {{ sdg.total }}%</nuxt-link></li>
         </ul>
       </div>
     </section>
