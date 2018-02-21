@@ -25,9 +25,7 @@
           <tspan
             v-for="(line, n) in sdg.labels"
             :x="size[0] / 2 + margin[0]"
-            :dy="n * 1 + 'em'">
-            {{ line }}
-          </tspan>
+            :dy="n * 1 + 'em'">{{ line }}</tspan>
         </text>
         <circle
           r="3"
