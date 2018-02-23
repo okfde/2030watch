@@ -1,13 +1,7 @@
 <template>
   <div class="container rows">
     <section class="columns">
-      <div>
-        <h2>Deutschland hat sich verpflichtet bis 2030 die globalen Nachhaltigkeits-Ziele der Vereinten Nationen zu erreichen. 2030 Watch überprüft, ob dieses Versprechen eingehalten wird.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div>
-        <span>Grafik</span>
-      </div>
+      <Slideshow />
     </section>
     <section class="columns">
       <div>
@@ -21,9 +15,8 @@
 </template>
 
 <script>
-  import { mapGetters, mapState } from 'vuex'
   import VisStar from '~/components/VisStar.vue'
-  // import _ from 'lodash'
+  import Slideshow from '~/components/Slideshow.vue'
 
   export default {
     data: function () {
@@ -31,27 +24,14 @@
       }
     },
     computed: {
-      ...mapState([
-        'data'
-        // 'groups',
-        // 'activeTab'
-      ]),
-      ...mapGetters([
-        'indicators',
-        'sdgs',
-        'sdgsSlugs'
-        // 'status',
-        // 'organisations',
-        // 'domains',
-        // 'scores'
-      ])
     },
     watch: {
     },
     methods: {
     },
     components: {
-      VisStar
+      VisStar,
+      Slideshow
     },
     mounted () {
     }
@@ -61,4 +41,3 @@
 <style lang="scss">
 
 </style>
-
