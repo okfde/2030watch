@@ -20,6 +20,12 @@
     }
   }
 
+  text {
+    &.title a {
+      fill: rgb(80, 80, 80);
+    }
+  }
+
   .value {
     fill: rgb(80, 80, 80);
     font-size: 0.8em;

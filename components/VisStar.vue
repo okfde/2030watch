@@ -22,6 +22,9 @@
         <text
           :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (textDistance) + ')'"
           :y="textDistance + getTextAnchor(sdg.n)"
+          v-on:mouseover="setActiveSDG(slug)"
+          v-on:mouseleave="setActiveSDG(false)"
+          class="title"
           alignment-baseline="middle"
           :text-anchor="sdg.n < n / 2 ? 'start' : 'end'">
           <nuxt-link :to="'sdg/' + slug">
@@ -67,11 +70,13 @@
             :y="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]">
             {{ Math.round(sdg.okf) }}&#8239;%
           </text>
-        <polygon
-          class="click"
-          v-on:mouseover="setActiveSDG(slug)"
-          v-on:mouseleave="setActiveSDG(false)"
-          :points="polygon" />
+        <nuxt-link :to="'sdg/' + slug">
+          <polygon
+            class="click"
+            v-on:mouseover="setActiveSDG(slug)"
+            v-on:mouseleave="setActiveSDG(false)"
+            :points="polygon" />
+          </nuxt-link>
         <circle
           v-on:mouseover="setActiveDot(slug, sdg.okf)"
           v-on:mouseleave="setActiveDot(false, false)"
