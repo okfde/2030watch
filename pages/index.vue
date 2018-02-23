@@ -12,10 +12,9 @@
     <section class="columns">
       <div>
         <h2>Sonnen-Grafik</h2>
-        <VisStar />
-        <ul>
-          <li v-for="(sdg, slug) in sdgs"><nuxt-link :to="'sdg/' + slug">{{ sdg.label }} {{ sdg.dns }}% vs. {{ sdg.okf }}% vs. {{ sdg.total }}%</nuxt-link></li>
-        </ul>
+        <div class="vis-wrapper">
+          <VisStar />
+        </div>
       </div>
     </section>
   </div>
