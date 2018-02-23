@@ -14,10 +14,12 @@
           :y="textDistance + getTextAnchor(sdg.n)"
           alignment-baseline="middle"
           :text-anchor="sdg.n < 17 / 2 ? 'start' : 'end'">
-          <tspan
-            v-for="(line, n) in sdg.labels"
-            :x="size[0] / 2 + margin[0]"
-            :dy="n * 1 + 'em'">{{ line }}</tspan>
+          <nuxt-link :to="'sdg/' + slug">
+            <tspan
+              v-for="(line, n) in sdg.labels"
+              :x="size[0] / 2 + margin[0]"
+              :dy="n * 1 + 'em'">{{ line }}</tspan>
+          </nuxt-link>
         </text>
         <circle
           r="3"
@@ -103,7 +105,8 @@
         range: [25, 100],
         size: [500, 500],
         margin: [300, 100],
-        textDistance: 80
+        textDistance: 80,
+        ticks: [50]
       }
     },
     computed: {
@@ -129,7 +132,7 @@
         const outer = Math.min(...this.size) / 2 * (100 - this.lines[1] * 2) / 100
         const inner = Math.min(...this.size) / 2 * (100 - this.lines[0] * 2) / 100
         const scale = new Scale().domain([0, 100]).range([inner, outer])
-        return _.map([0, 25, 50, 75, 100], n => {
+        return _.map(this.ticks, n => {
           return scale.map(n)
         })
       }
