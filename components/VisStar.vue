@@ -4,50 +4,50 @@
     <circle
       v-for="circle in circles"
       :r="circle"
-      :cx="size[0] / 2 + margin[0]"
-      :cy="size[0] / 2 + margin[1]"
+      :cx="center.x"
+      :cy="center.y"
       class="tick" />
     <circle
       v-if="!!activeCircle"
       :r="activeCircle"
-      :cx="size[0] / 2 + margin[0]"
-      :cy="size[0] / 2 + margin[1]"
+      :cx="center.x"
+      :cy="center.y"
       class="hover" />
     <g>
       <g
         v-for="(sdg, slug) in sdgs"
-        :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin[0]) + ',' + (size[1] / 2 + margin[1]) + ')'"
+        :transform="'rotate(' + (portion * sdg.n) + ',' + center.x + ',' + center.y + ')'"
         :class="{ hover: !!activeSDG, active: activeSDG === slug }"
         >
         <text
-          :transform="'rotate(' + (360 / 17 * sdg.n * -1) + ',' + (size[0] / 2 + margin[0]) + ',' + (textDistance) + ')'"
+          :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (textDistance) + ')'"
           :y="textDistance + getTextAnchor(sdg.n)"
           alignment-baseline="middle"
           :text-anchor="sdg.n < 17 / 2 ? 'start' : 'end'">
           <nuxt-link :to="'sdg/' + slug">
             <tspan
               v-for="(line, n) in sdg.labels"
-              :x="size[0] / 2 + margin[0]"
+              :x="center.x"
               :dy="n * 1 + 'em'">{{ line }}</tspan>
           </nuxt-link>
         </text>
         <circle
           r="3"
-          :cx="size[0] / 2 + margin[0]"
+          :cx="center.x"
           :cy="textDistance"
           class="marker-text"
         />
         <line
           class="axis-total"
-          :x1="size[0] / 2 + margin[0]"
+          :x1="center.x"
           :y1="margin[1] + lines[1] / 100 * size[1]"
-          :x2="size[0] / 2 + margin[0]"
+          :x2="center.x"
           :y2="margin[1] + lines[0] / 100 * size[1]"  />
         <line
           class="axis-diff"
-          :x1="size[0] / 2 + margin[0]"
+          :x1="center.x"
           :y1="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]"
-          :x2="size[0] / 2 + margin[0]"
+          :x2="center.x"
           :y2="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]"  />
         <polygon
           class="click"
@@ -59,14 +59,14 @@
           v-on:mouseleave="setActiveDot(false, false)"
           class="marker-okf"
           r="4"
-          :cx="size[0] / 2 + margin[0]"
+          :cx="center.x"
           :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
         <circle
           v-on:mouseover="setActiveDot(slug, sdg.dns)"
           v-on:mouseleave="setActiveDot(false, false)"
           class="marker-dns"
           r="4"
-          :cx="size[0] / 2 + margin[0]"
+          :cx="center.x"
           :cy="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]" />
       </g>
     </g>
@@ -138,6 +138,17 @@
         'sdgs',
         'sdgsSlugs'
       ]),
+      portion (state) {
+        const { sdgs } = this
+        return 360 / _.keys(sdgs).length
+      },
+      center (state) {
+        const { size, margin } = this
+        return {
+          x: size[0] / 2 + margin[0],
+          y: size[1] / 2 + margin[1]
+        }
+      },
       lines (state) {
         const scale = new Scale().domain([0, 100]).range([50, 0])
         return [scale.map(this.range[0]), scale.map(this.range[1])]
@@ -157,12 +168,12 @@
         })
       },
       polygon (state) {
-        const { size, margin, getCoordinatesForPercent } = this
-        const offset = 360 / 17 / 2
+        const { size, margin, getCoordinatesForPercent, center, portion } = this
+        const offset = portion / 2
         const n = getCoordinatesForPercent(offset)[0] * (size[0] / 9.1) // Dont know why 9.1
 
-        const x = size[0] / 2 + margin[0]
-        const y1 = size[1] / 2 + margin[1]
+        const x = center.x
+        const y1 = center.y
         const y2 = margin[1]
 
         const middle = [x, y1]
