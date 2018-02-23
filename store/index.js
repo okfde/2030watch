@@ -179,7 +179,6 @@ const store = () => new Vuex.Store({
           'items': items
         }
         n += 1
-        console.log(_sdg)
         return [sdg, _sdg]
       })
       return _.fromPairs(list)

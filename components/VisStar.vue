@@ -124,7 +124,6 @@
         return [scale.map(this.range[0]), scale.map(this.range[1])]
       },
       ysPercent (state) {
-        console.log(this.lines)
         const scale = new Scale().domain([0, 100]).range(this.lines)
         return _.map(this.sdgs, sdg => {
           return [scale.map(sdg.okf), scale.map(sdg.dns), 1]
