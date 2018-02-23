@@ -3,6 +3,23 @@
 }
 
 .vis-star {
+
+  .hover {
+    text a {
+      fill: #eee !important;
+    }
+
+    &.active {
+      text a {
+        fill: #222 !important;
+      }
+    }
+  }
+
+  .click {
+    fill: rgba(0, 0, 0, 0.001);
+  }
+
   line {
     &.axis-total {
       stroke-width: 1px;
@@ -20,6 +37,12 @@
       fill: none;
       stroke-width: 1px;
       stroke: rgba(0, 0, 0, .1);
+    }
+
+    &.hover {
+      fill: none;
+      stroke-width: 1px;
+      stroke: rgba(255, 0, 0, 1);
     }
 
     &.marker-text {

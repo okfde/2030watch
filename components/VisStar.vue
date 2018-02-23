@@ -7,8 +7,18 @@
       :cx="size[0] / 2 + margin[0]"
       :cy="size[0] / 2 + margin[1]"
       class="tick" />
-    <g :transform="'translate(' + 0 + ',' + 0 + ')'">
-      <g v-for="(sdg, slug) in sdgs" :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin[0]) + ',' + (size[1] / 2 + margin[1]) + ')'">
+    <circle
+      v-if="!!activeCircle"
+      :r="activeCircle"
+      :cx="size[0] / 2 + margin[0]"
+      :cy="size[0] / 2 + margin[1]"
+      class="hover" />
+    <g>
+      <g
+        v-for="(sdg, slug) in sdgs"
+        :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin[0]) + ',' + (size[1] / 2 + margin[1]) + ')'"
+        :class="{ hover: !!activeSDG, active: activeSDG === slug }"
+        >
         <text
           :transform="'rotate(' + (360 / 17 * sdg.n * -1) + ',' + (size[0] / 2 + margin[0]) + ',' + (textDistance) + ')'"
           :y="textDistance + getTextAnchor(sdg.n)"
@@ -39,12 +49,21 @@
           :y1="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]"
           :x2="size[0] / 2 + margin[0]"
           :y2="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]"  />
+        <polygon
+          class="click"
+          v-on:mouseover="setActiveSDG(slug)"
+          v-on:mouseleave="setActiveSDG(false)"
+          :points="polygon" />
         <circle
+          v-on:mouseover="setActiveDot(slug, sdg.okf)"
+          v-on:mouseleave="setActiveDot(false, false)"
           class="marker-okf"
           r="4"
           :cx="size[0] / 2 + margin[0]"
           :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
         <circle
+          v-on:mouseover="setActiveDot(slug, sdg.dns)"
+          v-on:mouseleave="setActiveDot(false, false)"
           class="marker-dns"
           r="4"
           :cx="size[0] / 2 + margin[0]"
@@ -56,7 +75,6 @@
 
 <script>
   import { mapGetters, mapState, mapActions } from 'vuex'
-  // import { ResizeObserver } from 'vue-resize'
   import _ from 'lodash'
 
   class Scale {
@@ -106,7 +124,9 @@
         size: [500, 500],
         margin: [300, 100],
         textDistance: 80,
-        ticks: [50]
+        ticks: [50],
+        activeSDG: false,
+        activeCircle: false
       }
     },
     computed: {
@@ -135,6 +155,23 @@
         return _.map(this.ticks, n => {
           return scale.map(n)
         })
+      },
+      polygon (state) {
+        const { size, margin, getCoordinatesForPercent } = this
+        const offset = 360 / 17 / 2
+        const n = getCoordinatesForPercent(offset)[0] * (size[0] / 9.1) // Dont know why 9.1
+
+        const x = size[0] / 2 + margin[0]
+        const y1 = size[1] / 2 + margin[1]
+        const y2 = margin[1]
+
+        const middle = [x, y1]
+        const right = [x + n, y2]
+        const left = [x - n, y2]
+
+        return _.map([middle, right, left], pair => {
+          return pair.join(',')
+        }).join(' ')
       }
     },
     watch: {
@@ -146,6 +183,25 @@
         const scaleRight = new Scale().domain([0, 8.5]).range([-18, 12])
         const scaleLeft = new Scale().domain([8.5, 17]).range([12, -18])
         return n < 9 ? scaleRight.map(n) : scaleLeft.map(n)
+      },
+      getCoordinatesForPercent (percent) {
+        const x = Math.cos(2 * Math.PI * percent)
+        const y = Math.sin(2 * Math.PI * percent)
+        return [x, y]
+      },
+      setActiveSDG (id) {
+        this.activeSDG = id
+      },
+      setActiveDot (id, percentage) {
+        this.activeSDG = id
+        if (percentage) {
+          const outer = Math.min(...this.size) / 2 * (100 - this.lines[1] * 2) / 100
+          const inner = Math.min(...this.size) / 2 * (100 - this.lines[0] * 2) / 100
+          const scale = new Scale().domain([0, 100]).range([inner, outer])
+          this.activeCircle = scale.map(percentage)
+        } else {
+          this.activeCircle = false
+        }
       }
     },
     components: {
