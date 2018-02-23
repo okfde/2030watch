@@ -1,24 +1,5 @@
 $width-desktop: 60vw;
 
-.vis-star {
-  line {
-    stroke-width: 2px;
-    stroke: #222;
-  }
-
-  circle {
-    &.tick {
-      fill: none;
-      stroke-width: 1px;
-      stroke: #aaa;
-    }
-
-    &.red {
-      fill: red;
-    }
-  }
-}
-
 .page, header, nav, footer, .columns {
   display: flex;
   justify-content: space-between;

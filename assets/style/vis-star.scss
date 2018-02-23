@@ -1,0 +1,18 @@
+.vis-star {
+  line {
+    stroke-width: 2px;
+    stroke: #222;
+  }
+
+  circle {
+    &.tick {
+      fill: none;
+      stroke-width: 1px;
+      stroke: #aaa;
+    }
+
+    &.red {
+      fill: red;
+    }
+  }
+}
