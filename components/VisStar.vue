@@ -61,6 +61,14 @@
           r="4"
           :cx="center.x"
           :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
+          <text
+            class="value"
+            :text-anchor="sdg.n < n / 2 ? 'start' : 'end'"
+            :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (margin[1] + ysPercent[sdg.n][0] / 100 * size[1]) + ')'"
+            :x="center.x"
+            :y="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]">
+            {{ sdg.okf }}
+          </text>
         <circle
           v-on:mouseover="setActiveDot(slug, sdg.dns)"
           v-on:mouseleave="setActiveDot(false, false)"
@@ -68,6 +76,14 @@
           r="4"
           :cx="center.x"
           :cy="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]" />
+        <text
+          class="value"
+          :text-anchor="sdg.n < n / 2 ? 'start' : 'end'"
+          :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (margin[1] + ysPercent[sdg.n][1] / 100 * size[1]) + ')'"
+          :x="center.x"
+          :y="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]">
+          {{ sdg.dns }}
+        </text>
       </g>
     </g>
   </svg>
