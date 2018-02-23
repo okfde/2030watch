@@ -9,14 +9,6 @@
       class="tick" />
     <g :transform="'translate(' + 0 + ',' + 0 + ')'">
       <g v-for="(sdg, slug) in sdgs" :transform="'rotate(' + (360 / 17 * sdg.n) + ',' + (size[0] / 2 + margin[0]) + ',' + (size[1] / 2 + margin[1]) + ')'">
-        <circle
-          r="4"
-          :cx="size[0] / 2 + margin[0]"
-          :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
-        <circle
-          r="4"
-          :cx="size[0] / 2 + margin[0]"
-          :cy="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]" />
         <text
           :transform="'rotate(' + (360 / 17 * sdg.n * -1) + ',' + (size[0] / 2 + margin[0]) + ',' + (textDistance) + ')'"
           :y="textDistance + getTextAnchor(sdg.n)"
@@ -31,13 +23,30 @@
           r="3"
           :cx="size[0] / 2 + margin[0]"
           :cy="textDistance"
-          class="red"
+          class="marker-text"
         />
         <line
+          class="axis-total"
           :x1="size[0] / 2 + margin[0]"
           :y1="margin[1] + lines[1] / 100 * size[1]"
           :x2="size[0] / 2 + margin[0]"
           :y2="margin[1] + lines[0] / 100 * size[1]"  />
+        <line
+          class="axis-diff"
+          :x1="size[0] / 2 + margin[0]"
+          :y1="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]"
+          :x2="size[0] / 2 + margin[0]"
+          :y2="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]"  />
+        <circle
+          class="marker-okf"
+          r="4"
+          :cx="size[0] / 2 + margin[0]"
+          :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
+        <circle
+          class="marker-dns"
+          r="4"
+          :cx="size[0] / 2 + margin[0]"
+          :cy="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]" />
       </g>
     </g>
   </svg>

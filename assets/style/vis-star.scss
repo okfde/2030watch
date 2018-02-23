@@ -1,18 +1,33 @@
 .vis-star {
   line {
-    stroke-width: 2px;
-    stroke: #222;
+    &.axis-total {
+      stroke-width: 1px;
+      stroke: rgba(0, 0, 0, .2);
+    }
+
+    &.axis-diff {
+      stroke-width: 1px;
+      stroke: rgba(0, 0, 0, 1);
+    }
   }
 
   circle {
     &.tick {
       fill: none;
       stroke-width: 1px;
-      stroke: #aaa;
+      stroke: rgba(0, 0, 0, .1);
     }
 
-    &.red {
-      fill: red;
+    &.marker-text {
+      fill: none;
+    }
+
+    &.marker-dns {
+      fill: $color-dns;
+    }
+
+    &.marker-okf {
+      fill: $color-okf;
     }
   }
 }
