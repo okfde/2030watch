@@ -1,7 +1,9 @@
 <template>
   <div class="container rows">
     <section class="columns">
-      <Slideshow />
+      <header>
+        <Slideshow />
+      </header>
     </section>
     <section class="columns">
       <div>

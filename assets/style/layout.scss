@@ -1,6 +1,6 @@
 $width-desktop: 60vw;
 
-.page, header, nav, footer, .columns {
+.page, .page-header, nav, footer, .columns {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -11,7 +11,7 @@ $width-desktop: 60vw;
   min-height: 100vh;
 }
 
-header, .container, footer {
+.page-header, .container, footer {
   margin: 0 calc(100vw - #{$width-desktop * 2}) 0;
   width: $width-desktop;
 }
@@ -64,7 +64,7 @@ header, .container, footer {
   }
 }
 
-header {
+.page-header {
   max-height: 30vw;
   align-items: center;
 
@@ -78,7 +78,7 @@ header {
   }
 }
 
-header, footer {
+.page-header, footer {
   min-height: 100px;
   height: 30vh; /* size is based on the height of the device */
   align-items: center;
@@ -99,18 +99,18 @@ footer {
   }
 }
 
-.container, footer, header {
+.container, footer, .page-header {
   margin: 0 2vw 0;
   width: 96vw;
 }
 
 @media (min-width: 600px) {
-  .container, footer, header {
+  .container, footer, .page-header {
     margin: 0 2vw 0;
     width: 96vw;
   }
 
-  header, footer {
+  .page-header, footer {
     height: 15vh;
     max-height: 30vw;
 
@@ -143,12 +143,12 @@ footer {
 }
 
 @media (min-width: 900px) {
-  .container, footer, header {
+  .container, footer, .page-header {
     margin: 0 6vw 0;
     width: 88vw;
   }
 
-  header, footer {
+  .page-header, footer {
     height: 15vh;
     max-height: 30vw;
 
@@ -181,12 +181,12 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  .container, footer, header {
+  .container, footer, .page-header {
     margin: 0 4vw 0;
     width: 92vw;
   }
 
-  header, footer {
+  .page-header, footer {
     height: 15vh;
     max-height: 35vw;
 
@@ -215,12 +215,12 @@ footer {
 }
 
 @media (min-width: 1600px) {
-  .container, footer, header {
+  .container, footer, .page-header {
     margin: 0 10vw 0;
     width: 80vw;
   }
 
-  header, footer {
+  .page-header, footer {
     height: 16vh;
     max-height: 40vw;
 

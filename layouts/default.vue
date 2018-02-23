@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <header class="columns">
+    <header class="page-header columns">
       <hgroup class="logo">
         <h1>2030 Watch</h1>
       </hgroup>
