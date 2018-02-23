@@ -23,7 +23,7 @@
           :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (textDistance) + ')'"
           :y="textDistance + getTextAnchor(sdg.n)"
           alignment-baseline="middle"
-          :text-anchor="sdg.n < 17 / 2 ? 'start' : 'end'">
+          :text-anchor="sdg.n < n / 2 ? 'start' : 'end'">
           <nuxt-link :to="'sdg/' + slug">
             <tspan
               v-for="(line, n) in sdg.labels"
@@ -138,9 +138,11 @@
         'sdgs',
         'sdgsSlugs'
       ]),
+      n (state) {
+        return _.keys(this.sdgs).length
+      },
       portion (state) {
-        const { sdgs } = this
-        return 360 / _.keys(sdgs).length
+        return 360 / this.n
       },
       center (state) {
         const { size, margin } = this
@@ -190,10 +192,12 @@
     methods: {
       ...mapActions([
       ]),
-      getTextAnchor (n) {
-        const scaleRight = new Scale().domain([0, 8.5]).range([-18, 12])
-        const scaleLeft = new Scale().domain([8.5, 17]).range([12, -18])
-        return n < 9 ? scaleRight.map(n) : scaleLeft.map(n)
+      getTextAnchor (a) {
+        const { n } = this
+        const h = n / 2
+        const scaleRight = new Scale().domain([0, h]).range([-18, 12])
+        const scaleLeft = new Scale().domain([h, n]).range([12, -18])
+        return a < h ? scaleRight.map(a) : scaleLeft.map(a)
       },
       getCoordinatesForPercent (percent) {
         const x = Math.cos(2 * Math.PI * percent)
