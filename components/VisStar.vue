@@ -49,6 +49,24 @@
           :y1="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]"
           :x2="center.x"
           :y2="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]"  />
+        <text
+          class="value"
+          :text-anchor="sdg.n < n / 2 ? 'end' : 'start'"
+          :alignment-baseline="(sdg.n < n / 4 || sdg.n > n / 4 * 3) ? 'baseline' : 'hanging'"
+          :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (margin[1] + ysPercent[sdg.n][1] / 100 * size[1]) + ')'"
+          :x="(sdg.n > n / 2 ? 5 : -5) + center.x"
+          :y="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]">
+          {{ Math.round(sdg.dns) }}&#8239;%
+        </text>
+        <text
+            class="value"
+            :text-anchor="sdg.n < n / 2 ? 'start' : 'end'"
+            :alignment-baseline="(sdg.n < n / 4 || sdg.n > n / 4 * 3) ? 'hanging' : 'baseline'"
+            :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (margin[1] + ysPercent[sdg.n][0] / 100 * size[1]) + ')'"
+            :x="(sdg.n < n / 2 ? 5 : -5) + center.x"
+            :y="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]">
+            {{ Math.round(sdg.okf) }}&#8239;%
+          </text>
         <polygon
           class="click"
           v-on:mouseover="setActiveSDG(slug)"
@@ -61,14 +79,6 @@
           r="4"
           :cx="center.x"
           :cy="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]" />
-          <text
-            class="value"
-            :text-anchor="sdg.n < n / 2 ? 'start' : 'end'"
-            :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (margin[1] + ysPercent[sdg.n][0] / 100 * size[1]) + ')'"
-            :x="center.x"
-            :y="margin[1] + ysPercent[sdg.n][0] / 100 * size[1]">
-            {{ sdg.okf }}
-          </text>
         <circle
           v-on:mouseover="setActiveDot(slug, sdg.dns)"
           v-on:mouseleave="setActiveDot(false, false)"
@@ -76,14 +86,6 @@
           r="4"
           :cx="center.x"
           :cy="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]" />
-        <text
-          class="value"
-          :text-anchor="sdg.n < n / 2 ? 'start' : 'end'"
-          :transform="'rotate(' + (portion * sdg.n * -1) + ',' + center.x + ',' + (margin[1] + ysPercent[sdg.n][1] / 100 * size[1]) + ')'"
-          :x="center.x"
-          :y="margin[1] + ysPercent[sdg.n][1] / 100 * size[1]">
-          {{ sdg.dns }}
-        </text>
       </g>
     </g>
   </svg>

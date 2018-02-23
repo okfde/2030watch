@@ -13,12 +13,17 @@
       text a {
         fill: #222 !important;
       }
+
+      .value {
+        display: inline;
+      }
     }
   }
 
   .value {
     fill: rgb(80, 80, 80);
     font-size: 0.8em;
+    display: none;
   }
 
   .click {
