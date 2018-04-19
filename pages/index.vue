@@ -1,8 +1,9 @@
 <template>
   <div class="container rows">
     <header>
-      <h1>Wie nachhaltig ist Deutschland wirklich?</h1>
-      <p>Deutschland hat sich verpflichtet bis 2030 die globalen Nachhaltigkeits-Ziele der Vereinten Nationen zu erreichen. 2030 Watch überprüft, ob dieses Versprechen eingehalten wird.</p>
+      <h1>Wie nachhaltig ist Deutschland?</h1>
+      <p>Der Zustand der Welt erfordert eine Transformation zu mehr Gerechtigkeit und Nachhaltiger Entwicklung. In 2015 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Transformation siebzehn Nachhaltigkeitsziele - den sogenannten “Sustainable Development Goals (SDGs)”- bis zum Jahr 2030 umzusetzen. Auch die Bundesregierung hat mit der “Deutschen Nachhaltigkeitsstrategie (DNS)” die SDGs in nationale Ziele übersetzt.</p>
+      <p>2030Watch will als zivilgesellschaftliches Projekt die Deutsche Nachhaltigkeitsstrategie (DNS) kritisch ergänzen und überprüfen, ob Deutschland seine Versprechen einhält.</p>
     </header>
     <section class="columns">
       <Slideshow />
