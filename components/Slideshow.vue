@@ -39,7 +39,7 @@
   export default {
     data: function () {
       return {
-        slide: 0
+        slide: 1
       }
     },
     computed: {
