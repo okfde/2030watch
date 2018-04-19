@@ -11,15 +11,45 @@ $width-desktop: 60vw;
   min-height: 100vh;
 }
 
-.page-header, .container, footer {
-  margin: 0 calc(100vw - #{$width-desktop * 2}) 0;
-  width: $width-desktop;
+.page-header, .container, .page-footer {
+  margin: 0 2vw 0;
+  width: 96vw;
 }
 
-.content {
+.page-content {
   background-color: #f9f9f9;
   padding: $spacing * 2 0;
   flex: 1;
+}
+
+.page-header, .page-footer {
+  min-height: 100px;
+  height: 30vh; /* size is based on the height of the device */
+  align-items: center;
+  max-height: 30vw;
+}
+
+.page-header {
+  nav {
+    text-align: right;
+    display: block;
+
+    ul li + li {
+      margin-left: $spacing;
+    }
+  }
+}
+
+.page-footer {
+  font-size: 0.85em;
+  border-top: 3px solid #000;
+  text-align: center;
+  padding-top: 8vw;
+
+  section {
+    margin-top: 6vw;
+    width: calc(1 / 3 * 100% - (1 - 1 / 3) * 4vw);
+  }
 }
 
 .column, .columns > * {
@@ -64,53 +94,13 @@ $width-desktop: 60vw;
   }
 }
 
-.page-header {
-  max-height: 30vw;
-  align-items: center;
-
-  nav {
-    text-align: right;
-    display: block;
-
-    ul li + li {
-      margin-left: $spacing;
-    }
-  }
-}
-
-.page-header, footer {
-  min-height: 100px;
-  height: 30vh; /* size is based on the height of the device */
-  align-items: center;
-  max-height: 30vw;
-}
-
-footer {
-  margin-top: 8vw;
-  margin-bottom: 8vw;
-  font-size: 0.85em;
-  border-top: 3px solid #000;
-  text-align: center;
-  padding-top: 8vw;
-
-  section {
-    margin-top: 6vw;
-    width: calc(1 / 3 * 100% - (1 - 1 / 3) * 4vw);
-  }
-}
-
-.container, footer, .page-header {
-  margin: 0 2vw 0;
-  width: 96vw;
-}
-
 @media (min-width: 600px) {
-  .container, footer, .page-header {
+  .container, .page-footer, .page-header {
     margin: 0 2vw 0;
     width: 96vw;
   }
 
-  .page-header, footer {
+  .page-header, .page-footer {
     height: 15vh;
     max-height: 30vw;
 
@@ -129,7 +119,7 @@ footer {
     }
   }
 
-  footer {
+  .page-footer {
     margin-top: 2vw;
     border: 0;
     padding: 0;
@@ -143,12 +133,12 @@ footer {
 }
 
 @media (min-width: 900px) {
-  .container, footer, .page-header {
+  .container, .page-footer, .page-header {
     margin: 0 6vw 0;
     width: 88vw;
   }
 
-  .page-header, footer {
+  .page-header, .page-footer {
     height: 15vh;
     max-height: 30vw;
 
@@ -167,7 +157,7 @@ footer {
     }
   }
 
-  footer {
+  .page-footer {
     margin-top: 4vw;
 
     &.post {
@@ -181,12 +171,12 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  .container, footer, .page-header {
+  .container, .page-footer, .page-header {
     margin: 0 4vw 0;
     width: 92vw;
   }
 
-  .page-header, footer {
+  .page-header, .page-footer {
     height: 15vh;
     max-height: 35vw;
 
@@ -205,7 +195,7 @@ footer {
     }
   }
 
-  footer {
+  .page-footer {
     margin-top: 4vw;
 
     &.post {
@@ -215,12 +205,12 @@ footer {
 }
 
 @media (min-width: 1600px) {
-  .container, footer, .page-header {
+  .container, .page-footer, .page-header {
     margin: 0 10vw 0;
     width: 80vw;
   }
 
-  .page-header, footer {
+  .page-header, .page-footer {
     height: 16vh;
     max-height: 40vw;
 
@@ -239,7 +229,7 @@ footer {
     }
   }
 
-  footer {
+  .page-footer {
     margin-top: 2vw;
 
     &.post {

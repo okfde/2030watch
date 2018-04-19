@@ -14,10 +14,10 @@
         </ul>
       </nav>
     </header>
-    <div class="content">
+    <div class="page-content">
       <nuxt/>
     </div>
-    <footer class="columns">
+    <footer class="page-footer columns">
       <address>
         Open Knowledge Foundation Deutschland e.V.<br /><br />
         Singerstr. 109, 10179 Berlin, Deutschland<br /><br />
