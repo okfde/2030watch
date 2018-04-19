@@ -11,14 +11,14 @@ $width-desktop: 60vw;
   min-height: 100vh;
 }
 
-.page-header, .container, .page-footer {
-  margin: 0 2vw 0;
-  width: 96vw;
-}
+// .page-header, .container, .page-footer {
+//   margin: 0 2vw 0;
+//   width: 96vw;
+// }
 
 .page-content {
   background-color: #f9f9f9;
-  padding: $spacing * 2 0;
+  // padding: $spacing * 2 0;
   flex: 1;
 }
 
@@ -30,6 +30,8 @@ $width-desktop: 60vw;
 }
 
 .page-header {
+  padding: $spacing $spacing*2 $spacing $spacing*2;
+
   nav {
     text-align: right;
     display: block;
@@ -67,16 +69,15 @@ $width-desktop: 60vw;
 }
 
 .rows > * {
-  padding-top: $spacing;
-  padding-bottom: $spacing;
+  padding: $spacing*2;
 
-  &:first-child {
-    padding-top: 0;
-  }
+  // &:first-child {
+  //   padding-top: 0;
+  // }
 
-  &:last-child {
-    padding-bottom: 0;
-  }
+  // &:last-child {
+  //   padding-bottom: 0;
+  // }
 }
 
 .rows--line > * {
@@ -95,10 +96,10 @@ $width-desktop: 60vw;
 }
 
 @media (min-width: 600px) {
-  .container, .page-footer, .page-header {
-    margin: 0 2vw 0;
-    width: 96vw;
-  }
+  // .container, .page-footer, .page-header {
+  //   margin: 0 2vw 0;
+  //   width: 96vw;
+  // }
 
   .page-header, .page-footer {
     height: 15vh;
@@ -133,10 +134,10 @@ $width-desktop: 60vw;
 }
 
 @media (min-width: 900px) {
-  .container, .page-footer, .page-header {
-    margin: 0 6vw 0;
-    width: 88vw;
-  }
+  // .container, .page-footer, .page-header {
+  //   margin: 0 6vw 0;
+  //   width: 88vw;
+  // }
 
   .page-header, .page-footer {
     height: 15vh;
@@ -171,10 +172,10 @@ $width-desktop: 60vw;
 }
 
 @media (min-width: 1200px) {
-  .container, .page-footer, .page-header {
-    margin: 0 4vw 0;
-    width: 92vw;
-  }
+  // .container, .page-footer, .page-header {
+  //   margin: 0 4vw 0;
+  //   width: 92vw;
+  // }
 
   .page-header, .page-footer {
     height: 15vh;
@@ -205,10 +206,10 @@ $width-desktop: 60vw;
 }
 
 @media (min-width: 1600px) {
-  .container, .page-footer, .page-header {
-    margin: 0 10vw 0;
-    width: 80vw;
-  }
+  // .container, .page-footer, .page-header {
+  //   margin: 0 10vw 0;
+  //   width: 80vw;
+  // }
 
   .page-header, .page-footer {
     height: 16vh;
