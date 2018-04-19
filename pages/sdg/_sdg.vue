@@ -1,23 +1,38 @@
 <template>
-  <div class="container">
-    <nav><nuxt-link to="/">Übersicht</nuxt-link><span class="spacer">/</span>{{ sdg.label }}</nav>
-    <header>
-      <h1>{{ sdg.label }}</h1>
+  <div class="page-container">
+    <nav class="inpage-nav">
+      <div class="wrapper">
+        <nuxt-link to="/">Übersicht</nuxt-link><span class="spacer">/</span>{{ sdg.label }}
+      </div>
+    </nav>
+    <header class="inpage-header">
+      <div class="wrapper">
+        <h1>{{ sdg.label }}</h1>
+        <section class="columns columns-gutter">
+          <div>
+            <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
+          </div>
+          <div>
+            <strong>{{ sdg.okf }} {{ sdg.total }}</strong>
+          </div>
+        </section>
+      </div>
     </header>
     <div class="content">
-      <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
-      <h3>Die offiziellen Indikatoren der Bundesregierung</h3>
-      <span>Diese Indiktoren spiegeln laut Bundesregierung den Fortschritt des Zieles »{{ sdg.label }}« wider. Daraus würde sich folgender Fortschritt berechnen:</span>
-      <h3>OKF: {{ sdg.okf }}</h3>
-      <h3>DNS: {{ sdg.dns }}</h3>
-      <h3>Total: {{ sdg.total }}</h3>
-      <h3>DNS: {{ sdg.dns }}</h3>
-      <ul>
-        <li v-for="indicator in sdg.items"><nuxt-link :to="'../indicator/' + indicator.slugTopic">{{ indicator.origin }} – {{ indicator.topic }}</nuxt-link></li>
-      </ul>
-      <h3>Die komplementären Indikatoren der OKF</h3>
-      <span>Wir schlagen hingegen eine erweiterte Indikatoren-Liste vor, die einen Indikator übernimmt, einen modifiziert, einen löscht und zwei hinzufügt. Daraus ergibt sich folgender Fortschritt:</span>
-      <h3>Total: {{ sdg.total }}</h3>
+      <div class="wrapper">
+        <h3>Die offiziellen Indikatoren der Bundesregierung</h3>
+        <span>Diese Indiktoren spiegeln laut Bundesregierung den Fortschritt des Zieles »{{ sdg.label }}« wider. Daraus würde sich folgender Fortschritt berechnen:</span>
+        <h3>OKF: {{ sdg.okf }}</h3>
+        <h3>DNS: {{ sdg.dns }}</h3>
+        <h3>Total: {{ sdg.total }}</h3>
+        <h3>DNS: {{ sdg.dns }}</h3>
+        <ul>
+          <li v-for="indicator in sdg.items"><nuxt-link :to="'../indicator/' + indicator.slugTopic">{{ indicator.origin }} – {{ indicator.topic }}</nuxt-link></li>
+        </ul>
+        <h3>Die komplementären Indikatoren der OKF</h3>
+        <span>Wir schlagen hingegen eine erweiterte Indikatoren-Liste vor, die einen Indikator übernimmt, einen modifiziert, einen löscht und zwei hinzufügt. Daraus ergibt sich folgender Fortschritt:</span>
+        <h3>Total: {{ sdg.total }}</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +65,6 @@
   }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>

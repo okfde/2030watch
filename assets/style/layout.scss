@@ -11,7 +11,7 @@ $width-desktop: 60vw;
   min-height: 100vh;
 }
 
-.page, .inpage-header {
+.page, .inpage-header, .inpage-nav {
   background-color: $color-accent;
 }
 
@@ -61,6 +61,10 @@ $width-desktop: 60vw;
 .page-container {
   & > * {
     padding: $spacing 0;
+  }
+
+  & > .inpage-nav {
+    padding: 0;
   }
 }
 
