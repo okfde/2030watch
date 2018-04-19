@@ -1,6 +1,7 @@
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -16,6 +17,10 @@ h3 {
   font-size: 1.4rem;
   letter-spacing: 0.01em;
   color: $color-accent;
+}
+
+p + p {
+  margin-top: 1em;
 }
 
 table {
@@ -36,11 +41,38 @@ table {
   margin: 0 0.25em;
 }
 
+.page-header {
+  .logo {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .page-nav {
+    li a {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      padding: 0 0.2rem 0.2rem;
+
+      &:hover {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      &.nuxt-link-active {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+
 .btn {
   color: #fff;
   border: 1px solid #5C9E31;
   border-radius: 2px;
-  padding: $spacing / 4 $spacing / 2;
+  padding: $spacing / 4 $spacing / 2 !important;
   background-color: #B1CC33;
   font-weight: bold;
   cursor: pointer;
@@ -54,5 +86,16 @@ table {
     cursor: default;
     background-color: #D0CFCE;
     border-color: #9B9B9A;
+  }
+
+  &.btn--action {
+    background-color: #FCEA2B;
+    border-color: darken(#FCEA2B, 10%);
+    color: #222 !important;
+
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+    }
   }
 }

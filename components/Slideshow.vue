@@ -3,7 +3,7 @@
     <header>
       <h2>Warum wir andere Indikatoren brauchen um Fortschritt zu messen</h2>
     </header>
-    <section>
+    <section class="columns columns-gutter">
       <div>
         <transition name="fade">
           <div v-if="slide === 1">
@@ -60,25 +60,18 @@
     background-color: #fff;
     border: 1px solid #F1F2F4;
     border-radius: 2px;
-    padding: 1rem;
+    padding: 3rem;
+    box-shadow: 5px 5px 60px 0px rgba(0,0,0,0.25);
 
     header, section, footer {
       width: 100%;
     }
 
     .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
-      }
-      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        opacity: 0;
-      }
-
-    section {
-      display: flex;
-
-      div {
-        flex: 1;
-      }
+      transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      opacity: 0;
     }
 
     footer {

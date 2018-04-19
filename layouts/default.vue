@@ -1,21 +1,21 @@
 <template>
   <div class="page">
     <header class="page-header columns">
-      <nuxt-link to="/">2030 Watch</nuxt-link>
+      <strong class="logo"><nuxt-link to="/">2030 Watch</nuxt-link></strong>
       <nav class="page-nav">
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/projekt">Das Projekt</nuxt-link></li>
           <li><nuxt-link to="/blog">Blog</nuxt-link></li>
           <li><nuxt-link to="/about">Über uns</nuxt-link></li>
-          <li><nuxt-link to="/aktiv">Werde aktiv</nuxt-link></li>
+          <li><nuxt-link to="/aktiv" class="btn btn--action">Werde aktiv</nuxt-link></li>
         </ul>
       </nav>
     </header>
     <div class="page-content">
       <nuxt/>
     </div>
-    <footer class="page-footer columns">
+    <footer class="page-footer columns columns-gutter">
       <address>
         Open Knowledge Foundation Deutschland e.V.<br /><br />
         Singerstr. 109, 10179 Berlin, Deutschland<br /><br />
