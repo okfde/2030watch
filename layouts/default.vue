@@ -27,8 +27,8 @@
         VAT: DE278022128
       </address>
       <ul>
-        <li><nuxt-link to="/">Impressum</nuxt-link></li>
-        <li><nuxt-link to="/">Kram</nuxt-link></li>
+        <li><nuxt-link to="impressum">Impressum</nuxt-link></li>
+        <li><nuxt-link to="kontakt">Kontakt</nuxt-link></li>
       </ul>
       <ul>
         <li>Social Media</li>
