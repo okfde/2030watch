@@ -7,7 +7,7 @@
     </section>
     <section class="columns">
       <div>
-        <h2>Sonnen-Grafik</h2>
+        <h2>SDG Liste</h2>
         <div class="vis-wrapper">
           <VisListe />
         </div>

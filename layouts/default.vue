@@ -2,14 +2,15 @@
   <div class="page">
     <header class="page-header columns">
       <hgroup class="logo">
-        <h1>2030 Watch</h1>
+        <nuxt-link to="/"><h1>2030 Watch</h1></nuxt-link>
       </hgroup>
       <nav>
         <ul>
-          <li><nuxt-link to="/">Monitoring</nuxt-link></li>
-          <li><nuxt-link to="publications">Blog</nuxt-link></li>
-          <li><nuxt-link to="projects">Über das Projekt</nuxt-link></li>
-          <li><nuxt-link to="teaching">Über uns</nuxt-link></li>
+          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li><nuxt-link to="projekt">Das Projekt</nuxt-link></li>
+          <li><nuxt-link to="blog">Blog</nuxt-link></li>
+          <li><nuxt-link to="about">Über uns</nuxt-link></li>
+          <li><nuxt-link to="aktiv">Werde aktiv</nuxt-link></li>
         </ul>
       </nav>
     </header>
@@ -26,8 +27,8 @@
         VAT: DE278022128
       </address>
       <ul>
-        <li>Impressum</li>
-        <li>Kram</li>
+        <li><nuxt-link to="/">Impressum</nuxt-link></li>
+        <li><nuxt-link to="/">Kram</nuxt-link></li>
       </ul>
       <ul>
         <li>Social Media</li>
