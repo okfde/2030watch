@@ -9,7 +9,7 @@
       <div>
         <h2>Sonnen-Grafik</h2>
         <div class="vis-wrapper">
-          <VisStar />
+          <VisListe />
         </div>
       </div>
     </section>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import VisStar from '~/components/VisStar.vue'
+  import VisListe from '~/components/VisListe.vue'
   import Slideshow from '~/components/Slideshow.vue'
 
   export default {
@@ -32,7 +32,7 @@
     methods: {
     },
     components: {
-      VisStar,
+      VisListe,
       Slideshow
     },
     mounted () {
