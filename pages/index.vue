@@ -1,13 +1,15 @@
 <template>
   <div class="container rows">
+    <header>
+      <h1>Wie nachhaltig ist Deutschland wirklich?</h1>
+      <p>Deutschland hat sich verpflichtet bis 2030 die globalen Nachhaltigkeits-Ziele der Vereinten Nationen zu erreichen. 2030 Watch überprüft, ob dieses Versprechen eingehalten wird.</p>
+    </header>
     <section class="columns">
-      <header>
-        <Slideshow />
-      </header>
+      <Slideshow />
     </section>
     <section class="columns">
       <div>
-        <h2>SDG Liste</h2>
+        <h2>So nachhaltig ist Deutschland – Das sagen offizielle und komplementäre Indikatoren</h2>
         <div class="vis-wrapper">
           <VisListe />
         </div>
