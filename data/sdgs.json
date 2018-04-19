@@ -1,19 +1,53 @@
-[
-  "armut-beenden",
-  "ernhrung-sichern",
-  "gesundes-leben-fr-all",
-  "bildung-fr-alle",
-  "gleichstellung-der-ge",
-  "wasser-und-sanitrvers",
-  "nachhaltige-und-moder",
-  "nachhaltiges-wirtscha",
-  "widerstandsfhige-infr",
-  "ungleichheit-verringe",
-  "nachhaltige-stdte-und",
-  "nachhaltige-konsum--u",
-  "bekmpfung-des-klimawa",
-  "ozeane-erhalten",
-  "landkosysteme-schtzen",
-  "frieden-gerechtigkeit",
-  "umsetzungsmittel-und-"
-]
+{
+  "armut-beenden": {
+    "color": "#e5243b"
+  },
+  "ernhrung-sichern": {
+    "color": "#e5b735"
+  },
+  "gesundes-leben-fr-all": {
+    "color": "#4c9f38"
+  },
+  "bildung-fr-alle": {
+    "color": "#c5192d"
+  },
+  "gleichstellung-der-ge": {
+    "color": "#ff3a21"
+  },
+  "wasser-und-sanitrvers": {
+    "color": "#26bde2"
+  },
+  "nachhaltige-und-moder": {
+    "color": "#fcc30b"
+  },
+  "nachhaltiges-wirtscha": {
+    "color": "#a21942"
+  },
+  "widerstandsfhige-infr": {
+    "color": "#fd6925"
+  },
+  "ungleichheit-verringe": {
+    "color": "#dd1367"
+  },
+  "nachhaltige-stdte-und": {
+    "color": "#fd9d24"
+  },
+  "nachhaltige-konsum--u": {
+    "color": "#c9992d"
+  },
+  "bekmpfung-des-klimawa": {
+    "color": "#3f7e44"
+  },
+  "ozeane-erhalten": {
+    "color": "#0a97d9"
+  },
+  "landkosysteme-schtzen": {
+    "color": "#56c02b"
+  },
+  "frieden-gerechtigkeit": {
+    "color": "#00689d"
+  },
+  "umsetzungsmittel-und-": {
+    "color": "#19486a"
+  }
+}

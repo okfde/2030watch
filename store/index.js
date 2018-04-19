@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 // import _ from 'lodash'
 import * as data from '../data/data.json'
+import * as dataSDGs from '../data/sdgs.json'
 import chroma from 'chroma-js'
 import _ from 'lodash'
 
@@ -171,6 +172,7 @@ const store = () => new Vuex.Store({
         const dnss = _.filter(items, { 'origin': 'DNS' })
         const _sdg = {
           'n': n,
+          'color': dataSDGs[sdg].color,
           'label': _.first(items)['sdg'],
           'labels': insertLineBreaks(_.first(items)['sdg']),
           'okf': formatPercent(getAverage(okfs)),
