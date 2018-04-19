@@ -5,10 +5,10 @@
       <nav>
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="projekt">Das Projekt</nuxt-link></li>
-          <li><nuxt-link to="blog">Blog</nuxt-link></li>
-          <li><nuxt-link to="about">Über uns</nuxt-link></li>
-          <li><nuxt-link to="aktiv">Werde aktiv</nuxt-link></li>
+          <li><nuxt-link to="/projekt">Das Projekt</nuxt-link></li>
+          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+          <li><nuxt-link to="/about">Über uns</nuxt-link></li>
+          <li><nuxt-link to="/aktiv">Werde aktiv</nuxt-link></li>
         </ul>
       </nav>
     </header>
@@ -25,8 +25,8 @@
         VAT: DE278022128
       </address>
       <ul>
-        <li><nuxt-link to="impressum">Impressum</nuxt-link></li>
-        <li><nuxt-link to="kontakt">Kontakt</nuxt-link></li>
+        <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
+        <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
       </ul>
       <ul>
         <li>Social Media</li>
