@@ -43,4 +43,10 @@ table {
     background-color: #5C9E31;
     color: #fff;
   }
+
+  &.disabled {
+    cursor: default;
+    background-color: #D0CFCE;
+    border-color: #9B9B9A;
+  }
 }
