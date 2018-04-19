@@ -31,15 +31,16 @@ table {
 }
 
 .btn {
-  color: $color-accent;
-  border: 2px solid $color-accent;
-  padding: $spacing / 2 $spacing;
-  background-color: #fff;
+  color: #fff;
+  border: 1px solid #5C9E31;
+  border-radius: 2px;
+  padding: $spacing / 4 $spacing / 2;
+  background-color: #B1CC33;
   font-weight: bold;
   cursor: pointer;
 
   &:hover {
-    background-color: $color-accent;
+    background-color: #5C9E31;
     color: #fff;
   }
 }
