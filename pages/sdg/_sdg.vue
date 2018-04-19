@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <nav><nuxt-link to="/">Übersicht</nuxt-link><span class="spacer">/</span>{{ sdg.label }}</nav>
     <header>
       <h2>SDG - {{ sdg.label }}</h2>
       <h3>OKF: {{ sdg.okf }}</h3>
@@ -8,6 +9,7 @@
     </header>
     <h3><nuxt-link to="/">← Zurück</nuxt-link></h3>
     <div class="content">
+      <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
       <h3>Die offiziellen Indikatoren der Bundesregierung</h3>
       <span>Diese Indiktoren spiegeln laut Bundesregierung den Fortschritt des Zieles »{{ sdg.label }}« wider. Daraus würde sich folgender Fortschritt berechnen:</span>
       <h3>DNS: {{ sdg.dns }}</h3>

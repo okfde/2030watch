@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <nav><nuxt-link to="/">Übersicht</nuxt-link><span class="spacer">/</span><nuxt-link :to="'../sdg/' + indicator.slugSdg">{{ indicator.sdg }}</nuxt-link><span class="spacer">/</span>{{ indicator.topic }}</nav>
     <h2>Indicator - {{ indicator.topic }}</h2>
     <h3><nuxt-link :to="'../sdg/' + indicator.slugSdg">← {{ indicator.sdg }}</nuxt-link></h3>
     <span>{{ indicator.labelValue }}</span>

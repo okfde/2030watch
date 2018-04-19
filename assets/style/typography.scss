@@ -30,6 +30,12 @@ table {
   }
 }
 
+.spacer {
+  color: $color-mute;
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
 .btn {
   color: #fff;
   border: 1px solid #5C9E31;
