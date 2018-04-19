@@ -1,9 +1,7 @@
 <template>
   <div class="page">
     <header class="page-header columns">
-      <hgroup class="logo">
-        <nuxt-link to="/"><h1>2030 Watch</h1></nuxt-link>
-      </hgroup>
+      <nuxt-link to="/">2030 Watch</nuxt-link>
       <nav>
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
