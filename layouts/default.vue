@@ -2,7 +2,7 @@
   <div class="page">
     <header class="page-header columns">
       <nuxt-link to="/">2030 Watch</nuxt-link>
-      <nav>
+      <nav class="page-nav">
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/projekt">Das Projekt</nuxt-link></li>

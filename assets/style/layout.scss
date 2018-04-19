@@ -1,6 +1,6 @@
 $width-desktop: 60vw;
 
-.page, .page-header, nav, footer, .columns {
+.page, .page-header, .page-nav, .page-footer, .columns {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -32,7 +32,7 @@ $width-desktop: 60vw;
 .page-header {
   padding: $spacing $spacing*2 $spacing $spacing*2;
 
-  nav {
+  .page-nav {
     text-align: right;
     display: block;
 
@@ -110,7 +110,7 @@ $width-desktop: 60vw;
     }
   }
 
-  nav {
+  .page-nav {
     article {
       margin-bottom: 4vw;
     }
@@ -148,7 +148,7 @@ $width-desktop: 60vw;
     }
   }
 
-  nav {
+  .poage-nav {
     article {
       margin-bottom: 8vw;
     }
@@ -166,7 +166,7 @@ $width-desktop: 60vw;
     }
   }
 
-  footer section {
+  .page-footer section {
     margin-top: 0;
   }
 }
@@ -186,7 +186,7 @@ $width-desktop: 60vw;
     }
   }
 
-  nav {
+  .page-nav {
     article {
       margin-bottom: 8vh;
     }
@@ -220,7 +220,7 @@ $width-desktop: 60vw;
     }
   }
 
-  nav {
+  .page-nav {
     article {
       margin-bottom: 4vh;
     }
