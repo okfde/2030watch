@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div :class="{ 'page': true, [klasse]: klasse }">
     <header class="page-header columns">
       <strong class="logo"><nuxt-link to="/">2030 Watch</nuxt-link></strong>
       <nav class="page-nav">
@@ -35,6 +35,16 @@
     </footer>
   </div>
 </template>
+
+<script>
+  export default {
+    computed: {
+      klasse () {
+        return this.$route.params.sdg
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
 
