@@ -48,11 +48,6 @@
         titleTemplate: '2030 Watch - %s'
       }
     },
-    data () {
-      return {
-        editedTodo: 'hallo'
-      }
-    },
     mounted () {
     },
     components: {
