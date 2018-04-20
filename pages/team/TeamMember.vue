@@ -5,7 +5,7 @@
       </div>
       <div class="info">
           <div class="name">Max Mustermann</div>
-          <div class="position">Projektleiter</div>
+          <div class="role">Projektleiter</div>
           <div class="socials">
               <img src="../../assets/icons/email.png" alt="Email Icon">
               <img src="../../assets/icons/twitter.png" alt="Twitter Icon">
@@ -42,6 +42,15 @@
     }
 
     .info {
+        .name {
+            color: $color-accent;
+            font-weight: 600;
+        }
+
+        .role {
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
         .socials {
             img{
               margin-right: 10px;

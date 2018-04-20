@@ -42,12 +42,19 @@
          <section>
           <h2>Team</h2>
           <div class="section-wrapper">
+            <div class="columns-rows">
+               <team-member></team-member>
               <team-member></team-member>
+            </div>
+              <div class="columns-rows">
+               <team-member></team-member>
               <team-member></team-member>
+            </div>
+       
           </div>
         </section>
          <section>
-          <h2>Gefördert durch</h2>
+          <h2>Förderung &amp; Partner</h2>
           <div>
               2030 Watch wird von verschiedenene Trägerorganisationen gefördert. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic.
             </div>
@@ -97,6 +104,7 @@
 
       &:nth-of-type(3) {
         .section-wrapper {
+          padding-top: $spacing;
           justify-content: space-around;
         }
       }
