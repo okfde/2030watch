@@ -9,23 +9,23 @@
       y2="50%" />
     <line
       class="diff"
-      :stroke="color"
-      :x1="sdg.total + '%'"
+      :stroke="sdg.okf < sdg.dns ? '#5C9E31' : '#D22F27'"
+      :x1="sdg.okf + '%'"
       y1="50%"
       :x2="sdg.dns + '%'"
       y2="50%" />
     <circle
       class="sdg-marker sdg-marker-total"
-      :cx="sdg.total + '%'"
+      :cx="sdg.okf + '%'"
       cy="50%"
       r="8" />
     <text
       class="sdg-label sdg-label-total"
       alignment-baseline="baseline"
-      :text-anchor="sdg.total > 50 ? 'end' : 'start'"
-      :x="sdg.total + (sdg.total > 50 ? -3 : 3) + '%'"
+      :text-anchor="sdg.okf > 50 ? 'end' : 'start'"
+      :x="sdg.okf + (sdg.okf > 50 ? -3 : 3) + '%'"
       y="40%">
-      {{ sdg.total }}%
+      {{ sdg.okf }}%
     </text>
     <circle
       class="sdg-marker sdg-marker-dns"
@@ -44,16 +44,15 @@
 </template>
 
 <script>
-  // import chroma from 'chroma-js'
+  import chroma from 'chroma-js'
 
-  // const diffScale = chroma.scale(['#D22F27', '#eee', '#5C9E31']).domain([-100, 0, 100])
+  const diffScale = chroma.scale(['#5C9E31', '#eee', '#D22F27']).domain([-100, 0, 100])
 
   export default {
     props: ['sdg'],
     computed: {
       color (state) {
-        console.log(this, state)
-        // return diffScale(this.dns - this.okf).hex()
+        return diffScale(this.sdg.dns - this.sdg.okf).hex()
       }
     }
   }

@@ -8,7 +8,7 @@
           </svg>
         </div>
         <div class="sdg-label">
-          <span>{{ sdg.label }}</span>
+          <span :title="sdg.label.long">{{ sdg.label.short }}</span>
         </div>
         <VisProgress :sdg="sdg" />
       </nuxt-link>
@@ -19,17 +19,12 @@
 <script>
   import { mapGetters, mapState } from 'vuex'
   import VisProgress from '~/components/VisProgress.vue'
+  import * as sdgs from '../data/sdgs.json'
 
   export default {
     data: function () {
       return {
-        range: [25, 100],
-        size: [500, 500],
-        margin: [300, 100],
-        textDistance: 80,
-        ticks: [50],
-        activeSDG: false,
-        activeCircle: false
+        sdgs: sdgs
       }
     },
     computed: {
@@ -38,7 +33,6 @@
       ]),
       ...mapGetters([
         'indicators',
-        'sdgs',
         'sdgsSlugs'
       ])
     },
