@@ -2,11 +2,12 @@
   <div class="page-container">
     <nav class="inpage-nav">
       <div class="wrapper">
-        <nuxt-link to="/">Übersicht</nuxt-link><span class="spacer">/</span>{{ sdg.label }}
+        <nuxt-link to="/">Übersicht</nuxt-link><span class="bread-spacer">/</span><span class="bread-current">{{ sdg.label }}</span>
       </div>
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
+        <small class="caption">SDG {{ sdg.n + 1 }}</small>
         <h1>{{ sdg.label }}</h1>
         <section class="columns columns-gutter">
           <div>

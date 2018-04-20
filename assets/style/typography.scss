@@ -23,6 +23,13 @@ p + p {
   margin-top: 1em;
 }
 
+.caption {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
 table {
   thead {
     font-weight: bold;
@@ -35,11 +42,19 @@ table {
   }
 }
 
-.spacer {
-  color: rgba(255, 255, 255, 0.5);
-  display: inline-block;
-  margin: 0 0.25em;
+.inpage-nav {
+  .bread-current {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .bread-spacer {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin: 0 0.25em;
+  }
 }
+
+
 
 .page-header {
   .logo {
