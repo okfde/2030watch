@@ -43,8 +43,16 @@ table {
 }
 
 .inpage-nav {
-  .bread-current {
+  a {
     color: rgba(255, 255, 255, 0.8);
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .bread-current {
+    color: rgba(255, 255, 255, 1);
   }
 
   .bread-spacer {
@@ -85,10 +93,6 @@ table {
 
 .inpage-nav, .inpage-header {
   color: #fff;
-
-  a {
-    color: #fff;
-  }
 }
 
 .btn {
