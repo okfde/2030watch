@@ -7,10 +7,12 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
+        <small class="caption">SDG XXX</small>
         <h1>{{ indicator.topic }}</h1>
         <section class="columns columns-gutter">
           <div>
-            <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
+            <p>Dieser Indikator zeigt den Anteil von Frauen in Aufsichtsräten von börsennotierten und voll mitbestimmungspflichtigen Unternehmen in Deutschland. 2016 gingen 106 Unternehmen in die Berechnung mit ein. Datengrundlage bilden die Ergebnisse von Wahlen in den Hauptversammlungen.</p>
+            <p>Offizieller Indikator (mit schlechtem Zielwert)</p>
           </div>
           <div>
             <strong>{{ indicator.labelValue }}</strong>
@@ -20,7 +22,21 @@
     </header>
     <div class="content">
       <div class="wrapper">
-        {{ indicator.sdg }}
+        <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
+        <small class="caption">Beschreibung</small>
+        <p>Dieser Indikator zeigt den Anteil von Frauen in Aufsichtsräten von börsennotierten und voll mitbestimmungspflichtigen Unternehmen in Deutschland. 2016 gingen 106 Unternehmen in die Berechnung mit ein. Datengrundlage bilden die Ergebnisse von Wahlen in den Hauptversammlungen. Im Zuge der gesetzlichen Vorschriften sind börsennotierte und voll mitbestimmungspflichtige Unternehmen in Deutschland seit 2016 dazu verpflichtet mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Die deutsche Nachhaltigkeitsstrategie setzt das gleiche Ziel für das Jahr 2030 fest.</p>
+        <small class="caption">Zielwert</small>
+        <p>Im Zuge der gesetzlichen Vorschriften sind börsennotierte und voll mitbestimmungspflichtige Unternehmen in Deutschland schon seit 2016 dazu verpflichtet mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Der Zielwert der DNS für das Jahr 2030 liegt damit nur 2,7 % höher als der aktuelle Wert (2016). Der Indikatorzielwert der DNS von 30% erscheint daher als wenig ambitioniert.</p>
+        <small class="caption">Kategorie</small>
+        <p>modifizierter Zielwert - 2030Watch schlägt einen neuen Zielwert von 50% Frauen in Aufsichtsräten der börsennotierten und voll mitbestimmungspflichtigen Unternehmen. Der neue Zielwert von 50% entspricht den Zielen der 2030 Agenda und dem Geschlechterverhältnis in Deutschland.</p>
+        <div class="columns columns-gutter columns-rows">
+          <section>
+            Details
+          </section>
+          <section>
+            Datenpate
+          </section>
+        </div>
       </div>
     </div>
   </div>
