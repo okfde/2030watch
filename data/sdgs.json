@@ -1,53 +1,53 @@
 {
-  "armut-beenden": {
+  "armut": {
     "color": "e5243b"
   },
-  "ernhrung-sichern": {
+  "ernaehrung": {
     "color": "e5b735"
   },
-  "gesundes-leben-fr-all": {
+  "leben": {
     "color": "4c9f38"
   },
-  "bildung-fr-alle": {
+  "bildung": {
     "color": "c5192d"
   },
-  "gleichstellung-der-ge": {
+  "gleichstellung": {
     "color": "ff3a21"
   },
-  "wasser-und-sanitrvers": {
+  "wasser": {
     "color": "26bde2"
   },
-  "nachhaltige-und-moder": {
+  "energie": {
     "color": "fcc30b"
   },
-  "nachhaltiges-wirtscha": {
+  "wirtschaft": {
     "color": "a21942"
   },
-  "widerstandsfhige-infr": {
+  "infrastruktur": {
     "color": "fd6925"
   },
-  "ungleichheit-verringe": {
+  "ungleichheit": {
     "color": "dd1367"
   },
-  "nachhaltige-stdte-und": {
+  "staedte": {
     "color": "fd9d24"
   },
-  "nachhaltige-konsum--u": {
+  "konsum": {
     "color": "c9992d"
   },
-  "bekmpfung-des-klimawa": {
+  "klimawandel": {
     "color": "3f7e44"
   },
-  "ozeane-erhalten": {
+  "ozeane": {
     "color": "0a97d9"
   },
-  "landkosysteme-schtzen": {
+  "landoekosysteme": {
     "color": "56c02b"
   },
-  "frieden-gerechtigkeit": {
+  "frieden": {
     "color": "00689d"
   },
-  "umsetzungsmittel-und-": {
+  "partnerschaft": {
     "color": "19486a"
   }
 }

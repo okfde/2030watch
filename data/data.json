@@ -5,7 +5,7 @@
     "topic": "Materielle Deprivation",
     "value": 0.91,
     "slugTopic": "materielle-deprivatio",
-    "slugSdg": "armut-beenden"
+    "slugSdg": "armut"
   },
   {
     "origin": "DNS",
@@ -13,7 +13,7 @@
     "topic": "Erhebliche materielle Deprivation",
     "value": 0.98,
     "slugTopic": "erhebliche-materielle",
-    "slugSdg": "armut-beenden"
+    "slugSdg": "armut"
   },
   {
     "origin": "DNS",
@@ -21,7 +21,7 @@
     "topic": "Stickstoffüberschuss",
     "value": 0.83,
     "slugTopic": "stickstoffberschuss",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "DNS",
@@ -29,7 +29,7 @@
     "topic": "Ökologischer Landbau, Anteil an gesamt landwirtschaftlich genutzter Fläche",
     "value": 0.34,
     "slugTopic": "kologischer-landbau-a",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "DNS",
@@ -37,7 +37,7 @@
     "topic": "Vorzeitige Sterblichkeit Frauen, Todesfälle pro 100.000 Einwohner unter 70J, Frauen",
     "value": 0.17,
     "slugTopic": "vorzeitige-sterblichk",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -45,7 +45,7 @@
     "topic": "Vorzeitige Sterblichkeit Männer, Todesfälle pro 100.000 Einwohner unter 70J, Männer",
     "value": 0.23,
     "slugTopic": "vorzeitige-sterblichk",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -53,7 +53,7 @@
     "topic": "Raucherquote 12-17J",
     "value": 0.88,
     "slugTopic": "raucherquote-12-17j",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -61,7 +61,7 @@
     "topic": "Raucherquote ab 15J",
     "value": 0.29,
     "slugTopic": "raucherquote-ab-15j",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -69,7 +69,7 @@
     "topic": "Adipositasquote ab 18J",
     "value": 0.76,
     "slugTopic": "adipositasquote-ab-18",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -77,7 +77,7 @@
     "topic": "Emmissionen von Luftschadstoffen, Index von SO2, NOx, NH3, NMVOC, PM.2,5",
     "value": 0.29,
     "slugTopic": "emmissionen-von-lufts",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -85,7 +85,7 @@
     "topic": "Anteil der Bevölkerung mit PM10 Exposition von über 20µg pro m^3 Luft",
     "value": 0.51,
     "slugTopic": "anteil-der-bevlkerung",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "DNS",
@@ -93,7 +93,7 @@
     "topic": "Frühe Schulabgänger, 18-24J ohne Abschluss",
     "value": 0.83,
     "slugTopic": "frhe-schulabgnger-18-",
-    "slugSdg": "bildung-fr-alle"
+    "slugSdg": "bildung"
   },
   {
     "origin": "DNS",
@@ -101,7 +101,7 @@
     "topic": "tertiärer oder postsekundärer Abschluss, 30-34J",
     "value": 0.71,
     "slugTopic": "tertirer-oder-postsek",
-    "slugSdg": "bildung-fr-alle"
+    "slugSdg": "bildung"
   },
   {
     "origin": "DNS",
@@ -109,7 +109,7 @@
     "topic": "Ganztagsbetreuung 0-2J",
     "value": 0.32,
     "slugTopic": "ganztagsbetreuung-0-2",
-    "slugSdg": "bildung-fr-alle"
+    "slugSdg": "bildung"
   },
   {
     "origin": "DNS",
@@ -117,7 +117,7 @@
     "topic": "Ganztagsbetreuung 3-5J",
     "value": 0.41,
     "slugTopic": "ganztagsbetreuung-3-5",
-    "slugSdg": "bildung-fr-alle"
+    "slugSdg": "bildung"
   },
   {
     "origin": "DNS",
@@ -125,7 +125,7 @@
     "topic": "Unterschied Bruttostundenverdienst von Männern und Frauen",
     "value": 0.35,
     "slugTopic": "unterschied-bruttostu",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "DNS",
@@ -133,7 +133,7 @@
     "topic": "Frauenanteil in Aufsichtsräten von börsennotierten Unternehmen",
     "value": 0.68,
     "slugTopic": "frauenanteil-in-aufsi",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "DNS",
@@ -141,7 +141,7 @@
     "topic": "Mädchen und Frauen, die durch berufliche Qualifizierungsmaßnahmen deutscher entwicklungspolitischer Zusammenarbeit erreicht wurden",
     "value": 0.75,
     "slugTopic": "mdchen-und-frauen-die",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "DNS",
@@ -149,7 +149,7 @@
     "topic": "Phosphor in Fließgewässern, Anteil der Messstellen, an denen der Orientierungswert des guten ökologischen Zustands für Gesamt-Phosphor eingehalten wird",
     "value": 0.07,
     "slugTopic": "phosphor-in-fliegewss",
-    "slugSdg": "wasser-und-sanitrvers"
+    "slugSdg": "wasser"
   },
   {
     "origin": "DNS",
@@ -157,7 +157,7 @@
     "topic": "Nitrat im Grundwasser, Anteil der Messstellen, an denen der Schwellenwert von 50 mg/L eingehalten wird",
     "value": 0.0,
     "slugTopic": "nitrat-im-grundwasser",
-    "slugSdg": "wasser-und-sanitrvers"
+    "slugSdg": "wasser"
   },
   {
     "origin": "DNS",
@@ -165,7 +165,7 @@
     "topic": "Von Deutschland geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit, erreichte Menschen",
     "value": 1.1,
     "slugTopic": "von-deutschland-gefrd",
-    "slugSdg": "wasser-und-sanitrvers"
+    "slugSdg": "wasser"
   },
   {
     "origin": "DNS",
@@ -173,7 +173,7 @@
     "topic": "Steigerung der Endenergieproduktivität gegnüber 2008",
     "value": 0.16,
     "slugTopic": "steigerung-der-endene",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "DNS",
@@ -181,7 +181,7 @@
     "topic": "Senkung Primärenergieverbrauch gegenüber 2008",
     "value": 0.27,
     "slugTopic": "senkung-primrenergiev",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "DNS",
@@ -189,7 +189,7 @@
     "topic": "Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch",
     "value": 0.37,
     "slugTopic": "anteil-erneuerbarer-e",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "DNS",
@@ -197,7 +197,7 @@
     "topic": "Anteil des Stroms aus eneuerbarer Energiequellen am Bruttostromverbrauch",
     "value": 0.59,
     "slugTopic": "anteil-des-stroms-aus",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "DNS",
@@ -205,7 +205,7 @@
     "topic": "Gesamtrohstoffproduktivität, (BIP+Importe)/ Raw Material Input",
     "value": 0.35,
     "slugTopic": "gesamtrohstoffprodukt",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -213,7 +213,7 @@
     "topic": "Staatsdefizit, jährlich kleiner als 3% des BIP",
     "value": -0.27,
     "slugTopic": "staatsdefizit-jhrlich",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -221,7 +221,7 @@
     "topic": "strukturelles Staatsdefizit",
     "value": 1.0,
     "slugTopic": "strukturelles-staatsd",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -229,7 +229,7 @@
     "topic": "Schuldenstandsquote",
     "value": 0.84,
     "slugTopic": "schuldenstandsquote",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -237,7 +237,7 @@
     "topic": "Anteil Bruttoanlageinvestitionen am BIP",
     "value": 0.53,
     "slugTopic": "anteil-bruttoanlagein",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -245,7 +245,7 @@
     "topic": "BIP/capita",
     "value": 0.51,
     "slugTopic": "bipcapita",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -253,7 +253,7 @@
     "topic": "Erwerbstätigenquote 20-64J",
     "value": 1.03,
     "slugTopic": "erwerbsttigenquote-20",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -261,7 +261,7 @@
     "topic": "Erwerbstätigenquote 60-64J",
     "value": 0.73,
     "slugTopic": "erwerbsttigenquote-60",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -269,7 +269,7 @@
     "topic": "Mitglieder des Textilbündnisses",
     "value": 0.75,
     "slugTopic": "mitglieder-des-textil",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "DNS",
@@ -277,7 +277,7 @@
     "topic": "Private + öffentliche Ausgaben für Forschung und Entwicklung/ BIP",
     "value": 0.98,
     "slugTopic": "private--ffentliche-a",
-    "slugSdg": "widerstandsfhige-infr"
+    "slugSdg": "infrastruktur"
   },
   {
     "origin": "DNS",
@@ -285,7 +285,7 @@
     "topic": "Anteil der Schulabsloventen an allen ausländischen Abgängern",
     "value": 0.32,
     "slugTopic": "anteil-der-schulabslo",
-    "slugSdg": "ungleichheit-verringe"
+    "slugSdg": "ungleichheit"
   },
   {
     "origin": "DNS",
@@ -293,7 +293,7 @@
     "topic": "Äquivalenzeinkommen als Gini Koeffizient nach Sozialtransfers",
     "value": 1.0,
     "slugTopic": "quivalenzeinkommen-al",
-    "slugSdg": "ungleichheit-verringe"
+    "slugSdg": "ungleichheit"
   },
   {
     "origin": "DNS",
@@ -301,7 +301,7 @@
     "topic": "Anstieg der Siedlungs- Verkehrsfläche",
     "value": 0.47,
     "slugTopic": "anstieg-der-siedlungs",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -309,7 +309,7 @@
     "topic": "Veränderung der Freiraumfläche je Einwohner",
     "value": 0.83,
     "slugTopic": "vernderung-der-freira",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -317,7 +317,7 @@
     "topic": "Siedlungsdichte erhalten, Einwohner / km^2 Siedlungs- Verkehrsfläche",
     "value": 0.89,
     "slugTopic": "siedlungsdichte-erhal",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -325,7 +325,7 @@
     "topic": "Endenergieverbrauch im Güterverkehr ",
     "value": -0.48,
     "slugTopic": "endenergieverbrauch-i",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -333,7 +333,7 @@
     "topic": "Endenergieverbrauch im Personenverkehr ",
     "value": 0.16,
     "slugTopic": "endenergieverbrauch-i",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -341,7 +341,7 @@
     "topic": "Reisezeit mit öffentlichenVerkehrsmitteln zum nächsten Mittel- oder Oberzentrum",
     "value": 0.31,
     "slugTopic": "reisezeit-mit-ffentli",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -349,7 +349,7 @@
     "topic": "Belastung durch Wohnkosten über 40%",
     "value": 0.1,
     "slugTopic": "belastung-durch-wohnk",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "DNS",
@@ -357,7 +357,7 @@
     "topic": "Produkte mit Umweltzeichen",
     "value": 0.18,
     "slugTopic": "produkte-mit-umweltze",
-    "slugSdg": "nachhaltige-konsum--u"
+    "slugSdg": "konsum"
   },
   {
     "origin": "DNS",
@@ -365,7 +365,7 @@
     "topic": "Energieverbrauch und CO2-Emmissionen des Konsums",
     "value": 0.07,
     "slugTopic": "energieverbrauch-und-",
-    "slugSdg": "nachhaltige-konsum--u"
+    "slugSdg": "konsum"
   },
   {
     "origin": "DNS",
@@ -373,7 +373,7 @@
     "topic": "Umweltmanagement EMAS (Organisationsstandorte)",
     "value": 0.41,
     "slugTopic": "umweltmanagement-emas",
-    "slugSdg": "nachhaltige-konsum--u"
+    "slugSdg": "konsum"
   },
   {
     "origin": "DNS",
@@ -381,7 +381,7 @@
     "topic": "Treibhausgasemmissionen",
     "value": 0.49,
     "slugTopic": "treibhausgasemmission",
-    "slugSdg": "bekmpfung-des-klimawa"
+    "slugSdg": "klimawandel"
   },
   {
     "origin": "DNS",
@@ -389,7 +389,7 @@
     "topic": "Internationale Klimafinanzierung",
     "value": 0.17,
     "slugTopic": "internationale-klimaf",
-    "slugSdg": "bekmpfung-des-klimawa"
+    "slugSdg": "klimawandel"
   },
   {
     "origin": "DNS",
@@ -397,7 +397,7 @@
     "topic": "Gesamtstickstoffeintrag Ostsee (durch deutsche Zuflüsse)",
     "value": 0.38,
     "slugTopic": "gesamtstickstoffeintr",
-    "slugSdg": "ozeane-erhalten"
+    "slugSdg": "ozeane"
   },
   {
     "origin": "DNS",
@@ -405,7 +405,7 @@
     "topic": "Gesamtstickstoffeintrag Nordsee (durch deutsche Zuflüsse)",
     "value": 0.29,
     "slugTopic": "gesamtstickstoffeintr",
-    "slugSdg": "ozeane-erhalten"
+    "slugSdg": "ozeane"
   },
   {
     "origin": "DNS",
@@ -413,7 +413,7 @@
     "topic": "Anteil nachhaltig befischter Fischbestände (Nord- u. Ostsee)",
     "value": 0.26,
     "slugTopic": "anteil-nachhaltig-bef",
-    "slugSdg": "ozeane-erhalten"
+    "slugSdg": "ozeane"
   },
   {
     "origin": "DNS",
@@ -421,7 +421,7 @@
     "topic": "Index Artenvielfalt u. Landschaftsqualität",
     "value": 0.68,
     "slugTopic": "index-artenvielfalt-u",
-    "slugSdg": "landkosysteme-schtzen"
+    "slugSdg": "landoekosysteme"
   },
   {
     "origin": "DNS",
@@ -429,7 +429,7 @@
     "topic": "Eutrophierung der Ökosysteme (Anteil empfindlicher Ökosysteme mit überschrittenem Stickstoffeinträgen)",
     "value": 0.15,
     "slugTopic": "eutrophierung-der-kos",
-    "slugSdg": "landkosysteme-schtzen"
+    "slugSdg": "landoekosysteme"
   },
   {
     "origin": "DNS",
@@ -437,7 +437,7 @@
     "topic": "EZA für REDD+- Wälder",
     "value": 0.37,
     "slugTopic": "eza-fr-redd--wlder",
-    "slugSdg": "landkosysteme-schtzen"
+    "slugSdg": "landoekosysteme"
   },
   {
     "origin": "DNS",
@@ -445,7 +445,7 @@
     "topic": "Straftaten",
     "value": -0.43,
     "slugTopic": "straftaten",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "DNS",
@@ -453,7 +453,7 @@
     "topic": "Sicherung, Registrierung und Zerstörung von Kleinwaffen (in Afrika, Osteuropa, Lateinamerika, Asien)",
     "value": 1.73,
     "slugTopic": "sicherung-registrieru",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "DNS",
@@ -461,7 +461,7 @@
     "topic": "Corruption Perception Index",
     "value": 0.18,
     "slugTopic": "corruption-perception",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "DNS",
@@ -469,7 +469,7 @@
     "topic": "Corruption Perception Index der EZA Partner",
     "value": 0.73,
     "slugTopic": "corruption-perception",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "DNS",
@@ -477,7 +477,7 @@
     "topic": "ODA / BNE",
     "value": 1.0,
     "slugTopic": "oda--bne",
-    "slugSdg": "umsetzungsmittel-und-"
+    "slugSdg": "partnerschaft"
   },
   {
     "origin": "DNS",
@@ -485,7 +485,7 @@
     "topic": "Studierende, Forscher aus DCs und LDCs",
     "value": 0.75,
     "slugTopic": "studierende-forscher-",
-    "slugSdg": "umsetzungsmittel-und-"
+    "slugSdg": "partnerschaft"
   },
   {
     "origin": "DNS",
@@ -493,7 +493,7 @@
     "topic": "Anteil der Importe aus LDCs",
     "value": 0.26,
     "slugTopic": "anteil-der-importe-au",
-    "slugSdg": "umsetzungsmittel-und-"
+    "slugSdg": "partnerschaft"
   },
   {
     "origin": "OKF",
@@ -501,7 +501,7 @@
     "topic": "Armutsgefährdungsquote (60% Medianäquivalenzeinkommen)",
     "value": 0.43,
     "slugTopic": "armutsgefhrdungsquote",
-    "slugSdg": "armut-beenden"
+    "slugSdg": "armut"
   },
   {
     "origin": "OKF",
@@ -509,7 +509,7 @@
     "topic": "Von Armut uns sozialer Ausgrnzung bedroht (60+)",
     "value": 0.67,
     "slugTopic": "von-armut-uns-soziale",
-    "slugSdg": "armut-beenden"
+    "slugSdg": "armut"
   },
   {
     "origin": "OKF",
@@ -517,7 +517,7 @@
     "topic": "Von Armut uns sozialer Ausgrnzung bedroht (EU-Ausländer)",
     "value": 0.54,
     "slugTopic": "von-armut-uns-soziale",
-    "slugSdg": "armut-beenden"
+    "slugSdg": "armut"
   },
   {
     "origin": "OKF",
@@ -525,7 +525,7 @@
     "topic": "Stickstoffüberschuss",
     "value": 0.11,
     "slugTopic": "stickstoffberschuss",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "OKF",
@@ -533,7 +533,7 @@
     "topic": "Antibiotikaeinsatz in der Landwirtschaft",
     "value": 0.57,
     "slugTopic": "antibiotikaeinsatz-in",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "OKF",
@@ -541,7 +541,7 @@
     "topic": "Einsatz von Pestiziden in der Landwirtschaft",
     "value": 0.49,
     "slugTopic": "einsatz-von-pestizide",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "OKF",
@@ -549,7 +549,7 @@
     "topic": "Anteil des zertifizierten Palmöls das in D verbraucht wird",
     "value": 0.71,
     "slugTopic": "anteil-des-zertifizie",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "OKF",
@@ -557,7 +557,7 @@
     "topic": "Fleischkonsum pro Kopf",
     "value": 0.05,
     "slugTopic": "fleischkonsum-pro-kop",
-    "slugSdg": "ernhrung-sichern"
+    "slugSdg": "ernaehrung"
   },
   {
     "origin": "OKF",
@@ -565,7 +565,7 @@
     "topic": "Alkoholkonsum in l/pP ab 15J",
     "value": 0.2,
     "slugTopic": "alkoholkonsum-in-lpp-",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "OKF",
@@ -573,7 +573,7 @@
     "topic": "An Depressionen leidend letzte 12 Monate",
     "value": 0.17,
     "slugTopic": "an-depressionen-leide",
-    "slugSdg": "gesundes-leben-fr-all"
+    "slugSdg": "leben"
   },
   {
     "origin": "OKF",
@@ -581,7 +581,7 @@
     "topic": "Sozio-ökonomische Faktoren auf Bildungsgrad",
     "value": 0.67,
     "slugTopic": "sozio-konomische-fakt",
-    "slugSdg": "bildung-fr-alle"
+    "slugSdg": "bildung"
   },
   {
     "origin": "OKF",
@@ -589,7 +589,7 @@
     "topic": "Bildungsausgaben am BIP",
     "value": 0.25,
     "slugTopic": "bildungsausgaben-am-b",
-    "slugSdg": "bildung-fr-alle"
+    "slugSdg": "bildung"
   },
   {
     "origin": "OKF",
@@ -597,7 +597,7 @@
     "topic": "Frauen in der Politik (Parlament, Kabinett etc)",
     "value": 0.74,
     "slugTopic": "frauen-in-der-politik",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "OKF",
@@ -605,7 +605,7 @@
     "topic": "Frauen in Aufsichtsräten (bei anderer Datenbasis)",
     "value": 0.11,
     "slugTopic": "frauen-in-aufsichtsrt",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "OKF",
@@ -613,7 +613,7 @@
     "topic": "Unterschiedliche Belastung mit unbezahlter (Haus-) Arbeit",
     "value": 0.55,
     "slugTopic": "unterschiedliche-bela",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "OKF",
@@ -621,7 +621,7 @@
     "topic": "Gendergap in der Rente",
     "value": 0.32,
     "slugTopic": "gendergap-in-der-rent",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "OKF",
@@ -629,7 +629,7 @@
     "topic": "Sexual Harassment",
     "value": 0.33,
     "slugTopic": "sexual-harassment",
-    "slugSdg": "gleichstellung-der-ge"
+    "slugSdg": "gleichstellung"
   },
   {
     "origin": "OKF",
@@ -637,7 +637,7 @@
     "topic": "Ökologischer Zustand der Flüsse - Anteil der Gewässer in gutem oder sehr gutem ökolog Zustand",
     "value": 0.07,
     "slugTopic": "kologischer-zustand-d",
-    "slugSdg": "wasser-und-sanitrvers"
+    "slugSdg": "wasser"
   },
   {
     "origin": "OKF",
@@ -645,7 +645,7 @@
     "topic": "Ökologischer Zustand der Seen - Anteil der Gewässer in gutem oder sehr gutem ökolog Zustand",
     "value": 0.43,
     "slugTopic": "kologischer-zustand-d",
-    "slugSdg": "wasser-und-sanitrvers"
+    "slugSdg": "wasser"
   },
   {
     "origin": "OKF",
@@ -653,7 +653,7 @@
     "topic": "Subventionen fossiler Brennstoffe [coal; gas; petroleum] (Post-tax subsidies as a percent of GDP)",
     "value": 0.86,
     "slugTopic": "subventionen-fossiler",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "OKF",
@@ -661,7 +661,7 @@
     "topic": "Bruttoinlandsenergieverbrauch BIV/ Gross inland energy consumption in Mio. tonne oil equivalent (Mtoe)  ALS PRO KOPF AUSRECHNEN UND VERTEILUNG NOCHMAL ANGUCKEN ",
     "value": -0.28,
     "slugTopic": "bruttoinlandsenergiev",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "OKF",
@@ -669,7 +669,7 @@
     "topic": "Carbon Capita [combines energy use per capita and carbon intensity of energy use] in tCO2/person",
     "value": 0.57,
     "slugTopic": "carbon-capita-combine",
-    "slugSdg": "nachhaltige-und-moder"
+    "slugSdg": "energie"
   },
   {
     "origin": "OKF",
@@ -677,7 +677,7 @@
     "topic": "Armut trotz Beschäftigung",
     "value": 0.7,
     "slugTopic": "armut-trotz-beschftig",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "OKF",
@@ -685,7 +685,7 @@
     "topic": "Staatliche Maßnahmen gegen Sklaverei",
     "value": 0.6,
     "slugTopic": "staatliche-manahmen-g",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "OKF",
@@ -693,7 +693,7 @@
     "topic": "Reduktion des inländischen Materialverbrauchs",
     "value": 0.08,
     "slugTopic": "reduktion-des-inlndis",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "OKF",
@@ -701,7 +701,7 @@
     "topic": "Inländischer Materialverbrauch / capita",
     "value": 0.72,
     "slugTopic": "inlndischer-materialv",
-    "slugSdg": "nachhaltiges-wirtscha"
+    "slugSdg": "wirtschaft"
   },
   {
     "origin": "OKF",
@@ -709,7 +709,7 @@
     "topic": "Wissenschaftler / 1000 Beschäftigte",
     "value": 0.59,
     "slugTopic": "wissenschaftler--1000",
-    "slugSdg": "widerstandsfhige-infr"
+    "slugSdg": "infrastruktur"
   },
   {
     "origin": "OKF",
@@ -717,7 +717,7 @@
     "topic": "G4 Verbreitung",
     "value": 0.57,
     "slugTopic": "g4-verbreitung",
-    "slugSdg": "widerstandsfhige-infr"
+    "slugSdg": "infrastruktur"
   },
   {
     "origin": "OKF",
@@ -725,7 +725,7 @@
     "topic": "Open Data Index",
     "value": 0.51,
     "slugTopic": "open-data-index",
-    "slugSdg": "widerstandsfhige-infr"
+    "slugSdg": "infrastruktur"
   },
   {
     "origin": "OKF",
@@ -733,7 +733,7 @@
     "topic": "Technologietransfer (CDI Unterindikator)",
     "value": 0.03,
     "slugTopic": "technologietransfer-c",
-    "slugSdg": "widerstandsfhige-infr"
+    "slugSdg": "infrastruktur"
   },
   {
     "origin": "OKF",
@@ -741,7 +741,7 @@
     "topic": "Palma Ratio",
     "value": 0.6,
     "slugTopic": "palma-ratio",
-    "slugSdg": "ungleichheit-verringe"
+    "slugSdg": "ungleichheit"
   },
   {
     "origin": "OKF",
@@ -749,7 +749,7 @@
     "topic": "Low-wage earners as a proportion of all employees",
     "value": 0.1,
     "slugTopic": "low-wage-earners-as-a",
-    "slugSdg": "ungleichheit-verringe"
+    "slugSdg": "ungleichheit"
   },
   {
     "origin": "OKF",
@@ -757,7 +757,7 @@
     "topic": "MIPEX",
     "value": 0.61,
     "slugTopic": "mipex",
-    "slugSdg": "ungleichheit-verringe"
+    "slugSdg": "ungleichheit"
   },
   {
     "origin": "OKF",
@@ -765,7 +765,7 @@
     "topic": "Diskriminierung",
     "value": 0.42,
     "slugTopic": "diskriminierung",
-    "slugSdg": "ungleichheit-verringe"
+    "slugSdg": "ungleichheit"
   },
   {
     "origin": "OKF",
@@ -773,7 +773,7 @@
     "topic": "PM2.5 Feinstaubbelastung",
     "value": 0.94,
     "slugTopic": "pm25-feinstaubbelastu",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "OKF",
@@ -781,7 +781,7 @@
     "topic": "Verkehrsverlagerung Frachtverkehr",
     "value": 0.4,
     "slugTopic": "verkehrsverlagerung-f",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "OKF",
@@ -789,7 +789,7 @@
     "topic": "Verkehrsverlagerung Personenverkehr",
     "value": 0.15,
     "slugTopic": "verkehrsverlagerung-p",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "OKF",
@@ -797,7 +797,7 @@
     "topic": "Luftschadstoffe nach Quellsektor TRANSPORT PM10",
     "value": 0.0,
     "slugTopic": "luftschadstoffe-nach-",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "OKF",
@@ -805,7 +805,7 @@
     "topic": "Siedlungsabfall",
     "value": 0.01,
     "slugTopic": "siedlungsabfall",
-    "slugSdg": "nachhaltige-stdte-und"
+    "slugSdg": "staedte"
   },
   {
     "origin": "OKF",
@@ -813,7 +813,7 @@
     "topic": "Packaging waste per capita",
     "value": -0.08,
     "slugTopic": "packaging-waste-per-c",
-    "slugSdg": "nachhaltige-konsum--u"
+    "slugSdg": "konsum"
   },
   {
     "origin": "OKF",
@@ -821,7 +821,7 @@
     "topic": "Consumption of bottled water/litres per capita",
     "value": 0.07,
     "slugTopic": "consumption-of-bottle",
-    "slugSdg": "nachhaltige-konsum--u"
+    "slugSdg": "konsum"
   },
   {
     "origin": "OKF",
@@ -829,7 +829,7 @@
     "topic": "Ecological Footprint per capita",
     "value": 0.24,
     "slugTopic": "ecological-footprint-",
-    "slugSdg": "nachhaltige-konsum--u"
+    "slugSdg": "konsum"
   },
   {
     "origin": "OKF",
@@ -837,7 +837,7 @@
     "topic": "Germanwatch Index: Emissionstrends",
     "value": 0.53,
     "slugTopic": "germanwatch-index-emi",
-    "slugSdg": "bekmpfung-des-klimawa"
+    "slugSdg": "klimawandel"
   },
   {
     "origin": "OKF",
@@ -845,7 +845,7 @@
     "topic": "Germanwatch Index: Erneuerbare Energien",
     "value": 0.5,
     "slugTopic": "germanwatch-index-ern",
-    "slugSdg": "bekmpfung-des-klimawa"
+    "slugSdg": "klimawandel"
   },
   {
     "origin": "OKF",
@@ -853,7 +853,7 @@
     "topic": "Germanwatch Index: Energienverbrauch",
     "value": 0.61,
     "slugTopic": "germanwatch-index-ene",
-    "slugSdg": "bekmpfung-des-klimawa"
+    "slugSdg": "klimawandel"
   },
   {
     "origin": "OKF",
@@ -861,7 +861,7 @@
     "topic": "Germanwatch Index: Klimapolitik",
     "value": 0.66,
     "slugTopic": "germanwatch-index-kli",
-    "slugSdg": "bekmpfung-des-klimawa"
+    "slugSdg": "klimawandel"
   },
   {
     "origin": "OKF",
@@ -869,7 +869,7 @@
     "topic": "Ocean Health Index: Food Provision",
     "value": 0.5,
     "slugTopic": "ocean-health-index-fo",
-    "slugSdg": "ozeane-erhalten"
+    "slugSdg": "ozeane"
   },
   {
     "origin": "OKF",
@@ -877,7 +877,7 @@
     "topic": "Ocean Health Index: Clean Waters",
     "value": 0.48,
     "slugTopic": "ocean-health-index-cl",
-    "slugSdg": "ozeane-erhalten"
+    "slugSdg": "ozeane"
   },
   {
     "origin": "OKF",
@@ -885,7 +885,7 @@
     "topic": "Anteil der Gewässer in Deutschland in gutem ökologischen Zustand für Küstengewässer",
     "value": 0.0,
     "slugTopic": "anteil-der-gewsser-in",
-    "slugSdg": "ozeane-erhalten"
+    "slugSdg": "ozeane"
   },
   {
     "origin": "OKF",
@@ -893,7 +893,7 @@
     "topic": "Auswirkungen importierter Biodiversität, ausgestorbene Spezien",
     "value": 0.69,
     "slugTopic": "auswirkungen-importie",
-    "slugSdg": "landkosysteme-schtzen"
+    "slugSdg": "landoekosysteme"
   },
   {
     "origin": "OKF",
@@ -901,7 +901,7 @@
     "topic": "Anteil FCS zertifizierter Wälder",
     "value": 0.06,
     "slugTopic": "anteil-fcs-zertifizie",
-    "slugSdg": "landkosysteme-schtzen"
+    "slugSdg": "landoekosysteme"
   },
   {
     "origin": "OKF",
@@ -909,7 +909,7 @@
     "topic": "Bruttostickstoffbilanz auf landwirt. Flächen in kg/ ha",
     "value": 0.62,
     "slugTopic": "bruttostickstoffbilan",
-    "slugSdg": "landkosysteme-schtzen"
+    "slugSdg": "landoekosysteme"
   },
   {
     "origin": "OKF",
@@ -917,7 +917,7 @@
     "topic": "Financial Secrecy Index",
     "value": 0.11,
     "slugTopic": "financial-secrecy-ind",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "OKF",
@@ -925,7 +925,7 @@
     "topic": "Anteil an Waffenexporten",
     "value": 0.56,
     "slugTopic": "anteil-an-waffenexpor",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "OKF",
@@ -933,7 +933,7 @@
     "topic": "Recht auf Information Index (Access Info)",
     "value": 0.14,
     "slugTopic": "recht-auf-information",
-    "slugSdg": "frieden-gerechtigkeit"
+    "slugSdg": "frieden"
   },
   {
     "origin": "OKF",
@@ -941,7 +941,7 @@
     "topic": "Nachhaltige Entschuldungspolitik",
     "value": -0.33,
     "slugTopic": "nachhaltige-entschuld",
-    "slugSdg": "umsetzungsmittel-und-"
+    "slugSdg": "partnerschaft"
   },
   {
     "origin": "OKF",
@@ -949,7 +949,7 @@
     "topic": "Ending Rural Hunger Index _Trade Restrictions",
     "value": 0.17,
     "slugTopic": "ending-rural-hunger-i",
-    "slugSdg": "umsetzungsmittel-und-"
+    "slugSdg": "partnerschaft"
   },
   {
     "origin": "OKF",
@@ -957,6 +957,6 @@
     "topic": "ODA Quality of Implementation ",
     "value": 0.2,
     "slugTopic": "oda-quality-of-implem",
-    "slugSdg": "umsetzungsmittel-und-"
+    "slugSdg": "partnerschaft"
   }
 ]
