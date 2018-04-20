@@ -172,6 +172,7 @@ const store = () => new Vuex.Store({
         const dnss = _.filter(items, { 'origin': 'DNS' })
         const _sdg = {
           'n': n,
+          'slug': sdg,
           'color': dataSDGs[sdg].color,
           'label': _.first(items)['sdg'],
           'labels': insertLineBreaks(_.first(items)['sdg']),

@@ -19,6 +19,7 @@
       </div>
     </header>
     <div class="content">
+      <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
         <h3>Die offiziellen Indikatoren der Bundesregierung</h3>
         <span>Diese Indiktoren spiegeln laut Bundesregierung den Fortschritt des Zieles »{{ sdg.label }}« wider. Daraus würde sich folgender Fortschritt berechnen:</span>
@@ -38,6 +39,8 @@
 </template>
 
 <script>
+  import VisLeiste from '~/components/VisLeiste.vue'
+
   export default {
     validate ({ params, store }) {
       return store.getters.sdgsSlugs.includes(params.sdg)
@@ -51,6 +54,7 @@
     mounted () {
     },
     components: {
+      VisLeiste
     },
     computed: {
       sdg () {
