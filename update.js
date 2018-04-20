@@ -12,6 +12,8 @@ const numbers = ['zielwertJahr2030', 'aktuellerWert', 'ausgangswert']
 const strings = ['dnsName', '2030Name']
 
 const labelStr = 'label'
+const authorStr = 'author'
+const progressStr = 'value'
 
 function requestURL () {
 	console.log('Start fetching document')
@@ -94,6 +96,7 @@ function sortData (obj) {
 							const indicatorDNS = _.zipObject(headerDNS, contentDNS)
 							if (indicatorDNS[dnsID].length) {
 								indicatorDNS[labelStr] = indicatorDNS[strings[0]]
+								indicatorDNS[authorStr] = 'dns'
 								indicators.push(indicatorDNS)
 							}
 
@@ -102,6 +105,7 @@ function sortData (obj) {
 							if (indicatorOKF[okfID].length) {
 								indicatorOKF[labelStr] = indicatorOKF[strings[1]]
 								indicatorOKF[sdgID] = indicatorDNS[sdgID]
+								indicatorDNS[authorStr] = 'okf'
 								indicators.push(indicatorOKF)
 							}
 						})
@@ -122,14 +126,14 @@ function formatData (arr) {
 			i[key] = parseFloat(indicator[key].replace(',', '.'))
 		})
 
-		_.each([dnsID, okfID, labelStr], key => {
+		_.each([authorStr, dnsID, okfID, labelStr], key => {
 			if (_.has(indicator, key)) {
 				i[key] = _.trim(indicator[key])
 			}
 		})
 
 		_.each(i, (value, key) => {
-			if (_.isNaN(value)) {
+			if (_.isNaN(value) || value.length < 1) {
 				console.log('Could not format column ' + key + ' for indicator ' + indicator['label'])
 			}
 		})
@@ -137,7 +141,20 @@ function formatData (arr) {
 		return i
 	})
 
-	// console.log(indicators)
+	calculateProgress(indicators)
+}
+
+function calculateProgress (arr) {
+	const [target, current, start] = numbers
+
+	const indicators = _.map(arr, i => {
+		const range = i[start] - i[target]
+		const progress = (i[start] - i[current]) / range
+		i[progressStr] = progress
+		return i
+	})
+
+	console.log(indicators)
 }
 
 requestURL()
