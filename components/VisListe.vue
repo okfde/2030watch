@@ -2,19 +2,25 @@
   <ul>
     <li v-for="(sdg, slug) in sdgs" class="sdg-item">
       <nuxt-link :to="'sdg/' + slug" class="sdg-link">
-        <img
-          class="sdg-image"
-          :src="'http://via.placeholder.com/50/' + sdg.color + '/' + sdg.color">
-        <span class="sdg-label">{{ sdg.label }}</span>
+        <div class="sdg-image">
+          <svg>
+            <circle cx="50%" cy="50%" :fill="'#' + sdg.color" r="8" />
+          </svg>
+        </div>
+        <div class="sdg-label">
+          <span>{{ sdg.label }}</span>
+        </div>
         <svg class="sdg-vis">
           <line
             class="range"
+            stroke-linecap="round"
             x1="0%"
             y1="50%"
             x2="100%"
             y2="50%" />
           <line
             class="diff"
+            :stroke="colors[slug]"
             :x1="sdg.total + '%'"
             y1="50%"
             :x2="sdg.dns + '%'"
@@ -23,7 +29,7 @@
             class="sdg-marker sdg-marker-total"
             :cx="sdg.total + '%'"
             cy="50%"
-            r="6" />
+            r="8" />
           <text
             class="sdg-label sdg-label-total"
             alignment-baseline="baseline"
@@ -36,7 +42,7 @@
             class="sdg-marker sdg-marker-dns"
             :cx="sdg.dns + '%'"
             cy="50%"
-            r="6" />
+            r="8" />
           <text
             class="sdg-label sdg-label-dns"
             alignment-baseline="hanging"
@@ -53,7 +59,10 @@
 
 <script>
   import { mapGetters, mapState, mapActions } from 'vuex'
-  // import _ from 'lodash'
+  import chroma from 'chroma-js'
+  import _ from 'lodash'
+
+  const diffScale = chroma.scale(['#D22F27', '#eee', '#5C9E31']).domain([-100, 0, 100])
 
   export default {
     data: function () {
@@ -75,7 +84,12 @@
         'indicators',
         'sdgs',
         'sdgsSlugs'
-      ])
+      ]),
+      colors (state) {
+        return _.fromPairs(_.map(this.sdgs, (sdg, key) => {
+          return [key, diffScale(sdg.dns - sdg.okf).hex()]
+        }))
+      }
     },
     watch: {
     },
@@ -97,17 +111,31 @@
 
     .sdg-link {
       display: flex;
-      height: 40px;
+      height: 2.5rem;
       width: 100%;
+      margin: 0.3rem 0;
 
       .sdg-image {
-        height: 50%;
-        border-radius: 50%;
+        width: 16px;
         margin-right: 1rem;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .sdg-label {
-        flex: 2;
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: inline-block;
+          line-height: 1.0rem;
+          width: 70%;
+          max-width: 500px;
+        }
       }
 
       .sdg-vis {
@@ -115,13 +143,12 @@
         height: 100%;
 
         .range {
-          stroke: #D0CFCE;
-          stroke-width: 1px;
+          stroke: #ebecf1;
+          stroke-width: 4px;
         }
 
         .diff {
-          stroke: #80B0DC;
-          stroke-width: 2px;
+          stroke-width: 4px;
         }
 
         .sdg-marker {
@@ -129,11 +156,11 @@
           stroke-width: 2px;
 
           &.sdg-marker-total {
-            fill: #CE8394;
+            fill: #04A6F0;
           }
 
           &.sdg-marker-dns {
-            fill: #749A4E;
+            fill: #F1B31C;
           }
         }
 
@@ -142,11 +169,11 @@
           font-size: 12px;
 
           &.sdg-label-total {
-            fill: #CE8394;
+            fill: #04A6F0;
           }
 
           &.sdg-marker-dns {
-            fill: #749A4E;
+            fill: #F1B31C;
           }
         }
       }
