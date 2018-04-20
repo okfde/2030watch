@@ -105,7 +105,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .sdg-item {
     display: flex;
 
