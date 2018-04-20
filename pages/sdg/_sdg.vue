@@ -22,18 +22,34 @@
     <div class="content">
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
-        <h3>Die offiziellen Indikatoren der Bundesregierung</h3>
-        <span>Diese Indiktoren spiegeln laut Bundesregierung den Fortschritt des Zieles »{{ sdg.label }}« wider. Daraus würde sich folgender Fortschritt berechnen:</span>
-        <h3>OKF: {{ sdg.okf }}</h3>
-        <h3>DNS: {{ sdg.dns }}</h3>
-        <h3>Total: {{ sdg.total }}</h3>
-        <h3>DNS: {{ sdg.dns }}</h3>
-        <ul>
-          <li v-for="indicator in sdg.items"><nuxt-link :to="'../indicator/' + indicator.slugTopic">{{ indicator.origin }} – {{ indicator.topic }}</nuxt-link></li>
-        </ul>
-        <h3>Die komplementären Indikatoren der OKF</h3>
-        <span>Wir schlagen hingegen eine erweiterte Indikatoren-Liste vor, die einen Indikator übernimmt, einen modifiziert, einen löscht und zwei hinzufügt. Daraus ergibt sich folgender Fortschritt:</span>
-        <h3>Total: {{ sdg.total }}</h3>
+        <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
+        <p>Die Agenda 2030 schlägt 14 Indikatoren zur Messung von Geschlechtergleichberechtigung vor und umfasst Unterziele zu Diskriminierung, Gewalt, Partizipation, unbezahlte Pflegebelastung, Zugang zum Gesundheitswesen, und Chancengleichheit im politischen, ökonomischen und öffentlichen Leben. Die Deutsche Nachhaltigkeitsstrategie umfasst 3 Indikatoren und 2030Watch schlägt 5 Alternativ Indikatoren vor.</p>
+        <div class="columns columns-gutter columns-rows">
+          <section>
+            <small class="caption">Offizieller Indikatorenkatalog</small>
+            <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+            <p>Diese XXX Indikatoren spiegeln laut der Bundesregierung den Fortschritt von »{{ sdg.label }}« wieder. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
+            <h3>OKF: {{ sdg.okf }}</h3>
+          </section>
+          <section>
+            <ul>
+              <li v-for="indicator in sdg.items"><nuxt-link :to="'../indicator/' + indicator.slugTopic">{{ indicator.origin }} – {{ indicator.topic }}</nuxt-link></li>
+            </ul>
+          </section>
+        </div>
+        <div class="columns columns-gutter columns-rows">
+          <section>
+            <small class="caption">Alternativer und komplementärer</small>
+            <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
+            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die einen offiziellen Indikator übernimmt, einen streicht, und einen modifiziert sowie vier weitere hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.label }}« berechnen:</p>
+            <h3>Total: {{ sdg.total }}</h3>
+          </section>
+          <section>
+            <ul>
+              <li v-for="indicator in sdg.items"><nuxt-link :to="'../indicator/' + indicator.slugTopic">{{ indicator.origin }} – {{ indicator.topic }}</nuxt-link></li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   </div>
