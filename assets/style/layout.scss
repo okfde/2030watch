@@ -29,14 +29,19 @@ $width-desktop: 60vw;
   min-height: 100px;
   height: 12vh; /* size is based on the height of the device */
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: $spacing / 2;
 }
 
-.page-header {
+.page-header, .page-footer {
   color: #fff !important; // Temporary solution
+
   a {
     color: #fff !important;
   }
+}
 
+.page-header {
   .page-nav {
     flex: 2;
     text-align: right;
@@ -60,11 +65,15 @@ $width-desktop: 60vw;
 
 .page-container {
   & > * {
-    padding: $spacing 0;
+    padding: $spacing * 2 0;
   }
 
-  & > .inpage-nav {
+  & > .inpage-nav, & > .content {
     padding: 0;
+  }
+
+  .content .wrapper {
+    margin-top: $spacing * 2;
   }
 }
 
