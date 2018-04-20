@@ -105,7 +105,7 @@ function sortData (obj) {
 							if (indicatorOKF[okfID].length) {
 								indicatorOKF[labelStr] = indicatorOKF[strings[1]]
 								indicatorOKF[sdgID] = indicatorDNS[sdgID]
-								indicatorDNS[authorStr] = 'okf'
+								indicatorOKF[authorStr] = 'okf'
 								indicators.push(indicatorOKF)
 							}
 						})
@@ -145,6 +145,7 @@ function formatData (arr) {
 }
 
 function calculateProgress (arr) {
+	console.log('Start calculating progress values')
 	const [target, current, start] = numbers
 
 	const indicators = _.map(arr, i => {
@@ -154,7 +155,35 @@ function calculateProgress (arr) {
 		return i
 	})
 
-	console.log(indicators)
+	buildSDGs(indicators)
+}
+
+function buildSDGs (arr) {
+	console.log('Start building SDG data')
+	const sdgs = _.groupBy(arr, sdgID)
+
+	_.each(sdgs, (items, key) => {
+		const indicators = _.groupBy(items, authorStr)
+		const { dns, okf } = indicators
+
+		if (_.isUndefined(dns) || dns.length < 1 || _.isUndefined(okf) || okf.length < 1) {
+			console.log('Not enough indicators for SDG ' + key)
+		} else {
+			const valuesDNS = _.filter(dns, i => {
+				return !_.isNaN(i[progressStr])
+			})
+			const valuesOKF = _.filter(okf, i => {
+				return !_.isNaN(i[progressStr])
+			})
+
+			const sdg = {
+				'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length,
+				'okf': _.sumBy(valuesOKF, progressStr) / valuesOKF.length
+			}
+
+			console.log(sdg)
+		}
+	})
 }
 
 requestURL()
