@@ -1,7 +1,10 @@
-const request = require('request');
-const _ = require('lodash');
-const parseCSV = require('csv-parse');
-const fs = require('fs');
+const request = require('request')
+const _ = require('lodash')
+const parseCSV = require('csv-parse')
+const fs = require('fs')
+const jsonfile = require('jsonfile')
+const sdgsMeta = require('./data/sdgs-text.json')
+const sdgsFile = './data/sdgs.json'
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3jgbFv0NlOhd5JuzoMFvelmcTELqc85VpIWn-R7h2TkyVyVYLyOAdpTAdtDmxYFs6bZZCiQkBmWy-/pub?output=csv'
 const splitStr = '2030Id'
 const sdgID = 'sdgId'
@@ -179,6 +182,8 @@ function buildSDGs (arr) {
 	console.log('Start building SDG data')
 	const sdgs = _.groupBy(arr, sdgID)
 
+	const sdgArr = []
+
 	_.each(sdgs, (items, key) => {
 		const indicators = _.groupBy(items, authorStr)
 		const { dns, okf } = indicators
@@ -201,21 +206,37 @@ function buildSDGs (arr) {
 
 			const valuesCombined = [...valuesCombinedDNS, ...valuesOKF]
 
-			const sdg = {
-				'id': key,
-				'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length,
-				'okf': _.sumBy(valuesCombined, progressStr) / valuesCombined.length,
-				'n': {
-					'dns': valuesDNS.length,
-					'okf': valuesOKF.length,
-					'alt': valuesCombined.length
-				}
-			}
+			const sdgMeta = sdgsMeta[parseInt(key) - 1]
 
-			console.log(sdg)
-			// console.log(sdg, valuesDNS.length, valuesOKF.length, valuesDNS.length + valuesOKF.length, valuesCombined.length)
+			if (_.isUndefined(sdgMeta)) {
+				console.log('Could not find meta information for SDG ' + key)
+			} else {
+				const sdg = {
+					...sdgMeta,
+					'id': parseInt(key),
+					'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length * 100,
+					'okf': _.sumBy(valuesCombined, progressStr) / valuesCombined.length * 100,
+					'n': {
+						'dns': valuesDNS.length,
+						'okf': valuesOKF.length,
+						'alt': valuesCombined.length
+					}
+				}
+
+				sdgArr.push([sdgMeta['slug'], sdg])
+
+				console.log(sdg)
+			}
 		}
 	})
+
+	sdgObj = _.fromPairs(sdgArr)
+
+	jsonfile.writeFile(sdgsFile, sdgObj, err => {
+	  console.error('Could not write SDG file (' + err + ')')
+	})
+
+	// console.log(sdgObj)
 }
 
 requestURL()
