@@ -9,7 +9,7 @@ const dnsID = 'dnsId'
 const okfID = '2030Id'
 
 const numbers = ['zielwertJahr2030', 'aktuellerWert', 'ausgangswert']
-const strings = ['dnsName', '2030Name']
+const strings = ['dnsName', '2030Name', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover']
 
 const labelStr = 'label'
 const authorStr = 'author'
@@ -91,11 +91,13 @@ function sortData (obj) {
 					} else {
 						const indicators = []
 
+						const [dnsName, okfName] = strings
+
 						const splittedContent = _.map(content, line => {
 							const contentDNS = _.slice(line, 0, splitPoint)
 							const indicatorDNS = _.zipObject(headerDNS, contentDNS)
 							if (indicatorDNS[dnsID].length) {
-								indicatorDNS[labelStr] = indicatorDNS[strings[0]]
+								indicatorDNS[labelStr] = indicatorDNS[dnsName]
 								indicatorDNS[authorStr] = 'dns'
 								indicators.push(indicatorDNS)
 							}
@@ -103,7 +105,7 @@ function sortData (obj) {
 							const contentOKF = _.slice(line, splitPoint)
 							const indicatorOKF = _.zipObject(headerOKF, contentOKF)
 							if (indicatorOKF[okfID].length) {
-								indicatorOKF[labelStr] = indicatorOKF[strings[1]]
+								indicatorOKF[labelStr] = indicatorOKF[okfName]
 								indicatorOKF[sdgID] = indicatorDNS[sdgID]
 								indicatorOKF[authorStr] = 'okf'
 								indicators.push(indicatorOKF)
@@ -120,6 +122,8 @@ function sortData (obj) {
 
 function formatData (arr) {
 	let err = false
+
+	const [, , badTarget, modTarget, badIndicator, spill] = strings
 	const indicators = _.map(arr, indicator => {
 		const i = {}
 		_.each([...numbers, sdgID], key => {
@@ -131,6 +135,19 @@ function formatData (arr) {
 				i[key] = _.trim(indicator[key])
 			}
 		})
+
+		if (i[authorStr] === 'dns') {
+			i['badTarget'] = indicator[badTarget] === 'j'
+			i['badIndicator'] = indicator[badIndicator] === 'x'
+			i['spill'] = indicator[spill] === 'x'
+
+			if (indicator[modTarget].match(/^\d/)) { // starts with number
+				i['modTarget'] = true
+				i['alt'] = indicator[modTarget]
+			} else {
+				i['modTarget'] = false
+			}
+		}
 
 		_.each(i, (value, key) => {
 			if (_.isNaN(value) || value.length < 1) {
@@ -175,13 +192,28 @@ function buildSDGs (arr) {
 			const valuesOKF = _.filter(okf, i => {
 				return !_.isNaN(i[progressStr])
 			})
+			const valuesCombinedDNS = _.filter(valuesDNS, i => {
+				if (i['badIndicator']) { return false }
+				if (i['modTarget']) { return false }
+
+				return true
+			})
+
+			const valuesCombined = [...valuesCombinedDNS, ...valuesOKF]
 
 			const sdg = {
+				'id': key,
 				'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length,
-				'okf': _.sumBy(valuesOKF, progressStr) / valuesOKF.length
+				'okf': _.sumBy(valuesCombined, progressStr) / valuesCombined.length,
+				'n': {
+					'dns': valuesDNS.length,
+					'okf': valuesOKF.length,
+					'alt': valuesCombined.length
+				}
 			}
 
 			console.log(sdg)
+			// console.log(sdg, valuesDNS.length, valuesOKF.length, valuesDNS.length + valuesOKF.length, valuesCombined.length)
 		}
 	})
 }
