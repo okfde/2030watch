@@ -14,7 +14,7 @@
             <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
           </div>
           <div>
-            <strong>{{ sdg.okf }} {{ sdg.total }}</strong>
+            <VisProgress :sdg="sdg" />
           </div>
         </section>
       </div>
@@ -41,6 +41,7 @@
 
 <script>
   import VisLeiste from '~/components/VisLeiste.vue'
+  import VisProgress from '~/components/VisProgress.vue'
 
   export default {
     validate ({ params, store }) {
@@ -55,7 +56,8 @@
     mounted () {
     },
     components: {
-      VisLeiste
+      VisLeiste,
+      VisProgress
     },
     computed: {
       sdg () {

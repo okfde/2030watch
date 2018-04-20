@@ -40,6 +40,7 @@
   export default {
     computed: {
       klasse () {
+        console.log(this.$route.params)
         return this.$route.params.sdg
       }
     }
