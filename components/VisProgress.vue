@@ -1,15 +1,67 @@
 <template>
-  <svg class="sdg-vis">
+  <svg class="sdg-vis" ref="vis">
+    <g>
+      <text
+        class="sdg-label sdg-label-tick"
+        alignment-baseline="baseline"
+        text-anchor="start"
+        x="1px"
+        y="30%">
+        0&#8239;%
+      </text>
+      <text
+        class="sdg-label sdg-label-tick"
+        alignment-baseline="baseline"
+        text-anchor="end"
+        x="calc(100% - 1px)"
+        y="30%">
+        100&#8239;%
+      </text>
+      <line
+        class="tick"
+        stroke-linecap="round"
+        x1="calc(0% + 1px)"
+        y1="40%"
+        x2="calc(0% + 1px)"
+        y2="60%" />
+      <line
+        class="tick"
+        stroke-linecap="round"
+        x1="25%"
+        y1="40%"
+        x2="25%"
+        y2="60%" />
+      <line
+        class="tick"
+        stroke-linecap="round"
+        x1="50%"
+        y1="40%"
+        x2="50%"
+        y2="60%" />
+      <line
+        class="tick"
+        stroke-linecap="round"
+        x1="75%"
+        y1="40%"
+        x2="75%"
+        y2="60%" />
+      <line
+        class="tick"
+        stroke-linecap="round"
+        x1="calc(100% - 1px)"
+        y1="40%"
+        x2="calc(100% - 1px)"
+        y2="60%" />
+      </g>
     <line
       class="range"
-      stroke-linecap="round"
       x1="0%"
       y1="50%"
       x2="100%"
       y2="50%" />
     <line
       class="diff"
-      :stroke="sdg.okf < sdg.dns ? '#5C9E31' : '#D22F27'"
+      :stroke="sdg.okf < sdg.dns ? '#D22F27' : '#5C9E31'"
       :x1="sdg.okf + '%'"
       y1="50%"
       :x2="sdg.dns + '%'"
@@ -20,12 +72,13 @@
       cy="50%"
       r="8" />
     <text
+      ref="okf"
       class="sdg-label sdg-label-total"
       alignment-baseline="baseline"
-      :text-anchor="sdg.okf > 50 ? 'end' : 'start'"
-      :x="sdg.okf + (sdg.okf > 50 ? -3 : 3) + '%'"
-      y="40%">
-      {{ sdg.okf }}%
+      :text-anchor="labels[0].l"
+      :x="labels[0].x"
+      y="30%">
+      {{ sdg.okf.toFixed(0) }}&#8239;%
     </text>
     <circle
       class="sdg-marker sdg-marker-dns"
@@ -33,26 +86,78 @@
       cy="50%"
       r="8" />
     <text
+      ref="dns"
       class="sdg-label sdg-label-dns"
       alignment-baseline="hanging"
-      :text-anchor="sdg.dns > 50 ? 'end' : 'start'"
-      :x="sdg.dns + (sdg.dns > 50 ? -3 : 3) + '%'"
-      y="60%">
-      {{ sdg.dns }}%
+      :text-anchor="labels[1].l"
+      :x="labels[1].x"
+      y="70%">
+      {{ sdg.dns.toFixed(0) }}&#8239;%
     </text>
   </svg>
 </template>
 
 <script>
-  import chroma from 'chroma-js'
-
-  const diffScale = chroma.scale(['#5C9E31', '#eee', '#D22F27']).domain([-100, 0, 100])
+  // import _ from 'lodash'
 
   export default {
     props: ['sdg'],
+    data: function () {
+      return {
+        width: 0,
+        height: 0,
+        okfLabel: 0,
+        dnsLabel: 0
+      }
+    },
+    mounted: function () {
+      this.width = this.$refs.vis.clientWidth
+      this.height = this.$refs.vis.clientHeight
+      this.okfWidth = this.$refs.okf.clientWidth
+      this.dnsWidth = this.$refs.dns.clientWidth
+    },
     computed: {
-      color (state) {
-        return diffScale(this.sdg.dns - this.sdg.okf).hex()
+      labels: function () {
+        let dns = this.sdg.dns / 100 * this.width
+        let okf = this.sdg.okf / 100 * this.width
+
+        let dnsLabel = 'start'
+        let okfLabel = 'end'
+
+        if (dns < okf) {
+          dns -= 3
+          okf += 3
+          dnsLabel = 'end'
+          okfLabel = 'start'
+
+          if (okf + this.okfWidth > this.width) {
+            okf -= 6
+            okfLabel = 'end'
+          }
+
+          if (dns - this.dnsWidth < 0) {
+            dns += 6
+            dnsLabel = 'start'
+          }
+        } else {
+          dns += 3
+          okf -= 3
+
+          if (dns + this.dnsWidth > this.width) {
+            dns -= 6
+            dnsLabel = 'end'
+          }
+
+          if (okf - this.okfWidth < 0) {
+            okf += 6
+            okfLabel = 'start'
+          }
+        }
+
+        console.log(okf + okfLabel)
+        console.log(dns + dnsLabel)
+
+        return [{ 'x': okf + 'px', 'l': okfLabel }, { 'x': dns + 'px', 'l': dnsLabel }]
       }
     }
   }
@@ -66,6 +171,11 @@
     .range {
       stroke: #ebecf1;
       stroke-width: 4px;
+    }
+
+    .tick {
+      stroke: #D3D4D9;
+      stroke-width: 1px;
     }
 
     .diff {
@@ -86,14 +196,18 @@
     }
 
     .sdg-label {
-      opacity: 0;
+      opacity: 1;
       font-size: 12px;
+
+      &.sdg-label-tick {
+        fill: #222;
+      }
 
       &.sdg-label-total {
         fill: #04A6F0;
       }
 
-      &.sdg-marker-dns {
+      &.sdg-label-dns {
         fill: #F1B31C;
       }
     }
