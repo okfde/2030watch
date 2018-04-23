@@ -12,7 +12,7 @@ const dnsID = 'dnsId'
 const okfID = '2030Id'
 
 const numbers = ['zielwertJahr2030', 'aktuellerWert', 'ausgangswert']
-const strings = ['dnsName', '2030Name', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover']
+const strings = ['dnsName', '2030Name', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'nichtBerechenbar', 'spillover']
 
 const labelStr = 'label'
 const authorStr = 'author'
@@ -86,6 +86,7 @@ function sortData (obj) {
 				if (checkHeaderIDs(header)) {
 					console.log('Please check column names')
 				} else {
+					console.log(header)
 					const headerDNS = _.slice(header, 0, splitPoint)
 					const headerOKF = _.slice(header, splitPoint)
 
@@ -126,7 +127,7 @@ function sortData (obj) {
 function formatData (arr) {
 	let err = false
 
-	const [, , badTarget, modTarget, badIndicator, spill] = strings
+	const [, , badTarget, modTarget, badIndicator, uncalculable, spill] = strings
 	const indicators = _.map(arr, indicator => {
 		const i = {}
 		_.each([...numbers, sdgID], key => {
@@ -143,6 +144,7 @@ function formatData (arr) {
 			i['badTarget'] = indicator[badTarget] === 'j'
 			i['badIndicator'] = indicator[badIndicator] === 'x'
 			i['spill'] = indicator[spill] === 'x'
+			i['uncalculable'] = indicator[uncalculable] === 'x'
 
 			if (indicator[modTarget].match(/^\d/)) { // starts with number
 				i['modTarget'] = true
@@ -199,6 +201,7 @@ function buildSDGs (arr) {
 			})
 			const valuesCombinedDNS = _.filter(valuesDNS, i => {
 				if (i['badIndicator']) { return false }
+				if (i['uncalculable']) { return false }
 				if (i['modTarget']) { return false }
 
 				return true
@@ -217,6 +220,10 @@ function buildSDGs (arr) {
 					'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length * 100,
 					'okf': _.sumBy(valuesCombined, progressStr) / valuesCombined.length * 100,
 					'n': {
+						'bad': _.countBy(valuesDNS, 'badIndicator').true || 0,
+						'mod': _.countBy(valuesDNS, 'modTarget').true || 0,
+						'unc': _.countBy(valuesDNS, 'uncalculable').true || 0,
+						'unc': _.countBy(valuesDNS, 'badTarget').true || 0,
 						'dns': valuesDNS.length,
 						'okf': valuesOKF.length,
 						'alt': valuesCombined.length
@@ -224,16 +231,19 @@ function buildSDGs (arr) {
 				}
 
 				sdgArr.push([sdgMeta['slug'], sdg])
-
-				console.log(sdg)
+				// console.log(sdg)
 			}
 		}
 	})
 
 	sdgObj = _.fromPairs(sdgArr)
 
-	jsonfile.writeFile(sdgsFile, sdgObj, err => {
-	  console.error('Could not write SDG file (' + err + ')')
+	jsonfile.writeFile(sdgsFile, sdgObj, { spaces: 2 }, err => {
+		if (!err) {
+  		console.log('Data successfully written to ' + sdgsFile)
+    } else {
+    	console.error('Could not write SDG file (' + err + ')')
+    }
 	})
 
 	// console.log(sdgObj)
