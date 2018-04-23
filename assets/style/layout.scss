@@ -105,3 +105,29 @@ $width-desktop: 60vw;
     padding-bottom: 0;
   }
 }
+
+.content {
+  padding: 0;
+
+  section {
+    padding: $spacing*2 15vw;
+
+    &:nth-child(odd){
+      background: $color-light;
+    }
+  }
+
+  .section-wrapper {
+    display: flex;
+    align-items: center;
+
+  .section-text {
+    flex: 1;
+  }
+
+  .section-img {
+    flex: 1;
+    text-align: center;
+  }
+}
+}

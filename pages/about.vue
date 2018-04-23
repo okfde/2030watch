@@ -43,11 +43,11 @@
           <h2>Team</h2>
           <div class="section-wrapper">
             <div class="columns-rows">
-               <team-member></team-member>
+              <team-member></team-member>
               <team-member></team-member>
             </div>
               <div class="columns-rows">
-               <team-member></team-member>
+              <team-member></team-member>
               <team-member></team-member>
             </div>
        
@@ -90,49 +90,21 @@
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/base";
+  @import "../assets/style/base";
 
-  .content {
-    padding: 0;
- 
-    section {
-      padding: $spacing*2 15vw;
-
-      &:nth-child(odd){
-        background: $color-light;
-      }
-
-      &:nth-of-type(3) {
-        .section-wrapper {
-          padding-top: $spacing;
-          justify-content: space-around;
-        }
-      }
-
-      &:nth-of-type(4) {
-        .section-wrapper {
-          padding-top: $spacing;
-        }
+  section {
+    &:nth-of-type(3) {
+      .section-wrapper {
+        padding-top: $spacing;
+        justify-content: space-around;
       }
     }
 
-    .section-wrapper {
-      display: flex;
-      align-items: center;
-
-      
-
-    .section-text {
-      flex: 1;
-    }
-
-    .section-img {
-      flex: 1;
-      text-align: center;
+    &:nth-of-type(4) {
+      .section-wrapper {
+        padding-top: $spacing;
+      }
     }
   }
-}
-
-  
 
 </style>

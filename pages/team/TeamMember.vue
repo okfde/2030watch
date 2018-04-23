@@ -7,8 +7,8 @@
           <div class="name">Max Mustermann</div>
           <div class="role">Projektleiter</div>
           <div class="socials">
-              <img src="../../assets/icons/email.png" alt="Email Icon">
-              <img src="../../assets/icons/twitter.png" alt="Twitter Icon">
+              <a href="mailto:2030-watch@okfn.de"><img src="../../assets/icons/email.png" alt="Email Icon"></a>
+              <a href="https://twitter.com/okfde" target="_blank"><img src="../../assets/icons/twitter.png" alt="Twitter Icon"></a>
           </div>
       </div>
   </div>
