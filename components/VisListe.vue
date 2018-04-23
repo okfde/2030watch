@@ -1,14 +1,11 @@
 <template>
   <ul>
     <li class="sdg-item">
-      <div>
+      <div class="sdg-header-label">
         SDG
       </div>
-      <div class="sdg-label">
-        test
-      </div>
-      <div>
-        Test
+      <div class="sdg-header-vis">
+        Nachhaltigkeit erreicht zu (<span class="okf">OKF</span>, <span class="dns">DNS</span>)
       </div>
     </li>
     <li v-for="(sdg, slug, index) in sdgs" class="sdg-item">
@@ -57,7 +54,25 @@
   .sdg-item {
     display: flex;
 
+    .sdg-header-label {
+      margin-left: calc(1rem + 16px);
+    }
+
+    .sdg-header-label, .sdg-header-vis {
+      flex: 1;
+      color: #9B9B9A;
+
+      .dns {
+        color: #F1B31C;
+      }
+
+      .okf {
+        color: #04A6F0;
+      }
+    }
+
     .sdg-link {
+      color: #222;
       display: flex;
       height: 2.5rem;
       width: 100%;
@@ -70,6 +85,7 @@
         svg {
           width: 100%;
           height: 100%;
+          filter: grayscale(100%)
         }
       }
 
@@ -87,6 +103,9 @@
       }
 
       &:hover {
+        svg {
+          filter: none;
+        }
         .sdg-label {
           opacity: 1;
 
