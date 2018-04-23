@@ -65,10 +65,13 @@ html {
   }
 }
 
+a, .link {
+  cursor: pointer;
+}
+
 a {
   color: $color-accent;
   text-decoration: none;
-  cursor: pointer;
 
   &[href^='#'], &:not([href]) {
     color: $color-accent;

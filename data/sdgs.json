@@ -9,10 +9,78 @@
     "id": 1,
     "dns": 94.26815479447059,
     "okf": 70.5206934937326,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 10,
+          "aktuellerWert": 10.7,
+          "ausgangswert": 17.8,
+          "sdgId": 1,
+          "author": "dns",
+          "label": "Materielle Deprivation",
+          "id": "1_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.9102564102564104
+        },
+        {
+          "zielwertJahr2030": 3,
+          "aktuellerWert": 3.7,
+          "ausgangswert": 31.12,
+          "sdgId": 1,
+          "author": "dns",
+          "label": "Erhebliche materielle Deprivation",
+          "id": "1_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.9751066856330014
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 8,
+          "aktuellerWert": 16.5,
+          "ausgangswert": 22.9,
+          "sdgId": 1,
+          "author": "okf",
+          "label": "Armutsgefährdungsquote (60% Medianäquivalenzeinkommen)",
+          "id": "1_1",
+          "value": 0.4295302013422818
+        },
+        {
+          "zielwertJahr2030": 10,
+          "aktuellerWert": 19.4,
+          "ausgangswert": 38.8,
+          "sdgId": 1,
+          "author": "okf",
+          "label": "Von Armut und sozialer Ausgrenzung bedroht (60+)",
+          "id": "1_2",
+          "value": 0.6736111111111112
+        },
+        {
+          "zielwertJahr2030": 20,
+          "aktuellerWert": 39.1,
+          "ausgangswert": 61.3,
+          "sdgId": 1,
+          "author": "okf",
+          "label": "Von Armut und sozialer Ausgrenzung bedroht (EU-Ausländer)",
+          "id": "1_3",
+          "value": 0.5375302663438256
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 0,
       "dns": 2,
       "okf": 3,
       "alt": 5
@@ -28,10 +96,89 @@
     "id": 2,
     "dns": 53.856162206078025,
     "okf": 44.99264947945136,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 70,
+          "aktuellerWert": 87,
+          "ausgangswert": 153.4,
+          "sdgId": 2,
+          "author": "dns",
+          "label": "Stickstoffüberschuss",
+          "id": "2_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": true,
+          "alt": "2_1",
+          "value": 0.7961630695443646
+        },
+        {
+          "zielwertJahr2030": 20,
+          "aktuellerWert": 6.82,
+          "ausgangswert": 1.67,
+          "sdgId": 2,
+          "author": "dns",
+          "label": "Anteil biologischer Landwirtschaft",
+          "id": "2_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.2809601745771959
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 50,
+          "aktuellerWert": 87,
+          "ausgangswert": 153.4,
+          "sdgId": 2,
+          "author": "okf",
+          "label": "Stickstoffüberschuss",
+          "id": "2_1",
+          "value": 0.6421663442940039
+        },
+        {
+          "zielwertJahr2030": 13.3,
+          "aktuellerWert": 97.9,
+          "ausgangswert": 402,
+          "sdgId": 2,
+          "author": "okf",
+          "label": "Antibiotikaeinsatz in der Landwirtschaft",
+          "id": "2_2",
+          "value": 0.7823514278363778
+        },
+        {
+          "zielwertJahr2030": 0.32,
+          "aktuellerWert": 2.91,
+          "ausgangswert": 5.41,
+          "sdgId": 2,
+          "author": "okf",
+          "label": "Einsatz von Pestiziden in der Landwirtschaft",
+          "id": "2_3",
+          "value": 0.4911591355599214
+        },
+        {
+          "zielwertJahr2030": 31.2,
+          "aktuellerWert": 59.97,
+          "ausgangswert": 61.58,
+          "sdgId": 2,
+          "author": "okf",
+          "label": "Fleischkonsum pro Kopf",
+          "id": "2_4",
+          "value": 0.05299539170506911
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 1,
+      "baT": 0,
+      "baI": 0,
+      "moT": 1,
       "unc": 0,
+      "spi": 0,
       "dns": 2,
       "okf": 4,
       "alt": 5
@@ -47,10 +194,168 @@
     "id": 3,
     "dns": 44.50849256381842,
     "okf": 40.114720135619294,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 149,
+          "ausgangswert": 159,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Vorzeitige Sterblichkeit Frauen, Todesfälle pro 100.000 Einwohner unter 70J, Frauen",
+          "id": "3_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.1694915254237288
+        },
+        {
+          "zielwertJahr2030": 190,
+          "aktuellerWert": 281,
+          "ausgangswert": 308,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Vorzeitige Sterblichkeit Männer, Todesfälle pro 100.000 Einwohner unter 70J, Männer",
+          "id": "3_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.2288135593220339
+        },
+        {
+          "zielwertJahr2030": 7,
+          "aktuellerWert": 8,
+          "ausgangswert": 15,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Raucherquote 12-17J",
+          "id": "3_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.875
+        },
+        {
+          "zielwertJahr2030": 19,
+          "aktuellerWert": 24,
+          "ausgangswert": 26,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Raucherquote ab 15J",
+          "id": "3_4",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.2857142857142857
+        },
+        {
+          "zielwertJahr2030": 8.9,
+          "aktuellerWert": 10,
+          "ausgangswert": null,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Adipositasquote 11-17J",
+          "id": "3_5",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": true,
+          "spill": false,
+          "modTarget": false,
+          "value": null
+        },
+        {
+          "zielwertJahr2030": 19.2,
+          "aktuellerWert": 22.3,
+          "ausgangswert": 32.1,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Adipositasquote ab 18J",
+          "id": "3_6",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.7596899224806201
+        },
+        {
+          "zielwertJahr2030": 45,
+          "aktuellerWert": 84,
+          "ausgangswert": 100,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Emmissionen von Luftschadstoffen, Index von SO2, NOx, NH3, NMVOC, PM.2,5",
+          "id": "3_7",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.2909090909090909
+        },
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 12.4,
+          "ausgangswert": 25.1,
+          "sdgId": 3,
+          "author": "dns",
+          "label": "Anteil der Bevölkerung mit PM10 Exposition von über 20µg pro m^3 Luft",
+          "id": "3_8",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.5059760956175299
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 4.54,
+          "aktuellerWert": 11,
+          "ausgangswert": 12.6,
+          "sdgId": 3,
+          "author": "okf",
+          "label": "Alkoholkonsum in l/pP ab 15J",
+          "id": "3_1",
+          "value": 0.19851116625310172
+        },
+        {
+          "zielwertJahr2030": 4.52,
+          "aktuellerWert": 10.8,
+          "ausgangswert": 18.1,
+          "sdgId": 3,
+          "author": "okf",
+          "label": "Suizidrate",
+          "id": "3_2",
+          "value": 0.5375552282768777
+        },
+        {
+          "zielwertJahr2030": 25,
+          "aktuellerWert": 129.99,
+          "ausgangswert": 149.96,
+          "sdgId": 3,
+          "author": "okf",
+          "label": "Zuckerkonsum",
+          "id": "3_3",
+          "value": 0.15981113956466067
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
-      "unc": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
+      "unc": 1,
+      "spi": 0,
       "dns": 7,
       "okf": 3,
       "alt": 10
@@ -66,10 +371,98 @@
     "id": 4,
     "dns": 74.05241644203372,
     "okf": 64.75497426471911,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 8.5,
+          "aktuellerWert": 10,
+          "ausgangswert": 19.8,
+          "sdgId": 4,
+          "author": "dns",
+          "label": "Frühe Schulabgänger, 18-24J ohne Abschluss",
+          "id": "4_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.8672566371681416
+        },
+        {
+          "zielwertJahr2030": 44.66,
+          "aktuellerWert": 46.8,
+          "ausgangswert": 38.8,
+          "sdgId": 4,
+          "author": "dns",
+          "label": "tertiärer oder postsekundärer Abschluss, 30-34J",
+          "id": "4_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 1.3651877133105803
+        },
+        {
+          "zielwertJahr2030": 35,
+          "aktuellerWert": 16.2,
+          "ausgangswert": 7.3,
+          "sdgId": 4,
+          "author": "dns",
+          "label": "Ganztagsbetreuung 0-2J",
+          "id": "4_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.32129963898916963
+        },
+        {
+          "zielwertJahr2030": 70,
+          "aktuellerWert": 44.5,
+          "ausgangswert": 26.9,
+          "sdgId": 4,
+          "author": "dns",
+          "label": "Ganztagsbetreuung 3-5J",
+          "id": "4_4",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.4083526682134571
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 2.7,
+          "aktuellerWert": 5.6,
+          "ausgangswert": 11.5,
+          "sdgId": 4,
+          "author": "okf",
+          "label": "Sozio-ökonomische Faktoren auf Bildungsgrad",
+          "id": "4_1",
+          "value": 0.6704545454545454
+        },
+        {
+          "zielwertJahr2030": 16.4,
+          "aktuellerWert": 9.6,
+          "ausgangswert": 7.3,
+          "sdgId": 4,
+          "author": "okf",
+          "label": "Bildungsausgaben am BIP",
+          "id": "4_2",
+          "value": 0.2527472527472528
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 0,
       "dns": 4,
       "okf": 2,
       "alt": 6
@@ -85,10 +478,114 @@
     "id": 5,
     "dns": 34.77777777777778,
     "okf": 31.630108323129512,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 10,
+          "aktuellerWert": 21,
+          "ausgangswert": 22.5,
+          "sdgId": 5,
+          "author": "dns",
+          "label": "Verdienstabstand zwischen Frauen und Männern",
+          "id": "5_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.12
+        },
+        {
+          "zielwertJahr2030": 30,
+          "aktuellerWert": 27.7,
+          "ausgangswert": 0,
+          "sdgId": 5,
+          "author": "dns",
+          "label": "Frauen in Führungspositionen in der Wirtschaft",
+          "id": "5_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": true,
+          "alt": "5_2",
+          "value": 0.9233333333333333
+        },
+        {
+          "zielwertJahr2030": 473,
+          "aktuellerWert": 355,
+          "ausgangswert": 355,
+          "sdgId": 5,
+          "author": "dns",
+          "label": "Mädchen und Frauen, die durch berufliche Qualifizierungsmaßnahmen deutscher entwicklungspolitischer Zusammenarbeit erreicht wurden",
+          "id": "5_3",
+          "badTarget": true,
+          "badIndicator": true,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 50,
+          "aktuellerWert": 37,
+          "ausgangswert": 10.1,
+          "sdgId": 5,
+          "author": "okf",
+          "label": "Anteil der Frauen in Parlamenten",
+          "id": "5_1",
+          "value": 0.6741854636591479
+        },
+        {
+          "zielwertJahr2030": 50,
+          "aktuellerWert": 16,
+          "ausgangswert": 0,
+          "sdgId": 5,
+          "author": "okf",
+          "label": "Frauen in Führungspositionen in der Wirtschaft",
+          "id": "5_2",
+          "value": 0.32
+        },
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 2.5,
+          "ausgangswert": 5.3,
+          "sdgId": 5,
+          "author": "okf",
+          "label": "Ungleiche Verteilung der Hausarbeit",
+          "id": "5_3",
+          "value": 0.5283018867924528
+        },
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 45.7,
+          "ausgangswert": 45.7,
+          "sdgId": 5,
+          "author": "okf",
+          "label": "Gendergap im Renteneinkommen (Rentner über 65)",
+          "id": "5_4",
+          "value": 0
+        },
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 35,
+          "ausgangswert": 47,
+          "sdgId": 5,
+          "author": "okf",
+          "label": "Gewalt gegen Frauen",
+          "id": "5_5",
+          "value": 0.2553191489361702
+        }
+      ]
+    },
     "n": {
-      "bad": 1,
-      "mod": 1,
-      "unc": 1,
+      "baT": 1,
+      "baI": 1,
+      "moT": 1,
+      "unc": 0,
+      "spi": 0,
       "dns": 3,
       "okf": 5,
       "alt": 6
@@ -104,10 +601,83 @@
     "id": 6,
     "dns": 38.96982715590615,
     "okf": 13.977370366929613,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 36.95,
+          "ausgangswert": 32.19,
+          "sdgId": 6,
+          "author": "dns",
+          "label": "Phosphor in Fließgewässern, Anteil der Messstellen, an denen der Orientierungswert des guten ökologischen Zustands für Gesamt-Phosphor eingehalten wird",
+          "id": "6_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.07019613626308811
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 81.82,
+          "ausgangswert": 81.84,
+          "sdgId": 6,
+          "author": "dns",
+          "label": "Nitrat im Grundwasser, Anteil der Messstellen, an denen der Schwellenwert von 50 mg/L eingehalten wird",
+          "id": "6_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": -0.0011013215859036474
+        },
+        {
+          "zielwertJahr2030": 10,
+          "aktuellerWert": 11,
+          "ausgangswert": 0,
+          "sdgId": 6,
+          "author": "dns",
+          "label": "Von Deutschland geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit, erreichte Menschen",
+          "id": "6_3",
+          "badTarget": false,
+          "badIndicator": true,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 1.1
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 6.5,
+          "ausgangswert": 0,
+          "sdgId": 6,
+          "author": "okf",
+          "label": "Ökologischer Zustand der Flüsse - Anteil der Gewässer in gutem oder sehr gutem ökolog Zustand",
+          "id": "6_1",
+          "value": 0.065
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 42.5,
+          "ausgangswert": 0,
+          "sdgId": 6,
+          "author": "okf",
+          "label": "Ökologischer Zustand der Seen - Anteil der Gewässer in gutem oder sehr gutem ökolog Zustand",
+          "id": "6_2",
+          "value": 0.425
+        }
+      ]
+    },
     "n": {
-      "bad": 1,
-      "mod": 0,
+      "baT": 0,
+      "baI": 1,
+      "moT": 0,
       "unc": 0,
+      "spi": 1,
       "dns": 3,
       "okf": 2,
       "alt": 4
@@ -123,10 +693,108 @@
     "id": 7,
     "dns": 45.40294036969198,
     "okf": 42.45344825059891,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 115.66,
+          "aktuellerWert": 109.3,
+          "ausgangswert": 100,
+          "sdgId": 7,
+          "author": "dns",
+          "label": "Steigerung der Endenergieproduktivität gegnüber 2008",
+          "id": "7_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.5938697318007662
+        },
+        {
+          "zielwertJahr2030": 70,
+          "aktuellerWert": 92,
+          "ausgangswert": 100,
+          "sdgId": 7,
+          "author": "dns",
+          "label": "Senkung Primärenergieverbrauch gegenüber 2008",
+          "id": "7_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.26666666666666666
+        },
+        {
+          "zielwertJahr2030": 30,
+          "aktuellerWert": 14.8,
+          "ausgangswert": 6,
+          "sdgId": 7,
+          "author": "dns",
+          "label": "Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch",
+          "id": "7_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.3666666666666667
+        },
+        {
+          "zielwertJahr2030": 50,
+          "aktuellerWert": 32.2,
+          "ausgangswert": 6.7,
+          "sdgId": 7,
+          "author": "dns",
+          "label": "Anteil des Stroms aus eneuerbarer Energiequellen am Bruttostromverbrauch",
+          "id": "7_4",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.5889145496535798
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 0.3,
+          "aktuellerWert": 1.42,
+          "ausgangswert": 8.42,
+          "sdgId": 7,
+          "author": "okf",
+          "label": "Subventionen fossiler Brennstoffe [coal; gas; petroleum] (Post-tax subsidies as a percent of GDP)",
+          "id": "7_1",
+          "value": 0.8620689655172414
+        },
+        {
+          "zielwertJahr2030": 3.58,
+          "aktuellerWert": 317.3,
+          "ausgangswert": 248.7,
+          "sdgId": 7,
+          "author": "okf",
+          "label": "Bruttoinlandsenergieverbrauch BIV/ Gross inland energy consumption in Mio. tonne oil equivalent (Mtoe)  ALS PRO KOPF AUSRECHNEN UND VERTEILUNG NOCHMAL ANGUCKEN",
+          "id": "7_2",
+          "value": -0.27986292428198445
+        },
+        {
+          "zielwertJahr2030": 3.2,
+          "aktuellerWert": 9.94,
+          "ausgangswert": 19,
+          "sdgId": 7,
+          "author": "okf",
+          "label": "Carbon Capita [combines energy use per capita and carbon intensity of energy use] in tCO2/person",
+          "id": "7_3",
+          "value": 0.5734177215189874
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 4,
       "dns": 4,
       "okf": 3,
       "alt": 7
@@ -142,10 +810,203 @@
     "id": 8,
     "dns": 283.85856806723245,
     "okf": 180.91036230744317,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 156.3,
+          "aktuellerWert": 119.6,
+          "ausgangswert": 100,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Gesamtrohstoffproduktivität, (BIP+Importe)/ Raw Material Input",
+          "id": "8_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.34813499111900514
+        },
+        {
+          "zielwertJahr2030": -3,
+          "aktuellerWert": 0.8,
+          "ausgangswert": -3.4,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Staatsdefizit, jährlich kleiner als 3% des BIP",
+          "id": "8_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 10.500000000000004
+        },
+        {
+          "zielwertJahr2030": -0.5,
+          "aktuellerWert": 0.9,
+          "ausgangswert": -0.8,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Strukturelles Defizit",
+          "id": "8_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 5.666666666666666
+        },
+        {
+          "zielwertJahr2030": 60,
+          "aktuellerWert": 71.2,
+          "ausgangswert": 132,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Staatsschulden % BIP",
+          "id": "8_4",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.8444444444444444
+        },
+        {
+          "zielwertJahr2030": null,
+          "aktuellerWert": 19.9,
+          "ausgangswert": 13,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Anteil Bruttoanlageinvestitionen am BIP",
+          "id": "8_5",
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": true,
+          "spill": false,
+          "modTarget": false,
+          "value": null
+        },
+        {
+          "zielwertJahr2030": 50355.5,
+          "aktuellerWert": 43150.7,
+          "ausgangswert": 21007.3,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Bruttoinlandsprodukt pro Einwohner",
+          "id": "8_6",
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.7545062388834749
+        },
+        {
+          "zielwertJahr2030": 78,
+          "aktuellerWert": 78.6,
+          "ausgangswert": 54.4,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Erwerbstätigenquote (20-64Jahre)",
+          "id": "8_7",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 1.025423728813559
+        },
+        {
+          "zielwertJahr2030": 60,
+          "aktuellerWert": 53.3,
+          "ausgangswert": 35.1,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Erwerbstätigenquote (60-64Jahre)",
+          "id": "8_8",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.7309236947791163
+        },
+        {
+          "zielwertJahr2030": null,
+          "aktuellerWert": 188,
+          "ausgangswert": 0,
+          "sdgId": 8,
+          "author": "dns",
+          "label": "Mitglieder des Textilbündnisses",
+          "id": "8_9",
+          "badTarget": true,
+          "badIndicator": true,
+          "uncalculable": true,
+          "spill": false,
+          "modTarget": false,
+          "value": null
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 3.18,
+          "aktuellerWert": 6.5,
+          "ausgangswert": 13.2,
+          "sdgId": 8,
+          "author": "okf",
+          "label": "Armut trotz Beschäftigung",
+          "id": "8_1",
+          "value": 0.6686626746506985
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 59.6,
+          "ausgangswert": 30.85,
+          "sdgId": 8,
+          "author": "okf",
+          "label": "Staatliche Maßnahmen gegen Sklaverei",
+          "id": "8_2",
+          "value": 0.415762834417932
+        },
+        {
+          "zielwertJahr2030": 48.98,
+          "aktuellerWert": 3.75,
+          "ausgangswert": 0,
+          "sdgId": 8,
+          "author": "okf",
+          "label": "Reduktion des inländischen Materialverbrauchs",
+          "id": "8_3",
+          "value": 0.07656186198448346
+        },
+        {
+          "zielwertJahr2030": 8.72,
+          "aktuellerWert": 15.6,
+          "ausgangswert": 25.26,
+          "sdgId": 8,
+          "author": "okf",
+          "label": "Inländischer Materialverbrauch / capita",
+          "id": "8_4",
+          "value": 0.5840386940749699
+        },
+        {
+          "zielwertJahr2030": 4,
+          "aktuellerWert": 22.48,
+          "ausgangswert": 24.4,
+          "sdgId": 8,
+          "author": "okf",
+          "label": "Anteil der Mitarbeiter mit Niedriglohn",
+          "id": "8_5",
+          "value": 0.09411764705882344
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
-      "unc": 1,
+      "baT": 3,
+      "baI": 1,
+      "moT": 0,
+      "unc": 2,
+      "spi": 1,
       "dns": 7,
       "okf": 5,
       "alt": 12
@@ -161,10 +1022,73 @@
     "id": 9,
     "dns": 97.65625,
     "okf": 44.12724370591802,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 3,
+          "aktuellerWert": 2.94,
+          "ausgangswert": 0.44,
+          "sdgId": 9,
+          "author": "dns",
+          "label": "Private + öffentliche Ausgaben für Forschung und Entwicklung/ BIP",
+          "id": "9_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.9765625
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 13.86,
+          "aktuellerWert": 9,
+          "ausgangswert": 2,
+          "sdgId": 9,
+          "author": "okf",
+          "label": "Wissenschaftler / 1000 Beschäftigte",
+          "id": "9_1",
+          "value": 0.5902192242833053
+        },
+        {
+          "zielwertJahr2030": 87.8,
+          "aktuellerWert": 57.12,
+          "ausgangswert": 49.44,
+          "sdgId": 9,
+          "author": "okf",
+          "label": "G4 Verbreitung",
+          "id": "9_2",
+          "value": 0.20020855057351408
+        },
+        {
+          "zielwertJahr2030": 73.2,
+          "aktuellerWert": 51,
+          "ausgangswert": 37,
+          "sdgId": 9,
+          "author": "okf",
+          "label": "Open Data Index",
+          "id": "9_3",
+          "value": 0.38674033149171266
+        },
+        {
+          "zielwertJahr2030": 1.1,
+          "aktuellerWert": 2.9,
+          "ausgangswert": 3,
+          "sdgId": 9,
+          "author": "okf",
+          "label": "Technologietransfer (CDI Unterindikator)",
+          "id": "9_4",
+          "value": 0.052631578947368474
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 0,
       "dns": 1,
       "okf": 4,
       "alt": 5
@@ -180,10 +1104,89 @@
     "id": 10,
     "dns": 69.57142857142858,
     "okf": 57.03199473337723,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 95,
+          "aktuellerWert": 88.2,
+          "ausgangswert": 85,
+          "sdgId": 10,
+          "author": "dns",
+          "label": "Ausländische Schulabsolventinnen",
+          "id": "10_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.3200000000000003
+        },
+        {
+          "zielwertJahr2030": 30,
+          "aktuellerWert": 29.5,
+          "ausgangswert": 37,
+          "sdgId": 10,
+          "author": "dns",
+          "label": "Äquivalenzeinkommen als Gini Koeffizient nach Sozialtransfers",
+          "id": "10_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": true,
+          "alt": "10_2",
+          "value": 1.0714285714285714
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 0.85,
+          "aktuellerWert": 1.03,
+          "ausgangswert": 1.84,
+          "sdgId": 10,
+          "author": "okf",
+          "label": "Palma Ratio",
+          "id": "10_1",
+          "value": 0.8181818181818181
+        },
+        {
+          "zielwertJahr2030": 26,
+          "aktuellerWert": 29.5,
+          "ausgangswert": 37,
+          "sdgId": 10,
+          "author": "okf",
+          "label": "Äquivalenzeinkommen als Gini Koeffizient nach Sozialtransfers",
+          "id": "10_2",
+          "value": 0.6818181818181818
+        },
+        {
+          "zielwertJahr2030": 80,
+          "aktuellerWert": 61,
+          "ausgangswert": 31,
+          "sdgId": 10,
+          "author": "okf",
+          "label": "MIPEX",
+          "id": "10_3",
+          "value": 0.6122448979591837
+        },
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 18,
+          "ausgangswert": 31,
+          "sdgId": 10,
+          "author": "okf",
+          "label": "Diskriminierung",
+          "id": "10_4",
+          "value": 0.41935483870967744
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 1,
+      "baT": 0,
+      "baI": 0,
+      "moT": 1,
       "unc": 0,
+      "spi": 0,
       "dns": 2,
       "okf": 4,
       "alt": 5
@@ -199,10 +1202,173 @@
     "id": 11,
     "dns": 22.66881720430108,
     "okf": 30.22065128366541,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 29,
+          "aktuellerWert": 69,
+          "ausgangswert": 104,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Anstieg der Siedlungs- Verkehrsfläche",
+          "id": "11_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.4666666666666667
+        },
+        {
+          "zielwertJahr2030": -3.2,
+          "aktuellerWert": null,
+          "ausgangswert": null,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Veränderung der Freiraumfläche je Einwohner",
+          "id": "11_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": null
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 89,
+          "ausgangswert": 0,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Siedlungsdichte erhalten, Einwohner / km^2 Siedlungs- Verkehrsfläche",
+          "id": "11_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.89
+        },
+        {
+          "zielwertJahr2030": 85,
+          "aktuellerWert": 107.2,
+          "ausgangswert": 100,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Endenergieverbrauch im Güterverkehr",
+          "id": "11_4",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": -0.4800000000000002
+        },
+        {
+          "zielwertJahr2030": 85,
+          "aktuellerWert": 97.6,
+          "ausgangswert": 100,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Endenergieverbrauch im Personenverkehr",
+          "id": "11_5",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.1600000000000004
+        },
+        {
+          "zielwertJahr2030": null,
+          "aktuellerWert": 22.4,
+          "ausgangswert": 23.5,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Reisezeit mit öffentlichen Verkehrsmitteln zum nächsten Mittel- oder Oberzentrum",
+          "id": "11_6",
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": true,
+          "spill": false,
+          "modTarget": false,
+          "value": null
+        },
+        {
+          "zielwertJahr2030": 13,
+          "aktuellerWert": 15.8,
+          "ausgangswert": 16.1,
+          "sdgId": 11,
+          "author": "dns",
+          "label": "Belastung durch Wohnkosten über 40%",
+          "id": "11_7",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.09677419354838729
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 8.5,
+          "aktuellerWert": 13.7,
+          "ausgangswert": 102.9,
+          "sdgId": 11,
+          "author": "okf",
+          "label": "PM2.5 Feinstaubbelastung",
+          "id": "11_1",
+          "value": 0.9449152542372881
+        },
+        {
+          "zielwertJahr2030": 45.4,
+          "aktuellerWert": 19.3,
+          "ausgangswert": 1.6,
+          "sdgId": 11,
+          "author": "okf",
+          "label": "Verkehrsverlagerung Frachtverkehr",
+          "id": "11_2",
+          "value": 0.4041095890410959
+        },
+        {
+          "zielwertJahr2030": 50,
+          "aktuellerWert": 8.4,
+          "ausgangswert": 1,
+          "sdgId": 11,
+          "author": "okf",
+          "label": "Verkehrsverlagerung Personenverkehr",
+          "id": "11_2",
+          "value": 0.1510204081632653
+        },
+        {
+          "zielwertJahr2030": 6.3,
+          "aktuellerWert": 29.583,
+          "ausgangswert": 43.698,
+          "sdgId": 11,
+          "author": "okf",
+          "label": "Luftschadstoffe nach Quellsektor TRANSPORT PM10",
+          "id": "11_3",
+          "value": 0.37742660035296005
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 632,
+          "ausgangswert": 638,
+          "sdgId": 11,
+          "author": "okf",
+          "label": "Siedlungsabfall",
+          "id": "11_4",
+          "value": 0.011152416356877323
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
-      "unc": 0,
+      "baT": 1,
+      "baI": 0,
+      "moT": 0,
+      "unc": 1,
+      "spi": 0,
       "dns": 5,
       "okf": 5,
       "alt": 10
@@ -218,10 +1384,93 @@
     "id": 12,
     "dns": 4.842252613521081,
     "okf": 8.687402659224631,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 34,
+          "aktuellerWert": 6,
+          "ausgangswert": 3.8,
+          "sdgId": 12,
+          "author": "dns",
+          "label": "Produkte mit Umweltzeichen",
+          "id": "12_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.07284768211920531
+        },
+        {
+          "zielwertJahr2030": null,
+          "aktuellerWert": 99.1,
+          "ausgangswert": 100,
+          "sdgId": 12,
+          "author": "dns",
+          "label": "Energieverbrauch und CO2-Emmissionen des Konsums",
+          "id": "12_2",
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": true,
+          "spill": true,
+          "modTarget": false,
+          "value": null
+        },
+        {
+          "zielwertJahr2030": 5000,
+          "aktuellerWert": 2031,
+          "ausgangswert": 1958,
+          "sdgId": 12,
+          "author": "dns",
+          "label": "Umweltmanagement EMAS (Organisationsstandorte)",
+          "id": "12_3",
+          "badTarget": false,
+          "badIndicator": true,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.023997370151216304
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 79.06,
+          "aktuellerWert": 222.23,
+          "ausgangswert": 211.93,
+          "sdgId": 12,
+          "author": "okf",
+          "label": "Packaging waste per capita",
+          "id": "12_1",
+          "value": -0.07751937984496111
+        },
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 175,
+          "ausgangswert": 188,
+          "sdgId": 12,
+          "author": "okf",
+          "label": "Consumption of bottled water/litres per capita",
+          "id": "12_2",
+          "value": 0.06914893617021277
+        },
+        {
+          "zielwertJahr2030": 1.7,
+          "aktuellerWert": 5.5,
+          "ausgangswert": 7,
+          "sdgId": 12,
+          "author": "okf",
+          "label": "Ecological Footprint per capita",
+          "id": "12_3",
+          "value": 0.2830188679245283
+        }
+      ]
+    },
     "n": {
-      "bad": 1,
-      "mod": 0,
-      "unc": 0,
+      "baT": 1,
+      "baI": 1,
+      "moT": 0,
+      "unc": 1,
+      "spi": 1,
       "dns": 2,
       "okf": 3,
       "alt": 4
@@ -237,10 +1486,88 @@
     "id": 13,
     "dns": 33.22727272727273,
     "okf": 49.41575757575758,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 45,
+          "aktuellerWert": 72.8,
+          "ausgangswert": 100,
+          "sdgId": 13,
+          "author": "dns",
+          "label": "Treibhausgasemmissionen",
+          "id": "13_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.4945454545454546
+        },
+        {
+          "zielwertJahr2030": 4,
+          "aktuellerWert": 2.34,
+          "ausgangswert": 2,
+          "sdgId": 13,
+          "author": "dns",
+          "label": "Internationale Klimafinanzierung",
+          "id": "13_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.16999999999999993
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 52.82,
+          "ausgangswert": 0,
+          "sdgId": 13,
+          "author": "okf",
+          "label": "Germanwatch Index: Emissionstrends",
+          "id": "13_1",
+          "value": 0.5282
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 49.73,
+          "ausgangswert": 0,
+          "sdgId": 13,
+          "author": "okf",
+          "label": "Germanwatch Index: Erneuerbare Energien",
+          "id": "13_2",
+          "value": 0.49729999999999996
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 61.11,
+          "ausgangswert": 0,
+          "sdgId": 13,
+          "author": "okf",
+          "label": "Germanwatch Index: Energienverbrauch",
+          "id": "13_3",
+          "value": 0.6111
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 66.38,
+          "ausgangswert": 0,
+          "sdgId": 13,
+          "author": "okf",
+          "label": "Germanwatch Index: Klimapolitik",
+          "id": "13_4",
+          "value": 0.6638
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 2,
       "dns": 2,
       "okf": 4,
       "alt": 6
@@ -256,10 +1583,93 @@
     "id": 14,
     "dns": 31.005291005291014,
     "okf": 31.871693121693127,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 2.6,
+          "aktuellerWert": 3.9,
+          "ausgangswert": 4.7,
+          "sdgId": 14,
+          "author": "dns",
+          "label": "Gesamtstickstoffeintrag Ostsee (durch deutsche Zuflüsse)",
+          "id": "14_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.38095238095238104
+        },
+        {
+          "zielwertJahr2030": 2.8,
+          "aktuellerWert": 3.8,
+          "ausgangswert": 4.2,
+          "sdgId": 14,
+          "author": "dns",
+          "label": "Gesamtstickstoffeintrag Nordsee (durch deutsche Zuflüsse)",
+          "id": "14_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.2857142857142859
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 53.6,
+          "ausgangswert": 37,
+          "sdgId": 14,
+          "author": "dns",
+          "label": "Anteil nachhaltig befischter Fischbestände (Nord- u. Ostsee)",
+          "id": "14_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.2634920634920635
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 80,
+          "aktuellerWert": 43,
+          "ausgangswert": 6,
+          "sdgId": 14,
+          "author": "okf",
+          "label": "Ocean Health Index: Food Provision",
+          "id": "14_1",
+          "value": 0.5
+        },
+        {
+          "zielwertJahr2030": 80,
+          "aktuellerWert": 51,
+          "ausgangswert": 24,
+          "sdgId": 14,
+          "author": "okf",
+          "label": "Ocean Health Index: Clean Waters",
+          "id": "14_2",
+          "value": 0.48214285714285715
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 0,
+          "ausgangswert": 0,
+          "sdgId": 14,
+          "author": "okf",
+          "label": "Anteil der Gewässer in Deutschland in gutem ökologischen Zustand für Küstengewässer",
+          "id": "14_3",
+          "value": 0
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 0,
       "dns": 3,
       "okf": 3,
       "alt": 6
@@ -275,10 +1685,93 @@
     "id": 15,
     "dns": 41.5,
     "okf": 43.99772976529941,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 68,
+          "ausgangswert": 0,
+          "sdgId": 15,
+          "author": "dns",
+          "label": "Index Artenvielfalt u. Landschaftsqualität",
+          "id": "15_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.68
+        },
+        {
+          "zielwertJahr2030": 37,
+          "aktuellerWert": 54,
+          "ausgangswert": 57,
+          "sdgId": 15,
+          "author": "dns",
+          "label": "Eutrophierung der Ökosysteme (Anteil empfindlicher Ökosysteme mit überschrittenem Stickstoffeinträgen)",
+          "id": "15_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 0.15
+        },
+        {
+          "zielwertJahr2030": null,
+          "aktuellerWert": 15.7,
+          "ausgangswert": 3,
+          "sdgId": 15,
+          "author": "dns",
+          "label": "EZA für REDD+- Wälder",
+          "id": "15_3",
+          "badTarget": true,
+          "badIndicator": true,
+          "uncalculable": true,
+          "spill": true,
+          "modTarget": false,
+          "value": null
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 0,
+          "aktuellerWert": 0.5,
+          "ausgangswert": 1.6,
+          "sdgId": 15,
+          "author": "okf",
+          "label": "Auswirkungen importierter Biodiversität, ausgestorbene Spezien",
+          "id": "15_1",
+          "value": 0.6875
+        },
+        {
+          "zielwertJahr2030": 80,
+          "aktuellerWert": 5.2,
+          "ausgangswert": 0.1,
+          "sdgId": 15,
+          "author": "okf",
+          "label": "Anteil FCS zertifizierter Wälder",
+          "id": "15_2",
+          "value": 0.06382978723404256
+        },
+        {
+          "zielwertJahr2030": 50,
+          "aktuellerWert": 87,
+          "ausgangswert": 147,
+          "sdgId": 15,
+          "author": "okf",
+          "label": "Bruttostickstoffbilanz auf landwirt. Flächen in kg/ ha",
+          "id": "15_3",
+          "value": 0.6185567010309279
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
-      "unc": 0,
+      "baT": 1,
+      "baI": 1,
+      "moT": 0,
+      "unc": 1,
+      "spi": 1,
       "dns": 2,
       "okf": 3,
       "alt": 5
@@ -294,10 +1787,108 @@
     "id": 16,
     "dns": 82.56134051466188,
     "okf": 42.488489760134705,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 7000,
+          "aktuellerWert": 7797,
+          "ausgangswert": 7557,
+          "sdgId": 16,
+          "author": "dns",
+          "label": "Straftaten",
+          "id": "16_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": -0.43087971274685816
+        },
+        {
+          "zielwertJahr2030": 15,
+          "aktuellerWert": 26,
+          "ausgangswert": 0,
+          "sdgId": 16,
+          "author": "dns",
+          "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen (in Afrika, Osteuropa, Lateinamerika, Asien)",
+          "id": "16_2",
+          "badTarget": false,
+          "badIndicator": true,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 1.7333333333333334
+        },
+        {
+          "zielwertJahr2030": 81,
+          "aktuellerWert": 81,
+          "ausgangswert": 79,
+          "sdgId": 16,
+          "author": "dns",
+          "label": "Corruption Perception Index",
+          "id": "16_3",
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": false,
+          "modTarget": false,
+          "value": 1
+        },
+        {
+          "zielwertJahr2030": 41,
+          "aktuellerWert": 41,
+          "ausgangswert": 17,
+          "sdgId": 16,
+          "author": "dns",
+          "label": "Corruption Perception Index der EZA Partner",
+          "id": "16_4",
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 1
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 20,
+          "aktuellerWert": 59,
+          "ausgangswert": 64,
+          "sdgId": 16,
+          "author": "okf",
+          "label": "Financial Secrecy Index",
+          "id": "16_1",
+          "value": 0.11363636363636363
+        },
+        {
+          "zielwertJahr2030": 2.4,
+          "aktuellerWert": 1653,
+          "ausgangswert": 6148,
+          "sdgId": 16,
+          "author": "okf",
+          "label": "Volumen Waffenexporte",
+          "id": "16_2",
+          "value": 0.7314175995834418
+        },
+        {
+          "zielwertJahr2030": 150,
+          "aktuellerWert": 54,
+          "ausgangswert": 39,
+          "sdgId": 16,
+          "author": "okf",
+          "label": "Recht auf Information Index (Access Info)",
+          "id": "16_3",
+          "value": 0.13513513513513514
+        }
+      ]
+    },
     "n": {
-      "bad": 1,
-      "mod": 0,
-      "unc": 2,
+      "baT": 2,
+      "baI": 1,
+      "moT": 0,
+      "unc": 0,
+      "spi": 2,
       "dns": 4,
       "okf": 3,
       "alt": 6
@@ -313,10 +1904,93 @@
     "id": 17,
     "dns": 67.05376010980305,
     "okf": 34.096362467564504,
+    "ind": {
+      "dns": [
+        {
+          "zielwertJahr2030": 0.7,
+          "aktuellerWert": 0.7,
+          "ausgangswert": 0.11,
+          "sdgId": 17,
+          "author": "dns",
+          "label": "ODA / BNE",
+          "id": "17_1",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 1
+        },
+        {
+          "zielwertJahr2030": 286508.4,
+          "aktuellerWert": 215258,
+          "ausgangswert": 136.641,
+          "sdgId": 17,
+          "author": "dns",
+          "label": "Studierende, Forscher aus DCs und LDCs",
+          "id": "17_2",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.7511961366274249
+        },
+        {
+          "zielwertJahr2030": 1.42,
+          "aktuellerWert": 0.71,
+          "ausgangswert": 0.46,
+          "sdgId": 17,
+          "author": "dns",
+          "label": "Anteil der Importe aus LDCs",
+          "id": "17_3",
+          "badTarget": false,
+          "badIndicator": false,
+          "uncalculable": false,
+          "spill": true,
+          "modTarget": false,
+          "value": 0.26041666666666663
+        }
+      ],
+      "okf": [
+        {
+          "zielwertJahr2030": 9,
+          "aktuellerWert": 1,
+          "ausgangswert": 3,
+          "sdgId": 17,
+          "author": "okf",
+          "label": "Nachhaltige Entschuldungspolitik",
+          "id": "17_1",
+          "value": -0.3333333333333333
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 42.61,
+          "ausgangswert": 30.98,
+          "sdgId": 17,
+          "author": "okf",
+          "label": "Ending Rural Hunger Index _Trade Restrictions",
+          "id": "17_2",
+          "value": 0.1685018835120255
+        },
+        {
+          "zielwertJahr2030": 100,
+          "aktuellerWert": 39.1,
+          "ausgangswert": 23.97,
+          "sdgId": 17,
+          "author": "okf",
+          "label": "ODA Quality of Implementation",
+          "id": "17_3",
+          "value": 0.19900039458108645
+        }
+      ]
+    },
     "n": {
-      "bad": 0,
-      "mod": 0,
+      "baT": 0,
+      "baI": 0,
+      "moT": 0,
       "unc": 0,
+      "spi": 3,
       "dns": 3,
       "okf": 3,
       "alt": 6

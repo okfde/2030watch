@@ -147,7 +147,8 @@ function insertLineBreaks (str) {
 
 const store = () => new Vuex.Store({
   state: {
-    data: data
+    data: data,
+    dataSDGs: dataSDGs
   },
   getters: {
     indicators (state) {

@@ -38,6 +38,12 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  section {
+    padding: inherit 15vw;
 
+    &:nth-child(odd) {
+      background: #e0e0e0;
+    }
+  }
 </style>
