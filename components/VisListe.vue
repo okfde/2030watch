@@ -1,11 +1,17 @@
 <template>
   <ul>
     <li class="sdg-item">
-      <div class="sdg-header-label link" v-on:click="sort('id')">
-        SDG
+      <div class="sdg-header sdg-header-label link" v-on:click="sort('id')">
+        <span :class="{ active: sorting === 'id' }" >Sustainable Development Goals</span>
+        <SortIcon :active="sorting === 'id'" :reverse="reverse" />
       </div>
-      <div class="sdg-header-vis">
-        Nachhaltigkeit erreicht zu (<span class="dns link" v-on:click="sort('dns')">DNS</span>, <span class="okf link" v-on:click="sort('okf')">OKF</span>)
+      <div class="sdg-header sdg-header-vis columns">
+        <section>
+          Nachhaltigkeit erreicht zu
+        </section>
+        <section class="sdg-legend">
+          <span class="dns link" v-on:click="sort('dns')"><span :class="{ active: sorting === 'dns' }" >DNS</span> <SortIcon :active="sorting === 'dns'" :reverse="reverse" /> </span> <span class="okf link" v-on:click="sort('okf')"><span :class="{ active: sorting === 'okf' }" >OKF</span> <SortIcon :active="sorting === 'okf'" :reverse="reverse" /></span>
+        </section>
       </div>
     </li>
     <li v-for="(sdg, index) in sdgListe" class="sdg-item">
@@ -26,6 +32,7 @@
 
 <script>
   import VisProgress from '~/components/VisProgress.vue'
+  import SortIcon from '~/components/SortIcon.vue'
   import * as sdgs from '../data/sdgs.json'
   import _ from 'lodash'
 
@@ -48,7 +55,8 @@
       }
     },
     components: {
-      VisProgress
+      VisProgress,
+      SortIcon
     },
     methods: {
       sort: function (key) {
@@ -75,12 +83,24 @@
       flex: 1;
       color: #9B9B9A;
 
-      .dns {
-        color: #F1B31C;
+      .active {
+        font-weight: bold;
       }
 
-      .okf {
-        color: #04A6F0;
+      .sdg-legend {
+        text-align: right;
+
+        span {
+          margin-left: 10px;
+        }
+
+        .dns {
+          color: #F1B31C;
+        }
+
+        .okf {
+          color: #04A6F0;
+        }
       }
     }
 
