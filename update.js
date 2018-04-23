@@ -140,25 +140,29 @@ function formatData (arr) {
 			}
 		})
 
-		if (i[authorStr] === 'dns') {
-			i['badTarget'] = indicator[badTarget] === 'j'
-			i['badIndicator'] = indicator[badIndicator] === 'x'
-			i['spill'] = indicator[spill] === 'x'
-			i['uncalculable'] = indicator[uncalculable] === 'x'
+		_.each(i, (value, key) => {
+			if (_.isNaN(value) || value.length < 1) {
+				console.log('Could not format column ' + key + ' for indicator ' + indicator['label'])
+			}
+		})
 
-			if (indicator[modTarget].match(/^\d/)) { // starts with number
+		if (i[authorStr] === 'dns') {
+			i['badTarget'] = _.trim(indicator[badTarget]) === 'j'
+			i['badIndicator'] = _.trim(indicator[badIndicator]) === 'x'
+			i['uncalculable'] = _.trim(indicator[uncalculable]) === 'x'
+			i['spill'] = _.trim(indicator[spill]) === 'j'
+
+			if (indicator[uncalculable] === 'x') {
+				console.log('yessss', i['uncalculable'])
+			}
+
+			if (_.trim(indicator[modTarget]).match(/^\d/)) { // starts with number
 				i['modTarget'] = true
 				i['alt'] = indicator[modTarget]
 			} else {
 				i['modTarget'] = false
 			}
 		}
-
-		_.each(i, (value, key) => {
-			if (_.isNaN(value) || value.length < 1) {
-				console.log('Could not format column ' + key + ' for indicator ' + indicator['label'])
-			}
-		})
 
 		return i
 	})
@@ -220,10 +224,11 @@ function buildSDGs (arr) {
 					'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length * 100,
 					'okf': _.sumBy(valuesCombined, progressStr) / valuesCombined.length * 100,
 					'n': {
-						'bad': _.countBy(valuesDNS, 'badIndicator').true || 0,
-						'mod': _.countBy(valuesDNS, 'modTarget').true || 0,
-						'unc': _.countBy(valuesDNS, 'uncalculable').true || 0,
-						'unc': _.countBy(valuesDNS, 'badTarget').true || 0,
+						'baT': _.countBy(dns, 'badTarget').true || 0,
+						'baI': _.countBy(dns, 'badIndicator').true || 0,
+						'moT': _.countBy(dns, 'modTarget').true || 0,
+						'unc': _.countBy(dns, 'uncalculable').true || 0,
+						'spi': _.countBy(dns, 'spill').true || 0,
 						'dns': valuesDNS.length,
 						'okf': valuesOKF.length,
 						'alt': valuesCombined.length
