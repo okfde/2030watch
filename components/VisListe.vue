@@ -1,6 +1,17 @@
 <template>
   <ul>
-    <li v-for="(sdg, slug) in sdgs" class="sdg-item">
+    <li class="sdg-item">
+      <div>
+        SDG
+      </div>
+      <div class="sdg-label">
+        test
+      </div>
+      <div>
+        Test
+      </div>
+    </li>
+    <li v-for="(sdg, slug, index) in sdgs" class="sdg-item">
       <nuxt-link :to="'sdg/' + slug" class="sdg-link">
         <div class="sdg-image">
           <svg>
@@ -10,7 +21,7 @@
         <div class="sdg-label">
           <span :title="sdg.label.long">{{ sdg.label.short }}</span>
         </div>
-        <VisProgress :sdg="sdg" />
+        <VisProgress :sdg="sdg" :ticks="index === 0" />
       </nuxt-link>
     </li>
   </ul>
@@ -42,7 +53,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .sdg-item {
     display: flex;
 
@@ -78,6 +89,10 @@
       &:hover {
         .sdg-label {
           opacity: 1;
+
+          &.sdg-label-tick {
+            opacity: 0;
+          }
         }
       }
     }

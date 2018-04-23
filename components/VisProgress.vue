@@ -2,6 +2,7 @@
   <svg class="sdg-vis" ref="vis">
     <g>
       <text
+        v-if="ticks"
         class="sdg-label sdg-label-tick"
         alignment-baseline="baseline"
         text-anchor="start"
@@ -10,6 +11,7 @@
         0&#8239;%
       </text>
       <text
+        v-if="ticks"
         class="sdg-label sdg-label-tick"
         alignment-baseline="baseline"
         text-anchor="end"
@@ -98,10 +100,8 @@
 </template>
 
 <script>
-  // import _ from 'lodash'
-
   export default {
-    props: ['sdg'],
+    props: ['sdg', 'ticks'],
     data: function () {
       return {
         width: 0,
@@ -154,9 +154,6 @@
           }
         }
 
-        console.log(okf + okfLabel)
-        console.log(dns + dnsLabel)
-
         return [{ 'x': okf + 'px', 'l': okfLabel }, { 'x': dns + 'px', 'l': dnsLabel }]
       }
     }
@@ -196,11 +193,12 @@
     }
 
     .sdg-label {
-      opacity: 1;
+      opacity: 0;
       font-size: 12px;
 
       &.sdg-label-tick {
         fill: #222;
+        opacity: 1;
       }
 
       &.sdg-label-total {
