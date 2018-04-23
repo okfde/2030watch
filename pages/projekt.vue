@@ -43,7 +43,7 @@
       return {
         background: [{
           title: 'Was ist Nachhaltigkeit?',
-          body: 'Nachhaltigkeit ist ein sehr breiter Begriff. Bei 2030 Watch benutzen wir die Definition von Nachhaltigkeit der Vereinten Nationen. Nach dieser Definition umfasst Nachhaltigkeit die ökologische, soziale und wirtschaftliche Themen. Nachhaltig ist, was den Erhalt der Umwelt und das friedliche gesellschaftliche Zusammenleben langfristig sichert.',
+          body: 'Nachhaltigkeit ist ein sehr breiter Begriff. Bei 2030 Watch benutzen wir die Definition von Nachhaltigkeit der Vereinten Nationen. Nach dxieser Definition umfasst Nachhaltigkeit die ökologische, soziale und wirtschaftliche Themen. Nachhaltig ist, was den Erhalt der Umwelt und das friedliche gesellschaftliche Zusammenleben langfristig sichert.',
           open: false
         },
         {
@@ -170,6 +170,13 @@
 
 <style lang="scss" scoped>
   @import "../assets/style/base";
+
+  section {
+
+     &:nth-child(odd){
+      background: $color-light;
+    }
+  }
 </style>
 
 

@@ -7,9 +7,6 @@
           <div>
             <p>Wer steckt hinter 2030 Watch? Was treibt uns an? Hier erfährst du mehr</p>
           </div>
-          <div>
-            <!-- <strong>halleo gdg</strong> -->
-          </div>
         </section>
       </div>
     </header>
@@ -42,15 +39,15 @@
          <section>
           <h2>Team</h2>
           <div class="section-wrapper">
-            <div class="columns-rows">
-              <team-member></team-member>
-              <team-member></team-member>
-            </div>
-              <div class="columns-rows">
-              <team-member></team-member>
-              <team-member></team-member>
-            </div>
-       
+            <!-- <div class="columns-rows"> -->
+              <team-member v-for='member in team' 
+              :name='member.name' 
+              :imgUrl='member.imgUrl' 
+              :role='member.role'
+              :email='member.email'
+              :twiter='member.twitter'
+              ></team-member>
+            <!-- </div> -->
           </div>
         </section>
          <section>
@@ -75,8 +72,47 @@
 </template>
 
 <script>
-  import TeamMember from '~/pages/team/TeamMember.vue'
+  import TeamMember from '~/components/TeamMember.vue'
   export default {
+    data () {
+      return {
+        team: [{
+          name: 'Rebecca Varghese Buchholz',
+          imgUrl: 'https://2030-watch.de/static/img/team/rebeccabuchholz.jpg',
+          role: 'Projektleitung',
+          email: 'rebecca.buchholz@okfn.de',
+          twitter: 'https://twitter.com/okfde'
+        },
+        {
+          name: 'Claudia Schwegmann',
+          imgUrl: 'https://2030-watch.de/static/img/team/claudia.jpg',
+          role: 'Gründerin',
+          email: 'claudia.schwegmann@okfn.org ',
+          twitter: 'https://twitter.com/okfde'
+        },
+        {
+          name: 'John David Langlo',
+          imgUrl: 'https://2030-watch.de/static/img/team/johnlanglo_square.jpg',
+          role: 'Studentischer Mitarbeiter',
+          email: 'john.langlo@okfn.de',
+          twitter: 'https://twitter.com/okfde'
+        },
+        {
+          name: 'Saadya Windauer',
+          imgUrl: 'https://2030-watch.de/static/img/team/Saa%20Windauer.jpg',
+          role: 'Projektmanagerin',
+          email: 'saadya.windauer@okfn.de',
+          twitter: 'https://twitter.com/okfde'
+        },
+        {
+          name: 'Du?',
+          imgUrl: 'http://via.placeholder.com/100x100',
+          role: 'Praktikant',
+          email: '2030-watch@okfn.de',
+          twitter: 'https://twitter.com/okfde'
+        }]
+      }
+    },
     computed: {
     },
     methods: {
@@ -93,10 +129,16 @@
   @import "../assets/style/base";
 
   section {
+
+     &:nth-child(odd){
+      background: $color-light;
+    }
+
     &:nth-of-type(3) {
       .section-wrapper {
         padding-top: $spacing;
-        justify-content: space-around;
+        justify-content: flex-start;
+        flex-wrap: wrap;
       }
     }
 
@@ -106,5 +148,4 @@
       }
     }
   }
-
 </style>
