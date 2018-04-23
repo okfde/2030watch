@@ -1,14 +1,14 @@
 <template>
   <ul>
     <li class="sdg-item">
-      <div class="sdg-header-label">
+      <div class="sdg-header-label link" v-on:click="sort('id')">
         SDG
       </div>
       <div class="sdg-header-vis">
-        Nachhaltigkeit erreicht zu (<span class="okf">OKF</span>, <span class="dns">DNS</span>)
+        Nachhaltigkeit erreicht zu (<span class="dns link" v-on:click="sort('dns')">DNS</span>, <span class="okf link" v-on:click="sort('okf')">OKF</span>)
       </div>
     </li>
-    <li v-for="(sdg, slug, index) in sdgs" class="sdg-item">
+    <li v-for="(sdg, slug, index) in sdgListe" class="sdg-item">
       <nuxt-link :to="'sdg/' + slug" class="sdg-link">
         <div class="sdg-image">
           <svg>
@@ -25,27 +25,40 @@
 </template>
 
 <script>
-  import { mapGetters, mapState } from 'vuex'
   import VisProgress from '~/components/VisProgress.vue'
   import * as sdgs from '../data/sdgs.json'
+  import _ from 'lodash'
 
   export default {
     data: function () {
       return {
-        sdgs: sdgs
+        'sdgs': sdgs,
+        'sorting': 'id',
+        'reverse': true
       }
     },
     computed: {
-      ...mapState([
-        'data'
-      ]),
-      ...mapGetters([
-        'indicators',
-        'sdgsSlugs'
-      ])
+      sdgListe: function () {
+        const list = _.sortBy(this.sdgs, this.sorting)
+        if (this.reverse) {
+          return _.reverse(list)
+        } else {
+          return list
+        }
+      }
     },
     components: {
       VisProgress
+    },
+    methods: {
+      sort: function (key) {
+        if (this.sorting !== key) {
+          this.sorting = key
+          this.reverse = false
+        } else {
+          this.reverse = !this.reverse
+        }
+      }
     }
   }
 </script>
