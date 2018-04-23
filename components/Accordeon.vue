@@ -3,7 +3,7 @@
     <li v-for='item in faqs' @click='toggle(item)' class='item' :class='{active: item.open}'>
       <div class='title'>
         <span>{{item.title}}</span>
-        <span>{{ item.open ? '-' : '+' }}</span>
+        <span>{{ item.open ? '&#8722;' : '&#43;' }}</span>
       </div>
       <!-- <transition name='fade' :duration="500"> -->
         <div class='body' v-show='item.open'>{{item.body}}</div>
@@ -44,13 +44,17 @@
 
     .title {
       display: flex;
-      margin-bottom: $spacing/2;
+      font-weight: 600;
+      // text-transform: uppercase;
+      // font-size: 0.8rem;
+      
 
       span {
         flex: 1;
 
         &:last-of-type {
           text-align: right;
+          font-size: 1.5rem;
         }
       }
     }
@@ -64,10 +68,7 @@
   }
 
   .active {
-
-    .title {
-      font-weight: 600;
-    }
+     padding-bottom: $spacing/2;    
   }
 
 </style>

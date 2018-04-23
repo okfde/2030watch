@@ -130,6 +130,8 @@
 
   section {
 
+    // padding: $spacing*2 15vw;
+
      &:nth-child(odd){
       background: $color-light;
     }
