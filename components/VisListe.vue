@@ -8,8 +8,8 @@
         Nachhaltigkeit erreicht zu (<span class="dns link" v-on:click="sort('dns')">DNS</span>, <span class="okf link" v-on:click="sort('okf')">OKF</span>)
       </div>
     </li>
-    <li v-for="(sdg, slug, index) in sdgListe" class="sdg-item">
-      <nuxt-link :to="'sdg/' + slug" class="sdg-link">
+    <li v-for="(sdg, index) in sdgListe" class="sdg-item">
+      <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-link">
         <div class="sdg-image">
           <svg>
             <circle cx="50%" cy="50%" :fill="'#' + sdg.color" r="8" />
@@ -34,7 +34,7 @@
       return {
         'sdgs': sdgs,
         'sorting': 'id',
-        'reverse': true
+        'reverse': false
       }
     },
     computed: {
