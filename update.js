@@ -130,11 +130,12 @@ function formatData (arr) {
 	const [, , badTarget, modTarget, badIndicator, uncalculable, spill] = strings
 	const indicators = _.map(arr, indicator => {
 		const i = {}
+		console.log(indicator)
 		_.each([...numbers, sdgID], key => {
 			i[key] = parseFloat(indicator[key].replace(',', '.'))
 		})
 
-		_.each([authorStr, dnsID, okfID, labelStr], key => {
+		_.each([authorStr, labelStr], key => {
 			if (_.has(indicator, key)) {
 				i[key] = _.trim(indicator[key])
 			}
@@ -146,15 +147,13 @@ function formatData (arr) {
 			}
 		})
 
+		i['id'] = _.trim(indicator['dnsId'] || indicator['2030Id'])
+
 		if (i[authorStr] === 'dns') {
 			i['badTarget'] = _.trim(indicator[badTarget]) === 'j'
 			i['badIndicator'] = _.trim(indicator[badIndicator]) === 'x'
 			i['uncalculable'] = _.trim(indicator[uncalculable]) === 'x'
 			i['spill'] = _.trim(indicator[spill]) === 'j'
-
-			if (indicator[uncalculable] === 'x') {
-				console.log('yessss', i['uncalculable'])
-			}
 
 			if (_.trim(indicator[modTarget]).match(/^\d/)) { // starts with number
 				i['modTarget'] = true
@@ -223,6 +222,10 @@ function buildSDGs (arr) {
 					'id': parseInt(key),
 					'dns': _.sumBy(valuesDNS, progressStr) / valuesDNS.length * 100,
 					'okf': _.sumBy(valuesCombined, progressStr) / valuesCombined.length * 100,
+					'ind': {
+						dns,
+						okf
+					},
 					'n': {
 						'baT': _.countBy(dns, 'badTarget').true || 0,
 						'baI': _.countBy(dns, 'badIndicator').true || 0,
