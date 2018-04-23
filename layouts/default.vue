@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'page': true, [klasse]: klasse }">
     <header class="page-header columns">
-      <strong class="logo"><nuxt-link to="/">2030 Watch</nuxt-link></strong>
+      <strong class="logo"><nuxt-link to="/"><img src="../assets/img/2030watch_logo.png" alt=""></nuxt-link></strong>
       <nav class="page-nav">
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
