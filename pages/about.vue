@@ -15,7 +15,7 @@
           <h2>2030 Watch</h2>
           <div class="section-wrapper">
             <div class="section-text">
-              <p>Das Projektbudget für 2015 war 55.620 Euro. 73% des Budgets wurden vom BMZ getragen. Die übrigen Finanzgeber waren Welthungerhilfe (9%), Brot für die Welt /EED (9%) Terre des Hommes (7%) und katholischer Fonds (ca. 2%). Der Rest (weniger als 1%) sind Eigenmittel. Das Budget für 2016 ist vorläufig. Nach diesem Budget ist unser Hauptförderer weiterhin das BMZ im Rahmen des von Engagement Global verwalteten Programm für Entwicklungspolitische Bildung (FEB), sowie Brot für die Welt und die Welthungerhilfe.</p> 
+              <p>Das Projektbudget für 2015 war 55.620 Euro. 73% des Budgets wurden vom BMZ getragen. Die übrigen Finanzgeber waren Welthungerhilfe (9%), Brot für die Welt /EED (9%) Terre des Hommes (7%) und katholischer Fonds (ca. 2%). Der Rest (weniger als 1%) sind Eigenmittel. Das Budget für 2016 ist vorläufig. Nach diesem Budget ist unser Hauptförderer weiterhin das BMZ im Rahmen des von Engagement Global verwalteten Programm für Entwicklungspolitische Bildung (FEB), sowie Brot für die Welt und die Welthungerhilfe.</p>
               <p>Das Projektbudget für 2016 war 62.900 Euro. 69% des Budgets wurden vom FEB Programm des BMZ getragen. Die übrigen Finanzgeber waren Welthungerhilfe (9%), Brot für die Welt/EED (15%) und LEZ (2,5%). Die verbleibenden 3 % der Mittel sind kleine Zuwendungen vom Forum Ziviler Friedensdienst, von der Deutschen Stiftung Weltbevölkerung und von Transparency International für die SDG Konferenz im Mai 2016 sowie private Spenden.</p>
             </div>
             <div class="section-img">
@@ -40,12 +40,9 @@
           <h2>Team</h2>
           <div class="section-wrapper">
             <!-- <div class="columns-rows"> -->
-              <team-member v-for='member in team' 
-              :name='member.name' 
-              :imgUrl='member.imgUrl' 
-              :role='member.role'
-              :email='member.email'
-              :twiter='member.twitter'
+              <team-member
+                v-for='member in team'
+                :member="member"
               ></team-member>
             <!-- </div> -->
           </div>
@@ -73,6 +70,7 @@
 
 <script>
   import TeamMember from '~/components/TeamMember.vue'
+
   export default {
     data () {
       return {
