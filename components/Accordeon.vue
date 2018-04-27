@@ -5,9 +5,7 @@
         <span>{{item.title}}</span>
         <span>{{ item.open ? '&#8722;' : '&#43;' }}</span>
       </div>
-      <!-- <transition name='fade' :duration="500"> -->
         <div class='body' v-show='item.open'>{{item.body}}</div>
-      <!-- </transition> -->
     </li>
   </ul>
 </template>
@@ -45,8 +43,6 @@
     .title {
       display: flex;
       font-weight: 600;
-      // text-transform: uppercase;
-      // font-size: 0.8rem;
       
 
       span {
@@ -58,13 +54,6 @@
         }
       }
     }
-
-    // .fade-enter-active, .fade-leave-active {
-    //   transition: opacity .5s;
-    // }
-    // .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    //   opacity: 0;
-    // }
   }
 
   .active {

@@ -73,7 +73,8 @@ $width-desktop: 60vw;
   }
 
   .content .wrapper {
-    margin-top: $spacing * 2;
+    margin-top: $spacing;
+    margin-bottom: $spacing;
   }
 }
 
@@ -110,7 +111,7 @@ $width-desktop: 60vw;
   padding: 0;
 
   section {
-    padding: $spacing * 2 0;
+    padding: $spacing 0;
   }
 
   .section-wrapper {

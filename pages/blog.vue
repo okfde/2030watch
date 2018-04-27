@@ -7,9 +7,6 @@
           <div>
             <p>Erfahre mehr zu aktuellen Themen rund um 2030 Watch und unseren Aktivitäten</p>
           </div>
-          <div>
-            <!-- <strong>halleo gdg</strong> -->
-          </div>
         </section>
       </div>
     </header>

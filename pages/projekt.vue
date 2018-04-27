@@ -7,29 +7,32 @@
           <div>
             <p>Hier findest du Hintergrundinformationen und FAQs zu unserem Anliegen, unseren Zielen und unserer Methodik</p>
           </div>
-          <div>
-            <!-- <strong>halleo gdg</strong> -->
-          </div>
         </section>
       </div>
     </header>
     <div class="content">
          <section>
-          <h2>Hintergrund</h2>
-          <div class="section-wrapper">
-            <accordeon :faqs="background"></accordeon>
+          <div class="wrapper">
+            <h2>Hintergrund</h2>
+            <div class="section-wrapper">
+              <accordeon :faqs="background"></accordeon>
+            </div>
           </div>
         </section>
          <section>
-          <h2>Ziel des Projekts</h2>
-          <div class="section-wrapper">
-             <accordeon :faqs="ziel"></accordeon>
+          <div class="wrapper">
+            <h2>Ziel des Projekts</h2>
+            <div class="section-wrapper">
+              <accordeon :faqs="ziel"></accordeon>
+            </div>
           </div>
         </section>
         <section>
-          <h2>Unsere Methode</h2>
-          <div class="section-wrapper">
-            <accordeon :faqs="methode"></accordeon>
+          <div class="wrapper">
+            <h2>Unsere Methode</h2>
+            <div class="section-wrapper">
+              <accordeon :faqs="methode"></accordeon>
+            </div>
           </div>
         </section>
     </div>
@@ -171,12 +174,14 @@
 <style lang="scss" scoped>
   @import "../assets/style/base";
 
+.content {
   section {
-
-     &:nth-child(odd){
+     &:nth-child(even){
       background: $color-light;
     }
   }
+}
+  
 </style>
 
 
