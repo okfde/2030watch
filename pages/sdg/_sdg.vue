@@ -41,7 +41,7 @@
           <section>
             <small class="caption">Alternativer und komplementärer</small>
             <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
-            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.dns) }} offiziellen Indikator übernimmt, {{ numberToStringNominativ(sdg.n.baT + sdg.n.baI) }} streicht, und einen modifiziert sowie {{ sdg.n.okf }} weitere hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.label.short }}« berechnen:</p>
+            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.dns) }} offiziellen Indikator übernimmt, {{ numberToStringNominativ(sdg.n.baT + sdg.n.baI) }} streicht, einen modifiziert sowie {{ sdg.n.okf }} weitere hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.label.short }}« berechnen:</p>
             <h3>{{ sdg.okf.toFixed(2) }}&#8239;%</h3>
           </section>
           <section>
