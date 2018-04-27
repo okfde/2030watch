@@ -15,38 +15,25 @@
     <div class="page-content">
       <nuxt/>
     </div>
-    <footer class="page-footer columns columns-gutter">
-      <address>
-        Open Knowledge Foundation Deutschland e.V.<br /><br />
-        Singerstr. 109, 10179 Berlin, Deutschland<br /><br />
-
-        Vereinsregister Nr: VR 30468 B<br />
-        Steuernummer: 27/674/52428<br />
-        VAT: DE278022128
-      </address>
-      <ul>
-        <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
-        <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
-      </ul>
-      <ul>
-        <li>Social Media</li>
-        <li>Social Media</li>
-      </ul>
-    </footer>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
+  import MyFooter from '~/components/Footer.vue'
   export default {
     computed: {
       klasse () {
         console.log(this.$route.params)
         return this.$route.params.sdg
       }
+    },
+    components: {
+      MyFooter
     }
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

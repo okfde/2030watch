@@ -83,8 +83,8 @@ $width-desktop: 60vw;
 }
 
 .columns-gutter > * {
-  margin-left: $spacing;
-  margin-right: $spacing;
+  margin-left: $spacing / 2;
+  margin-right: $spacing / 2;
 
   &:first-child {
     margin-left: 0;
