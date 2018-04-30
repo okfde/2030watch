@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const { requestURL, parseCSVString, splitJSON, cleanArrayStrings, checkArrayStr, buildNewArray, writeJSONFile, splitHeader, splitContent, extractURL, asyncBatch, filterArray, convertHashToFloat, deleteKeysInHashArray } = require('./utils.js')
+const { requestURL, parseCSVString, splitJSON, cleanArrayStrings, checkArrayStr, buildNewArray, writeJSONFile, splitHeader, splitContent, extractURL, asyncBatch, filterArray, convertHashToFloat, deleteKeysInHashArray, formatArrayToHash } = require('./utils.js')
 
 // URLS
 const url_sdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRNDMTfVzdgRjXccPA71vnBEoPzF2UtcL-v5rKGj6Dl4hHMlZJ7hJAKH8wRiAOaozR8ZKJUnHrcEDu4/pub?gid=0&single=true&output=csv'
@@ -18,7 +18,7 @@ requestURL(url_sdgs, raw => {
 					const arr = buildNewArray(sdg_header, header, content, sdg_numbers)
 					requestIndicators(arr, indicators => {
 						const data = processSDGs(arr, indicators)
-						writeJSONFile(sdg_file, data)
+						writeJSONFile(sdg_file, formatArrayToHash(data, 'slug'))
 					})
 				})
 			})
@@ -100,7 +100,7 @@ function requestIndicators(sdgs, callback) {
 								const indicators = arrDNS.concat(arrOKF)
 								processIndicators(indicators, arr => {
 									callback(arr)
-									writeJSONFile(indi_file, mergeSDGIntoIndicators(sdgs, arr))
+									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), 'slug'))
 								})
 							})
 						})

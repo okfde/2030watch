@@ -1,5 +1,5 @@
-[
-  {
+{
+  "armut": {
     "number": 1,
     "slug": "armut",
     "color": "e5243b",
@@ -127,7 +127,7 @@
       "alt": 5
     }
   },
-  {
+  "ernaehrung": {
     "number": 2,
     "slug": "ernaehrung",
     "color": "e5b735",
@@ -273,7 +273,7 @@
       "alt": 5
     }
   },
-  {
+  "leben": {
     "number": 3,
     "slug": "leben",
     "color": "4c9f38",
@@ -532,7 +532,7 @@
       "alt": 10
     }
   },
-  {
+  "bildung": {
     "number": 4,
     "slug": "bildung",
     "color": "c5192d",
@@ -685,7 +685,7 @@
       "alt": 6
     }
   },
-  {
+  "gleichstellung": {
     "number": 5,
     "slug": "gleichstellung",
     "color": "ff3a21",
@@ -871,7 +871,7 @@
       "alt": 6
     }
   },
-  {
+  "wasser": {
     "number": 6,
     "slug": "wasser",
     "color": "26bde2",
@@ -1002,7 +1002,7 @@
       "alt": 4
     }
   },
-  {
+  "energie": {
     "number": 7,
     "slug": "energie",
     "color": "fcc30b",
@@ -1173,7 +1173,7 @@
       "alt": 7
     }
   },
-  {
+  "wirtschaft": {
     "number": 8,
     "slug": "wirtschaft",
     "color": "a21942",
@@ -1490,7 +1490,7 @@
       "alt": 12
     }
   },
-  {
+  "infrastruktur": {
     "number": 9,
     "slug": "infrastruktur",
     "color": "fd6925",
@@ -1613,7 +1613,7 @@
       "alt": 5
     }
   },
-  {
+  "ungleichheit": {
     "number": 10,
     "slug": "ungleichheit",
     "color": "dd1367",
@@ -1759,7 +1759,7 @@
       "alt": 5
     }
   },
-  {
+  "staedte": {
     "number": 11,
     "slug": "staedte",
     "color": "fd9d24",
@@ -2032,7 +2032,7 @@
       "alt": 10
     }
   },
-  {
+  "konsum": {
     "number": 12,
     "slug": "konsum",
     "color": "c9992d",
@@ -2181,7 +2181,7 @@
       "alt": 4
     }
   },
-  {
+  "klimawandel": {
     "number": 13,
     "slug": "klimawandel",
     "color": "3f7e44",
@@ -2326,7 +2326,7 @@
       "alt": 6
     }
   },
-  {
+  "ozeane": {
     "number": 14,
     "slug": "ozeane",
     "color": "0a97d9",
@@ -2475,7 +2475,7 @@
       "alt": 6
     }
   },
-  {
+  "landoekosysteme": {
     "number": 15,
     "slug": "landoekosysteme",
     "color": "56c02b",
@@ -2624,7 +2624,7 @@
       "alt": 5
     }
   },
-  {
+  "frieden": {
     "number": 16,
     "slug": "frieden",
     "color": "00689d",
@@ -2795,7 +2795,7 @@
       "alt": 6
     }
   },
-  {
+  "partnerschaft": {
     "number": 17,
     "slug": "partnerschaft",
     "color": "19486a",
@@ -2944,4 +2944,4 @@
       "alt": 6
     }
   }
-]
+}
