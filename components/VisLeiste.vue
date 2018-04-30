@@ -3,7 +3,7 @@
     <li v-for="(sdg, slug) in sdgs" :class="{ 'sdg-item': true, 'current': current === slug }" :style="{ 'background-color': '#' + sdg.color }">
       <nuxt-link :to="'/sdg/' + slug" class="sdg-link">
         <div class="sdg-label">
-          {{ sdg.label }}
+          {{ sdg.labelShort }}
         </div>
       </nuxt-link>
     </li>
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapState } from 'vuex'
 
   export default {
     props: ['current'],
     computed: {
-      ...mapGetters([
+      ...mapState([
         'sdgs'
       ])
     }
