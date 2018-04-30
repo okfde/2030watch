@@ -15,14 +15,15 @@
     <div class="page-content">
       <nuxt/>
     </div>
-    <my-explainer></my-explainer>
-    <my-footer></my-footer>
+    <Explainer />
+    <Footer />
   </div>
 </template>
 
 <script>
-  import MyExplainer from '~/components/Explainer.vue'
-  import MyFooter from '~/components/Footer.vue'
+  import Explainer from '~/components/Explainer.vue'
+  import Footer from '~/components/Footer.vue'
+
   export default {
     computed: {
       klasse () {
@@ -31,8 +32,8 @@
       }
     },
     components: {
-      MyFooter,
-      MyExplainer
+      Footer,
+      Explainer
     }
   }
 </script>
