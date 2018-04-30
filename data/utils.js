@@ -29,7 +29,6 @@ module.exports = {
   splitJSON: function (json, callback) {
     // Split header from content
     if (json.length) {
-      console.log('Lines found: ' + json.length)
       const header = _.slice(json, 0, 1)[0]
       const content = _.slice(json, 1)
       if (content.length == 0) {

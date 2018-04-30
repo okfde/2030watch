@@ -44,7 +44,7 @@
           "goal": "< EU28 Schnitt",
           "sdg": 1,
           "progress": 91.02564102564104,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSveUEXciDaXARDX5MW0OE6uIors-IIiBm94pu9rkUBltjvkb91L2HKN28rXqI4KYgPiVXLcrFo4R5G/pub?gid=0&single=true&output=csv",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSveUEXciDaXARDX5MW0OE6uIors-IIiBm94pu9rkUBltjvkb91L2HKN28rXqI4KYgPiVXLcrFo4R5G/pub?gid=1304930328&single=true&output=csv",
           "slug": "materielle-deprivation",
           "target": 10,
           "current": 10.7,
@@ -57,7 +57,8 @@
           "badIndicator": false,
           "uncalculable": false,
           "spill": false,
-          "modTarget": false
+          "modTarget": false,
+          "license": "unbekannt"
         }
       ],
       "okf": [

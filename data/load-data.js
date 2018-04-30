@@ -9,15 +9,24 @@ const sdg_numbers = ['number']
 const sdg_file = './sdgs.json'
 
 // Load SDG data
+console.log('Requesting SDG data…')
 requestURL(url_sdgs, raw => {
+	console.log('Parsing SDG data…')
 	parseCSVString(raw, json => {
+		console.log('Splitting SDG data…')
 		splitJSON(json, splitedJSON => {
 			const [rawHeader, content] = splitedJSON
+			console.log('Cleaning SDG header data…')
 			cleanArrayStrings(rawHeader, header => {
+				console.log('Checking SDG header data…')
 				checkArrayStr(sdg_header, header, () => {
+					console.log('Building SDG data…')
 					const arr = buildNewArray(sdg_header, header, content, sdg_numbers)
+					console.log('Requesting Indicator data…')
 					requestIndicators(arr, indicators => {
+						console.log('Processing SDG data…')
 						const data = processSDGs(arr, indicators)
+						console.log('Writing SDG data…')
 						writeJSONFile(sdg_file, formatArrayToHash(data, 'slug'))
 					})
 				})
@@ -83,14 +92,20 @@ const indi_file = './indicators.json'
 
 // Load indicator meta data
 function requestIndicators(sdgs, callback) {
+	console.log('Requesting indicator data…')
 	requestURL(url_indicators, raw => {
+		console.log('Parsing indicator data…')
 		parseCSVString(raw, json => {
+			console.log('Splitting indicator data…')
 			splitJSON(json, splitedJSON => {
 				const [rawHeader, content] = splitedJSON
+				console.log('Cleaning indicator header data…')
 				cleanArrayStrings(rawHeader, header => {
+					console.log('Checking indicator header data…')
 					checkArrayStr([...indi_headers_dns, ...indi_headers_okf], header, () => {
 						splitHeader(indi_splitKey, header, indi_dnsID, indi_okfID, splittedHeader => {
 							const [headerDNS, headerOKF, splitPoint] = splittedHeader
+							console.log('Splitting indicator content data…')
 							splitContent(splitPoint, content, splittedContent => {
 								const [rawContentDNS, rawContentOKF] = splittedContent
 								const contentDNS = filterArray(rawContentDNS, indi_dnsID, headerDNS)
@@ -100,6 +115,7 @@ function requestIndicators(sdgs, callback) {
 								const indicators = arrDNS.concat(arrOKF)
 								processIndicators(indicators, arr => {
 									callback(arr)
+									console.log('Writing indicator data…')
 									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), 'slug'))
 								})
 							})
@@ -215,6 +231,7 @@ function processIndicatorDetail(indicator, callback) {
 function requestIndicatorDetail(indicator, callback) {
 	const url = indicator['url']
 	if (url !== '') {
+		console.log('Requesting indicator detail data for', indicator['label'])
 		requestURL(url, raw => {
 			parseCSVString(raw, json => {
 				callback(json)
