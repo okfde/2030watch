@@ -27,7 +27,7 @@ requestURL(url_sdgs, raw => {
 						console.log('Processing SDG data…')
 						const data = processSDGs(arr, indicators)
 						console.log('Writing SDG data…')
-						writeJSONFile(sdg_file, formatArrayToHash(data, ['slug']))
+						writeJSONFile(sdg_file, formatArrayToHash(data, 'slug'))
 					})
 				})
 			})
@@ -116,7 +116,7 @@ function requestIndicators(sdgs, callback) {
 								processIndicators(indicators, arr => {
 									callback(arr)
 									console.log('Writing indicator data…')
-									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), ['slug', 'author']))
+									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), 'slug'))
 								})
 							})
 						})
@@ -168,7 +168,7 @@ function processIndicatorMeta(indicator) {
 	i['progress'] = calculateProgress(indicator)
 
 	i['url'] = indicator['url']
-	i['slug'] = indicator['slug']
+	i['slug'] = author + '-' + indicator['slug']
 
 	_.each([...(_.zip(indi_numbers, indi_numbers_keys)), ['ausgangswertJahr', 'startYear'], ['aktuellerWertJahr', 'currentYear'], ['begrundung', 'reason']], key => {
 		i[key[1]] = indicator[key[0]]

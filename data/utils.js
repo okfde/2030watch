@@ -153,12 +153,9 @@ module.exports = {
       return o
     })
   },
-  formatArrayToHash: function (arr, keys) {
+  formatArrayToHash: function (arr, key) {
     const hash = _.map(arr, obj => {
-      const key = _.map(keys, k => {
-        return obj[k]
-      }).join('-')
-      return [key, obj]
+      return [obj[key], obj]
     })
     return _.fromPairs(hash)
   }
