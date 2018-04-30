@@ -21,14 +21,22 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   import Explainer from '~/components/Explainer.vue'
   import Footer from '~/components/Footer.vue'
 
   export default {
     computed: {
+      ...mapState([
+        'data'
+      ]),
       klasse () {
-        console.log(this.$route.params)
-        return this.$route.params.sdg
+        if (typeof this.$route.params.sdg !== 'undefined') {
+          return this.$route.params.sdg
+        }
+        if (typeof this.$route.params.indicator !== 'undefined') {
+          return this.data[this.$route.params.indicator]['sdg']['slug']
+        }
       }
     },
     components: {
