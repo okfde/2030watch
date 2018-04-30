@@ -4,10 +4,10 @@
       <nuxt-link to="/"><img src="http://via.placeholder.com/400x300" alt="Blogpost Vorschaubild"></nuxt-link>
     </div>
     <div class="post-teaser">
-      <span class="post-date">5. Mai 2018</span>
-      <nuxt-link to="/"><h3>Das ist ein Beispieltitel</h3></nuxt-link>
+      <span class="caption">23. Februar 2018</span>
+      <nuxt-link to="/kontakt"><h3>Tag der offenen Tür - Die OKF beim BMZ</h3></nuxt-link>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic.</div> 
-      <nuxt-link to="/"><span>Mehr lesen …</span></nuxt-link> 
+      <nuxt-link to="/kontakt"><span>Mehr lesen …</span></nuxt-link> 
     </div>
   </div>
 </template>
@@ -41,12 +41,6 @@
 
   .post-teaser {
     flex: 1;
-
-    .post-date {
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      color: $color-mute;
-    }
   }
 }
 </style>

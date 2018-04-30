@@ -21,7 +21,7 @@
         </transition>
       </div>
       <div>
-        <img src="http://via.placeholder.com/450x250" alt="Blogpost Vorschaubild">
+        <img src="http://via.placeholder.com/450x250" alt="Slideshow Vorschaubild">
       </div>
     </section>
     <footer>

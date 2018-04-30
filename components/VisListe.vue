@@ -133,10 +133,17 @@
         align-items: center;
 
         span {
+          // display: inline-block;
+          // line-height: 1.2rem;
+          // width: 70%;
+          // max-width: 500px;
           display: inline-block;
+          line-height: 19.2px;
           line-height: 1.2rem;
           width: 70%;
           max-width: 500px;
+          font-family: "Roboto Mono";
+          font-size: 0.85rem;
         }
       }
 

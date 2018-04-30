@@ -95,9 +95,6 @@
     }
 
     .wrapper {
-      h4 {
-         margin-bottom: $spacing;
-      }
 
       .activity {
         margin-bottom: $spacing;
