@@ -63,14 +63,14 @@
       y2="50%" />
     <line
       class="diff"
-      :stroke="sdg.okf < sdg.dns ? '#D22F27' : '#5C9E31'"
-      :x1="sdg.okf + '%'"
+      :stroke="okf < dns ? '#D22F27' : '#5C9E31'"
+      :x1="okf + '%'"
       y1="50%"
-      :x2="sdg.dns + '%'"
+      :x2="dns + '%'"
       y2="50%" />
     <circle
       class="sdg-marker sdg-marker-total"
-      :cx="sdg.okf + '%'"
+      :cx="okf + '%'"
       cy="50%"
       r="8" />
     <text
@@ -80,11 +80,11 @@
       :text-anchor="labels[0].l"
       :x="labels[0].x"
       y="30%">
-      {{ sdg.okf.toFixed(0) }}&#8239;%
+      {{ okf.toFixed(0) }}&#8239;%
     </text>
     <circle
       class="sdg-marker sdg-marker-dns"
-      :cx="sdg.dns + '%'"
+      :cx="dns + '%'"
       cy="50%"
       r="8" />
     <text
@@ -94,7 +94,7 @@
       :text-anchor="labels[1].l"
       :x="labels[1].x"
       y="70%">
-      {{ sdg.dns.toFixed(0) }}&#8239;%
+      {{ dns.toFixed(0) }}&#8239;%
     </text>
   </svg>
 </template>
@@ -117,9 +117,15 @@
       this.dnsWidth = this.$refs.dns.clientWidth
     },
     computed: {
+      dns: function () {
+        return this.sdg.values.dns
+      },
+      okf: function () {
+        return this.sdg.values.okf
+      },
       labels: function () {
-        let dns = this.sdg.dns / 100 * this.width
-        let okf = this.sdg.okf / 100 * this.width
+        let dns = this.dns / 100 * this.width
+        let okf = this.okf / 100 * this.width
 
         let dnsLabel = 'start'
         let okfLabel = 'end'

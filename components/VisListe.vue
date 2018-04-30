@@ -22,7 +22,7 @@
           </svg>
         </div>
         <div class="sdg-label">
-          <span :title="sdg.label.long">{{ sdg.label.short }}</span>
+          <span :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
         <VisProgress :sdg="sdg" :ticks="index === 0" />
       </nuxt-link>
@@ -40,7 +40,7 @@
     data: function () {
       return {
         'sdgs': sdgs,
-        'sorting': 'id',
+        'sorting': 'number',
         'reverse': false
       }
     },
