@@ -45,7 +45,8 @@
             <h2>Team</h2>
             <div class="section-wrapper">
                 <team-member
-                  v-for='member in team'
+                  v-for="(member, key) in team"
+                  :key="key"
                   :member="member"
                 ></team-member>
               <!-- </div> -->
