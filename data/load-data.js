@@ -52,8 +52,8 @@ function processSDGs(sdgs, allIndicators) {
 				'okf': _.sumBy(usableValuesCombined, 'progress') / usableValuesCombined.length
 			},
 			'ind': {
-				'dns': deleteKeysInHashArray(indi_dns, ['countries', 'timeline', 'introduction', 'target', 'description', 'category']),
-				'okf': deleteKeysInHashArray(indi_okf, ['countries', 'timeline', 'introduction', 'target', 'description', 'category'])
+				'dns': deleteKeysInHashArray(indi_dns, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory']),
+				'okf': deleteKeysInHashArray(indi_okf, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory'])
 			},
 			'n': {
 				'baT': _.countBy(indi_dns, 'badTarget').true || 0,
@@ -195,7 +195,7 @@ function processIndicatorDetail(indicator, callback) {
 			}
 
 			const description = _.fromPairs(_.slice(detailData, 0, endData))
-			_.forEach(['introduction', 'description', 'target', 'category', 'indicatorSource', 'dataSource', 'license'], key => {
+			_.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'indicatorSource', 'dataSource', 'license'], key => {
 				indicator[key] = description[key]
 			})
 
