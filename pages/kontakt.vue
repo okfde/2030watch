@@ -97,7 +97,30 @@
       flex: 1;
       background-color: $color-light;
       text-align: center;
+      padding: $spacing * 6 0;
     }
 
+  }
+
+  .blog-body {
+    p, ul {
+      margin: 0 0 $spacing 0;
+    }
+
+    ul {
+      padding-left: $spacing;
+
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+
+  .blog-footer {
+    .social-icons {
+      a {
+        padding: 0 10px;
+      }
+    }
   }
 </style>

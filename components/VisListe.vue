@@ -72,6 +72,8 @@
 </script>
 
 <style lang="scss">
+@import '../assets/style/base';
+
   .sdg-item {
     display: flex;
 
@@ -85,6 +87,7 @@
 
       .active {
         font-weight: bold;
+        color: $color-default;
       }
 
       .sdg-legend {
