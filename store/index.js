@@ -53,7 +53,6 @@ function generateValueLabel (value) {
   return label
 }
 
-
 const store = () => new Vuex.Store({
   state: {
     data: data,
@@ -78,7 +77,7 @@ const store = () => new Vuex.Store({
       return Object.keys(state.sdgs)
     },
     indicatorsSlugs (state, getters) {
-      return Object.keys(getters.indicators)
+      return Object.keys(state.data)
     }
   }
 })

@@ -2,13 +2,13 @@
   <div class="page-container">
     <nav class="inpage-nav">
       <div class="wrapper">
-        <nuxt-link to="/">Übersicht</nuxt-link><span class="bread-spacer">/</span><span class="bread-current">{{ sdg.label.short }}</span>
+        <nuxt-link to="/">Übersicht</nuxt-link><span class="bread-spacer">/</span><span class="bread-current">{{ sdg.labelShort }}</span>
       </div>
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
         <small class="caption">SDG {{ sdg.id }}</small>
-        <h1>{{ sdg.label.long }}</h1>
+        <h1>{{ sdg.labelShort }}</h1>
         <section class="columns columns-gutter">
           <div>
             <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
@@ -28,8 +28,8 @@
           <section>
             <small class="caption">Offizieller Indikatorenkatalog</small>
             <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
-            <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.label.short }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-            <h3>{{ sdg.dns.toFixed(2) }}&#8239;%</h3>
+            <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
+            <h3>{{ dns.toFixed(2) }}&#8239;%</h3>
           </section>
           <section>
             <ul class="indicator-list">
@@ -41,8 +41,8 @@
           <section>
             <small class="caption">Alternativer und komplementärer</small>
             <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
-            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.dns) }} offiziellen Indikator übernimmt, {{ numberToStringNominativ(sdg.n.baT + sdg.n.baI) }} streicht, einen modifiziert sowie {{ sdg.n.okf }} weitere hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.label.short }}« berechnen:</p>
-            <h3>{{ sdg.okf.toFixed(2) }}&#8239;%</h3>
+            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.dns) }} offiziellen Indikator übernimmt, {{ numberToStringNominativ(sdg.n.baT + sdg.n.baI) }} streicht, einen modifiziert sowie {{ sdg.n.okf }} weitere hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+            <h3>{{ okf.toFixed(2) }}&#8239;%</h3>
           </section>
           <section>
             <ul class="indicator-list">
@@ -67,7 +67,7 @@
     },
     head () {
       return {
-        title: this.sdg.label.short || 'all',
+        title: this.sdg.labelShort || 'all',
         titleTemplate: '2030 Watch - %s'
       }
     },
@@ -106,10 +106,16 @@
     },
     computed: {
       ...mapState([
-        'dataSDGs'
+        'sdgs'
       ]),
       sdg () {
-        return this.dataSDGs[this.$route.params.sdg]
+        return this.sdgs[this.$route.params.sdg]
+      },
+      dns: function () {
+        return this.sdg.values.dns
+      },
+      okf: function () {
+        return this.sdg.values.okf
       }
     }
   }
