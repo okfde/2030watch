@@ -27,7 +27,7 @@ requestURL(url_sdgs, raw => {
 						console.log('Processing SDG data…')
 						const data = processSDGs(arr, indicators)
 						console.log('Writing SDG data…')
-						writeJSONFile(sdg_file, formatArrayToHash(data, 'slug'))
+						writeJSONFile(sdg_file, formatArrayToHash(data, ['slug']))
 					})
 				})
 			})
@@ -116,7 +116,7 @@ function requestIndicators(sdgs, callback) {
 								processIndicators(indicators, arr => {
 									callback(arr)
 									console.log('Writing indicator data…')
-									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), 'slug'))
+									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), ['slug', 'author']))
 								})
 							})
 						})

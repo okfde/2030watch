@@ -1,5 +1,5 @@
 {
-  "erhebliche-materielle-deprivation": {
+  "erhebliche-materielle-deprivation-dns": {
     "id": "1_2",
     "author": "dns",
     "label": "Erhebliche materielle Deprivation",
@@ -27,31 +27,36 @@
     "spill": false,
     "modTarget": false
   },
-  "stickstoffueberschuss": {
+  "stickstoffueberschuss-dns": {
     "id": "2_1",
-    "author": "okf",
+    "author": "dns",
     "label": "Stickstoffüberschuss",
     "unit": "kg/ha",
-    "goal": "50",
+    "goal": "< 70 kg/ha",
     "sdg": {
       "sdg": 2,
       "slug": "ernaehrung",
       "color": "e5b735",
       "label": "Kein Hunger"
     },
-    "progress": 64.21663442940039,
+    "progress": 79.61630695443645,
     "url": "",
     "slug": "stickstoffueberschuss",
-    "target": 50,
+    "target": 70,
     "current": 87,
     "start": 153.4,
-    "startYear": "",
+    "startYear": "2013",
     "currentYear": "2013",
     "reason": "SDSN Methode",
-    "newTopic": false,
-    "pate": false
+    "yearlyTarget": false,
+    "badTarget": false,
+    "badIndicator": false,
+    "uncalculable": false,
+    "spill": false,
+    "modTarget": true,
+    "altIndicator": "2_1"
   },
-  "anteil-biologischer-landwirtschaft": {
+  "anteil-biologischer-landwirtschaft-dns": {
     "id": "2_2",
     "author": "dns",
     "label": "Anteil biologischer Landwirtschaft",
@@ -79,7 +84,7 @@
     "spill": false,
     "modTarget": false
   },
-  "vorzeitige-sterblichkeit-frauen": {
+  "vorzeitige-sterblichkeit-frauen-dns": {
     "id": "3_1",
     "author": "dns",
     "label": "Vorzeitige Sterblichkeit Frauen, Todesfälle pro 100.000 Einwohner unter 70J, Frauen",
@@ -107,7 +112,7 @@
     "spill": false,
     "modTarget": false
   },
-  "vorzeitige-sterblichkeit-maenner": {
+  "vorzeitige-sterblichkeit-maenner-dns": {
     "id": "3_2",
     "author": "dns",
     "label": "Vorzeitige Sterblichkeit Männer, Todesfälle pro 100.000 Einwohner unter 70J, Männer",
@@ -135,7 +140,7 @@
     "spill": false,
     "modTarget": false
   },
-  "raucherquote-12-17j": {
+  "raucherquote-12-17j-dns": {
     "id": "3_3",
     "author": "dns",
     "label": "Raucherquote 12-17J",
@@ -163,7 +168,7 @@
     "spill": false,
     "modTarget": false
   },
-  "raucherquote-ab-15j": {
+  "raucherquote-ab-15j-dns": {
     "id": "3_4",
     "author": "dns",
     "label": "Raucherquote ab 15J",
@@ -191,7 +196,7 @@
     "spill": false,
     "modTarget": false
   },
-  "adipositasquote-11-17j": {
+  "adipositasquote-11-17j-dns": {
     "id": "3_5",
     "author": "dns",
     "label": "Adipositasquote 11-17J",
@@ -219,7 +224,7 @@
     "spill": false,
     "modTarget": false
   },
-  "adipositasquote-ab-18j": {
+  "adipositasquote-ab-18j-dns": {
     "id": "3_6",
     "author": "dns",
     "label": "Adipositasquote ab 18J",
@@ -247,7 +252,7 @@
     "spill": false,
     "modTarget": false
   },
-  "emmissionen-von-luftschadstoffen-index-von-so2-nox-nh3-nmvoc-pm-2-5": {
+  "emmissionen-von-luftschadstoffen-index-von-so2-nox-nh3-nmvoc-pm-2-5-dns": {
     "id": "3_7",
     "author": "dns",
     "label": "Emmissionen von Luftschadstoffen, Index von SO2, NOx, NH3, NMVOC, PM.2,5",
@@ -275,7 +280,7 @@
     "spill": false,
     "modTarget": false
   },
-  "anteil-der-bevoelkerung-mit-pm10-exposition-von-ueber-20g-pro-m-3-luft": {
+  "anteil-der-bevoelkerung-mit-pm10-exposition-von-ueber-20g-pro-m-3-luft-dns": {
     "id": "3_8",
     "author": "dns",
     "label": "Anteil der Bevölkerung mit PM10 Exposition von über 20µg pro m^3 Luft",
@@ -303,7 +308,7 @@
     "spill": false,
     "modTarget": false
   },
-  "fruehe-schulabgaenger-18-24j-ohne-abschluss": {
+  "fruehe-schulabgaenger-18-24j-ohne-abschluss-dns": {
     "id": "4_1",
     "author": "dns",
     "label": "Frühe Schulabgänger, 18-24J ohne Abschluss",
@@ -331,7 +336,7 @@
     "spill": false,
     "modTarget": false
   },
-  "tertiaerer-oder-postsekundaerer-abschluss-30-34j": {
+  "tertiaerer-oder-postsekundaerer-abschluss-30-34j-dns": {
     "id": "4_2",
     "author": "dns",
     "label": "tertiärer oder postsekundärer Abschluss, 30-34J",
@@ -359,7 +364,7 @@
     "spill": false,
     "modTarget": false
   },
-  "ganztagsbetreuung-0-2j": {
+  "ganztagsbetreuung-0-2j-dns": {
     "id": "4_3",
     "author": "dns",
     "label": "Ganztagsbetreuung 0-2J",
@@ -387,7 +392,7 @@
     "spill": false,
     "modTarget": false
   },
-  "ganztagsbetreuung-3-5j": {
+  "ganztagsbetreuung-3-5j-dns": {
     "id": "4_4",
     "author": "dns",
     "label": "Ganztagsbetreuung 3-5J",
@@ -415,7 +420,7 @@
     "spill": false,
     "modTarget": false
   },
-  "verdienstabstand-zwischen-frauen-und-maennern": {
+  "verdienstabstand-zwischen-frauen-und-maennern-dns": {
     "id": "5_1",
     "author": "dns",
     "label": "Verdienstabstand zwischen Frauen und Männern",
@@ -443,31 +448,36 @@
     "spill": false,
     "modTarget": false
   },
-  "frauen-in-fuehrungspositionen-in-der-wirtschaft": {
+  "frauen-in-fuehrungspositionen-in-der-wirtschaft-dns": {
     "id": "5_2",
-    "author": "okf",
+    "author": "dns",
     "label": "Frauen in Führungspositionen in der Wirtschaft",
     "unit": "%",
-    "goal": "50",
+    "goal": "> 30% bis 2030",
     "sdg": {
       "sdg": 5,
       "slug": "gleichstellung",
       "color": "ff3a21",
       "label": "Geschlechtergleicheit"
     },
-    "progress": 32,
+    "progress": 92.33333333333333,
     "url": "",
     "slug": "frauen-in-fuehrungspositionen-in-der-wirtschaft",
-    "target": 50,
-    "current": 16,
+    "target": 30,
+    "current": 27.7,
     "start": 0,
     "startYear": "",
     "currentYear": "2016",
     "reason": "Natürlicher Nullwert",
-    "newTopic": false,
-    "pate": false
+    "yearlyTarget": false,
+    "badTarget": false,
+    "badIndicator": false,
+    "uncalculable": false,
+    "spill": false,
+    "modTarget": true,
+    "altIndicator": "5_2"
   },
-  "maedchen-und-frauen-die-durch-berufliche-qualifizierungsmassnahmen-deutscher-entwicklungspolitischer-zusammenarbeit-erreicht-wurden": {
+  "maedchen-und-frauen-die-durch-berufliche-qualifizierungsmassnahmen-deutscher-entwicklungspolitischer-zusammenarbeit-erreicht-wurden-dns": {
     "id": "5_3",
     "author": "dns",
     "label": "Mädchen und Frauen, die durch berufliche Qualifizierungsmaßnahmen deutscher entwicklungspolitischer Zusammenarbeit erreicht wurden",
@@ -495,7 +505,7 @@
     "spill": false,
     "modTarget": false
   },
-  "phosphor-in-fliessgewaessern-anteil-der-messstellen-an-denen-der-orientierungswert-des-guten-oekologischen-zustands-fuer-gesamt-phosphor-eingehalten-wird": {
+  "phosphor-in-fliessgewaessern-anteil-der-messstellen-an-denen-der-orientierungswert-des-guten-oekologischen-zustands-fuer-gesamt-phosphor-eingehalten-wird-dns": {
     "id": "6_1",
     "author": "dns",
     "label": "Phosphor in Fließgewässern, Anteil der Messstellen, an denen der Orientierungswert des guten ökologischen Zustands für Gesamt-Phosphor eingehalten wird",
@@ -523,7 +533,7 @@
     "spill": false,
     "modTarget": false
   },
-  "nitrat-im-grundwasser-anteil-der-messstellen-an-denen-der-schwellenwert-von-50-mg-l-eingehalten-wird": {
+  "nitrat-im-grundwasser-anteil-der-messstellen-an-denen-der-schwellenwert-von-50-mg-l-eingehalten-wird-dns": {
     "id": "6_2",
     "author": "dns",
     "label": "Nitrat im Grundwasser, Anteil der Messstellen, an denen der Schwellenwert von 50 mg/L eingehalten wird",
@@ -551,7 +561,7 @@
     "spill": false,
     "modTarget": false
   },
-  "von-deutschland-gefoerderter-zugang-zu-trinkwasser-und-sanitaerversorgung-weltweit-erreichte-menschen": {
+  "von-deutschland-gefoerderter-zugang-zu-trinkwasser-und-sanitaerversorgung-weltweit-erreichte-menschen-dns": {
     "id": "6_3",
     "author": "dns",
     "label": "Von Deutschland geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit, erreichte Menschen",
@@ -579,7 +589,7 @@
     "spill": true,
     "modTarget": false
   },
-  "steigerung-der-endenergieproduktivitaet-gegnueber-2008": {
+  "steigerung-der-endenergieproduktivitaet-gegnueber-2008-dns": {
     "id": "7_1",
     "author": "dns",
     "label": "Steigerung der Endenergieproduktivität gegnüber 2008",
@@ -607,7 +617,7 @@
     "spill": true,
     "modTarget": false
   },
-  "senkung-primaerenergieverbrauch-gegenueber-2008": {
+  "senkung-primaerenergieverbrauch-gegenueber-2008-dns": {
     "id": "7_2",
     "author": "dns",
     "label": "Senkung Primärenergieverbrauch gegenüber 2008",
@@ -635,7 +645,7 @@
     "spill": true,
     "modTarget": false
   },
-  "anteil-erneuerbarer-energien-am-brutto-endenergieverbrauch": {
+  "anteil-erneuerbarer-energien-am-brutto-endenergieverbrauch-dns": {
     "id": "7_3",
     "author": "dns",
     "label": "Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch",
@@ -663,7 +673,7 @@
     "spill": true,
     "modTarget": false
   },
-  "anteil-des-stroms-aus-eneuerbarer-energiequellen-am-bruttostromverbrauch": {
+  "anteil-des-stroms-aus-eneuerbarer-energiequellen-am-bruttostromverbrauch-dns": {
     "id": "7_4",
     "author": "dns",
     "label": "Anteil des Stroms aus eneuerbarer Energiequellen am Bruttostromverbrauch",
@@ -691,7 +701,7 @@
     "spill": true,
     "modTarget": false
   },
-  "gesamtrohstoffproduktivitaet-bip+importe-raw-material-input": {
+  "gesamtrohstoffproduktivitaet-bip+importe-raw-material-input-dns": {
     "id": "8_1",
     "author": "dns",
     "label": "Gesamtrohstoffproduktivität, (BIP+Importe)/ Raw Material Input",
@@ -719,7 +729,7 @@
     "spill": true,
     "modTarget": false
   },
-  "staatsdefizit-jaehrlich-kleiner-als-3-des-bip": {
+  "staatsdefizit-jaehrlich-kleiner-als-3-des-bip-dns": {
     "id": "8_2",
     "author": "dns",
     "label": "Staatsdefizit, jährlich kleiner als 3% des BIP",
@@ -747,7 +757,7 @@
     "spill": false,
     "modTarget": false
   },
-  "strukturelles-defizit": {
+  "strukturelles-defizit-dns": {
     "id": "8_3",
     "author": "dns",
     "label": "Strukturelles Defizit",
@@ -775,7 +785,7 @@
     "spill": false,
     "modTarget": false
   },
-  "staatsschulden-bip": {
+  "staatsschulden-bip-dns": {
     "id": "8_4",
     "author": "dns",
     "label": "Staatsschulden % BIP",
@@ -803,7 +813,7 @@
     "spill": false,
     "modTarget": false
   },
-  "anteil-bruttoanlageinvestitionen-am-bip": {
+  "anteil-bruttoanlageinvestitionen-am-bip-dns": {
     "id": "8_5",
     "author": "dns",
     "label": "Anteil Bruttoanlageinvestitionen am BIP",
@@ -831,7 +841,7 @@
     "spill": false,
     "modTarget": false
   },
-  "bruttoinlandsprodukt-pro-einwohner": {
+  "bruttoinlandsprodukt-pro-einwohner-dns": {
     "id": "8_6",
     "author": "dns",
     "label": "Bruttoinlandsprodukt pro Einwohner",
@@ -859,7 +869,7 @@
     "spill": false,
     "modTarget": false
   },
-  "erwerbstaetigenquote-20-64jahre-": {
+  "erwerbstaetigenquote-20-64jahre--dns": {
     "id": "8_7",
     "author": "dns",
     "label": "Erwerbstätigenquote (20-64Jahre)",
@@ -887,7 +897,7 @@
     "spill": false,
     "modTarget": false
   },
-  "erwerbstaetigenquote-60-64jahre-": {
+  "erwerbstaetigenquote-60-64jahre--dns": {
     "id": "8_8",
     "author": "dns",
     "label": "Erwerbstätigenquote (60-64Jahre)",
@@ -915,7 +925,7 @@
     "spill": false,
     "modTarget": false
   },
-  "mitglieder-des-textilbuendnisses": {
+  "mitglieder-des-textilbuendnisses-dns": {
     "id": "8_9",
     "author": "dns",
     "label": "Mitglieder des Textilbündnisses",
@@ -943,7 +953,7 @@
     "spill": false,
     "modTarget": false
   },
-  "private-+-oeffentliche-ausgaben-fuer-forschung-und-entwicklung-bip": {
+  "private-+-oeffentliche-ausgaben-fuer-forschung-und-entwicklung-bip-dns": {
     "id": "9_1",
     "author": "dns",
     "label": "Private + öffentliche Ausgaben für Forschung und Entwicklung/ BIP",
@@ -971,7 +981,7 @@
     "spill": false,
     "modTarget": false
   },
-  "auslaendische-schulabsolventinnen": {
+  "auslaendische-schulabsolventinnen-dns": {
     "id": "10_1",
     "author": "dns",
     "label": "Ausländische Schulabsolventinnen",
@@ -999,31 +1009,36 @@
     "spill": false,
     "modTarget": false
   },
-  "aequivalenzeinkommen-als-gini-koeffizient-nach-sozialtransfers": {
+  "aequivalenzeinkommen-als-gini-koeffizient-nach-sozialtransfers-dns": {
     "id": "10_2",
-    "author": "okf",
+    "author": "dns",
     "label": "Äquivalenzeinkommen als Gini Koeffizient nach Sozialtransfers",
-    "unit": "Punkte",
-    "goal": "5 best performers",
+    "unit": "0-100",
+    "goal": "unterhalb EU-28 bis 2030",
     "sdg": {
       "sdg": 10,
       "slug": "ungleichheit",
       "color": "dd1367",
       "label": "Weniger Ungleichheiten"
     },
-    "progress": 68.18181818181817,
+    "progress": 107.14285714285714,
     "url": "",
     "slug": "aequivalenzeinkommen-als-gini-koeffizient-nach-sozialtransfers",
-    "target": 26,
+    "target": 30,
     "current": 29.5,
     "start": 37,
-    "startYear": "",
+    "startYear": "2016",
     "currentYear": "2016",
-    "reason": "Ausgangswert 2008",
-    "newTopic": false,
-    "pate": false
+    "reason": "SDSN Methode",
+    "yearlyTarget": false,
+    "badTarget": false,
+    "badIndicator": false,
+    "uncalculable": false,
+    "spill": false,
+    "modTarget": true,
+    "altIndicator": "10_2"
   },
-  "anstieg-der-siedlungs-verkehrsflaeche": {
+  "anstieg-der-siedlungs-verkehrsflaeche-dns": {
     "id": "11_1",
     "author": "dns",
     "label": "Anstieg der Siedlungs- Verkehrsfläche",
@@ -1051,7 +1066,7 @@
     "spill": false,
     "modTarget": false
   },
-  "veraenderung-der-freiraumflaeche-je-einwohner": {
+  "veraenderung-der-freiraumflaeche-je-einwohner-dns": {
     "id": "11_2",
     "author": "dns",
     "label": "Veränderung der Freiraumfläche je Einwohner",
@@ -1079,7 +1094,7 @@
     "spill": false,
     "modTarget": false
   },
-  "siedlungsdichte-erhalten-einwohner-km-2-siedlungs-verkehrsflaeche": {
+  "siedlungsdichte-erhalten-einwohner-km-2-siedlungs-verkehrsflaeche-dns": {
     "id": "11_3",
     "author": "dns",
     "label": "Siedlungsdichte erhalten, Einwohner / km^2 Siedlungs- Verkehrsfläche",
@@ -1107,7 +1122,7 @@
     "spill": false,
     "modTarget": false
   },
-  "endenergieverbrauch-im-gueterverkehr-": {
+  "endenergieverbrauch-im-gueterverkehr--dns": {
     "id": "11_4",
     "author": "dns",
     "label": "Endenergieverbrauch im Güterverkehr",
@@ -1135,7 +1150,7 @@
     "spill": false,
     "modTarget": false
   },
-  "endenergieverbrauch-im-personenverkehr-": {
+  "endenergieverbrauch-im-personenverkehr--dns": {
     "id": "11_5",
     "author": "dns",
     "label": "Endenergieverbrauch im Personenverkehr",
@@ -1163,7 +1178,7 @@
     "spill": false,
     "modTarget": false
   },
-  "reisezeit-mit-oeffentlichen-verkehrsmitteln-zum-naechsten-mittel-oder-oberzentrum": {
+  "reisezeit-mit-oeffentlichen-verkehrsmitteln-zum-naechsten-mittel-oder-oberzentrum-dns": {
     "id": "11_6",
     "author": "dns",
     "label": "Reisezeit mit öffentlichen Verkehrsmitteln zum nächsten Mittel- oder Oberzentrum",
@@ -1191,7 +1206,7 @@
     "spill": false,
     "modTarget": false
   },
-  "belastung-durch-wohnkosten-ueber-40-": {
+  "belastung-durch-wohnkosten-ueber-40--dns": {
     "id": "11_7",
     "author": "dns",
     "label": "Belastung durch Wohnkosten über 40%",
@@ -1219,7 +1234,7 @@
     "spill": false,
     "modTarget": false
   },
-  "produkte-mit-umweltzeichen": {
+  "produkte-mit-umweltzeichen-dns": {
     "id": "12_1",
     "author": "dns",
     "label": "Produkte mit Umweltzeichen",
@@ -1247,7 +1262,7 @@
     "spill": false,
     "modTarget": false
   },
-  "energieverbrauch-und-co2-emmissionen-des-konsums": {
+  "energieverbrauch-und-co2-emmissionen-des-konsums-dns": {
     "id": "12_2",
     "author": "dns",
     "label": "Energieverbrauch und CO2-Emmissionen des Konsums",
@@ -1275,7 +1290,7 @@
     "spill": true,
     "modTarget": false
   },
-  "umweltmanagement-emas-organisationsstandorte-": {
+  "umweltmanagement-emas-organisationsstandorte--dns": {
     "id": "12_3",
     "author": "dns",
     "label": "Umweltmanagement EMAS (Organisationsstandorte)",
@@ -1303,7 +1318,7 @@
     "spill": false,
     "modTarget": false
   },
-  "treibhausgasemmissionen": {
+  "treibhausgasemmissionen-dns": {
     "id": "13_1",
     "author": "dns",
     "label": "Treibhausgasemmissionen",
@@ -1331,7 +1346,7 @@
     "spill": true,
     "modTarget": false
   },
-  "internationale-klimafinanzierung": {
+  "internationale-klimafinanzierung-dns": {
     "id": "13_2",
     "author": "dns",
     "label": "Internationale Klimafinanzierung",
@@ -1359,7 +1374,7 @@
     "spill": true,
     "modTarget": false
   },
-  "gesamtstickstoffeintrag-ostsee-durch-deutsche-zufluesse-": {
+  "gesamtstickstoffeintrag-ostsee-durch-deutsche-zufluesse--dns": {
     "id": "14_1",
     "author": "dns",
     "label": "Gesamtstickstoffeintrag Ostsee (durch deutsche Zuflüsse)",
@@ -1387,7 +1402,7 @@
     "spill": false,
     "modTarget": false
   },
-  "gesamtstickstoffeintrag-nordsee-durch-deutsche-zufluesse-": {
+  "gesamtstickstoffeintrag-nordsee-durch-deutsche-zufluesse--dns": {
     "id": "14_2",
     "author": "dns",
     "label": "Gesamtstickstoffeintrag Nordsee (durch deutsche Zuflüsse)",
@@ -1415,7 +1430,7 @@
     "spill": false,
     "modTarget": false
   },
-  "anteil-nachhaltig-befischter-fischbestaende-nord-u-ostsee-": {
+  "anteil-nachhaltig-befischter-fischbestaende-nord-u-ostsee--dns": {
     "id": "14_3",
     "author": "dns",
     "label": "Anteil nachhaltig befischter Fischbestände (Nord- u. Ostsee)",
@@ -1443,7 +1458,7 @@
     "spill": false,
     "modTarget": false
   },
-  "index-artenvielfalt-u-landschaftsqualitaet": {
+  "index-artenvielfalt-u-landschaftsqualitaet-dns": {
     "id": "15_1",
     "author": "dns",
     "label": "Index Artenvielfalt u. Landschaftsqualität",
@@ -1471,7 +1486,7 @@
     "spill": false,
     "modTarget": false
   },
-  "eutrophierung-der-oekosysteme-anteil-empfindlicher-oekosysteme-mit-ueberschrittenem-stickstoffeintraegen-": {
+  "eutrophierung-der-oekosysteme-anteil-empfindlicher-oekosysteme-mit-ueberschrittenem-stickstoffeintraegen--dns": {
     "id": "15_2",
     "author": "dns",
     "label": "Eutrophierung der Ökosysteme (Anteil empfindlicher Ökosysteme mit überschrittenem Stickstoffeinträgen)",
@@ -1499,7 +1514,7 @@
     "spill": false,
     "modTarget": false
   },
-  "eza-fuer-redd+-waelder": {
+  "eza-fuer-redd+-waelder-dns": {
     "id": "15_3",
     "author": "dns",
     "label": "EZA für REDD+- Wälder",
@@ -1527,7 +1542,7 @@
     "spill": true,
     "modTarget": false
   },
-  "straftaten": {
+  "straftaten-dns": {
     "id": "16_1",
     "author": "dns",
     "label": "Straftaten",
@@ -1555,7 +1570,7 @@
     "spill": false,
     "modTarget": false
   },
-  "sicherung-registrierung-und-zerstoerung-von-kleinwaffen-in-afrika-osteuropa-lateinamerika-asien-": {
+  "sicherung-registrierung-und-zerstoerung-von-kleinwaffen-in-afrika-osteuropa-lateinamerika-asien--dns": {
     "id": "16_2",
     "author": "dns",
     "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen (in Afrika, Osteuropa, Lateinamerika, Asien)",
@@ -1583,7 +1598,7 @@
     "spill": true,
     "modTarget": false
   },
-  "corruption-perception-index": {
+  "corruption-perception-index-dns": {
     "id": "16_3",
     "author": "dns",
     "label": "Corruption Perception Index",
@@ -1611,7 +1626,7 @@
     "spill": false,
     "modTarget": false
   },
-  "corruption-perception-index-der-eza-partner": {
+  "corruption-perception-index-der-eza-partner-dns": {
     "id": "16_4",
     "author": "dns",
     "label": "Corruption Perception Index der EZA Partner",
@@ -1639,7 +1654,7 @@
     "spill": true,
     "modTarget": false
   },
-  "oda-bne": {
+  "oda-bne-dns": {
     "id": "17_1",
     "author": "dns",
     "label": "ODA / BNE",
@@ -1667,7 +1682,7 @@
     "spill": true,
     "modTarget": false
   },
-  "studierende-forscher-aus-dcs-und-ldcs": {
+  "studierende-forscher-aus-dcs-und-ldcs-dns": {
     "id": "17_2",
     "author": "dns",
     "label": "Studierende, Forscher aus DCs und LDCs",
@@ -1695,7 +1710,7 @@
     "spill": true,
     "modTarget": false
   },
-  "anteil-der-importe-aus-ldcs": {
+  "anteil-der-importe-aus-ldcs-dns": {
     "id": "17_3",
     "author": "dns",
     "label": "Anteil der Importe aus LDCs",
@@ -1723,7 +1738,7 @@
     "spill": true,
     "modTarget": false
   },
-  "von-armut-und-sozialer-ausgrenzung-bedroht-60+-": {
+  "von-armut-und-sozialer-ausgrenzung-bedroht-60+--okf": {
     "id": "1_2",
     "author": "okf",
     "label": "Von Armut und sozialer Ausgrenzung bedroht (60+)",
@@ -1747,7 +1762,7 @@
     "newTopic": false,
     "pate": false
   },
-  "von-armut-und-sozialer-ausgrenzung-bedroht-eu-auslaender-": {
+  "von-armut-und-sozialer-ausgrenzung-bedroht-eu-auslaender--okf": {
     "id": "1_3",
     "author": "okf",
     "label": "Von Armut und sozialer Ausgrenzung bedroht (EU-Ausländer)",
@@ -1771,7 +1786,31 @@
     "newTopic": false,
     "pate": false
   },
-  "antibiotikaeinsatz-in-der-landwirtschaft": {
+  "stickstoffueberschuss-okf": {
+    "id": "2_1",
+    "author": "okf",
+    "label": "Stickstoffüberschuss",
+    "unit": "kg/ha",
+    "goal": "50",
+    "sdg": {
+      "sdg": 2,
+      "slug": "ernaehrung",
+      "color": "e5b735",
+      "label": "Kein Hunger"
+    },
+    "progress": 64.21663442940039,
+    "url": "",
+    "slug": "stickstoffueberschuss",
+    "target": 50,
+    "current": 87,
+    "start": 153.4,
+    "startYear": "",
+    "currentYear": "2013",
+    "reason": "SDSN Methode",
+    "newTopic": false,
+    "pate": false
+  },
+  "antibiotikaeinsatz-in-der-landwirtschaft-okf": {
     "id": "2_2",
     "author": "okf",
     "label": "Antibiotikaeinsatz in der Landwirtschaft",
@@ -1795,7 +1834,7 @@
     "newTopic": true,
     "pate": false
   },
-  "einsatz-von-pestiziden-in-der-landwirtschaft": {
+  "einsatz-von-pestiziden-in-der-landwirtschaft-okf": {
     "id": "2_3",
     "author": "okf",
     "label": "Einsatz von Pestiziden in der Landwirtschaft",
@@ -1819,7 +1858,7 @@
     "newTopic": true,
     "pate": "j"
   },
-  "fleischkonsum-pro-kopf": {
+  "fleischkonsum-pro-kopf-okf": {
     "id": "2_4",
     "author": "okf",
     "label": "Fleischkonsum pro Kopf",
@@ -1843,7 +1882,7 @@
     "newTopic": true,
     "pate": false
   },
-  "alkoholkonsum-in-l-pp-ab-15j": {
+  "alkoholkonsum-in-l-pp-ab-15j-okf": {
     "id": "3_1",
     "author": "okf",
     "label": "Alkoholkonsum in l/pP ab 15J",
@@ -1867,7 +1906,7 @@
     "newTopic": true,
     "pate": false
   },
-  "suizidrate": {
+  "suizidrate-okf": {
     "id": "3_2",
     "author": "okf",
     "label": "Suizidrate",
@@ -1891,7 +1930,7 @@
     "newTopic": true,
     "pate": false
   },
-  "zuckerkonsum": {
+  "zuckerkonsum-okf": {
     "id": "3_3",
     "author": "okf",
     "label": "Zuckerkonsum",
@@ -1915,7 +1954,7 @@
     "newTopic": true,
     "pate": false
   },
-  "sozio-oekonomische-faktoren-auf-bildungsgrad": {
+  "sozio-oekonomische-faktoren-auf-bildungsgrad-okf": {
     "id": "4_1",
     "author": "okf",
     "label": "Sozio-ökonomische Faktoren auf Bildungsgrad",
@@ -1939,7 +1978,7 @@
     "newTopic": true,
     "pate": false
   },
-  "bildungsausgaben-am-bip": {
+  "bildungsausgaben-am-bip-okf": {
     "id": "4_2",
     "author": "okf",
     "label": "Bildungsausgaben am BIP",
@@ -1963,7 +2002,7 @@
     "newTopic": true,
     "pate": false
   },
-  "anteil-der-frauen-in-parlamenten": {
+  "anteil-der-frauen-in-parlamenten-okf": {
     "id": "5_1",
     "author": "okf",
     "label": "Anteil der Frauen in Parlamenten",
@@ -1987,7 +2026,31 @@
     "newTopic": true,
     "pate": "j"
   },
-  "ungleiche-verteilung-der-hausarbeit": {
+  "frauen-in-fuehrungspositionen-in-der-wirtschaft-okf": {
+    "id": "5_2",
+    "author": "okf",
+    "label": "Frauen in Führungspositionen in der Wirtschaft",
+    "unit": "%",
+    "goal": "50",
+    "sdg": {
+      "sdg": 5,
+      "slug": "gleichstellung",
+      "color": "ff3a21",
+      "label": "Geschlechtergleicheit"
+    },
+    "progress": 32,
+    "url": "",
+    "slug": "frauen-in-fuehrungspositionen-in-der-wirtschaft",
+    "target": 50,
+    "current": 16,
+    "start": 0,
+    "startYear": "",
+    "currentYear": "2016",
+    "reason": "Natürlicher Nullwert",
+    "newTopic": false,
+    "pate": false
+  },
+  "ungleiche-verteilung-der-hausarbeit-okf": {
     "id": "5_3",
     "author": "okf",
     "label": "Ungleiche Verteilung der Hausarbeit",
@@ -2011,7 +2074,7 @@
     "newTopic": true,
     "pate": false
   },
-  "gendergap-im-renteneinkommen-rentner-ueber-65-": {
+  "gendergap-im-renteneinkommen-rentner-ueber-65--okf": {
     "id": "5_4",
     "author": "okf",
     "label": "Gendergap im Renteneinkommen (Rentner über 65)",
@@ -2035,7 +2098,7 @@
     "newTopic": true,
     "pate": false
   },
-  "gewalt-gegen-frauen": {
+  "gewalt-gegen-frauen-okf": {
     "id": "5_5",
     "author": "okf",
     "label": "Gewalt gegen Frauen",
@@ -2059,7 +2122,7 @@
     "newTopic": true,
     "pate": false
   },
-  "oekologischer-zustand-der-fluesse-anteil-der-gewaesser-in-gutem-oder-sehr-gutem-oekolog-zustand": {
+  "oekologischer-zustand-der-fluesse-anteil-der-gewaesser-in-gutem-oder-sehr-gutem-oekolog-zustand-okf": {
     "id": "6_1",
     "author": "okf",
     "label": "Ökologischer Zustand der Flüsse - Anteil der Gewässer in gutem oder sehr gutem ökolog Zustand",
@@ -2083,7 +2146,7 @@
     "newTopic": true,
     "pate": false
   },
-  "oekologischer-zustand-der-seen-anteil-der-gewaesser-in-gutem-oder-sehr-gutem-oekolog-zustand": {
+  "oekologischer-zustand-der-seen-anteil-der-gewaesser-in-gutem-oder-sehr-gutem-oekolog-zustand-okf": {
     "id": "6_2",
     "author": "okf",
     "label": "Ökologischer Zustand der Seen - Anteil der Gewässer in gutem oder sehr gutem ökolog Zustand",
@@ -2107,7 +2170,7 @@
     "newTopic": true,
     "pate": false
   },
-  "subventionen-fossiler-brennstoffe-coal-gas-petroleum-post-tax-subsidies-as-a-percent-of-gdp-": {
+  "subventionen-fossiler-brennstoffe-coal-gas-petroleum-post-tax-subsidies-as-a-percent-of-gdp--okf": {
     "id": "7_1",
     "author": "okf",
     "label": "Subventionen fossiler Brennstoffe [coal; gas; petroleum] (Post-tax subsidies as a percent of GDP)",
@@ -2131,7 +2194,7 @@
     "newTopic": true,
     "pate": false
   },
-  "bruttoinlandsenergieverbrauch-biv-gross-inland-energy-consumption-in-mio-tonne-oil-equivalent-mtoe-als-pro-kopf-ausrechnen-und-verteilung-nochmal-angucken": {
+  "bruttoinlandsenergieverbrauch-biv-gross-inland-energy-consumption-in-mio-tonne-oil-equivalent-mtoe-als-pro-kopf-ausrechnen-und-verteilung-nochmal-angucken-okf": {
     "id": "7_2",
     "author": "okf",
     "label": "Bruttoinlandsenergieverbrauch BIV/ Gross inland energy consumption in Mio. tonne oil equivalent (Mtoe)  ALS PRO KOPF AUSRECHNEN UND VERTEILUNG NOCHMAL ANGUCKEN",
@@ -2155,7 +2218,7 @@
     "newTopic": false,
     "pate": false
   },
-  "carbon-capita-combines-energy-use-per-capita-and-carbon-intensity-of-energy-use-in-tco2-person": {
+  "carbon-capita-combines-energy-use-per-capita-and-carbon-intensity-of-energy-use-in-tco2-person-okf": {
     "id": "7_3",
     "author": "okf",
     "label": "Carbon Capita [combines energy use per capita and carbon intensity of energy use] in tCO2/person",
@@ -2179,7 +2242,7 @@
     "newTopic": false,
     "pate": ""
   },
-  "armut-trotz-beschaeftigung": {
+  "armut-trotz-beschaeftigung-okf": {
     "id": "8_1",
     "author": "okf",
     "label": "Armut trotz Beschäftigung",
@@ -2203,7 +2266,7 @@
     "newTopic": true,
     "pate": false
   },
-  "staatliche-massnahmen-gegen-sklaverei": {
+  "staatliche-massnahmen-gegen-sklaverei-okf": {
     "id": "8_2",
     "author": "okf",
     "label": "Staatliche Maßnahmen gegen Sklaverei",
@@ -2227,7 +2290,7 @@
     "newTopic": true,
     "pate": false
   },
-  "reduktion-des-inlaendischen-materialverbrauchs": {
+  "reduktion-des-inlaendischen-materialverbrauchs-okf": {
     "id": "8_3",
     "author": "okf",
     "label": "Reduktion des inländischen Materialverbrauchs",
@@ -2251,7 +2314,7 @@
     "newTopic": false,
     "pate": false
   },
-  "inlaendischer-materialverbrauch-capita": {
+  "inlaendischer-materialverbrauch-capita-okf": {
     "id": "8_4",
     "author": "okf",
     "label": "Inländischer Materialverbrauch / capita",
@@ -2275,7 +2338,7 @@
     "newTopic": false,
     "pate": false
   },
-  "anteil-der-mitarbeiter-mit-niedriglohn": {
+  "anteil-der-mitarbeiter-mit-niedriglohn-okf": {
     "id": "8_5",
     "author": "okf",
     "label": "Anteil der Mitarbeiter mit Niedriglohn",
@@ -2299,7 +2362,7 @@
     "newTopic": true,
     "pate": false
   },
-  "wissenschaftler-1000-beschaeftigte": {
+  "wissenschaftler-1000-beschaeftigte-okf": {
     "id": "9_1",
     "author": "okf",
     "label": "Wissenschaftler / 1000 Beschäftigte",
@@ -2323,7 +2386,7 @@
     "newTopic": true,
     "pate": false
   },
-  "g4-verbreitung": {
+  "g4-verbreitung-okf": {
     "id": "9_2",
     "author": "okf",
     "label": "G4 Verbreitung",
@@ -2347,7 +2410,7 @@
     "newTopic": true,
     "pate": false
   },
-  "open-data-index": {
+  "open-data-index-okf": {
     "id": "9_3",
     "author": "okf",
     "label": "Open Data Index",
@@ -2371,7 +2434,7 @@
     "newTopic": true,
     "pate": false
   },
-  "technologietransfer-cdi-unterindikator-": {
+  "technologietransfer-cdi-unterindikator--okf": {
     "id": "9_4",
     "author": "okf",
     "label": "Technologietransfer (CDI Unterindikator)",
@@ -2395,7 +2458,7 @@
     "newTopic": true,
     "pate": false
   },
-  "palma-ratio": {
+  "palma-ratio-okf": {
     "id": "10_1",
     "author": "okf",
     "label": "Palma Ratio",
@@ -2419,7 +2482,31 @@
     "newTopic": false,
     "pate": false
   },
-  "mipex": {
+  "aequivalenzeinkommen-als-gini-koeffizient-nach-sozialtransfers-okf": {
+    "id": "10_2",
+    "author": "okf",
+    "label": "Äquivalenzeinkommen als Gini Koeffizient nach Sozialtransfers",
+    "unit": "Punkte",
+    "goal": "5 best performers",
+    "sdg": {
+      "sdg": 10,
+      "slug": "ungleichheit",
+      "color": "dd1367",
+      "label": "Weniger Ungleichheiten"
+    },
+    "progress": 68.18181818181817,
+    "url": "",
+    "slug": "aequivalenzeinkommen-als-gini-koeffizient-nach-sozialtransfers",
+    "target": 26,
+    "current": 29.5,
+    "start": 37,
+    "startYear": "",
+    "currentYear": "2016",
+    "reason": "Ausgangswert 2008",
+    "newTopic": false,
+    "pate": false
+  },
+  "mipex-okf": {
     "id": "10_3",
     "author": "okf",
     "label": "MIPEX",
@@ -2443,7 +2530,7 @@
     "newTopic": true,
     "pate": false
   },
-  "diskriminierung": {
+  "diskriminierung-okf": {
     "id": "10_4",
     "author": "okf",
     "label": "Diskriminierung",
@@ -2467,7 +2554,7 @@
     "newTopic": false,
     "pate": false
   },
-  "pm2-5-feinstaubbelastung": {
+  "pm2-5-feinstaubbelastung-okf": {
     "id": "11_1",
     "author": "okf",
     "label": "PM2.5 Feinstaubbelastung",
@@ -2491,7 +2578,7 @@
     "newTopic": false,
     "pate": false
   },
-  "verkehrsverlagerung-frachtverkehr": {
+  "verkehrsverlagerung-frachtverkehr-okf": {
     "id": "11_2",
     "author": "okf",
     "label": "Verkehrsverlagerung Frachtverkehr",
@@ -2515,7 +2602,7 @@
     "newTopic": false,
     "pate": false
   },
-  "verkehrsverlagerung-personenverkehr": {
+  "verkehrsverlagerung-personenverkehr-okf": {
     "id": "11_3",
     "author": "okf",
     "label": "Verkehrsverlagerung Personenverkehr",
@@ -2539,7 +2626,7 @@
     "newTopic": false,
     "pate": false
   },
-  "luftschadstoffe-nach-quellsektor-transport-pm10": {
+  "luftschadstoffe-nach-quellsektor-transport-pm10-okf": {
     "id": "11_4",
     "author": "okf",
     "label": "Luftschadstoffe nach Quellsektor TRANSPORT PM10",
@@ -2563,7 +2650,7 @@
     "newTopic": false,
     "pate": false
   },
-  "siedlungsabfall": {
+  "siedlungsabfall-okf": {
     "id": "11_5",
     "author": "okf",
     "label": "Siedlungsabfall",
@@ -2587,7 +2674,7 @@
     "newTopic": true,
     "pate": false
   },
-  "packaging-waste-per-capita": {
+  "packaging-waste-per-capita-okf": {
     "id": "12_1",
     "author": "okf",
     "label": "Packaging waste per capita",
@@ -2611,7 +2698,7 @@
     "newTopic": true,
     "pate": false
   },
-  "consumption-of-bottled-water-litres-per-capita": {
+  "consumption-of-bottled-water-litres-per-capita-okf": {
     "id": "12_2",
     "author": "okf",
     "label": "Consumption of bottled water/litres per capita",
@@ -2635,7 +2722,7 @@
     "newTopic": true,
     "pate": false
   },
-  "ecological-footprint-per-capita": {
+  "ecological-footprint-per-capita-okf": {
     "id": "12_3",
     "author": "okf",
     "label": "Ecological Footprint per capita",
@@ -2659,7 +2746,7 @@
     "newTopic": true,
     "pate": false
   },
-  "germanwatch-index-emissionstrends": {
+  "germanwatch-index-emissionstrends-okf": {
     "id": "13_1",
     "author": "okf",
     "label": "Germanwatch Index: Emissionstrends",
@@ -2683,7 +2770,7 @@
     "newTopic": false,
     "pate": "Germanwatch"
   },
-  "germanwatch-index-erneuerbare-energien": {
+  "germanwatch-index-erneuerbare-energien-okf": {
     "id": "13_2",
     "author": "okf",
     "label": "Germanwatch Index: Erneuerbare Energien",
@@ -2707,7 +2794,7 @@
     "newTopic": false,
     "pate": "Germanwatch"
   },
-  "germanwatch-index-energienverbrauch": {
+  "germanwatch-index-energienverbrauch-okf": {
     "id": "13_3",
     "author": "okf",
     "label": "Germanwatch Index: Energienverbrauch",
@@ -2731,7 +2818,7 @@
     "newTopic": false,
     "pate": "Germanwatch"
   },
-  "germanwatch-index-klimapolitik": {
+  "germanwatch-index-klimapolitik-okf": {
     "id": "13_4",
     "author": "okf",
     "label": "Germanwatch Index: Klimapolitik",
@@ -2755,7 +2842,7 @@
     "newTopic": false,
     "pate": "Germanwatch"
   },
-  "ocean-health-index-food-provision": {
+  "ocean-health-index-food-provision-okf": {
     "id": "14_1",
     "author": "okf",
     "label": "Ocean Health Index: Food Provision",
@@ -2779,7 +2866,7 @@
     "newTopic": false,
     "pate": ""
   },
-  "ocean-health-index-clean-waters": {
+  "ocean-health-index-clean-waters-okf": {
     "id": "14_2",
     "author": "okf",
     "label": "Ocean Health Index: Clean Waters",
@@ -2803,7 +2890,7 @@
     "newTopic": false,
     "pate": ""
   },
-  "anteil-der-gewaesser-in-deutschland-in-gutem-oekologischen-zustand-fuer-kuestengewaesser": {
+  "anteil-der-gewaesser-in-deutschland-in-gutem-oekologischen-zustand-fuer-kuestengewaesser-okf": {
     "id": "14_3",
     "author": "okf",
     "label": "Anteil der Gewässer in Deutschland in gutem ökologischen Zustand für Küstengewässer",
@@ -2827,7 +2914,7 @@
     "newTopic": false,
     "pate": ""
   },
-  "auswirkungen-importierter-biodiversitaet-ausgestorbene-spezien": {
+  "auswirkungen-importierter-biodiversitaet-ausgestorbene-spezien-okf": {
     "id": "15_1",
     "author": "okf",
     "label": "Auswirkungen importierter Biodiversität, ausgestorbene Spezien",
@@ -2851,7 +2938,7 @@
     "newTopic": true,
     "pate": false
   },
-  "anteil-fcs-zertifizierter-waelder": {
+  "anteil-fcs-zertifizierter-waelder-okf": {
     "id": "15_2",
     "author": "okf",
     "label": "Anteil FCS zertifizierter Wälder",
@@ -2875,7 +2962,7 @@
     "newTopic": false,
     "pate": false
   },
-  "bruttostickstoffbilanz-auf-landwirt-flaechen-in-kg-ha": {
+  "bruttostickstoffbilanz-auf-landwirt-flaechen-in-kg-ha-okf": {
     "id": "15_3",
     "author": "okf",
     "label": "Bruttostickstoffbilanz auf landwirt. Flächen in kg/ ha",
@@ -2899,7 +2986,7 @@
     "newTopic": false,
     "pate": false
   },
-  "financial-secrecy-index": {
+  "financial-secrecy-index-okf": {
     "id": "16_1",
     "author": "okf",
     "label": "Financial Secrecy Index",
@@ -2923,7 +3010,7 @@
     "newTopic": true,
     "pate": "tax justice network"
   },
-  "volumen-waffenexporte": {
+  "volumen-waffenexporte-okf": {
     "id": "16_2",
     "author": "okf",
     "label": "Volumen Waffenexporte",
@@ -2947,7 +3034,7 @@
     "newTopic": true,
     "pate": false
   },
-  "recht-auf-information-index-access-info-": {
+  "recht-auf-information-index-access-info--okf": {
     "id": "16_3",
     "author": "okf",
     "label": "Recht auf Information Index (Access Info)",
@@ -2971,7 +3058,7 @@
     "newTopic": true,
     "pate": false
   },
-  "nachhaltige-entschuldungspolitik": {
+  "nachhaltige-entschuldungspolitik-okf": {
     "id": "17_1",
     "author": "okf",
     "label": "Nachhaltige Entschuldungspolitik",
@@ -2995,7 +3082,7 @@
     "newTopic": true,
     "pate": "Erlassjahr"
   },
-  "ending-rural-hunger-index-trade-restrictions": {
+  "ending-rural-hunger-index-trade-restrictions-okf": {
     "id": "17_2",
     "author": "okf",
     "label": "Ending Rural Hunger Index _Trade Restrictions",
@@ -3019,7 +3106,7 @@
     "newTopic": false,
     "pate": false
   },
-  "oda-quality-of-implementation": {
+  "oda-quality-of-implementation-okf": {
     "id": "17_3",
     "author": "okf",
     "label": "ODA Quality of Implementation",
@@ -3043,7 +3130,7 @@
     "newTopic": false,
     "pate": false
   },
-  "materielle-deprivation": {
+  "materielle-deprivation-dns": {
     "id": "1_1",
     "author": "dns",
     "label": "Materielle Deprivation",
@@ -3229,7 +3316,7 @@
       "Yemen": 0.516
     }
   },
-  "armutsgefaehrdungsquote-60-medianaequivalenzeinkommen-": {
+  "armutsgefaehrdungsquote-60-medianaequivalenzeinkommen--okf": {
     "id": "1_1",
     "author": "okf",
     "label": "Armutsgefährdungsquote (60% Medianäquivalenzeinkommen)",
