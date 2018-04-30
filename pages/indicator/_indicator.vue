@@ -32,10 +32,18 @@
         <div class="columns columns-gutter columns-rows">
           <section>
             <table>
-              <tr v-for="key in ['unit', 'goal', 'target', 'current', 'start', 'startYear', 'currentYear', 'reason', 'newTopic', 'pate', 'license']">
-                <td>{{ key }}</td>
-                <td>{{ indicator[key] }}</td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>key</th>
+                  <th>value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="key in ['unit', 'goal', 'target', 'current', 'start', 'startYear', 'currentYear', 'reason', 'newTopic', 'pate', 'license']">
+                  <td>{{ key }}</td>
+                  <td>{{ indicator[key] }}</td>
+                </tr>
+              </tbody>
             </table>
           </section>
           <section>
@@ -44,17 +52,33 @@
         </div>
         <h2>Countries</h2>
         <table>
-          <tr v-for="(value, country) in indicator['countries']">
-            <td>{{ country }}</td>
-            <td>{{ value }}</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Country</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(value, country) in indicator['countries']">
+              <td>{{ country }}</td>
+              <td>{{ value }}</td>
+            </tr>
+          </tbody>
         </table>
         <h2>Timeline</h2>
         <table>
-          <tr v-for="(value, year) in indicator['timeline']">
-            <td>{{ year }}</td>
-            <td>{{ value }}</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(value, year) in indicator['timeline']">
+              <td>{{ year }}</td>
+              <td>{{ value }}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
