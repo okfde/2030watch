@@ -12,16 +12,16 @@
     </header>
     <div class="content">
       <div class="wrapper">
-        <blogpost></blogpost>
-        <blogpost></blogpost>
-        <blogpost></blogpost>
+        <blogpost-preview></blogpost-preview>
+        <blogpost-preview></blogpost-preview>
+        <blogpost-preview></blogpost-preview>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Blogpost from '~/pages/blog/Blogpost.vue'
+  import BlogpostPreview from '~/pages/blog/Blogpost-Preview.vue'
   export default {
     computed: {
     },
@@ -30,7 +30,7 @@
     directives: {
     },
     components: {
-      Blogpost
+      BlogpostPreview
     }
   }
 </script>

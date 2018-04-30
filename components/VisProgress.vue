@@ -176,7 +176,7 @@
     }
 
     .diff {
-      stroke-width: 4px;
+      stroke-width: 2px;
     }
 
     .sdg-marker {

@@ -1,5 +1,5 @@
 <template>
-<footer class="page-footer columns columns-gutter">
+<footer class="page-footer modern columns columns-gutter">
       <address>
         Open Knowledge Foundation Deutschland e.V.<br />
         Singerstr. 109, 10179 Berlin, Deutschland<br /><br />
@@ -40,11 +40,10 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/base";
+@import "../assets/style/typography";
 
 .page-footer {
-  address {
-    flex: 2;
-  }
 
   .social {
     .social-icons a {

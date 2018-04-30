@@ -17,6 +17,7 @@
     <section>
       <div class="wrapper">
         <h2>So nachhaltig ist Deutschland – Das sagen offizielle und komplementäre Indikatoren</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi.</p>
         <div class="vis-wrapper">
           <VisListe />
         </div>
@@ -50,6 +51,8 @@
 </script>
 
 <style lang="scss">
+@import "../assets/style/base";
+
   .inpage-header {
     padding: 10vh 0;
     color: #fff;
@@ -66,5 +69,9 @@
 
   .intro-container {
     background: linear-gradient(0deg, transparent 50%, #04A6F0 50%);
+  }
+
+  .vis-wrapper {
+    margin: $spacing 0;
   }
 </style>

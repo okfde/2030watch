@@ -1,7 +1,7 @@
 <template>
   <div class="blog-post">
     <div class="post-img">
-      <nuxt-link to="/"><img src="http://via.placeholder.com/350x300" alt="Blogpost Vorschaubild"></nuxt-link>
+      <nuxt-link to="/"><img src="http://via.placeholder.com/400x300" alt="Blogpost Vorschaubild"></nuxt-link>
     </div>
     <div class="post-teaser">
       <span class="post-date">5. Mai 2018</span>

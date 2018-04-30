@@ -7,7 +7,7 @@
       </div>
       <div class="sdg-header sdg-header-vis columns">
         <section>
-          Nachhaltigkeit erreicht zu
+          Nachhaltigkeitsziel erreicht zu
         </section>
         <section class="sdg-legend">
           <span class="dns link" v-on:click="sort('dns')"><span :class="{ active: sorting === 'dns' }" >DNS</span> <SortIcon :active="sorting === 'dns'" :reverse="reverse" /> </span> <span class="okf link" v-on:click="sort('okf')"><span :class="{ active: sorting === 'okf' }" >OKF</span> <SortIcon :active="sorting === 'okf'" :reverse="reverse" /></span>
@@ -118,7 +118,12 @@
         svg {
           width: 100%;
           height: 100%;
-          filter: grayscale(100%)
+          // filter: grayscale(100%)
+
+          circle {
+            fill: rgb(155, 155, 155);
+          }
+          
         }
       }
 
@@ -129,7 +134,7 @@
 
         span {
           display: inline-block;
-          line-height: 1.0rem;
+          line-height: 1.2rem;
           width: 70%;
           max-width: 500px;
         }

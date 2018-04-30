@@ -1,6 +1,6 @@
 $width-desktop: 60vw;
 
-.page, .page-header, .page-nav, .page-footer, .columns {
+.page, .page-header, .page-nav, .page-explainer , .page-footer, .columns {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -33,7 +33,7 @@ $width-desktop: 60vw;
   margin-bottom: $spacing / 2;
 }
 
-.page-header, .page-footer {
+.page-header, .page-explainer, .page-footer {
   color: #fff !important; // Temporary solution
 
   a {
@@ -53,7 +53,7 @@ $width-desktop: 60vw;
   }
 }
 
-.page-footer {
+.page-footer, .page-explainer {
   font-size: 0.85em;
   padding: 3rem 0;
 

@@ -15,11 +15,13 @@
     <div class="page-content">
       <nuxt/>
     </div>
+    <my-explainer></my-explainer>
     <my-footer></my-footer>
   </div>
 </template>
 
 <script>
+  import MyExplainer from '~/components/Explainer.vue'
   import MyFooter from '~/components/Footer.vue'
   export default {
     computed: {
@@ -29,7 +31,8 @@
       }
     },
     components: {
-      MyFooter
+      MyFooter,
+      MyExplainer
     }
   }
 </script>
