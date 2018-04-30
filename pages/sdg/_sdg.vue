@@ -32,8 +32,8 @@
             <h3>{{ sdg.dns.toFixed(2) }}&#8239;%</h3>
           </section>
           <section>
-            <ul>
-              <li v-for="(indicator, slug) in sdg.ind.dns"><nuxt-link :to="'../indicator/' + slug">{{ indicator.label }}</nuxt-link></li>
+            <ul class="indicator-list">
+              <li v-for="(indicator, slug) in sdg.ind.dns"><VisIndicator :i="indicator" /></li>
             </ul>
           </section>
         </div>
@@ -45,8 +45,8 @@
             <h3>{{ sdg.okf.toFixed(2) }}&#8239;%</h3>
           </section>
           <section>
-            <ul>
-              <li v-for="(indicator, slug) in sdg.ind.okf"><nuxt-link :to="'../indicator/' + slug">{{ indicator.label }}</nuxt-link></li>
+            <ul class="indicator-list">
+              <li v-for="(indicator, slug) in sdg.ind.okf"><VisIndicator :i="indicator" /></li>
             </ul>
           </section>
         </div>
@@ -59,6 +59,7 @@
   import { mapState } from 'vuex'
   import VisLeiste from '~/components/VisLeiste.vue'
   import VisProgress from '~/components/VisProgress.vue'
+  import VisIndicator from '~/components/VisIndicator.vue'
 
   export default {
     validate ({ params, store }) {
@@ -66,7 +67,7 @@
     },
     head () {
       return {
-        title: this.sdg.label || 'all',
+        title: this.sdg.label.short || 'all',
         titleTemplate: '2030 Watch - %s'
       }
     },
@@ -74,7 +75,8 @@
     },
     components: {
       VisLeiste,
-      VisProgress
+      VisProgress,
+      VisIndicator
     },
     methods: {
       numberToStringNominativ: function (n) {
@@ -114,5 +116,11 @@
 </script>
 
 <style lang="scss">
+  .indicator-list {
+    display: flex;
 
+    li {
+      flex: 1;
+    }
+  }
 </style>
