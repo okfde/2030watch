@@ -3,11 +3,7 @@
     <header class="inpage-header">
       <div class="wrapper">
         <h1>Blog</h1>
-        <section class="columns columns-gutter">
-          <div>
-            <p>Erfahre mehr zu aktuellen Themen rund um 2030 Watch und unseren Aktivitäten</p>
-          </div>
-        </section>
+        <p>Erfahre mehr zu aktuellen Themen rund um 2030 Watch und unseren Aktivitäten</p>
       </div>
     </header>
     <div class="content">
@@ -22,13 +18,8 @@
 
 <script>
   import BlogpostPreview from '~/pages/blog/Blogpost-Preview.vue'
+
   export default {
-    computed: {
-    },
-    methods: {
-    },
-    directives: {
-    },
     components: {
       BlogpostPreview
     }
