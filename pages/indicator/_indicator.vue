@@ -51,20 +51,7 @@
           </section>
         </div>
         <h2>Countries</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Country</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(value, country) in indicator['countries']">
-              <td>{{ country }}</td>
-              <td>{{ value }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <VisBarChart :values="countries" />
         <h2>Timeline</h2>
         <table>
           <thead>
@@ -88,6 +75,7 @@
 <script>
   import { mapState } from 'vuex'
   import VisPieChart from '~/components/VisPieChart.vue'
+  import VisBarChart from '~/components/VisBarChart.vue'
 
   export default {
     validate ({ params, store }) {
@@ -106,10 +94,17 @@
       ]),
       indicator () {
         return this.data[this.$route.params.indicator]
+      },
+      countries () {
+        const keys = Object.keys(this.indicator.countries)
+        return keys.slice(0, 20).map(key => {
+          return [key, this.indicator.countries[key]]
+        })
       }
     },
     components: {
-      VisPieChart
+      VisPieChart,
+      VisBarChart
     }
   }
 </script>
