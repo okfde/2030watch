@@ -24,31 +24,37 @@
       <div class="wrapper">
         <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
         <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
-        <div class="columns columns-gutter columns-rows">
-          <section>
-            <small class="caption">Offizieller Indikatorenkatalog</small>
-            <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
-            <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-            <h3>{{ dns.toFixed(2) }}&#8239;%</h3>
-          </section>
-          <section>
-            <ul class="indicator-list">
-              <li v-for="(indicator, slug) in sdg.ind.dns"><VisIndicator :i="indicator" /></li>
-            </ul>
-          </section>
-        </div>
-        <div class="columns columns-gutter columns-rows">
-          <section>
-            <small class="caption">Alternativer und komplementärer</small>
-            <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
-            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
-            <h3>{{ okf.toFixed(2) }}&#8239;%</h3>
-          </section>
-          <section>
-            <ul class="indicator-list">
-              <li v-for="(indicator, slug) in sdg.ind.okf"><VisIndicator :i="indicator" /></li>
-            </ul>
-          </section>
+        <div class="indicator-overview columns columns-gutter columns-rows">
+          <div class="description">
+            <section class="description-dns">
+              <small class="caption">Offizieller Indikatorenkatalog</small>
+              <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+              <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
+              <h3>{{ dns.toFixed(0) }}&#8239;%</h3>
+            </section>
+            <section class="description-okf">
+              <small class="caption">Alternativer und komplementärer</small>
+              <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
+              <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+              <h3>{{ okf.toFixed(0) }}&#8239;%</h3>
+            </section>
+          </div>
+          <div class="indicators">
+            <section>
+              <ul class="indicator-list">
+                <li v-for="(indicator, slug) in sdg.ind.dns"><VisIndicator :i="indicator" /></li>
+              </ul>
+            </section>
+            <section>
+              <span>Lines</span>
+            </section>
+            <section>
+              <ul class="indicator-list">
+                <li v-for="(indicator, slug) in sdg.ind.dns" v-if="!indicator.badIndicator && !indicator.modTarget"><VisIndicator :i="indicator" /></li>
+                <li v-for="(indicator, slug) in sdg.ind.okf"><VisIndicator :i="indicator" /></li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -132,11 +138,31 @@
 </script>
 
 <style lang="scss">
+  .indicator-overview {
+    margin: 4rem 0;
+  }
+
   .indicator-list {
     display: flex;
 
     li {
-      flex: 1;
+      margin: 0 0.5rem;
     }
+  }
+
+  .description {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+
+    & > section {
+      padding: 0 !important;
+    }
+  }
+
+  .description-okf {
+    align-self: flex-end;
   }
 </style>
