@@ -1,6 +1,6 @@
 <template>
   <svg :class="{ 'icon': true, 'icon-sort': true, 'active': active }">
-    <polyline points="0,7 5,0 10,7" :transform="'translate(0,' + (reverse && active ? 10 : 0) + ') scale(1, ' + (reverse && active ? -1 : 1) + ')'" />
+    <polyline points="0,8 5,1 10,8" :transform="'translate(0,' + (reverse && active ? 10 : 0) + ') scale(1, ' + (reverse && active ? -1 : 1) + ')'" />
   </svg>
 </template>
 
@@ -14,7 +14,6 @@
   .icon-sort {
     width: 10px;
     height: 10px;
-    margin-left: 5px;
     fill: #D0CFCE;
 
     &.active {
