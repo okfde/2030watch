@@ -23,6 +23,7 @@
   @import "../assets/style/variables";
 
   .item {
+    max-width: 800px;
     padding: $spacing / 1.5 0;
     border-bottom: 1px solid $color-mute;
 
