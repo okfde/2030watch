@@ -7,11 +7,11 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-        <small class="caption">SDG {{ sdg.id }}</small>
+        <small class="caption">SDG {{ sdg.number }}</small>
         <h1>{{ sdg.labelShort }}</h1>
         <section class="columns columns-gutter">
           <div>
-            <p>Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.</p>
+            <p>{{ sdg.textIntro }}</p>
           </div>
           <div>
             <VisProgress :sdg="sdg" />
@@ -23,7 +23,7 @@
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
         <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
-        <p>Die Agenda 2030 schlägt 14 Indikatoren zur Messung von Geschlechtergleichberechtigung vor und umfasst Unterziele zu Diskriminierung, Gewalt, Partizipation, unbezahlte Pflegebelastung, Zugang zum Gesundheitswesen, und Chancengleichheit im politischen, ökonomischen und öffentlichen Leben. Die Deutsche Nachhaltigkeitsstrategie umfasst {{ sdg.n.dns }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ sdg.n.okf }} Alternativ Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
+        <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
         <div class="columns columns-gutter columns-rows">
           <section>
             <small class="caption">Offizieller Indikatorenkatalog</small>
@@ -41,7 +41,7 @@
           <section>
             <small class="caption">Alternativer und komplementärer</small>
             <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
-            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.dns) }} offiziellen Indikator übernimmt, {{ numberToStringNominativ(sdg.n.baT + sdg.n.baI) }} streicht, einen modifiziert sowie {{ sdg.n.okf }} weitere hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+            <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ i <= 1 ? 'n' : '' }} Indikator{{ i <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ i <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
             <h3>{{ okf.toFixed(2) }}&#8239;%</h3>
           </section>
           <section>
@@ -88,17 +88,27 @@
           return 'zwei'
         } else if (n === 3) {
           return 'drei'
+        } else if (n === 4) {
+          return 'vier'
+        } else if (n === 5) {
+          return 'fünf'
         } else {
           return n
         }
       },
       numberToStringGenitiv: function (n) {
-        if (n === 1) {
+        if (n === 0) {
+          return 'null'
+        } else if (n === 1) {
           return 'eine'
         } else if (n === 2) {
           return 'zwei'
         } else if (n === 3) {
           return 'drei'
+        } else if (n === 4) {
+          return 'vier'
+        } else if (n === 5) {
+          return 'fünf'
         } else {
           return n
         }
