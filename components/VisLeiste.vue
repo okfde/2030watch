@@ -1,6 +1,10 @@
 <template>
   <ul class="sdg-leiste">
-    <li v-for="(sdg, slug) in sdgs" :class="{ 'sdg-item': true, 'current': current === slug }" :style="{ 'background-color': '#' + sdg.color }">
+    <li
+      v-for="(sdg, slug) in sdgs"
+      :class="{ 'sdg-item': true, 'current': current === slug }"
+      :style="{ 'background-color': '#' + sdg.color }"
+      key="slug">
       <nuxt-link :to="'/sdg/' + slug" class="sdg-link">
         <div class="sdg-label">
           {{ sdg.labelShort }}
@@ -25,10 +29,10 @@
 
 <style lang="scss" scoped>
   .sdg-leiste {
-    list-style: none;
     display: flex;
     height: 1.5rem;
-    transition-duration: 2s;
+    list-style: none;
+    transition-duration: 2s; // Duration for size change
   }
 
   .sdg-item {
@@ -40,9 +44,10 @@
     .sdg-label {
       color: #fff;
       font-size: 0.8rem;
+      line-height: 1.5rem;
       opacity: 0;
+      transition-duration: 1.5s; // Duration for text appearance
       white-space: nowrap;
-      transition-duration: 1.5s;
     }
 
     &.current {
