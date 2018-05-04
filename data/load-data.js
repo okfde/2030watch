@@ -70,8 +70,8 @@ function processSDGs(sdgs, allIndicators) {
 				'moT': _.countBy(indi_dns, 'modTarget').true || 0,
 				'unc': _.countBy(indi_dns, 'uncalculable').true || 0,
 				'spi': _.countBy(indi_dns, 'spill').true || 0,
-				'dns': usableValuesDNS.length,
-				'okf': usableValuesOKF.length,
+				'dns': indi_dns.length,
+				'okf': indi_okf.length,
 				'alt': usableValuesCombined.length
 			}
 		}
