@@ -16,7 +16,8 @@
     </section>
     <section>
       <div class="wrapper">
-        <h2>So nachhaltig ist Deutschland – Das sagen offizielle und komplementäre Indikatoren</h2>
+        <h2>So nachhaltig ist Deutschland – <br />
+        Das sagen offizielle und komplementäre Indikatoren</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi.</p>
         <div class="vis-wrapper">
           <VisListe />
