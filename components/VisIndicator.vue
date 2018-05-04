@@ -1,23 +1,7 @@
 <template>
   <nuxt-link :to="'../indicator/' + i.slug">
     <div class="vis-indicator" ref="vis">
-      <svg
-        class="process"
-        viewBox="-1 -1 2 2"
-        style="transform: rotate(-0.25turn)"
-      >
-        <circle cx="0" cy="0" r="1" fill="#f2f2f2" />
-        <path :d="path" fill="#04A6F0"></path>
-        <circle cx="0" cy="0" r="0.7" fill="#fff" />
-        <text
-          x="0"
-          y="-1.4"
-          style="transform: rotate(0.25turn)"
-          alignment-baseline="middle"
-          text-anchor="middle"
-          fill="#04A6F0"
-          >{{ i.progress === null ? '—' : i.progress.toFixed(0) + '&#8239;%' }}</text>
-      </svg>
+      <VisPieChart :value="i.progress" fill="04A6F0" background="ffffff" />
       <svg
         class="icon"
         viewBox="-1 -1 2 2">
@@ -68,59 +52,12 @@
 </template>
 
 <script>
-  function getValueInRange (value) {
-    if (value <= 0) {
-      return 0
-    }
-    if (value >= 1) {
-      return 1
-    }
-    return value
-  }
-
-  function getCoordinatesForPercent (percent) {
-    const x = Math.cos(2 * Math.PI * percent)
-    const y = Math.sin(2 * Math.PI * percent)
-    return [x, y]
-  }
-
-  function getPieChart (value) {
-    const percent = value
-
-    const startX = getCoordinatesForPercent(0)[0]
-    const startY = getCoordinatesForPercent(0)[1]
-    const endX = getCoordinatesForPercent(percent)[0]
-    const endY = getCoordinatesForPercent(percent)[1]
-
-    const largeArcFlag = percent > 0.5 ? 1 : 0
-
-    const pathData = [
-      `M ${startX} ${startY}`,
-      `A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY}`,
-      `L 0 0`
-    ].join(' ')
-
-    return pathData
-  }
+  import VisPieChart from '~/components/VisPieChart.vue'
 
   export default {
     props: ['i'],
-    data: function () {
-      return {
-        width: 0,
-        height: 0,
-        okfLabel: 0,
-        dnsLabel: 0
-      }
-    },
-    mounted: function () {
-      this.width = this.$refs.vis.clientWidth
-      this.height = this.$refs.vis.clientHeight
-    },
-    computed: {
-      path () {
-        return getPieChart(getValueInRange(this.i.progress / 100))
-      }
+    components: {
+      VisPieChart
     }
   }
 </script>
@@ -143,15 +80,6 @@
     }
 
     svg {
-      &.process {
-        margin: 0.5rem;
-
-        text {
-          font-size: 0.02rem;
-          font-weight: bold;
-        }
-      }
-
       &.icon {
         width: 20px;
       }
