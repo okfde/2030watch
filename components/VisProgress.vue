@@ -199,6 +199,7 @@
     }
 
     .sdg-label {
+      transition-duration: 0.2s;
       opacity: 0;
       font-size: 12px;
 
