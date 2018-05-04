@@ -27,14 +27,8 @@
   .sdg-leiste {
     list-style: none;
     display: flex;
-    height: 1rem;
-    margin-bottom: 1rem;
-    transition-duration: 1s;
-
-    &:hover {
-      height: 2rem;
-      margin: 0;
-    }
+    height: 1.5rem;
+    transition-duration: 2s;
   }
 
   .sdg-item {
@@ -47,6 +41,8 @@
       color: #fff;
       font-size: 0.8rem;
       opacity: 0;
+      white-space: nowrap;
+      transition-duration: 1.5s;
     }
 
     &.current {
