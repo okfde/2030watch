@@ -1,5 +1,5 @@
 <template>
-  <footer class="page-footer modern columns columns-gutter">
+  <footer class="page-footer columns columns-gutter">
     <address>
       Open Knowledge Foundation Deutschland e.V.<br />
       Singerstr. 109, 10179 Berlin, Deutschland<br /><br />
