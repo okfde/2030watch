@@ -10,16 +10,14 @@
           Nachhaltigkeitsziel erreicht zu
         </section>
         <section class="sdg-legend">
-          <span class="dns link" v-on:click="sort('dns')"><span :class="{ active: sorting === 'dns' }" >DNS</span> <SortIcon :active="sorting === 'dns'" :reverse="reverse" /> </span> <span class="okf link" v-on:click="sort('okf')"><span :class="{ active: sorting === 'okf' }" >OKF</span> <SortIcon :active="sorting === 'okf'" :reverse="reverse" /></span>
+          <span class="dns link" v-on:click="sort('values.dns')"><span :class="{ active: sorting === 'values.dns' }" >DNS</span> <SortIcon :active="sorting === 'values.dns'" :reverse="reverse" /> </span> <span class="okf link" v-on:click="sort('values.okf')"><span :class="{ active: sorting === 'values.okf' }" >OKF</span> <SortIcon :active="sorting === 'values.okf'" :reverse="reverse" /></span>
         </section>
       </div>
     </li>
     <li v-for="(sdg, index) in sdgListe" class="sdg-item">
-      <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-link">
-        <div class="sdg-image">
-          <svg>
-            <circle cx="50%" cy="50%" :fill="'#' + sdg.color" r="8" />
-          </svg>
+      <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
+        <div class="sdg-number">
+          <span>{{ sdg.number }}</span>
         </div>
         <div class="sdg-label">
           <span :title="sdg.labelLong">{{ sdg.labelShort }}</span>
@@ -72,7 +70,7 @@
 </script>
 
 <style lang="scss">
-@import '../assets/style/base';
+  @import '../assets/style/variables';
 
   .sdg-item {
     display: flex;
@@ -114,19 +112,20 @@
       width: 100%;
       margin: 0.3rem 0;
 
-      .sdg-image {
-        width: 16px;
+      .sdg-number {
+        width: 1rem;
         margin-right: 1rem;
+        align-items: center;
+        text-align: right;
+        display: flex;
 
-        svg {
+        span {
+          text-align: right;
           width: 100%;
-          height: 100%;
-          // filter: grayscale(100%)
-
-          circle {
-            fill: rgb(155, 155, 155);
-          }
-          
+          line-height: 1.2rem;
+          display: inline-block;
+          color: $color-mute;
+          font-size: 0.8rem;
         }
       }
 
@@ -134,28 +133,22 @@
         flex: 1;
         display: flex;
         align-items: center;
+        transition-duration: 0.1s;
 
         span {
-          // display: inline-block;
-          // line-height: 1.2rem;
-          // width: 70%;
-          // max-width: 500px;
-          display: inline-block;
-          line-height: 19.2px;
           line-height: 1.2rem;
+          display: inline-block;
           width: 70%;
           max-width: 500px;
-          font-family: "Roboto Mono";
-          font-size: 0.85rem;
+          font-weight: bold;
+          font-size: 0.9rem;
         }
       }
 
       &:hover {
-        svg {
-          filter: none;
-        }
         .sdg-label {
           opacity: 1;
+          color: var(--color);
 
           &.sdg-label-tick {
             opacity: 0;
