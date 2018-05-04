@@ -8,14 +8,14 @@
     <header class="inpage-header">
       <div class="wrapper">
         <small class="caption">SDG {{ indicator.sdg.sdg }} – {{ indicator.sdg.label }}</small>
-        <h1>{{ indicator.topic }}</h1>
+        <h1>{{ indicator.label }}</h1>
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
             <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }} (xxx)</p>
           </div>
-          <div>
-            <strong>{{ indicator.progress }}</strong>
+          <div class="progress">
+            <VisPieChart :value="indicator.progress" fill="ffffff" :background="indicator.sdg.color" />
           </div>
         </section>
       </div>
@@ -87,6 +87,7 @@
 
 <script>
   import { mapState } from 'vuex'
+  import VisPieChart from '~/components/VisPieChart.vue'
 
   export default {
     validate ({ params, store }) {
@@ -106,10 +107,17 @@
       indicator () {
         return this.data[this.$route.params.indicator]
       }
+    },
+    components: {
+      VisPieChart
     }
   }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .progress {
+    svg {
+      width: 200px;
+    }
+  }
 </style>
