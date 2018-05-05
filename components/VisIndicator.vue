@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="'../indicator/' + i.slug">
     <div class="vis-indicator" ref="vis">
-      <VisPieChart :value="i.progress" fill="04A6F0" background="ffffff" />
+      <VisPieChart :value="i.progress" :fill="color" background="ffffff" />
       <svg
         class="icon"
         viewBox="-1 -1 2 2">
@@ -55,7 +55,7 @@
   import VisPieChart from '~/components/VisPieChart.vue'
 
   export default {
-    props: ['i'],
+    props: ['i', 'color'],
     components: {
       VisPieChart
     }
