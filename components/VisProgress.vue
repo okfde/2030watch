@@ -1,24 +1,22 @@
 <template>
   <svg class="sdg-vis" ref="vis">
     <g>
-      <text
-        v-if="ticks"
-        class="sdg-label sdg-label-tick"
-        alignment-baseline="baseline"
-        text-anchor="start"
-        x="1px"
-        y="30%">
-        0&#8239;%
-      </text>
-      <text
-        v-if="ticks"
-        class="sdg-label sdg-label-tick"
-        alignment-baseline="baseline"
-        text-anchor="end"
-        x="calc(100% - 1px)"
-        y="30%">
-        100&#8239;%
-      </text>
+      <g v-if="ticks">
+        <text
+          class="sdg-label sdg-label-tick"
+          alignment-baseline="baseline"
+          text-anchor="start"
+          x="1px"
+          y="30%"
+          v-html="format(0)" />
+        <text
+          class="sdg-label sdg-label-tick"
+          alignment-baseline="baseline"
+          text-anchor="end"
+          x="calc(100% - 1px)"
+          y="30%"
+          v-html="format(100)" />
+      </g>
       <line
         class="tick"
         stroke-linecap="round"
@@ -79,9 +77,8 @@
       alignment-baseline="baseline"
       :text-anchor="labels[0].l"
       :x="labels[0].x"
-      y="30%">
-      {{ okf.toFixed(0) }}&#8239;%
-    </text>
+      y="30%"
+      v-html="format(okf)" />
     <circle
       class="sdg-marker sdg-marker-dns"
       :cx="dns + '%'"
@@ -93,13 +90,14 @@
       alignment-baseline="hanging"
       :text-anchor="labels[1].l"
       :x="labels[1].x"
-      y="70%">
-      {{ dns.toFixed(0) }}&#8239;%
-    </text>
+      y="70%"
+      v-html="format(dns)" />
   </svg>
 </template>
 
 <script>
+  import format from '~/assets/js/format.js'
+
   export default {
     props: ['sdg', 'ticks'],
     data: function () {
@@ -115,6 +113,9 @@
       this.height = this.$refs.vis.clientHeight
       this.okfWidth = this.$refs.okf.clientWidth
       this.dnsWidth = this.$refs.dns.clientWidth
+    },
+    methods: {
+      format: format
     },
     computed: {
       dns: function () {

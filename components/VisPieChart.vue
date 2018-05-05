@@ -14,11 +14,13 @@
       alignment-baseline="middle"
       text-anchor="middle"
       :fill="'#' + fill"
-      >{{ value === null ? '—' : value.toFixed(0) + '&#8239;%' }}</text>
+      v-html="format(value)" />
   </svg>
 </template>
 
 <script>
+  import format from '~/assets/js/format.js'
+
   function getValueInRange (value) {
     if (value <= 0) {
       return 0
@@ -60,6 +62,9 @@
       path () {
         return getPieChart(getValueInRange(this.value / 100))
       }
+    },
+    methods: {
+      format: format
     }
   }
 </script>

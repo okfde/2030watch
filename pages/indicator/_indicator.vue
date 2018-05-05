@@ -40,13 +40,15 @@
                 <td>Ziel</td><td>{{ indicator['goal'] }}</td>
               </tr>
               <tr>
-                <td>Zielwert</td><td>{{ indicator['target'] }}&#8239;{{ indicator['unit'] }}</td>
+                <td>Zielwert</td>
+                <td v-html="format(indicator['target'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td>Aktueller Wert {{ indicator['currentYear'] }})</td><td>{{ indicator['current'] }}&#8239;{{ indicator['unit'] }}</td>
+                <td>Aktueller Wert {{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td>Startwert ({{ indicator['startYear'] }})</td><td>{{ indicator['start'] }}&#8239;{{ indicator['unit'] }}</td>
+                <td>Startwert ({{ indicator['startYear'] }})</td>
+                <td v-html="format(indicator['start'], 1, indicator['unit'])" />
               </tr>
               <tr>
                 <td>Begründung</td><td>{{ indicator['reason'] }}</td>
@@ -90,6 +92,7 @@
   import { mapState } from 'vuex'
   import VisPieChart from '~/components/VisPieChart.vue'
   import VisBarChart from '~/components/VisBarChart.vue'
+  import format from '~/assets/js/format.js'
 
   export default {
     validate ({ params, store }) {
@@ -100,6 +103,9 @@
         title: this.indicator.topic || 'all',
         titleTemplate: '2030 Watch - %s'
       }
+    },
+    methods: {
+      format: format
     },
     computed: {
       ...mapState([
