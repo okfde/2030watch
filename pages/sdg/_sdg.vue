@@ -42,7 +42,9 @@
           <div class="indicators">
             <section>
               <ul class="indicator-list">
-                <li v-for="(indicator, slug) in sdg.ind.dns"><VisIndicator :i="indicator" :color="sdg.color" /></li>
+                <li
+                  v-for="(indicator, slug) in sdg.ind.dns">
+                  <VisIndicator :i="indicator" :color="sdg.color" /></li>
               </ul>
             </section>
             <section>
@@ -50,8 +52,13 @@
             </section>
             <section>
               <ul class="indicator-list">
-                <li v-for="(indicator, slug) in sdg.ind.dns" v-if="!indicator.badIndicator && !indicator.modTarget"><VisIndicator :i="indicator" :color="sdg.color" /></li>
-                <li v-for="(indicator, slug) in sdg.ind.okf"><VisIndicator :i="indicator" :color="sdg.color" /></li>
+                <li
+                  v-for="(indicator, slug) in sdg.ind.dns"
+                  v-if="!indicator.badIndicator && !indicator.modTarget">
+                  <VisIndicator :i="indicator" :color="sdg.color" /></li>
+                <li
+                  v-for="(indicator, slug) in sdg.ind.okf">
+                  <VisIndicator :i="indicator" :color="sdg.color" /></li>
               </ul>
             </section>
           </div>
