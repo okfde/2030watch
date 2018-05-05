@@ -14,7 +14,7 @@
             <p>{{ sdg.textIntro }}</p>
           </div>
           <div>
-            <VisProgress :sdg="sdg" />
+            <VisProgress :sdg="sdg" :ticks="true" />
           </div>
         </section>
       </div>
@@ -30,13 +30,13 @@
               <small class="caption">Offizieller Indikatorenkatalog</small>
               <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
               <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-              <span class="process">{{ dns.toFixed(0) }}&#8239;%</span>
+              <span class="process" v-html="format(dns)" />
             </section>
             <section class="description-okf">
               <small class="caption">Alternativer und komplementärer</small>
               <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
               <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
-              <span class="process">{{ okf.toFixed(0) }}&#8239;%</span>
+              <span class="process" v-html="format(okf)" />
             </section>
           </div>
           <div class="indicators">
@@ -73,6 +73,7 @@
   import VisLeiste from '~/components/VisLeiste.vue'
   import VisProgress from '~/components/VisProgress.vue'
   import VisIndicator from '~/components/VisIndicator.vue'
+  import format from '~/assets/js/format.js'
 
   export default {
     validate ({ params, store }) {
@@ -92,6 +93,7 @@
       VisIndicator
     },
     methods: {
+      format: format,
       numberToStringNominativ: function (n) {
         if (n === 0) {
           return 'keinen'
