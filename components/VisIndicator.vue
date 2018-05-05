@@ -39,7 +39,7 @@
           r="1"
         />
       </svg>
-      <h5>{{ i.label }}</h5>
+      <h5 :style="{ color: '#' + color }">{{ i.label }}</h5>
 <!--       <ul>
         <li>badTarget: {{ i.badTarget ? 'ja' : 'nein' }}</li>
         <li>badIndicator: {{ i.badIndicator ? 'ja' : 'nein' }}</li>
@@ -55,7 +55,16 @@
   import VisPieChart from '~/components/VisPieChart.vue'
 
   export default {
-    props: ['i', 'color'],
+    props: {
+      i: {
+        type: Object,
+        required: true
+      },
+      color: {
+        type: String,
+        default: '04A6F0'
+      }
+    },
     components: {
       VisPieChart
     }
