@@ -30,13 +30,13 @@
               <small class="caption">Offizieller Indikatorenkatalog</small>
               <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
               <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-              <h3>{{ dns.toFixed(0) }}&#8239;%</h3>
+              <span class="process">{{ dns.toFixed(0) }}&#8239;%</span>
             </section>
             <section class="description-okf">
               <small class="caption">Alternativer und komplementärer</small>
               <h3>Indikatorenkatalog 2030Watch (OKF)</h3>
               <p>2030Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
-              <h3>{{ okf.toFixed(0) }}&#8239;%</h3>
+              <span class="process">{{ okf.toFixed(0) }}&#8239;%</span>
             </section>
           </div>
           <div class="indicators">
@@ -164,12 +164,20 @@
     justify-content: space-between;
     padding: 0;
 
+    .process {
+      display: block;
+      padding: 2rem;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
     & > section {
       padding: 0 !important;
     }
-  }
 
-  .description-okf {
-    align-self: flex-end;
+    .description-okf {
+      align-self: flex-end;
+    }
   }
 </style>
