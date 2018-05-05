@@ -23,33 +23,43 @@
     <div class="content">
       <div class="wrapper">
         <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
-        <small class="caption">Beschreibung</small>
-        <p>{{ indicator.txtdescription }}</p>
-        <small class="caption">Zielwert</small>
-        <p>{{ indicator.txttarget }}</p>
-        <small class="caption">Kategorie</small>
-        <p>{{ indicator.txtcategory }}</p>
-        <div class="columns columns-gutter columns-rows">
-          <section>
-            <table>
-              <thead>
-                <tr>
-                  <th>key</th>
-                  <th>value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="key in ['unit', 'goal', 'target', 'current', 'start', 'startYear', 'currentYear', 'reason', 'newTopic', 'pate', 'license']">
-                  <td>{{ key }}</td>
-                  <td>{{ indicator[key] }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section>
-            Datenpate
-          </section>
-        </div>
+      </div>
+      <div class="wrapper columns columns-gutter">
+        <section>
+          <small class="caption">Beschreibung</small>
+          <p>{{ indicator.txtdescription }}</p>
+          <small class="caption">Zielwert</small>
+          <p>{{ indicator.txttarget }}</p>
+          <small class="caption">Kategorie</small>
+          <p>{{ indicator.txtcategory }}</p>
+        </section>
+        <section>
+          <table>
+            <tbody>
+              <tr>
+                <td>Ziel</td><td>{{ indicator['goal'] }}</td>
+              </tr>
+              <tr>
+                <td>Zielwert</td><td>{{ indicator['target'] }}&#8239;{{ indicator['unit'] }}</td>
+              </tr>
+              <tr>
+                <td>Aktueller Wert {{ indicator['currentYear'] }})</td><td>{{ indicator['current'] }}&#8239;{{ indicator['unit'] }}</td>
+              </tr>
+              <tr>
+                <td>Startwert ({{ indicator['startYear'] }})</td><td>{{ indicator['start'] }}&#8239;{{ indicator['unit'] }}</td>
+              </tr>
+              <tr>
+                <td>Begründung</td><td>{{ indicator['reason'] }}</td>
+              </tr>
+              <tr>
+                <td>Lizenz</td><td>{{ indicator['license'] }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Datenpate</h3>
+        </section>
+      </div>
+      <div class="wrapper">
         <h2>Deutschland im Ländervergleich</h2>
         <VisBarChart :values="countries" />
         <h2>Der Indikator im Lauf der Zeit</h2>
