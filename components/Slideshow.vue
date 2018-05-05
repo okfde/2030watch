@@ -4,7 +4,7 @@
       <h2>Warum wir andere Indikatoren brauchen um Fortschritt in Bezug auf Nachhaltigkeit zu messen</h2>
     </header>
     <section class="columns columns-gutter">
-      <div>
+      <div class="text">
         <transition name="fade">
           <div v-if="slide === 1">
             <p>Das Nachhaltigkeitsziel SDG 5 steht für die Gleichstellung der Geschlechter. Im Zuge der gesetzlichen Vorschriften sind bestimmte Unternehmen in Deutschland seit 2016 dazu verpflichtet, mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Auch die Bundesregierung hat dasselbe Ziel für SDG 5 gesetzt, jedoch bis 2030.</p>
@@ -20,8 +20,20 @@
           </div>
         </transition>
       </div>
-      <div>
-        <img src="http://via.placeholder.com/450x250" alt="Slideshow Vorschaubild">
+      <div class="indicators">
+        <div>
+          <h5>Indikatorenset der Deutschen Nachhaltigkeitsstrategie</h5>
+          <ul>
+            <li><VisIndicator :i="indicator1" :compact="true" /></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Indikatorenset von 2030 Watch</h5>
+          <ul>
+            <li><VisIndicator :i="indicator2" :compact="true" /></li>
+            <li><VisIndicator :i="indicator3" :compact="true" /></li>
+          </ul>
+        </div>
       </div>
     </section>
     <footer>
@@ -36,6 +48,9 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+  import VisIndicator from '~/components/VisIndicator.vue'
+
   export default {
     data: function () {
       return {
@@ -43,12 +58,25 @@
       }
     },
     computed: {
+      ...mapState([
+        'data'
+      ]),
+      indicator1 () {
+        return this.data['dns-frauen-wirtschaft-dns']
+      },
+      indicator2 () {
+        return this.data['okf-frauen-wirtschaft']
+      },
+      indicator3 () {
+        return this.data['okf-frauen-parlamente']
+      }
     },
     watch: {
     },
     methods: {
     },
     components: {
+      VisIndicator
     },
     mounted () {
     }
@@ -56,12 +84,14 @@
 </script>
 
 <style lang="scss">
+  @import "~@/assets/style/variables";
+
   .intro {
     background-color: #fff;
     border: 1px solid #F1F2F4;
     border-radius: 2px;
     padding: 3rem;
-    box-shadow: 5px 5px 60px 0px rgba(0,0,0,0.25);
+    box-shadow: 5px 5px 60px 0px rgba(0, 0, 0, 0.25);
 
     header, section, footer {
       width: 100%;
@@ -74,11 +104,23 @@
       opacity: 0;
     }
 
+    .indicators {
+      ul li {
+        display: inline-block;
+      }
+    }
+
     footer {
       text-align: right;
+      margin-top: $spacing;
 
       span {
         display: inline-block;
+        margin: 0 $spacing / 2;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
