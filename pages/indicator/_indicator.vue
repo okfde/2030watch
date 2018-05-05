@@ -50,9 +50,9 @@
             Datenpate
           </section>
         </div>
-        <h2>Countries</h2>
+        <h2>Deutschland im Ländervergleich</h2>
         <VisBarChart :values="countries" />
-        <h2>Timeline</h2>
+        <h2>Der Indikator im Lauf der Zeit</h2>
         <table>
           <thead>
             <tr>
@@ -82,7 +82,6 @@
       return store.getters.indicatorsSlugs.includes(params.indicator)
     },
     head () {
-      // console.log(this.editedTodo, this.project.title)
       return {
         title: this.indicator.topic || 'all',
         titleTemplate: '2030 Watch - %s'
