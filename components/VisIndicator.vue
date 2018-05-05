@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="'../indicator/' + i.slug">
+  <nuxt-link :to="'../indicator/' + i.slug" :title="i.label">
     <div class="vis-indicator" ref="vis">
       <VisPieChart :value="i.progress" :fill="color" background="ffffff" />
       <svg
