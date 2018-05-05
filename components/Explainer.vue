@@ -28,7 +28,7 @@
   @import "~@/assets/style/variables";
 
   h3 {
-    color: #fff;
+    color: #fff !important;
   }
 
   .faq {
