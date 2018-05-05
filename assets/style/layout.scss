@@ -33,7 +33,7 @@ $width-desktop: 60vw;
   margin-bottom: $spacing / 2;
 }
 
-.page-header, .page-explainer, .page-footer {
+.page-header, .page-explainer, .page-footer, .inpage-header {
   color: #fff;
 
   a {
@@ -113,13 +113,13 @@ $width-desktop: 60vw;
     display: flex;
     align-items: center;
 
-  .section-text {
-    flex: 1;
-  }
+    .section-text {
+      flex: 1;
+    }
 
-  .section-img {
-    flex: 1;
-    text-align: center;
+    .section-img {
+      flex: 1;
+      text-align: center;
+    }
   }
-}
 }
