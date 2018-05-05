@@ -4,7 +4,7 @@
     viewBox="-1 -1 2 2"
     style="transform: rotate(-0.25turn)"
   >
-    <circle cx="0" cy="0" r="1" fill="#f2f2f2" />
+    <circle cx="0" cy="0" r="1" fill="rgba(0, 0, 0, .1)" />
     <path :d="path" :fill="'#' + fill"></path>
     <circle cx="0" cy="0" r="0.7" :fill="'#' + background" />
     <text
