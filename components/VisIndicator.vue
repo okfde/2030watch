@@ -1,9 +1,10 @@
 <template>
   <nuxt-link :to="'../indicator/' + i.slug" :title="i.label">
-    <div class="vis-indicator" ref="vis">
+    <div :class="{ 'vis-indicator': true, 'extended': !compact }" ref="vis">
       <VisPieChart :value="i.progress" :fill="color" background="ffffff" />
       <svg
         class="icon"
+        v-if="!compact"
         viewBox="-1 -1 2 2">
         <circle
           v-if="i.author === 'okf'"
@@ -63,6 +64,10 @@
       color: {
         type: String,
         default: '04A6F0'
+      },
+      compact: {
+        type: Boolean,
+        default: false
       }
     },
     components: {
@@ -76,10 +81,13 @@
     width: 100%;
     font-size: 0.7rem;
     background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     width: 150px;
     line-height: 1rem;
+
+    &.extended {
+      padding: 1rem;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+    }
 
     h5 {
       overflow: hidden;
