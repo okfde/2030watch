@@ -60,23 +60,27 @@
         </section>
       </div>
       <div class="wrapper">
-        <h2>Deutschland im Ländervergleich</h2>
-        <VisBarChart :values="countries" />
-        <h2>Der Indikator im Lauf der Zeit</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Year</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(value, year) in indicator['timeline']">
-              <td>{{ year }}</td>
-              <td>{{ value }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div v-if="hasCountries">
+          <h2>Deutschland im Ländervergleich</h2>
+          <VisBarChart :values="countries" />
+        </div>
+        <div v-if="hasTimeline">
+          <h2>Der Indikator im Lauf der Zeit</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(value, year) in indicator['timeline']">
+                <td>{{ year }}</td>
+                <td>{{ value }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -104,11 +108,17 @@
       indicator () {
         return this.data[this.$route.params.indicator]
       },
+      hasCountries () {
+        return typeof this.indicator.countries !== 'undefined'
+      },
       countries () {
         const keys = Object.keys(this.indicator.countries)
         return keys.slice(0, 20).map(key => {
           return [key, this.indicator.countries[key]]
         })
+      },
+      hasTimeline () {
+        return typeof this.indicator.timeline !== 'undefined'
       }
     },
     components: {
