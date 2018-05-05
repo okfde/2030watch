@@ -13,8 +13,8 @@
           <div>
             <p>{{ sdg.textIntro }}</p>
           </div>
-          <div>
-            <VisProgress :sdg="sdg" :ticks="true" />
+          <div class="sdg-process">
+            <VisProgress :sdg="sdg" :cBackground="sdg.color" :vMarkerLabels="false" :invert="true" :vTicks="false" />
           </div>
         </section>
       </div>
@@ -147,6 +147,10 @@
 </script>
 
 <style lang="scss">
+  .sdg-process {
+    height: 100px;
+  }
+
   .indicator-overview {
     margin: 4rem 0;
   }

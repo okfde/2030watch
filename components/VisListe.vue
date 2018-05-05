@@ -22,7 +22,7 @@
         <div class="sdg-label">
           <span :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
-        <VisProgress :sdg="sdg" :ticks="index === 0" />
+        <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
       </nuxt-link>
     </li>
   </ul>
@@ -147,7 +147,7 @@
 
       &:hover {
         .sdg-label {
-          opacity: 1;
+          opacity: 1 !important;
           color: var(--color);
 
           &.sdg-label-tick {

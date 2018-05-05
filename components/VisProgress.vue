@@ -1,7 +1,7 @@
 <template>
   <svg class="sdg-vis" ref="vis">
-    <g>
-      <g v-if="ticks">
+    <g class="ticks">
+      <g v-if="vTickLabels" class="tickLabels">
         <text
           class="sdg-label sdg-label-tick"
           alignment-baseline="baseline"
@@ -17,42 +17,17 @@
           y="30%"
           v-html="format(100)" />
       </g>
-      <line
-        class="tick"
-        stroke-linecap="round"
-        x1="calc(0% + 1px)"
-        y1="40%"
-        x2="calc(0% + 1px)"
-        y2="60%" />
-      <line
-        class="tick"
-        stroke-linecap="round"
-        x1="25%"
-        y1="40%"
-        x2="25%"
-        y2="60%" />
-      <line
-        class="tick"
-        stroke-linecap="round"
-        x1="50%"
-        y1="40%"
-        x2="50%"
-        y2="60%" />
-      <line
-        class="tick"
-        stroke-linecap="round"
-        x1="75%"
-        y1="40%"
-        x2="75%"
-        y2="60%" />
-      <line
-        class="tick"
-        stroke-linecap="round"
-        x1="calc(100% - 1px)"
-        y1="40%"
-        x2="calc(100% - 1px)"
-        y2="60%" />
+      <g class="tickLines" v-if="vTicks">
+        <line
+          v-for="tick in ['calc(0% + 1px)', '25%', '50%', '75%', 'calc(100% - 1px)']"
+          class="tick"
+          stroke-linecap="round"
+          :x1="tick"
+          y1="40%"
+          :x2="tick"
+          y2="60%" />
       </g>
+    </g>
     <line
       class="range"
       x1="0%"
@@ -68,30 +43,34 @@
       y2="50%" />
     <circle
       class="sdg-marker sdg-marker-total"
+      :style="{ 'stroke': cBackground }"
       :cx="okf + '%'"
       cy="50%"
       r="8" />
-    <text
-      ref="okf"
-      class="sdg-label sdg-label-total"
-      alignment-baseline="baseline"
-      :text-anchor="labels[0].l"
-      :x="labels[0].x"
-      y="30%"
-      v-html="format(okf)" />
     <circle
       class="sdg-marker sdg-marker-dns"
+      :style="{ 'stroke': cBackground }"
       :cx="dns + '%'"
       cy="50%"
       r="8" />
-    <text
-      ref="dns"
-      class="sdg-label sdg-label-dns"
-      alignment-baseline="hanging"
-      :text-anchor="labels[1].l"
-      :x="labels[1].x"
-      y="70%"
-      v-html="format(dns)" />
+    <g :class="{ markerLabels: true, invisible: vMarkerLabels }">
+      <text
+        ref="okf"
+        :class="{ 'sdg-label': true, 'sdg-label-total': true, 'invert': invert }"
+        alignment-baseline="baseline"
+        :text-anchor="labels[0].l"
+        :x="labels[0].x"
+        y="30%"
+        v-html="(true ? '2030 Watch: ' : '') + format(okf)" />
+      <text
+        ref="dns"
+        :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
+        alignment-baseline="hanging"
+        :text-anchor="labels[1].l"
+        :x="labels[1].x"
+        y="70%"
+        v-html="(true ? 'DNS: ' : '') + format(dns)" />
+    </g>
   </svg>
 </template>
 
@@ -99,7 +78,32 @@
   import format from '~/assets/js/format.js'
 
   export default {
-    props: ['sdg', 'ticks'],
+    props: {
+      sdg: {
+        type: Object,
+        required: true
+      },
+      vTickLabels: {
+        type: Boolean,
+        default: false
+      },
+      cBackground: {
+        type: String,
+        default: '#f9f9f9'
+      },
+      vMarkerLabels: {
+        type: Boolean,
+        default: true
+      },
+      invert: {
+        type: Boolean,
+        default: false
+      },
+      vTicks: {
+        type: Boolean,
+        default: true
+      }
+    },
     data: function () {
       return {
         width: 0,
@@ -187,7 +191,6 @@
     }
 
     .sdg-marker {
-      stroke: #f9f9f9;
       stroke-width: 2px;
 
       &.sdg-marker-total {
@@ -199,9 +202,14 @@
       }
     }
 
+    .markerLabels.invisible {
+      .sdg-label {
+        opacity: 0;
+      }
+    }
+
     .sdg-label {
       transition-duration: 0.2s;
-      opacity: 0;
       font-size: 12px;
 
       &.sdg-label-tick {
@@ -211,10 +219,18 @@
 
       &.sdg-label-total {
         fill: #04A6F0;
+
+        &.invert {
+          fill: #fff;
+        }
       }
 
       &.sdg-label-dns {
         fill: #F1B31C;
+
+        &.invert {
+          fill: #fff;
+        }
       }
     }
   }
