@@ -4,7 +4,7 @@
       v-for="(sdg, slug) in sdgs"
       :class="{ 'sdg-item': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
-      key="slug">
+      :key="slug">
       <nuxt-link :to="'/sdg/' + slug" class="sdg-link">
         <div class="sdg-label">
           {{ sdg.labelShort }}
