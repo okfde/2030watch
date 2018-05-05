@@ -52,7 +52,7 @@
 </script>
 
 <style lang="scss">
-@import "../assets/style/base";
+  @import "~@/assets/style/variables";
 
   .inpage-header {
     padding: 10vh 0;

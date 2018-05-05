@@ -132,28 +132,28 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/style/base";
+  @import "~@/assets/style/variables";
 
-.content {
-  section {
-     &:nth-child(even){
-      background: $color-light;
-    }
-
-    &:nth-of-type(3) {
-      .section-wrapper {
-        padding-top: $spacing;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+  .content {
+    section {
+       &:nth-child(even) {
+        background: #fff;
       }
-    }
 
-    &:nth-of-type(4) {
-      .section-wrapper {
-        padding-top: $spacing;
+      &:nth-of-type(3) {
+        .section-wrapper {
+          padding-top: $spacing;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+      }
+
+      &:nth-of-type(4) {
+        .section-wrapper {
+          padding-top: $spacing;
+        }
       }
     }
   }
-}
-  
+
 </style>

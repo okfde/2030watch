@@ -85,30 +85,30 @@
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/base";
+  @import "~@/assets/style/variables";
 
-.content {
-  section {
+  .content {
+    section {
 
-     &:nth-child(even){
-      background: $color-light;
-    }
+       &:nth-child(even){
+        background: $color-light;
+      }
 
-    .wrapper {
+      .wrapper {
 
-      .activity {
-        margin-bottom: $spacing;
+        .activity {
+          margin-bottom: $spacing;
 
-        ul {
-          padding-left: $spacing;
+          ul {
+            padding-left: $spacing;
 
-          li {
-            list-style-type: circle;
+            li {
+              list-style-type: circle;
+            }
           }
         }
       }
     }
   }
-}
 
 </style>

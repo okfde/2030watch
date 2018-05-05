@@ -17,7 +17,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/style/base";
+  @import "~@/assets/style/variables";
 
   .blog-post {
     display: flex;

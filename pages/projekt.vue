@@ -131,12 +131,12 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/style/variables";
+  @import "~@/assets/style/variables";
 
   .content {
     section {
       &:nth-child(even) {
-        background: $color-light;
+        background: #fff;
       }
     }
   }
