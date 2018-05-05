@@ -31,6 +31,10 @@ p + p {
   margin-top: 1em;
 }
 
+small + p {
+  margin-bottom: $spacing / 2;
+}
+
 .caption {
   font-size: 0.7rem;
   text-transform: uppercase;
