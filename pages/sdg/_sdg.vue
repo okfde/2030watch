@@ -8,13 +8,15 @@
     <header class="inpage-header">
       <div class="wrapper">
         <small class="caption">SDG {{ sdg.number }}</small>
-        <h1>{{ sdg.labelShort }}</h1>
         <section class="columns columns-gutter">
           <div>
+            <h1>{{ sdg.labelShort }}</h1>
             <p>{{ sdg.textIntro }}</p>
           </div>
           <div class="sdg-process">
-            <VisProgress :sdg="sdg" :cBackground="sdg.color" :vMarkerLabels="false" :invert="true" :vTicks="false" />
+            <div class="sdg-process-wrapper">
+              <VisProgress :sdg="sdg" :vMarkerLabels="false" :invert="false" :vTicks="false" />
+            </div>
           </div>
         </section>
       </div>
@@ -147,8 +149,29 @@
 </script>
 
 <style lang="scss">
+  @import '~@/assets/style/variables';
+
+  .inpage-header {
+    padding-bottom: $spacing * 4;
+  }
   .sdg-process {
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .sdg-process-wrapper {
+      width: 60%;
+      height: 150px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 2px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+      svg {
+        width: 90%;
+        margin: 0 5%;
+      }
+    }
   }
 
   .indicator-overview {
