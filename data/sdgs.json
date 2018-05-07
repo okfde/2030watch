@@ -133,6 +133,10 @@
       "dns": 2,
       "okf": 3,
       "alt": 5
+    },
+    "rating": {
+      "dns": "sehr hohe Nachhaltigkeit",
+      "okf": "hohe Nachhaltigkeit"
     }
   },
   "ernaehrung": {
@@ -287,6 +291,10 @@
       "dns": 2,
       "okf": 4,
       "alt": 5
+    },
+    "rating": {
+      "dns": "geringe Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "leben": {
@@ -559,6 +567,10 @@
       "dns": 8,
       "okf": 3,
       "alt": 10
+    },
+    "rating": {
+      "dns": "mittlere Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "bildung": {
@@ -720,6 +732,10 @@
       "dns": 4,
       "okf": 2,
       "alt": 6
+    },
+    "rating": {
+      "dns": "hohe Nachhaltigkeit",
+      "okf": "hohe Nachhaltigkeit"
     }
   },
   "gleichstellung": {
@@ -916,6 +932,10 @@
       "dns": 3,
       "okf": 5,
       "alt": 6
+    },
+    "rating": {
+      "dns": "sehr geringe Nachhaltigkeit",
+      "okf": "geringe Nachhaltigkeit"
     }
   },
   "wasser": {
@@ -1054,6 +1074,10 @@
       "dns": 3,
       "okf": 2,
       "alt": 4
+    },
+    "rating": {
+      "dns": "sehr geringe Nachhaltigkeit",
+      "okf": "sehr geringe Nachhaltigkeit"
     }
   },
   "energie": {
@@ -1234,6 +1258,10 @@
       "dns": 4,
       "okf": 3,
       "alt": 7
+    },
+    "rating": {
+      "dns": "mittlere Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "wirtschaft": {
@@ -1567,6 +1595,10 @@
       "dns": 9,
       "okf": 5,
       "alt": 12
+    },
+    "rating": {
+      "dns": "sehr hohe Nachhaltigkeit",
+      "okf": "sehr hohe Nachhaltigkeit"
     }
   },
   "infrastruktur": {
@@ -1697,6 +1729,10 @@
       "dns": 1,
       "okf": 4,
       "alt": 5
+    },
+    "rating": {
+      "dns": "sehr hohe Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "ungleichheit": {
@@ -1851,6 +1887,10 @@
       "dns": 2,
       "okf": 4,
       "alt": 5
+    },
+    "rating": {
+      "dns": "geringe Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "staedte": {
@@ -2138,6 +2178,10 @@
       "dns": 7,
       "okf": 5,
       "alt": 10
+    },
+    "rating": {
+      "dns": "geringe Nachhaltigkeit",
+      "okf": "geringe Nachhaltigkeit"
     }
   },
   "konsum": {
@@ -2295,6 +2339,10 @@
       "dns": 3,
       "okf": 3,
       "alt": 4
+    },
+    "rating": {
+      "dns": "sehr geringe Nachhaltigkeit",
+      "okf": "sehr geringe Nachhaltigkeit"
     }
   },
   "klimawandel": {
@@ -2448,6 +2496,10 @@
       "dns": 2,
       "okf": 4,
       "alt": 6
+    },
+    "rating": {
+      "dns": "geringe Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "ozeane": {
@@ -2586,6 +2638,10 @@
       "dns": 3,
       "okf": 2,
       "alt": 5
+    },
+    "rating": {
+      "dns": "geringe Nachhaltigkeit",
+      "okf": "geringe Nachhaltigkeit"
     }
   },
   "landoekosysteme": {
@@ -2743,6 +2799,10 @@
       "dns": 3,
       "okf": 3,
       "alt": 5
+    },
+    "rating": {
+      "dns": "mittlere Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "frieden": {
@@ -2923,6 +2983,10 @@
       "dns": 4,
       "okf": 3,
       "alt": 6
+    },
+    "rating": {
+      "dns": "mittlere Nachhaltigkeit",
+      "okf": "mittlere Nachhaltigkeit"
     }
   },
   "partnerschaft": {
@@ -3080,6 +3144,10 @@
       "dns": 3,
       "okf": 3,
       "alt": 6
+    },
+    "rating": {
+      "dns": "hohe Nachhaltigkeit",
+      "okf": "geringe Nachhaltigkeit"
     }
   }
 }

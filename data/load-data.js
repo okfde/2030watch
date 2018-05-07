@@ -7,6 +7,23 @@ const url_sdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRNDMTfVzdgRjX
 const sdg_header = ['number', 'slug', 'color', 'labelShort', 'labelLong', 'textIntro', 'textIndicators']
 const sdg_numbers = ['number']
 const sdg_file = './sdgs.json'
+const sdg_ratings = [
+	{
+		'label': 'sehr geringe Nachhaltigkeit',
+		'value': 0
+	}, {
+		'label': 'geringe Nachhaltigkeit',
+		'value': 20
+	}, {
+		'label': 'mittlere Nachhaltigkeit',
+		'value': 40
+	}, {
+		'label': 'hohe Nachhaltigkeit',
+		'value': 60
+	}, {
+		'label': 'sehr hohe Nachhaltigkeit',
+		'value': 80
+	}]
 
 // Load SDG data
 console.log('Requesting SDG data…')
@@ -54,7 +71,7 @@ function processSDGs(sdgs, allIndicators) {
 		const usableValuesCombined = [...usableValuesOKF, ...usableValuesDNS]
 
 		// console.log(sdg['number'], indicators.length, indi_dns.length, '>', usableValuesDNS.length, '—', indi_okf.length, '>', usableValuesOKF.length)
-		return {
+		const _sdg = {
 			...sdg,
 			'values': {
 				'dns': _.sumBy(usableValuesDNS, 'progress') / usableValuesDNS.length,
@@ -77,7 +94,19 @@ function processSDGs(sdgs, allIndicators) {
 				'alt': usableValuesCombined.length
 			}
 		}
-		return sdg
+
+		_sdg['rating'] = { 'dns': '', 'okf': '' }
+
+		_.each(sdg_ratings, rating => {
+			if (_sdg['values']['dns'] > rating.value) {
+				_sdg['rating']['dns'] = rating.label
+			}
+			if (_sdg['values']['okf'] > rating.value) {
+				_sdg['rating']['okf'] = rating.label
+			}
+		})
+
+		return _sdg
 	})
 }
 

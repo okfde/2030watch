@@ -4,12 +4,18 @@
       <h2>Key findings</h2>
     </header>
     <section class="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <ul>
+        <li>
+          <p>
+            Eine sehr hohe Nachhaltigkeit haben laut DNS {{ countingsDNS['sehr hohe Nachhaltigkeit'] }} SDGs. Die OKF bewertet {{ countingsOKF['sehr hohe Nachhaltigkeit'] }} so positiv. Eine hohe Nachhaltigkeit haben bei DNS {{ countingsDNS['hohe Nachhaltigkeit'] }} bzw. {{ countingsOKF['hohe Nachhaltigkeit'] }} SGGs bei der OKF. Mittel werden {{ countingsDNS['mittlere Nachhaltigkeit'] }} und {{ countingsOKF['mittlere Nachhaltigkeit'] }} SDGs bewertet. Eine geringe Nachhaltigkeit haben {{ countingsDNS['geringe Nachhaltigkeit'] }} und {{ countingsOKF['geringe Nachhaltigkeit'] }} SDGs. Der DNS zufolge müssen {{ countingsDNS['sehr geringe Nachhaltigkeit'] }} SDGs mit sehr geringer Nachhaltigkeit bewertet werden. Die OKF bewertet {{ countingsOKF['sehr geringe Nachhaltigkeit'] }} als sehr gering nachhaltig.
+          </p>
+        </li>
+        <li>
+          <p>
+            Den größten Handlungsbedarf sieht die OKF bei den Indikatoren »{{ first.label }}« und »{{ last.label }}«. Dort sind ist der Fortschritt zwischen dem offiziellem und dem inoffiziellem Indikatorenset am größten (<span v-html="format(first.diff)" />/<span v-html="format(last.diff)" />).
+          </p>
+        </li>
+      </ul>
     </section>
   </div>
 </template>
@@ -17,21 +23,44 @@
 <script>
   import { mapState } from 'vuex'
   import VisIndicator from '~/components/VisIndicator.vue'
+  import _ from 'lodash'
+  import format from '~/assets/js/format.js'
 
   export default {
-    data: function () {
-      return {
-        slide: 1
-      }
-    },
     computed: {
       ...mapState([
-        'data'
-      ])
-    },
-    watch: {
+        'sdgs'
+      ]),
+      difference: function () {
+        const diff = _.map(this.sdgs, sdg => {
+          return {
+            'label': sdg.labelShort,
+            'diff': sdg.values.dns - sdg.values.okf
+          }
+        })
+        return _.sortBy(diff, 'diff')
+      },
+      first: function () {
+        return this.difference[0]
+      },
+      last: function () {
+        return this.difference[this.difference.length - 1]
+      },
+      ratingsOKF: function () {
+        return _.map(this.sdgs, 'rating.okf')
+      },
+      ratingsDNS: function () {
+        return _.map(this.sdgs, 'rating.dns')
+      },
+      countingsOKF: function () {
+        return _.countBy(this.ratingsOKF)
+      },
+      countingsDNS: function () {
+        return _.countBy(this.ratingsDNS)
+      }
     },
     methods: {
+      format: format
     },
     components: {
       VisIndicator
