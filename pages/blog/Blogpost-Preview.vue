@@ -5,9 +5,9 @@
     </div>
     <div class="post-teaser">
       <span class="caption">23. Februar 2018</span>
-      <nuxt-link to="/kontakt"><h3>Tag der offenen Tür - Die OKF beim BMZ</h3></nuxt-link>
+      <nuxt-link to="/samplepost"><h3>Tag der offenen Tür - Die OKF beim BMZ</h3></nuxt-link>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic.</div>
-      <nuxt-link to="/kontakt"><span>Mehr lesen …</span></nuxt-link>
+      <nuxt-link to="/samplepost"><span>Mehr lesen …</span></nuxt-link>
     </div>
   </div>
 </template>
