@@ -36,7 +36,7 @@
       y2="50%" />
     <line
       class="diff"
-      :stroke="okf < dns ? '#D22F27' : '#5C9E31'"
+      stroke="#aaa"
       :x1="okf + '%'"
       y1="50%"
       :x2="dns + '%'"

@@ -22,6 +22,7 @@
         <div class="sdg-label">
           <span :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
+        <VisDirection :diff="sdg.values.dns - sdg.values.okf" />
         <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
       </nuxt-link>
     </li>
@@ -29,20 +30,24 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   import VisProgress from '~/components/VisProgress.vue'
   import SortIcon from '~/components/SortIcon.vue'
-  import * as sdgs from '../data/sdgs.json'
+  import VisDirection from '~/components/VisDirection.vue'
+  // import * as sdgs from '../data/sdgs.json'
   import _ from 'lodash'
 
   export default {
     data: function () {
       return {
-        'sdgs': sdgs,
         'sorting': 'number',
         'reverse': false
       }
     },
     computed: {
+      ...mapState([
+        'sdgs'
+      ]),
       sdgListe: function () {
         const list = _.sortBy(this.sdgs, this.sorting)
         if (this.reverse) {
@@ -54,7 +59,8 @@
     },
     components: {
       VisProgress,
-      SortIcon
+      SortIcon,
+      VisDirection
     },
     methods: {
       sort: function (key) {
@@ -108,7 +114,9 @@
     .sdg-link {
       color: #222;
       display: flex;
-      height: 2.5rem;
+      height: calc((100vh - 40vh) / 17);
+      max-height: 2.5rem;
+      min-height: 1.7rem;
       width: 100%;
       margin: 0.3rem 0;
 
@@ -143,6 +151,10 @@
           font-weight: bold;
           font-size: 0.9rem;
         }
+      }
+
+      .sdg-direction {
+        margin-right: 16px;
       }
 
       &:hover {
