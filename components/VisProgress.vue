@@ -37,14 +37,14 @@
     <line
       class="diff"
       stroke="#aaa"
-      :x1="okf + '%'"
+      :x1="valueInRange(okf) + '%'"
       y1="50%"
       :x2="dns + '%'"
       y2="50%" />
     <circle
       class="sdg-marker sdg-marker-total"
       :style="{ 'stroke': cBackground }"
-      :cx="okf + '%'"
+      :cx="valueInRange(okf) + '%'"
       cy="50%"
       r="8" />
     <circle
@@ -119,7 +119,10 @@
       this.dnsWidth = this.$refs.dns.clientWidth
     },
     methods: {
-      format: format
+      format: format,
+      valueInRange: function (v) {
+        return Math.max(0, Math.min(100, v))
+      }
     },
     computed: {
       dns: function () {
@@ -129,8 +132,8 @@
         return this.sdg.values.okf
       },
       labels: function () {
-        let dns = this.dns / 100 * this.width
-        let okf = this.okf / 100 * this.width
+        let dns = this.valueInRange(this.dns) / 100 * this.width
+        let okf = this.valueInRange(this.okf) / 100 * this.width
 
         let dnsLabel = 'start'
         let okfLabel = 'end'
