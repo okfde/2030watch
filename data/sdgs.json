@@ -50,7 +50,7 @@
           "current": 10.7,
           "start": 17.8,
           "startYear": "2010",
-          "currentYear": "2016",
+          "currentYear": "2015",
           "reason": "Basisjahr",
           "yearlyTarget": false,
           "badTarget": false,
@@ -145,7 +145,7 @@
     "textIndicators": "lorem ipsum",
     "values": {
       "dns": 28.09601745771959,
-      "okf": 44.99264947945136
+      "okf": 45.139013315220765
     },
     "ind": {
       "dns": [
@@ -205,14 +205,14 @@
           "unit": "kg/ha",
           "goal": "50",
           "sdg": 2,
-          "progress": 64.21663442940039,
+          "progress": 64.94845360824742,
           "url": "",
           "slug": "okf-stickstoffueberschuss",
           "target": 50,
-          "current": 87,
-          "start": 153.4,
+          "current": 84,
+          "start": 147,
           "startYear": "",
-          "currentYear": "2013",
+          "currentYear": "2014",
           "reason": "SDSN Methode",
           "newTopic": false,
           "pate": false
