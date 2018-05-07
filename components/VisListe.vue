@@ -2,15 +2,15 @@
   <ul>
     <li class="sdg-item">
       <div class="sdg-header sdg-header-label link" v-on:click="sort('id')">
-        <span :class="{ active: sorting === 'id' }" >Sustainable Development Goals</span>
-        <SortIcon :active="sorting === 'id'" :reverse="reverse" />
+        <span :class="{ active: sorting === 'id' }" >Sustainable Development Goals <SortIcon :active="sorting === 'id'" :reverse="reverse" /></span>
       </div>
       <div class="sdg-header sdg-header-vis columns">
         <section>
           Nachhaltigkeitsziel erreicht zu
         </section>
         <section class="sdg-legend">
-          <span class="dns link" v-on:click="sort('values.dns')"><span :class="{ active: sorting === 'values.dns' }" >DNS</span> <SortIcon :active="sorting === 'values.dns'" :reverse="reverse" /> </span> <span class="okf link" v-on:click="sort('values.okf')"><span :class="{ active: sorting === 'values.okf' }" >OKF</span> <SortIcon :active="sorting === 'values.okf'" :reverse="reverse" /></span>
+          <span :class="{ 'dns': true, 'link': true, active: sorting === 'values.dns' }" v-on:click="sort('values.dns')">DNS <SortIcon :active="sorting === 'values.dns'" :reverse="reverse" /></span>
+          <span :class="{ 'okf': true, 'link': true, active: sorting === 'values.okf' }" v-on:click="sort('values.okf')">OKF <SortIcon :active="sorting === 'values.okf'" :reverse="reverse" /></span>
         </section>
       </div>
     </li>
