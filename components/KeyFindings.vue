@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <div class="findings">
     <header>
       <h2>Zusammenfassung: Ein alternatives Nachhaltigkeitsbild</h2>
     </header>
@@ -70,4 +70,16 @@
 
 <style lang="scss">
   @import "~@/assets/style/variables";
+
+  .findings {
+    background-color: #fff;
+    border: 1px solid #F1F2F4;
+    border-radius: 2px;
+    padding: 3rem;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+
+    header, section, footer {
+      width: 100%;
+    }
+  }
 </style>
