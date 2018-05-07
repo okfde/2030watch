@@ -11,6 +11,7 @@
     <ul class="impressum">
       <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
       <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
+      <li><a href="mailto:2030-watch@okfn.de">Feedback</a></li>
     </ul>
     <ul class="social">
       <div><a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d">Newsletter abbonieren</a></div>
