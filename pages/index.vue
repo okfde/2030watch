@@ -29,6 +29,7 @@
         <div class="vis-wrapper">
           <VisListe />
         </div>
+        <KeyFindings />
       </div>
     </section>
   </div>
@@ -37,6 +38,7 @@
 <script>
   import VisListe from '~/components/VisListe.vue'
   import Slideshow from '~/components/Slideshow.vue'
+  import KeyFindings from '~/components/KeyFindings.vue'
 
   export default {
     data: function () {
@@ -51,7 +53,8 @@
     },
     components: {
       VisListe,
-      Slideshow
+      Slideshow,
+      KeyFindings
     },
     mounted () {
     }
