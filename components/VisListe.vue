@@ -102,11 +102,11 @@
         }
 
         .dns {
-          color: #F1B31C;
+          color: $color-dns;
         }
 
         .okf {
-          color: #04A6F0;
+          color: $color-okf;
         }
       }
     }
