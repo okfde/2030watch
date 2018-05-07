@@ -18,7 +18,14 @@
       <div class="wrapper">
         <h2>So nachhaltig ist Deutschland – <br />
         Das sagen offizielle und komplementäre Indikatoren</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi.</p>
+        <div class="columns columns-gutter">
+          <section>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi.</p>
+          </section>
+          <section>
+            Legende
+          </section>
+        </div>
         <div class="vis-wrapper">
           <VisListe />
         </div>
