@@ -23,17 +23,9 @@
   @import "~@/assets/style/variables";
 
   .item {
-    cursor: pointer;
-    padding: $spacing/3 0;
-    margin: $spacing/3 0;
-    border-bottom: 1px solid $color-mute; 
-    max-height: auto;
-    transition: 0.2s ease all; 
-
-    .title {
-      display: flex;
-      font-weight: 600;
-      
+    max-width: 800px;
+    padding: $spacing / 1.5 0;
+    border-bottom: 1px solid $color-border-mute;
 
     &:last-child {
       border: none;
@@ -43,6 +35,5 @@
       display: flex;
       font-weight: bold;
     }
-  }
   }
 </style>
