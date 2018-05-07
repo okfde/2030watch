@@ -17,14 +17,14 @@
     <section>
       <div class="wrapper">
         <h2>So nachhaltig ist Deutschland – <br />
-        Das sagen offizielle und komplementäre Indikatoren</h2>
+        Das sagen offizielle und komplementäre Daten</h2>
         <div class="columns columns-gutter">
           <section>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, fugit, eum vel aperiam ut nesciunt rem voluptate vero quibusdam quos quia impedit aliquam fugiat architecto, alias qui iure numquam modi.</p>
+            <p>2030 Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">komplementären Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Datensets und zeichnet damit ein realistischeres Bild der bisher erreichten Leistungen.</p>
           </section>
-          <section>
+          <!-- <section>
             Legende
-          </section>
+          </section> -->
         </div>
         <div class="vis-wrapper">
           <VisListe />
@@ -84,5 +84,15 @@
 
   .vis-wrapper {
     margin: $spacing 0;
+  }
+
+  .dns {
+    color: $color-dns;
+    font-weight: bold;
+  }
+
+  .okf {
+    color: $color-okf;
+    font-weight: bold;
   }
 </style>
