@@ -20,11 +20,11 @@
         Das sagen offizielle und komplementäre Daten</h2>
         <div class="columns columns-gutter">
           <section>
-            <p>2030 Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">komplementären Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Datensets und zeichnet damit ein realistischeres Bild der bisher erreichten Leistungen.</p>
+            <p>2030 Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">komplementären Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Indikatorensets auf einer Skala von 0% (sehr geringe Nachhaltigkeit) bis 100% (sehr hohe Nachhaltigkeit) und zeichnet damit ein realistischeres Bild des bisherigen Fortschritts.</p>
           </section>
-          <!-- <section>
+          <section>
             Legende
-          </section> -->
+          </section>
         </div>
         <div class="vis-wrapper">
           <VisListe />
