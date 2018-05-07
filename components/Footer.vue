@@ -13,14 +13,14 @@
       <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
     </ul>
     <ul class="social">
-      <div><a href="#">Newsletter abbonieren</a></div>
-      <div><a href="#">Mit einer Spende unterstützen</a></div>
+      <div><a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d">Newsletter abbonieren</a></div>
+      <div><a href="https://okfn.de/spenden/">Mit einer Spende unterstützen</a></div>
       <br />
       <div class="social-icons">
-        <a href="#"><img src="../assets/icons/email_light.png" alt=""></a>
-        <a href="#"><img src="../assets/icons/twitter_light.png" alt=""></a>
-        <a href="#"><img src="../assets/icons/fb_light.png" alt=""></a>
-        <a href="#"><img src="../assets/icons/gh_light.png" alt=""></a>
+        <a href="mailto:2030-watch@okfn.de"><img src="../assets/icons/email_light.png" alt=""></a>
+        <a href="https://twitter.com/2030watchde"><img src="../assets/icons/twitter_light.png" alt=""></a>
+        <a href="https://www.facebook.com/2030-Watch-108979439509739/"><img src="../assets/icons/fb_light.png" alt=""></a>
+        <a href="https://github.com/okfde/2030-watch.de"><img src="../assets/icons/gh_light.png" alt=""></a>
       </div>
     </ul>
   </footer>
