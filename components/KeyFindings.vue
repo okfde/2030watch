@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <header>
-      <h2>Key findings</h2>
+      <h2>Zusammenfassung: Ein alternatives Nachhaltigkeitsbild</h2>
     </header>
     <section class="">
       <ul>
