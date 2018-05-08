@@ -23,7 +23,7 @@
             <p>2030 Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">komplementären Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Indikatorensets auf einer Skala von 0% (sehr geringe Nachhaltigkeit) bis 100% (sehr hohe Nachhaltigkeit).</p>
           </section>
           <section>
-            Legende
+            <VisProgress :sdg="sampleSDG" :vLegend="true" />
           </section>
         </div>
         <div class="vis-wrapper">
@@ -39,10 +39,17 @@
   import VisListe from '~/components/VisListe.vue'
   import Slideshow from '~/components/Slideshow.vue'
   import KeyFindings from '~/components/KeyFindings.vue'
+  import VisProgress from '~/components/VisProgress.vue'
 
   export default {
     data: function () {
       return {
+        sampleSDG: {
+          values: {
+            okf: 25,
+            dns: 75
+          }
+        }
       }
     },
     computed: {
@@ -54,7 +61,8 @@
     components: {
       VisListe,
       Slideshow,
-      KeyFindings
+      KeyFindings,
+      VisProgress
     },
     mounted () {
     }

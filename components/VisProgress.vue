@@ -1,5 +1,11 @@
 <template>
   <svg class="sdg-vis" ref="vis">
+    <line
+      class="range"
+      x1="0%"
+      y1="50%"
+      x2="100%"
+      y2="50%" />
     <g class="ticks">
       <g v-if="vTickLabels" class="tickLabels">
         <text
@@ -19,21 +25,15 @@
       </g>
       <g class="tickLines" v-if="vTicks">
         <line
-          v-for="tick in ['calc(0% + 1px)', '25%', '50%', '75%', 'calc(100% - 1px)']"
+          v-for="tick in ['calc(0% + 1px)', '20%', '40%', '60%', '80%', 'calc(100% - 1px)']"
           class="tick"
           stroke-linecap="round"
           :x1="tick"
-          y1="40%"
+          y1="calc(50% - 5px)"
           :x2="tick"
-          y2="60%" />
+          y2="calc(50% + 5px)" />
       </g>
     </g>
-    <line
-      class="range"
-      x1="0%"
-      y1="50%"
-      x2="100%"
-      y2="50%" />
     <line
       class="diff"
       stroke="#aaa"
@@ -71,6 +71,28 @@
         y="70%"
         v-html="(true ? 'DNS: ' : '') + format(dns)" />
     </g>
+    <g v-if="vLegend">
+      <text
+        ref="okf"
+        alignment-baseline="baseline"
+        text-anchor="start"
+        x="0"
+        y="30%">OKF</text>
+      <polyline
+        stroke="black"
+        fill="none"
+        :points="`0,0 0,10 ${xOKF},10 ${xOKF},20`" />
+      <polyline
+        stroke="black"
+        fill="none"
+        :points="`${width},150 ${width},140 ${xDNS},140 ${xDNS},130`" />
+      <text
+        ref="dns"
+        alignment-baseline="hanging"
+        text-anchor="end"
+        x="100%"
+        y="70%">DNS</text>
+    </g>
   </svg>
 </template>
 
@@ -82,6 +104,10 @@
       sdg: {
         type: Object,
         required: true
+      },
+      vLegend: {
+        type: Boolean,
+        required: false
       },
       vTickLabels: {
         type: Boolean,
@@ -131,9 +157,15 @@
       okf: function () {
         return this.sdg.values.okf
       },
+      xDNS: function () {
+        return this.valueInRange(this.dns) / 100 * this.width
+      },
+      xOKF: function () {
+        return this.valueInRange(this.okf) / 100 * this.width
+      },
       labels: function () {
-        let dns = this.valueInRange(this.dns) / 100 * this.width
-        let okf = this.valueInRange(this.okf) / 100 * this.width
+        let dns = this.xDNS
+        let okf = this.xOKF
 
         let dnsLabel = 'start'
         let okfLabel = 'end'
@@ -181,7 +213,7 @@
 
     .range {
       stroke: #ebecf1;
-      stroke-width: 4px;
+      stroke-width: 3px;
     }
 
     .tick {
@@ -190,7 +222,7 @@
     }
 
     .diff {
-      stroke-width: 2px;
+      stroke-width: 1px;
     }
 
     .sdg-marker {
