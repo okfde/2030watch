@@ -12,23 +12,17 @@
 </template>
 
 <script>
-  import format from '~/assets/js/format.js'
-  import Scale from '~/assets/js/Scale.js'
+  import Scale from '~/assets/js/scale.js'
 
   export default {
     props: ['diff'],
-    methods: {
-      format: format
-    },
     computed: {
       rotation: function () {
         if (this.diff < 0) {
-          const scale = new Scale().domain([-100, 0]).range([0, 90])
-          return scale.map(this.diff)
+          return new Scale().domain([-100, 0]).range([0, 90]).map(this.diff)
         }
         if (this.diff > 0) {
-          const scale = new Scale().domain([0, 100]).range([90, 180])
-          return scale.map(this.diff)
+          return new Scale().domain([0, 100]).range([90, 180]).map(this.diff)
         }
       }
     }
