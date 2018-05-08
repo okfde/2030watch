@@ -1,15 +1,20 @@
 <template>
   <div class="findings">
     <header>
-      <h2>Zusammenfassung: Ein alternatives Nachhaltigkeitsbild</h2>
+      <h2>Zusammenfassung: Ein alternativeres Nachhaltigkeitsbild</h2>
     </header>
-    <section class="">
+    <section class="key-findings">
       <ul>
-        <li>
+        <li>Eine sehr hohe Nachhaltigkeit haben laut DNS {{ countingsDNS['sehr hohe Nachhaltigkeit'] }} SDGs. Die OKF bewertet {{ countingsOKF['sehr hohe Nachhaltigkeit'] }} so positiv</li>
+        <li>Eine hohe Nachhaltigkeit haben bei DNS {{ countingsDNS['hohe Nachhaltigkeit'] }} bzw. {{ countingsOKF['hohe Nachhaltigkeit'] }} SGGs bei der OKF.</li>
+        <li>Mittel werden {{ countingsDNS['mittlere Nachhaltigkeit'] }} und {{ countingsOKF['mittlere Nachhaltigkeit'] }} SDGs bewertet</li>
+        <li>Eine geringe Nachhaltigkeit haben {{ countingsDNS['geringe Nachhaltigkeit'] }} und {{ countingsOKF['geringe Nachhaltigkeit'] }} SDGs.</li>
+        <li>Der DNS zufolge müssen {{ countingsDNS['sehr geringe Nachhaltigkeit'] }} SDGs mit sehr geringer Nachhaltigkeit bewertet werden. Die OKF bewertet {{ countingsOKF['sehr geringe Nachhaltigkeit'] }} als sehr gering nachhaltig.</li>
+        <!-- <li>
           <p>
             Eine sehr hohe Nachhaltigkeit haben laut DNS {{ countingsDNS['sehr hohe Nachhaltigkeit'] }} SDGs. Die OKF bewertet {{ countingsOKF['sehr hohe Nachhaltigkeit'] }} so positiv. Eine hohe Nachhaltigkeit haben bei DNS {{ countingsDNS['hohe Nachhaltigkeit'] }} bzw. {{ countingsOKF['hohe Nachhaltigkeit'] }} SGGs bei der OKF. Mittel werden {{ countingsDNS['mittlere Nachhaltigkeit'] }} und {{ countingsOKF['mittlere Nachhaltigkeit'] }} SDGs bewertet. Eine geringe Nachhaltigkeit haben {{ countingsDNS['geringe Nachhaltigkeit'] }} und {{ countingsOKF['geringe Nachhaltigkeit'] }} SDGs. Der DNS zufolge müssen {{ countingsDNS['sehr geringe Nachhaltigkeit'] }} SDGs mit sehr geringer Nachhaltigkeit bewertet werden. Die OKF bewertet {{ countingsOKF['sehr geringe Nachhaltigkeit'] }} als sehr gering nachhaltig.
           </p>
-        </li>
+        </li> -->
         <li>
           <p>
             Den größten Handlungsbedarf sieht die OKF bei den Indikatoren »{{ first.label }}« und »{{ last.label }}«. Dort sind ist der Fortschritt zwischen dem offiziellem und dem inoffiziellem Indikatorenset am größten (<span v-html="format(first.diff)" />/<span v-html="format(last.diff)" />).
