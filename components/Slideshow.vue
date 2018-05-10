@@ -12,28 +12,28 @@
           </div>
           <div v-else-if="slide === 2">
             <p>Ein Beispiel: Das Nachhaltigkeitsziel SDG 5 steht für die Gleichstellung der Geschlechter. Im Zuge der gesetzlichen Vorschriften sind bestimmte Unternehmen in Deutschland seit 2016 dazu verpflichtet, mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Auch die Bundesregierung hat dasselbe Ziel für SDG 5 gesetzt, jedoch bis 2030. Die Vereinten Nationen sprechen von gleichberechtigter Partizipation von Frauen in Politik, Wirtschaft und öffentlichem Leben.</p>
-            <p>Aus Sicht von 2030 Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.</p>
           </div>
           <div v-else-if="slide === 3">
-            <p>Die Konsequenz: 2030 Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030 Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030 Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.</p>
+            <p>Aus Sicht von 2030 Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.</p>
           </div>
           <div v-else>
+            <p>Die Konsequenz: 2030 Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030 Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030 Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.</p>
             <p>Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs. Lernt, diskutiert, entdeckt!</p>
           </div>
         </transition>
       </div>
       <div class="indicators">
-        <div>
+        <div v-if="slide >= 2">
           <h5>Indikatorenset der Deutschen Nachhaltigkeitsstrategie</h5>
           <ul>
             <li><VisIndicator :i="indicator1" :compact="true" /></li>
           </ul>
         </div>
-        <div>
+        <div v-if="slide >= 3">
           <h5>Indikatorenset von 2030 Watch</h5>
           <ul>
-            <li><VisIndicator :i="indicator2" :compact="true" /></li>
-            <li><VisIndicator :i="indicator3" :compact="true" /></li>
+            <li v-if="slide >= 3"><VisIndicator :i="indicator2" :compact="true" /></li>
+            <li v-if="slide >= 4"><VisIndicator :i="indicator3" :compact="true" /></li>
           </ul>
         </div>
       </div>
