@@ -73,14 +73,8 @@
         return this.data['okf-frauen-parlamente']
       }
     },
-    watch: {
-    },
-    methods: {
-    },
     components: {
       VisIndicator
-    },
-    mounted () {
     }
   }
 </script>
@@ -121,5 +115,4 @@
       }
     }
   }
-
 </style>
