@@ -31,6 +31,21 @@ p + p {
   margin-top: 1em;
 }
 
+ul.list {
+  li {
+    padding: 0.2em 1em 0.2em 1.6em;
+    list-style-position: inside;
+    text-indent: -1.6em;
+    line-height: 1.5em;
+
+    &:before {
+      content: "— ";
+      color: $color-accent;
+      margin-right: 0.3em;
+    }
+  }
+}
+
 small + p {
   margin-bottom: $spacing / 2;
 }
