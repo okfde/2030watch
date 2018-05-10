@@ -34,7 +34,6 @@
   import VisProgress from '~/components/VisProgress.vue'
   import SortIcon from '~/components/SortIcon.vue'
   import VisDirection from '~/components/VisDirection.vue'
-  // import * as sdgs from '../data/sdgs.json'
   import _ from 'lodash'
 
   export default {
@@ -76,7 +75,7 @@
 </script>
 
 <style lang="scss">
-  @import '../assets/style/variables';
+  @import '~@/assets/style/variables';
 
   .sdg-item {
     display: flex;
@@ -170,4 +169,3 @@
     }
   }
 </style>
-
