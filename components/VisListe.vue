@@ -6,7 +6,7 @@
       </div>
       <div class="sdg-header sdg-header-vis columns">
         <section>
-          Nachhaltigkeitsziel erreicht zu
+          SDG erreicht zu
         </section>
         <section class="sdg-legend">
           <span :class="{ 'dns': true, 'link': true, active: sorting === 'values.dns' }" v-on:click="sort('values.dns')">DNS <SortIcon :active="sorting === 'values.dns'" :reverse="reverse" /></span>
@@ -22,7 +22,7 @@
         <div class="sdg-label">
           <span :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
-        <VisDirection :diff="sdg.values.dns - sdg.values.okf" />
+        <!-- <VisDirection :diff="sdg.values.dns - sdg.values.okf" /> -->
         <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
       </nuxt-link>
     </li>

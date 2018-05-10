@@ -1,26 +1,53 @@
 <template>
   <div class="findings">
-    <header>
-      <h2>Zusammenfassung: Ein alternativeres Nachhaltigkeitsbild</h2>
-    </header>
     <section class="key-findings">
-      <ul>
-        <li>Eine sehr hohe Nachhaltigkeit haben laut DNS {{ countingsDNS['sehr hohe Nachhaltigkeit'] }} SDGs. Die OKF bewertet {{ countingsOKF['sehr hohe Nachhaltigkeit'] }} so positiv</li>
-        <li>Eine hohe Nachhaltigkeit haben bei DNS {{ countingsDNS['hohe Nachhaltigkeit'] }} bzw. {{ countingsOKF['hohe Nachhaltigkeit'] }} SGGs bei der OKF.</li>
-        <li>Mittel werden {{ countingsDNS['mittlere Nachhaltigkeit'] }} und {{ countingsOKF['mittlere Nachhaltigkeit'] }} SDGs bewertet</li>
-        <li>Eine geringe Nachhaltigkeit haben {{ countingsDNS['geringe Nachhaltigkeit'] }} und {{ countingsOKF['geringe Nachhaltigkeit'] }} SDGs.</li>
-        <li>Der DNS zufolge müssen {{ countingsDNS['sehr geringe Nachhaltigkeit'] }} SDGs mit sehr geringer Nachhaltigkeit bewertet werden. Die OKF bewertet {{ countingsOKF['sehr geringe Nachhaltigkeit'] }} als sehr gering nachhaltig.</li>
-        <!-- <li>
-          <p>
-            Eine sehr hohe Nachhaltigkeit haben laut DNS {{ countingsDNS['sehr hohe Nachhaltigkeit'] }} SDGs. Die OKF bewertet {{ countingsOKF['sehr hohe Nachhaltigkeit'] }} so positiv. Eine hohe Nachhaltigkeit haben bei DNS {{ countingsDNS['hohe Nachhaltigkeit'] }} bzw. {{ countingsOKF['hohe Nachhaltigkeit'] }} SGGs bei der OKF. Mittel werden {{ countingsDNS['mittlere Nachhaltigkeit'] }} und {{ countingsOKF['mittlere Nachhaltigkeit'] }} SDGs bewertet. Eine geringe Nachhaltigkeit haben {{ countingsDNS['geringe Nachhaltigkeit'] }} und {{ countingsOKF['geringe Nachhaltigkeit'] }} SDGs. Der DNS zufolge müssen {{ countingsDNS['sehr geringe Nachhaltigkeit'] }} SDGs mit sehr geringer Nachhaltigkeit bewertet werden. Die OKF bewertet {{ countingsOKF['sehr geringe Nachhaltigkeit'] }} als sehr gering nachhaltig.
-          </p>
-        </li> -->
-        <li>
-          <p>
-            Den größten Handlungsbedarf sieht die OKF bei den Indikatoren »{{ first.label }}« und »{{ last.label }}«. Dort sind ist der Fortschritt zwischen dem offiziellem und dem inoffiziellem Indikatorenset am größten (<span v-html="format(first.diff)" />/<span v-html="format(last.diff)" />).
-          </p>
-        </li>
-      </ul>
+      <h2>Zusammenfassung: Ein erweitertes Nachhaltigkeitsbild</h2>
+      <p>Vergleicht man die offiziellen Daten der Bundesregierung (DNS) mit dem von uns vorgeschlagenen erweiterten Indikatorenkatalog zeigt sich, dass die Nachhaltigkeitsziele nur unzureichend erfüllt werden. Insgesamt ergibt sich folgende Gegenüberstellung:</p>
+      <div class="columns columns-gutter">
+        <table>
+            <tr>
+              <th class="caption">Nachhaltigkeitsstufe</th>
+              <th class="caption">SDG-Ziel erreicht zu</th>
+              <th class="caption">Anzahl – DNS</th>
+              <th class="caption">Anzahl – 2030 Watch</th>
+            </tr>
+            <tr>
+              <td><img class="arrow-very-high" src="../assets/icons/arrow.svg">sehr hoch</td>
+              <td>0% - 20%</td>
+              <td><div class="dns" v-for="item in countingsDNS['sehr hohe Nachhaltigkeit']"></div></td>
+              <td><div class="okf" v-for="item in countingsOKF['sehr hohe Nachhaltigkeit']"></div></td>
+            </tr>
+            <tr>
+              <td><img class="arrow-high" src="../assets/icons/arrow.svg">hoch</td>
+              <td>20% - 40%</td>
+              <td><div class="dns" v-for="item in countingsDNS['hohe Nachhaltigkeit']"></div></td>
+              <td><div class="okf" v-for="item in countingsOKF['hohe Nachhaltigkeit']"></div></td>
+            </tr>
+            <tr>
+              <td><img class="arrow-medium" src="../assets/icons/arrow.svg">mittel</td>
+              <td>40% - 60%</td>
+              <td><div class="dns" v-for="item in countingsDNS['mittlere Nachhaltigkeit']"></div></td>
+              <td><div class="okf" v-for="item in countingsOKF['mittlere Nachhaltigkeit']"></div></td>
+            </tr>
+            <tr>
+              <td><img class="arrow-low" src="../assets/icons/arrow.svg">niedrig</td>
+              <td>60% - 80%</td>
+              <td><div class="dns" v-for="item in countingsDNS['geringe Nachhaltigkeit']"></div></td>
+              <td><div class="okf" v-for="item in countingsOKF['geringe Nachhaltigkeit']"></div></td>
+            </tr>
+            <tr>
+              <td><img class="arrow-very-low" src="../assets/icons/arrow.svg">sehr niedrig</td>
+              <td>80% - 100%</td>
+              <td><div class="dns" v-for="item in countingsDNS['sehr geringe Nachhaltigkeit']"></div></td>
+              <td><div class="okf" v-for="item in countingsOKF['sehr geringe Nachhaltigkeit']"></div></td>
+            </tr>
+        </table>
+      </div>
+      <div>
+        <p>
+          Den größten Handlungsbedarf sehen wir bei den Indikatoren »{{ first.label }}« und »{{ last.label }}«. Dort sind ist der Fortschritt zwischen dem offiziellem und dem inoffiziellem Indikatorenset am größten (<span v-html="format(first.diff)" />/<span v-html="format(last.diff)" />).
+        </p>
+      </div>
     </section>
   </div>
 </template>
@@ -74,17 +101,83 @@
 </script>
 
 <style lang="scss">
-  @import "~@/assets/style/variables";
+  @import "~@/assets/style/base";
 
   .findings {
-    background-color: #fff;
-    border: 1px solid #F1F2F4;
-    border-radius: 2px;
-    padding: 3rem;
-    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
-
+    
     header, section, footer {
       width: 100%;
+    }
+
+    .key-findings {
+      margin: 0 0 $spacing 0;
+
+      table {
+        margin: $spacing;
+        font-size: 0.95rem;
+        
+        th {
+          padding: 5px;
+          text-align: left;
+          font-size: 0.8em;
+        }
+
+        td  {
+          padding: 5px;
+          font-family: $font-family-modern;
+          font-size: 0.8rem;
+
+          img {
+            margin-right: 10px;
+
+             &.arrow-very-high {
+              width: 12px;
+              height: 12px;
+              transform: rotate(270deg);
+            }
+
+             &.arrow-high {
+              width: 12px;
+              height: 12px;
+              transform: rotate(-45deg);
+            }
+            
+             &.arrow-medium {
+              width: 12px;
+              height: 12px;
+            }
+
+             &.arrow-low {
+              width: 12px;
+              height: 12px;
+              transform: rotate(45deg);
+            }
+
+             &.arrow-very-low {
+              width: 12px;
+              height: 12px;
+              transform: rotate(90deg);
+            }
+          }
+
+          div {
+            display: inline-block;
+            border-radius: 100%;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border: 2px solid #f9f9f9;
+
+            &.dns {
+              background-color: $color-dns;
+            } 
+
+            &.okf {
+              background-color: $color-okf;
+            } 
+          }  
+        }
+      }
     }
   }
 </style>

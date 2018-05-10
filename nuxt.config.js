@@ -11,7 +11,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Chivo:400,700|Roboto+Mono' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Chivo:400,700|Roboto+Mono:400,700' }
     ]
   },
   css: [

@@ -60,7 +60,7 @@ $width-desktop: 60vw;
 
 .page-container {
   & > * {
-    padding: $spacing * 2 0;
+    padding: $spacing 0;
   }
 
   & > .inpage-nav, & > .content {
@@ -122,4 +122,12 @@ $width-desktop: 60vw;
       text-align: center;
     }
   }
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #F1F2F4;
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 5px 5px 20px 0px rgba(116, 116, 116, 0.25);
 }

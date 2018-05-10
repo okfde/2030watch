@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <div class="intro box">
     <header>
       <h2>Warum wir andere Daten brauchen um Nachhaltigkeit zu messen</h2>
     </header>
@@ -89,11 +89,6 @@
   @import "~@/assets/style/variables";
 
   .intro {
-    background-color: #fff;
-    border: 1px solid #F1F2F4;
-    border-radius: 2px;
-    padding: 3rem;
-    box-shadow: 5px 5px 60px 0px rgba(0, 0, 0, 0.25);
 
     header, section, footer {
       width: 100%;

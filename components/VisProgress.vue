@@ -207,6 +207,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~@/assets/style/variables";
+
   .sdg-vis {
     flex: 1;
     height: 100%;
@@ -229,11 +231,11 @@
       stroke-width: 2px;
 
       &.sdg-marker-total {
-        fill: #04A6F0;
+        fill: $color-okf;
       }
 
       &.sdg-marker-dns {
-        fill: #F1B31C;
+        fill: $color-dns;
       }
     }
 
@@ -253,7 +255,7 @@
       }
 
       &.sdg-label-total {
-        fill: #04A6F0;
+        fill: $color-okf;
 
         &.invert {
           fill: #fff;
@@ -261,7 +263,7 @@
       }
 
       &.sdg-label-dns {
-        fill: #F1B31C;
+        fill: $color-dns;
 
         &.invert {
           fill: #fff;
