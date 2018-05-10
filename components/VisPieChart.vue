@@ -1,21 +1,20 @@
 <template>
-  <svg
-    class="process"
-    viewBox="-1 -1 2 2"
-    style="transform: rotate(-0.25turn)"
-  >
-    <circle cx="0" cy="0" r="1" fill="rgba(0, 0, 0, .1)" />
-    <path :d="path" :fill="'#' + fill"></path>
-    <circle cx="0" cy="0" r="0.7" :fill="'#' + background" />
-    <text
-      x="0"
-      y="-1.4"
-      style="transform: rotate(0.25turn)"
-      alignment-baseline="middle"
-      text-anchor="middle"
-      :fill="'#' + fill"
+  <div class="vis-piechart">
+    <span
+      class="vis-number"
+      :style="{ color: '#' + fill, 'font-size': size }"
       v-html="format(value)" />
-  </svg>
+    <svg
+      class="vis-process"
+      viewBox="-1 -1 2 2"
+    >
+      <circle cx="0" cy="0" r="1" fill="rgba(0, 0, 0, .1)" />
+      <g style="transform: rotate(-0.25turn)">
+        <path :d="path" :fill="'#' + fill"></path>
+      </g>
+      <circle cx="0" cy="0" r="0.7" :fill="'#' + background" />
+    </svg>
+  </div>
 </template>
 
 <script>
@@ -61,6 +60,16 @@
     computed: {
       path () {
         return getPieChart(getValueInRange(this.value / 100))
+      },
+      size () {
+        const chars = this.format(this.value).toString().split('&')[0].length
+        if (chars <= 2) {
+          return '1.6rem'
+        }
+        if (chars === 3) {
+          return '1.2rem'
+        }
+        return '1rem'
       }
     },
     methods: {
@@ -70,12 +79,23 @@
 </script>
 
 <style lang="scss" scoped>
-  .process {
-    margin: 0.5rem;
+  .vis-piechart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 1rem 0;
 
-    text {
-      font-size: 0.02rem;
+    .vis-number {
+      position: absolute;
+      text-align: center;
+      width: 100%;
       font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    .vis-process {
+      width: 100%;
     }
   }
 </style>

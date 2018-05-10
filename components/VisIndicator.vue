@@ -85,20 +85,24 @@
     line-height: 1rem;
 
     &.extended {
-      padding: 1rem;
+      padding: 0.4rem;
+      border-radius: 2px;
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     }
 
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
+      font-size: 0.8rem;
+      text-align: center;
       height: 3rem;
-      hyphens: auto;
+      margin-bottom: 0.5rem;
     }
 
     svg {
       &.icon {
         width: 20px;
+        margin-top: -2rem;
       }
     }
 

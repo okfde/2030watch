@@ -26,22 +26,18 @@
       <div class="wrapper">
         <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
         <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030 Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
-        <div class="indicator-overview columns columns-gutter columns-rows">
-          <div class="description">
-            <section class="description-dns">
-              <small class="caption">Indikatorenkatalog</small>
-              <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+        <div class="indicator-overview columns columns-rows">
+          <section class="description description-dns columns columns-gutter">
+            <div>
+              <hgroup>
+                <small class="caption">Indikatorenkatalog</small>
+                <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+              </hgroup>
               <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-              <span class="process" v-html="format(dns)" />
-            </section>
-            <section class="description-okf">
-              <small class="caption">Indikatorenkatalog</small>
-              <h3>2030 Watch (OKF)</h3>
-              <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
-              <span class="process" v-html="format(okf)" />
-            </section>
-          </div>
-          <div class="indicators">
+            </div>
+            <span class="process" v-html="format(dns)" />
+          </section>
+          <section class="indicators">
             <section>
               <ul class="indicator-list">
                 <li
@@ -63,7 +59,17 @@
                   <VisIndicator :i="indicator" :color="sdg.color" /></li>
               </ul>
             </section>
-          </div>
+          </section>
+          <section class="description description-okf  columns columns-gutter">
+            <div>
+              <hgroup>
+                <small class="caption">Indikatorenkatalog</small>
+                <h3>2030 Watch (OKF)</h3>
+              </hgroup>
+              <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+            </div>
+            <span class="process" v-html="format(okf)" />
+          </section>
         </div>
       </div>
     </div>
@@ -176,20 +182,34 @@
 
   .indicator-overview {
     margin: 4rem 0;
+    flex-direction: column;
+
+    & > section {
+      width: 100%;
+    }
   }
 
-  .indicator-list {
-    display: flex;
+  .indicators {
+    overflow: scroll;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, .02);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
 
-    li {
-      margin: 0 0.5rem;
+    .indicator-list {
+      padding: 0 $spacing;
+      display: flex;
+
+      li {
+        margin: 0 0.5rem;
+      }
     }
   }
 
   .description {
     display: flex;
     height: auto;
-    flex-direction: column;
+    flex-direction: rows;
     justify-content: space-between;
     padding: 0;
 
@@ -203,10 +223,6 @@
 
     & > section {
       padding: 0 !important;
-    }
-
-    .description-okf {
-      align-self: flex-end;
     }
   }
 </style>
