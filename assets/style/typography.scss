@@ -50,7 +50,7 @@ small + p {
   margin-bottom: $spacing / 2;
 }
 
-.caption {
+.caption, th {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -62,10 +62,11 @@ table {
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 0.05em;
+    text-align: left;
   }
 
   tbody {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 
