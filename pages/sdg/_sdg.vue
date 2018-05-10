@@ -34,43 +34,58 @@
                 <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
               </hgroup>
               <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
+              <span class="process" v-html="format(dns)" />
             </div>
-            <span class="process" v-html="format(dns)" />
-          </section>
-          <section class="indicators">
-            <section>
-              <ul class="indicator-list">
-                <li
-                  v-for="(indicator, slug) in sdg.ind.dns">
-                  <VisIndicator :i="indicator" :color="sdg.color" /></li>
-              </ul>
-            </section>
-            <section>
-              <span>Lines</span>
-            </section>
-            <section>
-              <ul class="indicator-list">
-                <li
-                  v-for="(indicator, slug) in sdg.ind.dns"
-                  v-if="!indicator.badIndicator && !indicator.modTarget">
-                  <VisIndicator :i="indicator" :color="sdg.color" /></li>
-                <li
-                  v-for="(indicator, slug) in sdg.ind.okf">
-                  <VisIndicator :i="indicator" :color="sdg.color" /></li>
-              </ul>
-            </section>
-          </section>
-          <section class="description description-okf  columns columns-gutter">
             <div>
               <hgroup>
                 <small class="caption">Indikatorenkatalog</small>
                 <h3>2030 Watch (OKF)</h3>
               </hgroup>
               <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+              <span class="process" v-html="format(okf)" />
             </div>
-            <span class="process" v-html="format(okf)" />
           </section>
         </div>
+      </div>
+      <div class="indicator-vis">
+        <section class="indicators">
+          <section>
+            <ul class="indicator-list" ref="indicatorListDNS">
+              <li
+                ref="indicator"
+                v-for="(indicator, n) in sdg.ind.dns">
+                <VisIndicator :i="indicator" :color="sdg.color" /></li>
+            </ul>
+          </section>
+          <section class="indicator-lines">
+            <svg>
+              <line
+                v-for="indicator in linesNormal"
+                :x1="indicator"
+                :x2="indicator"
+                y1="0%"
+                y2="100%" />
+              <line
+                v-for="indicator in linesMod"
+                stroke-dasharray="5, 5"
+                :x1="indicator.x1"
+                :x2="indicator.x2"
+                y1="0%"
+                y2="100%" />
+            </svg>
+          </section>
+          <section>
+            <ul class="indicator-list" ref="indicatorListOKF">
+              <li
+                v-for="(indicator, n) in sdg.ind.dns"
+                v-if="!indicator.badIndicator && !indicator.modTarget">
+                <VisIndicator :i="indicator" :color="sdg.color" /></li>
+              <li
+                v-for="(indicator, n) in sdg.ind.okf">
+                <VisIndicator :i="indicator" :color="sdg.color" /></li>
+            </ul>
+          </section>
+        </section>
       </div>
     </div>
   </div>
@@ -82,6 +97,7 @@
   import VisProgress from '~/components/VisProgress.vue'
   import VisIndicator from '~/components/VisIndicator.vue'
   import format from '~/assets/js/format.js'
+  import _ from 'lodash'
 
   export default {
     validate ({ params, store }) {
@@ -93,7 +109,19 @@
         titleTemplate: '2030 Watch - %s'
       }
     },
+    data: function () {
+      return {
+        indicatorWidth: 150 // default value
+      }
+    },
     mounted () {
+      console.log(this.$refs.indicator[0].clientWidth)
+      console.log(this.$refs)
+      console.log(this.$refs.indicatorListDNS.clientWidth)
+      console.log(this.$refs.indicatorListOKF.clientWidth)
+
+      this.indicatorWidth = this.$refs.indicator[0].clientWidth
+      console.log(this.indicatorWidth)
     },
     components: {
       VisLeiste,
@@ -149,6 +177,35 @@
       },
       okf: function () {
         return this.sdg.values.okf
+      },
+      widthIndicator: function () {
+        const amount = this.sdg.n.udns + this.sdg.n.uokf
+        return 100 / amount
+      },
+      linesNormal: function () {
+        const indicators = _.filter(this.sdg.ind.dns, indicator => {
+          return !indicator.badIndicator && !indicator.modTarget
+        })
+        return _.map(indicators, (indicator, n) => {
+          return (n + 0.5) * this.indicatorWidth + (n * 20) + 'px'
+        })
+      },
+      linesMod: function () {
+        const offset = this.linesNormal.length
+        const indicators = _.filter(this.sdg.ind.dns, indicator => {
+          return indicator.modTarget
+        })
+        return _.map(indicators, (indicator, n) => {
+          console.log('indicator', indicator.altIndicator)
+          const position = _.findIndex(this.sdg.ind.okf, { 'id': indicator.altIndicator })
+          console.log(position)
+          console.log((n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20) + 'px')
+          console.log((n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20) + 'px')
+          return {
+            'x1': (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20) + 'px',
+            'x2': (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20) + 'px'
+          }
+        })
       }
     }
   }
@@ -189,19 +246,39 @@
     }
   }
 
-  .indicators {
+  .indicator-vis {
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .02);
+    box-shadow: inset 5px 5px 20px 0px rgba(116, 116, 116, 0.25);
     overflow: scroll;
     max-width: 100%;
-    background-color: rgba(0, 0, 0, .02);
-    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
+  }
+
+  .indicators {
+    margin: 0 auto;
+
+    section {
+      padding: $spacing / 2 $spacing;
+    }
 
     .indicator-list {
-      padding: 0 $spacing;
       display: flex;
 
       li {
-        margin: 0 0.5rem;
+        margin: 0 10px; // 10px is fixed in js!
+      }
+    }
+
+    .indicator-lines {
+      svg {
+        width: 100%;
+        height: 200px;
+        margin: 0 10px; // 10px is fixed in js!
+
+        line {
+          stroke: #aaa;
+        }
       }
     }
   }
