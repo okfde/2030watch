@@ -1,15 +1,19 @@
 <template>
   <div class="team-member">
     <div class="avatar">
-        <img :src="member.imgUrl" alt='2030 Watch Team Avatar'>
+      <img :src="member.imgUrl" alt='2030 Watch Team Avatar' />
     </div>
     <div class="info">
-        <div class="name">{{ member.name }}</div>
-        <div class="role">{{ member.role }}</div>
-        <div class="socials">
-          <a v-if="member.email" :href="'mailto:' + member.email"><img src="../assets/icons/email.png" alt="Email Icon" /></a>
-          <a v-if="member.twitter" :href="member.twitter" target="_blank"><img src="../assets/icons/twitter.png" alt="Twitter Icon" /></a>
-        </div>
+      <span class="name">{{ member.name }}</span>
+      <span class="role">{{ member.role }}</span>
+      <div class="socials">
+        <a v-if="member.email" :href="'mailto:' + member.email">
+          <img src="../assets/icons/email.png" alt="Email Icon" />
+        </a>
+        <a v-if="member.twitter" :href="member.twitter" target="_blank">
+          <img src="../assets/icons/twitter.png" alt="Twitter Icon" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -21,7 +25,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/style/base";
+  @import "~@/assets/style/variables";
 
   .team-member {
     display: flex;
@@ -41,6 +45,10 @@
     }
 
     .info {
+      span {
+        display: block
+      }
+
       .name {
         color: $color-accent;
         font-weight: 600;
@@ -50,6 +58,7 @@
         margin-bottom: 10px;
         line-height: 1.2;
       }
+
       .socials {
         img {
           margin-right: 10px;
