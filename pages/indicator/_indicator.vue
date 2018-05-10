@@ -135,9 +135,8 @@
 </script>
 
 <style lang="scss" scoped>
-  .progress {
-    svg {
-      width: 200px;
-    }
+  .progress > * {
+    max-height: 150px;
+    max-width: 150px;
   }
 </style>
