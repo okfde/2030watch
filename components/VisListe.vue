@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="vis-liste">
     <li class="sdg-item">
       <div class="sdg-header sdg-header-label link" v-on:click="sort('id')">
         <span :class="{ active: sorting === 'id' }" >Sustainable Development Goals <SortIcon :active="sorting === 'id'" :reverse="reverse" /></span>
@@ -77,8 +77,16 @@
 <style lang="scss">
   @import '~@/assets/style/variables';
 
+  .vis-liste {
+    margin: $spacing 0;
+  }
+
   .sdg-item {
     display: flex;
+
+    .sdg-header {
+      margin-bottom: $spacing / 2;
+    }
 
     .sdg-header-label {
       margin-left: calc(1rem + 16px);

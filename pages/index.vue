@@ -14,7 +14,7 @@
         <Slideshow />
       </div>
     </section>
-    <section class="main-vis">
+    <section>
       <div class="wrapper">
         <h2>So nachhaltig ist Deutschland – Das sagen offizielle und komplementäre Daten</h2>
         <div class="columns columns-gutter">
@@ -25,15 +25,13 @@
             <VisProgress :sdg="sampleSDG" :vLegend="true" />
           </section>
         </div>
-        <div class="vis-wrapper">
-          <VisListe />
-        </div>
+        <VisListe />
       </div>
     </section>
     <section>
       <div class="wrapper">
-           <KeyFindings />
-        </div>
+        <KeyFindings />
+      </div>
     </section>
   </div>
 </template>
@@ -73,7 +71,7 @@
 </script>
 
 <style lang="scss">
-  @import "~@/assets/style/base";
+  @import "~@/assets/style/variables";
 
   .inpage-header {
     padding: 10vh 0;
@@ -92,39 +90,4 @@
   .intro-container {
     background: linear-gradient(0deg, transparent 50%, #04A6F0 50%);
   }
-
-  .main-vis {
-    h2 {
-        max-width: 100%;
-      }
-
-    section {
-      p {
-        font-size: 0.9rem;
-      }
-
-      .dns {
-      color: $color-dns;
-      font-weight: bold;
-    }
-
-    .okf {
-      color: $color-okf;
-      font-weight: bold;
-    }
-
-    }
-
-    .vis-wrapper {
-      margin: $spacing 0;
-
-      ul {
-        .sdg-header {
-          margin-bottom: 20px;
-        }
-      }
-    }
-  }
-
-  
 </style>

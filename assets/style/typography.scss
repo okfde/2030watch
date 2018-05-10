@@ -23,12 +23,27 @@ h3 {
   color: $color-accent;
 }
 
-p, h1, h2, h3 {
-  max-width: 800px;
+h1, h2, h3 {
+  max-width: 1000px;
 }
 
 p + p {
   margin-top: 1em;
+}
+
+p {
+  font-size: 0.9rem;
+  max-width: 800px;
+
+  .dns {
+    color: $color-dns;
+    font-weight: bold;
+  }
+
+  .okf {
+    color: $color-okf;
+    font-weight: bold;
+  }
 }
 
 ul.list {
