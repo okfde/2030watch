@@ -40,7 +40,7 @@
           r="1"
         />
       </svg>
-      <h5 :style="{ color: '#' + color }">{{ i.label }}</h5>
+      <h5>{{ i.label }}</h5>
 <!--       <ul>
         <li>badTarget: {{ i.badTarget ? 'ja' : 'nein' }}</li>
         <li>badIndicator: {{ i.badIndicator ? 'ja' : 'nein' }}</li>
@@ -99,12 +99,24 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~@/assets/style/variables';
+
   .vis-indicator {
     width: 100%;
     font-size: 0.7rem;
     background-color: #fff;
-    width: 150px;
+    width: 140px;
     line-height: 1rem;
+
+    &:hover {
+      h5 {
+        color: $color-default;
+      }
+
+      &.extended {
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .24);
+      }
+    }
 
     &.extended {
       padding: 0.4rem;
@@ -115,10 +127,12 @@
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-align: center;
+      font-weight: normal;
       height: 3rem;
       margin-bottom: 0.5rem;
+      color: rgba(0, 0, 0, 0.7);
     }
 
     svg {
