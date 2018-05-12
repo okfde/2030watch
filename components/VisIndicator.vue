@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="'../indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact }" ref="vis">
-      <VisPieChart :value="i.progress" :fill="color" background="ffffff" />
+      <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" />
       <svg
         class="icon"
         v-if="!compact"
@@ -53,6 +53,7 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import VisPieChart from '~/components/VisPieChart.vue'
 
   export default {
@@ -65,9 +66,30 @@
         type: String,
         default: '04A6F0'
       },
+      colorScale: {
+        type: Boolean,
+        default: false
+      },
       compact: {
         type: Boolean,
         default: false
+      }
+    },
+    computed: {
+      ...mapGetters([
+        'stepsColors'
+      ]),
+      colorChart: function () {
+        console.log(this.colorScale)
+        if (this.colorScale) {
+          console.log(this.stepsColors)
+          const range = 100 / this.stepsColors.length
+          const n = Math.round(this.i.progress / range)
+          console.log(range, n, this.i.progress, this.i.progress / range, this.stepsColors[n < 1 ? 0 : n - 1])
+          return this.stepsColors[n < 1 ? 0 : n - 1].substr(1)
+        } else {
+          return this.color
+        }
       }
     },
     components: {

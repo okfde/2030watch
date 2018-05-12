@@ -54,7 +54,7 @@
               <li
                 ref="indicator"
                 v-for="(indicator, n) in sdg.ind.dns">
-                <VisIndicator :i="indicator" :color="sdg.color" /></li>
+                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
             </ul>
           </section>
           <section class="indicator-lines">
@@ -79,10 +79,10 @@
               <li
                 v-for="(indicator, n) in sdg.ind.dns"
                 v-if="!indicator.badIndicator && !indicator.modTarget">
-                <VisIndicator :i="indicator" :color="sdg.color" /></li>
+                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li
                 v-for="(indicator, n) in sdg.ind.okf">
-                <VisIndicator :i="indicator" :color="sdg.color" /></li>
+                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
             </ul>
           </section>
         </section>
