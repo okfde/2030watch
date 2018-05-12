@@ -22,7 +22,7 @@
             <p>2030 Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">erweiterten Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Indikatorensets auf einer Skala von 0% (sehr geringe Nachhaltigkeit) bis 100% (sehr hohe Nachhaltigkeit).</p>
           </section>
           <section class="legendProgress">
-            <VisProgress :sdg="sampleSDG" :vLegend="true" />
+            <VisProgress :sdg="sampleSDG" :vLegend="true" :compact="false" />
           </section>
         </div>
         <VisListe />

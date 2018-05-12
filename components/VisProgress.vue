@@ -59,17 +59,19 @@
         :class="{ 'sdg-label': true, 'sdg-label-total': true, 'invert': invert }"
         alignment-baseline="hanging"
         :text-anchor="labels[0].l"
+        :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
         :x="labels[0].x"
         y="0%"
-        v-html="(true ? '2030 Watch: ' : '') + format(okf)" />
+        v-html="(vMarkerLabelsNames ? '2030 Watch: ' : '') + format(okf)" />
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
         alignment-baseline="baseline"
         :text-anchor="labels[1].l"
+        :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
         :x="labels[1].x"
         y="100%"
-        v-html="(true ? 'DNS: ' : '') + format(dns)" />
+        v-html="(vMarkerLabelsNames ? 'DNS: ' : '') + format(dns)" />
     </g>
     <g v-if="vLegend">
       <g class="tickLinesLegend" v-if="vTicks">
@@ -153,6 +155,14 @@
         default: '#f9f9f9'
       },
       vMarkerLabels: {
+        type: Boolean,
+        default: true
+      },
+      vMarkerLabelsNames: {
+        type: Boolean,
+        default: false
+      },
+      compact: {
         type: Boolean,
         default: true
       },
@@ -328,7 +338,7 @@
 
     .sdg-label {
       transition-duration: 0.2s;
-      font-size: 12px;
+      // font-size: 12px;
 
       &.sdg-label-tick {
         fill: #222;

@@ -15,7 +15,7 @@
           </div>
           <div class="sdg-process">
             <div class="sdg-process-wrapper">
-              <VisProgress :sdg="sdg" :vMarkerLabels="false" :invert="false" :vTicks="false" />
+              <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="false" />
             </div>
           </div>
         </section>
@@ -217,14 +217,15 @@
   .inpage-header {
     padding-bottom: $spacing * 4;
   }
+
   .sdg-process {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: none;
 
     .sdg-process-wrapper {
-      width: 60%;
-      height: 150px;
+      width: 80%;
       padding: 20px;
       background-color: #fff;
       border-radius: 2px;
@@ -232,7 +233,8 @@
 
       svg {
         width: 90%;
-        margin: 0 5%;
+        max-height: 5rem;
+        margin: 1rem 5%;
       }
     }
   }
