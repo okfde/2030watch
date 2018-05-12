@@ -46,13 +46,13 @@
       :style="{ 'stroke': cBackground }"
       :cx="valueInRange(okf) + '%'"
       cy="50%"
-      r="8" />
+      :r="markerR" />
     <circle
       class="sdg-marker sdg-marker-dns"
       :style="{ 'stroke': cBackground }"
       :cx="dns + '%'"
       cy="50%"
-      r="8" />
+      :r="markerR" />
     <g :class="{ markerLabels: true, invisible: vMarkerLabels }">
       <text
         ref="okf"
@@ -72,31 +72,64 @@
         v-html="(true ? 'DNS: ' : '') + format(dns)" />
     </g>
     <g v-if="vLegend">
-      <text
-        ref="okf"
-        alignment-baseline="baseline"
-        text-anchor="start"
-        x="0"
-        y="30%">OKF</text>
-      <polyline
+      <g class="tickLinesLegend" v-if="vTicks">
+        <text
+          class="ticksLegendLabels"
+          alignment-baseline="hanging"
+          text-anchor="start"
+          :style="{ fill: stepsColors[0] }"
+          x="0%"
+          y="0%">sehr geringe Nachhaltigkeit</text>
+        <text
+          class="ticksLegendLabels"
+          alignment-baseline="hanging"
+          text-anchor="end"
+          :style="{ fill: stepsColors[steps - 1] }"
+          x="100%"
+          y="0%">sehr hohe Nachhaltigkeit</text>
+        <line
+          v-for="tick in steps"
+          class="tickLegend"
+          :style="{ 'stroke': stepsColors[tick - 1] }"
+          :x1="(tick - 1) * (100 / steps) + '%'"
+          :y1="legendLabeldnsHeight"
+          :x2="(tick) * (100 / steps) + '%'"
+          :y2="legendLabeldnsHeight" />
+      </g>
+      <!-- <polyline
         stroke="black"
         fill="none"
-        :points="`0,0 0,10 ${xOKF},10 ${xOKF},20`" />
+        :points="`${legendLabelokfWidth / 2},${legendLabelokfHeight} ${legendLabelokfWidth / 2},${legendLabelokfHeight + legendLabelSteps * 1} ${xOKF},${legendLabelokfHeight + legendLabelSteps * 1} ${xOKF},${legendLabelokfHeight + legendLabelSteps * 2}`" /> -->
+      <!-- <polyline
+        class="legendLine"
+        :points="`${legendLabelokfWidth / 2},${height - legendLabeldnsHeight} ${legendLabelokfWidth / 2},${height - legendLabeldnsHeight - legendLabelSteps} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" /> -->
       <polyline
-        stroke="black"
-        fill="none"
-        :points="`${width},150 ${width},140 ${xDNS},140 ${xDNS},130`" />
+        class="legendLine"
+        :points="`${xOKF},${height - legendLabeldnsHeight} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
+      <polyline
+        class="legendLine"
+        :points="`${xDNS},${height - legendLabeldnsHeight} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
+      <!-- <polyline
+        class="legendLine"
+        :points="`${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight} ${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" /> -->
       <text
-        ref="dns"
+        ref="okfLabelLegend"
         alignment-baseline="hanging"
-        text-anchor="end"
-        x="100%"
-        y="70%">DNS</text>
+        text-anchor="middle"
+        :x="xOKF"
+        :y="height - 15">OKF</text>
+      <text
+        ref="dnsLabelLegend"
+        alignment-baseline="hanging"
+        text-anchor="middle"
+        :x="xDNS"
+        :y="height - 15">DNS</text>
     </g>
   </svg>
 </template>
 
 <script>
+  import { mapState, mapGetters } from 'vuex'
   import format from '~/assets/js/format.js'
 
   export default {
@@ -135,12 +168,38 @@
         width: 0,
         height: 0,
         okfLabel: 0,
-        dnsLabel: 0
+        dnsLabel: 0,
+        markerR: 8,
+        legendLabelokfWidth: 0,
+        legendLabelokfHeight: 20,
+        legendLabeldnsWidth: 0,
+        legendLabeldnsHeight: 20,
+        legendLabelSteps: 0,
+        legendLabelDistance: 3
       }
     },
     mounted: function () {
       this.width = this.$refs.vis.clientWidth
       this.height = this.$refs.vis.clientHeight
+      if (typeof this.$refs.okfLabelLegend !== 'undefined') {
+        this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
+        this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
+        console.log('legendLabeldnsWidth', this.legendLabeldnsWidth)
+        // this.legendLabelokfHeight = this.$refs.okfLabelLegend.clientHeight
+        this.legendLabelSteps =
+          (
+            this.height / 2 -
+            this.markerR / 2 -
+            this.legendLabelokfHeight -
+            this.legendLabelDistance * 2
+          ) / 2
+
+        console.log(this.legendLabelSteps)
+        // console.log('width:', this.legendLabelokfWidth)
+        // console.log('height:', this.legendLabelokfHeight)
+        // console.log(this.$refs.okfLabelLegend.clientHeight)
+        // console.log(this.$refs.okfLabelLegend)
+      }
       this.okfWidth = this.$refs.okf.clientWidth
       this.dnsWidth = this.$refs.dns.clientWidth
     },
@@ -151,6 +210,12 @@
       }
     },
     computed: {
+      ...mapState([
+        'steps'
+      ]),
+      ...mapGetters([
+        'stepsColors'
+      ]),
       dns: function () {
         return this.sdg.values.dns
       },
@@ -213,6 +278,11 @@
     flex: 1;
     height: 100%;
 
+    .legendLine {
+      stroke: rgba(0, 0, 0, .2);
+      fill: none;
+    }
+
     .range {
       stroke: #ebecf1;
       stroke-width: 3px;
@@ -221,6 +291,15 @@
     .tick {
       stroke: #D3D4D9;
       stroke-width: 1px;
+    }
+
+    .ticksLegendLabels {
+      font-size: 0.9rem;
+    }
+
+    .tickLegend {
+      stroke: #aaa;
+      stroke-width: 3px;
     }
 
     .diff {
