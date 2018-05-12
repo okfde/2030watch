@@ -79,6 +79,14 @@
 
   .vis-liste {
     margin: $spacing 0;
+
+    &:hover {
+      .sdg-item:not(:hover) {
+        .sdg-marker {
+          fill: $color-mute;
+        }
+      }
+    }
   }
 
   .sdg-item {
@@ -123,9 +131,9 @@
       display: flex;
       height: calc((100vh - 40vh) / 17);
       max-height: 2.5rem;
-      min-height: 1.7rem;
+      min-height: 2.4rem;
       width: 100%;
-      margin: 0.3rem 0;
+      margin: 0 0;
 
       .sdg-number {
         width: 1rem;

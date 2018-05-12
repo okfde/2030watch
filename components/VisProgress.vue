@@ -57,18 +57,18 @@
       <text
         ref="okf"
         :class="{ 'sdg-label': true, 'sdg-label-total': true, 'invert': invert }"
-        alignment-baseline="baseline"
+        alignment-baseline="hanging"
         :text-anchor="labels[0].l"
         :x="labels[0].x"
-        y="30%"
+        y="0%"
         v-html="(true ? '2030 Watch: ' : '') + format(okf)" />
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
-        alignment-baseline="hanging"
+        alignment-baseline="baseline"
         :text-anchor="labels[1].l"
         :x="labels[1].x"
-        y="70%"
+        y="100%"
         v-html="(true ? 'DNS: ' : '') + format(dns)" />
     </g>
     <g v-if="vLegend">
@@ -114,12 +114,14 @@
         :points="`${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight} ${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" /> -->
       <text
         ref="okfLabelLegend"
+        class="legendLabel"
         alignment-baseline="hanging"
         text-anchor="middle"
         :x="xOKF"
         :y="height - 15">OKF</text>
       <text
         ref="dnsLabelLegend"
+        class="legendLabel"
         alignment-baseline="hanging"
         text-anchor="middle"
         :x="xDNS"
@@ -184,8 +186,6 @@
       if (typeof this.$refs.okfLabelLegend !== 'undefined') {
         this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
         this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
-        console.log('legendLabeldnsWidth', this.legendLabeldnsWidth)
-        // this.legendLabelokfHeight = this.$refs.okfLabelLegend.clientHeight
         this.legendLabelSteps =
           (
             this.height / 2 -
@@ -193,12 +193,6 @@
             this.legendLabelokfHeight -
             this.legendLabelDistance * 2
           ) / 2
-
-        console.log(this.legendLabelSteps)
-        // console.log('width:', this.legendLabelokfWidth)
-        // console.log('height:', this.legendLabelokfHeight)
-        // console.log(this.$refs.okfLabelLegend.clientHeight)
-        // console.log(this.$refs.okfLabelLegend)
       }
       this.okfWidth = this.$refs.okf.clientWidth
       this.dnsWidth = this.$refs.dns.clientWidth
@@ -229,6 +223,8 @@
         return this.valueInRange(this.okf) / 100 * this.width
       },
       labels: function () {
+        const { markerR } = this
+        const distance = markerR / 2
         let dns = this.xDNS
         let okf = this.xOKF
 
@@ -236,31 +232,31 @@
         let okfLabel = 'end'
 
         if (dns < okf) {
-          dns -= 3
-          okf += 3
+          dns -= distance
+          okf += distance
           dnsLabel = 'end'
           okfLabel = 'start'
 
           if (okf + this.okfWidth > this.width) {
-            okf -= 6
+            okf -= distance
             okfLabel = 'end'
           }
 
           if (dns - this.dnsWidth < 0) {
-            dns += 6
+            dns += distance
             dnsLabel = 'start'
           }
         } else {
-          dns += 3
-          okf -= 3
+          dns += distance
+          okf -= distance
 
           if (dns + this.dnsWidth > this.width) {
-            dns -= 6
+            dns -= distance
             dnsLabel = 'end'
           }
 
           if (okf - this.okfWidth < 0) {
-            okf += 6
+            okf += distance
             okfLabel = 'start'
           }
         }
@@ -297,6 +293,11 @@
       font-size: 0.9rem;
     }
 
+    .legendLabel {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
     .tickLegend {
       stroke: #aaa;
       stroke-width: 3px;
@@ -308,6 +309,7 @@
 
     .sdg-marker {
       stroke-width: 2px;
+      transition-duration: 0.2s;
 
       &.sdg-marker-total {
         fill: $color-okf;
