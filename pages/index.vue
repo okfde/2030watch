@@ -88,6 +88,8 @@
   }
 
   .legendProgress {
+    height: 7rem;
+
     svg {
       width: 100%;
     }
