@@ -176,10 +176,10 @@
         .sdg-label {
           opacity: 1 !important;
           color: var(--color);
+        }
 
-          &.sdg-label-tick {
-            opacity: 0;
-          }
+        .sdg-label-tick {
+          opacity: 0 !important;
         }
       }
     }

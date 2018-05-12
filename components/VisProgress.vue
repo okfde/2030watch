@@ -10,17 +10,17 @@
       <g v-if="vTickLabels" class="tickLabels">
         <text
           class="sdg-label sdg-label-tick"
-          alignment-baseline="baseline"
+          alignment-baseline="hanging"
           text-anchor="start"
-          x="1px"
-          y="30%"
+          x="0"
+          y="0"
           v-html="format(0)" />
         <text
           class="sdg-label sdg-label-tick"
-          alignment-baseline="baseline"
+          alignment-baseline="hanging"
           text-anchor="end"
-          x="calc(100% - 1px)"
-          y="30%"
+          x="100%"
+          y="0"
           v-html="format(100)" />
       </g>
       <g class="tickLines" v-if="vTicks">
@@ -338,11 +338,11 @@
 
     .sdg-label {
       transition-duration: 0.2s;
-      // font-size: 12px;
 
       &.sdg-label-tick {
         fill: #222;
         opacity: 1;
+        font-size: 0.7rem;
       }
 
       &.sdg-label-total {

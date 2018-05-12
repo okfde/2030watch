@@ -53,19 +53,11 @@
         }
       }
     },
-    computed: {
-    },
-    watch: {
-    },
-    methods: {
-    },
     components: {
       VisListe,
       Slideshow,
       KeyFindings,
       VisProgress
-    },
-    mounted () {
     }
   }
 </script>
