@@ -1,8 +1,8 @@
 {
-  "name": "christopher-wratil",
+  "name": "2030-watch",
   "version": "1.0.0",
-  "description": "Christopher Wratil’s website",
-  "author": "Jonas <hallo@jonasparnow.de>",
+  "description": "2030 Watch",
+  "author": "Studio Karat <hallo@karat.studio>",
   "private": true,
   "scripts": {
     "dev": "PORT=3010 nuxt",
