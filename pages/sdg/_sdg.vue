@@ -50,7 +50,7 @@
           <small class="caption">Indikatorenkatalog</small>
           <section>
             <ul class="indicator-list" ref="indicatorListDNS">
-              <li><h3 class="dns">DNS</h3></li>
+              <li ref="labelDNS"><h3 class="dns">DNS</h3></li>
               <li
                 ref="indicator"
                 v-for="(indicator, n) in sdg.ind.dns">
@@ -83,7 +83,7 @@
           </section>
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
-              <li><h3 class="okf">OKF</h3></li>
+              <li ref="labelOKF"><h3 class="okf">OKF</h3></li>
               <li
                 v-for="(indicator, n) in sdg.ind.dns"
                 v-if="!indicator.badIndicator && !indicator.modTarget">
@@ -128,6 +128,10 @@
       this.indicatorWidth = this.$refs.indicator[0].clientWidth
       this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
       this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
+      const marginLeft = Math.max(this.$refs.labelOKF.clientWidth, this.$refs.labelDNS.clientWidth)
+      this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
+      this.$refs.labelOKF.style.width = marginLeft
+      this.$refs.labelDNS.style.width = marginLeft
     },
     components: {
       VisLeiste,
