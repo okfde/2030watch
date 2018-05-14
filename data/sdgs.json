@@ -148,7 +148,7 @@
     "textIntro": "lorem ipsum",
     "textIndicators": "lorem ipsum",
     "values": {
-      "dns": 28.09601745771959,
+      "dns": 53.856162206078025,
       "okf": 45.139013315220765
     },
     "ind": {
@@ -293,7 +293,7 @@
       "alt": 5
     },
     "rating": {
-      "dns": "geringe Nachhaltigkeit",
+      "dns": "mittlere Nachhaltigkeit",
       "okf": "mittlere Nachhaltigkeit"
     }
   },
@@ -747,7 +747,7 @@
     "textIntro": "Die Gleichberechtigung der Geschlechter ist ein elementarer Faktor für nachhaltige Entwicklung weltweit. Frauen müssen gleichgestellt sich an allen Entscheidungen beteiligen können, die ihr Leben beeinflussen.",
     "textIndicators": "Die Agenda 2030 schlägt 14 Indikatoren zur Messung von Geschlechtergleichberechtigung vor und umfasst Unterziele zu Diskriminierung, Gewalt, Partizipation, unbezahlte Pflegebelastung, Zugang zum Gesundheitswesen, und Chancengleichheit im politischen, ökonomischen und öffentlichen Leben.",
     "values": {
-      "dns": 12,
+      "dns": 34.77777777777778,
       "okf": 31.630108323129516
     },
     "ind": {
@@ -934,7 +934,7 @@
       "alt": 6
     },
     "rating": {
-      "dns": "sehr geringe Nachhaltigkeit",
+      "dns": "geringe Nachhaltigkeit",
       "okf": "geringe Nachhaltigkeit"
     }
   },
@@ -947,7 +947,7 @@
     "textIntro": "lorem ipsum",
     "textIndicators": "lorem ipsum",
     "values": {
-      "dns": 3.4547407338592233,
+      "dns": 38.96982715590615,
       "okf": 13.97737036692961
     },
     "ind": {
@@ -1076,7 +1076,7 @@
       "alt": 4
     },
     "rating": {
-      "dns": "sehr geringe Nachhaltigkeit",
+      "dns": "geringe Nachhaltigkeit",
       "okf": "sehr geringe Nachhaltigkeit"
     }
   },
@@ -1744,7 +1744,7 @@
     "textIntro": "lorem ipsum",
     "textIndicators": "lorem ipsum",
     "values": {
-      "dns": 32.00000000000003,
+      "dns": 69.57142857142858,
       "okf": 57.031994733377225
     },
     "ind": {
@@ -1889,7 +1889,7 @@
       "alt": 5
     },
     "rating": {
-      "dns": "geringe Nachhaltigkeit",
+      "dns": "hohe Nachhaltigkeit",
       "okf": "mittlere Nachhaltigkeit"
     }
   },
@@ -2193,7 +2193,7 @@
     "textIntro": "lorem ipsum",
     "textIndicators": "lorem ipsum",
     "values": {
-      "dns": 7.284768211920531,
+      "dns": 4.84225261352108,
       "okf": 8.687402659224631
     },
     "ind": {
@@ -2814,7 +2814,7 @@
     "textIntro": "lorem ipsum",
     "textIndicators": "lorem ipsum",
     "values": {
-      "dns": 52.304009575104736,
+      "dns": 82.56134051466188,
       "okf": 42.488489760134705
     },
     "ind": {
@@ -2985,7 +2985,7 @@
       "alt": 6
     },
     "rating": {
-      "dns": "mittlere Nachhaltigkeit",
+      "dns": "sehr hohe Nachhaltigkeit",
       "okf": "mittlere Nachhaltigkeit"
     }
   },
