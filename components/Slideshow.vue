@@ -6,8 +6,7 @@
     <section class="columns columns-gutter">
       <div class="text">
         <div v-if="slide === 1" ref="slide1">
-          <h5 class="caption">Das Problem mit den Daten</h5>
-          <p>Die Bundesregierung verwendet einen <a target="_blank" href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22">offiziellen Indikatorenkatalog</a> um den Fortschritt Deutschlands in Richtung Nachhaltigkeit zu überwachen. Für jedes der 17 Nachhaltigkeitsziele (SDGs) spiegelt ein Indikatorenset den jeweiligen Fortschritt in Richtung Nachhaltigkeit wieder. Das Urteil: Deutschland steht gut da. 2030 Watch stellt diesem offiziellen Indikatorenkatalog einen komplementären Indikatorenkatalog entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf.</p>      
+          <p>Die Bundesregierung verwendet einen <a target="_blank" href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22">offiziellen Indikatorenkatalog (DNS)</a> um den Fortschritt Deutschlands in Richtung Nachhaltigkeit zu überwachen. Für jedes der 17 Nachhaltigkeitsziele (SDGs) spiegelt ein Indikatorenset den jeweiligen Fortschritt in Richtung Nachhaltigkeit wieder. Das Urteil: Deutschland ist nachhaltig. <br><br> 2030 Watch stellt diesem offiziellen Indikatorenkatalog einen komplementären Indikatorenkatalog entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf.</p>      
         </div>
         <div v-else-if="slide === 2" ref="slide2">
           <h5 class="caption">Ein Beispiel</h5>
@@ -24,7 +23,7 @@
       </div>
       <div class="indicators">
         <div v-if="slide < 2">
-          <h5 class="caption">Das Problem</h5>
+          <img src="../assets/img/chart.svg" style="width: 80%" alt="">
            <!-- <p>Der offizielle Indikatorenkatalog der Bundesregierung ist unzureichend, da er ein zu enges und unambitioniertes Bild von Nachhaltigkeit zeichnet. 2030 Watch stellt diesem offiziellen Indikatorenkatalog einen <span>komplementären Indikatorenkatalog</span> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf, um wirklich nachhaltg zu werden.</p> -->
         </div>
         <div v-if="slide >= 2">
