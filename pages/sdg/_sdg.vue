@@ -55,6 +55,16 @@
                 ref="indicator"
                 v-for="(indicator, n) in sdg.ind.dns">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
+              <li class="legend" ref="indicatorLegend">
+                <ul>
+                  <li><i class="demo-icon icon-plus-circled" /> neuer Indikator</li>
+                  <li><i class="demo-icon icon-cancel-circled" /> ungeeigneter Indikator</li>
+                  <li><i class="demo-icon icon-ok-circled" /> Indikator übernommen</li>
+                  <li><i class="demo-icon icon-minus-circled" /> aussageloser Zielwert</li>
+                  <li><i class="demo-icon icon-cog-circled" /> modifizierter Zielwert</li>
+                  <li><i class="demo-icon icon-help-circled" /> nicht berechenbar</li>
+                </ul>
+              </li>
             </ul>
           </section>
           <section class="indicator-lines">
@@ -109,12 +119,14 @@
     data: function () {
       return {
         indicatorWidth: 150, // css default value
-        indicatorLinesHeight: 200 // css default value
+        indicatorLinesHeight: 200, // css default value,
+        indicatorMargin: 10
       }
     },
     mounted () {
       this.indicatorWidth = this.$refs.indicator[0].clientWidth
       this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
+      this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
     },
     components: {
       VisLeiste,
@@ -180,7 +192,7 @@
           return !indicator.badIndicator && !indicator.modTarget
         })
         return _.map(indicators, (indicator, n) => {
-          return (n + 0.5) * this.indicatorWidth + (n * 20) + 'px'
+          return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
         })
       },
       linesMod: function () {
@@ -190,16 +202,12 @@
         })
         return _.map(indicators, (indicator, n) => {
           const position = _.findIndex(this.sdg.ind.okf, { 'id': indicator.altIndicator })
-          const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20)
-          const x2 = (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20)
+          const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * this.indicatorMargin * 2)
+          const x2 = (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * this.indicatorMargin * 2)
           const y1 = 0
           const y2 = this.indicatorLinesHeight
           const d = `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
           return d
-          // return {
-          //   'x1': (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20) + 'px',
-          //   'x2': (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20) + 'px'
-          // }
         })
       }
     }
