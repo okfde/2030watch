@@ -29,7 +29,6 @@ const store = () => new Vuex.Store({
       return _.fromPairs(values)
     },
     stepsColors (state) {
-      console.log('stepsColors', state)
       const scale = chroma.scale(['#D22F27', '#F1B31C', '#5C9E31']).mode('lab').domain([0, state.steps])
       const steps = []
       for (let i = 0; i < state.steps; i++) {
