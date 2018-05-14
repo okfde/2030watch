@@ -1,53 +1,16 @@
 <template>
   <nuxt-link :to="'../indicator/' + i.slug" :title="i.label">
-    <div :class="{ 'vis-indicator': true, 'extended': !compact }" ref="vis">
+    <div :class="{ 'vis-indicator': true, 'extended': !compact }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" />
-      <svg
-        class="icon"
-        v-if="!compact"
-        viewBox="-1 -1 2 2">
-        <circle
-          v-if="i.author === 'okf'"
-          fill="green"
-          cx="0"
-          cy="0"
-          r="1"
-        />
-        <circle
-          v-if="i.badTarget"
-          cx="0"
-          cy="0"
-          r="1"
-        />
-        <circle
-          v-if="i.badIndicator"
-          fill="red"
-          cx="0"
-          cy="0"
-          r="1"
-        />
-        <circle
-          v-if="i.uncalculable"
-          cx="0"
-          cy="0"
-          r="1"
-        />
-        <circle
-          v-if="i.modTarget"
-          fill="#8EB3EE"
-          cx="0"
-          cy="0"
-          r="1"
-        />
-      </svg>
+      <ul class="labels">
+        <li v-if="i.author === 'okf'" title="Neuer Indikator"><i class="icon-plus-circled" /></li>
+        <li v-if="i.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></li>
+        <li v-if="i.keep" title="Indikator übernehmen"><i class="icon-ok-circled" /></li>
+        <li v-if="i.badTarget"><i title="aussageloser Zielwert" class="icon-minus-circled" /></li>
+        <li v-if="i.modTarget" title="Zielwert modifizieren"><i class="icon-cog-circled" /></li>
+        <li v-if="i.uncalculable" title="nicht berechenbar"><i class="icon-help-circled" /></li>
+      </ul>
       <h5>{{ i.label }}</h5>
-<!--       <ul>
-        <li>badTarget: {{ i.badTarget ? 'ja' : 'nein' }}</li>
-        <li>badIndicator: {{ i.badIndicator ? 'ja' : 'nein' }}</li>
-        <li>uncalculable: {{ i.uncalculable ? 'ja' : 'nein' }}</li>
-        <li>modTarget: {{ i.modTarget ? 'ja' : 'nein' }}</li>
-        <li>neuer: {{ i.altIndicator }}</li>
-      </ul> -->
     </div>
   </nuxt-link>
 </template>
@@ -55,6 +18,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import VisPieChart from '~/components/VisPieChart.vue'
+  import format from '~/assets/js/format.js'
 
   export default {
     props: {
@@ -94,6 +58,9 @@
           return this.color
         }
       }
+    },
+    methods: {
+      format: format
     },
     components: {
       VisPieChart
@@ -138,17 +105,19 @@
       color: rgba(0, 0, 0, 0.7);
     }
 
-    svg {
-      &.icon {
-        width: 20px;
-        margin-top: -2rem;
-      }
-    }
+    .labels {
+      margin: -0.1rem 0 0.1rem;
+      width: 100%;
+      text-align: right;
 
-    ul li {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      height: 3rem;
+      li {
+        margin: 0 0.1rem;
+        display: inline-block;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 </style>
