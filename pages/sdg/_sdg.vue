@@ -57,12 +57,12 @@
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
-                  <li><i class="demo-icon icon-plus-circled" /> neuer Indikator</li>
-                  <li><i class="demo-icon icon-cancel-circled" /> ungeeigneter Indikator</li>
-                  <li><i class="demo-icon icon-ok-circled" /> Indikator übernommen</li>
-                  <li><i class="demo-icon icon-minus-circled" /> aussageloser Zielwert</li>
-                  <li><i class="demo-icon icon-cog-circled" /> modifizierter Zielwert</li>
-                  <li><i class="demo-icon icon-help-circled" /> nicht berechenbar</li>
+                  <li><i class="icon-plus-circled" /> neuer Indikator</li>
+                  <li><i class="icon-cancel-circled" /> ungeeigneter Indikator</li>
+                  <li><i class="icon-ok-circled" /> Indikator übernommen</li>
+                  <li><i class="icon-minus-circled" /> aussageloser Zielwert</li>
+                  <li><i class="icon-cog-circled" /> modifizierter Zielwert</li>
+                  <li><i class="icon-help-circled" /> nicht berechenbar</li>
                 </ul>
               </li>
             </ul>
