@@ -58,13 +58,19 @@ function processSDGs(sdgs, allIndicators) {
 		const { dns: indi_dns, okf: indi_okf } = _.groupBy(indicators, 'author')
 
 		const usableValuesOKF = _.filter(indi_okf, i => {
-			return !_.isNaN(i['progress'])
-		})
-		const usableValuesDNS = _.filter(indi_dns, i => {
-			if (i['badIndicator']) { return false }
 			if (i['uncalculable']) { return false }
-			if (i['modTarget']) { return false }
+			return !_.isNaN(i['progress'] || _.isNull(i['progress']))
+		})
+
+		const calcubaleValuesDNS = _.filter(indi_dns, i => {
+			if (i['uncalculable']) { return false }
 			if (_.isNaN(i['progress']) || _.isNull(i['progress'])) { return false }
+			return true
+		})
+
+		const usableValuesDNS = _.filter(calcubaleValuesDNS, i => {
+			if (i['badIndicator']) { return false }
+			if (i['modTarget']) { return false }
 			return true
 		})
 
@@ -74,7 +80,7 @@ function processSDGs(sdgs, allIndicators) {
 		const _sdg = {
 			...sdg,
 			'values': {
-				'dns': _.sumBy(usableValuesDNS, 'progress') / usableValuesDNS.length,
+				'dns': _.sumBy(calcubaleValuesDNS, 'progress') / calcubaleValuesDNS.length,
 				'okf': _.sumBy(usableValuesCombined, 'progress') / usableValuesCombined.length
 			},
 			'ind': {
@@ -218,6 +224,8 @@ function processIndicatorMeta(indicator) {
 		} else {
 			i['modTarget'] = false
 		}
+
+		i['keep'] = !i['badIndicator'] && !i['modTarget']
 	}
 
 	if (author === 'okf') {
