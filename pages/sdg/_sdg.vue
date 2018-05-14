@@ -58,20 +58,17 @@
             </ul>
           </section>
           <section class="indicator-lines">
-            <svg>
+            <svg ref="indicatorLines">
               <line
                 v-for="indicator in linesNormal"
                 :x1="indicator"
                 :x2="indicator"
                 y1="0%"
                 y2="100%" />
-              <line
+              <path
                 v-for="indicator in linesMod"
                 stroke-dasharray="5, 5"
-                :x1="indicator.x1"
-                :x2="indicator.x2"
-                y1="0%"
-                y2="100%" />
+                :d="indicator" />
             </svg>
           </section>
           <section>
@@ -111,17 +108,13 @@
     },
     data: function () {
       return {
-        indicatorWidth: 150 // default value
+        indicatorWidth: 150, // css default value
+        indicatorLinesHeight: 200 // css default value
       }
     },
     mounted () {
-      console.log(this.$refs.indicator[0].clientWidth)
-      console.log(this.$refs)
-      console.log(this.$refs.indicatorListDNS.clientWidth)
-      console.log(this.$refs.indicatorListOKF.clientWidth)
-
       this.indicatorWidth = this.$refs.indicator[0].clientWidth
-      console.log(this.indicatorWidth)
+      this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
     },
     components: {
       VisLeiste,
@@ -196,15 +189,17 @@
           return indicator.modTarget
         })
         return _.map(indicators, (indicator, n) => {
-          console.log('indicator', indicator.altIndicator)
           const position = _.findIndex(this.sdg.ind.okf, { 'id': indicator.altIndicator })
-          console.log(position)
-          console.log((n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20) + 'px')
-          console.log((n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20) + 'px')
-          return {
-            'x1': (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20) + 'px',
-            'x2': (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20) + 'px'
-          }
+          const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20)
+          const x2 = (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20)
+          const y1 = 0
+          const y2 = this.indicatorLinesHeight
+          const d = `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
+          return d
+          // return {
+          //   'x1': (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * 20) + 'px',
+          //   'x2': (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * 20) + 'px'
+          // }
         })
       }
     }
@@ -278,8 +273,9 @@
         height: 200px;
         margin: 0 10px; // 10px is fixed in js!
 
-        line {
+        line, path {
           stroke: #aaa;
+          fill: none;
         }
       }
     }
