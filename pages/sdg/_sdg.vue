@@ -30,27 +30,27 @@
           <section class="description description-dns columns columns-gutter">
             <div>
               <hgroup>
-                <small class="caption">Indikatorenkatalog</small>
-                <h3>Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+                <h3 class="dns">Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
               </hgroup>
               <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-              <span class="process" v-html="format(dns)" />
+              <span class="process dns" v-html="format(dns)" />
             </div>
             <div>
               <hgroup>
-                <small class="caption">Indikatorenkatalog</small>
-                <h3>2030 Watch (OKF)</h3>
+                <h3 class="okf">2030 Watch (OKF)</h3>
               </hgroup>
               <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
-              <span class="process" v-html="format(okf)" />
+              <span class="process okf" v-html="format(okf)" />
             </div>
           </section>
         </div>
       </div>
       <div class="indicator-vis">
         <section class="indicators">
+          <small class="caption">Indikatorenkatalog</small>
           <section>
             <ul class="indicator-list" ref="indicatorListDNS">
+              <li><h3 class="dns">DNS</h3></li>
               <li
                 ref="indicator"
                 v-for="(indicator, n) in sdg.ind.dns">
@@ -83,6 +83,7 @@
           </section>
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
+              <li><h3 class="okf">OKF</h3></li>
               <li
                 v-for="(indicator, n) in sdg.ind.dns"
                 v-if="!indicator.badIndicator && !indicator.modTarget">
@@ -265,6 +266,10 @@
 
     section {
       padding: $spacing / 2 $spacing;
+    }
+
+    .caption {
+      padding-left: calc(#{$spacing} + 10px);
     }
 
     .indicator-list {
