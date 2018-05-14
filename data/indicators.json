@@ -25,7 +25,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-stickstoffueberschuss": {
     "id": "2_1",
@@ -54,7 +55,8 @@
     "uncalculable": false,
     "spill": false,
     "modTarget": true,
-    "altIndicator": "2_1"
+    "altIndicator": "2_1",
+    "keep": false
   },
   "dns-anteil-biologischer-landwirtschaft": {
     "id": "2_2",
@@ -82,7 +84,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-vorzeitige-sterblichkeit-frauen": {
     "id": "3_1",
@@ -110,7 +113,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-vorzeitige-sterblichkeit-maenner": {
     "id": "3_2",
@@ -138,7 +142,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-raucherquote-12-17j": {
     "id": "3_3",
@@ -166,7 +171,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-raucherquote-ab-15j": {
     "id": "3_4",
@@ -194,7 +200,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-adipositasquote-11-17j": {
     "id": "3_5",
@@ -222,7 +229,8 @@
     "badIndicator": false,
     "uncalculable": true,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-adipositasquote-ab-18j": {
     "id": "3_6",
@@ -250,7 +258,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-luftschadstoffen-index": {
     "id": "3_7",
@@ -278,7 +287,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-pm10-exposition": {
     "id": "3_8",
@@ -306,7 +316,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-fruehe-schulabgaenger": {
     "id": "4_1",
@@ -334,7 +345,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-tertiaerer-oder-postsekundaerer-abschluss": {
     "id": "4_2",
@@ -362,7 +374,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-ganztagsbetreuung-0-2j": {
     "id": "4_3",
@@ -390,7 +403,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-ganztagsbetreuung-3-5j": {
     "id": "4_4",
@@ -418,7 +432,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-verdienstabstand-zwischen-frauen-und-maennern": {
     "id": "5_1",
@@ -446,7 +461,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-frauen-wirtschaft-dns": {
     "id": "5_2",
@@ -475,7 +491,8 @@
     "uncalculable": false,
     "spill": false,
     "modTarget": true,
-    "altIndicator": "5_2"
+    "altIndicator": "5_2",
+    "keep": false
   },
   "dns-frauen-bildung-eza": {
     "id": "5_3",
@@ -503,7 +520,8 @@
     "badIndicator": true,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": false
   },
   "dns-phosphor-in-fliessgewaessern": {
     "id": "6_1",
@@ -531,7 +549,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-nitrat-im-grundwasser": {
     "id": "6_2",
@@ -559,7 +578,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-trinkwasser-und-sanitaerversorgung": {
     "id": "6_3",
@@ -587,7 +607,8 @@
     "badIndicator": true,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": false
   },
   "dns-endenergieproduktivitaet": {
     "id": "7_1",
@@ -615,7 +636,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-energieverbrauch": {
     "id": "7_2",
@@ -643,7 +665,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-ee-energieverbrauch": {
     "id": "7_3",
@@ -671,7 +694,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-ee-stromverbrauch": {
     "id": "7_4",
@@ -699,7 +723,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-rohstoffproduktivitaet": {
     "id": "8_1",
@@ -727,7 +752,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-staatsdefizit": {
     "id": "8_2",
@@ -755,7 +781,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-strukturelles-defizit": {
     "id": "8_3",
@@ -783,7 +810,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-staatsschulden": {
     "id": "8_4",
@@ -811,7 +839,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-anlageinvestitionen": {
     "id": "8_5",
@@ -839,7 +868,8 @@
     "badIndicator": false,
     "uncalculable": true,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-bip": {
     "id": "8_6",
@@ -867,7 +897,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-erwerbstaetigenquote-20-64": {
     "id": "8_7",
@@ -895,7 +926,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-erwerbstaetigenquote-60-64": {
     "id": "8_8",
@@ -923,7 +955,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-textilbuendnis": {
     "id": "8_9",
@@ -951,7 +984,8 @@
     "badIndicator": true,
     "uncalculable": true,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": false
   },
   "dns-forschung-und-entwicklung": {
     "id": "9_1",
@@ -979,7 +1013,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-auslaendische-schulabsolventinnen": {
     "id": "10_1",
@@ -1007,7 +1042,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-gini-koeffizient-dns": {
     "id": "10_2",
@@ -1036,7 +1072,8 @@
     "uncalculable": false,
     "spill": false,
     "modTarget": true,
-    "altIndicator": "10_2"
+    "altIndicator": "10_2",
+    "keep": false
   },
   "dns-siedlungs-verkehrsflaeche": {
     "id": "11_1",
@@ -1064,7 +1101,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-freiraumflaeche": {
     "id": "11_2",
@@ -1092,7 +1130,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-siedlungsdichte": {
     "id": "11_3",
@@ -1120,7 +1159,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-energieverbrauch-gueterverkehr": {
     "id": "11_4",
@@ -1148,7 +1188,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-energieverbrauch-personenverkehr": {
     "id": "11_5",
@@ -1176,7 +1217,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-reisezeit-oepnv": {
     "id": "11_6",
@@ -1204,7 +1246,8 @@
     "badIndicator": false,
     "uncalculable": true,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-wohnkosten": {
     "id": "11_7",
@@ -1232,7 +1275,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-produkte-umweltzeichen": {
     "id": "12_1",
@@ -1260,7 +1304,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-energieverbrauch-emmissionen-konsum": {
     "id": "12_2",
@@ -1288,7 +1333,8 @@
     "badIndicator": false,
     "uncalculable": true,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-emas-organisationsstandorte": {
     "id": "12_3",
@@ -1316,7 +1362,8 @@
     "badIndicator": true,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": false
   },
   "dns-treibhausgasemmissionen": {
     "id": "13_1",
@@ -1344,7 +1391,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-internationale-klimafinanzierung": {
     "id": "13_2",
@@ -1372,7 +1420,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-stickstoffeintrag-ostsee": {
     "id": "14_1",
@@ -1400,7 +1449,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-stickstoffeintrag-nordsee": {
     "id": "14_2",
@@ -1428,7 +1478,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-nachhaltige-fischbestaende": {
     "id": "14_3",
@@ -1456,7 +1507,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-index-artenvielfalt-landschaftsqualitaet": {
     "id": "15_1",
@@ -1484,7 +1536,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-eutrophierung-der-oekosysteme": {
     "id": "15_2",
@@ -1512,7 +1565,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-redd+-waelder": {
     "id": "15_3",
@@ -1540,7 +1594,8 @@
     "badIndicator": true,
     "uncalculable": true,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": false
   },
   "dns-straftaten": {
     "id": "16_1",
@@ -1568,7 +1623,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-sicherung-registrierung-zerstoerung-kleinwaffen": {
     "id": "16_2",
@@ -1596,7 +1652,8 @@
     "badIndicator": true,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": false
   },
   "dns-corruption-perception-index": {
     "id": "16_3",
@@ -1624,7 +1681,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": false,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-corruption-perception-index-eza-partner": {
     "id": "16_4",
@@ -1652,7 +1710,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-oda-bne": {
     "id": "17_1",
@@ -1680,7 +1739,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-studierende-forscher-dc-ldc": {
     "id": "17_2",
@@ -1708,7 +1768,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "dns-importe-ldc": {
     "id": "17_3",
@@ -1736,7 +1797,8 @@
     "badIndicator": false,
     "uncalculable": false,
     "spill": true,
-    "modTarget": false
+    "modTarget": false,
+    "keep": true
   },
   "okf-armut-und-ausgrenzung-60+": {
     "id": "1_2",
@@ -3133,6 +3195,7 @@
     "uncalculable": false,
     "spill": false,
     "modTarget": false,
+    "keep": true,
     "txtintroduction": "Dieser Indikator zeigt den Anteil von Frauen in Aufsichtsräten von börsennotierten und voll mitbestimmungspflichtigen Unternehmen in Deutschland. 2016 gingen 106 Unternehmen in die Berechnung mit ein. Datengrundlage bilden die Ergebnisse von Wahlen in den Hauptversammlungen.",
     "txtdescription": "Dieser Indikator zeigt den Anteil von Frauen in Aufsichtsräten von börsennotierten und voll mitbestimmungspflichtigen Unternehmen in Deutschland. 2016 gingen 106 Unternehmen in die Berechnung mit ein. Datengrundlage bilden die Ergebnisse von Wahlen in den Hauptversammlungen. Im Zuge der gesetzlichen Vorschriften sind börsennotierte und voll mitbestimmungspflichtige Unternehmen in Deutschland seit 2016 dazu verpflichtet mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Die deutsche Nachhaltigkeitsstrategie setzt das gleiche Ziel für das Jahr 2030 fest.",
     "txttarget": "Im Zuge der gesetzlichen Vorschriften sind börsennotierte und voll mitbestimmungspflichtige Unternehmen in Deutschland schon seit 2016 dazu verpflichtet mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Der Zielwert der DNS für das Jahr 2030 liegt damit nur 2,7 % höher als der aktuelle Wert (2016). Der Indikatorzielwert der DNS von 30% erscheint daher als wenig ambitioniert.",
