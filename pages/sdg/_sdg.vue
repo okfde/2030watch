@@ -57,12 +57,12 @@
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
-                  <li><i class="icon-plus-circled" /> neuer Indikator</li>
-                  <li><i class="icon-cancel-circled" /> ungeeigneter Indikator</li>
-                  <li><i class="icon-ok-circled" /> übernommener Indikator</li>
-                  <li><i class="icon-minus-circled" /> aussageloser Zielwert</li>
-                  <li><i class="icon-cog-circled" /> modifizierter Zielwert</li>
-                  <li><i class="icon-help-circled" /> nicht berechenbar</li>
+                  <li><span class="label"><i class="icon-plus-circled" /> neuer Indikator</span></li>
+                  <li><span class="label"><i class="icon-cancel-circled" /> ungeeigneter Indikator</span></li>
+                  <li><span class="label"><i class="icon-ok-circled" /> übernommener Indikator</span></li>
+                  <li><span class="label"><i class="icon-minus-circled" /> aussageloser Zielwert</span></li>
+                  <li><span class="label"><i class="icon-cog-circled" /> modifizierter Zielwert</span></li>
+                  <li><span class="label"><i class="icon-help-circled" /> nicht berechenbar</span></li>
                 </ul>
               </li>
             </ul>
@@ -278,6 +278,10 @@
 
     section {
       padding: $spacing / 2 $spacing;
+    }
+
+    .legend i {
+      color: $color-mute;
     }
 
     .caption {

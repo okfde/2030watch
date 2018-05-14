@@ -80,6 +80,10 @@ small + p {
   opacity: 0.8;
 }
 
+.label {
+  font-size: 0.8rem;
+}
+
 table {
   thead {
     font-weight: bold;
@@ -210,8 +214,6 @@ table {
 
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-
-  color: #aaa;
 }
 
 .icon-mail:before { content: '\e800'; } /* '' */

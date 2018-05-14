@@ -86,6 +86,10 @@
       &.extended {
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .24);
       }
+
+      .labels {
+        opacity: 1;
+      }
     }
 
     &.extended {
@@ -110,6 +114,8 @@
       width: 100%;
       text-align: right;
       min-height: 16px;
+      color: $color-mute;
+      opacity: 0.8;
 
       li {
         margin: 0 0.1rem;
