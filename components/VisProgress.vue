@@ -120,7 +120,7 @@
         alignment-baseline="hanging"
         text-anchor="middle"
         :x="xOKF"
-        :y="height - 15">OKF</text>
+        :y="height - 15">2030 Watch</text>
       <text
         ref="dnsLabelLegend"
         class="legendLabel"
