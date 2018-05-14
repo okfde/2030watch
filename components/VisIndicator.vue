@@ -7,7 +7,7 @@
         <li v-if="i.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></li>
         <li v-if="i.keep" title="Indikator übernehmen"><i class="icon-ok-circled" /></li>
         <li v-if="i.badTarget"><i title="aussageloser Zielwert" class="icon-minus-circled" /></li>
-        <li v-if="i.modTarget" title="Zielwert modifizieren"><i class="icon-cog-circled" /></li>
+        <li v-if="i.moddedTarget" title="modifizierter Zielwert"><i class="icon-cog-circled" /></li>
         <li v-if="i.uncalculable" title="nicht berechenbar"><i class="icon-help-circled" /></li>
       </ul>
       <h5>{{ i.label }}</h5>
@@ -109,6 +109,7 @@
       margin: -0.1rem 0 0.1rem;
       width: 100%;
       text-align: right;
+      min-height: 16px;
 
       li {
         margin: 0 0.1rem;

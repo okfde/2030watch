@@ -152,8 +152,9 @@ function requestIndicators(sdgs, callback) {
 								const indicators = arrDNS.concat(arrOKF)
 								processIndicators(indicators, arr => {
 									callback(arr)
+									const marked = markModifiedIndicators(arr)
 									console.log('Writing indicator data…')
-									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, arr), 'slug'))
+									writeJSONFile(indi_file, formatArrayToHash(mergeSDGIntoIndicators(sdgs, marked), 'slug'))
 								})
 							})
 						})
@@ -186,6 +187,23 @@ function mergeSDGIntoIndicators(sdgs, indicators) {
 		}
 		return indicator
 	})
+}
+
+function markModifiedIndicators(indicators) {
+	console.log('Start marking modified indicators')
+	const targets = _.pull(_.map(indicators, i => {
+		return _.get(i, 'altIndicator')
+	}), undefined)
+	console.log('Modified indicators found: ' + targets.join(', '))
+	_.each(indicators, i => {
+		if(i['author'] === 'okf') {
+			if (_.indexOf(targets, i['id']) >= 0) {
+				i['moddedTarget'] = true
+				console.log('Indicator »' + i['label'] + '« marked as modified')
+			}
+		}
+	})
+	return indicators
 }
 
 function processIndicatorMeta(indicator) {

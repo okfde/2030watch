@@ -59,9 +59,9 @@
                 <ul>
                   <li><i class="icon-plus-circled" /> neuer Indikator</li>
                   <li><i class="icon-cancel-circled" /> ungeeigneter Indikator</li>
-                  <li><i class="icon-ok-circled" /> Indikator übernehmen</li>
+                  <li><i class="icon-ok-circled" /> übernommener Indikator</li>
                   <li><i class="icon-minus-circled" /> aussageloser Zielwert</li>
-                  <li><i class="icon-cog-circled" /> Zielwert modifizieren</li>
+                  <li><i class="icon-cog-circled" /> modifizierter Zielwert</li>
                   <li><i class="icon-help-circled" /> nicht berechenbar</li>
                 </ul>
               </li>

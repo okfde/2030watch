@@ -128,6 +128,7 @@ module.exports = {
     const fullIndicatorsArr = []
 
     _.each(arr, obj => {
+      // make async request. Check n if all request have been finished
       obj = processIndicatorMeta(obj)
       processIndicatorDetail(obj, fullIndicator => {
         fullIndicatorsArr.push(fullIndicator)

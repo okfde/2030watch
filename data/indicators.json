@@ -1870,7 +1870,8 @@
     "currentYear": "2014",
     "reason": "SDSN Methode",
     "newTopic": false,
-    "pate": false
+    "pate": false,
+    "moddedTarget": true
   },
   "okf-antibiotika-landwirtschaft": {
     "id": "2_2",
@@ -2110,7 +2111,8 @@
     "currentYear": "2016",
     "reason": "Natürlicher Nullwert",
     "newTopic": false,
-    "pate": false
+    "pate": false,
+    "moddedTarget": true
   },
   "okf-verteilung-hausarbeit": {
     "id": "5_3",
@@ -2566,7 +2568,8 @@
     "currentYear": "2016",
     "reason": "Ausgangswert 2008",
     "newTopic": false,
-    "pate": false
+    "pate": false,
+    "moddedTarget": true
   },
   "okf-mipex": {
     "id": "10_3",
