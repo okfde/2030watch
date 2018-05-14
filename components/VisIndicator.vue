@@ -63,7 +63,7 @@
         required: true
       },
       color: {
-        type: String,
+        type: Number,
         default: '04A6F0'
       },
       colorScale: {
@@ -80,13 +80,16 @@
         'stepsColors'
       ]),
       colorChart: function () {
-        console.log(this.colorScale)
         if (this.colorScale) {
-          console.log(this.stepsColors)
           const range = 100 / this.stepsColors.length
-          const n = Math.round(this.i.progress / range)
-          console.log(range, n, this.i.progress, this.i.progress / range, this.stepsColors[n < 1 ? 0 : n - 1])
-          return this.stepsColors[n < 1 ? 0 : n - 1].substr(1)
+          const i = Math.min(Math.max(0, this.i.progress), 100)
+          const n = Math.round(i / range)
+          const color = this.stepsColors[n < 1 ? 0 : n - 1]
+          if (typeof color !== 'undefined') {
+            return color.substr(1)
+          } else {
+            return this.color
+          }
         } else {
           return this.color
         }
