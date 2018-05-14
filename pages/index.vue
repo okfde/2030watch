@@ -5,7 +5,7 @@
         <div class="message">
           <h1>Wie nachhaltig ist Deutschland?</h1>
           <p>Der Zustand der Welt erfordert eine Trans&shy;formation zu mehr Gerechtig&shy;keit und Nachhaltiger Entwicklung. In 2015 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Transformation siebzehn Nachhaltig&shy;keitsziele - den sogenannten “Sustainable Development Goals (SDGs)”- bis zum Jahr 2030 umzusetzen. Auch die Bundesregierung hat mit der “Deutschen Nachhaltigkeitsstrategie (DNS)” die SDGs in nationale Ziele übersetzt.</p>
-          <p>2030Watch will als zivil&shy;gesell&shy;schaftliches Projekt die Deutsche Nachhaltig&shy;keitsstrategie (DNS) kritisch ergänzen und überprüfen, ob Deutschland seine Versprechen einhält.</p>
+          <p>2030 Watch will als zivil&shy;gesell&shy;schaftliches Projekt die Deutsche Nachhaltig&shy;keitsstrategie (DNS) kritisch ergänzen und überprüfen, ob Deutschland seine Versprechen einhält.</p>
         </div>
       </div>
     </header>
@@ -17,14 +17,14 @@
     <section>
       <div class="wrapper">
         <h2>So nachhaltig ist Deutschland – Das sagen offizielle und komplementäre Daten</h2>
-        <div class="columns columns-gutter">
+        <!-- <div class="columns columns-gutter">
           <section>
             <p>2030 Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">erweiterten Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Indikatorensets auf einer Skala von 0% (sehr geringe Nachhaltigkeit) bis 100% (sehr hohe Nachhaltigkeit).</p>
           </section>
           <section class="legendProgress">
             <VisProgress :sdg="sampleSDG" :vLegend="true" :compact="false" />
           </section>
-        </div>
+        </div> -->
         <VisListe />
       </div>
     </section>
