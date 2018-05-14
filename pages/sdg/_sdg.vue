@@ -53,15 +53,15 @@
               <li ref="labelDNS"><h3 class="dns">DNS</h3></li>
               <li
                 ref="indicator"
-                v-for="(indicator, n) in sdg.ind.dns">
+                v-for="(indicator, n) in indi_dns">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
                   <li><i class="icon-plus-circled" /> neuer Indikator</li>
                   <li><i class="icon-cancel-circled" /> ungeeigneter Indikator</li>
-                  <li><i class="icon-ok-circled" /> Indikator übernommen</li>
+                  <li><i class="icon-ok-circled" /> Indikator übernehmen</li>
                   <li><i class="icon-minus-circled" /> aussageloser Zielwert</li>
-                  <li><i class="icon-cog-circled" /> modifizierter Zielwert</li>
+                  <li><i class="icon-cog-circled" /> Zielwert modifizieren</li>
                   <li><i class="icon-help-circled" /> nicht berechenbar</li>
                 </ul>
               </li>
@@ -85,8 +85,7 @@
             <ul class="indicator-list" ref="indicatorListOKF">
               <li ref="labelOKF"><h3 class="okf">OKF</h3></li>
               <li
-                v-for="(indicator, n) in sdg.ind.dns"
-                v-if="!indicator.badIndicator && !indicator.modTarget">
+                v-for="(indicator, n) in indi_dns_keep">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li
                 v-for="(indicator, n) in sdg.ind.okf">
@@ -182,6 +181,15 @@
       sdg () {
         return this.sdgs[this.$route.params.sdg]
       },
+      indi_dns_keep: function () {
+        return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['modTarget', 'uncalculable', 'id'])
+      },
+      indi_dns_not_keep: function () {
+        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id'])
+      },
+      indi_dns: function () { // Keep sorting order
+        return _.concat(this.indi_dns_keep, this.indi_dns_not_keep)
+      },
       dns: function () {
         return this.sdg.values.dns
       },
@@ -194,7 +202,7 @@
       },
       linesNormal: function () {
         const indicators = _.filter(this.sdg.ind.dns, indicator => {
-          return !indicator.badIndicator && !indicator.modTarget
+          return indicator.keep
         })
         return _.map(indicators, (indicator, n) => {
           return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
