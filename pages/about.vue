@@ -49,9 +49,9 @@
           <h2>Team</h2>
           <div class="section-wrapper">
             <team-member
-            v-for="(member, key) in team"
-            :key="key"
-            :member="member"
+              v-for="(member, key) in team"
+              :key="key"
+              :member="member"
             ></team-member>
           </div>
         </div>
@@ -101,13 +101,22 @@
           <h2>Unsere Finanzpartner</h2>
           <div class="section-wrapper">
             <div class="section-img">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMZ_Logo.svg/800px-BMZ_Logo.svg.png" width="250px" alt="BMZ Logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMZ_Logo.svg/800px-BMZ_Logo.svg.png"
+                alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
+                width="250px"
+              >
             </div>
             <div class="section-img">
-              <img src="https://www.brot-fuer-die-welt.de/typo3conf/ext/as_template/Resources/Public/Images/logo.svg" max-width="250px" alt="Brot für die Welt Logo">
+              <img src="https://www.brot-fuer-die-welt.de/typo3conf/ext/as_template/Resources/Public/Images/logo.svg"
+                alt="Logo von Brot für die Welt"
+                width="150px"
+              >
             </div>
             <div class="section-img">
-              <img src="http://via.placeholder.com/250x250" alt="Förderer Logo">
+              <img src="http://a4f.be-fair.eu/uploads/File/wtf_lez.gif"
+                alt="Logo der Landesstelle für Entwicklungszusammenarbeit"
+                width="250px"
+              >
             </div>
           </div>
         </div>
@@ -138,35 +147,35 @@
       return {
         team: [{
           name: 'Rebecca Varghese Buchholz',
-          imgUrl: 'https://2030-watch.de/static/img/team/rebeccabuchholz.jpg',
+          imgUrl: require('~/assets/img/team/rebecca.jpg'),
           role: 'Projektleitung',
           email: 'rebecca.buchholz@okfn.de',
           twitter: 'https://twitter.com/okfde'
         },
         {
           name: 'Claudia Schwegmann',
-          imgUrl: 'https://2030-watch.de/static/img/team/claudia.jpg',
+          imgUrl: require('~/assets/img/team/claudia.jpg'),
           role: 'Gründerin',
           email: 'claudia.schwegmann@okfn.org ',
           twitter: 'https://twitter.com/okfde'
         },
         {
           name: 'John David Langlo',
-          imgUrl: 'https://2030-watch.de/static/img/team/johnlanglo_square.jpg',
+          imgUrl: require('~/assets/img/team/john.png'),
           role: 'Studentischer Mitarbeiter',
           email: 'john.langlo@okfn.de',
           twitter: 'https://twitter.com/okfde'
         },
         {
           name: 'Saadya Windauer',
-          imgUrl: 'https://2030-watch.de/static/img/team/Saa%20Windauer.jpg',
+          imgUrl: require('~/assets/img/team/saadya.jpg'),
           role: 'Projektmanagerin',
           email: 'saadya.windauer@okfn.de',
           twitter: 'https://twitter.com/okfde'
         },
         {
           name: 'Jennifer Gebske',
-          imgUrl: 'http://via.placeholder.com/100x100',
+          imgUrl: require('~/assets/img/team/jenny.png'),
           role: 'Entwicklerin',
           email: 'jennifer.gebske@okfn.de',
           twitter: 'https://twitter.com/okfde'
