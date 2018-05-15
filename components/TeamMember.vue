@@ -1,14 +1,14 @@
 <template>
   <div class="team-member">
     <div class="avatar">
-      <img :src="member.imgUrl" alt='2030 Watch Team Avatar' />
+      <img :src="member.imgUrl" :alt="'Foto von' + member.name" />
     </div>
     <div class="info">
       <span class="name">{{ member.name }}</span>
       <span class="role">{{ member.role }}</span>
       <div class="socials">
         <a v-if="member.email" :href="'mailto:' + member.email">
-          <img src="../assets/icons/email.png" alt="Email Icon" />
+          <img src="../assets/icons/email.png" alt="E-Mail Icon" />
         </a>
         <a v-if="member.twitter" :href="member.twitter" target="_blank">
           <img src="../assets/icons/twitter.png" alt="Twitter Icon" />
