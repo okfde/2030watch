@@ -5,73 +5,127 @@
         <h1>Über uns</h1>
         <section class="columns columns-gutter">
           <div>
-            <p>Wer steckt hinter 2030 Watch? Was treibt uns an? Hier erfährst du mehr</p>
+            <p>Wer steckt hinter 2030Watch? Was treibt uns an? Hier erfährst du mehr</p>
           </div>
         </section>
       </div>
     </header>
     <div class="content">
-        <section>
-          <div class="wrapper">
-            <h2>2030 Watch</h2>
-            <div class="section-wrapper">
-              <div class="section-text">
-                <p>Das Projektbudget für 2015 war 55.620 Euro. 73% des Budgets wurden vom BMZ getragen. Die übrigen Finanzgeber waren Welthungerhilfe (9%), Brot für die Welt /EED (9%) Terre des Hommes (7%) und katholischer Fonds (ca. 2%). Der Rest (weniger als 1%) sind Eigenmittel. Das Budget für 2016 ist vorläufig. Nach diesem Budget ist unser Hauptförderer weiterhin das BMZ im Rahmen des von Engagement Global verwalteten Programm für Entwicklungspolitische Bildung (FEB), sowie Brot für die Welt und die Welthungerhilfe.</p>
-                <p>Das Projektbudget für 2016 war 62.900 Euro. 69% des Budgets wurden vom FEB Programm des BMZ getragen. Die übrigen Finanzgeber waren Welthungerhilfe (9%), Brot für die Welt/EED (15%) und LEZ (2,5%). Die verbleibenden 3 % der Mittel sind kleine Zuwendungen vom Forum Ziviler Friedensdienst, von der Deutschen Stiftung Weltbevölkerung und von Transparency International für die SDG Konferenz im Mai 2016 sowie private Spenden.</p>
-              </div>
-              <div class="section-img">
-                <img src="../assets/img/2030watch_logo.png" alt="2030 Watch Logo">
-              </div>
+
+      <section>
+        <div class="wrapper">
+          <h2>2030Watch</h2>
+          <div class="section-wrapper">
+            <div class="section-text">
+              <p>
+                2030Watch zeigt eine alternative Sichtweise wie gut Deutschland
+                die globalen Nachhaltigkeitsziele umsetzt. Ist Deutschland auf
+                dem Weg einer Transformation wie in der Agenda 2030 vorgesehen?
+                2030Watch untersucht diese Fragen anhand von Indikatoren: Wie
+                wird Nachhaltigkeit gemessen und wie könnte oder sollte man
+                Nachhaltigkeit messen? 2030Watch vergleicht die offiziellen
+                Indikatoren der deutschen Nachhaltigkeitsstrategien mit
+                alternativen Indikatoren.
+              </p>
+              <p>
+                2030Watch wird hauptsächlich durch das BMZ im Rahmen des von
+                Engagement Global verwalteten Programms für Entwicklungspolitische
+                Bildung (FEB) sowie von Brot für die Welt und der Landesstelle
+                für Entwicklungszusammenarbeit gefördert. Das vorgesehene
+                Projektbudget für 2017-2018 beträgt ca. 214 000 Euro: 75% des
+                Budgets wurden vom FEB Programm des BMZ getragen, 23% von Brot
+                für die Welt/EED und LEZ (2,0%).
+              </p>
+            </div>
+            <div class="section-img">
+              <img src="../assets/img/2030watch_logo.png" alt="2030Watch Logo">
             </div>
           </div>
-        </section>
-        <section>
-          <div class="wrapper">
-            <h2>Open Knowledge Foundation</h2>
-            <div class="section-wrapper">
-              <div class="section-text">
-                <p>Die Open Knowledge Foundation Deutschland (OKF DE) ist ein gemeinnütziger Verein, der sich für die Verbreitung von freiem Wissen in der Gesellschaft einsetzt. Unsere Projekte schaffen die digitale Infrastruktur für zivilgesellschaftliches Handeln und unterstützen Bürger, Journalisten und Organisationen dabei, ihr Recht auf Information, Transparenz und Beteiligung wahrzunehmen. Wir sind Teil eines internationalen Netzwerkes von Experten und Freiwilligen in 58 Ländern.</p>
-                <p>Freies Wissen bildet die Grundlage für eine offene und demokratische Gesellschaft. Es ermöglicht soziale Teilhabe, Entwicklung, Austausch, Bildung und neue Geschäftsmodelle. Unsere Arbeit erstreckt sich auf die Bereiche Politik und Informationsfreiheit, Civic Tech, Forschung, kulturelle Bildung und Jugendförderung.</p>
-                <p>Wir realisieren Veranstaltungen, Workshops, Booksprints, Hackdays und Vorträge rund um das offene Wissen und bieten individuelle Unterstützung und Beratung durch unser 20-köpfiges Team.Die Arbeit der OKF DE wird fast ausschließlich durch Einzelprojekte finanziert. Geldgeber sind die EU, staatliche Geber auf nationaler und kommunaler Ebene, Stiftungen, Nichtregierungsorganisationen sowie private Spender. Eine genaue Aufstellung unserer Finanzen findet Du hier.</p>
-              </div>
-              <div class="section-img">
-                <img src="../assets/img/okf_logo.png" alt="OKFN Logo">
-              </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <h2>Team</h2>
+          <div class="section-wrapper">
+            <team-member
+            v-for="(member, key) in team"
+            :key="key"
+            :member="member"
+            ></team-member>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <h2>Open Knowledge Foundation</h2>
+          <div class="section-wrapper">
+            <div class="section-text">
+              <p>
+                Die Open Knowledge Foundation Deutschland (OKF DE) ist ein
+                gemeinnütziger Verein, der sich für die Verbreitung von freiem
+                Wissen in der Gesellschaft einsetzt. Unsere Projekte schaffen
+                die digitale Infrastruktur für zivilgesellschaftliches Handeln
+                und unterstützen Bürger, Journalisten und Organisationen dabei,
+                ihr Recht auf Information, Transparenz und Beteiligung wahrzunehmen.
+              </p>
+              <p>
+                Unsere Arbeit erstreckt sich auf die Bereiche Politik und
+                Informationsfreiheit, Civic Tech, Forschung, kulturelle Bildung
+                und Jugendförderung.
+              </p>
+              <p>
+                Wir sind Teil eines internationalen Netzwerkes von Experten und
+                Freiwilligen in 58 Ländern.
+              </p>
+              <p>
+                Die Arbeit der OKF DE wird fast ausschließlich durch Einzelprojekte
+                finanziert. Geldgeber sind die EU, staatliche Geber auf nationaler
+                und kommunaler Ebene, Stiftungen, Nichtregierungsorganisationen
+                sowie private Spender.
+              </p>
+              <p>
+                Mehr Infos hier: <a href="https://okfn.de">okfn.de</a>
+              </p>
+            </div>
+            <div class="section-img">
+              <img src="../assets/img/okf_logo.png" alt="OKFN Logo">
             </div>
           </div>
-        </section>
-         <section>
-           <div class="wrapper">
-            <h2>Team</h2>
-            <div class="section-wrapper">
-                <team-member
-                  v-for="(member, key) in team"
-                  :key="key"
-                  :member="member"
-                ></team-member>
-              <!-- </div> -->
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <h2>Unsere Finanzpartner</h2>
+          <div class="section-wrapper">
+            <div class="section-img">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMZ_Logo.svg/800px-BMZ_Logo.svg.png" width="250px" alt="BMZ Logo">
+            </div>
+            <div class="section-img">
+              <img src="https://www.brot-fuer-die-welt.de/typo3conf/ext/as_template/Resources/Public/Images/logo.svg" max-width="250px" alt="Brot für die Welt Logo">
+            </div>
+            <div class="section-img">
+              <img src="http://via.placeholder.com/250x250" alt="Förderer Logo">
             </div>
           </div>
-        </section>
-         <section>
-           <div class="wrapper">
-            <h2>Förderung &amp; Partner</h2>
-            <div>
-                2030 Watch wird von verschiedenene Trägerorganisationen gefördert. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi dolorum quas, impedit minus ullam aperiam nulla sed voluptate eaque expedita, est similique alias debitis nisi vel, libero hic.
-              </div>
-            <div class="section-wrapper">
-              <div class="section-img">
-                <img src="http://via.placeholder.com/250x250" alt="Förderer Logo">
-              </div>
-              <div class="section-img">
-                <img src="http://via.placeholder.com/250x250" alt="Förderer Logo">
-              </div>
-              <div class="section-img">
-                <img src="http://via.placeholder.com/250x250" alt="Förderer Logo">
-              </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <h2>Finanzberichte</h2>
+          <div class="section-wrapper">
+            <div class="section-text">
+              <p>
+                Coming soon
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
     </div>
   </div>
 </template>
@@ -111,10 +165,10 @@
           twitter: 'https://twitter.com/okfde'
         },
         {
-          name: 'Du?',
+          name: 'Jennifer Gebske',
           imgUrl: 'http://via.placeholder.com/100x100',
-          role: 'Praktikant',
-          email: '2030-watch@okfn.de',
+          role: 'Entwicklerin',
+          email: 'jennifer.gebske@okfn.de',
           twitter: 'https://twitter.com/okfde'
         }]
       }
@@ -140,7 +194,7 @@
         background: #fff;
       }
 
-      &:nth-of-type(3) {
+      &:nth-of-type(2) {
         .section-wrapper {
           padding-top: $spacing;
           justify-content: flex-start;
