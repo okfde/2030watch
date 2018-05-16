@@ -81,14 +81,21 @@
           text-anchor="start"
           :style="{ fill: stepsColors[0] }"
           x="0%"
-          y="0%">sehr geringe Nachhaltigkeit</text>
+          y="0%">&minus;</text>
         <text
+          class="ticksLegendLabels"
+          alignment-baseline="hanging"
+          text-anchor="middle"
+          :style="{ fill: '#a5a49f' }"
+          x="50%"
+          y="0%">Nachhaltigkeit</text>
+          <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
           text-anchor="end"
           :style="{ fill: stepsColors[steps - 1] }"
           x="100%"
-          y="0%">sehr hohe Nachhaltigkeit</text>
+          y="0%">&plus;</text>
         <line
           v-for="tick in steps"
           class="tickLegend"
@@ -116,18 +123,18 @@
         :points="`${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight} ${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" /> -->
       <text
         ref="okfLabelLegend"
-        class="legendLabel"
+        class="legendLabel okf"
         alignment-baseline="hanging"
         text-anchor="middle"
         :x="xOKF"
         :y="height - 15">2030 Watch</text>
       <text
         ref="dnsLabelLegend"
-        class="legendLabel"
+        class="legendLabel dns"
         alignment-baseline="hanging"
         text-anchor="middle"
         :x="xDNS"
-        :y="height - 15">DNS</text>
+        :y="height - 15">Daten DNS</text>
     </g>
   </svg>
 </template>
@@ -305,7 +312,16 @@
 
     .legendLabel {
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+
+      &.okf {
+        fill: $color-okf;
+      }
+
+      &.dns {
+        fill: $color-dns;
+      }
+      
     }
 
     .tickLegend {

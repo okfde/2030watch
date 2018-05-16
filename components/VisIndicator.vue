@@ -27,7 +27,7 @@
         required: true
       },
       color: {
-        type: Number,
+        type: [String, Number],
         default: '04A6F0'
       },
       colorScale: {
