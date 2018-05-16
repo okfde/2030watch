@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="'../indicator/' + i.slug" :title="i.label">
-    <div :class="{ 'vis-indicator': true, 'extended': !compact }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
-      <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" />
+    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
+      <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
       <ul class="labels">
         <li v-if="i.author === 'okf'" title="Neuer Indikator"><i class="icon-plus-circled" /></li>
         <li v-if="i.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></li>
@@ -35,6 +35,10 @@
         default: false
       },
       compact: {
+        type: Boolean,
+        default: false
+      },
+      tiny: {
         type: Boolean,
         default: false
       }
@@ -97,6 +101,11 @@
       border-radius: 2px;
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     }
+
+     &.tiny {
+         width: 85px;
+         margin: 0.3rem;
+      }
 
     h5 {
       overflow: hidden;

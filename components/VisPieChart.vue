@@ -1,7 +1,7 @@
 <template>
   <div class="vis-piechart">
     <span
-      class="vis-number"
+      :class="{ 'vis-number': true, 'tiny': tiny }"
       :style="{ color: '#' + fill, 'font-size': size }"
       v-html="format(value)" />
     <svg
@@ -56,7 +56,21 @@
   }
 
   export default {
-    props: ['value', 'fill', 'background'],
+    props: {
+      value: {
+        type: Number
+      },
+      fill: {
+        type: String
+      },
+      background: {
+        type: String
+      },
+      tiny: {
+        type: Boolean,
+        default: false
+      }
+    },
     computed: {
       path () {
         return getPieChart(getValueInRange(this.value / 100))
@@ -92,6 +106,10 @@
       width: 100%;
       font-weight: bold;
       font-size: 1.6rem;
+
+      &.tiny {
+        font-size: 0.8rem !important;
+      }
     }
 
     .vis-process {
