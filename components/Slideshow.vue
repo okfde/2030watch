@@ -34,37 +34,9 @@
             </ul>
             <h5 class="caption">Erweiterte 2030 Watch Indikatoren SDG 5</h5>
             <ul>
-               <li v-for="item in indicators_okf "><VisIndicator :i="item" :compact="true" color="F8B300" /></li>
-              <!-- <li><VisIndicator :i="indicator1_okf" :compact="true" /></li>
-              <li><VisIndicator :i="indicator2_okf" :compact="true" /></li>
-              <li><VisIndicator :i="indicator3_okf" :compact="true" /></li>
-              <li><VisIndicator :i="indicator4_okf" :compact="true" /></li>
-              <li><VisIndicator :i="indicator5_okf" :compact="true" /></li>
-              <li><VisIndicator :i="indicator6_okf" :compact="true" /></li> -->
+               <li v-for="item in indicators_okf "><VisIndicator :i="item" :compact="true" color="04A6F0" /></li>
             </ul>
           </div>
-        
-        
-      
-        <!-- <div v-if="slide >= 2"> -->
-          <!-- <h5 class="caption">SDG 5 offiziell erreicht zu</h5> -->
-          <!-- <div class="sdg-process">
-            <div class="sdg-process-wrapper"> -->
-              <!-- <VisProgress :sdg="sampleSDG" :vMarkerLabels="false" :compact="true" :vMarkerLabelsNames="true" :invert="false" :vTicks="true" /> -->
-            <!-- </div>
-          </div> -->
-        <!-- </div> -->
-
-        <!-- <div v-if="slide >= 3">
-          <h5>SDG-Ziel offiziell erreicht zu </h5>
-          <ul>
-            <li v-if="slide >= 3"><VisIndicator :i="indicator2" :compact="true" /></li>
-            <li v-if="slide >= 4"><VisIndicator :i="indicator3" :compact="true" /></li>
-          </ul>
-        </div> -->
-
-        <!-- <p>Der offizielle Indikatorenkatalog der Bundesregierung ist unzureichend, da er ein zu enges und unambitioniertes Bild von Nachhaltigkeit zeichnet. 2030 Watch stellt diesem offiziellen Indikatorenkatalog einen <span>komplementären Indikatorenkatalog</span> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf, um wirklich nachhaltg zu werden.</p> -->
-
       </div>
     </section>
     <footer>
@@ -95,9 +67,7 @@
             okf: 48,
             dns: 89
           }
-        },
-        indicatorsDNS: [],
-        indicatorsOKF: []
+        }
       }
     },
     computed: {
