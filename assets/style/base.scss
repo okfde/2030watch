@@ -59,15 +59,15 @@ a, .link {
 }
 
 a {
-  color: $color-accent;
+  color: $color-okf;
   text-decoration: none;
 
   &[href^='#'], &:not([href]) {
-    color: $color-accent;
+    color: $color-okf;
   }
 
   &:hover, &:focus {
-    color: darken($color-accent, 20%);
+    color: darken($color-okf, 20%);
   }
 
   &.nuxt-link-exact-active {

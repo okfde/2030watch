@@ -21,14 +21,14 @@ h2 {
   line-height: 1.4;
   letter-spacing: 0.02em;
   font-weight: bold;
-  color: $color-accent;
+  color: $color-okf;
   margin-bottom: $spacing;
 }
 
 h3 {
   font-size: 1.2rem;
   letter-spacing: 0.02em;
-  color: $color-accent;
+  color: $color-okf;
 }
 
 h1, h2, h3 {
@@ -63,7 +63,7 @@ ul.list {
 
     &:before {
       content: "— ";
-      color: $color-accent;
+      color: $color-okf;
       margin-right: 0.3em;
     }
   }

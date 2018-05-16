@@ -88,6 +88,6 @@
   }
 
   .intro-container {
-    background: linear-gradient(0deg, transparent 50%, #04A6F0 50%);
+    background: linear-gradient(0deg, transparent 50%, $color-okf 50%);
   }
 </style>

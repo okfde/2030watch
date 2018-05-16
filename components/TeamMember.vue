@@ -50,7 +50,7 @@
       }
 
       .name {
-        color: $color-accent;
+        color: $color-okf;
         font-weight: 600;
       }
 

@@ -39,6 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~@/assets/style/variables";
   svg {
     width: 100%;
   }
@@ -49,7 +50,7 @@
   }
 
   .bar {
-    fill: #04A6F0;
+    fill: $color-okf;
   }
 
   ul li {

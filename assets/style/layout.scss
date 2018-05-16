@@ -1,3 +1,7 @@
+@import
+  "variables"
+;
+
 $width-desktop: 60vw;
 
 .page, .page-header, .page-nav , .page-footer, .columns {
@@ -12,7 +16,7 @@ $width-desktop: 60vw;
 }
 
 .page, .inpage-header, .inpage-nav {
-  background-color: $color-accent;
+  background-color: $color-okf;
 }
 
 .page-header, .wrapper, .page-footer {
