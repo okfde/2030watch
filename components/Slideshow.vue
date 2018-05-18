@@ -6,64 +6,72 @@
     <section class="columns columns-gutter">
       <div class="text">
         <div v-if="slide === 1" ref="slide1">
-          <p>Die Bundesregierung verwendet einen <a class="dns" target="_blank" href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22">offiziellen Indikatorenkatalog (DNS)</a> um den Fortschritt Deutschlands in Richtung Nachhaltigkeit zu überwachen. Für jedes der 17 Nachhaltigkeitsziele (SDGs) spiegelt ein Indikatorenset den jeweiligen Fortschritt in Richtung Nachhaltigkeit wieder. Das Urteil: Deutschland ist nachhaltig. <br><br> 2030 Watch stellt diesem offiziellen Indikatorenkatalog einen <a target="_blank" class="okf" href="#">erweiterten Indikatorenkatalog</a> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf um wirklich nachhaltig zu werden.</p>      
+          <p>
+            Die Bundesregierung verwendet einen <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">offiziellen Indikatorenkatalog (DNS)</a> um den Fortschritt Deutschlands in Richtung Nachhaltigkeit zu überwachen. Für jedes der 17 Nachhaltigkeitsziele (SDGs) spiegelt ein Indikatorenset den jeweiligen Fortschritt in Richtung Nachhaltigkeit wieder. Das Urteil: Deutschland ist nachhaltig.
+          </p>
+          <p>
+            2030 Watch stellt diesem offiziellen Indikatorenkatalog einen <a href="#" target="_blank" class="okf">erweiterten Indikatorenkatalog</a> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf um wirklich nachhaltig zu werden.
+          </p>
         </div>
         <div v-else-if="slide === 2" ref="slide2">
           <h5 class="caption">Ein Beispiel: SDG 5 – Geschlechtergerechtigkeit</h5>
-          <p>Das Nachhaltigkeitsziel SDG 5 steht für die Gleichstellung der Geschlechter. Im Zuge der gesetzlichen Vorschriften sind bestimmte Unternehmen in Deutschland seit 2016 dazu verpflichtet, mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Auch die Bundesregierung hat dasselbe Ziel für SDG 5 gesetzt, jedoch bis 2030. Die Vereinten Nationen sprechen von gleichberechtigter Partizipation von Frauen in Politik, Wirtschaft und öffentlichem Leben.</p>
+          <p>
+            Das Nachhaltigkeitsziel SDG 5 steht für die Gleichstellung der Geschlechter. Im Zuge der gesetzlichen Vorschriften sind bestimmte Unternehmen in Deutschland seit 2016 dazu verpflichtet, mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Auch die Bundesregierung hat dasselbe Ziel für SDG 5 gesetzt, jedoch bis 2030. Die Vereinten Nationen sprechen von gleichberechtigter Partizipation von Frauen in Politik, Wirtschaft und öffentlichem Leben.
+          </p>
         </div>
         <div v-else-if="slide === 3" ref="slide3">
-          <p>Aus Sicht von 2030 Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.</p>
-          <p>Die Konsequenz: 2030 Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030 Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030 Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.</p>
+          <p>
+            Aus Sicht von 2030 Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.
+          </p>
+          <p>
+            Die Konsequenz: 2030 Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030 Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030 Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.
+          </p>
         </div>
         <div v-else ref="slide4">
           <p>Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs. Lernt, diskutiert, entdeckt!</p>
         </div>
       </div>
       <div class="indicators">
-          <div v-if="slide === 1" ref="slide1" class="legendProgress">
-            <div class="sdg-process-wrapper">
-              <VisProgress :sdg="introSDG" :vLegend="true" :compact="false" />
-            </div>
+        <div v-if="slide === 1" ref="slide1" class="legendProgress">
+          <div class="sdg-process-wrapper">
+            <VisProgress :sdg="introSDG" :vLegend="true" :compact="false" />
           </div>
-          <div v-else-if="slide === 2" ref="slide2">
-            <h5 class="caption">Offizielle DNS Indikatoren – SDG 5</h5>
-            <ul class="indicator-list">
-              <li v-for="indicator in indicators_dns ">
-                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
-              </li>
-            </ul>
-            <h5 class="caption">Offizieller Fortschritt – SDG 5</h5>
-             <div class="sdg-process-wrapper">
-              <VisProgress :sdg="officialSDG" 
-              :vLegend="false" 
-              :compact="false" 
+        </div>
+        <div v-else-if="slide === 2" ref="slide2">
+          <h5 class="caption">Offizielle DNS Indikatoren – SDG 5</h5>
+          <ul class="indicator-list">
+            <li v-for="indicator in indicators_dns ">
+              <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
+            </li>
+          </ul>
+          <h5 class="caption">Offizieller Fortschritt – SDG 5</h5>
+           <div class="sdg-process-wrapper">
+            <VisProgress :sdg="officialSDG"
+              :vLegend="false"
+              :compact="false"
               :invert="true" />
-            </div>
-            <!-- <ul class="indicator-list">
-              <li v-for="indicator in indicators_dns ">
-                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
-              </li>
-            </ul> -->
           </div>
-          <div v-else-if="slide === 3" ref="slide3">
-            <h5 class="caption">Erweiterte 2030 Watch Indikatoren – SDG 5</h5>
-            <ul class="indicator-list">
-              <li v-for="indicator in indicators_okf ">
-                 <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
-              </li>
-            </ul>
-            <!-- <h5 class="caption">2030 Watch Fortschritt – SDG 5</h5>
-            <div class="sdg-process-wrapper">
-              <VisProgress :sdg="officialSDG" 
-                :vLegend="false" 
-                :compact="false" 
-                :invert="true" />
-          </div> -->
-          </div>
-
-            
-         
+          <!-- <ul class="indicator-list">
+            <li v-for="indicator in indicators_dns ">
+              <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
+            </li>
+          </ul> -->
+        </div>
+        <div v-else-if="slide === 3" ref="slide3">
+          <h5 class="caption">Erweiterte 2030 Watch Indikatoren – SDG 5</h5>
+          <ul class="indicator-list">
+            <li v-for="indicator in indicators_okf ">
+               <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
+            </li>
+          </ul>
+          <!-- <h5 class="caption">2030 Watch Fortschritt – SDG 5</h5>
+          <div class="sdg-process-wrapper">
+            <VisProgress :sdg="officialSDG"
+              :vLegend="false"
+              :compact="false"
+              :invert="true" />
+        </div> -->
+        </div>
       </div>
     </section>
     <footer>
@@ -73,7 +81,7 @@
       <span
         v-on:click="slide > 3 ? slide = slide : slide += 1"
         :class="{ 'btn': true, 'disabled': slide > 3 }">Weiter</span>
-        <div class="progress">
+      <div class="progress">
         <span v-for="n in slide" class="icon past" /><span v-for="n in (4 - slide)" class="icon future" />
       </div>
     </footer>
@@ -108,29 +116,28 @@
         'data'
       ]),
       indicators_dns () {
+        const { data } = this
         return [
-          this.data['dns-verdienstabstand-zwischen-frauen-und-maennern'],
-          this.data['dns-frauen-wirtschaft-dns'],
-          this.data['dns-frauen-bildung-eza']
+          data['dns-verdienstabstand-zwischen-frauen-und-maennern'],
+          data['dns-frauen-wirtschaft-dns'],
+          data['dns-frauen-bildung-eza']
         ]
       },
       indicators_okf () {
+        const { data } = this
         return [
-          this.data['dns-verdienstabstand-zwischen-frauen-und-maennern'],
-          this.data['okf-frauen-wirtschaft'],
-          this.data['okf-frauen-parlamente'],
-          this.data['okf-verteilung-hausarbeit'],
-          this.data['okf-gendergap-renten'],
-          this.data['okf-gewalt-gegen-frauen']
+          data['dns-verdienstabstand-zwischen-frauen-und-maennern'],
+          data['okf-frauen-wirtschaft'],
+          data['okf-frauen-parlamente'],
+          data['okf-verteilung-hausarbeit'],
+          data['okf-gendergap-renten'],
+          data['okf-gewalt-gegen-frauen']
         ]
       }
     },
     components: {
       VisIndicator,
       VisProgress
-    },
-    mounted () {
-      console.log(this.$refs)
     }
   }
 </script>
@@ -159,7 +166,6 @@
     }
 
     .indicators {
-
       .legendProgress {
         display: flex;
         align-items: center;
