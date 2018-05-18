@@ -50,13 +50,8 @@
 
 <script>
   import BlogpostPreview from '~/pages/blog/Blogpost-Preview.vue'
+
   export default {
-    computed: {
-    },
-    methods: {
-    },
-    directives: {
-    },
     components: {
       BlogpostPreview
     }
