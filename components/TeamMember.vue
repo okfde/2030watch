@@ -8,10 +8,10 @@
       <span class="role">{{ member.role }}</span>
       <div class="socials">
         <a v-if="member.email" :href="'mailto:' + member.email">
-          <img src="../assets/icons/email.png" alt="E-Mail Icon" />
+          <i class="icon-mail" title="E-Mail Icon" />
         </a>
         <a v-if="member.twitter" :href="member.twitter" target="_blank">
-          <img src="../assets/icons/twitter.png" alt="Twitter Icon" />
+          <i class="icon-twitter" title="Twitter Icon" />
         </a>
       </div>
     </div>

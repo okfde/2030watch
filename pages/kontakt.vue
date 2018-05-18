@@ -31,7 +31,7 @@
           <li>Finanzen und Buchhaltung</li>
           <li>Planung und Struktur</li>
           <li>Zeitplanung / Timetable</li>
-          <li>Weitere Planung</li>  
+          <li>Weitere Planung</li>
         </ul>
         <h4>Schreib uns eine Mail!</h4>
         <p>Um 2030Watch erfolgreich weiter zu entwickeln und auch auf lokaler Ebene zu pilotieren suchen wir jetzt zum nächst möglichen Zeitpunkt eine neue Projektleitung und eine studentische Mitarbeit in unserem Büro in Berlin. Neben der Verbesserung des Tools und dem weiteren Aufbau eines Netzwerkes von Nutzern und Datenpaten soll es bis Ende 2018 darum gehen, in vier deutschen Städten zusammen mit Kommunen und Zivilgesellschaft lokale Monitoringtools zu entwicklen. Wir freuen uns auf Eure Bewerbung bis zum 20 Februar! Bitte schickt die elektronische Bewerbung an <a href="mailto:claudia.schwegmann@okfn.de">claudia.schwegmann@okfn.de</a></p>
@@ -39,9 +39,9 @@
       <section class="blog-footer wrapper">
         <span class="caption">Post teilen</span>
          <span class="social-icons">
-          <a href="#"><img src="../assets/icons/email_light.png" alt=""></a>
-          <a href="#"><img src="../assets/icons/twitter_light.png" alt=""></a>
-          <a href="#"><img src="../assets/icons/fb_light.png" alt=""></a>
+          <a href="#"><i class="icon-mail" /></a>
+          <a href="#"><i class="icon-twitter" /></a>
+          <a href="#"><i class="icon-facebook-squared" /></a>
         </span>
       </section>
     </div>
@@ -74,7 +74,7 @@
     .blog-title {
       flex: 1;
       background-color: #fff;
-     
+
 
       .title-wrapper {
         width: 50%;
@@ -85,7 +85,7 @@
           width: 50%;
           top: $spacing * 2;
         }
-        
+
 
         h2 {
           color: $color-default;
