@@ -82,7 +82,10 @@
         v-on:click="slide > 3 ? slide = slide : slide += 1"
         :class="{ 'btn': true, 'disabled': slide > 3 }">Weiter</span>
       <div class="progress">
-        <span v-for="n in slide" class="icon past" /><span v-for="n in (4 - slide)" class="icon future" />
+        <span
+          v-for="n in 4"
+          v-on:click="slide = n"
+          :class="{ 'icon': true, 'past': n <= slide, 'future': n > slide }" />
       </div>
     </footer>
   </div>
@@ -215,6 +218,7 @@
         text-align: center;
 
         .icon {
+          cursor: pointer;
           display: inline-block;
           border-radius: 100%;
           width: 13px;
