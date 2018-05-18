@@ -161,7 +161,7 @@
         },
         {
           name: 'John David Langlo',
-          imgUrl: require('~/assets/img/team/john.png'),
+          imgUrl: require('~/assets/img/team/john.jpg'),
           role: 'Studentischer Mitarbeiter',
           email: 'john.langlo@okfn.de',
           twitter: 'https://twitter.com/okfde'
@@ -175,18 +175,12 @@
         },
         {
           name: 'Jennifer Gebske',
-          imgUrl: require('~/assets/img/team/jenny.png'),
+          imgUrl: require('~/assets/img/team/jenny.jpg'),
           role: 'Entwicklerin',
           email: 'jennifer.gebske@okfn.de',
           twitter: 'https://twitter.com/okfde'
         }]
       }
-    },
-    computed: {
-    },
-    methods: {
-    },
-    directives: {
     },
     components: {
       TeamMember
@@ -218,5 +212,4 @@
       }
     }
   }
-
 </style>
