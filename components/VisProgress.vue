@@ -81,7 +81,8 @@
           text-anchor="start"
           :style="{ fill: stepsColors[0] }"
           :x="scaleX.map(0) + 'px'"
-          y="0%">&minus;</text>
+          y="0%"
+          v-html="format(0)" />
         <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
@@ -95,7 +96,8 @@
           text-anchor="end"
           :style="{ fill: stepsColors[steps - 1] }"
           :x="scaleX.map(100) + 'px'"
-          y="0%">&plus;</text>
+          y="0%"
+          v-html="format(100)" />
         <line
           v-for="tick in steps"
           class="tickLegend"
@@ -140,11 +142,11 @@
         type: Object,
         required: true
       },
-      vLegend: {
+      vLegend: { // show color range and labels
         type: Boolean,
         required: false
       },
-      vTickLabels: {
+      vTickLabels: { // show 0 and 100 percentage
         type: Boolean,
         default: false
       },
@@ -152,23 +154,23 @@
         type: String,
         default: '#f9f9f9'
       },
-      vMarkerLabels: {
+      vMarkerLabels: { // display labels
         type: Boolean,
         default: true
       },
-      vMarkerLabelsNames: {
+      vMarkerLabelsNames: { // display author name
         type: Boolean,
         default: false
       },
-      compact: {
+      compact: { // Font size
         type: Boolean,
         default: true
       },
-      invert: {
+      invert: { // font color
         type: Boolean,
         default: false
       },
-      vTicks: {
+      vTicks: { // display ticks
         type: Boolean,
         default: true
       }
