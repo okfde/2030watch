@@ -1,10 +1,10 @@
 <template>
-  <svg class="sdg-vis" ref="vis">
+  <svg :class="{ 'sdg-vis': true, 'visible': iVisible }" ref="vis">
     <line
       class="range"
-      x1="0%"
+      :x1="scaleX.map(0) + 'px'"
       y1="50%"
-      x2="100%"
+      :x2="scaleX.map(100) + 'px'"
       y2="50%" />
     <g class="ticks">
       <g v-if="vTickLabels" class="tickLabels">
@@ -12,45 +12,45 @@
           class="sdg-label sdg-label-tick"
           alignment-baseline="hanging"
           text-anchor="start"
-          x="0"
+          :x="scaleX.map(0) + 'px'"
           y="0"
           v-html="format(0)" />
         <text
           class="sdg-label sdg-label-tick"
           alignment-baseline="hanging"
           text-anchor="end"
-          x="100%"
+          :x="scaleX.map(100) + 'px'"
           y="0"
           v-html="format(100)" />
       </g>
       <g class="tickLines" v-if="vTicks">
         <line
-          v-for="tick in ['calc(0% + 1px)', '20%', '40%', '60%', '80%', 'calc(100% - 1px)']"
+          v-for="tick in [0, 20, 40, 60, 80, 100]"
           class="tick"
           stroke-linecap="round"
-          :x1="tick"
+          :x1="scaleX.map(tick) + 'px'"
           y1="calc(50% - 5px)"
-          :x2="tick"
+          :x2="scaleX.map(tick) + 'px'"
           y2="calc(50% + 5px)" />
       </g>
     </g>
     <line
       class="diff"
       stroke="#aaa"
-      :x1="valueInRange(okf) + '%'"
+      :x1="xOKF"
       y1="50%"
-      :x2="dns + '%'"
+      :x2="xDNS"
       y2="50%" />
     <circle
       class="sdg-marker sdg-marker-total"
       :style="{ 'stroke': cBackground }"
-      :cx="valueInRange(okf) + '%'"
+      :cx="xOKF"
       cy="50%"
       :r="markerR" />
     <circle
       class="sdg-marker sdg-marker-dns"
       :style="{ 'stroke': cBackground }"
-      :cx="dns + '%'"
+      :cx="xDNS"
       cy="50%"
       :r="markerR" />
     <g :class="{ markerLabels: true, invisible: vMarkerLabels }">
@@ -80,47 +80,37 @@
           alignment-baseline="hanging"
           text-anchor="start"
           :style="{ fill: stepsColors[0] }"
-          x="0%"
+          :x="scaleX.map(0) + 'px'"
           y="0%">&minus;</text>
         <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
           text-anchor="middle"
           :style="{ fill: '#a5a49f' }"
-          x="50%"
+          :x="scaleX.map(50) + 'px'"
           y="0%">Nachhaltigkeit</text>
           <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
           text-anchor="end"
           :style="{ fill: stepsColors[steps - 1] }"
-          x="100%"
+          :x="scaleX.map(100) + 'px'"
           y="0%">&plus;</text>
         <line
           v-for="tick in steps"
           class="tickLegend"
           :style="{ 'stroke': stepsColors[tick - 1] }"
-          :x1="(tick - 1) * (100 / steps) + '%'"
+          :x1="scaleX.map((tick - 1) * (100 / steps)) + 'px'"
           :y1="legendLabeldnsHeight"
-          :x2="(tick) * (100 / steps) + '%'"
+          :x2="scaleX.map((tick) * (100 / steps)) + 'px'"
           :y2="legendLabeldnsHeight" />
       </g>
-      <!-- <polyline
-        stroke="black"
-        fill="none"
-        :points="`${legendLabelokfWidth / 2},${legendLabelokfHeight} ${legendLabelokfWidth / 2},${legendLabelokfHeight + legendLabelSteps * 1} ${xOKF},${legendLabelokfHeight + legendLabelSteps * 1} ${xOKF},${legendLabelokfHeight + legendLabelSteps * 2}`" /> -->
-      <!-- <polyline
-        class="legendLine"
-        :points="`${legendLabelokfWidth / 2},${height - legendLabeldnsHeight} ${legendLabelokfWidth / 2},${height - legendLabeldnsHeight - legendLabelSteps} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" /> -->
       <polyline
         class="legendLine"
         :points="`${xOKF},${height - legendLabeldnsHeight} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
       <polyline
         class="legendLine"
         :points="`${xDNS},${height - legendLabeldnsHeight} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
-      <!-- <polyline
-        class="legendLine"
-        :points="`${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight} ${legendLabeldnsWidth / 2},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps} ${xDNS},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" /> -->
       <text
         ref="okfLabelLegend"
         class="legendLabel okf"
@@ -142,6 +132,7 @@
 <script>
   import { mapState, mapGetters } from 'vuex'
   import format from '~/assets/js/format.js'
+  import Scale from '~/assets/js/scale.js'
 
   export default {
     props: {
@@ -184,6 +175,7 @@
     },
     data: function () {
       return {
+        iVisible: false,
         width: 0,
         height: 0,
         okfLabel: 0,
@@ -194,11 +186,13 @@
         legendLabeldnsWidth: 0,
         legendLabeldnsHeight: 20,
         legendLabelSteps: 0,
-        legendLabelDistance: 3
+        legendLabelDistance: 3,
+        scaleX: new Scale().domain([0, 100]).range([0, 0])
       }
     },
     mounted: function () {
-      this.width = this.$refs.vis.clientWidth
+      this.width = this.$refs.vis.clientWidth - this.markerR
+      this.scaleX.range([this.markerR, this.width])
       this.height = this.$refs.vis.clientHeight
       if (typeof this.$refs.okfLabelLegend !== 'undefined') {
         this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
@@ -213,6 +207,7 @@
       }
       this.okfWidth = this.$refs.okf.clientWidth
       this.dnsWidth = this.$refs.dns.clientWidth
+      this.iVisible = true
     },
     methods: {
       format: format,
@@ -234,10 +229,10 @@
         return this.sdg.values.okf
       },
       xDNS: function () {
-        return this.valueInRange(this.dns) / 100 * this.width
+        return this.scaleX.map(this.valueInRange(this.dns))
       },
       xOKF: function () {
-        return this.valueInRange(this.okf) / 100 * this.width
+        return this.scaleX.map(this.valueInRange(this.okf))
       },
       labels: function () {
         const { markerR } = this
@@ -290,6 +285,12 @@
   .sdg-vis {
     flex: 1;
     height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &.visible {
+      opacity: 1;
+    }
 
     .legendLine {
       stroke: rgba(0, 0, 0, .2);
@@ -321,7 +322,6 @@
       &.dns {
         fill: $color-dns;
       }
-      
     }
 
     .tickLegend {
@@ -335,7 +335,7 @@
 
     .sdg-marker {
       stroke-width: 2px;
-      transition-duration: 0.2s;
+      // transition-duration: 0.2s;
 
       &.sdg-marker-total {
         fill: $color-okf;
