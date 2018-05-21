@@ -299,7 +299,7 @@
     .indicator-lines {
       svg {
         width: 100%;
-        height: 200px;
+        height: 100px;
         margin: 0 10px; // 10px is fixed in js!
 
         line, path {
