@@ -10,7 +10,7 @@
             Die Bundesregierung verwendet einen <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">offiziellen Indikatorenkatalog (DNS)</a> um den Fortschritt Deutschlands in Richtung Nachhaltigkeit zu überwachen. Für jedes der 17 Nachhaltigkeitsziele (SDGs) spiegelt ein Indikatorenset den jeweiligen Fortschritt in Richtung Nachhaltigkeit wieder. Das Urteil: Deutschland ist nachhaltig.
           </p>
           <p>
-            2030 Watch stellt diesem offiziellen Indikatorenkatalog einen <a href="#" target="_blank" class="okf">erweiterten Indikatorenkatalog</a> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf um wirklich nachhaltig zu werden.
+            2030Watch stellt diesem offiziellen Indikatorenkatalog einen <a href="#" target="_blank" class="okf">erweiterten Indikatorenkatalog</a> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf um wirklich nachhaltig zu werden.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
@@ -21,10 +21,10 @@
         </li>
         <li :class="{ 'slide': true, 'active': slide === 3 }">
           <p>
-            Aus Sicht von 2030 Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.
+            Aus Sicht von 2030Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.
           </p>
           <p>
-            Die Konsequenz: 2030 Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030 Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030 Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.
+            Die Konsequenz: 2030Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 4 }">
@@ -58,13 +58,13 @@
           </ul> -->
         </li>
         <li :class="{ 'slide': true, 'active': slide === 3 }">
-          <h5 class="caption">Erweiterte 2030 Watch Indikatoren – SDG 5</h5>
+          <h5 class="caption">Erweiterte 2030Watch Indikatoren – SDG 5</h5>
           <ul class="indicator-list">
             <li v-for="indicator in indicators_okf ">
                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
             </li>
           </ul>
-          <!-- <h5 class="caption">2030 Watch Fortschritt – SDG 5</h5>
+          <!-- <h5 class="caption">2030Watch Fortschritt – SDG 5</h5>
           <div class="sdg-process-wrapper">
             <VisProgress :sdg="officialSDG"
               :vLegend="false"
