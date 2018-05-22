@@ -1,7 +1,7 @@
 <template>
   <div class="page-explainer">
     <div class="wrapper">
-      <h3>2030 Watch in aller Kürze</h3>
+      <h3>2030Watch in aller Kürze</h3>
     </div>
     <div class="faq wrapper columns columns-gutter">
       <section>
@@ -37,5 +37,9 @@
 
   .page-explainer {
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .caption {
+    font-size: 1rem;
   }
 </style>

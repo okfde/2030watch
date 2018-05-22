@@ -1,7 +1,7 @@
 <template>
   <div class="intro box">
     <header>
-      <h2>Warum wir andere Daten brauchen um Nachhaltigkeit zu messen</h2>
+      <h2>Warum wir andere Indikatoren brauchen um Nachhaltigkeit zu messen</h2>
     </header>
     <section class="columns columns-gutter" :style="{ 'height': slideHeight + 'px' }">
       <ul class="container" ref="slidesText">
