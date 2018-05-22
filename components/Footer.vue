@@ -2,7 +2,8 @@
   <footer class="page-footer columns columns-gutter">
     <address>
       Open Knowledge Foundation Deutschland e.V.<br />
-      Singerstr. 109, 10179 Berlin, Deutschland<br /><br />
+      Singerstr. 109<br />
+      10179 Berlin<br /><br />
 
       Vereinsregister Nr: VR 30468 B<br />
       Steuernummer: 27/674/52428<br />
@@ -25,6 +26,13 @@
         </ul>
       </li>
     </ul>
+    <div class="tracking-info">
+      2030Watch nutzt statt den üblichen externen Dienstleistern die datenschutzfreundlichere
+      Technologie von <a target="_blank" href="https://matomo.org">Matomo</a>, um statistische
+      Auswertungen der Seitennutzung zu erhalten. Wenn sie dies nicht wollen, klicken Sie bitte
+      <a target="_blank" href="https://traffic.okfn.de/index.php?module=CoreAdminHome&action=optOut&language=de">hier</a>
+      und entfernen Sie den Haken. Näheres in <a target="_blank" href="https://okfn.de/impressum/#datenschutzerklaerung">unserer Datenschutzerklärung</a>.
+    </div>
   </footer>
 </template>
 
@@ -37,4 +45,16 @@
       margin-right: 2rem;
     }
   }
+
+  footer > .tracking-info {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+
+    > a {
+      text-decoration: underline;
+    }
+  }
+
 </style>
