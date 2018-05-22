@@ -7,7 +7,7 @@ $width-desktop: 60vw;
 .page, .page-header, .page-nav , .page-footer, .columns {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-flow: row wrap;
 }
 
 .page {
@@ -90,9 +90,9 @@ $width-desktop: 60vw;
     margin-left: 0;
   }
 
-  &:last-child {
-    margin-right: 0;
-  }
+  // &:last-child {
+  //   margin-right: 0;
+  // }
 }
 
 .columns-rows > * {
