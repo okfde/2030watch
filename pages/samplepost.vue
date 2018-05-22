@@ -5,7 +5,7 @@
         <h1>Blog</h1>
         <section class="columns columns-gutter">
           <div>
-            <p>Erfahre mehr zu aktuellen Themen rund um 2030 Watch und unseren Aktivitäten</p>
+            <p>Erfahre mehr zu aktuellen Themen rund um 2030Watch und unseren Aktivitäten</p>
           </div>
         </section>
       </div>
@@ -25,7 +25,7 @@
         <h4>Wir suchen dich!</h4>
         <p>Wie können wir die Nachhaltigkeit in der deutschen Politik messen? Welche Daten kann man für Nachhaltigkeitsmonitoring heranziehen? Und wie kann man das Monitoring von Nachhaltigkeit übersichtlich und interessant visualisieren? Interessieren Dich solche Fragen und hast Du Lust an einem coolen Datenprojekt bei der Open Knowledge Foundation Deutschland zu arbeiten? Dann solltest Du weiter lesen!</p>
         <h4>Was musst du können?</h4>
-        <p>Damit es nicht bei leeren Versprechen bleibt, hat die Open Knowledge Foundation Deutschland das datenbasierte Monitoringtool <a href="https://2030-watch.de/monitoring/">2030 Watch</a>, entwickelt, um die Erreichung der siebzehn globalen Nachhaltigkeitsziele (Sustainable Development Goals - SDGs) zu messen.</p>
+        <p>Damit es nicht bei leeren Versprechen bleibt, hat die Open Knowledge Foundation Deutschland das datenbasierte Monitoringtool <a href="https://2030-watch.de/monitoring/">2030Watch</a>, entwickelt, um die Erreichung der siebzehn globalen Nachhaltigkeitsziele (Sustainable Development Goals - SDGs) zu messen.</p>
         <ul>
           <li>Organisation und Institution</li>
           <li>Finanzen und Buchhaltung</li>
