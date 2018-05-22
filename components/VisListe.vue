@@ -10,7 +10,7 @@
         </section>
         <section class="sdg-legend">
           <span :class="{ 'dns': true, 'link': true, active: sorting === 'values.dns' }" v-on:click="sort('values.dns')">DNS <SortIcon :active="sorting === 'values.dns'" :reverse="reverse" /></span>
-          <span :class="{ 'okf': true, 'link': true, active: sorting === 'values.okf' }" v-on:click="sort('values.okf')">2030 Watch <SortIcon :active="sorting === 'values.okf'" :reverse="reverse" /></span>
+          <span :class="{ 'okf': true, 'link': true, active: sorting === 'values.okf' }" v-on:click="sort('values.okf')">2030Watch <SortIcon :active="sorting === 'values.okf'" :reverse="reverse" /></span>
         </section>
       </div>
     </li>

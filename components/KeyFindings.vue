@@ -8,7 +8,7 @@
           <th>Nachhaltigkeitsstufe</th>
           <th>SDG-Ziel erreicht zu</th>
           <th>Anzahl &ndash; DNS</th>
-          <th>Anzahl &ndash; 2030 Watch</th>
+          <th>Anzahl &ndash; 2030Watch</th>
         </tr>
       </thead>
       <tbody>

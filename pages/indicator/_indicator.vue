@@ -101,7 +101,7 @@
     head () {
       return {
         title: this.indicator.topic || 'all',
-        titleTemplate: '2030 Watch - %s'
+        titleTemplate: '2030Watch - %s'
       }
     },
     methods: {

@@ -62,7 +62,7 @@
         :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
         :x="labels[0].x"
         y="0%"
-        v-html="(vMarkerLabelsNames ? '2030 Watch: ' : '') + format(okf)" />
+        v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)" />
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
@@ -119,7 +119,7 @@
         alignment-baseline="hanging"
         text-anchor="middle"
         :x="xOKF"
-        :y="height - 15">2030 Watch</text>
+        :y="height - 15">2030Watch</text>
       <text
         ref="dnsLabelLegend"
         class="legendLabel dns"
