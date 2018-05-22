@@ -4,11 +4,10 @@
       <strong class="logo"><nuxt-link to="/"><img src="../assets/img/2030watch_logo.png" alt=""></nuxt-link></strong>
       <nav class="page-nav">
         <ul>
-          <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/projekt">Das Projekt</nuxt-link></li>
           <li><nuxt-link to="/blog">Blog</nuxt-link></li>
           <li><nuxt-link to="/about">Über uns</nuxt-link></li>
-          <li><nuxt-link to="/aktiv" class="btn btn--action">Werde aktiv</nuxt-link></li>
+          <li><nuxt-link to="/aktiv">Werde aktiv</nuxt-link></li>
         </ul>
       </nav>
     </header>
