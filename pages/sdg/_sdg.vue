@@ -113,7 +113,7 @@
     },
     head () {
       return {
-        title: this.sdg.labelShort || 'all',
+        title: this.sdg.labelShort || 'SDG',
         titleTemplate: '2030 Watch - %s'
       }
     },

@@ -100,7 +100,7 @@
     },
     head () {
       return {
-        title: this.indicator.topic || 'all',
+        title: this.indicator.label || 'Indicator',
         titleTemplate: '2030Watch - %s'
       }
     },
