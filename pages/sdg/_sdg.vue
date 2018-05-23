@@ -84,7 +84,7 @@
           </section>
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
-              <li ref="labelOKF"><h3 class="okf">OKF</h3></li>
+              <li ref="labelOKF"><h3 class="okf">2030Watch</h3></li>
               <li
                 v-for="(indicator, n) in indi_dns_keep">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
@@ -129,9 +129,10 @@
       this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
       this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
       const marginLeft = Math.max(this.$refs.labelOKF.clientWidth, this.$refs.labelDNS.clientWidth)
+      console.log(marginLeft)
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
-      this.$refs.labelOKF.style.width = marginLeft
-      this.$refs.labelDNS.style.width = marginLeft
+      this.$refs.labelOKF.style.width = marginLeft + 'px'
+      this.$refs.labelDNS.style.width = marginLeft + 'px'
     },
     components: {
       VisLeiste,
