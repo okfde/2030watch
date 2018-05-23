@@ -63,6 +63,7 @@
                   <li><span class="label"><i class="icon-minus-circled" /> aussageloser Zielwert</span></li>
                   <li><span class="label"><i class="icon-cog-circled" /> modifizierter Zielwert</span></li>
                   <li><span class="label"><i class="icon-help-circled" /> nicht berechenbar</span></li>
+                  <li><span class="label"><i class="icon-star-circled" /> Spillover</span></li>
                 </ul>
               </li>
             </ul>

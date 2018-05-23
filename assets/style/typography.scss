@@ -175,12 +175,12 @@ table {
 
 @font-face {
   font-family: '2030watch';
-  src: url('/font/2030watch.eot?76314359');
-  src: url('/font/2030watch.eot?76314359#iefix') format('embedded-opentype'),
-       url('/font/2030watch.woff2?76314359') format('woff2'),
-       url('/font/2030watch.woff?76314359') format('woff'),
-       url('/font/2030watch.ttf?76314359') format('truetype'),
-       url('/font/2030watch.svg?76314359#2030watch') format('svg');
+  src: url('/font/2030watch.eot?23783043');
+  src: url('/font/2030watch.eot?23783043#iefix') format('embedded-opentype'),
+       url('/font/2030watch.woff2?23783043') format('woff2'),
+       url('/font/2030watch.woff?23783043') format('woff'),
+       url('/font/2030watch.ttf?23783043') format('truetype'),
+       url('/font/2030watch.svg?23783043#2030watch') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -218,6 +218,7 @@ table {
 
 .icon-mail:before { content: '\e800'; } /* '' */
 .icon-ok-circled:before { content: '\e801'; } /* '' */
+.icon-star-circled:before { content: '\e802'; } /* '' */
 .icon-cancel-circled:before { content: '\e803'; } /* '' */
 .icon-plus-circled:before { content: '\e805'; } /* '' */
 .icon-minus-circled:before { content: '\e806'; } /* '' */
