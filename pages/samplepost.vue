@@ -39,9 +39,9 @@
       <section class="blog-footer wrapper">
         <span class="caption">Post teilen</span>
          <span class="social-icons">
-          <a href="#"><i class="icon-mail" /></a>
-          <a href="#"><i class="icon-twitter" /></a>
-          <a href="#"><i class="icon-facebook-squared" /></a>
+          <a href="mailto:" title="Blogpost teilen per E-Mail"><i class="icon-mail" /></a>
+          <a :href="'https://twitter.com/intent/tweet?text=Sample%20Post%20Überschrift%20Via%20@2030watchde%202030-watch.de' + $nuxt.$route.fullPath" target="_blank" title="Blogpost teilen auf Twitter"><i class="icon-twitter" /></a>
+          <a :href="'https://facebook.com/sharer.php?u=https://2030-watch.de' + $nuxt.$route.fullPath" target="_blank" title="Blogpost teilen auf Facebook"><i class="icon-facebook-squared" /></a>
         </span>
       </section>
     </div>
