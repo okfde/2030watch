@@ -12,7 +12,7 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }} (xxx)</p>
+            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }} <span v-if="category">({{ category }})</span></p>
           </div>
           <div class="progress">
             <VisPieChart :value="indicator.progress" fill="ffffff" :background="indicator.sdg.color" />
@@ -125,6 +125,19 @@
       },
       hasTimeline () {
         return typeof this.indicator.timeline !== 'undefined'
+      },
+      category () {
+        const { indicator } = this
+        const categories = []
+        console.log(indicator)
+        if (indicator.author === 'okf') { categories.push('neuer Indikator') }
+        if (indicator.badIndicator) { categories.push('ungeeigneter Indikator') }
+        if (indicator.keep) { categories.push('übernommener Indikator') }
+        if (indicator.badTarget) { categories.push('aussageloser Zielwert') }
+        if (indicator.modTarget) { categories.push('modifizierter Zielwert') }
+        if (indicator.uncalculable) { categories.push('nicht berechenbar') }
+        if (indicator.spill) { categories.push('Spillover') }
+        return categories.length ? categories.join(', ') : false
       }
     },
     components: {
