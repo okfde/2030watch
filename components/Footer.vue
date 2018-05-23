@@ -4,14 +4,9 @@
       Open Knowledge Foundation Deutschland e.V.<br />
       Singerstr. 109<br />
       10179 Berlin<br /><br />
-
-      Vereinsregister Nr: VR 30468 B<br />
-      Steuernummer: 27/674/52428<br />
-      VAT: DE278022128
     </address>
     <ul>
       <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
-      <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
       <li><a href="&#0109;&#097;&#0105;&#0108;&#0116;&#0111;&#058;&#050;&#048;&#051;&#048;&#045;&#0119;&#097;&#0116;&#099;&#0104;&#064;&#0111;&#0107;&#0102;&#0110;&#046;&#0100;&#0101;">Feedback</a></li>
     </ul>
     <ul>
