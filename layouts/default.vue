@@ -7,7 +7,7 @@
           <li><nuxt-link to="/projekt">Das Projekt</nuxt-link></li>
           <li><nuxt-link to="/blog">Blog</nuxt-link></li>
           <li><nuxt-link to="/about">Über uns</nuxt-link></li>
-          <li><nuxt-link to="/aktiv">Werde aktiv</nuxt-link></li>
+          <!-- <li><nuxt-link to="/aktiv">Werde aktiv</nuxt-link></li> -->
         </ul>
       </nav>
     </header>
