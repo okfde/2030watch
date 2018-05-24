@@ -1,8 +1,4 @@
-@import
-  "variables"
-;
-
-$width-desktop: 60vw;
+@import "variables";
 
 .page, .page-header, .page-nav , .page-footer, .columns {
   display: flex;
@@ -20,8 +16,26 @@ $width-desktop: 60vw;
 }
 
 .page-header, .wrapper, .page-footer {
-  margin: 0 15vw 0;
-  width: 70vw;
+  margin: 0 auto 0;
+  width: 90vw;
+}
+
+@include media-query($on-palm) {
+  .page-header, .wrapper, .page-footer {
+    width: 80vw;
+  }
+}
+
+@include media-query($on-laptop) {
+  .page-header, .wrapper, .page-footer {
+    width: 70vw;
+  }
+}
+
+@include media-query($on-desktop) {
+  .page-header, .wrapper, .page-footer {
+    width: 70vw;
+  }
 }
 
 .page-content {
@@ -78,32 +92,42 @@ $width-desktop: 60vw;
   }
 }
 
-.column, .columns > * {
-  flex: 1;
+.columns {
+  flex-flow: column;
 }
 
-.columns-gutter > * {
-  margin-left: $spacing / 2;
-  margin-right: $spacing / 2;
-
-  &:first-child {
-    margin-left: 0;
+@include media-query($on-desktop) {
+  .columns {
+    flex-direction: row;
   }
 
-  // &:last-child {
-  //   margin-right: 0;
-  // }
-}
-
-.columns-rows > * {
-  padding: $spacing 0;
-
-  &:first-child {
-    padding-top: 0;
+  .column, .columns > * {
+    flex: 1;
   }
 
-  &:last-child {
-    padding-bottom: 0;
+  .columns-gutter > * {
+    margin-left: $spacing / 2;
+    margin-right: $spacing / 2;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .columns-rows > * {
+    padding: $spacing 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
 

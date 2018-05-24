@@ -70,8 +70,14 @@
     color: #fff;
 
     .message {
-      width: 70%;
+      width: 100%;
       max-width: 800px;
+
+      @include media-query($on-desktop) {
+        & {
+          width: 70%;
+        }
+      }
 
       p {
         font-size: 1.1rem;

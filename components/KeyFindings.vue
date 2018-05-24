@@ -104,7 +104,11 @@
 
   .findings {
     table {
-      margin: $spacing;
+      @include media-query($on-desktop) {
+        & {
+          margin: $spacing;
+        }
+      }
 
       th {
         padding: 5px 0;
@@ -113,28 +117,6 @@
       td {
         padding: 5px 0;
         font-family: $font-family-modern;
-
-        .arrow {
-          margin-right: 10px;
-          width: 12px;
-          height: 12px;
-
-          &.arrow-very-high {
-            transform: rotate(270deg);
-          }
-
-          &.arrow-high {
-            transform: rotate(-45deg);
-          }
-
-          &.arrow-low {
-            transform: rotate(45deg);
-          }
-
-          &.arrow-very-low {
-            transform: rotate(90deg);
-          }
-        }
 
         .icon {
           display: inline-block;
