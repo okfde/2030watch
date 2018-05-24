@@ -1,9 +1,9 @@
 @import "variables";
 
-.page, .page-header, .page-nav , .page-footer, .columns {
+.page, .page-header, .page-nav, .columns {
   display: flex;
   justify-content: space-between;
-  flex-flow: row wrap;
+  flex-flow: row;
 }
 
 .page {
@@ -53,10 +53,18 @@
 }
 
 .page-header, .page-explainer, .page-footer, .inpage-header {
-  color: #fff;
+  color: $color-white;
 
   a {
-    color: #fff;
+    color: $color-light;
+
+    &:hover, &:focus {
+      color: $color-white;
+    }
+  }
+
+  p a {
+    text-decoration: underline;
   }
 }
 
