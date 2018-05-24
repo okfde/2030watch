@@ -9,8 +9,6 @@
     <div class="content">
       <div class="wrapper">
         <blogpost-preview></blogpost-preview>
-        <blogpost-preview></blogpost-preview>
-        <blogpost-preview></blogpost-preview>
       </div>
     </div>
   </div>
