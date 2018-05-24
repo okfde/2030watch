@@ -16,11 +16,8 @@
     </li>
     <li v-for="(sdg, index) in sdgListe" class="sdg-item">
       <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
-        <div class="sdg-number">
-          <span>{{ sdg.number }}</span>
-        </div>
         <div class="sdg-label">
-          <span :title="sdg.labelLong">{{ sdg.labelShort }}</span>
+          <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
         <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
       </nuxt-link>
@@ -128,26 +125,17 @@
     .sdg-link {
       color: #222;
       display: flex;
-      height: calc((100vh - 40vh) / 17);
-      max-height: 2.5rem;
-      min-height: 2.4rem;
+      flex-direction: column;
+      height: 5rem;
       width: 100%;
-      margin: 0 0;
+      margin: 0;
 
-      .sdg-number {
-        width: 1rem;
-        margin-right: 1rem;
-        align-items: center;
-        text-align: right;
-        display: flex;
-
-        span {
-          text-align: right;
-          width: 100%;
-          line-height: 1.2rem;
-          display: inline-block;
-          color: $color-mute;
-          font-size: 0.8rem;
+      @include media-query($on-desktop) {
+        & {
+          flex-direction: row;
+          height: calc((100vh - 40vh) / 17);
+          max-height: 2.5rem;
+          min-height: 2.4rem;
         }
       }
 
@@ -157,11 +145,19 @@
         align-items: center;
         transition-duration: 0.1s;
 
-        span {
+        .sdg-number {
+          width: 1rem;
+          margin-right: 1rem;
+          text-align: right;
           line-height: 1.2rem;
           display: inline-block;
-          width: 70%;
-          max-width: 500px;
+          color: $color-mute;
+          font-size: 0.8rem;
+        }
+
+        .sdg-text {
+          line-height: 1.2rem;
+          display: inline-block;
           font-weight: bold;
           font-size: 0.9rem;
         }
