@@ -71,11 +71,11 @@
 
     .message {
       width: 100%;
-      max-width: 800px;
+      // max-width: 800px;
 
       @include media-query($on-desktop) {
         & {
-          width: 70%;
+          width: 100%;
         }
       }
 
