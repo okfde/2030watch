@@ -46,6 +46,10 @@
   }
 
   .page-footer > * {
-    margin-bottom: $spacing;
+    margin-bottom: $spacing/4;
+  }
+
+  .tracking-info > p {
+    font-size: 0.75rem;
   }
 </style>
