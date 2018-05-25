@@ -164,7 +164,7 @@
 </script>
 
 <style lang="scss">
-  @import "~@/assets/style/variables";
+  @import "~@/assets/style/base";
 
   .intro {
     position: relative;
@@ -263,7 +263,6 @@
       }
 
       .btn {
-        display: inline-block;
         margin: 0 $spacing / 2;
 
         &:last-of-type {

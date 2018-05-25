@@ -34,6 +34,7 @@
           <p>{{ indicator.txtcategory }}</p>
         </section>
         <section>
+          <small class="caption">Indikator-Details</small>
           <table>
             <tbody>
               <tr>
@@ -68,13 +69,13 @@
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
           <span>{{ indicator.label }} in {{ indicator.unit }}, {{ indicator['currentYear'] }}</span>
           <VisBarChart :values="countries" />
-          <a :href="countriesDownload" :download="indicator.slug + '-countries.csv'">Download data</a>
+          <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">Download data</a>
         </div>
         <div v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
           <span>{{ indicator.label }} in {{ indicator.unit }}</span>
           <VisLineChart :values="timeline" />
-          <a :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">Download data</a>
+          <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">Download data</a>
         </div>
       </div>
     </div>

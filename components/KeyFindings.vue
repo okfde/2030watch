@@ -1,7 +1,7 @@
 <template>
   <div class="findings">
     <h2>Ein erweitertes Nachhaltigkeitsbild</h2>
-    <!-- <p>Vergleicht man die offiziellen Daten der Bundesregierung (DNS) mit dem von uns vorgeschlagenen erweiterten Indikatorenkatalog zeigt sich, dass die Nachhaltigkeitsziele nur unzureichend erfüllt werden. Insgesamt ergibt sich folgende Gegenüberstellung:</p> -->
+    <p>Vergleicht man die offiziellen Daten der Bundesregierung (DNS) mit dem von uns vorgeschlagenen erweiterten Indikatorenkatalog zeigt sich, dass die Nachhaltigkeitsziele nur unzureichend erfüllt werden. Insgesamt ergibt sich folgende Gegenüberstellung:</p>
     <table>
       <thead>
         <tr>
