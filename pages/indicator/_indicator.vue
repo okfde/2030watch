@@ -101,7 +101,7 @@
     head () {
       return {
         title: this.indicator.label || 'Indicator',
-        titleTemplate: '2030Watch - %s'
+        titleTemplate: '%s | 2030Watch'
       }
     },
     methods: {
