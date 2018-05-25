@@ -1,32 +1,45 @@
 <template>
   <div class="vis">
-    <svg>
-      <line
-        v-for="tick in ticks"
-        :x1="0.5 * (100 / values.length) + '%'"
-        x2="100%"
-        :y1="tick[1] + '%'"
-        :y2="tick[1] + '%'"
-        class="tick" />
-      <text
-        v-for="tick in ticks"
-        alignment-baseline="middle"
-        text-anchor="end"
-        :x="0.45 * (100 / values.length) + '%'"
-        :y="tick[1] + '%'"
-        v-html="tick[0]" />
-      <rect
-        v-for="(value, n) in values"
-        :class="{ 'bar': true, 'active': value[0] === 'Germany' }"
-        :x="(n + 1) * (100 / values.length) + '%'"
-        :width="(100 / values.length - 2) + '%'"
-        :y="100 - y(value[1]) + '%'"
-        :height="y(value[1]) + '%'"
-        />
-    </svg>
-    <ul>
-      <li v-for="value in values" class="label" :style="{ width: (100 / values.length) + '%' }"><span>{{ value[0] }}</span></li>
-    </ul>
+    <div>
+      <svg ref="vis" :class="{ visible }">
+        <line
+          v-for="tick in ticks"
+          :x1="labelX + 'px'"
+          x2="100%"
+          :y1="tick[1] + 'px'"
+          :y2="tick[1] + 'px'"
+          class="tick" />
+        <text
+          v-for="tick in ticks"
+          alignment-baseline="middle"
+          text-anchor="end"
+          :x="labelX - 5 + 'px'"
+          :y="tick[1] + 'px'"
+          v-html="tick[0]" />
+        <rect
+          v-for="(bar, n) in bars"
+          :class="bar.klass"
+          :x="bar.x + 'px'"
+          :width="bar.width + 'px'"
+          :y="bar.y + 'px'"
+          :height="bar.height + 'px'"
+          />
+        <line
+          :x1="labelX + 'px'"
+          x2="100%"
+          :y1="height - margin[1] + 'px'"
+          :y2="height - margin[1] + 'px'"
+          class="base" />
+        <text
+          v-for="(bar, n) in bars"
+          alignment-baseline="middle"
+          :x="bar.x + 0.5 * widthBar + 'px'"
+          :transform="'rotate(45,' + bar.labelX + ',' + bar.labelY + ')'"
+          :y="bar.labelY"
+          v-html="bar.label"
+          />
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -36,22 +49,54 @@
   export default {
     props: ['values'],
     data: function () {
-      const range = [10, 90]
+      const range = [10, 300] // default
       const y = scaleLinear().range(range).domain([0, Math.max(...this.values.map(value => { return value[1] }))]).nice()
       return {
         y,
-        range
+        range,
+        width: 0,
+        height: 300, // default
+        labelX: 0,
+        widthBar: 0,
+        gutter: 0,
+        ticks: [],
+        margin: [10, 100],
+        visible: false
       }
     },
-    methods: {
-      calcHeight: function (v) {
-        return ((100 - 0) * ((v - 0) / (this.maxValue - 0))) + 0
-      }
+    mounted: function () {
+      const { margin } = this
+      this.width = this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth
+      this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+      this.labelX = Math.min(Math.max(this.width * 0.1, 20), 70) + 5
+      this.gutter = Math.min(Math.max(this.width * 0.01, 5), 10)
+      this.widthBar = (this.width - this.labelX - (this.gutter * (this.values.length + 1))) / this.values.length
+      this.range = [margin[1], this.height - margin[0]]
+      this.y.range(this.range)
+      this.visible = true
     },
     computed: {
-      ticks () {
+      bars: function () {
+        const { labelX, widthBar, gutter, height, y, margin } = this
+        return this.values.map((value, n) => {
+          const x = labelX + n * widthBar + (n + 1) * gutter
+          return {
+            'klass': 'bar' + (value[0] === 'Germany' ? ' active' : ''),
+            'label': value[0],
+            'x': x,
+            'y': height - y(value[1]),
+            'height': y(value[1]) - margin[1],
+            'width': widthBar,
+            'labelX': x + 0.5 * widthBar,
+            'labelY': height - margin[1] + 15
+          }
+        })
+      }
+    },
+    watch: {
+      range: function () {
         const [v1, v2] = this.y.domain()
-        const range = Math.abs(v1 - v2)
+        const range = Math.abs(v2 - v1)
         const dimension = String(parseInt(range)).length
         const factor = 10 ** dimension
         let c = 10 // number of ticks
@@ -64,8 +109,8 @@
         }
         const step = range / c
         const ticks = Array.apply(null, Array(c + 1)).map(function () {})
-        return ticks.map((tick, n) => {
-          return [(n * step).toFixed(dimension), 100 - this.y(n * step)]
+        this.ticks = ticks.map((tick, n) => {
+          return [(n * step).toFixed(dimension), this.height - this.y(n * step)]
         }).reverse()
       }
     }
@@ -77,7 +122,13 @@
 
   svg {
     width: 100%;
-    height: 300px;
+    height: 400px;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &.visible {
+      opacity: 1;
+    }
 
     text {
       font-size: 0.8rem;
@@ -85,12 +136,17 @@
   }
 
   .tick {
-    stroke: $color-default;
+    stroke: lighten($color-default, 50%);
     stroke-width: 1px;
 
     &:nth-child(odd) {
-      stroke: $color-mute;
+      stroke: lighten($color-mute, 20%);
     }
+  }
+
+  .base {
+    stroke: $color-default;
+    stroke-width: 1px;
   }
 
   .bar {
@@ -114,6 +170,6 @@
   }
 
   .label {
-    transform: rotate(45deg);
+    transform: translate(10%, 70%) rotate(45deg);
   }
 </style>
