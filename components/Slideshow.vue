@@ -6,8 +6,7 @@
     <section class="columns columns-gutter" :style="{ 'height': slideHeight + 'px' }">
       <ul class="container" ref="slidesText">
         <li :class="{ 'slide': true, 'active': slide === 1 }">
-          <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">“Deutschen Nachhaltigkeitsstrategie” (DNS)</a> die SDGs in nationale Ziele übersetzt.</p>
-          <p>2030Watch diskutiert anhand von Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst 2030Watch und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
+          <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">“Deutschen Nachhaltigkeitsstrategie” (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
           <h5 class="caption">Ein Beispiel: SDG 5 – Geschlechtergerechtigkeit</h5>
@@ -42,13 +41,13 @@
               <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
             </li>
           </ul>
-          <h5 class="caption">Offizieller Fortschritt – SDG 5</h5>
+          <!-- <h5 class="caption">Offizieller Fortschritt – SDG 5</h5>
           <div class="sdg-process-wrapper">
             <VisProgress :sdg="officialSDG"
               :vLegend="false"
               :compact="false"
               :invert="true" />
-          </div>
+          </div> -->
           <!-- <ul class="indicator-list">
             <li v-for="indicator in indicators_dns ">
               <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
@@ -56,12 +55,12 @@
           </ul> -->
         </li>
         <li :class="{ 'slide': true, 'active': slide === 3 }">
-          <h5 class="caption">Erweiterte 2030Watch Indikatoren – SDG 5</h5>
+          <!-- <h5 class="caption">Erweiterte 2030Watch Indikatoren – SDG 5</h5>
           <ul class="indicator-list">
             <li v-for="indicator in indicators_okf ">
                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
             </li>
-          </ul>
+          </ul> -->
           <!-- <h5 class="caption">2030Watch Fortschritt – SDG 5</h5>
           <div class="sdg-process-wrapper">
             <VisProgress :sdg="officialSDG"
@@ -207,10 +206,6 @@
 
     footer {
       text-align: right;
-      margin-top: $spacing/2;
-      position: absolute;
-      bottom: 1rem;
-      left: 0;
 
       .progress {
         text-align: center;

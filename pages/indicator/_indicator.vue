@@ -63,11 +63,11 @@
       </div>
       <div class="wrapper">
         <div v-if="hasCountries">
-          <h2>Deutschland im Ländervergleich</h2>
+          <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
           <VisBarChart :values="countries" />
         </div>
         <div v-if="hasTimeline">
-          <h2>Der Indikator im Lauf der Zeit</h2>
+          <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
           <VisLineChart :values="timeline" />
         </div>
       </div>

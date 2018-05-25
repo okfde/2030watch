@@ -66,7 +66,7 @@
   @import "~@/assets/style/variables";
 
   .inpage-header {
-    padding: 10vh 0;
+    padding: 10vh 0 3vh 0;
     color: #fff;
 
     .message {
