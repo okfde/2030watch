@@ -19,7 +19,9 @@
         <div class="sdg-label">
           <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
-        <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
+        <div class="sdg-vis">
+          <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
+        </div>
       </nuxt-link>
     </li>
   </ul>
@@ -165,6 +167,10 @@
 
       .sdg-direction {
         margin-right: 16px;
+      }
+
+      .sdg-vis {
+        flex: 1;
       }
 
       &:hover {

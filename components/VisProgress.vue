@@ -3,9 +3,9 @@
     <line
       class="range"
       :x1="scaleX.map(0) + 'px'"
-      y1="50%"
+      :y1="height / 2 + 'px'"
       :x2="scaleX.map(100) + 'px'"
-      y2="50%" />
+      :y2="height / 2 + 'px'" />
     <g class="ticks">
       <g v-if="vTickLabels" class="tickLabels">
         <text
@@ -29,9 +29,9 @@
           class="tick"
           stroke-linecap="round"
           :x1="scaleX.map(tick) + 'px'"
-          y1="calc(50% - 5px)"
+          :y1="height / 2 - 5 + 'px'"
           :x2="scaleX.map(tick) + 'px'"
-          y2="calc(50% + 5px)" />
+          :y2="height / 2 + 5 + 'px'" />
       </g>
     </g>
     <line
@@ -193,9 +193,9 @@
       }
     },
     mounted: function () {
-      this.width = this.$refs.vis.clientWidth - this.markerR
+      this.width = (this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth) - this.markerR
       this.scaleX.range([this.markerR, this.width])
-      this.height = this.$refs.vis.clientHeight
+      this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
       if (typeof this.$refs.okfLabelLegend !== 'undefined') {
         this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
         this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
@@ -285,7 +285,7 @@
   @import "~@/assets/style/variables";
 
   .sdg-vis {
-    flex: 1;
+    width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity 0.2s;
