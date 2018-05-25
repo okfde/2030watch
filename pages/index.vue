@@ -4,8 +4,8 @@
       <div class="wrapper">
         <div class="message">
           <h1>Wie nachhaltig ist Deutschland?</h1>
-          <p>Der Zustand der Welt erfordert eine Trans&shy;formation zu mehr Gerechtig&shy;keit und Nachhaltiger Entwicklung. In 2015 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Transformation siebzehn Nachhaltig&shy;keitsziele - den sogenannten “Sustainable Development Goals (SDGs)”- bis zum Jahr 2030 umzusetzen. Auch die Bundesregierung hat mit der “Deutschen Nachhaltigkeitsstrategie (DNS)” die SDGs in nationale Ziele übersetzt.</p>
-          <p>2030Watch will als zivil&shy;gesell&shy;schaftliches Projekt die Deutsche Nachhaltig&shy;keitsstrategie (DNS) kritisch ergänzen und überprüfen, ob Deutschland seine Versprechen einhält.</p>
+          <p>Der Zustand der Welt erfordert eine Transformation zu mehr Gerechtigkeit und Nachhaltiger Entwicklung. Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Transformation siebzehn Nachhaltigkeitsziele - den sogenannten “Sustainable Development Goals (SDGs)”- bis zum Jahr 2030 umzusetzen. Der damit verbundene globale Indikatorenkatalog dient zur Fortschrittsmessung.</p>
+          <p>2030Watch diskutiert wie ambitioniert Deutschland die SDGs umsetzt</p>
         </div>
       </div>
     </header>
