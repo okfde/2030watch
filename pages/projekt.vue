@@ -102,6 +102,11 @@
     },
     components: {
       Accordeon
+    },
+    head () {
+      return {
+        title: 'Über das Projekt | 2030Watch'
+      }
     }
   }
 </script>

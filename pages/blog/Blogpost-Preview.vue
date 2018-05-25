@@ -13,7 +13,13 @@
 </template>
 
 <script>
-
+export default {
+  head () {
+    return {
+      title: 'Blog | 2030Watch'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -29,7 +29,12 @@
 
 <script>
 export default {
-  props: ['error']
+  props: ['error'],
+  head () {
+    return {
+      title: 'Die Seite wurde nicht gefunden | 2030Watch'
+    }
+  }
 }
 </script>
 

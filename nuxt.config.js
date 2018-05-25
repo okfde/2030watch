@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '2030Watch',
+    title: '2030Watch | Wie nachhaltig ist Deutschland?',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '2030Watch' }
+      { hid: 'description', name: 'description', content: '2030Watch diskutiert wie ambitioniert Deutschland die Nachhaltigkeitsziele der Agenda 2030 umsetzt.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },

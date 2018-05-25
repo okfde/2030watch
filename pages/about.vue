@@ -184,6 +184,11 @@
     },
     components: {
       TeamMember
+    },
+    head () {
+      return {
+        title: 'Über uns | 2030Watch'
+      }
     }
   }
 </script>
