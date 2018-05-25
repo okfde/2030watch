@@ -164,7 +164,7 @@
 </script>
 
 <style lang="scss">
-  @import "~@/assets/style/base";
+  @import "~@/assets/style/variables";
 
   .intro {
     position: relative;
