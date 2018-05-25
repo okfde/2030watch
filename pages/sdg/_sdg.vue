@@ -13,10 +13,8 @@
             <h1>{{ sdg.labelShort }}</h1>
             <p>{{ sdg.textIntro }}</p>
           </div>
-          <div class="sdg-process">
-            <div class="sdg-process-wrapper">
-              <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="false" />
-            </div>
+          <div class="sdg-image">
+            <img :src="image" :title="sdg.labelShort" />
           </div>
         </section>
       </div>
@@ -24,25 +22,16 @@
     <div class="content">
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
-        <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
-        <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
         <div class="indicator-overview columns columns-rows">
-          <section class="description description-dns columns columns-gutter">
+          <div class="description description-dns columns columns-gutter">
             <div>
-              <hgroup>
-                <h3 class="dns">Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
-              </hgroup>
-              <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
-              <span class="process dns" v-html="format(dns)" />
+              <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
+              <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
             </div>
-            <div>
-              <hgroup>
-                <h3 class="okf">2030Watch</h3>
-              </hgroup>
-              <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
-              <span class="process okf" v-html="format(okf)" />
+            <div class="sdg-process-wrapper">
+              <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="false" />
             </div>
-          </section>
+          </div>
         </div>
       </div>
       <div class="indicator-vis">
@@ -94,6 +83,26 @@
             </ul>
           </section>
         </section>
+      </div>
+      <div class="wrapper">
+        <div class="indicator-overview columns columns-rows">
+          <section class="description description-dns columns columns-gutter">
+            <div>
+              <hgroup>
+                <h3 class="dns">Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+              </hgroup>
+              <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
+              <span class="process dns" v-html="format(dns)" />
+            </div>
+            <div>
+              <hgroup>
+                <h3 class="okf">2030Watch</h3>
+              </hgroup>
+              <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+              <span class="process okf" v-html="format(okf)" />
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
@@ -183,6 +192,9 @@
       sdg () {
         return this.sdgs[this.$route.params.sdg]
       },
+      image () {
+        return require('~/assets/img/sdg/E_SDG_goals_icons-individual-rgb-' + ('00' + this.sdg.number).substr(-2) + '.png')
+      },
       indi_dns_keep: function () {
         return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['modTarget', 'uncalculable', 'id'])
       },
@@ -234,6 +246,14 @@
 
   .inpage-header {
     padding-bottom: $spacing * 4;
+  }
+
+  .sdg-image {
+    text-align: center;
+
+    img {
+      max-height: 200px;
+    }
   }
 
   .sdg-process {
