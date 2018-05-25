@@ -24,50 +24,51 @@
       <div class="wrapper">
         <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
       </div>
-      <div class="wrapper columns columns-gutter">
+      <div class="wrapper columns columns-gutter description">
         <section>
-          <small class="caption">Beschreibung</small>
+          <h4>Beschreibung</h4>
           <p>{{ indicator.txtdescription }}</p>
-          <small class="caption">Zielwert</small>
+          <h4>Zielwert</h4>
           <p>{{ indicator.txttarget }}</p>
-          <small class="caption">Kategorie</small>
+          <h4>2030Watch-Kategorie</h4>
           <p>{{ indicator.txtcategory }}</p>
         </section>
         <section>
-          <small class="caption">Indikator-Details</small>
-          <table>
+          <h4>Indikator-Details</h4>
+          <table class="box">
             <tbody>
               <tr>
-                <td>Ziel</td><td>{{ indicator['goal'] }}</td>
+                <td class="title">Ziel</td><td>{{ indicator['goal'] }}</td>
               </tr>
               <tr>
-                <td>Zielwert</td>
+                <td class="title">Zielwert</td>
                 <td v-html="format(indicator['target'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td>Aktueller Wert ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
+                <td class="title">Aktueller Wert ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td>Startwert ({{ indicator['startYear'] }})</td>
+                <td class="title">Startwert ({{ indicator['startYear'] }})</td>
                 <td v-html="format(indicator['start'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td>Begründung</td><td>{{ indicator['reason'] }}</td>
+                <td class="title">Begründung</td><td>{{ indicator['reason'] }}</td>
               </tr>
               <tr>
-                <td>Lizenz</td><td>{{ indicator['license'] }}</td>
+                <td class="title">Lizenz</td><td>{{ indicator['license'] }}</td>
               </tr>
             </tbody>
           </table>
-          <h3>Datenpate</h3>
-          <h3>Teilen</h3>
-          <span>{{ link }}</span>
+          <h4>Datenpate</h4>
+          <img src="http://via.placeholder.com/400x300" alt="Blogpost Vorschaubild">
+          <h4 class="caption">Diesen Indikator teilen</h4>
+          <i class="icon-link"></i><input type="text" :value="link">
         </section>
       </div>
       <div class="wrapper">
         <div class="box viz" v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
-          <div class="viz-title">{{ indicator.label }} in {{ indicator.unit }}, {{ indicator['currentYear'] }}</div>
+          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</div>
           <VisBarChart :values="countries" />
           <div class="viz-dl">
              <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download"></i>Download data</a>
@@ -75,7 +76,7 @@
         </div>
         <div class="box viz" v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
-          <div class="viz-title">{{ indicator.label }} in {{ indicator.unit }}</div>
+          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }})</div>
           <VisLineChart :values="timeline" />
           <div class="viz-dl">
              <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download"></i>Download data</a>
@@ -183,9 +184,41 @@
 <style lang="scss" scoped>
   @import "~@/assets/style/base";
 
-  .progress > * {
+  .progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > * {
     max-height: 150px;
     max-width: 150px;
+    }
+  }
+
+  .description {
+
+    h4 {
+    color: #222;
+  }
+
+    p, table, img {
+      padding: 0 0 $spacing 0;
+    }
+
+    table {
+      padding: $spacing;
+
+      td {
+        padding: 1em 0;
+        border-bottom: 1px solid lighten($color-mute,20%);
+
+        &.title {
+          font-weight: 600;
+        }
+      }
+    }
+
+
   }
 
   .viz {
