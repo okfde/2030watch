@@ -184,7 +184,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "~@/assets/style/base";
+  @import "~@/assets/style/variables";
 
   .progress {
     display: flex;
@@ -231,8 +231,12 @@
     }
 
     input {
-      padding: $spacing/2; 
+      padding: $spacing / 2; 
+      margin-top: $spacing / 2; 
       width: 300px;
+      font-size: 0.7em;
+      background-color: #f9f9f9;
+      border:1px solid $color-mute;
     }
 
 
