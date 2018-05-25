@@ -59,6 +59,8 @@
             </tbody>
           </table>
           <h3>Datenpate</h3>
+          <h3>Teilen</h3>
+          <span>{{ link }}</span>
         </section>
       </div>
       <div class="wrapper">
@@ -106,6 +108,14 @@
         })
         return encodeURI(csvContent)
       }
+    },
+    data: function () {
+      return {
+        link: ''
+      }
+    },
+    mounted: function () {
+      this.link = window.location.origin + this.$route.fullPath
     },
     computed: {
       ...mapState([
