@@ -37,9 +37,9 @@
         <li :class="{ 'slide': true, 'active': slide === 2 }">
           <h5 class="caption">Indikatoren: Offiziell vs 2030Watch</h5>
           <div class="sdg-comparison-wrapper">
-            <div class="number-big dns">30&percnt;</div>
-            <div class="number-big arrow">&#10140;</div>
-            <div class="number-big okf">50&percnt;</div>
+            <span class="number-big dns" v-html="format(30)" />
+            <span class="number-big arrow"><i class="icon-up-big" /></span>
+            <span class="number-big okf" v-html="format(50)" />
           </div>
           <!-- <ul class="indicator-list">
             <li v-for="indicator in indicators_dns">
@@ -101,6 +101,7 @@
 
 <script>
   import { mapState } from 'vuex'
+  import format from '~/assets/js/format.js'
   import VisIndicator from '~/components/VisIndicator.vue'
   import VisProgress from '~/components/VisProgress.vue'
 
@@ -122,6 +123,9 @@
           }
         }
       }
+    },
+    methods: {
+      format: format
     },
     computed: {
       ...mapState([
@@ -203,11 +207,6 @@
       color: $color-okf;
     }
 
-    .arrow {
-      color: darken($color-mute,10%);
-      transform: rotate(-45deg);
-    }
-
     .indicators {
       .legendProgress {
         display: flex;
@@ -225,6 +224,11 @@
          text-align: center;
          font-size: 3em;
          font-weight: bold;
+
+         &.arrow {
+            color: darken($color-mute,10%);
+            transform: rotate(45deg);
+          }
        }
       }
 
