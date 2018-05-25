@@ -114,7 +114,7 @@
     head () {
       return {
         title: this.sdg.labelShort || 'SDG',
-        titleTemplate: '2030 Watch - %s'
+        titleTemplate: '%s | 2030Watch'
       }
     },
     data: function () {
