@@ -64,7 +64,7 @@
       <div class="wrapper">
         <div v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
-          <span>{{ indicator.label }} in {{ indicator.unit }}</span>
+          <span>{{ indicator.label }} in {{ indicator.unit }}, {{ indicator['currentYear'] }}</span>
           <VisBarChart :values="countries" />
         </div>
         <div v-if="hasTimeline && timeline.length">
