@@ -150,7 +150,7 @@
   }
 
   .bar {
-    fill: $color-mute;
+    fill: lighten($color-mute,20%);
 
     &.active {
       fill: $color-okf;

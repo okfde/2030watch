@@ -65,17 +65,21 @@
         </section>
       </div>
       <div class="wrapper">
-        <div v-if="hasCountries && countries.length">
+        <div class="box viz" v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
-          <span>{{ indicator.label }} in {{ indicator.unit }}, {{ indicator['currentYear'] }}</span>
+          <div class="viz-title">{{ indicator.label }} in {{ indicator.unit }}, {{ indicator['currentYear'] }}</div>
           <VisBarChart :values="countries" />
-          <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">Download data</a>
+          <div class="viz-dl">
+             <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download"></i>Download data</a>
+          </div>
         </div>
-        <div v-if="hasTimeline && timeline.length">
+        <div class="box viz" v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
-          <span>{{ indicator.label }} in {{ indicator.unit }}</span>
+          <div class="viz-title">{{ indicator.label }} in {{ indicator.unit }}</div>
           <VisLineChart :values="timeline" />
-          <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">Download data</a>
+          <div class="viz-dl">
+             <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download"></i>Download data</a>
+          </div>
         </div>
       </div>
     </div>
@@ -177,8 +181,28 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~@/assets/style/base";
+
   .progress > * {
     max-height: 150px;
     max-width: 150px;
+  }
+
+  .viz {
+    margin: 3em 0;
+
+    &:first-of-type {
+      margin-top: 1em;
+    }
+
+    .viz-title {
+      text-align: center;
+      padding: $spacing / 2;
+      font-weight: 600;
+    }
+
+    .viz-dl {
+      text-align: right;
+    }
   }
 </style>
