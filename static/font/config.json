@@ -89,6 +89,12 @@
       "css": "share",
       "code": 61920,
       "src": "fontawesome"
+    },
+    {
+      "uid": "95376bf082bfec6ce06ea1cda7bd7ead",
+      "css": "up-big",
+      "code": 59402,
+      "src": "fontawesome"
     }
   ]
 }

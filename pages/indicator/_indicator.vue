@@ -238,8 +238,6 @@
       background-color: #f9f9f9;
       border:1px solid $color-mute;
     }
-
-
   }
 
   .viz {
