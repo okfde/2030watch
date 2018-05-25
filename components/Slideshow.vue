@@ -35,12 +35,17 @@
           </div>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
-          <h5 class="caption">Offizielle DNS Indikatoren – SDG 5</h5>
-          <ul class="indicator-list">
+          <h5 class="caption">Indikatoren DNS vs Indikatoren 2030Watch</h5>
+          <div class="sdg-comparison-wrapper">
+            <div class="number-big dns">30%</div>
+            <div class="number-big okf">50%</div>
+          </div>
+
+          <!-- <ul class="indicator-list">
             <li v-for="indicator in indicators_dns">
               <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
             </li>
-          </ul>
+          </ul> -->
           <!-- <h5 class="caption">Offizieller Fortschritt – SDG 5</h5>
           <div class="sdg-process-wrapper">
             <VisProgress :sdg="officialSDG"
@@ -195,13 +200,24 @@
         height: 100%;
       }
 
-      .indicator-list {
-        padding: $spacing / 2 0;
+     .sdg-comparison-wrapper {
+       display: flex;
 
-        li {
-          display: inline-block;
-        }
+       .number-big {
+         flex: 1;
+         text-align: center;
+         font-size: 3em;
+         font-weight: bold;
+       }
       }
+
+      // .indicator-list {
+      //   padding: $spacing / 2 0;
+
+      //   li {
+      //     display: inline-block;
+      //   }
+      // }
     }
 
     footer {
@@ -219,7 +235,7 @@
           margin-right: 10px;
 
           &.past {
-            background-color: #FCEA2B;
+            background-color: darken($color-mute,10%);
           }
 
           &.future {
