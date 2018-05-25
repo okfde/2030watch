@@ -231,11 +231,9 @@
     }
 
     input {
-      padding: $spacing/2; 
+      padding: $spacing / 2;
       width: 300px;
     }
-
-
   }
 
   .viz {
