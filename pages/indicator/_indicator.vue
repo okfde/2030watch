@@ -62,11 +62,11 @@
         </section>
       </div>
       <div class="wrapper">
-        <div v-if="hasCountries">
+        <div v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
           <VisBarChart :values="countries" />
         </div>
-        <div v-if="hasTimeline">
+        <div v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
           <VisLineChart :values="timeline" />
         </div>
@@ -107,8 +107,11 @@
       },
       countries () {
         const keys = Object.keys(this.indicator.countries)
-        return keys.slice(0, 20).map(key => {
+        const values = keys.slice(0, 20).map(key => {
           return [key, this.indicator.countries[key]]
+        })
+        return values.filter(value => {
+          return value[1] !== null
         })
       },
       timeline () {
