@@ -68,20 +68,7 @@
         </div>
         <div v-if="hasTimeline">
           <h2>Der Indikator im Lauf der Zeit</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Year</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(value, year) in indicator['timeline']">
-                <td>{{ year }}</td>
-                <td>{{ value }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <VisLineChart :values="timeline" />
         </div>
       </div>
     </div>
@@ -92,6 +79,7 @@
   import { mapState } from 'vuex'
   import VisPieChart from '~/components/VisPieChart.vue'
   import VisBarChart from '~/components/VisBarChart.vue'
+  import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
 
   export default {
@@ -123,13 +111,21 @@
           return [key, this.indicator.countries[key]]
         })
       },
+      timeline () {
+        const years = Object.keys(this.indicator.timeline)
+        const values = years.map(key => {
+          return [key, this.indicator.timeline[key]]
+        })
+        return values.filter(value => {
+          return value[1] !== null
+        })
+      },
       hasTimeline () {
         return typeof this.indicator.timeline !== 'undefined'
       },
       category () {
         const { indicator } = this
         const categories = []
-        console.log(indicator)
         if (indicator.author === 'okf') { categories.push('neuer Indikator') }
         if (indicator.badIndicator) { categories.push('ungeeigneter Indikator') }
         if (indicator.keep) { categories.push('übernommener Indikator') }
@@ -142,7 +138,8 @@
     },
     components: {
       VisPieChart,
-      VisBarChart
+      VisBarChart,
+      VisLineChart
     }
   }
 </script>
