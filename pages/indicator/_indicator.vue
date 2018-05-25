@@ -44,7 +44,7 @@
                 <td v-html="format(indicator['target'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td>Aktueller Wert {{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
+                <td>Aktueller Wert ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
               </tr>
               <tr>
                 <td>Startwert ({{ indicator['startYear'] }})</td>
@@ -66,11 +66,13 @@
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
           <span>{{ indicator.label }} in {{ indicator.unit }}, {{ indicator['currentYear'] }}</span>
           <VisBarChart :values="countries" />
+          <a :href="countriesDownload" :download="indicator.slug + '-countries.csv'">Download data</a>
         </div>
         <div v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
           <span>{{ indicator.label }} in {{ indicator.unit }}</span>
           <VisLineChart :values="timeline" />
+          <a :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">Download data</a>
         </div>
       </div>
     </div>
@@ -95,7 +97,15 @@
       }
     },
     methods: {
-      format: format
+      format: format,
+      buildCSV: function (key, arr) {
+        const rows = [[key, 'value'], ...arr]
+        let csvContent = 'data:text/csv;charset=utf-8,'
+        rows.forEach(row => {
+          csvContent += row.join(',') + '\r\n'
+        })
+        return encodeURI(csvContent)
+      }
     },
     computed: {
       ...mapState([
@@ -139,6 +149,12 @@
         if (indicator.uncalculable) { categories.push('nicht berechenbar') }
         if (indicator.spill) { categories.push('Spillover') }
         return categories.length ? categories.join(', ') : false
+      },
+      countriesDownload () {
+        return this.buildCSV('country', this.countries)
+      },
+      timelineDownload () {
+        return this.buildCSV('year', this.timeline)
       }
     },
     components: {
