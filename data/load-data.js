@@ -76,7 +76,6 @@ function processSDGs(sdgs, allIndicators) {
 
 		const usableValuesCombined = [...usableValuesOKF, ...usableValuesDNS]
 
-		// console.log(sdg['number'], indicators.length, indi_dns.length, '>', usableValuesDNS.length, '—', indi_okf.length, '>', usableValuesOKF.length)
 		const _sdg = {
 			...sdg,
 			'values': {
@@ -117,7 +116,7 @@ function processSDGs(sdgs, allIndicators) {
 }
 
 const url_indicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3jgbFv0NlOhd5JuzoMFvelmcTELqc85VpIWn-R7h2TkyVyVYLyOAdpTAdtDmxYFs6bZZCiQkBmWy-/pub?output=csv'
-const indi_headers_dns = ['sdgId', 'sdgName', 'dnsId', 'behalten', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit', 'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'nichtBerechenbar', 'landerVergleich', 'zeitreihe', 'url']
+const indi_headers_dns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit', 'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'nicht2030WKatalog', 'landerVergleich', 'zeitreihe', 'url']
 const indi_headers_okf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'zeitreihe', 'laendervergleich', 'spillover', 'neuesThema', 'datenpate', 'url', '2030WDatensatz', 'potenziellerDatenpate']
 const indi_sdgID = 'sdgId'
 const indi_numbers = ['zielwertJahr2030', 'aktuellerWert', 'ausgangswert']
@@ -233,7 +232,13 @@ function processIndicatorMeta(indicator) {
 		i['yearlyTarget'] = indicator['jaehrlicherZielwert'] === 'x'
 		i['badTarget'] = indicator['aussageloserZielwert'] === 'j'
 		i['badIndicator'] = indicator['ungeeignetX'] === 'x'
-		i['uncalculable'] = indicator['nichtBerechenbar'] === 'x'
+		if (
+				(!indicator['ausgangswert'] && indicator['ausgangswert'] !== 0) ||
+				(!indicator['aktuellerWert'] && indicator['aktuellerWert'] !== 0) ||
+				(!indicator['zielwertJahr2030'] && indicator['zielwertJahr2030'] !== 0)
+			) {
+			i['uncalculable'] = true
+		}
 		i['spill'] = indicator['spillover'] === 'j'
 
 		if (indicator['modifizierterZielwert'].match(/^\d/)) { // starts with number
@@ -243,7 +248,7 @@ function processIndicatorMeta(indicator) {
 			i['modTarget'] = false
 		}
 
-		i['keep'] = !i['badIndicator'] && !i['modTarget']
+		i['keep'] = indicator['nicht2030WKatalog'] !== 'x' && !i['modTarget']
 	}
 
 	if (author === 'okf') {
