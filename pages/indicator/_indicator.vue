@@ -24,16 +24,34 @@
       <div class="wrapper">
         <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
       </div>
-      <div class="wrapper columns columns-gutter description">
-        <section>
-          <h4>Beschreibung</h4>
-          <p>{{ indicator.txtdescription }}</p>
-          <h4>Zielwert</h4>
-          <p>{{ indicator.txttarget }}</p>
-          <h4>2030Watch-Kategorie</h4>
-          <p>{{ indicator.txtcategory }}</p>
-        </section>
-        <section>
+      <div class="wrapper description">
+        <h4>Beschreibung</h4>
+        <p>{{ indicator.txtdescription }}</p>
+        <h4>2030Watch-Kategorie</h4>
+        <p>{{ indicator.txtcategory }}</p>
+        <h4>Zielwert</h4>
+        <p>{{ indicator.txttarget }}</p>
+      </div>
+      <div class="wrapper">
+        <div class="box viz" v-if="hasCountries && countries.length">
+          <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
+          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</div>
+          <VisBarChart :values="countries" />
+          <div class="viz-dl">
+             <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download"></i>Daten herunterladen</a>
+          </div>
+        </div>
+        <div class="box viz" v-if="hasTimeline && timeline.length">
+          <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
+          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }})</div>
+          <VisLineChart :values="timeline" />
+          <div class="viz-dl">
+             <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download"></i>Daten herunterladen</a>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper columns columns-gutter">
+        <div class="wrapper description">
           <h4>Indikator-Details</h4>
           <table class="box">
             <tbody>
@@ -59,28 +77,12 @@
               </tr>
             </tbody>
           </table>
-          <h4>Datenpate</h4>
-          <img src="http://via.placeholder.com/400x300" alt="Blogpost Vorschaubild">
-          <h4 class="caption">Diesen Indikator teilen</h4>
-          <i class="icon-link"></i><input type="text" :value="link">
-        </section>
-      </div>
-      <div class="wrapper">
-        <div class="box viz" v-if="hasCountries && countries.length">
-          <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
-          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</div>
-          <VisBarChart :values="countries" />
-          <div class="viz-dl">
-             <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download"></i>Download data</a>
-          </div>
+          <h4 class="caption">Diesen Indikator teilen</h4><i class="icon-link"></i>
+          <input type="text" :value="link">
         </div>
-        <div class="box viz" v-if="hasTimeline && timeline.length">
-          <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
-          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }})</div>
-          <VisLineChart :values="timeline" />
-          <div class="viz-dl">
-             <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download"></i>Download data</a>
-          </div>
+        <div class="wrapper description">
+          <h4>Datenpate</h4>
+          <img src="http://via.placeholder.com/500x360" alt="Blogpost Vorschaubild">
         </div>
       </div>
     </div>
@@ -199,6 +201,7 @@
 
     h4 {
     color: #222;
+    padding-bottom: $spacing / 4;
   }
 
     p, table, img {
@@ -207,6 +210,7 @@
 
     table {
       padding: $spacing;
+      margin-bottom: $spacing;
 
       td {
         padding: 1em 0;
@@ -216,6 +220,19 @@
           font-weight: 600;
         }
       }
+    }
+
+    h4.caption, i {
+      display: inline;
+    }
+
+    i {
+      margin-left: 10px;
+    }
+
+    input {
+      padding: $spacing/2; 
+      width: 300px;
     }
 
 
