@@ -6,29 +6,27 @@
     <section class="columns columns-gutter" :style="{ 'height': slideHeight + 'px' }">
       <ul class="container" ref="slidesText">
         <li :class="{ 'slide': true, 'active': slide === 1 }">
-          <p>
-            Die Bundesregierung verwendet einen <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">offiziellen Indikatorenkatalog (DNS)</a> um den Fortschritt Deutschlands in Richtung Nachhaltigkeit zu überwachen. Für jedes der 17 Nachhaltigkeitsziele (SDGs) spiegelt ein Indikatorenset den jeweiligen Fortschritt in Richtung Nachhaltigkeit wieder. Das Urteil: Deutschland ist nachhaltig.
-          </p>
-          <p>
-            2030Watch stellt diesem offiziellen Indikatorenkatalog einen <a href="#" target="_blank" class="okf">erweiterten Indikatorenkatalog</a> entgegen, welcher fehlende Themen, ambitioniertere Zielwerte und mehr Verantwortung aufzeigt. Das Urteil: Deutschland hat noch großen Handlungsbedarf um wirklich nachhaltig zu werden.
-          </p>
+          <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">“Deutschen Nachhaltigkeitsstrategie” (DNS)</a> die SDGs in nationale Ziele übersetzt.</p>
+          <p>2030Watch diskutiert anhand von Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst 2030Watch und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
           <h5 class="caption">Ein Beispiel: SDG 5 – Geschlechtergerechtigkeit</h5>
           <p>
-            Das Nachhaltigkeitsziel SDG 5 steht für die Gleichstellung der Geschlechter. Im Zuge der gesetzlichen Vorschriften sind bestimmte Unternehmen in Deutschland seit 2016 dazu verpflichtet, mindestens 30% Frauenanteil in den Aufsichtsräten zu erreichen. Auch die Bundesregierung hat dasselbe Ziel für SDG 5 gesetzt, jedoch bis 2030. Die Vereinten Nationen sprechen von gleichberechtigter Partizipation von Frauen in Politik, Wirtschaft und öffentlichem Leben.
+            Die Bundesregierung hat sich unter Geschlechtergerechtigkekt zum Ziel gesetzt bis 2030, 30% Frauenanteil in den Aufsichtsräten zu erreichen. Aus Sicht von 2030Watch ist das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. und fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 3 }">
           <p>
-            Aus Sicht von 2030Watch ist daher das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. Mit der Betrachtung von lediglich 106 Unternehmen nimmt die DNS außerdem nur einen unzureichenden Bereich der Teilhabe in den Blick.
-          </p>
-          <p>
-            Die Konsequenz: 2030Watch fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen. Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.
+            Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 4 }">
-          <p>Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs. Lernt, diskutiert, entdeckt!</p>
+          <p>Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung von Hausarbeit und Unterschied in Renteneinkommen auf wichtige Themen die in der DNS vernachlässigt werden.
+          </p>
+        </li>
+        <li :class="{ 'slide': true, 'active': slide === 5 }">
+          <p>Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs. Lernt, diskutiert, entdeckt! 48 %89 %0 %Nachhaltigkeit100 %2030WatchDaten DNS
+          </p>
         </li>
       </ul>
       <ul class="indicators container" ref="slidesImages">
@@ -79,11 +77,11 @@
         v-on:click="slide <= 1 ? slide = slide : slide -= 1"
         :class="{ 'btn': true, 'disabled': slide <= 1 }">Zurück</span>
       <span
-        v-on:click="slide > 3 ? slide = slide : slide += 1"
-        :class="{ 'btn': true, 'disabled': slide > 3 }">Weiter</span>
+        v-on:click="slide > 4 ? slide = slide : slide += 1"
+        :class="{ 'btn': true, 'disabled': slide > 4 }">Weiter</span>
       <div class="progress">
         <span
-          v-for="n in 4"
+          v-for="n in 5"
           v-on:click="slide = n"
           :class="{ 'icon': true, 'past': n <= slide, 'future': n > slide }" />
       </div>
