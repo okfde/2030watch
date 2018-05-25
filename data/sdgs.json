@@ -58,6 +58,8 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
+          "indicator source": "GSS",
+          "data source": "Eurostat",
           "license": "unbekannt"
         }
       ],
@@ -148,7 +150,7 @@
     "textIndicators": "Die Agenda 2030 schlägt 14 Indikatoren zur Messung von Ziel 2 vor. Sie umfasst Unterziele zur Messung von Hunger und Unterernährung, zur kleinbäuerlichen Landwirtschaft, zum Anteil landwirtschaftlicher Flächen die nachhaltig und produktiv bewirtschaftet werden, zu genetischer Vielfalt in der Landwirtschaft,  zu Investitionen in die Landwirtschaft sowie zu Handelsbeschränkungen, Exportsubventionen in der Landwirtschaft sowie zur Regulierung internationaler Märkte im Bezug auf Nahrungsmittel. Die Deutsche Nachhaltigkeitsstrategie umfasst 2 Indikatoren, die sich auf den Umwelteinfluss der heimischen Landwirtschaft beziehen. 2030Watch schlägt 6 Indikatoren vor und berücksichtigt auch den Einfluss der Landwirtschaftspolitik im Ausland.",
     "values": {
       "dns": 53.856162206078025,
-      "okf": 45.139013315220765
+      "okf": 45.13901331522077
     },
     "ind": {
       "dns": [
@@ -175,7 +177,10 @@
           "modTarget": true,
           "altIndicator": "2_1",
           "keep": false,
-          "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm"
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Eurostat",
+          "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm",
+          "sourcelink": "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=t2020_rn310&lang=en"
         },
         {
           "id": "2_2",
@@ -199,7 +204,10 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
-          "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm"
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Eurostat",
+          "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm",
+          "sourcelink": "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&language=en&pcode=t2020_rn120&plugin=1"
         }
       ],
       "okf": [
@@ -221,27 +229,10 @@
           "reason": "SDSN Methode",
           "newTopic": false,
           "pate": false,
-          "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm"
-        },
-        {
-          "id": "2_4",
-          "author": "okf",
-          "label": "Fleischkonsum pro Kopf",
-          "unit": "kg/Kopf",
-          "goal": "31,2",
-          "sdg": 2,
-          "progress": 5.299539170506911,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTNfqKAcocxX8bpKaTJM3_ypScOCK3oprYRRO0197MyicKD3zIu43bQRwrlgTRvRQG9WnEUPvGv0Bb8/pub?gid=0&single=true&output=csv",
-          "slug": "okf-fleischkonsum",
-          "target": 31.2,
-          "current": 59.97,
-          "start": 61.58,
-          "startYear": "2008",
-          "currentYear": "2016",
-          "reason": "Basisjahr",
-          "newTopic": true,
-          "pate": false,
-          "license": ""
+          "indicator source": "2030W",
+          "data source": "Eurostat",
+          "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm",
+          "sourcelink": "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=t2020_rn310&lang=en"
         },
         {
           "id": "2_3",
@@ -261,7 +252,10 @@
           "reason": "SDSN Methode",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030W",
+          "data source": "Eurostat",
+          "license": "",
+          "sourcelink": "http://ec.europa.eu/eurostat/en/web/products-datasets/-/AEI_FM_SALPEST09"
         },
         {
           "id": "2_2",
@@ -281,7 +275,33 @@
           "reason": "SDSN Methode",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030W",
+          "data source": "European Medicines Agency",
+          "license": "",
+          "sourcelink": "http://www.ema.europa.eu/docs/en_GB/document_library/Report/2017/10/WC500236750.pdf"
+        },
+        {
+          "id": "2_4",
+          "author": "okf",
+          "label": "Fleischkonsum pro Kopf",
+          "unit": "kg/Kopf",
+          "goal": "31,2",
+          "sdg": 2,
+          "progress": 5.299539170506911,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTNfqKAcocxX8bpKaTJM3_ypScOCK3oprYRRO0197MyicKD3zIu43bQRwrlgTRvRQG9WnEUPvGv0Bb8/pub?gid=0&single=true&output=csv",
+          "slug": "okf-fleischkonsum",
+          "target": 31.2,
+          "current": 59.97,
+          "start": 61.58,
+          "startYear": "2008",
+          "currentYear": "2016",
+          "reason": "Basisjahr",
+          "newTopic": true,
+          "pate": false,
+          "indicator source": "2030W",
+          "data source": "Bundesanstalt für Ernährung und Landwirtschaft",
+          "license": "",
+          "sourcelink": "https://www.ble.de/DE/Startseite/startseite_node.html"
         }
       ]
     },
@@ -780,7 +800,10 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
         },
         {
           "id": "5_3",
@@ -804,7 +827,10 @@
           "spill": false,
           "modTarget": false,
           "keep": false,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
         },
         {
           "id": "5_2",
@@ -829,30 +855,13 @@
           "modTarget": true,
           "altIndicator": "5_2",
           "keep": false,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
         }
       ],
       "okf": [
-        {
-          "id": "5_4",
-          "author": "okf",
-          "label": "Gendergap im Renteneinkommen (Rentner über 65)",
-          "unit": "%",
-          "goal": "0",
-          "sdg": 5,
-          "progress": 0,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRVn3RLWD9Z-sR_a48nmmZjI43-296BNGIMS-1zfxn8aCE2L8dpB4NUQhz7iSTJ4v5pwfkgB6M0Wv6k/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-gendergap-renten",
-          "target": 0,
-          "current": 45.7,
-          "start": 45.7,
-          "startYear": "2015",
-          "currentYear": "2015",
-          "reason": "SDSN",
-          "newTopic": true,
-          "pate": false,
-          "license": ""
-        },
         {
           "id": "5_2",
           "author": "okf",
@@ -871,7 +880,10 @@
           "reason": "2011 Basisjahr abgleichend mit DNS",
           "newTopic": false,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch ",
+          "data source": "FIDAR",
+          "license": "",
+          "sourcelink": "https://www.fidar.de/wob-indizes-und-studien/wob-index/wob-index-archiv.html"
         },
         {
           "id": "5_5",
@@ -891,7 +903,33 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "EUFRA",
+          "license": "",
+          "sourcelink": "http://fra.europa.eu/en/publications-and-resources/data-and-maps/survey-data-explorer-violence-against-women-survey"
+        },
+        {
+          "id": "5_4",
+          "author": "okf",
+          "label": "Gendergap im Renteneinkommen (Rentner über 65)",
+          "unit": "%",
+          "goal": "0",
+          "sdg": 5,
+          "progress": 0,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRVn3RLWD9Z-sR_a48nmmZjI43-296BNGIMS-1zfxn8aCE2L8dpB4NUQhz7iSTJ4v5pwfkgB6M0Wv6k/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-gendergap-renten",
+          "target": 0,
+          "current": 45.7,
+          "start": 45.7,
+          "startYear": "2015",
+          "currentYear": "2015",
+          "reason": "SDSN",
+          "newTopic": true,
+          "pate": false,
+          "indicator source": "2030Watch",
+          "data source": "Eurostat",
+          "license": "",
+          "sourcelink": "https://www.coe.int/en/web/genderequality/news/-/asset_publisher/97rn0OKB2ywb/content/2017-report-on-equality-between-women-and-men-in-the-eu?inheritRedirect=false"
         },
         {
           "id": "5_1",
@@ -911,7 +949,10 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": "Deutscher Frauenring",
-          "license": ""
+          "indicator source": "Deutscher Frauenring e.v. ",
+          "data source": "Welt Bank (Inter-Parliamentary Union) ",
+          "license": "",
+          "sourcelink": "http://databank.worldbank.org/data/reports.aspx?source=2&series=SG.GEN.PARL.ZS&country="
         },
         {
           "id": "5_3",
@@ -931,7 +972,10 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch ",
+          "data source": "EIGE",
+          "license": "",
+          "sourcelink": "http://eige.europa.eu/gender-equality-index"
         }
       ]
     },
@@ -1653,7 +1697,10 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
+          "data source": "OECD",
+          "license": "",
+          "sourcelink": "https://data.oecd.org/rd/gross-domestic-spending-on-r-d.htm#indicator-chart"
         }
       ],
       "okf": [
@@ -1675,27 +1722,10 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
-        },
-        {
-          "id": "9_3",
-          "author": "okf",
-          "label": "Open Data Index",
-          "unit": "% der Daten die in offenen Formaten vorliegen",
-          "goal": "73.2",
-          "sdg": 9,
-          "progress": 38.674033149171265,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7MetSwFISGGyzOplpd1ODklteRJMtZ2OPci-iBNHvTe0MyN77iv3dQVJ5Z-PBOqFUVXCyMFMt2Trr/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-open-data-index",
-          "target": 73.2,
-          "current": 51,
-          "start": 37,
-          "startYear": "2016",
-          "currentYear": "2016",
-          "reason": "SDSN",
-          "newTopic": true,
-          "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "Open Signal",
+          "license": "",
+          "sourcelink": "https://opensignal.com/reports/2016/11/state-of-lte"
         },
         {
           "id": "9_1",
@@ -1715,7 +1745,10 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "OECD",
+          "license": "",
+          "sourcelink": "https://data.oecd.org/rd/researchers.htm"
         },
         {
           "id": "9_4",
@@ -1735,7 +1768,33 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "cgdev",
+          "license": "",
+          "sourcelink": "https://www.cgdev.org/commitment-development-index-2017#CDI_TEC"
+        },
+        {
+          "id": "9_3",
+          "author": "okf",
+          "label": "Open Data Index",
+          "unit": "% der Daten die in offenen Formaten vorliegen",
+          "goal": "73.2",
+          "sdg": 9,
+          "progress": 38.674033149171265,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7MetSwFISGGyzOplpd1ODklteRJMtZ2OPci-iBNHvTe0MyN77iv3dQVJ5Z-PBOqFUVXCyMFMt2Trr/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-open-data-index",
+          "target": 73.2,
+          "current": 51,
+          "start": 37,
+          "startYear": "2016",
+          "currentYear": "2016",
+          "reason": "SDSN",
+          "newTopic": true,
+          "pate": false,
+          "indicator source": "2030Watch",
+          "data source": "Open Knowledge Network",
+          "license": "",
+          "sourcelink": "https://index.okfn.org/place/"
         }
       ]
     },
@@ -2221,6 +2280,33 @@
     "ind": {
       "dns": [
         {
+          "id": "12_1",
+          "author": "dns",
+          "label": "Produkte mit Umweltzeichen",
+          "unit": "%",
+          "goal": "0,34",
+          "sdg": 12,
+          "progress": 7.284768211920531,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXYQ07i6G9jinKHQJxXliCc-oKSsknqFdrkiPnD2vVXy_STxlrG2FquzW5dM4btayqIfYURm60WLho/pub?gid=1093265483&single=true&output=csv",
+          "slug": "dns-produkte-umweltzeichen",
+          "target": 34,
+          "current": 6,
+          "start": 3.8,
+          "startYear": "2012",
+          "currentYear": "2014",
+          "reason": "Basisjahr",
+          "yearlyTarget": false,
+          "badTarget": false,
+          "badIndicator": false,
+          "spill": false,
+          "modTarget": false,
+          "keep": true,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
+        },
+        {
           "id": "12_3",
           "author": "dns",
           "label": "Energieverbrauch des Konsums",
@@ -2243,31 +2329,37 @@
           "spill": true,
           "modTarget": false,
           "keep": false,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
         },
         {
-          "id": "12_1",
+          "id": "12_4",
           "author": "dns",
-          "label": "Produkte mit Umweltzeichen",
-          "unit": "%",
-          "goal": "0,34",
+          "label": "Umweltmanagement EMAS",
+          "unit": "Anzahl",
+          "goal": "5000",
           "sdg": 12,
-          "progress": 7.284768211920531,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXYQ07i6G9jinKHQJxXliCc-oKSsknqFdrkiPnD2vVXy_STxlrG2FquzW5dM4btayqIfYURm60WLho/pub?gid=1093265483&single=true&output=csv",
-          "slug": "dns-produkte-umweltzeichen",
-          "target": 34,
-          "current": 6,
-          "start": 3.8,
-          "startYear": "2012",
-          "currentYear": "2014",
+          "progress": 3.697697048329549,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSYf-1xT-oaeK73I_YOvhptoYghOryYG4yQ6o1fpPRVX_auo55pXLlD7ucm4rolXPw_kO7ImhsHT7bM/pub?gid=1093265483&single=true&output=csv",
+          "slug": "dns-emas-organisationsstandorte",
+          "target": 5000,
+          "current": 2031,
+          "start": 1917,
+          "startYear": "2008",
+          "currentYear": "2015",
           "reason": "Basisjahr",
           "yearlyTarget": false,
           "badTarget": false,
-          "badIndicator": false,
+          "badIndicator": true,
           "spill": false,
           "modTarget": false,
-          "keep": true,
-          "license": ""
+          "keep": false,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
         },
         {
           "id": "12_2",
@@ -2292,31 +2384,10 @@
           "spill": true,
           "modTarget": false,
           "keep": false,
-          "license": ""
-        },
-        {
-          "id": "12_4",
-          "author": "dns",
-          "label": "Umweltmanagement EMAS",
-          "unit": "Anzahl",
-          "goal": "5000",
-          "sdg": 12,
-          "progress": 3.697697048329549,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSYf-1xT-oaeK73I_YOvhptoYghOryYG4yQ6o1fpPRVX_auo55pXLlD7ucm4rolXPw_kO7ImhsHT7bM/pub?gid=1093265483&single=true&output=csv",
-          "slug": "dns-emas-organisationsstandorte",
-          "target": 5000,
-          "current": 2031,
-          "start": 1917,
-          "startYear": "2008",
-          "currentYear": "2015",
-          "reason": "Basisjahr",
-          "yearlyTarget": false,
-          "badTarget": false,
-          "badIndicator": true,
-          "spill": false,
-          "modTarget": false,
-          "keep": false,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
         }
       ],
       "okf": [
@@ -2338,7 +2409,10 @@
           "reason": "SDSN Methode",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "European Federation of Bottled Waters",
+          "license": "",
+          "sourcelink": "http://www.efbw.org/fileadmin/user_upload/images/Per_capita_consumption_2016_01.JPG"
         },
         {
           "id": "12_1",
@@ -2358,7 +2432,10 @@
           "reason": "SDSN Methode",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "EUROSTAT",
+          "license": "",
+          "sourcelink": "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=env_waspac&lang=en"
         },
         {
           "id": "12_3",
@@ -2378,7 +2455,10 @@
           "reason": "SDSN Methode",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "Global Footprint Network ",
+          "data source": "Global Footprint Network ",
+          "license": "",
+          "sourcelink": "http://data.footprintnetwork.org/#/"
         }
       ]
     },
@@ -2895,55 +2975,10 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
-          "license": ""
-        },
-        {
-          "id": "16_2",
-          "author": "dns",
-          "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen",
-          "unit": "Projektanzahl",
-          "goal": "15 jährlich",
-          "sdg": 16,
-          "progress": 173.33333333333334,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRluNHns2qmSSyx6vxk_o80GWSiLlfx4OWFYtjgP90eXQIkBSVxqK1_-K1suJ1qfiMpggp2HPHVgd_H/pub?gid=0&single=true&output=csv",
-          "slug": "dns-sicherung-registrierung-zerstoerung-kleinwaffen",
-          "target": 15,
-          "current": 26,
-          "start": 0,
-          "startYear": "",
-          "currentYear": "2015",
-          "reason": "natürlicher Nullwert",
-          "yearlyTarget": false,
-          "badTarget": false,
-          "badIndicator": true,
-          "spill": true,
-          "modTarget": false,
-          "keep": false,
-          "license": ""
-        },
-        {
-          "id": "16_3",
-          "author": "dns",
-          "label": "Corruption Perception Index",
-          "unit": "Punkte",
-          "goal": "Verbesserung gegenüber 2012",
-          "sdg": 16,
-          "progress": 100,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCvNDaPSLLt9Ji9ao7SFCWCWR52es-OT93tKS64qYIR86kkJkNJ6gzPsiccUHxlfSbkuZjwNkQ3Lg1/pub?gid=0&single=true&output=csv",
-          "slug": "dns-corruption-perception-index",
-          "target": 81,
-          "current": 81,
-          "start": 40,
-          "startYear": "2017",
-          "currentYear": "2017",
-          "reason": "SDSN",
-          "yearlyTarget": false,
-          "badTarget": true,
-          "badIndicator": false,
-          "spill": false,
-          "modTarget": false,
-          "keep": true,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Bundeskriminalamt",
+          "license": "",
+          "sourcelink": "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2017/Standardtabellen/standardtabellenFaelle.html?nn=96600"
         },
         {
           "id": "16_4",
@@ -2967,7 +3002,64 @@
           "spill": true,
           "modTarget": false,
           "keep": true,
-          "license": ""
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Destatis",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile "
+        },
+        {
+          "id": "16_3",
+          "author": "dns",
+          "label": "Corruption Perception Index",
+          "unit": "Punkte",
+          "goal": "Verbesserung gegenüber 2012",
+          "sdg": 16,
+          "progress": 100,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCvNDaPSLLt9Ji9ao7SFCWCWR52es-OT93tKS64qYIR86kkJkNJ6gzPsiccUHxlfSbkuZjwNkQ3Lg1/pub?gid=0&single=true&output=csv",
+          "slug": "dns-corruption-perception-index",
+          "target": 81,
+          "current": 81,
+          "start": 40,
+          "startYear": "2017",
+          "currentYear": "2017",
+          "reason": "SDSN",
+          "yearlyTarget": false,
+          "badTarget": true,
+          "badIndicator": false,
+          "spill": false,
+          "modTarget": false,
+          "keep": true,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Transparency International",
+          "license": "",
+          "sourcelink": "https://www.transparency.de/korruptionsindizes/cpi-2017/cpi-ranking-2017/?L=0"
+        },
+        {
+          "id": "16_2",
+          "author": "dns",
+          "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen",
+          "unit": "Projektanzahl",
+          "goal": "15 jährlich",
+          "sdg": 16,
+          "progress": 173.33333333333334,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRluNHns2qmSSyx6vxk_o80GWSiLlfx4OWFYtjgP90eXQIkBSVxqK1_-K1suJ1qfiMpggp2HPHVgd_H/pub?gid=0&single=true&output=csv",
+          "slug": "dns-sicherung-registrierung-zerstoerung-kleinwaffen",
+          "target": 15,
+          "current": 26,
+          "start": 0,
+          "startYear": "",
+          "currentYear": "2015",
+          "reason": "natürlicher Nullwert",
+          "yearlyTarget": false,
+          "badTarget": false,
+          "badIndicator": true,
+          "spill": true,
+          "modTarget": false,
+          "keep": false,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Destatis",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile "
         }
       ],
       "okf": [
@@ -2989,27 +3081,10 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
-        },
-        {
-          "id": "16_1",
-          "author": "okf",
-          "label": "Financial Secrecy Index",
-          "unit": "Punkte",
-          "goal": "<20",
-          "sdg": 16,
-          "progress": 18.75,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQkgPRFRVxfP88UzHAn_G95v1SpbmWnPk17J9RooGa3pZfrW9b7iOlHqqqAK78JMXOkY92hSnh-rPt8/pub?gid=0&single=true&output=csv",
-          "slug": "okf-financial-secrecy-index",
-          "target": 20,
-          "current": 59,
-          "start": 68,
-          "startYear": "2018",
-          "currentYear": "2018",
-          "reason": "SDSN",
-          "newTopic": true,
-          "pate": "tax justice network",
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "SIPRI",
+          "license": "",
+          "sourcelink": "http://armstrade.sipri.org/armstrade/page/toplist.php"
         },
         {
           "id": "16_3",
@@ -3029,7 +3104,33 @@
           "reason": "SDSN",
           "newTopic": true,
           "pate": false,
-          "license": ""
+          "indicator source": "2030Watch",
+          "data source": "AccessInfo",
+          "license": "",
+          "sourcelink": "http://www.rti-rating.org/country-data/"
+        },
+        {
+          "id": "16_1",
+          "author": "okf",
+          "label": "Financial Secrecy Index",
+          "unit": "Punkte",
+          "goal": "<20",
+          "sdg": 16,
+          "progress": 18.75,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQkgPRFRVxfP88UzHAn_G95v1SpbmWnPk17J9RooGa3pZfrW9b7iOlHqqqAK78JMXOkY92hSnh-rPt8/pub?gid=0&single=true&output=csv",
+          "slug": "okf-financial-secrecy-index",
+          "target": 20,
+          "current": 59,
+          "start": 68,
+          "startYear": "2018",
+          "currentYear": "2018",
+          "reason": "SDSN",
+          "newTopic": true,
+          "pate": "tax justice network",
+          "indicator source": "2030Watch",
+          "data source": "Tax Justice Network",
+          "license": "",
+          "sourcelink": "https://financialsecrecyindex.com/introduction/fsi-2018-results"
         }
       ]
     },

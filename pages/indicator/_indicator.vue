@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="wrapper columns columns-gutter">
-        <div class="wrapper description">
+        <div class="description">
           <h4>Indikator-Details</h4>
           <table class="box">
             <tbody>
@@ -70,19 +70,36 @@
                 <td v-html="format(indicator['start'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td class="title">Begründung</td><td>{{ indicator['reason'] }}</td>
+                <td class="title">jährlicher Zielwert</td>
+                <td>{{ indicator['yearlyTarget'] ? 'Ja' : 'Nein' }}</td>
               </tr>
               <tr>
+                <td class="title">Spillover</td>
+                <td>{{ indicator['spill'] ? 'Ja' : 'Nein' }}</td>
+              </tr>
+              <tr v-if="indicator['reason']">
+                <td class="title">Begründung</td><td>{{ indicator['reason'] || '—'  }}</td>
+              </tr>
+              <tr v-if="indicator['license']">
                 <td class="title">Lizenz</td><td>{{ indicator['license'] }}</td>
+              </tr>
+              <tr v-if="indicator['indicator source']">
+                <td class="title">Indikator Quelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
+              </tr>
+              <tr v-if="indicator['data source']">
+                <td class="title">Daten Quelle</td><td><a :href="indicator['sourcelink']">{{ indicator['data source'] }}</a></td>
+              </tr>
+              <tr v-if="indicator['pate']">
+                <td class="title">Datenpate</td><td>{{ indicator['pate'] }}</td>
               </tr>
             </tbody>
           </table>
           <h4 class="caption">Diesen Indikator teilen</h4><i class="icon-link"></i>
           <input type="text" :value="link">
         </div>
-        <div class="wrapper description">
+        <div class="description">
           <h4>Datenpate</h4>
-          <img src="http://via.placeholder.com/500x360" alt="Blogpost Vorschaubild">
+          <img src="http://via.placeholder.com/500x360" />
         </div>
       </div>
     </div>
@@ -198,11 +215,10 @@
   }
 
   .description {
-
     h4 {
-    color: #222;
-    padding-bottom: $spacing / 4;
-  }
+      color: #222;
+      padding-bottom: $spacing / 4;
+    }
 
     p, table, img {
       padding: 0 0 $spacing 0;
@@ -218,6 +234,12 @@
 
         &.title {
           font-weight: 600;
+        }
+      }
+
+      tr:last-child {
+        td {
+          border: none;
         }
       }
     }

@@ -273,7 +273,8 @@ function processIndicatorDetail(indicator, callback) {
 			}
 
 			const description = _.fromPairs(_.slice(detailData, 0, endData))
-			_.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'indicatorSource', 'dataSource', 'license'], key => {
+			console.log(description)
+			_.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
 				indicator[key] = description[key]
 			})
 
