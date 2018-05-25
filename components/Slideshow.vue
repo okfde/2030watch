@@ -20,7 +20,7 @@
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 4 }">
-          <p>Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung von Hausarbeit und Unterschied in Renteneinkommen auf wichtige Themen die in der DNS vernachlässigt werden.
+          <p>Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung von Hausarbeit, Gewalt gegen Frauen und  dem Unterschied in Renteneinkommen auf wichtige Themen die in der DNS vernachlässigt werden.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 5 }">
@@ -35,12 +35,12 @@
           </div>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
-          <h5 class="caption">Indikatoren DNS vs Indikatoren 2030Watch</h5>
+          <h5 class="caption">Indikatoren: Offiziell vs 2030Watch</h5>
           <div class="sdg-comparison-wrapper">
-            <div class="number-big dns">30%</div>
-            <div class="number-big okf">50%</div>
+            <div class="number-big dns">30&percnt;</div>
+            <div class="number-big arrow">&#10140;</div>
+            <div class="number-big okf">50&percnt;</div>
           </div>
-
           <!-- <ul class="indicator-list">
             <li v-for="indicator in indicators_dns">
               <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
@@ -60,19 +60,25 @@
           </ul> -->
         </li>
         <li :class="{ 'slide': true, 'active': slide === 3 }">
-          <!-- <h5 class="caption">Erweiterte 2030Watch Indikatoren – SDG 5</h5>
+          <h5 class="caption">Neuer Indikator 2030Watch: Frauen in Parlamenten</h5>
+           <ul class="indicator-list">
+            <li v-for="indicator in indicators_dns">
+              <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
+            </li>
+          </ul>
           <ul class="indicator-list">
-            <li v-for="indicator in indicators_okf ">
+            <li v-for="indicator in indicators_okf_1 ">
                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
             </li>
-          </ul> -->
-          <!-- <h5 class="caption">2030Watch Fortschritt – SDG 5</h5>
-          <div class="sdg-process-wrapper">
-            <VisProgress :sdg="officialSDG"
-              :vLegend="false"
-              :compact="false"
-              :invert="true" />
-        </div> -->
+          </ul>
+        </li>
+        <li :class="{ 'slide': true, 'active': slide === 4 }">
+          <h5 class="caption">Zusätzliche 2030Watch Indikatoren – SDG 5</h5>
+          <ul class="indicator-list">
+            <li v-for="indicator in indicators_okf_2 ">
+               <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -129,15 +135,18 @@
           data['dns-frauen-bildung-eza']
         ]
       },
-      indicators_okf () {
+      indicators_okf_1 () {
         const { data } = this
         return [
-          data['dns-verdienstabstand-zwischen-frauen-und-maennern'],
-          data['okf-frauen-wirtschaft'],
-          data['okf-frauen-parlamente'],
+          data['okf-frauen-parlamente']
+        ]
+      },
+      indicators_okf_2 () {
+        const { data } = this
+        return [
           data['okf-verteilung-hausarbeit'],
-          data['okf-gendergap-renten'],
-          data['okf-gewalt-gegen-frauen']
+          data['okf-gewalt-gegen-frauen'],
+          data['okf-gendergap-renten']
         ]
       }
     },
@@ -172,10 +181,12 @@
         opacity: 0;
         transition-duration: 0.2s;
         transition-delay: 0s;
+        width: 100%;
 
         &.active {
           opacity: 1;
           transition-delay: 0.2s;
+          // width: 100%;
         }
       }
     }
@@ -189,7 +200,12 @@
     }
 
     .okf {
-      color: $color-okf
+      color: $color-okf;
+    }
+
+    .arrow {
+      color: darken($color-mute,10%);
+      transform: rotate(-45deg);
     }
 
     .indicators {
@@ -202,6 +218,7 @@
 
      .sdg-comparison-wrapper {
        display: flex;
+       padding-top: 2em;
 
        .number-big {
          flex: 1;
@@ -211,13 +228,14 @@
        }
       }
 
-      // .indicator-list {
-      //   padding: $spacing / 2 0;
+      .indicator-list {
+        padding: $spacing / 2 0;
+        display: inline;
 
-      //   li {
-      //     display: inline-block;
-      //   }
-      // }
+        li {
+          display: inline-block;
+        }
+      }
     }
 
     footer {
