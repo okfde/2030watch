@@ -54,6 +54,11 @@
   export default {
     components: {
       BlogpostPreview
+    },
+    head () {
+      return {
+        title: 'Tag der offenen Tür - Die OKF beim BMZ | Blogpost | 2030Watch'
+      }
     }
   }
 </script>

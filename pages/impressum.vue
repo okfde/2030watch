@@ -162,6 +162,11 @@
     directives: {
     },
     components: {
+    },
+    head () {
+      return {
+        title: 'Impressum | 2030Watch'
+      }
     }
   }
 </script>

@@ -80,6 +80,11 @@
     directives: {
     },
     components: {
+    },
+    head () {
+      return {
+        title: 'Werde aktiv | 2030Watch'
+      }
     }
   }
 </script>
