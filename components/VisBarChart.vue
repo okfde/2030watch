@@ -45,6 +45,7 @@
 
 <script>
   import { scaleLinear } from 'd3-scale'
+  import createTicks from '~/assets/js/createTicks.js'
 
   export default {
     props: ['values'],
@@ -95,23 +96,7 @@
     },
     watch: {
       range: function () {
-        const [v1, v2] = this.y.domain()
-        const range = Math.abs(v2 - v1)
-        const dimension = String(parseInt(range)).length
-        const factor = 10 ** dimension
-        let c = 10 // number of ticks
-        let n = true
-        while (c > 0 && n) {
-          c--
-          if (range % (c / factor) === 0) {
-            n = false
-          }
-        }
-        const step = range / c
-        const ticks = Array.apply(null, Array(c + 1)).map(function () {})
-        this.ticks = ticks.map((tick, n) => {
-          return [(n * step).toFixed(dimension), this.height - this.y(n * step)]
-        }).reverse()
+        this.ticks = createTicks(this.y.domain(), this.height, this.y)
       }
     }
   }
