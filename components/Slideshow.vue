@@ -3,8 +3,8 @@
     <header>
       <h2>Warum wir andere Indikatoren brauchen um Nachhaltigkeit zu messen</h2>
     </header>
-    <section class="columns columns-gutter" :style="{ 'height': slideHeight + 'px' }">
-      <ul class="container" ref="slidesText">
+    <section class="columns columns-gutter">
+      <ul class="container" ref="slidesText" :style="{ 'height': slideHeight + 'px' }">
         <li :class="{ 'slide': true, 'active': slide === 1 }">
           <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">„Deutschen Nachhaltig&shy;keits&shy;strategie“ (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
         </li>
@@ -28,7 +28,7 @@
           </p>
         </li>
       </ul>
-      <ul class="indicators container" ref="slidesImages">
+      <ul class="indicators container" ref="slidesImages" :style="{ 'height': slideHeight + 'px' }">
         <li :class="{ 'slide': true, 'active': slide === 1 }">
           <div class="sdg-process-wrapper">
             <VisProgress :sdg="introSDG" :vLegend="true" :compact="false" />
