@@ -81,15 +81,21 @@
       }
     },
     mounted: function () {
-      const { margin } = this
-      this.width = this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth
-      this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
-      this.labelX = Math.min(Math.max(this.width * 0.1, 20), 70) + 5
-      this.gutter = Math.min(Math.max(this.width * 0.01, 5), 10)
-      this.widthBar = (this.width - this.labelX - (this.gutter * (this.values.length + 1))) / this.values.length
-      this.range = [margin[1], this.height - margin[0]]
-      this.y.range(this.range)
-      this.visible = true
+      this.calcSizes()
+      window.addEventListener('resize', this.calcSizes, false)
+    },
+    methods: {
+      calcSizes: function () {
+        const { margin } = this
+        this.width = this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth
+        this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+        this.labelX = Math.min(Math.max(this.width * 0.1, 20), 70) + 5
+        this.gutter = Math.min(Math.max(this.width * 0.01, 5), 10)
+        this.widthBar = (this.width - this.labelX - (this.gutter * (this.values.length + 1))) / this.values.length
+        this.range = [margin[1], this.height - margin[0]]
+        this.y.range(this.range)
+        this.visible = true
+      }
     },
     computed: {
       bars: function () {
@@ -103,7 +109,7 @@
             'y': height - y(value[1]),
             'height': y(value[1]) - margin[1],
             'width': widthBar,
-            'labelX': x + 0.5 * widthBar,
+            'labelX': x + 0.25 * widthBar,
             'labelY': height - margin[1] + 15,
             'value': value[1]
           }
