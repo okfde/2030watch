@@ -168,29 +168,9 @@ table {
     transform: none;
   }
 
-  &__download {
+  &.btn-download {
     background-color: $color-accent;
     color: #fff !important;
-    border-radius: 2px;
-    padding: $spacing / 4 $spacing / 2 !important;
-    font-weight: bold;
-    cursor: pointer;
-    text-shadow: none;
-    transition-duration: 0.2s;
-    border: none !important;
-    display: inline-block;
-
-    &:hover, &:focus {
-      color: #000 !important;
-      transform: scale(1.03);
-    }
-
-    &.disabled {
-      cursor: default;
-      background-color: rgba(0, 0, 0, .1);
-      color: rgba(0, 0, 0, .2) !important;
-      transform: none;
-    }
   }
 }
 

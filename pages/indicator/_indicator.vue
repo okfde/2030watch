@@ -33,20 +33,20 @@
         <p>{{ indicator.txttarget }}</p>
       </div>
       <div class="wrapper">
-        <div class="box viz" v-if="hasCountries && countries.length">
+        <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
-          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</div>
+          <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</h5>
           <VisBarChart :values="countries" />
-          <div class="viz-dl">
-             <a class="btn__download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download"></i>Daten herunterladen</a>
+          <div class="vis-dl">
+             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download" /> Daten herunterladen</a>
           </div>
         </div>
-        <div class="box viz" v-if="hasTimeline && timeline.length">
+        <div class="box vis" v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
-          <div class="viz-title">{{ indicator.label }} (in {{ indicator.unit }})</div>
+          <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }})</h5>
           <VisLineChart :values="timeline" />
-          <div class="viz-dl">
-             <a class="btn__download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download"></i>Daten herunterladen</a>
+          <div class="vis-dl">
+             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download" /> Daten herunterladen</a>
           </div>
         </div>
       </div>
@@ -249,9 +249,6 @@
 
     i {
       display: inline-block;
-    }
-
-    i {
       margin-right: 10px;
     }
 
@@ -266,20 +263,20 @@
     }
   }
 
-  .viz {
+  .vis {
     margin: 3em 0;
 
     &:first-of-type {
       margin-top: 1em;
     }
 
-    .viz-title {
+    .vis-title {
       text-align: center;
       padding: $spacing / 2;
       font-weight: 600;
     }
 
-    .viz-dl {
+    .vis-dl {
       text-align: right;
     }
   }
