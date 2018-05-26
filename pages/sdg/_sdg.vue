@@ -138,7 +138,6 @@
       this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
       this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
       const marginLeft = Math.max(this.$refs.labelOKF.clientWidth, this.$refs.labelDNS.clientWidth)
-      console.log(marginLeft)
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
       this.$refs.labelOKF.style.width = marginLeft + 'px'
       this.$refs.labelDNS.style.width = marginLeft + 'px'
@@ -233,8 +232,7 @@
           const x2 = (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * this.indicatorMargin * 2)
           const y1 = 0
           const y2 = this.indicatorLinesHeight
-          const d = `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
-          return d
+          return `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
         })
       }
     }
@@ -338,6 +336,15 @@
     flex-direction: rows;
     justify-content: space-between;
     padding: 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      flex: 1;
+    }
 
     .process {
       display: block;
