@@ -232,6 +232,7 @@
       margin-bottom: $spacing;
 
       td {
+        width: 50%;
         padding: 1em 0;
         border-bottom: 1px solid lighten($color-mute,20%);
 
