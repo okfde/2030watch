@@ -18,6 +18,7 @@
           v-html="tick[0]" />
         <rect
           v-for="(bar, n) in bars"
+          :title="bar.label + ': ' + bar.value"
           :class="bar.klass"
           :x="bar.x + 'px'"
           :width="bar.width + 'px'"
@@ -89,7 +90,8 @@
             'height': y(value[1]) - margin[1],
             'width': widthBar,
             'labelX': x + 0.5 * widthBar,
-            'labelY': height - margin[1] + 15
+            'labelY': height - margin[1] + 15,
+            'value': value[1]
           }
         })
       }
