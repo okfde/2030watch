@@ -246,6 +246,9 @@
         return this.scaleX.map(this.valueInRange(this.okf))
       },
       labels: function () {
+        if (!this.width) {
+          return [{ 'x': 0 + 'px', 'l': 'start' }, { 'x': 0 + 'px', 'l': 'start' }]
+        }
         const { markerR } = this
         const distance = markerR / 2
         let dns = this.xDNS
@@ -254,33 +257,51 @@
         let dnsLabel = 'start'
         let okfLabel = 'end'
 
-        if (dns < okf) {
-          dns -= distance
-          okf += distance
-          dnsLabel = 'end'
-          okfLabel = 'start'
-
-          if (okf + this.okfWidth > this.width) {
-            okf -= distance
-            okfLabel = 'end'
-          }
-
-          if (dns - this.dnsWidth < 0) {
+        if (!this.okfWidth || !this.dnsWidth) {
+          if (dns > this.width / 2) {
+            dns -= distance
+            dnsLabel = 'end'
+          } else {
             dns += distance
             dnsLabel = 'start'
           }
-        } else {
-          dns += distance
-          okf -= distance
 
-          if (dns + this.dnsWidth > this.width) {
-            dns -= distance
-            dnsLabel = 'end'
-          }
-
-          if (okf - this.okfWidth < 0) {
+          if (okf > this.width / 2) {
+            okf -= distance
+            okfLabel = 'end'
+          } else {
             okf += distance
             okfLabel = 'start'
+          }
+        } else {
+          if (dns < okf) {
+            dns -= distance
+            okf += distance
+            dnsLabel = 'end'
+            okfLabel = 'start'
+
+            if (okf + this.okfWidth > this.width) {
+              okf -= distance
+              okfLabel = 'end'
+            }
+
+            if (dns - this.dnsWidth < 0) {
+              dns += distance
+              dnsLabel = 'start'
+            }
+          } else {
+            dns += distance
+            okf -= distance
+
+            if (dns + this.dnsWidth > this.width) {
+              dns -= distance
+              dnsLabel = 'end'
+            }
+
+            if (okf - this.okfWidth < 0) {
+              okf += distance
+              okfLabel = 'start'
+            }
           }
         }
 
