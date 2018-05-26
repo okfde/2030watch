@@ -129,9 +129,14 @@
       color: #222;
       display: flex;
       flex-direction: column;
-      height: 5rem;
+      // height: 5rem;
       width: 100%;
       margin: 0;
+
+      .sdg-vis {
+        margin: $spacing / 6 0 $spacing;
+        height: 50px;
+      }
 
       @include media-query($on-desktop) {
         & {
@@ -139,6 +144,11 @@
           height: calc((100vh - 40vh) / 17);
           max-height: 2.5rem;
           min-height: 2.4rem;
+
+          .sdg-vis {
+            margin: 0;
+            height: 100%;
+          }
         }
       }
 
