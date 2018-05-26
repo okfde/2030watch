@@ -39,9 +39,9 @@
       <section class="blog-footer wrapper">
         <span class="caption">Post teilen</span>
          <span class="social-icons">
-          <a href="mailto:" title="Blogpost teilen per E-Mail"><i class="icon-mail" /></a>
-          <a :href="'https://twitter.com/intent/tweet?text=Sample%20Post%20Überschrift%20Via%20@2030watchde%202030-watch.de' + $nuxt.$route.fullPath" target="_blank" title="Blogpost teilen auf Twitter"><i class="icon-twitter" /></a>
-          <a :href="'https://facebook.com/sharer.php?u=https://2030-watch.de' + $nuxt.$route.fullPath" target="_blank" title="Blogpost teilen auf Facebook"><i class="icon-facebook-squared" /></a>
+          <a :href="'mailto:?subject=' + encodeURIComponent('Tag der offenen Tür - Die OKF beim BMZ') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
+          <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('Tag der offenen Tür - Die OKF beim BMZ')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
+          <a :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)" target="_blank" title="Blogpost auf Facebook teilen"><i class="icon-facebook-squared" /></a>
         </span>
       </section>
     </div>
@@ -59,6 +59,14 @@
       return {
         title: 'Tag der offenen Tür - Die OKF beim BMZ | Blogpost | 2030Watch'
       }
+    },
+    data: function () {
+      return {
+        link: ''
+      }
+    },
+    mounted: function () {
+      this.link = window.location.origin + this.$route.fullPath
     }
   }
 </script>
