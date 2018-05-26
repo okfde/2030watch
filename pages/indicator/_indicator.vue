@@ -94,8 +94,11 @@
               </tr>
             </tbody>
           </table>
-          <h4 class="caption">Diesen Indikator teilen</h4><i class="icon-link"></i>
-          <input type="text" :value="link">
+          <h4 class="caption">Diesen Indikator teilen</h4>
+          <a target="_blank" :href="'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-squared" /></a>
+          <a target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
+          <a href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
+          <input type="text" :value="link" />
         </div>
         <div class="description">
           <h4>Datenpate</h4>
@@ -244,21 +247,22 @@
       }
     }
 
-    h4.caption, i {
-      display: inline;
+    i {
+      display: inline-block;
     }
 
     i {
-      margin-left: 10px;
+      margin-right: 10px;
     }
 
     input {
-      padding: $spacing / 2; 
-      margin-top: $spacing / 2; 
+      padding: $spacing / 2;
+      margin-top: $spacing / 2;
+      display: block;
       width: 300px;
       font-size: 0.7em;
       background-color: #f9f9f9;
-      border:1px solid $color-mute;
+      border: 1px solid $color-mute;
     }
   }
 
