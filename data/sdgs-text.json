@@ -5,7 +5,7 @@
       "short": "Keine Armut",
       "long": "Armut in jeder Form und überall beenden"
     },
-    "color": "e5243b"
+    "color": "eb1c2d"
   },
   {
     "slug": "ernaehrung",
@@ -13,7 +13,7 @@
       "short": "Kein Hunger",
       "long": "Den Hunger beenden, Ernährungssicherheit und eine bessere Ernährung erreichen und eine nachhaltige Landwirtschaft fördern"
     },
-    "color": "e5b735"
+    "color": "d3a029"
   },
   {
     "slug": "leben",
@@ -21,7 +21,7 @@
       "short": "Gesundheit und Wohlergehen",
       "long": "Ein gesundes Leben für alle Menschen jeden Alters gewährleisten und ihr Wohlergehen fördern"
     },
-    "color": "4c9f38"
+    "color": "279b48"
   },
   {
     "slug": "bildung",
@@ -29,7 +29,7 @@
       "short": "Changengerechte und hochwertige Bildung",
       "long": "Für alle Menschen inklusive, chancengerechte und hochwertige Bildung sowie Möglichkeiten zum lebenslangen Lernen sicherstellen"
     },
-    "color": "c5192d"
+    "color": "c31f33"
   },
   {
     "slug": "gleichstellung",
@@ -37,7 +37,7 @@
       "short": "Geschlechtergleicheit",
       "long": "Geschlechtergerechtigkeit und Selbstbestimmung für alle Frauen und Mädchen erreichen"
     },
-    "color": "ff3a21"
+    "color": "ef402b"
   },
   {
     "slug": "wasser",
@@ -45,7 +45,7 @@
       "short": "Sauberes Wasser und sanitäre Einrichtungen",
       "long": "Verfügbarkeit und nachhaltige Bewirtschaftung von Wasser und Sanitärversorgung für alle gewährleisten"
     },
-    "color": "26bde2"
+    "color": "00aed9"
   },
   {
     "slug": "energie",
@@ -53,7 +53,7 @@
       "short": "Bezahlbare und saubere Energie",
       "long": "Zugang zu bezahlbarer, verlässlicher, nachhaltiger und zeitgemäßer Energie für alle sichern"
     },
-    "color": "fcc30b"
+    "color": "fdb713"
   },
   {
     "slug": "wirtschaft",
@@ -61,7 +61,7 @@
       "short": "Gute Arbeit und Wirtschaftswachtum",
       "long": "Dauerhaftes, inklusives und nachhaltiges Wirtschaftswachstum, produktive Vollbeschäftigung und menschenwürdige Arbeit für alle fördern"
     },
-    "color": "a21942"
+    "color": "8f1838"
   },
   {
     "slug": "infrastruktur",
@@ -69,7 +69,7 @@
       "short": "Industrie, Innovation und Infrastruktur",
       "long": "Eine belastbare Infrastruktur aufbauen, inklusive und nachhaltige Industrialisierung fördern und Innovationen unterstützen"
     },
-    "color": "fd6925"
+    "color": "f36d25"
   },
   {
     "slug": "ungleichheit",
@@ -77,7 +77,7 @@
       "short": "Weniger Ungleichheiten",
       "long": "Ungleichheit innerhalb von und zwischen Staaten verringern"
     },
-    "color": "dd1367"
+    "color": "e11484"
   },
   {
     "slug": "staedte",
@@ -85,7 +85,7 @@
       "short": "Nachhaltige Städte und Gemeinden",
       "long": "Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig machen"
     },
-    "color": "fd9d24"
+    "color": "f99d26"
   },
   {
     "slug": "konsum",
@@ -93,7 +93,7 @@
       "short": "Nachhaltiger Konsum und Produktion",
       "long": "Für nachhaltige Konsum- und Produktionsmuster sorgen"
     },
-    "color": "c9992d"
+    "color": "cf8d2a"
   },
   {
     "slug": "klimawandel",
@@ -101,7 +101,7 @@
       "short": "Klimaschutz und Anpassung",
       "long": "Umgehend Maßnahmen zur Bekämpfung des Klimawandels und seiner Auswirkungen ergreifen"
     },
-    "color": "3f7e44"
+    "color": "48773e"
   },
   {
     "slug": "ozeane",
@@ -109,7 +109,7 @@
       "short": "Leben unter Wasser",
       "long": "Ozeane, Meere und Meeresressourcen im Sinne einer nachhaltigen Entwicklung erhalten und nachhaltig nutzen"
     },
-    "color": "0a97d9"
+    "color": "007dbc"
   },
   {
     "slug": "landoekosysteme",
@@ -117,7 +117,7 @@
       "short": "Leben an Land",
       "long": "Landökosysteme schützen, wiederherstellen und ihre nachhaltige Nutzung fördern, Wälder nachhaltig bewirtschaften, Wüstenbildung bekämpfen, Bodenverschlechterung stoppen und umkehren und den Biodiversitätsverlust stoppen"
     },
-    "color": "56c02b"
+    "color": "3eb049"
   },
   {
     "slug": "frieden",
@@ -125,7 +125,7 @@
       "short": "Frieden, Recht und starke Institutionen",
       "long": "Friedliche und inklusive Gesellschaften im Sinne einer nachhaltigen Entwicklung fördern, allen Menschen Zugang zur Justiz ermöglichen und effektive, rechenschaftspflichtige und inklusive Institutionen auf allen Ebenen aufbauen"
     },
-    "color": "00689d"
+    "color": "02558b"
   },
   {
     "slug": "partnerschaft",
@@ -133,6 +133,6 @@
       "short": "Partnerschaft zur Erreichung der Ziele",
       "long": "Umsetzungsmittel stärken und die globale Partnerschaft für nachhaltige Entwicklung wiederbeleben"
     },
-    "color": "19486a"
+    "color": "183668"
   }
 ]
