@@ -1,6 +1,6 @@
 <template>
   <div class="vis">
-    <div>
+    <div class="mobile-invisible">
       <svg ref="vis" :class="{ visible }">
         <line
           v-for="tick in ticks"
@@ -20,13 +20,13 @@
           :d="line"
           class="line" />
         <circle
-          v-for="(bar, n) in dots"
-          :class="bar.klass"
-          :cx="bar.x + 'px'"
+          v-for="(dot, n) in dots"
+          :class="dot.klass"
+          :cx="dot.x + 'px'"
           r="7"
-          :width="bar.width + 'px'"
-          :cy="bar.y + 'px'"
-          :height="bar.height + 'px'"
+          :width="dot.width + 'px'"
+          :cy="dot.y + 'px'"
+          :height="dot.height + 'px'"
           />
         <line
           :x1="labelX + 'px'"
@@ -35,15 +35,29 @@
           :y2="height - margin[1] + 'px'"
           class="base" />
         <text
-          v-for="(bar, n) in dots"
+          v-for="(dot, n) in dots"
           alignment-baseline="middle"
-          :x="bar.x + 'px'"
-          :transform="'rotate(45,' + bar.labelX + ',' + bar.labelY + ')'"
-          :y="bar.labelY"
-          v-html="bar.label"
+          :x="dot.x + 'px'"
+          :transform="'rotate(45,' + dot.labelX + ',' + dot.labelY + ')'"
+          :y="dot.labelY"
+          v-html="dot.label"
           />
       </svg>
     </div>
+    <table class="mobile-visible">
+      <thead>
+        <tr>
+          <th>Jahr</th>
+          <th>Wert</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(dot, n) in dots">
+          <td v-html="dot.label" />
+          <td v-html="dot.value" />
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -70,15 +84,21 @@
       }
     },
     mounted: function () {
-      const { margin } = this
-      this.width = this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth
-      this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
-      this.labelX = Math.min(Math.max(this.width * 0.1, 20), 70) + 5
-      this.gutter = Math.min(Math.max(this.width * 0.01, 5), 10)
-      this.widthBar = (this.width - this.labelX - (this.gutter * (this.values.length + 1))) / this.values.length
-      this.range = [margin[1], this.height - margin[0]]
-      this.y.range(this.range)
-      this.visible = true
+      this.calcSizes()
+      window.addEventListener('resize', this.calcSizes, false)
+    },
+    methods: {
+      calcSizes: function () {
+        const { margin } = this
+        this.width = this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth
+        this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+        this.labelX = Math.min(Math.max(this.width * 0.1, 20), 70) + 5
+        this.gutter = Math.min(Math.max(this.width * 0.01, 5), 10)
+        this.widthBar = (this.width - this.labelX - (this.gutter * (this.values.length + 1))) / this.values.length
+        this.range = [margin[1], this.height - margin[0]]
+        this.y.range(this.range)
+        this.visible = true
+      }
     },
     computed: {
       dots: function () {
@@ -86,14 +106,15 @@
         return this.values.map((value, n) => {
           const x = labelX + ((n + 0.5) * widthBar) + (n + 1) * gutter
           return {
-            'klass': 'dot' + (value[0] === 'Germany' ? ' active' : ''),
+            'klass': 'dot',
             'label': value[0],
             'x': x,
             'y': height - y(value[1]),
             'height': y(value[1]) - margin[1],
             'width': widthBar,
             'labelX': x,
-            'labelY': height - margin[1] + 15
+            'labelY': height - margin[1] + 15,
+            'value': value[1]
           }
         })
       },
