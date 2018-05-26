@@ -70,7 +70,7 @@
                 <td v-html="format(indicator['start'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td class="title">jährlicher Zielwert</td>
+                <td class="title">Jährlicher Zielwert</td>
                 <td>{{ indicator['yearlyTarget'] ? 'Ja' : 'Nein' }}</td>
               </tr>
               <tr>
@@ -84,10 +84,10 @@
                 <td class="title">Lizenz</td><td>{{ indicator['license'] }}</td>
               </tr>
               <tr v-if="indicator['indicator source']">
-                <td class="title">Indikator Quelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
+                <td class="title">Indikatorquelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
               </tr>
               <tr v-if="indicator['data source']">
-                <td class="title">Daten Quelle</td><td><a :href="indicator['sourcelink']">{{ indicator['data source'] }}</a></td>
+                <td class="title">Datenquelle</td><td><a :href="indicator['sourcelink']">{{ indicator['data source'] }}</a></td>
               </tr>
               <tr v-if="indicator['pate']">
                 <td class="title">Datenpate</td><td>{{ indicator['pate'] }}</td>
