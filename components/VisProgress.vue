@@ -202,28 +202,32 @@
       }
     },
     mounted: function () {
-      this.width = (this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth) - this.markerR
-      this.scaleX.range([this.markerR, this.width])
-      this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
-      if (typeof this.$refs.okfLabelLegend !== 'undefined') {
-        this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
-        this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
-        this.legendLabelSteps =
-          (
-            this.height / 2 -
-            this.markerR / 2 -
-            this.legendLabelokfHeight -
-            this.legendLabelDistance * 2
-          ) / 2
-      }
-      this.okfWidth = this.$refs.okf.clientWidth
-      this.dnsWidth = this.$refs.dns.clientWidth
-      this.iVisible = true
+      this.calcSizes()
+      window.addEventListener('resize', this.calcSizes, false)
     },
     methods: {
       format: format,
       valueInRange: function (v) {
         return Math.max(0, Math.min(100, v))
+      },
+      calcSizes: function () {
+        this.width = (this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth) - this.markerR
+        this.scaleX.range([this.markerR, this.width])
+        this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+        if (typeof this.$refs.okfLabelLegend !== 'undefined') {
+          this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
+          this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
+          this.legendLabelSteps =
+            (
+              this.height / 2 -
+              this.markerR / 2 -
+              this.legendLabelokfHeight -
+              this.legendLabelDistance * 2
+            ) / 2
+        }
+        this.okfWidth = this.$refs.okf.clientWidth
+        this.dnsWidth = this.$refs.dns.clientWidth
+        this.iVisible = true
       }
     },
     computed: {
@@ -367,7 +371,6 @@
 
     .sdg-marker {
       stroke-width: 2px;
-      // transition-duration: 0.2s;
 
       &.sdg-marker-total {
         fill: $color-okf;
