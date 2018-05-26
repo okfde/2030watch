@@ -11,6 +11,7 @@
         <text
           class="sdg-label sdg-label-tick"
           alignment-baseline="hanging"
+          dominant-baseline="hanging"
           text-anchor="start"
           :x="scaleX.map(0) + 'px'"
           y="0"
@@ -18,6 +19,7 @@
         <text
           class="sdg-label sdg-label-tick"
           alignment-baseline="hanging"
+          dominant-baseline="hanging"
           text-anchor="end"
           :x="scaleX.map(100) + 'px'"
           y="0"
@@ -58,6 +60,7 @@
         ref="okf"
         :class="{ 'sdg-label': true, 'sdg-label-total': true, 'invert': invert }"
         alignment-baseline="hanging"
+        dominant-baseline="hanging"
         :text-anchor="labels[0].l"
         :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
         :x="labels[0].x"
@@ -67,6 +70,7 @@
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
         alignment-baseline="baseline"
+        dominant-baseline="baseline"
         :text-anchor="labels[1].l"
         :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
         :x="labels[1].x"
@@ -78,6 +82,7 @@
         <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
+          dominant-baseline="hanging"
           text-anchor="start"
           :style="{ fill: stepsColors[0] }"
           :x="scaleX.map(0) + 'px'"
@@ -86,13 +91,15 @@
         <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
+          dominant-baseline="hanging"
           text-anchor="middle"
           :style="{ fill: '#a5a49f' }"
           :x="scaleX.map(50) + 'px'"
           y="0%">Nachhaltigkeit</text>
-          <text
+        <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
+          dominant-baseline="hanging"
           text-anchor="end"
           :style="{ fill: stepsColors[steps - 1] }"
           :x="scaleX.map(100) + 'px'"
@@ -117,6 +124,7 @@
         ref="okfLabelLegend"
         class="legendLabel okf"
         alignment-baseline="hanging"
+        dominant-baseline="hanging"
         text-anchor="middle"
         :x="xOKF"
         :y="height - 15">2030Watch</text>
@@ -124,6 +132,7 @@
         ref="dnsLabelLegend"
         class="legendLabel dns"
         alignment-baseline="hanging"
+        dominant-baseline="hanging"
         text-anchor="middle"
         :x="xDNS"
         :y="height - 15">Daten DNS</text>
