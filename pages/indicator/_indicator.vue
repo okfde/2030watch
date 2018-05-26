@@ -97,7 +97,7 @@
           <h4 class="caption">Diesen Indikator teilen</h4>
           <a target="_blank" :href="'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-squared" /></a>
           <a target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
-          <a href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
+          <a :href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
           <input type="text" :value="link" />
         </div>
         <div class="description">
