@@ -1,13 +1,10 @@
 <template>
   <ul class="vis-liste">
     <li class="sdg-item">
-      <div class="sdg-header sdg-header-label link" v-on:click="sort('id')">
-        <span :class="{ active: sorting === 'id' }" >Sustainable Development Goals <SortIcon :active="sorting === 'id'" :reverse="reverse" /></span>
+      <div class="sdg-header sdg-header-label">
+        <span>Sustainable Development Goals</span>
       </div>
       <div class="sdg-header sdg-header-vis columns">
-        <section>
-          SDG erreicht zu
-        </section>
         <section class="sdg-legend">
           <span class="dns">DNS</span>
           <span class="okf">2030Watch</span>
@@ -89,6 +86,10 @@
 
   .sdg-item {
     display: flex;
+
+    &:first-child {
+      pointer-events: none;
+    }
 
     .sdg-header {
       margin-bottom: $spacing / 2;
