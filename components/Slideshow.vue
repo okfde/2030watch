@@ -6,21 +6,21 @@
     <section class="columns columns-gutter" :style="{ 'height': slideHeight + 'px' }">
       <ul class="container" ref="slidesText">
         <li :class="{ 'slide': true, 'active': slide === 1 }">
-          <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">“Deutschen Nachhaltigkeitsstrategie” (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
+          <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">„Deutschen Nachhaltig&shy;keits&shy;strategie“ (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
           <h5 class="caption">Ein Beispiel: SDG 5 – Geschlechtergerechtigkeit</h5>
           <p>
-            Die Bundesregierung hat sich unter Geschlechtergerechtigkekt zum Ziel gesetzt bis 2030, 30% Frauenanteil in den Aufsichtsräten zu erreichen. Aus Sicht von 2030Watch ist das Ziel von 30% der Deutschen Nachhaltigkeitsstrategie (DNS) nicht ambitioniert genug. und fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichtsräten und anderen Führungsebenen.
+            Die Bundes&shy;regierung hat sich unter Geschlechter&shy;gerechtigkekt zum Ziel gesetzt bis 2030, 30% Frauen&shy;anteil in den Aufsichts&shy;räten zu erreichen. Aus Sicht von 2030Watch ist das Ziel von 30% der Deutschen Nachhaltigkeits&shy;strategie (DNS) nicht ambitioniert genug. und fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichts&shy;räten und anderen Führungsebenen.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 3 }">
           <p>
-            Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungsbedarf Deutschlands offensichtlich.
+            Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungs&shy;bedarf Deutschlands offensichtlich.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 4 }">
-          <p>Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung von Hausarbeit, Gewalt gegen Frauen und  dem Unterschied in Renteneinkommen auf wichtige Themen die in der DNS vernachlässigt werden.
+          <p>Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung von Hausarbeit, Gewalt gegen Frauen und  dem Unterschied in Renten&shy;einkommen auf wichtige Themen die in der DNS vernachlässigt werden.
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 5 }">
