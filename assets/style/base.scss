@@ -32,6 +32,15 @@ html {
   }
 }
 
+@media screen and (min-width: $on-palm) {
+  .mobile-visible {
+    visibility: hidden;
+    display: none !important;
+    clear: both;
+    float: left;
+  }
+}
+
 a, .link {
   cursor: pointer;
 }
