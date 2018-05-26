@@ -1,6 +1,6 @@
 <template>
   <div class="vis">
-    <div>
+    <div class="mobile-invisible">
       <svg ref="vis" :class="{ visible }">
         <line
           v-for="tick in ticks"
@@ -41,6 +41,20 @@
           />
       </svg>
     </div>
+    <table class="mobile-visible">
+      <thead>
+        <tr>
+          <th>Land</th>
+          <th>Wert</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(bar, n) in bars" :class="bar.klass">
+          <td v-html="bar.label" />
+          <td v-html="bar.value" />
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -142,6 +156,10 @@
     &.active {
       fill: $color-okf;
     }
+  }
+
+  tr.active {
+    color: $color-okf;
   }
 
   ul {
