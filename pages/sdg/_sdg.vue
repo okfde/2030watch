@@ -28,8 +28,10 @@
               <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
               <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
             </div>
-            <div class="sdg-process-wrapper">
-              <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="false" />
+            <div class="sdg-process">
+              <div class="sdg-process-wrapper">
+                <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="true" />
+              </div>
             </div>
           </div>
         </div>
@@ -258,19 +260,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-shadow: none;
 
     .sdg-process-wrapper {
-      width: 80%;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 2px;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      width: 70%;
+        min-width: 400px;
+        max-height: 5rem;
 
       svg {
-        width: 90%;
-        max-height: 5rem;
-        margin: 1rem 5%;
+        width: 100%;
+        heright: 100%;
       }
     }
   }
