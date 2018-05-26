@@ -5,40 +5,40 @@
     <table>
       <thead>
         <tr>
-          <th>Nachhaltigkeitsstufe</th>
-          <th>SDG-Ziel erreicht zu</th>
-          <th>Anzahl &ndash; DNS</th>
-          <th>Anzahl &ndash; 2030Watch</th>
+          <th>Nachhaltigkeit<span class="mobile-invisible">sstufe</span></th>
+          <th class="mobile-invisible">SDG-Ziel erreicht zu</th>
+          <th><span class="mobile-invisible">Anzahl &ndash; </span>DNS</th>
+          <th><span class="mobile-invisible">Anzahl &ndash; </span>2030Watch</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="icon" :style="{ 'background-color': stepsColors[4] }" /> sehr hoch</td>
-          <td v-html="format(80) + '&#8239;&mdash;&#8239;' + format(100)">
+          <td><span class="icon mobile-invisible" :style="{ 'background-color': stepsColors[4] }" /> sehr hoch</td>
+          <td v-html="format(80) + '&#8239;&mdash;&#8239;' + format(100)" class="mobile-invisible">
           <td><span class="icon dns" v-for="item in countingsDNS['sehr hohe Nachhaltigkeit']" /></td>
           <td><span class="icon okf" v-for="item in countingsOKF['sehr hohe Nachhaltigkeit']" /></td>
         </tr>
         <tr>
-          <td><span class="icon" :style="{ 'background-color': stepsColors[3] }" /> hoch</td>
-          <td v-html="format(60) + '&#8239;&mdash;&#8239;' + format(80)">
+          <td><span class="icon mobile-invisible" :style="{ 'background-color': stepsColors[3] }" /> hoch</td>
+          <td v-html="format(60) + '&#8239;&mdash;&#8239;' + format(80)" class="mobile-invisible">
           <td><span class="icon dns" v-for="item in countingsDNS['hohe Nachhaltigkeit']" /></td>
           <td><span class="icon okf" v-for="item in countingsOKF['hohe Nachhaltigkeit']" /></td>
         </tr>
         <tr>
-          <td><span class="icon" :style="{ 'background-color': stepsColors[2] }" /> mittel</td>
-          <td v-html="format(40) + '&#8239;&mdash;&#8239;' + format(60)">
+          <td><span class="icon mobile-invisible" :style="{ 'background-color': stepsColors[2] }" /> mittel</td>
+          <td v-html="format(40) + '&#8239;&mdash;&#8239;' + format(60)" class="mobile-invisible">
           <td><span class="icon dns" v-for="item in countingsDNS['mittlere Nachhaltigkeit']" /></td>
           <td><span class="icon okf" v-for="item in countingsOKF['mittlere Nachhaltigkeit']" /></td>
         </tr>
         <tr>
-          <td><span class="icon" :style="{ 'background-color': stepsColors[1] }" /> niedrig</td>
-          <td v-html="format(20) + '&#8239;&mdash;&#8239;' + format(40)">
+          <td><span class="icon mobile-invisible" :style="{ 'background-color': stepsColors[1] }" /> niedrig</td>
+          <td v-html="format(20) + '&#8239;&mdash;&#8239;' + format(40)" class="mobile-invisible">
           <td><span class="icon dns" v-for="item in countingsDNS['geringe Nachhaltigkeit']" /></td>
           <td><span class="icon okf" v-for="item in countingsOKF['geringe Nachhaltigkeit']" /></td>
         </tr>
         <tr>
-          <td><span class="icon" :style="{ 'background-color': stepsColors[0] }" /> sehr niedrig</td>
-          <td v-html="'&ensp;' + format(0) + '&#8239;&mdash;&#8239;' + format(20)">
+          <td><span class="icon mobile-invisible" :style="{ 'background-color': stepsColors[0] }" /> sehr niedrig</td>
+          <td v-html="'&ensp;' + format(0) + '&#8239;&mdash;&#8239;' + format(20)" class="mobile-invisible">
           <td><span class="icon dns" v-for="item in countingsDNS['sehr geringe Nachhaltigkeit']" /></td>
           <td><span class="icon okf" v-for="item in countingsOKF['sehr geringe Nachhaltigkeit']" /></td>
         </tr>
@@ -115,6 +115,7 @@
       }
 
       td {
+        vertical-align: top;
         padding: 5px 0;
         font-family: $font-family-modern;
 

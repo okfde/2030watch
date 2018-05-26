@@ -23,15 +23,12 @@ html {
   color: $color-default;
 }
 
-.mobile-invisible {
-	visibility: hidden;
-  display: none;
-}
-
-@include media-query($on-palm) {
+@media screen and (max-width: $on-palm) {
   .mobile-invisible {
-  	visibility: visible;
-    display: inherit;
+    visibility: hidden;
+    display: none !important;
+    clear: both;
+    float: left;
   }
 }
 
