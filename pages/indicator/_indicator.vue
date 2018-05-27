@@ -21,17 +21,7 @@
       </div>
     </header>
     <div class="content">
-      <div class="wrapper">
-        <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
-      </div>
-      <div class="wrapper description">
-        <h4>Beschreibung</h4>
-        <p>{{ indicator.txtdescription }}</p>
-        <h4>2030Watch-Kategorie</h4>
-        <p>{{ indicator.txtcategory }}</p>
-        <h4>Zielwert</h4>
-        <p>{{ indicator.txttarget }}</p>
-      </div>
+
       <div class="wrapper">
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
@@ -50,14 +40,24 @@
           </div>
         </div>
       </div>
+
+      <div class="wrapper">
+        <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
+      </div>
+      <div class="wrapper description">
+        <h4>Beschreibung</h4>
+        <p>{{ indicator.txtdescription }}</p>
+        <h4>2030Watch-Kategorie</h4>
+        <p>{{ indicator.txtcategory }}</p>
+        <h4>Zielwert</h4>
+        <p>{{ indicator.txttarget }}</p>
+      </div>
+
       <div class="wrapper columns columns-gutter">
         <div class="description">
           <h4>Indikator-Details</h4>
           <table class="box">
             <tbody>
-              <tr>
-                <td class="title">Ziel</td><td>{{ indicator['goal'] }}</td>
-              </tr>
               <tr>
                 <td class="title">Zielwert</td>
                 <td v-html="format(indicator['target'], 1, indicator['unit'])" />
@@ -68,17 +68,6 @@
               <tr>
                 <td class="title">Startwert ({{ indicator['startYear'] }})</td>
                 <td v-html="format(indicator['start'], 1, indicator['unit'])" />
-              </tr>
-              <tr>
-                <td class="title">Jährlicher Zielwert</td>
-                <td>{{ indicator['yearlyTarget'] ? 'Ja' : 'Nein' }}</td>
-              </tr>
-              <tr>
-                <td class="title">Spillover</td>
-                <td>{{ indicator['spill'] ? 'Ja' : 'Nein' }}</td>
-              </tr>
-              <tr v-if="indicator['reason']">
-                <td class="title">Begründung</td><td>{{ indicator['reason'] || '—'  }}</td>
               </tr>
               <tr v-if="indicator['license']">
                 <td class="title">Lizenz</td><td>{{ indicator['license'] }}</td>
