@@ -89,10 +89,37 @@
           <a title="Per E-Mail teilen" :href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
           <input type="text" :value="link" />
         </div>
-        <div class="description">
-          <h4>Datenpate</h4>
-          <img src="http://via.placeholder.com/500x360" />
+
+        <div v-if="!indicator['pate']" class="description">
+          <h4>Werde Datenpate für diesen Indikator</h4>
+          <div>
+            Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
+            Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für
+            ein Unterziel für sinnvoll halten. Sie legen den Zielwert fest, der bis 2030
+            erreicht werden sollte. Darüber hinaus unterstützen sie das Projekt in der
+            Datenbereitstellung. Bei Interesse, Datenpate zu werden, wenden Sie sich bitte an
+            <a href="mailto:2030-watch@okfn.de">2030-watch@okfn.de</a>.
+          </div>
         </div>
+
+        <div v-if="indicator['pate']" class="description">
+          <h4>Datenpate</h4>
+          <div class="pate-logo">
+            <a :href="indicator['pateUrl']" target="_blank">
+              <img :src="indicator['pateLogo']"/>
+            </a>
+          </div>
+          <div>
+            {{ indicator['pateText'] }}
+          </div>
+          <div>
+            Kontaktperson:
+            <a :href="'mailto:' + indicator['pateMail']">
+              {{ indicator['pateContact'] }}
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -269,5 +296,12 @@
     .vis-dl {
       text-align: right;
     }
+  }
+
+  .pate-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 </style>

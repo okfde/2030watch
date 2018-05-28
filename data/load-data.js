@@ -117,7 +117,7 @@ function processSDGs(sdgs, allIndicators) {
 
 const url_indicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3jgbFv0NlOhd5JuzoMFvelmcTELqc85VpIWn-R7h2TkyVyVYLyOAdpTAdtDmxYFs6bZZCiQkBmWy-/pub?output=csv'
 const indi_headers_dns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit', 'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'nicht2030WKatalog', 'landerVergleich', 'zeitreihe', 'url']
-const indi_headers_okf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'zeitreihe', 'laendervergleich', 'spillover', 'neuesThema', 'datenpate', 'url', '2030WDatensatz', 'potenziellerDatenpate']
+const indi_headers_okf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'zeitreihe', 'laendervergleich', 'spillover', 'neuesThema', 'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText', 'datenpateContact', 'datenpateMail', 'url', '2030WDatensatz', 'potenziellerDatenpate']
 const indi_sdgID = 'sdgId'
 const indi_numbers = ['zielwertJahr2030', 'aktuellerWert', 'ausgangswert']
 const indi_numbers_keys = ['target', 'current', 'start']
@@ -254,6 +254,11 @@ function processIndicatorMeta(indicator) {
 	if (author === 'okf') {
 		i['newTopic'] = indicator['neuesThema'] === 'j'
 		i['pate'] = indicator['datenpate'] !== 'n' ? indicator['datenpate'] : false
+		i['pateLogo'] = indicator['datenpateLogo'] !== '' ? indicator['datenpateLogo'] : false
+		i['pateUrl'] = indicator['datenpateUrl'] !== '' ? indicator['datenpateUrl'] : false
+		i['pateText'] = indicator['datenpateText'] !== '' ? indicator['datenpateText'] : false
+		i['pateContact'] = indicator['datenpateContact'] !== '' ? indicator['datenpateContact'] : false
+		i['pateMail'] = indicator['datenpateMail'] !== '' ? indicator['datenpateMail'] : false
 	}
 	return i
 }
