@@ -5,7 +5,7 @@
         <h1>Coming soon</h1></h1>
         <section class="columns columns-gutter">
           <div>
-            <p>Lorem ipsum</p>
+            <p>Deutschland hat noch großen Handlungsbedarf um die Ziele der Agenda 2030 ambitioniert umzusetzen. <br> Setze dich dafür ein, dass sich etwas ändert!</p>
           </div>
         </section>
       </div>
