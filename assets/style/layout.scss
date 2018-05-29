@@ -9,9 +9,10 @@
 .page {
   flex-direction: column;
   min-height: 100vh;
+  background-color: darken($color-landingpage, $darker);
 }
 
-.page, .inpage-header, .inpage-nav {
+.inpage-header, .inpage-nav {
   background-color: $color-landingpage;
 }
 
@@ -48,8 +49,6 @@
   min-height: 100px;
   height: 12vh; /* size is based on the height of the device */
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: $spacing / 2;
 }
 
 .page-header, .page-explainer, .page-footer, .inpage-header {
@@ -80,6 +79,34 @@
   }
 }
 
+.inpage-header {
+  .message {
+    width: 100%;
+
+    @include media-query($on-desktop) {
+      & {
+        width: 100%;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.legendProgress {
+  height: 7rem;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.intro-container {
+  background: linear-gradient(0deg, transparent 50%, $color-landingpage 50%);
+}
+
 .page-footer, .page-explainer {
   font-size: 0.85em;
   padding: 3rem 0;
@@ -87,11 +114,11 @@
 
 .page-container {
   & > * {
-    padding: $spacing 0;
+    padding: $spacing*0.6 0;
   }
 
   & > .inpage-nav, & > .content {
-    padding: 0;
+    padding: 1 0 0 0;
   }
 
   .content .wrapper {
