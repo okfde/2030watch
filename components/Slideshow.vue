@@ -24,7 +24,9 @@
           </p>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 5 }">
-          <p>Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs. Lernt, diskutiert, entdeckt! 48 %89 %0 %Nachhaltigkeit100 %2030WatchDaten DNS
+          <p>
+            Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs.
+            Lernt, diskutiert, entdeckt!
           </p>
         </li>
       </ul>
