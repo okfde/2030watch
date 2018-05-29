@@ -25,7 +25,7 @@
         <div class="indicator-overview columns columns-rows">
           <div class="description description-dns columns columns-gutter">
             <div>
-              <h2>Daten und Indikatoren zur Forschrittsberechnung</h2>
+              <h2>Was wird gemessen?</h2>
               <p>{{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch schlägt {{ numberToStringNominativ(sdg.n.okf) }} Alternativ-Indikator{{ sdg.n.okf > 1 ? 'en' : '' }} vor.</p>
             </div>
             <div class="sdg-process">
@@ -245,7 +245,7 @@
   @import '~@/assets/style/variables';
 
   .inpage-header {
-    padding-bottom: $spacing * 4;
+    padding-bottom: $spacing;
   }
 
   .sdg-image {
