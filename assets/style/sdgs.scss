@@ -1,6 +1,6 @@
 .page {
   &.armut {
-    background-color: #eb1c2d;
+    background-color: darken(#eb1c2d, $darker);
 
     h2 {
       color: #eb1c2d;
@@ -12,7 +12,7 @@
   }
 
   &.ernaehrung {
-    background-color: #d3a029;
+    background-color: darken(#d3a029, $darker);
 
     h2 {
       color: #d3a029;
@@ -24,7 +24,7 @@
   }
 
   &.leben {
-    background-color: #279b48;
+    background-color: darken(#279b48, $darker);
 
     h2 {
       color: #279b48;
@@ -36,7 +36,7 @@
   }
 
   &.bildung {
-    background-color: #c31f33;
+    background-color: darken(#c31f33, $darker);
 
     h2 {
       color: #c31f33;
@@ -48,7 +48,8 @@
   }
 
   &.gleichstellung {
-    background-color: #ef402b;
+    background-color: darken(#ef402b, $darker);
+
 
     h2 {
       color: #ef402b;
@@ -60,7 +61,7 @@
   }
 
   &.wasser {
-    background-color: #00aed9;
+    background-color: darken(#00aed9, $darker);
 
     h2 {
       color: #00aed9;
@@ -72,7 +73,7 @@
   }
 
   &.energie {
-    background-color: #fdb713;
+    background-color: darken(#fdb713, $darker);
 
     h2 {
       color: #fdb713;
@@ -84,7 +85,7 @@
   }
 
   &.wirtschaft {
-    background-color: #8f1838;
+    background-color: darken(#8f1838, $darker);
 
     h2 {
       color: #8f1838;
@@ -96,7 +97,7 @@
   }
 
   &.infrastruktur {
-    background-color: #f36d25;
+    background-color: darken(#f36d25, $darker);
 
     h2 {
       color: #f36d25;
@@ -108,7 +109,7 @@
   }
 
   &.ungleichheit {
-    background-color: #e11484;
+    background-color: darken(#e11484, $darker);
 
     h2 {
       color: #e11484;
@@ -120,7 +121,7 @@
   }
 
   &.staedte {
-    background-color: #f99d26;
+    background-color: darken(#f99d26, $darker);
 
     h2 {
       color: #f99d26;
@@ -132,7 +133,7 @@
   }
 
   &.konsum {
-    background-color: #cf8d2a;
+    background-color: darken(#cf8d2a, $darker);
 
     h2 {
       color: #cf8d2a;
@@ -144,7 +145,7 @@
   }
 
   &.klimawandel {
-    background-color: #48773e;
+    background-color: darken(#48773e, $darker);
 
     h2 {
       color: #48773e;
@@ -156,7 +157,7 @@
   }
 
   &.ozeane {
-    background-color: #007dbc;
+    background-color: darken(#007dbc, $darker);
 
     h2 {
       color: #007dbc;
@@ -168,7 +169,7 @@
   }
 
   &.landoekosysteme {
-    background-color: #3eb049;
+    background-color: darken(#3eb049, $darker);
 
     h2 {
       color: #3eb049;
@@ -180,7 +181,7 @@
   }
 
   &.frieden {
-    background-color: #02558b;
+    background-color: darken(#02558b, $darker);
 
     h2 {
       color: #02558b;
@@ -192,7 +193,7 @@
   }
 
   &.partnerschaft {
-    background-color: #183668;
+    background-color: darken(#183668, $darker);
 
     h2 {
       color: #183668;
