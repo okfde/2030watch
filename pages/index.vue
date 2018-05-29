@@ -62,38 +62,8 @@
   }
 </script>
 
-<style lang="scss">
-  @import "~@/assets/style/variables";
-
+<style lang="scss" scoped>
   .inpage-header {
     padding: 10vh 0 3vh 0;
-    color: #fff;
-
-    .message {
-      width: 100%;
-      // max-width: 800px;
-
-      @include media-query($on-desktop) {
-        & {
-          width: 100%;
-        }
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
-  .legendProgress {
-    height: 7rem;
-
-    svg {
-      width: 100%;
-    }
-  }
-
-  .intro-container {
-    background: linear-gradient(0deg, transparent 50%, $color-landingpage 50%);
   }
 </style>
