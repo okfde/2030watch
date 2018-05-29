@@ -3,7 +3,10 @@
     <header class="inpage-header">
       <div class="wrapper">
         <h1>Blog</h1>
-        <p>Erfahre mehr zu aktuellen Themen rund um 2030Watch und unseren Aktivitäten</p>
+        <p>
+          Hier erfährst du mehr zu aktuellen Themen rund um 2030Watch und unseren Aktivitäten.<br />
+          Du möchtest über ein Thema, welches wir als Indikator haben, bloggen, dann melde dich bei uns.
+        </p>
       </div>
     </header>
     <div class="content">
