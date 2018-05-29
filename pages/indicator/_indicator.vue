@@ -106,7 +106,7 @@
           <h4>Datenpate</h4>
           <div class="pate-logo">
             <a :href="indicator['pateUrl']" target="_blank">
-              <img src="../../static/img/datenpaten/DFR-logo.png"/>
+              <img :src="require(`@/static/img/datenpaten/${indicator['pateLogo']}`)">
             </a>
           </div>
           <div>

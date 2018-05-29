@@ -13,7 +13,7 @@
     <div class="content">
          <section>
           <div class="wrapper">
-            <h2>TODO</h2>
+            <h2>Infos und Anlaufpunkte</h2>
              <h4>Hier kannst Du Dich weiter informieren um mehr zum Thema Nachhaltigkeit in Deutschland zu erfahren:</h4>
              <div class="activity">
                 <a href="#">I. Die Deutsche Nachhaltigkeitsstrategie</a>
