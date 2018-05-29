@@ -101,19 +101,19 @@
           <h2>Unsere Finanzpartner</h2>
           <div class="section-wrapper">
             <div class="section-img">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMZ_Logo.svg/800px-BMZ_Logo.svg.png"
+              <img src="../assets/img/sponsors/BMZ.png"
                 alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
                 width="250px"
               >
             </div>
             <div class="section-img">
-              <img src="https://www.brot-fuer-die-welt.de/typo3conf/ext/as_template/Resources/Public/Images/logo.svg"
+              <img src="../assets/img/sponsors/BrotfuerdieWelt.svg"
                 alt="Logo von Brot für die Welt"
                 width="150px"
               >
             </div>
             <div class="section-img">
-              <img src="http://a4f.be-fair.eu/uploads/File/wtf_lez.gif"
+              <img src="../assets/img/sponsors/LEZ.png"
                 alt="Logo der Landesstelle für Entwicklungszusammenarbeit"
                 width="250px"
               >
@@ -157,13 +157,6 @@
           imgUrl: require('~/assets/img/team/claudia.jpg'),
           role: 'Gründerin',
           email: 'claudia.schwegmann@okfn.org ',
-          twitter: 'https://twitter.com/okfde'
-        },
-        {
-          name: 'John David Langlo',
-          imgUrl: require('~/assets/img/team/john.jpg'),
-          role: 'Studentischer Mitarbeiter',
-          email: 'john.langlo@okfn.de',
           twitter: 'https://twitter.com/okfde'
         },
         {
