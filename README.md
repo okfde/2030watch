@@ -1,4 +1,4 @@
-# 2030 Watch
+# 2030Watch
 
 ## Build Setup
 
@@ -15,4 +15,10 @@ $ npm start
 
 # generate static project
 $ npm run generate
+```
+
+## Generate data files
+
+```
+$ node data/load-data.js
 ```

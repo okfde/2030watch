@@ -93,16 +93,24 @@
           <section class="description description-dns columns columns-gutter">
             <div>
               <hgroup>
-                <h3 class="dns">Deutsche Nachhaltigkeitsstrategie (DNS)</h3>
+                <h3 class="dns">
+                  Deutsche Nachhaltigkeitsstrategie Indikatorenkatalog
+                </h3>
               </hgroup>
-              <p>Diese{{ sdg.n.dns === 1 ? 'r' : '' }} {{ numberToStringGenitiv(sdg.n.dns) }} Indikator{{ sdg.n.dns === 1 ? '' : 'en' }} spiegel{{ sdg.n.dns === 1 ? 't' : 'n' }} laut der Bundesregierung den Fortschritt von »{{ sdg.labelShort }}« wider. Auf dieser Grundlage wäre in 2016 dieses Nachhaltigkeitsziel erreicht zu</p>
+              <p>
+                {{ sdg.summaryDns }}
+              </p>
               <span class="process dns" v-html="format(dns)" />
             </div>
             <div>
               <hgroup>
-                <h3 class="okf">2030Watch</h3>
+                <h3 class="okf">
+                  Alternativer Indikatorenkatalog
+                </h3>
               </hgroup>
-              <p>2030 Watch schlägt hingegen eine erweiterte Indikatoren-Liste vor, die {{ numberToStringNominativ(sdg.n.udns) }} offizielle{{ sdg.n.udns <= 1 ? 'n' : '' }} Indikator{{ sdg.n.udns <= 1 ? '' : 'en' }} übernimmt, {{ numberToStringNominativ(sdg.n.baI) }} streicht, {{ numberToStringNominativ(sdg.n.moT) }} modifiziert sowie {{ sdg.n.okf }} weitere{{ sdg.n.okf <= 1 ? 'n' : '' }} hinzufügt. Aus diesem alternativen Indikatorenset würde sich folgender Fortschritt bei »{{ sdg.labelShort }}« berechnen:</p>
+              <p>
+                {{ sdg.summary2030 }}
+              </p>
               <span class="process okf" v-html="format(okf)" />
             </div>
           </section>
