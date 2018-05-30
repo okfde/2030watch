@@ -12,7 +12,7 @@
       </div>
     </li>
     <li v-for="(sdg, index) in sdgListe" class="sdg-item">
-      <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
+      <nuxt-link v-if="sdg.textIntro !== 'coming soon'" :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
         <div class="sdg-label">
           <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
@@ -20,6 +20,14 @@
           <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
         </div>
       </nuxt-link>
+      <a v-else class="sdg-link disabled" title="Coming soon">
+        <div class="sdg-label disabled">
+          <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text">{{ sdg.labelShort }}</span>
+        </div>
+        <div class="sdg-vis">
+          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" />
+        </div>
+      </a>
     </li>
   </ul>
 </template>
@@ -138,6 +146,11 @@
         height: 50px;
       }
 
+      &.disabled {
+        cursor: default;
+        color: $color-mute;
+      }
+
       @include media-query($on-desktop) {
         & {
           flex-direction: row;
@@ -184,7 +197,7 @@
         flex: 1;
       }
 
-      &:hover {
+      &:hover:not(.disabled) {
         .sdg-label {
           opacity: 1 !important;
           color: var(--color);

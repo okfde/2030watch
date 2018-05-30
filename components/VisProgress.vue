@@ -44,13 +44,13 @@
       :x2="xDNS"
       y2="50%" />
     <circle
-      class="sdg-marker sdg-marker-total"
+      :class="{ 'sdg-marker': true, 'sdg-marker-total': true, 'disabled': disabled }"
       :style="{ 'stroke': cBackground }"
       :cx="xOKF"
       cy="50%"
       :r="markerR" />
     <circle
-      class="sdg-marker sdg-marker-dns"
+      :class="{ 'sdg-marker': true, 'sdg-marker-dns': true, 'disabled': disabled }"
       :style="{ 'stroke': cBackground }"
       :cx="xDNS"
       cy="50%"
@@ -182,6 +182,10 @@
       vTicks: { // display ticks
         type: Boolean,
         default: true
+      },
+      disabled: {
+        type: Boolean,
+        required: false
       }
     },
     data: function () {
@@ -378,6 +382,10 @@
 
       &.sdg-marker-dns {
         fill: $color-dns;
+      }
+
+      &.disabled {
+        fill: $color-mute;
       }
     }
 
