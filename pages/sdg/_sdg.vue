@@ -27,7 +27,7 @@
             <div>
               <h2>Was wird gemessen?</h2>
               <p>
-                {{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch erweiterter Indikatorenkatalong umfasst {{ numberToStringNominativ(sdg.n.alt) }} Indikator{{ sdg.n.okf > 1 ? 'en' : '' }}.
+                {{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch erweiterter Indikatorenkatalog umfasst {{ numberToStringNominativ(sdg.n.alt) }} Indikator{{ sdg.n.okf > 1 ? 'en' : '' }}.
               </p>
             </div>
             <div class="sdg-process">
