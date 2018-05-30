@@ -15,7 +15,7 @@
       </div>
     </section>
     <section>
-      <div class="wrapper">
+      <div id="keyfindings" class="wrapper">
         <h2>So nachhaltig ist Deutschland – Das sagen offizielle und komplementäre Daten</h2>
         <div class="columns columns-gutter">
           <!-- <section>
