@@ -2,7 +2,7 @@
   <div class="page-container">
     <nav class="inpage-nav">
       <div class="wrapper">
-        <nuxt-link to="/">Übersicht </nuxt-link><span class="bread-spacer">/</span><nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
+        <a href="/#keyfindings">Übersicht </a><span class="bread-spacer">/</span><nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
       </div>
     </nav>
     <header class="inpage-header">
