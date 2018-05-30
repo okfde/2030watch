@@ -55,6 +55,13 @@
 
       <div class="wrapper columns columns-gutter">
         <div class="description">
+          <h4>Methodik</h4>
+          <nuxt-link to="/projekt">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+        </div>
+      </div>
+
+      <div class="wrapper columns columns-gutter">
+        <div class="description">
           <h4>Indikator-Details</h4>
           <table class="box">
             <tbody>
