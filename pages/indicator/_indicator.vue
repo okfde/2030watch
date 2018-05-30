@@ -2,7 +2,7 @@
   <div class="page-container">
     <nav class="inpage-nav">
       <div class="wrapper">
-        <nuxt-link to="/">Übersicht </nuxt-link><span class="bread-spacer">/</span><nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
+        <nuxt-link to="/#keyfindings">Übersicht </nuxt-link><span class="bread-spacer">/</span><nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
       </div>
     </nav>
     <header class="inpage-header">
@@ -104,7 +104,7 @@
             Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für
             ein Unterziel für sinnvoll halten. Sie legen den Zielwert fest, der bis 2030
             erreicht werden sollte. Darüber hinaus unterstützen sie das Projekt in der
-            Datenbereitstellung. Bei Interesse, Datenpate zu werden, wenden Sie sich bitte an
+            Datenbereitstellung. Bei Interesse, Datenpate zu werden, wende dich bitte an
             <a href="mailto:2030-watch@okfn.de">2030-watch@okfn.de</a>.
           </div>
         </div>
