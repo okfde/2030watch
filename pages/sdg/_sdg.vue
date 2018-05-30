@@ -97,7 +97,10 @@
                   Deutsche Nachhaltigkeitsstrategie Indikatorenkatalog
                 </h3>
               </hgroup>
-              <p>
+              <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
+                coming soon
+              </p>
+              <p v-else>
                 {{ sdg.summaryDns }}
               </p>
               <span class="process dns" v-html="format(dns)" />
@@ -108,7 +111,10 @@
                   Alternativer Indikatorenkatalog
                 </h3>
               </hgroup>
-              <p>
+              <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
+                coming soon
+              </p>
+              <p v-else>
                 {{ sdg.summary2030 }}
               </p>
               <span class="process okf" v-html="format(okf)" />
