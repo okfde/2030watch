@@ -78,7 +78,7 @@
         v-html="(vMarkerLabelsNames ? 'DNS: ' : '') + format(dns)" />
     </g>
     <g v-if="vLegend">
-      <g class="tickLinesLegend" v-if="vTicks">
+      <!-- <g class="tickLinesLegend" v-if="vTicks">
         <text
           class="ticksLegendLabels"
           alignment-baseline="hanging"
@@ -113,7 +113,7 @@
           :y1="legendLabeldnsHeight"
           :x2="scaleX.map((tick) * (100 / steps)) + 'px'"
           :y2="legendLabeldnsHeight" />
-      </g>
+      </g> -->
       <polyline
         class="legendLine"
         :points="`${xOKF},${height - legendLabeldnsHeight} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
