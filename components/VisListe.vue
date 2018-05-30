@@ -11,8 +11,6 @@
         </section>
       </div>
     </li>
-    <div>
-    </div>
     <li v-for="(sdg, index) in sdgListe" class="sdg-item">
       <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
         <div class="sdg-label">
