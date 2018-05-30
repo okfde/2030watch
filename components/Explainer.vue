@@ -6,15 +6,21 @@
     <div class="faq wrapper columns columns-gutter">
       <section>
         <small class="caption">Was?</small>
-        <p>Wir diskutieren wie nachhaltig Deutschland ist, indem wir überprüfen, inwieweit die Nachhaltigkeitsziele erreicht werden.</p>
+        <p>
+          Wir diskutieren anhand von Indikatoren wie ambitioniert Deutschland die Agenda 2030 umsetzt.
+        </p>
       </section>
       <section>
         <small class="caption">Warum?</small>
-        <p>Wir vergleichen Deutschlands Fortschritt anhand von offiziellen und alternativen Indikatoren, denn die offiziellen Indikatoren sich nicht ambitioniert genug.</p>
+        <p>
+          Die Nachhaltigkeitsdebatte in Deutschland muss kritischer werden.
+        </p>
       </section>
       <section>
         <small class="caption">Wie?</small>
-        <p>Unsere Indikatoren zeigen fehlende Themen, bessere Zielwerte und mehr Verantwortung.</p>
+        <p>
+          Unsere Indikatoren zeigen fehlende Themen, ambitionierte Zielwerte und mehr Verantwortung.
+        </p>
       </section>
     </div>
   </div>
