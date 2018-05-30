@@ -4,9 +4,6 @@
       <div class="wrapper">
         <h1>Über uns</h1>
         <section class="columns columns-gutter">
-          <div>
-            <p>Wer steckt hinter 2030Watch? Was treibt uns an? Hier erfährst du mehr</p>
-          </div>
         </section>
       </div>
     </header>
@@ -31,10 +28,9 @@
                 2030Watch wird hauptsächlich durch das BMZ im Rahmen des von
                 Engagement Global verwalteten Programms für Entwicklungspolitische
                 Bildung (FEB) sowie von Brot für die Welt und der Landesstelle
-                für Entwicklungszusammenarbeit gefördert. Das vorgesehene
-                Projektbudget für 2017-2018 beträgt ca. 214 000 Euro: 75% des
-                Budgets wurden vom FEB Programm des BMZ getragen, 23% von Brot
-                für die Welt/EED und LEZ (2,0%).
+                für Entwicklungszusammenarbeit gefördert. Das vorgesehene Projektbudget
+                für 2017-2018 beträgt ca. 214 000 Euro: 75% des Budgets wurden vom
+                FEB Programm des BMZ getragen, 23% von Brot für die Welt/EED und 2% LEZ Berlin.
               </p>
             </div>
             <div class="section-img">

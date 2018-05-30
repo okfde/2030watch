@@ -9,15 +9,7 @@
       <ul>
         <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
         <li>
-          <a href="&#0109;&#097;&#0105;&#0108;&#0116;&#0111;&#058;&#050;&#048;&#051;&#048;&#045;&#0119;&#097;&#0116;&#099;&#0104;&#064;&#0111;&#0107;&#0102;&#0110;&#046;&#0100;&#0101;">
-            Wir freuen uns über Feedback
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li class="btn btn-default btn-newsletter">
-          <a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d">
-          Newsletter abonnieren</a>
+          Wir freuen uns über <a title="Sende uns per E-Mail dein Feedback" class="footer-link" href="&#0109;&#097;&#0105;&#0108;&#0116;&#0111;&#058;&#050;&#048;&#051;&#048;&#045;&#0119;&#097;&#0116;&#099;&#0104;&#064;&#0111;&#0107;&#0102;&#0110;&#046;&#0100;&#0101;">Feedback</a>
         </li>
         <li><a href="https://okfn.de/spenden/">Mit einer Spende unterstützen</a></li>
         <li>
@@ -28,6 +20,19 @@
             <li><a href="https://github.com/okfde/2030-watch.de"><i class="icon-github-circled" /></a></li>
           </ul>
         </li>
+      </ul>
+      <ul>
+        <li class="btn btn-default btn-newsletter">
+          <a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d">
+          Newsletter abonnieren</a>
+        </li>
+        <div class="tracking-info">
+          <p>
+            Wir nutzen für unseren Newsletterversand und &#8209;verwaltung Mailchimp.
+            Lese <a class="footer-link" target="_blank" href="https://mailchimp.com/legal/privacy/">hier</a>
+            die Datenschutzbestimmung von Mailchimp.
+          </p>
+        </div>
       </ul>
     </div>
     <div class="tracking-info">
@@ -62,5 +67,9 @@
 
   .btn-newsletter {
     margin-bottom: $spacing/4;
+  }
+
+  .footer-link {
+    text-decoration: underline;
   }
 </style>

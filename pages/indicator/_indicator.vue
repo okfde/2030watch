@@ -12,7 +12,17 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }} <span v-if="category">({{ category }})</span></p>
+            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }}
+              <span class="indicator-icon" v-if="category">
+                 <span v-if="indicator.author === 'okf'" title="neuer Indikator"><i class="icon-plus-circled" /></span>
+                 <span v-if="indicator.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></span>
+                 <span v-if="indicator.keep" title="übernommener Indikator"><i class="icon-ok-circled" /></span>
+                 <span v-if="indicator.badTarget" title="aussageloser Zielwert"><i class="icon-minues-circled" /></span>
+                 <span v-if="indicator.modTarget" title="modifizierter Zielwert"><i class="icon-cog-circled" /></span>
+                 <span v-if="indicator.uncalculable" title="nicht berechenbar"><i class="icon-help-circled" /></span>
+                 <span v-if="indicator.spill" title="Spillover"><i class="icon-star-circled" /></span>
+              </span>
+            </p>
           </div>
           <div class="progress">
             <VisPieChart :value="indicator.progress" fill="ffffff" :background="indicator.sdg.color" />
@@ -310,5 +320,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+
+  .indicator-icon {
+    margin-left: .5em;
   }
 </style>
