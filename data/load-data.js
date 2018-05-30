@@ -4,7 +4,7 @@ const { requestURL, parseCSVString, splitJSON, cleanArrayStrings, checkArrayStr,
 // URLS
 const url_sdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRNDMTfVzdgRjXccPA71vnBEoPzF2UtcL-v5rKGj6Dl4hHMlZJ7hJAKH8wRiAOaozR8ZKJUnHrcEDu4/pub?gid=0&single=true&output=csv'
 
-const sdg_header = ['number', 'slug', 'color', 'labelShort', 'labelLong', 'textIntro', 'textIndicators']
+const sdg_header = ['number', 'slug', 'color', 'labelShort', 'labelLong', 'textIntro', 'textIndicators', 'summaryDns', 'summary2030']
 const sdg_numbers = ['number']
 const sdg_file = './sdgs.json'
 const sdg_ratings = [
