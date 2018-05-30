@@ -50,13 +50,25 @@
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
-                  <li><span class="label"><i class="icon-plus-circled" /> neuer Indikator</span></li>
-                  <li><span class="label"><i class="icon-cancel-circled" /> ungeeigneter Indikator</span></li>
+                  <li><span class="label" title="Dieser Indikator zeigt ein neues Thema, welches noch nicht in der deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
+                    <i class="icon-plus-circled" /> neuer Indikator</span>
+                  </li>
+                  <li><span class="label" title="Der Indikator misst keine Veränderung in Bezug auf Nachhaltigkeit und misst die Wirkung einer Maßnahme nur unzureichend.">
+                    <i class="icon-cancel-circled" /> ungeeigneter Indikator</span>
+                  </li>
                   <li><span class="label"><i class="icon-ok-circled" /> übernommener Indikator</span></li>
-                  <li><span class="label"><i class="icon-minus-circled" /> aussageloser Zielwert</span></li>
-                  <li><span class="label"><i class="icon-cog-circled" /> modifizierter Zielwert</span></li>
-                  <li><span class="label"><i class="icon-help-circled" /> nicht berechenbar</span></li>
-                  <li><span class="label"><i class="icon-star-circled" /> Spillover</span></li>
+                  <li><span class="label" title="Dieser Indikator hat einen Zielwert, der es nicht erlaubt abzulesen, was ein Fortschritt bis 2030 bedeuten würde.">
+                    <i class="icon-minus-circled" /> aussageloser Zielwert</span>
+                  </li>
+                  <li><span class="label" title="Dieser Zielwert ist schlecht und 2030Watch schlägt einen neuen Zielwert vor.">
+                    <i class="icon-cog-circled" /> modifizierter Zielwert</span>
+                  </li>
+                  <li><span class="label" title="Für diesen Indikator kann man auf Grund fehlender Daten den Ziel- oder Ausgangswert nicht berechnen.">
+                    <i class="icon-help-circled" /> nicht berechenbar</span>
+                  </li>
+                  <li><span class="label" title="Dieser Indikator misst internationale Auswirkungen durch Deutschland und zeigt somit die Verantwortung Deutschlands für nachhaltige Rahmenbedingungen in anderen Ländern.">
+                    <i class="icon-star-circled" /> Spillover</span>
+                  </li>
                 </ul>
               </li>
             </ul>
