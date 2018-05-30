@@ -13,7 +13,7 @@
           <div>
             <p>{{ indicator.txtintroduction }}</p>
             <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }}
-              <span v-if="category">
+              <span class="indicator-icon" v-if="category">
                  <span v-if="indicator.author === 'okf'" title="neuer Indikator"><i class="icon-plus-circled" /></span>
                  <span v-if="indicator.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></span>
                  <span v-if="indicator.keep" title="übernommener Indikator"><i class="icon-ok-circled" /></span>
@@ -320,5 +320,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+
+  .indicator-icon {
+    margin-left: .5em;
   }
 </style>
