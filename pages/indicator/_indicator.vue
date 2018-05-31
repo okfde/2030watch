@@ -12,15 +12,15 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030 Indikator' }}
-              <span class="indicator-icon" v-if="category">
-                 <span v-if="indicator.author === 'okf'" title="neuer Indikator"><i class="icon-plus-circled" /></span>
-                 <span v-if="indicator.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></span>
-                 <span v-if="indicator.keep" title="übernommener Indikator"><i class="icon-ok-circled" /></span>
-                 <span v-if="indicator.badTarget" title="aussageloser Zielwert"><i class="icon-minues-circled" /></span>
-                 <span v-if="indicator.modTarget" title="modifizierter Zielwert"><i class="icon-cog-circled" /></span>
-                 <span v-if="indicator.uncalculable" title="nicht berechenbar"><i class="icon-help-circled" /></span>
-                 <span v-if="indicator.spill" title="Spillover"><i class="icon-star-circled" /></span>
+            <p>{{ indicator.author === 'dns' ? 'DNS Indikator – modifiziert –' : '2030 Indikator –' }}
+              <span v-if="category">
+                 <span v-if="indicator.author === 'okf'" title="neuer Indikator" class="indicator-icon"><i class="icon-plus-circled" /></span>
+                 <span v-if="indicator.badIndicator" title="ungeeigneter Indikator" class="indicator-icon"><i class="icon-cancel-circled" /></span>
+                 <span v-if="indicator.keep" title="übernommener Indikator" class="indicator-icon"><i class="icon-ok-circled" /></span>
+                 <span v-if="indicator.badTarget" title="aussageloser Zielwert" class="indicator-icon"><i class="icon-minues-circled" /></span>
+                 <span v-if="indicator.modTarget" title="modifizierter Zielwert" class="indicator-icon"><i class="icon-cog-circled" /></span>
+                 <span v-if="indicator.uncalculable" title="nicht berechenbar" class="indicator-icon"><i class="icon-help-circled" /></span>
+                 <span v-if="indicator.spill" title="Spillover" class="indicator-icon"><i class="icon-star-circled" /></span>
               </span>
             </p>
           </div>
