@@ -33,7 +33,12 @@
       <ul class="indicators container" ref="slidesImages" :style="{ 'height': slideHeight + 'px' }">
         <li :class="{ 'slide': true, 'active': slide === 1 }">
           <div class="sdg-process-wrapper">
-            <VisProgress :sdg="introSDG" :vLegend="true" :compact="false" />
+            <p>
+               Wie weit sind wir vom Ziel entfernt eine nachhaltige Transformation bis 2030 zu erreichen?
+            </p>
+            <div class="margin-legend">
+              <VisProgress :vTickLabels="true" :sdg="introSDG" :vLegend="true" :compact="true" />
+            </div>
           </div>
         </li>
         <li :class="{ 'slide': true, 'active': slide === 2 }">
@@ -275,6 +280,10 @@
           margin-right: $spacing * 2;
         }
       }
+    }
+    .margin-legend {
+      margin: $spacing / 2 0;
+      height: 60px;
     }
   }
 </style>
