@@ -80,8 +80,10 @@
     &.current {
       flex: 4;
 
-      .text {
-        opacity: 0;
+      &.enabled {
+        .text {
+          opacity: 0;
+        }
       }
     }
 
