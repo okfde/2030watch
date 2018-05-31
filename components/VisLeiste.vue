@@ -79,6 +79,10 @@
 
     &.current {
       flex: 4;
+
+      .text {
+        opacity: 0;
+      }
     }
 
     &:hover {
