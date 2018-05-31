@@ -1,11 +1,23 @@
 <template>
   <ul class="sdg-leiste">
-    <li
+    <li v-if="sdg.textIntro === 'coming soon' || sdg.textIntro === ''"
       v-for="(sdg, slug) in sdgs"
       :class="{ 'sdg-item': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
       :key="slug">
-      <nuxt-link :to="'/sdg/' + slug" class="sdg-link">SDG {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}</nuxt-link>
+      <span class="disabled">{{ sdg.number }} coming soon</span>
+      <a title="coming soon" class="sdg-link disabled">
+        {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
+      </a>
+    </li>
+    <li v-else
+      :class="{ 'sdg-item': true, 'enabled': true, 'current': current === slug }"
+      :style="{ 'background-color': '#' + sdg.color }"
+      :key="slug">
+      <span class="text">{{ sdg.number }}</span>
+      <nuxt-link :to="'/sdg/' + slug" class="sdg-link">
+        {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
+      </nuxt-link>
     </li>
   </ul>
 </template>
@@ -41,7 +53,6 @@
 
     .sdg-link {
       color: #fff;
-      font-size: 0.8rem;
       height: 25px;
       line-height: 25px;
       opacity: 0;
@@ -50,8 +61,28 @@
       display: block;
     }
 
+    .disabled {
+      cursor: default;
+      color: #fff;
+    }
+
+    &.enabled {
+      color: #fff;
+
+      &:hover {
+        .text {
+          display: none;
+          transition-duration: 1.5s; // Duration for text appearance
+        }
+      }
+    }
+
     &.current {
       flex: 4;
+
+      .text {
+        opacity: 0;
+      }
     }
 
     &:hover {
@@ -59,8 +90,8 @@
 
       .sdg-link {
         opacity: 1;
+        transition-duration: 1.5s; // Duration for text appearance
       }
     }
   }
 </style>
-
