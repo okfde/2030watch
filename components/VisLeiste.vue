@@ -1,6 +1,7 @@
 <template>
   <ul class="sdg-leiste">
-    <li v-if="sdg.textIntro === 'coming soon' || sdg.textIntro === ''"
+
+    <li v-if="sdg.textIntro === 'coming soon'"
       v-for="(sdg, slug) in sdgs"
       :class="{ 'sdg-item': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
@@ -10,6 +11,7 @@
         {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
       </a>
     </li>
+
     <li v-else
       :class="{ 'sdg-item': true, 'enabled': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
@@ -19,6 +21,7 @@
         {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
       </nuxt-link>
     </li>
+
   </ul>
 </template>
 
@@ -79,12 +82,6 @@
 
     &.current {
       flex: 4;
-
-      &.enabled {
-        .text {
-          opacity: 0;
-        }
-      }
     }
 
     &:hover {
