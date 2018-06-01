@@ -4,10 +4,9 @@
       v-for="(sdg, slug) in sdgs"
       :class="{ 'sdg-item': true, 'enabled': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
-      title="Coming soon"
       :key="slug">
       <span class="sdg-number">{{ sdg.number }}</span>
-      <a title="coming soon" class="sdg-link coming-soon">
+      <a class="sdg-link coming-soon">
         {{ sdg.number }} coming soon
       </a>
     </li>
