@@ -121,19 +121,15 @@
       <text
         ref="okfLabelLegend"
         class="legendLabel okf"
-        alignment-baseline="hanging"
-        dominant-baseline="hanging"
         text-anchor="middle"
         :x="xOKF"
-        :y="height - 15">2030Watch</text>
+        :y="height">2030Watch</text>
       <text
         ref="dnsLabelLegend"
         class="legendLabel dns"
-        alignment-baseline="hanging"
-        dominant-baseline="hanging"
         text-anchor="middle"
         :x="xDNS"
-        :y="height - 15">Daten DNS</text>
+        :y="height">Daten DNS</text>
     </g>
   </svg>
 </template>
