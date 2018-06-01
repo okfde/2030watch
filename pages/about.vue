@@ -8,7 +8,6 @@
       </div>
     </header>
     <div class="content">
-
       <section>
         <div class="wrapper">
           <h2>2030Watch</h2>

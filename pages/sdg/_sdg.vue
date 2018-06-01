@@ -85,12 +85,12 @@
                       <i class="icon-star-circled" /> Internationale Auswirkungen
                     </span>
                   </li>
-                  <li class="label">
+                  <!-- <li class="label">
                     Mehr zu unserer Methode
                     <nuxt-link to="/projekt">
                       hier
                     </nuxt-link>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
             </ul>
@@ -142,7 +142,7 @@
             <div>
               <hgroup>
                 <h3 class="okf">
-                  Alternativer Indikatorenkatalog
+                  2030Watch Indikatorenkatalog
                 </h3>
               </hgroup>
               <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">

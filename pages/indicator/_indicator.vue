@@ -31,7 +31,7 @@
       </div>
     </header>
     <div class="content">
-
+      <VisLeiste :current="indicator.sdg.slug" />
       <div class="wrapper">
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
@@ -108,13 +108,9 @@
         </div>
 
         <div v-if="!indicator['pate']" class="description">
-          <h4>Werde Datenpate für diesen Indikator</h4>
+          <h4>Datenpate</h4>
           <div>
-            Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
-            Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für
-            ein Unterziel für sinnvoll halten. Sie legen den Zielwert fest, der bis 2030
-            erreicht werden sollte. Darüber hinaus unterstützen sie das Projekt in der
-            Datenbereitstellung. Bei Interesse, Datenpate zu werden, wende dich bitte an
+            Bei Interesse, Datenpate zu werden, wende dich bitte an
             <a href="mailto:2030-watch@okfn.de">2030-watch@okfn.de</a>.
           </div>
         </div>
@@ -148,6 +144,7 @@
   import VisBarChart from '~/components/VisBarChart.vue'
   import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
+  import VisLeiste from '~/components/VisLeiste.vue'
 
   export default {
     validate ({ params, store }) {
@@ -231,7 +228,8 @@
     components: {
       VisPieChart,
       VisBarChart,
-      VisLineChart
+      VisLineChart,
+      VisLeiste
     }
   }
 </script>

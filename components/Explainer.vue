@@ -7,19 +7,19 @@
       <section>
         <small class="caption">Was?</small>
         <p>
-          Wir diskutieren anhand von Indikatoren wie ambitioniert Deutschland die Agenda 2030 umsetzt.
+          Wir diskutieren anhand von Indikatoren, wie ambitioniert Deutschland die Agenda 2030 umsetzt
         </p>
       </section>
       <section>
         <small class="caption">Warum?</small>
         <p>
-          Die Nachhaltigkeitsdebatte in Deutschland muss kritischer werden.
+          Die Nachhaltigkeitsdebatte in Deutschland muss ambitionierter werden.
         </p>
       </section>
       <section>
         <small class="caption">Wie?</small>
         <p>
-          Unsere Indikatoren zeigen fehlende Themen, ambitionierte Zielwerte und mehr Verantwortung.
+          Unsere Indikatoren zeigen fehlende Themen, bessere Zielwerte und damit mehr Verantwortung.
         </p>
       </section>
     </div>

@@ -17,7 +17,8 @@
     <section>
       <div id="keyfindings" class="wrapper">
         <h2>
-          Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
+          Wie groß ist der Handlungsbedarf, ein nachhaltigeres Deutschland bis 2030 zu erreichen?
+          – 2 Perspektiven: die Deutsche Nachhaltigkeitsstrategie (DNS) und 2030Watch
         </h2>
         <div class="columns columns-gutter">
           <!-- <section>
