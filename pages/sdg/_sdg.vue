@@ -85,12 +85,12 @@
                       <i class="icon-star-circled" /> Internationale Auswirkungen
                     </span>
                   </li>
-                  <li class="label">
+                  <!-- <li class="label">
                     Mehr zu unserer Methode
                     <nuxt-link to="/projekt">
                       hier
                     </nuxt-link>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
             </ul>

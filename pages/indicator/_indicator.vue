@@ -31,7 +31,7 @@
       </div>
     </header>
     <div class="content">
-
+      <VisLeiste :current="indicator.sdg.slug" />
       <div class="wrapper">
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
@@ -148,6 +148,7 @@
   import VisBarChart from '~/components/VisBarChart.vue'
   import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
+  import VisLeiste from '~/components/VisLeiste.vue'
 
   export default {
     validate ({ params, store }) {
@@ -231,7 +232,8 @@
     components: {
       VisPieChart,
       VisBarChart,
-      VisLineChart
+      VisLineChart,
+      VisLeiste
     }
   }
 </script>
