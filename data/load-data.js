@@ -253,6 +253,7 @@ function processIndicatorMeta(indicator) {
 
 	if (author === 'okf') {
 		i['newTopic'] = indicator['neuesThema'] === 'j'
+		i['spill'] = indicator['spillover'] === 'j'
 		i['pate'] = indicator['datenpate'] !== 'n' ? indicator['datenpate'] : false
 		i['pateLogo'] = indicator['datenpateLogo'] !== '' ? indicator['datenpateLogo'] : false
 		i['pateUrl'] = indicator['datenpateUrl'] !== '' ? indicator['datenpateUrl'] : false
