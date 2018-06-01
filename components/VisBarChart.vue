@@ -18,6 +18,7 @@
           v-html="tick[0]" />
         <rect
           v-for="(bar, n) in bars"
+          v-if="bar.height >= 0"
           :title="bar.label + ': ' + bar.value"
           :class="bar.klass"
           :x="bar.x + 'px'"
