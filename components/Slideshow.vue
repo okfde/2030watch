@@ -2,8 +2,8 @@
   <div class="intro box">
     <a class="opener" v-on:click="seen = !seen">
       <header>
-        <h2>
-          Warum wir andere Indikatoren brauchen um Nachhaltigkeit zu messen
+        <h2 class="carousel-header">
+          Warum brauchen wir andere Indikatoren um Nachhaltigkeit zu messen?
         </h2>
       </header>
     </a>
@@ -30,8 +30,8 @@
           </li>
           <li :class="{ 'slide': true, 'active': slide === 5 }">
             <p>
-              Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs.
-              Lernt, diskutiert, entdeckt!
+              Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
+              <div class="carousel-prompt">Go Explore!</div>
             </p>
           </li>
         </ul>
@@ -303,6 +303,20 @@
     // TODO calculate as before
     .fixed-margin {
       padding-top: 15rem;
+    }
+
+    .carousel-header {
+      color: $color-attention;
+      text-decoration: underline;
+    }
+
+    .carousel-prompt {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      color: $color-okf;
+      text-align: center;
     }
   }
 </style>

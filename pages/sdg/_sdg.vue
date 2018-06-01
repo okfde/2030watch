@@ -50,24 +50,46 @@
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
-                  <li><span class="label" title="Dieser Indikator zeigt ein neues Thema, welches noch nicht in der deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
-                    <i class="icon-plus-circled" /> neuer Indikator</span>
+                  <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
+                    <span class="label">
+                      <i class="icon-plus-circled" /> Neues Thema
+                    </span>
                   </li>
-                  <li><span class="label" title="Der Indikator misst keine Veränderung in Bezug auf Nachhaltigkeit und misst die Wirkung einer Maßnahme nur unzureichend.">
-                    <i class="icon-cancel-circled" /> ungeeigneter Indikator</span>
+                  <li title="Der Indikator misst keine Veränderung in Bezug auf Nachhaltigkeit und misst die Wirkung einer Maßnahme nur unzureichend.">
+                    <span class="label">
+                      <i class="icon-cancel-circled" /> Ungeeignet
+                    </span>
                   </li>
-                  <li><span class="label"><i class="icon-ok-circled" /> übernommener Indikator</span></li>
-                  <li><span class="label" title="Dieser Indikator hat einen Zielwert, der es nicht erlaubt abzulesen, was ein Fortschritt bis 2030 bedeuten würde.">
-                    <i class="icon-minus-circled" /> aussageloser Zielwert</span>
+                  <li title="Dieser Indikator ist ein offizieller Indikator der deutschen Nachhaltigkeitsstrategie und wird von 2030Watch ohne Veränderungen übernommen.">
+                    <span class="label">
+                      <i class="icon-ok-circled" /> Übernommen
+                    </span>
                   </li>
-                  <li><span class="label" title="Dieser Zielwert ist schlecht und 2030Watch schlägt einen neuen Zielwert vor.">
-                    <i class="icon-cog-circled" /> modifizierter Zielwert</span>
+                  <li title="Dieser Indikator hat keinen genau definierten Zielwert und erlaubt es daher nicht, den Fortschritt bis 2030 zu bewerten.">
+                    <span class="label">
+                      <i class="icon-minus-circled" /> Nicht bewertbarer Zielwert
+                    </span>
                   </li>
-                  <li><span class="label" title="Für diesen Indikator kann man auf Grund fehlender Daten den Ziel- oder Ausgangswert nicht berechnen.">
-                    <i class="icon-help-circled" /> nicht berechenbar</span>
+                  <li title="Dieser Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
+                    <span class="label">
+                      <i class="icon-cog-circled" /> Modifizierter Zielwert
+                    </span>
                   </li>
-                  <li><span class="label" title="Dieser Indikator misst internationale Auswirkungen durch Deutschland und zeigt somit die Verantwortung Deutschlands für nachhaltige Rahmenbedingungen in anderen Ländern.">
-                    <i class="icon-star-circled" /> Spillover</span>
+                  <li title="Für diesen Indikator kann man auf Grund fehlender Daten den Ziel- oder Ausgangswert nicht berechnen.">
+                    <span class="label">
+                      <i class="icon-help-circled" /> Nicht berechenbar
+                    </span>
+                  </li>
+                  <li title="Dieser Indikator misst internationale Auswirkungen durch Deutschland und zeigt somit die Verantwortung Deutschlands für nachhaltige Rahmenbedingungen in anderen Ländern.">
+                    <span class="label">
+                      <i class="icon-star-circled" /> Internationale Auswirkungen
+                    </span>
+                  </li>
+                  <li class="label">
+                    Mehr zu unserer Methode
+                    <nuxt-link to="/projekt">
+                      hier
+                    </nuxt-link>
                   </li>
                 </ul>
               </li>
