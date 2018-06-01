@@ -3,13 +3,27 @@
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
       <ul class="labels">
-        <li v-if="i.author === 'okf'" title="Neuer Indikator"><i class="icon-plus-circled" /></li>
-        <li v-if="i.badIndicator" title="ungeeigneter Indikator"><i class="icon-cancel-circled" /></li>
-        <li v-if="i.keep" title="übernommener Indikator"><i class="icon-ok-circled" /></li>
-        <li v-if="i.badTarget"><i title="aussageloser Zielwert" class="icon-minus-circled" /></li>
-        <li v-if="i.modTarget" title="modifizierter Zielwert"><i class="icon-cog-circled" /></li>
-        <li v-if="i.uncalculable" title="nicht berechenbar"><i class="icon-help-circled" /></li>
-        <li v-if="i.spill" title="Spillover"><i class="icon-star-circled" /></li>
+        <li v-if="i.author === 'okf'" title="Neues Thema">
+          <i class="icon-plus-circled" />
+        </li>
+        <li v-if="i.badIndicator" title="Ungeeignet">
+          <i class="icon-cancel-circled" />
+        </li>
+        <li v-if="i.keep" title="Übernommen">
+          <i class="icon-ok-circled" />
+        </li>
+        <li v-if="i.badTarget">
+          <i title="Nicht bewertbarer Zielwert" class="icon-minus-circled" />
+        </li>
+        <li v-if="i.modTarget" title="Modifizierter Zielwert">
+          <i class="icon-cog-circled" />
+        </li>
+        <li v-if="i.uncalculable" title="Nicht berechenbar">
+          <i class="icon-help-circled" />
+        </li>
+        <li v-if="i.spill" title="Internationale Auswirkungen">
+          <i class="icon-star-circled" />
+        </li>
       </ul>
       <h5>{{ i.label }}</h5>
     </div>
@@ -138,4 +152,3 @@
     }
   }
 </style>
-
