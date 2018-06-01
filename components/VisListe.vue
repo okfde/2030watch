@@ -134,10 +134,9 @@
     }
 
     .sdg-link {
-      color: #222;
+      color: var(--color);
       display: flex;
       flex-direction: column;
-      // height: 5rem;
       width: 100%;
       margin: 0;
 
@@ -177,7 +176,8 @@
           text-align: right;
           line-height: 1.2rem;
           display: inline-block;
-          color: $color-mute;
+          // color: $color-mute;
+          color: var(--color);
           font-size: 0.8rem;
         }
 

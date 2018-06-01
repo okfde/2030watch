@@ -239,12 +239,12 @@
 
   .progress {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
 
     > * {
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 100px;
+    max-width: 100px;
     }
   }
 
@@ -303,8 +303,9 @@
     }
 
     .vis-title {
-      text-align: center;
-      padding: $spacing / 2;
+      // text-align: center;
+      // padding: $spacing / 2;
+      padding: 0 0 0 $spacing / 2;
       font-weight: 600;
     }
 
