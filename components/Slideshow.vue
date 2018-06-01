@@ -30,8 +30,8 @@
           </li>
           <li :class="{ 'slide': true, 'active': slide === 5 }">
             <p>
-              Viele weitere spannende Stories und Ergänzen finden sich in den weiteren SDGs.
-              Lernt, diskutiert, entdeckt!
+              Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
+              <div class="carousel-prompt">Go Explore!</div>
             </p>
           </li>
         </ul>
@@ -307,6 +307,16 @@
 
     .carousel-header {
       color: $color-attention;
+      text-decoration: underline;
+    }
+
+    .carousel-prompt {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      color: $color-okf;
+      text-align: center;
     }
   }
 </style>
