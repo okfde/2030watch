@@ -11,6 +11,7 @@
         </ul>
       </nav>
     </header>
+    <Infomessage />
     <div class="page-content">
       <nuxt/>
     </div>
@@ -23,6 +24,7 @@
   import { mapState } from 'vuex'
   import Explainer from '~/components/Explainer.vue'
   import Footer from '~/components/Footer.vue'
+  import Infomessage from '~/components/Infobox.vue'
 
   export default {
     computed: {
@@ -40,7 +42,8 @@
     },
     components: {
       Footer,
-      Explainer
+      Explainer,
+      Infomessage
     }
   }
 </script>
