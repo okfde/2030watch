@@ -40,20 +40,20 @@
       class="diff"
       stroke="#aaa"
       :x1="xOKF"
-      y1="50%"
+      :y1="height / 2 + 'px'"
       :x2="xDNS"
-      y2="50%" />
+      :y2="height / 2 + 'px'" />
     <circle
       :class="{ 'sdg-marker': true, 'sdg-marker-total': true, 'disabled': disabled }"
       :style="{ 'stroke': cBackground }"
       :cx="xOKF"
-      cy="50%"
+      :cy="height / 2 + 'px'"
       :r="markerR" />
     <circle
       :class="{ 'sdg-marker': true, 'sdg-marker-dns': true, 'disabled': disabled }"
       :style="{ 'stroke': cBackground }"
       :cx="xDNS"
-      cy="50%"
+      :cy="height / 2 + 'px'"
       :r="markerR" />
     <g :class="{ markerLabels: true, invisible: vMarkerLabels }">
       <text
