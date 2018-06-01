@@ -92,6 +92,9 @@
               </li>
             </ul>
           </li>
+          <li :class="{ 'slide': true, 'active': slide === 5 }">
+            <img style="width:55%; margin-left:3.5rem;" src="../assets/img/method_illustration.png" />
+          </li>
         </ul>
       </section>
       <footer class="fixed-margin">
@@ -299,7 +302,7 @@
 
     // TODO calculate as before
     .fixed-margin {
-      padding-top: 9rem;
+      padding-top: 15rem;
     }
   }
 </style>
