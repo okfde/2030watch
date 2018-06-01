@@ -20,6 +20,7 @@ export default function createTicks (domain, height, callback) {
       n = false
     }
   }
+  if (c === 0) { c = 2 }
   const step = range / c
   const _ticks = Array.apply(null, Array(c + 1)).map(function () {})
   return _ticks.map((tick, n) => {
