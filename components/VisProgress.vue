@@ -69,8 +69,6 @@
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
-        alignment-baseline="baseline"
-        dominant-baseline="baseline"
         :text-anchor="labels[1].l"
         :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
         :x="labels[1].x"
