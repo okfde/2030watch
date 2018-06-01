@@ -303,8 +303,9 @@
     }
 
     .vis-title {
-      text-align: center;
-      padding: $spacing / 2;
+      // text-align: center;
+      // padding: $spacing / 2;
+      padding: 0 0 0 $spacing / 2;
       font-weight: 600;
     }
 

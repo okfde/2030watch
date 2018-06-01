@@ -36,7 +36,7 @@
           v-for="(bar, n) in bars"
           alignment-baseline="middle"
           :x="bar.labelX + 'px'"
-          :transform="'rotate(45,' + bar.labelX + ',' + bar.labelY + ')'"
+          :transform="'rotate(60,' + bar.labelX + ',' + bar.labelY + ')'"
           :y="bar.labelY"
           v-html="bar.label"
           />
