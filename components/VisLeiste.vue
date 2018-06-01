@@ -8,7 +8,6 @@
       :key="slug">
       <span class="disabled">{{ sdg.number }} coming soon</span>
       <a title="coming soon" class="sdg-link disabled">
-        {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
       </a>
     </li>
 
