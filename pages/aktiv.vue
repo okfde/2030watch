@@ -5,7 +5,10 @@
         <h1>Werde aktiv</h1></h1>
         <section class="columns columns-gutter">
           <div>
-            <p>Deutschland hat noch großen Handlungsbedarf um die Ziele der Agenda 2030 ambitioniert umzusetzen. <br> Setze dich dafür ein, dass sich etwas ändert!</p>
+            <p>
+              Deutschland hat noch großen Handlungsbedarf, um die Ziele der Agenda 2030 ambitioniert umzusetzen.
+              Setze dich dafür ein, dass sich etwas ändert!
+            </p>
           </div>
         </section>
       </div>

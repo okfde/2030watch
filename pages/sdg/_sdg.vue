@@ -142,7 +142,7 @@
             <div>
               <hgroup>
                 <h3 class="okf">
-                  Alternativer Indikatorenkatalog
+                  2030Watch Indikatorenkatalog
                 </h3>
               </hgroup>
               <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
