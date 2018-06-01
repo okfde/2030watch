@@ -3,7 +3,7 @@
     <div class="wrapper">
       <h4>Relaunch light</h4>
       <p>
-        Alle Infos gibt es am 1.08.
+        Alle Infos gibt es am 1.09.
       </p>
     </div>
   </div>
@@ -15,16 +15,17 @@
 <style lang="scss" scoped>
 
 .infobox {
+  top: 1.5rem;
   position: absolute;
-  left: 9.5%;
-  top: 4.5rem;
+  margin-left: 35vH;
 }
 
 .wrapper {
   max-width: 30vH;
   text-align: center;
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.6;
+  color: #000000;
 }
 
 </style>
