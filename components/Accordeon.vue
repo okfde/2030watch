@@ -1,8 +1,8 @@
 <template>
   <ul>
-    <li v-for="item in faqs" class="item">
+    <li v-for="item in faqs" class="item" :id="item.id">
       <Collapse :title="item.title">
-        <p>{{ item.body }}</p>
+        <div v-html="item.body"></div>
       </Collapse>
     </li>
   </ul>

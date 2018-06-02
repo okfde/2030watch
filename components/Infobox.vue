@@ -1,7 +1,10 @@
 <template>
   <div class="infobox">
     <div class="wrapper">
-      <h4>Full Relaunch am 1.9.</h4>
+      <h4>Relaunch light</h4>
+      <p>
+        Alle Inhalte gibt es bis 1.09.
+      </p>
     </div>
   </div>
 </template>
@@ -10,9 +13,8 @@
 </script>
 
 <style lang="scss" scoped>
-
 .infobox {
-  top: 2rem;
+  top: 1.5rem;
   position: absolute;
   margin-left: 35vH;
 }
