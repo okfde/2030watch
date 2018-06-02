@@ -23,10 +23,10 @@ module.exports = {
   generate: {
     routes: function () {
       const indicators = Object.keys(JSON.parse(require('fs').readFileSync('data/indicators.json', 'utf8'))).map((data) => {
-        return './indicator/' + data
+        return '/indicator/' + data
       })
       const sdgs = Object.keys(JSON.parse(require('fs').readFileSync('data/sdgs.json', 'utf8'))).map((data) => {
-        return './sdg/' + data
+        return '/sdg/' + data
       })
       return [...indicators, ...sdgs]
     }
