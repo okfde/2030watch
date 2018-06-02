@@ -93,7 +93,7 @@
 
       <section>
         <div class="wrapper">
-          <h2>Unsere Finanzpartner</h2>
+          <h2>Gefördert durch</h2>
           <div class="section-wrapper">
             <div class="section-img">
               <img src="../assets/img/sponsors/BMZ.png"
@@ -145,28 +145,28 @@
           imgUrl: require('~/assets/img/team/rebecca.jpg'),
           role: 'Projektleitung',
           email: 'rebecca.buchholz@okfn.de',
-          twitter: 'https://twitter.com/okfde'
+          twitter: 'https://twitter.com/2030WatchDe'
         },
         {
           name: 'Claudia Schwegmann',
           imgUrl: require('~/assets/img/team/claudia.jpg'),
           role: 'Gründerin',
-          email: 'claudia.schwegmann@okfn.org ',
-          twitter: 'https://twitter.com/okfde'
+          email: 'claudia.schwegmann@okfn.de',
+          twitter: 'https://twitter.com/2030WatchDe'
         },
         {
           name: 'Saadya Windauer',
           imgUrl: require('~/assets/img/team/saadya.jpg'),
           role: 'Projektmanagerin',
           email: 'saadya.windauer@okfn.de',
-          twitter: 'https://twitter.com/okfde'
+          twitter: 'https://twitter.com/2030WatchDe'
         },
         {
           name: 'Jennifer Gebske',
           imgUrl: require('~/assets/img/team/jenny.jpg'),
           role: 'Entwicklerin',
           email: 'jennifer.gebske@okfn.de',
-          twitter: 'https://twitter.com/okfde'
+          twitter: 'https://twitter.com/2030WatchDe'
         }]
       }
     },
