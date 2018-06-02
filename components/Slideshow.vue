@@ -25,15 +25,22 @@
             </p>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 4 }">
-            <p>Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung von Hausarbeit, Gewalt gegen Frauen und  dem Unterschied in Renten&shy;einkommen auf wichtige Themen die in der DNS vernachlässigt werden.
+            <p>
+              Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung
+              von Hausarbeit, Gewalt gegen Frauen und  dem Unterschied in Renten&shy;einkommen
+              auf wichtige Themen die in der DNS vernachlässigt werden.
+              <p>
+                Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
+                <div class="carousel-prompt">Go Explore!</div>
+              </p>
             </p>
           </li>
-          <li :class="{ 'slide': true, 'active': slide === 5 }">
+          <!-- <li :class="{ 'slide': true, 'active': slide === 5 }">
             <p>
               Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
               <div class="carousel-prompt">Go Explore!</div>
             </p>
-          </li>
+          </li> -->
         </ul>
         <ul class="indicators container" ref="slidesImages" :style="{ 'height': slideHeight + 'px' }">
           <li :class="{ 'slide': true, 'active': slide === 1 }">
@@ -92,9 +99,9 @@
               </li>
             </ul>
           </li>
-          <li :class="{ 'slide': true, 'active': slide === 5 }">
+          <!-- <li :class="{ 'slide': true, 'active': slide === 5 }">
             <img style="width:55%; margin-left:3.5rem;" src="../assets/img/method_illustration.png" />
-          </li>
+          </li> -->
         </ul>
       </section>
       <footer class="fixed-margin">
@@ -102,11 +109,11 @@
           v-on:click="slide <= 1 ? slide = slide : slide -= 1"
           :class="{ 'btn': true, 'disabled': slide <= 1 }">Zurück</span>
         <span
-          v-on:click="slide > 4 ? slide = slide : slide += 1"
-          :class="{ 'btn': true, 'disabled': slide > 4 }">Weiter</span>
+          v-on:click="slide > 3 ? slide = slide : slide += 1"
+          :class="{ 'btn': true, 'disabled': slide > 3 }">Weiter</span>
         <div class="progress">
           <span
-            v-for="n in 5"
+            v-for="n in 4"
             v-on:click="slide = n"
             :class="{ 'icon': true, 'past': n <= slide, 'future': n > slide }" />
         </div>

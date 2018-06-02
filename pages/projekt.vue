@@ -33,20 +33,23 @@
       return {
         background: [{
           title: 'Was ist die Agenda 2030?',
-          id: 'test1',
+          id: 'background-agenda-2030',
           body: '<p>Die Agenda 2030 wurde im September 2015 auf einem Gipfel der Vereinten Nationen von allen Mitgliedsstaaten verabschiedet. Mit der Agenda 2030 für nachhaltige Entwicklung hat sich die internationale Staatengemeinschaft dafür ausgesprochen, die globalen Herausforderungen, wirtschaftlichen Fortschritt im Einklang mit sozialer Gerechtigkeit und  im Rahmen der ökologischen Grenzen der Erde zu gestalten, gemeinsam zu lösen.</p><p>Das Kernstück der Agenda bildet ein ehrgeiziger Katalog mit 17 Zielen für nachhaltige Entwicklung (Sustainable Development Goals, SDGs). 193 Länder haben sich verpflichtet, die Agenda bis zum Jahr 2030 umzusetzen.</p>'
         },
         {
           title: 'Was sind die globalen nachhaltigen Entwicklungsziele (SDGs)?',
+          id: 'background-sdgs',
           body: '<p>Das Kernstück der Agenda bildet ein ehrgeiziger Katalog mit 17 Zielen für nachhaltige Entwicklung, 169 Unterzielen und 232 Indikatoren. Der SDG-Katalog ist auf Basis eines globalen partizipativen Prozesses entwickelt worden. Die 17 SDGs berücksichtigen erstmals alle drei Dimensionen der Nachhaltigkeit – Soziales, Umwelt, Wirtschaft – gleichermaßen. Ihnen sind fünf Kernbotschaften als handlungsleitende Prinzipien vorangestellt: Mensch, Planet, Wohlstand, Frieden und Partnerschaft. Im Englischen spricht man von den "5 Ps": People, Planet, Prosperity, Peace, Partnership.</p>'
         },
         {
           title: 'Wer soll die 2030 Agenda umsetzen?',
+          id: 'background-umsetzung',
           body: '<p>Die 2030 Agenda ist eine freiwillige Selbstverpflichtung der Regierungen aus 193 Ländern. Dazu “übersetzen” alle beteiligten Länder den globalen SDG-Katalog in einen eigenen Fahrplan, um die globalen Nachhaltigkeitsziele umzusetzen. In Deutschland ist die nationale Nachhaltigkeitsstrategie der zentrale Umsetzungsrahmen der Agenda 2030.</p><p>Die United Nations (UN) spielt bei der Koordinierung der 2030 Agenda und der Weiterentwicklung des SDG-Indikatorenkatalogs eine entscheidende Rolle. Zivilgesellschaftliche Gruppen, Wissenschaftler*innen und Unternehmen sind aufgerufen, sich ebenfalls an der Umsetzung der Agenda zu beteiligen, allerdings gibt es dazu keine formelle Selbstverpflichtung.</p>'
         }
         ],
         ziel: [{
           title: 'Was ist das Ziel von 2030Watch?',
+          id: 'ziel-',
           body: 'Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt. Um diese Vision zu verfolgen, will 2030Watch anhand von Indikatoren ein Bild zeichnen, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten, Handlungsfelder beleuchten und die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.'
         },
         {
