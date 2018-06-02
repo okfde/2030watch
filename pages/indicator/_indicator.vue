@@ -14,8 +14,9 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'DNS Indikator – modifiziert –' : '2030 Indikator –' }}
+            <p>{{ indicator.author === 'dns' ? 'DNS Indikator –' : '2030 Indikator –' }}
               <span v-if="category">
+                <!-- {{indicator}} -->
                  <span v-if="indicator.author === 'okf'" title="Neues Thema" class="indicator-icon"><i class="icon-plus-circled" /></span>
                  <span v-if="indicator.badIndicator" title="Ungeeignet" class="indicator-icon"><i class="icon-cancel-circled" /></span>
                  <span v-if="indicator.keep" title="Übernommen" class="indicator-icon"><i class="icon-ok-circled" /></span>
