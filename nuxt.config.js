@@ -39,6 +39,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['babel-polyfill'],
     /*
     ** Run ESLint on save
     */
