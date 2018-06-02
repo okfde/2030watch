@@ -50,33 +50,33 @@
         ziel: [{
           title: 'Was ist das Ziel von 2030Watch?',
           id: 'ziel-2030Watch',
-          body: 'Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt. Um diese Vision zu verfolgen, will 2030Watch anhand von Indikatoren ein Bild zeichnen, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten, Handlungsfelder beleuchten und die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.'
+          body: '<p>Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt. Um diese Vision zu verfolgen, will 2030Watch anhand von Indikatoren ein Bild zeichnen, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten, Handlungsfelder beleuchten und die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.</p>'
         },
         {
           title: 'Wen wollen wir mit 2030Watch erreichen?',
           id: 'ziel-wen-erreichen',
-          body: 'Wir wollen mit 2030Watch mehrere Zielgruppen erreichen: primär zivilgesellschaftliche Organisationen wie Vereine und Bürgerinitiativen, die zu SDG Themen arbeiten und interessierte Bürgerinnen und Bürger. Darüber hinaus hoffen wir, auch Journalist*innen und Politiker*innen sowie Nichtregierungsorganisationen zu erreichen.'
+          body: '<p>Wir wollen mit 2030Watch mehrere Zielgruppen erreichen: primär zivilgesellschaftliche Organisationen wie Vereine und Bürgerinitiativen, die zu SDG Themen arbeiten und interessierte Bürgerinnen und Bürger. Darüber hinaus hoffen wir, auch Journalist*innen und Politiker*innen sowie Nichtregierungsorganisationen zu erreichen.</p>'
         },
         {
           title: 'Stellt 2030Watch die Umsetzung der 2030 Agenda in Deutschland objektiv dar?',
           id: 'ziel-2030Watch-objektiv',
-          body: 'Grundsätzlich verstehen wir 2030Watch als ein politisches Projekt, welches eine ambitionierte Umsetzung der Agenda 2030 fordert. Wir sammeln ergänzende Fortschritts Maßstäbe (Indikatoren), die von zivigesellschaftlichen Organisationen erarbeiten wurden und vergleichen diese mit dem Nachhaltigkeitsverständnis Deutschlands bei der offiziellen Berichterstattung. 2030Watch ist nicht gedacht für wissenschaftliche Analysen beispielsweise zu den Wechselwirkungen verschiedener Politikbereiche. Die Inhalte auf unserer Seite sind somit als Diskussionsbeitrag und als eine Positionierung gedacht.'
+          body: '<p>Grundsätzlich verstehen wir 2030Watch als ein politisches Projekt, welches eine ambitionierte Umsetzung der Agenda 2030 fordert. Wir sammeln ergänzende Fortschritts Maßstäbe (Indikatoren), die von zivigesellschaftlichen Organisationen erarbeiten wurden und vergleichen diese mit dem Nachhaltigkeitsverständnis Deutschlands bei der offiziellen Berichterstattung. 2030Watch ist nicht gedacht für wissenschaftliche Analysen beispielsweise zu den Wechselwirkungen verschiedener Politikbereiche. Die Inhalte auf unserer Seite sind somit als Diskussionsbeitrag und als eine Positionierung gedacht.</p>'
         },
         {
           title: 'Verfälscht 2030Watch damit eine objektive Berichterstattung?',
           id: 'ziel-objektive-berichterstattung',
-          body: 'Die 2030 Agenda stellt lediglich einen Rahmen für politische Entscheidungen der nächsten 15 Jahre dar. Viele Ziele und Unterziele der Agenda sind vage formuliert und enthalten noch sehr viel Interpretationsspielraum. Je nachdem wie ein Unterziel interpretiert wird, können unterschiedliche Indikatoren gewählt werden. Jede Auswahl von Indikatoren ist daher von Interessen und politischen Prioritäten geleitet. Das gilt für die Indikatorenauswahl der UN Statistikkommission genauso wie für die Indikatorenauswahl der Bundesregierung und von 2030Watch. Auch die Festlegung eines Zielwertes je Indikator ist oft eine politische Entscheidung, die nicht objektiv richtig oder objektiv falsch ist. Zum Beispiel gibt es viele mögliche Antworten auf die Frage, welche Arbeitslosenrate Deutschland bis 2030 anstreben soll. Ist eine Arbeitslosenrate von 8% sehr gut oder gut oder sehr schlecht?'
+          body: '<p>Die 2030 Agenda stellt lediglich einen Rahmen für politische Entscheidungen der nächsten 15 Jahre dar. Viele Ziele und Unterziele der Agenda sind vage formuliert und enthalten noch sehr viel Interpretationsspielraum. Je nachdem wie ein Unterziel interpretiert wird, können unterschiedliche Indikatoren gewählt werden. Jede Auswahl von Indikatoren ist daher von Interessen und politischen Prioritäten geleitet. Das gilt für die Indikatorenauswahl der UN Statistikkommission genauso wie für die Indikatorenauswahl der Bundesregierung und von 2030Watch. Auch die Festlegung eines Zielwertes je Indikator ist oft eine politische Entscheidung, die nicht objektiv richtig oder objektiv falsch ist. Zum Beispiel gibt es viele mögliche Antworten auf die Frage, welche Arbeitslosenrate Deutschland bis 2030 anstreben soll. Ist eine Arbeitslosenrate von 8% sehr gut oder gut oder sehr schlecht?</p>'
         },
         {
           title: 'Wie wird 2030Watch weiterentwickelt?',
           id: 'ziel-2030Watch-weiterentwicklung',
-          body: 'Bis Ende des Sommer 2018 werden Indikatoren-Inhalte für alle 17 SDGs hochgeladen. Außerdem überlegen wir uns auch wie wir andere Features wie z.B. ein Mapping schon verbindlicher Abkommen zu den verschiedenen SDGs, hinzufügen können. Im Sommer 2018 werden wir noch viele Anpassungen an unsere Webseite 2030Watch unternehmen und freuen uns über Eurer Feedback hierzu.'
+          body: '<p>Bis Ende des Sommer 2018 werden Indikatoren-Inhalte für alle 17 SDGs hochgeladen. Außerdem überlegen wir uns auch wie wir andere Features wie z.B. ein Mapping schon verbindlicher Abkommen zu den verschiedenen SDGs, hinzufügen können. Im Sommer 2018 werden wir noch viele Anpassungen an unsere Webseite 2030Watch unternehmen und freuen uns über Eurer Feedback hierzu.</p>'
         }
         ],
         methode: [{
           title: 'Welche Indikatoren werden dargestellt?',
           id: 'methode-indikatoren',
-          body: 'Die offiziellen Indikatoren wurden ausschließlich von der Deutschen Nachhaltigkeitsstrategie (DNS) übernommen. Die Deutsche Nachhaltigkeitsstrategie beurteilt die Indikatoren mit einem Wetterzeichen und zeigt so den Trend, ob sich der Indikator dem Zielwert nähert oder nicht. Wir von 2030Watch haben die Indikatoren in ein eigenes Bewertungssystem übersetzt, welches versucht, darzustellen, wie weit ein Indikator vom Ziel für 2030 entfernt ist. Auf der 2030Watch Seite werden hierzu weitere Indikatoren hinzugezogen, welche von der Zivilgesellschaft als Fortschrittsmaßstäbe von Nachhaltigkeit vorgeschlagen werden.'
+          body: '<p>Die offiziellen Indikatoren wurden ausschließlich von der Deutschen Nachhaltigkeitsstrategie (DNS) übernommen. Die Deutsche Nachhaltigkeitsstrategie beurteilt die Indikatoren mit einem Wetterzeichen und zeigt so den Trend, ob sich der Indikator dem Zielwert nähert oder nicht. Wir von 2030Watch haben die Indikatoren in ein eigenes Bewertungssystem übersetzt, welches versucht, darzustellen, wie weit ein Indikator vom Ziel für 2030 entfernt ist. Auf der 2030Watch Seite werden hierzu weitere Indikatoren hinzugezogen, welche von der Zivilgesellschaft als Fortschrittsmaßstäbe von Nachhaltigkeit vorgeschlagen werden.</p>'
         },
         {
           title: 'Wie hat 2030Watch Indikatoren ausgewählt?',
