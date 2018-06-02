@@ -11,12 +11,18 @@
       <section class="columns columns-gutter">
         <ul class="container" ref="slidesText" :style="{ 'height': slideHeight + 'px' }">
           <li :class="{ 'slide': true, 'active': slide === 1 }">
-            <p>Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">„Deutschen Nachhaltig&shy;keits&shy;strategie“ (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetz und weisst auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.</p>
+            <p>
+              Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">„Deutschen Nachhaltig&shy;keits&shy;strategie“ (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetzt und weist auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.
+            </p>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 2 }">
             <h5 class="caption">Ein Beispiel: SDG 5 – Geschlechtergerechtigkeit</h5>
             <p>
-              Die Bundes&shy;regierung hat sich unter Geschlechter&shy;gerechtigkekt zum Ziel gesetzt bis 2030, 30% Frauen&shy;anteil in den Aufsichts&shy;räten zu erreichen. Aus Sicht von 2030Watch ist das Ziel von 30% der Deutschen Nachhaltigkeits&shy;strategie (DNS) nicht ambitioniert genug. und fordert im Einklang mit SDG 5 einen Frauenanteil von 50% in Aufsichts&shy;räten und anderen Führungsebenen.
+              Die Bundes&shy;regierung hat sich unter Geschlechter&shy;gerechtigkeit
+              zum Ziel gesetzt, bis 2030 30% Frauen&shy;anteil in den Aufsichts&shy;räten zu erreichen.
+              Aus Sicht von 2030Watch ist das Ziel von 30% der Deutschen Nachhaltigkeits&shy;strategie
+              (DNS) nicht ambitioniert genug und fordert im Einklang mit SDG 5 einen Frauenanteil von
+              50% in Aufsichts&shy;räten und anderen Führungsebenen.
             </p>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 3 }">
@@ -26,8 +32,8 @@
           </li>
           <li :class="{ 'slide': true, 'active': slide === 4 }">
             <p>
-              Zudem weisst 2030Watch mit Indikatoren zur Ungleichen Verteilung
-              von Hausarbeit, Gewalt gegen Frauen und  dem Unterschied in Renten&shy;einkommen
+              Zudem weist 2030Watch mit Indikatoren zur ungleichen Verteilung
+              von Hausarbeit, Gewalt gegen Frauen und dem Unterschied in Renten&shy;einkommen
               auf wichtige Themen die in der DNS vernachlässigt werden.
               <p>
                 Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
@@ -54,7 +60,7 @@
             </div>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 2 }">
-            <h5 class="caption">Indikatoren: Offiziell vs 2030Watch</h5>
+            <h5 class="caption">Zwei Perspektiven: die Deutsche Nachhaltigkeitsstrategie (DNS) und 2030Watch</h5>
             <div class="sdg-comparison-wrapper">
               <span class="number-big dns" v-html="format(30)" />
               <span class="number-big arrow"><i class="icon-up-big" /></span>
@@ -92,7 +98,7 @@
             </ul>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 4 }">
-            <h5 class="caption">Zusätzliche 2030Watch Indikatoren – SDG 5</h5>
+            <h5 class="caption">Zusätzliche 2030Watch Indikatoren</h5>
             <ul class="indicator-list">
               <li v-for="indicator in indicators_okf_2 ">
                  <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
