@@ -1,5 +1,8 @@
 <template>
   <div class="page-container">
+    <div class="wrapper info-message">
+      <span class="info-message-bold">&#9432; Relaunch light:</span> Alle Inhalte gibt es bis 1. September
+    </div>
     <header class="inpage-header">
       <div class="wrapper">
         <div class="message">
@@ -65,6 +68,18 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~@/assets/style/variables";
+
+  .info-message {
+    color: $color-okf;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .info-message-bold {
+    font-weight: bold;
+  }
+
   .inpage-header {
     padding: 10vh 0 3vh 0;
   }
