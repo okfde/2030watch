@@ -1,13 +1,13 @@
 <template>
   <div class="intro box">
-    <a class="opener" v-on:click="seen = !seen">
+    <a class="opener" v-on:click="toggle">
       <header>
         <h2 class="carousel-header">
           Warum brauchen wir andere Indikatoren um Nachhaltigkeit zu messen?
         </h2>
       </header>
     </a>
-    <div v-if="!seen">
+    <div :style="{ 'display': display, 'visibility': visibility, 'height': initialHeight }">
       <section class="columns columns-gutter">
         <ul class="container" ref="slidesText" :style="{ 'height': slideHeight + 'px' }">
           <li :class="{ 'slide': true, 'active': slide === 1 }">
@@ -41,12 +41,6 @@
               </p>
             </p>
           </li>
-          <!-- <li :class="{ 'slide': true, 'active': slide === 5 }">
-            <p>
-              Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
-              <div class="carousel-prompt">Go Explore!</div>
-            </p>
-          </li> -->
         </ul>
         <ul class="indicators container" ref="slidesImages" :style="{ 'height': slideHeight + 'px' }">
           <li :class="{ 'slide': true, 'active': slide === 1 }">
@@ -66,23 +60,6 @@
               <span class="number-big arrow"><i class="icon-up-big" /></span>
               <span class="number-big okf" v-html="format(50)" />
             </div>
-            <!-- <ul class="indicator-list">
-              <li v-for="indicator in indicators_dns">
-                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
-              </li>
-            </ul> -->
-            <!-- <h5 class="caption">Offizieller Fortschritt – SDG 5</h5>
-            <div class="sdg-process-wrapper">
-              <VisProgress :sdg="officialSDG"
-                :vLegend="false"
-                :compact="false"
-                :invert="true" />
-            </div> -->
-            <!-- <ul class="indicator-list">
-              <li v-for="indicator in indicators_dns ">
-                <VisIndicator :i="indicator" :compact="true" :tiny="true" color="F8B300" />
-              </li>
-            </ul> -->
           </li>
           <li :class="{ 'slide': true, 'active': slide === 3 }">
             <h5 class="caption">Neuer Indikator 2030Watch: Frauen in Parlamenten</h5>
@@ -105,12 +82,9 @@
               </li>
             </ul>
           </li>
-          <!-- <li :class="{ 'slide': true, 'active': slide === 5 }">
-            <img style="width:55%; margin-left:3.5rem;" src="../assets/img/method_illustration.png" />
-          </li> -->
         </ul>
       </section>
-      <footer class="fixed-margin">
+      <footer>
         <span
           v-on:click="slide <= 1 ? slide = slide : slide -= 1"
           :class="{ 'btn': true, 'disabled': slide <= 1 }">Zurück</span>
@@ -138,7 +112,7 @@
     data: function () {
       return {
         slide: 1,
-        slideHeight: 50,
+        slideHeight: 0,
         introSDG: {
           values: {
             okf: 48,
@@ -151,11 +125,35 @@
             dns: 34
           }
         },
-        seen: true
+        visibility: 'hidden',
+        display: '',
+        present: false,
+        // use initialHeight to not have unwanted margin at pageload
+        initialHeight: '0px'
       }
     },
     methods: {
-      format: format
+      format: format,
+      toggle: function () {
+        if (!this.present) {
+          // set initialHeight undefined and use calculated slideHeight instead
+          this.initialHeight = undefined
+          // TODO check for a better solution
+          // I used this workaround (with both display and visibility) to get rid of flickering ...
+          // ... when the user closes the carousel
+          // ... that happens if the visibility property is used solely
+          // 'display:none' could not be used alone because we need to calculate the height
+          // ... that wouldn't be possible because these non-displayed elements don't have a
+          // ... height in the DOM and we start in a collapsed mode
+          this.visibility = 'visible'
+          this.display = 'block'
+          this.present = true
+        } else {
+          this.display = 'none'
+          this.visibility = 'hidden'
+          this.present = false
+        }
+      }
     },
     computed: {
       ...mapState([
@@ -189,10 +187,10 @@
       VisProgress
     },
     mounted () {
-      // const heights = [...this.$refs.slidesImages.getElementsByClassName('slide'), ...this.$refs.slidesText.getElementsByClassName('slide')].map(item => {
-      //   return item.clientHeight
-      // })
-      // this.slideHeight = Math.max(...heights)
+      const heights = [...this.$refs.slidesImages.getElementsByClassName('slide'), ...this.$refs.slidesText.getElementsByClassName('slide')].map(item => {
+        return item.clientHeight
+      })
+      this.slideHeight = Math.max(...heights)
     }
   }
 </script>
@@ -304,18 +302,14 @@
       }
     }
     .margin-legend {
-      margin: $spacing / 2 0;
+      margin: $spacing / 4 0;
       height: 60px;
     }
 
     .opener {
+      // to have a bigger clickable area
       display: inline-block;
       width: 100%;
-    }
-
-    // TODO calculate as before
-    .fixed-margin {
-      padding-top: 15rem;
     }
 
     .carousel-header {
