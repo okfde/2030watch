@@ -3,27 +3,33 @@
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
       <ul class="labels">
-        <li v-if="i.author === 'okf'" title="Neues Thema">
-          <i class="icon-plus-circled" />
-        </li>
-        <li v-if="i.badIndicator" title="Ungeeignet">
-          <i class="icon-cancel-circled" />
-        </li>
-        <li v-if="i.keep" title="Übernommen">
+
+        <li v-if="i.author === 'dns' && i.dnsIconUebernommen" title="Übernommen">
           <i class="icon-ok-circled" />
         </li>
-        <li v-if="i.badTarget">
-          <i title="Nicht bewertbarer Zielwert" class="icon-minus-circled" />
+        <li v-if="i.author === 'dns' && i.dnsIconUngeeignet" title="Ungeeignet">
+          <i class="icon-cancel-circled" />
         </li>
-        <li v-if="i.modTarget" title="Modifizierter Zielwert">
-          <i class="icon-cog-circled" />
+        <li v-if="i.author === 'dns' && i.dnsIconNichtBewertbar" title="Nicht bewertbarer Zielwert">
+          <i class="icon-minus-circled" />
         </li>
-        <li v-if="i.uncalculable" title="Nicht berechenbar">
+        <li v-if="i.author === 'dns' && i.dnsIconNichtBerechenbar" title="Nicht berechenbar">
           <i class="icon-help-circled" />
         </li>
-        <li v-if="i.spill" title="Internationale Auswirkungen">
+        <li v-if="i.author === 'dns' && i.dnsIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
           <i class="icon-star-circled" />
         </li>
+
+        <li v-if="i.author === 'okf' && i.okfIconNeuesThema" title="Neues Thema">
+          <i class="icon-plus-circled" />
+        </li>
+        <li v-if="i.author === 'okf' && i.okfIconModifiziert" title="Modifizierter Zielwert">
+          <i class="icon-cog-circled" />
+        </li>
+        <li v-if="i.author === 'okf' && i.okfIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
+          <i class="icon-star-circled" />
+        </li>
+
       </ul>
       <h5>{{ i.label }}</h5>
     </div>

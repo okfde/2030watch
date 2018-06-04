@@ -16,14 +16,33 @@
             <p>{{ indicator.txtintroduction }}</p>
             <p>{{ indicator.author === 'dns' ? 'DNS Indikator –' : '2030 Indikator –' }}
               <span v-if="category">
-                <!-- {{indicator}} -->
-                 <span v-if="indicator.author === 'okf'" title="Neues Thema" class="indicator-icon"><i class="icon-plus-circled" /></span>
-                 <span v-if="indicator.badIndicator" title="Ungeeignet" class="indicator-icon"><i class="icon-cancel-circled" /></span>
-                 <span v-if="indicator.keep" title="Übernommen" class="indicator-icon"><i class="icon-ok-circled" /></span>
-                 <span v-if="indicator.badTarget" title="Nicht bewertbarer Zielwert" class="indicator-icon"><i class="icon-minues-circled" /></span>
-                 <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon"><i class="icon-cog-circled" /></span>
-                 <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon"><i class="icon-help-circled" /></span>
-                 <span v-if="indicator.spill" title="Internationale Auswirkungen" class="indicator-icon"><i class="icon-star-circled" /></span>
+
+                 <span v-if="indicator.author === 'dns' && indicator.dnsIconUebernommen" title="Übernommen" class="indicator-icon">
+                   <i class="icon-ok-circled" />
+                 </span>
+                 <span v-if="indicator.author === 'dns' && indicator.dnsIconUngeeignet" title="Ungeeignet" class="indicator-icon">
+                   <i class="icon-cancel-circled" />
+                 </span>
+                 <span v-if="indicator.author === 'dns' && indicator.dnsIconNichtBewertbar" title="Nicht bewertbarer Zielwert" class="indicator-icon">
+                   <i class="icon-minus-circled" />
+                 </span>
+                 <span v-if="indicator.author === 'dns' && indicator.dnsIconNichtBerechenbar" title="Nicht berechenbar" class="indicator-icon">
+                   <i class="icon-help-circled" />
+                 </span>
+                 <span v-if="indicator.author === 'dns' && indicator.dnsIconInternationaleAuswirkungen" title="Internationale Auswirkungen" class="indicator-icon">
+                   <i class="icon-star-circled" />
+                 </span>
+
+                 <span v-if="indicator.author === 'okf' && indicator.okfIconNeuesThema" title="Neues Thema" class="indicator-icon">
+                   <i class="icon-plus-circled" />
+                 </span>
+                 <span v-if="indicator.author === 'okf' && indicator.okfIconModifiziert" title="Modifizierter Zielwert" class="indicator-icon">
+                   <i class="icon-cog-circled" />
+                 </span>
+                 <span v-if="indicator.author === 'okf' && indicator.okfIconInternationaleAuswirkungen" title="Internationale Auswirkungen" class="indicator-icon">
+                   <i class="icon-star-circled" />
+                 </span>
+
               </span>
             </p>
           </div>
