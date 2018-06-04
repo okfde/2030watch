@@ -36,7 +36,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "1_1",
@@ -60,6 +65,11 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "GSS",
           "data source": "Eurostat",
           "license": "unbekannt"
@@ -89,7 +99,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "1_2",
@@ -114,7 +128,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "1_3",
@@ -139,7 +157,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -172,7 +194,7 @@
     "summary2030": "2030Watch schlägt hingegen eine erweiterte Indikatorenliste mit einem höheren Zielwert für einen DNS Indikator vor sowie drei zusätzliche Indikatoren zu Pestizideinsatz, Antibiotikaeinsatz und Fleischkonsum, um auch den Einfluss der Landwirtschaftspolitik im Ausland zu berücksichtigen. Aus diesem ergänzenden Indikatorenset würde sich folgender Fortschritt bei SDG 2 berechnen:",
     "values": {
       "dns": 53.856162206078025,
-      "okf": 45.13901331522077
+      "okf": 45.139013315220765
     },
     "ind": {
       "dns": [
@@ -199,6 +221,11 @@
           "modTarget": true,
           "altIndicator": "2_1",
           "keep": false,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "Eurostat",
           "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm",
@@ -226,6 +253,11 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "",
           "data source": "Eurostat",
           "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm",
@@ -257,6 +289,10 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": true,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030W",
           "data source": "Eurostat",
           "license": "http//ec.europa.eu/geninfo/legal_notices_en.htm",
@@ -286,39 +322,14 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
           "indicator source": "2030W",
           "data source": "Bundesanstalt für Ernährung und Landwirtschaft",
           "license": "",
           "sourcelink": "https://www.ble.de/DE/Startseite/startseite_node.html"
-        },
-        {
-          "id": "2_2",
-          "author": "okf",
-          "label": "Antibiotikaeinsatz in der Landwirtschaft",
-          "unit": "mg/PCU",
-          "goal": "13,3",
-          "sdg": 2,
-          "progress": 78.23514278363778,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQz3XSa6wD73CDlTxaNHKB-2-mPyo0v-k3WLV-ITVvCW6ejAORzS0HBAas7zuZ4gf15nmNAh6Whw20x/pub?gid=0&single=true&output=csv",
-          "slug": "okf-antibiotika-landwirtschaft",
-          "target": 13.3,
-          "current": 97.9,
-          "start": 402,
-          "startYear": "2015",
-          "currentYear": "2015",
-          "reason": "SDSN Methode",
-          "newTopic": true,
-          "spill": false,
-          "pate": false,
-          "pateLogo": false,
-          "pateUrl": false,
-          "pateText": false,
-          "pateContact": false,
-          "pateMail": false,
-          "indicator source": "2030W",
-          "data source": "European Medicines Agency",
-          "license": "",
-          "sourcelink": "http://www.ema.europa.eu/docs/en_GB/document_library/Report/2017/10/WC500236750.pdf"
         },
         {
           "id": "2_3",
@@ -344,10 +355,47 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030W",
           "data source": "Eurostat",
           "license": "",
           "sourcelink": "http://ec.europa.eu/eurostat/en/web/products-datasets/-/AEI_FM_SALPEST09"
+        },
+        {
+          "id": "2_2",
+          "author": "okf",
+          "label": "Antibiotikaeinsatz in der Landwirtschaft",
+          "unit": "mg/PCU",
+          "goal": "13,3",
+          "sdg": 2,
+          "progress": 78.23514278363778,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQz3XSa6wD73CDlTxaNHKB-2-mPyo0v-k3WLV-ITVvCW6ejAORzS0HBAas7zuZ4gf15nmNAh6Whw20x/pub?gid=0&single=true&output=csv",
+          "slug": "okf-antibiotika-landwirtschaft",
+          "target": 13.3,
+          "current": 97.9,
+          "start": 402,
+          "startYear": "2015",
+          "currentYear": "2015",
+          "reason": "SDSN Methode",
+          "newTopic": true,
+          "spill": false,
+          "pate": false,
+          "pateLogo": false,
+          "pateUrl": false,
+          "pateText": false,
+          "pateContact": false,
+          "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
+          "indicator source": "2030W",
+          "data source": "European Medicines Agency",
+          "license": "",
+          "sourcelink": "http://www.ema.europa.eu/docs/en_GB/document_library/Report/2017/10/WC500236750.pdf"
         }
       ]
     },
@@ -405,7 +453,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_2",
@@ -428,7 +481,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_3",
@@ -451,7 +509,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_4",
@@ -474,7 +537,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_5",
@@ -498,7 +566,12 @@
           "uncalculable": true,
           "spill": false,
           "modTarget": false,
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_6",
@@ -521,7 +594,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_7",
@@ -544,7 +622,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_8",
@@ -567,7 +650,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -594,7 +682,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_2",
@@ -619,7 +711,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "3_3",
@@ -644,7 +740,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -702,7 +802,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "4_2",
@@ -725,7 +830,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "4_3",
@@ -748,7 +858,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "4_4",
@@ -771,7 +886,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -798,7 +918,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "4_2",
@@ -823,7 +947,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -861,33 +989,6 @@
     "ind": {
       "dns": [
         {
-          "id": "5_1",
-          "author": "dns",
-          "label": "Verdienstabstand zwischen Frauen und Männern",
-          "unit": "%",
-          "goal": "< 10% bis 2020, gleichbleibend bis 2030",
-          "sdg": 5,
-          "progress": 12,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vREflDsadei1MD6am33-4qp44OSLHMNPtOXn1Q03Y-AqMwDfis5eKxFjo6ZwmSlMADIhNMKQC_J03ZH/pub?gid=1093265483&single=true&output=csv",
-          "slug": "dns-verdienstabstand-zwischen-frauen-und-maennern",
-          "target": 10,
-          "current": 21,
-          "start": 22.5,
-          "startYear": "2015",
-          "currentYear": "2015",
-          "reason": "SDSN Methode",
-          "yearlyTarget": false,
-          "badTarget": false,
-          "badIndicator": false,
-          "spill": false,
-          "modTarget": false,
-          "keep": true,
-          "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
-          "data source": "DESTATIS",
-          "license": "",
-          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
-        },
-        {
           "id": "5_2",
           "author": "dns",
           "label": "Frauen in Führungspositionen in der Wirtschaft",
@@ -910,6 +1011,11 @@
           "modTarget": true,
           "altIndicator": "5_2",
           "keep": false,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "DESTATIS",
           "license": "",
@@ -937,6 +1043,43 @@
           "spill": false,
           "modTarget": false,
           "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": true,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": true,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
+        },
+        {
+          "id": "5_1",
+          "author": "dns",
+          "label": "Verdienstabstand zwischen Frauen und Männern",
+          "unit": "%",
+          "goal": "< 10% bis 2020, gleichbleibend bis 2030",
+          "sdg": 5,
+          "progress": 12,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vREflDsadei1MD6am33-4qp44OSLHMNPtOXn1Q03Y-AqMwDfis5eKxFjo6ZwmSlMADIhNMKQC_J03ZH/pub?gid=1093265483&single=true&output=csv",
+          "slug": "dns-verdienstabstand-zwischen-frauen-und-maennern",
+          "target": 10,
+          "current": 21,
+          "start": 22.5,
+          "startYear": "2015",
+          "currentYear": "2015",
+          "reason": "SDSN Methode",
+          "yearlyTarget": false,
+          "badTarget": false,
+          "badIndicator": false,
+          "spill": false,
+          "modTarget": false,
+          "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
           "data source": "DESTATIS",
           "license": "",
@@ -944,35 +1087,6 @@
         }
       ],
       "okf": [
-        {
-          "id": "5_3",
-          "author": "okf",
-          "label": "Ungleiche Verteilung der Hausarbeit",
-          "unit": "%",
-          "goal": "0",
-          "sdg": 5,
-          "progress": 52.83018867924528,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_prLjDQPR8k4FscOooVIquD0KrA1iEpwHaPQCO9UTtDKvwGRTghLkH09qKBjCac0sTT1SgmaLBJ40/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-verteilung-hausarbeit",
-          "target": 0,
-          "current": 2.5,
-          "start": 5.3,
-          "startYear": "2015",
-          "currentYear": "2015",
-          "reason": "SDSN",
-          "newTopic": true,
-          "spill": false,
-          "pate": false,
-          "pateLogo": false,
-          "pateUrl": false,
-          "pateText": "der Gleichstellung der Frau und die gleiche Teilhabe von Frauen und Männern in unserer",
-          "pateContact": "Berlin,",
-          "pateMail": false,
-          "indicator source": "2030Watch ",
-          "data source": "EIGE",
-          "license": "",
-          "sourcelink": "http://eige.europa.eu/gender-equality-index"
-        },
         {
           "id": "5_1",
           "author": "okf",
@@ -997,39 +1111,47 @@
           "pateText": "Der Deutsche Frauenring (DFR) vertritt die Interessen von Frauen in allen Bereichen des öffentlichen Lebens. Seit seiner Gründung 1949 setzt er sich für die Verwirklichung der Gleichstellung der Frau und die gleiche Teilhabe von Frauen und Männern in unserer Gesellschaft ein. Er ist unabhängig, überparteilich, überkonfessionell und als einer der größten Frauenverbände in Deutschland bundesweit aktiv.",
           "pateContact": "Marion Böker",
           "pateMail": "marion.boeker@d-fr.de",
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "Deutscher Frauenring e.v. ",
           "data source": "Welt Bank (Inter-Parliamentary Union) ",
           "license": "",
           "sourcelink": "http://databank.worldbank.org/data/reports.aspx?source=2&series=SG.GEN.PARL.ZS&country="
         },
         {
-          "id": "5_5",
+          "id": "5_3",
           "author": "okf",
-          "label": "Gewalt gegen Frauen",
-          "unit": "% der betroffenen Frauen",
+          "label": "Ungleiche Verteilung der Hausarbeit",
+          "unit": "%",
           "goal": "0",
           "sdg": 5,
-          "progress": 25.53191489361702,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzgtmS4VfJyHLVhnSU6-h-h4bHOby2TRU-kXIJDDjMrDTSOFAon-InKlGjzzJDnjjdxOMjkpWNpeWv/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-gewalt-gegen-frauen",
+          "progress": 52.83018867924528,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_prLjDQPR8k4FscOooVIquD0KrA1iEpwHaPQCO9UTtDKvwGRTghLkH09qKBjCac0sTT1SgmaLBJ40/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-verteilung-hausarbeit",
           "target": 0,
-          "current": 35,
-          "start": 47,
-          "startYear": "2012",
-          "currentYear": "2012",
+          "current": 2.5,
+          "start": 5.3,
+          "startYear": "2015",
+          "currentYear": "2015",
           "reason": "SDSN",
           "newTopic": true,
           "spill": false,
           "pate": false,
           "pateLogo": false,
           "pateUrl": false,
-          "pateText": "der größten Frauenverbände in Deutschland bundesweit aktiv.",
-          "pateContact": false,
+          "pateText": "der Gleichstellung der Frau und die gleiche Teilhabe von Frauen und Männern in unserer",
+          "pateContact": "Berlin,",
           "pateMail": false,
-          "indicator source": "2030Watch",
-          "data source": "EUFRA",
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
+          "indicator source": "2030Watch ",
+          "data source": "EIGE",
           "license": "",
-          "sourcelink": "http://fra.europa.eu/en/publications-and-resources/data-and-maps/survey-data-explorer-violence-against-women-survey"
+          "sourcelink": "http://eige.europa.eu/gender-equality-index"
         },
         {
           "id": "5_2",
@@ -1055,6 +1177,10 @@
           "pateText": "öffentlichen Lebens. Seit seiner Gründung 1949 setzt er sich für die Verwirklichung",
           "pateContact": "Deutscher Frauenring,",
           "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": true,
+          "okfIconModifiziert": true,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030Watch ",
           "data source": "FIDAR",
           "license": "",
@@ -1084,10 +1210,47 @@
           "pateText": "Gesellschaft ein. Er ist unabhängig, überparteilich, überkonfessionell und als einer",
           "pateContact": "Deutschland",
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030Watch",
           "data source": "Eurostat",
           "license": "",
           "sourcelink": "https://www.coe.int/en/web/genderequality/news/-/asset_publisher/97rn0OKB2ywb/content/2017-report-on-equality-between-women-and-men-in-the-eu?inheritRedirect=false"
+        },
+        {
+          "id": "5_5",
+          "author": "okf",
+          "label": "Gewalt gegen Frauen",
+          "unit": "% der betroffenen Frauen",
+          "goal": "0",
+          "sdg": 5,
+          "progress": 25.53191489361702,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzgtmS4VfJyHLVhnSU6-h-h4bHOby2TRU-kXIJDDjMrDTSOFAon-InKlGjzzJDnjjdxOMjkpWNpeWv/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-gewalt-gegen-frauen",
+          "target": 0,
+          "current": 35,
+          "start": 47,
+          "startYear": "2012",
+          "currentYear": "2012",
+          "reason": "SDSN",
+          "newTopic": true,
+          "spill": false,
+          "pate": false,
+          "pateLogo": false,
+          "pateUrl": false,
+          "pateText": "der größten Frauenverbände in Deutschland bundesweit aktiv.",
+          "pateContact": false,
+          "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
+          "indicator source": "2030Watch",
+          "data source": "EUFRA",
+          "license": "",
+          "sourcelink": "http://fra.europa.eu/en/publications-and-resources/data-and-maps/survey-data-explorer-violence-against-women-survey"
         }
       ]
     },
@@ -1145,7 +1308,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "6_2",
@@ -1168,7 +1336,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "6_3",
@@ -1191,7 +1364,12 @@
           "badIndicator": true,
           "spill": true,
           "modTarget": false,
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -1218,7 +1396,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "6_2",
@@ -1243,7 +1425,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -1301,7 +1487,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "7_2",
@@ -1324,7 +1515,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "7_3",
@@ -1347,7 +1543,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "7_4",
@@ -1370,7 +1571,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -1397,7 +1603,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "7_2",
@@ -1422,7 +1632,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "7_3",
@@ -1447,7 +1661,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -1505,7 +1723,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_2",
@@ -1528,7 +1751,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_3",
@@ -1551,7 +1779,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_4",
@@ -1574,7 +1807,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_5",
@@ -1598,7 +1836,12 @@
           "uncalculable": true,
           "spill": false,
           "modTarget": false,
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_6",
@@ -1621,7 +1864,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_7",
@@ -1644,7 +1892,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_8",
@@ -1667,7 +1920,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_9",
@@ -1691,7 +1949,12 @@
           "uncalculable": true,
           "spill": false,
           "modTarget": false,
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -1718,7 +1981,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_2",
@@ -1743,7 +2010,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_3",
@@ -1768,7 +2039,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_4",
@@ -1793,7 +2068,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "8_5",
@@ -1818,7 +2097,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -1877,6 +2160,11 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
           "data source": "OECD",
           "license": "",
@@ -1908,39 +2196,14 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030Watch",
           "data source": "OECD",
           "license": "",
           "sourcelink": "https://data.oecd.org/rd/researchers.htm"
-        },
-        {
-          "id": "9_3",
-          "author": "okf",
-          "label": "Open Data Index",
-          "unit": "% der Daten die in offenen Formaten vorliegen",
-          "goal": "73.2",
-          "sdg": 9,
-          "progress": 38.674033149171265,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7MetSwFISGGyzOplpd1ODklteRJMtZ2OPci-iBNHvTe0MyN77iv3dQVJ5Z-PBOqFUVXCyMFMt2Trr/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-open-data-index",
-          "target": 73.2,
-          "current": 51,
-          "start": 37,
-          "startYear": "2016",
-          "currentYear": "2016",
-          "reason": "SDSN",
-          "newTopic": true,
-          "spill": true,
-          "pate": false,
-          "pateLogo": false,
-          "pateUrl": false,
-          "pateText": false,
-          "pateContact": false,
-          "pateMail": false,
-          "indicator source": "2030Watch",
-          "data source": "Open Knowledge Network",
-          "license": "",
-          "sourcelink": "https://index.okfn.org/place/"
         },
         {
           "id": "9_4",
@@ -1966,6 +2229,10 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
           "indicator source": "2030Watch",
           "data source": "cgdev",
           "license": "",
@@ -1995,10 +2262,47 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030Watch",
           "data source": "Open Signal",
           "license": "",
           "sourcelink": "https://opensignal.com/reports/2016/11/state-of-lte"
+        },
+        {
+          "id": "9_3",
+          "author": "okf",
+          "label": "Open Data Index",
+          "unit": "% der Daten die in offenen Formaten vorliegen",
+          "goal": "73.2",
+          "sdg": 9,
+          "progress": 38.674033149171265,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7MetSwFISGGyzOplpd1ODklteRJMtZ2OPci-iBNHvTe0MyN77iv3dQVJ5Z-PBOqFUVXCyMFMt2Trr/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-open-data-index",
+          "target": 73.2,
+          "current": 51,
+          "start": 37,
+          "startYear": "2016",
+          "currentYear": "2016",
+          "reason": "SDSN",
+          "newTopic": true,
+          "spill": true,
+          "pate": false,
+          "pateLogo": false,
+          "pateUrl": false,
+          "pateText": false,
+          "pateContact": false,
+          "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
+          "indicator source": "2030Watch",
+          "data source": "Open Knowledge Network",
+          "license": "",
+          "sourcelink": "https://index.okfn.org/place/"
         }
       ]
     },
@@ -2056,7 +2360,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "10_2",
@@ -2080,7 +2389,12 @@
           "spill": false,
           "modTarget": true,
           "altIndicator": "10_2",
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -2107,7 +2421,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "10_2",
@@ -2132,7 +2450,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "10_3",
@@ -2157,7 +2479,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "10_4",
@@ -2182,7 +2508,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -2240,7 +2570,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_2",
@@ -2263,7 +2598,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_3",
@@ -2286,7 +2626,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_4",
@@ -2309,7 +2654,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_5",
@@ -2332,7 +2682,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_6",
@@ -2356,7 +2711,12 @@
           "uncalculable": true,
           "spill": false,
           "modTarget": false,
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_7",
@@ -2379,7 +2739,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -2406,7 +2771,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_2",
@@ -2431,7 +2800,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_3",
@@ -2456,7 +2829,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_4",
@@ -2481,7 +2858,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "11_5",
@@ -2506,7 +2887,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -2544,34 +2929,6 @@
     "ind": {
       "dns": [
         {
-          "id": "12_2",
-          "author": "dns",
-          "label": "CO2-Emmissionen des Konsums",
-          "unit": "2005 = 100",
-          "goal": "Verringerung",
-          "sdg": 12,
-          "progress": null,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGrI8nlgnq-PZVSyse56ub1ZLsPytZPm2Rn_-C5Mrpe0YcBGJcUr0k6Qm1G5XGl6oyoUDQDQu6JPnk/pub?gid=1093265483&single=true&output=csv",
-          "slug": "dns-emmissionen-konsum",
-          "target": null,
-          "current": 103.8,
-          "start": 100,
-          "startYear": "2005",
-          "currentYear": "2013",
-          "reason": "DNS Ausgangswert",
-          "yearlyTarget": false,
-          "badTarget": true,
-          "badIndicator": false,
-          "uncalculable": true,
-          "spill": true,
-          "modTarget": false,
-          "keep": false,
-          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
-          "data source": "DESTATIS",
-          "license": "",
-          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
-        },
-        {
           "id": "12_1",
           "author": "dns",
           "label": "Produkte mit Umweltzeichen",
@@ -2593,6 +2950,11 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie ",
           "data source": "DESTATIS",
           "license": "",
@@ -2621,6 +2983,44 @@
           "spill": true,
           "modTarget": false,
           "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": true,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": true,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "DESTATIS",
+          "license": "",
+          "sourcelink": "https://www.destatis.de/DE/Publikationen/Thematisch/UmweltoekonomischeGesamtrechnungen/Umweltindikatoren/IndikatorenPDF_5850013.pdf;jsessionid=AC2D4C6F55EFC987995F2145D3899591.InternetLive2?__blob=publicationFile"
+        },
+        {
+          "id": "12_2",
+          "author": "dns",
+          "label": "CO2-Emmissionen des Konsums",
+          "unit": "2005 = 100",
+          "goal": "Verringerung",
+          "sdg": 12,
+          "progress": null,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGrI8nlgnq-PZVSyse56ub1ZLsPytZPm2Rn_-C5Mrpe0YcBGJcUr0k6Qm1G5XGl6oyoUDQDQu6JPnk/pub?gid=1093265483&single=true&output=csv",
+          "slug": "dns-emmissionen-konsum",
+          "target": null,
+          "current": 103.8,
+          "start": 100,
+          "startYear": "2005",
+          "currentYear": "2013",
+          "reason": "DNS Ausgangswert",
+          "yearlyTarget": false,
+          "badTarget": true,
+          "badIndicator": false,
+          "uncalculable": true,
+          "spill": true,
+          "modTarget": false,
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": true,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": true,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "DESTATIS",
           "license": "",
@@ -2648,6 +3048,11 @@
           "spill": false,
           "modTarget": false,
           "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": true,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "DESTATIS",
           "license": "",
@@ -2656,20 +3061,20 @@
       ],
       "okf": [
         {
-          "id": "12_2",
+          "id": "12_3",
           "author": "okf",
-          "label": "Verbrauch von Wasser in Flaschen",
-          "unit": "litres per capita",
+          "label": "Ökologischer Fußabdruck",
+          "unit": "hectares",
           "goal": "",
           "sdg": 12,
-          "progress": 6.914893617021277,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TF1qIQbJus7XQ1MqxztG4AAIRNGe7nyKJ-p3639AQ-iFiPk3RQENELy5PlHuqNtznXJIiBX54vbM/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-wasserflaschen-konsum",
-          "target": 0,
-          "current": 175,
-          "start": 188,
-          "startYear": "2016",
-          "currentYear": "2016",
+          "progress": 28.30188679245283,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwmtZlVi-tvC9qJIsPeiE708rV7kOxTi6x-WuU7i8qp_24eF-jEuMwmNzX8X9bIhZyDm1SxMaiU7R8/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-ecological-footprint",
+          "target": 1.7,
+          "current": 5.5,
+          "start": 7,
+          "startYear": "2013",
+          "currentYear": "2013",
           "reason": "SDSN Methode",
           "newTopic": true,
           "spill": true,
@@ -2679,10 +3084,14 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
-          "indicator source": "2030Watch",
-          "data source": "European Federation of Bottled Waters",
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
+          "indicator source": "Global Footprint Network ",
+          "data source": "Global Footprint Network ",
           "license": "",
-          "sourcelink": "http://www.efbw.org/fileadmin/user_upload/images/Per_capita_consumption_2016_01.JPG"
+          "sourcelink": "http://data.footprintnetwork.org/#/"
         },
         {
           "id": "12_1",
@@ -2708,26 +3117,30 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
           "indicator source": "2030Watch",
           "data source": "EUROSTAT",
           "license": "",
           "sourcelink": "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=env_waspac&lang=en"
         },
         {
-          "id": "12_3",
+          "id": "12_2",
           "author": "okf",
-          "label": "Ökologischer Fußabdruck",
-          "unit": "hectares",
+          "label": "Verbrauch von Wasser in Flaschen",
+          "unit": "litres per capita",
           "goal": "",
           "sdg": 12,
-          "progress": 28.30188679245283,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwmtZlVi-tvC9qJIsPeiE708rV7kOxTi6x-WuU7i8qp_24eF-jEuMwmNzX8X9bIhZyDm1SxMaiU7R8/pub?gid=1093265483&single=true&output=csv",
-          "slug": "okf-ecological-footprint",
-          "target": 1.7,
-          "current": 5.5,
-          "start": 7,
-          "startYear": "2013",
-          "currentYear": "2013",
+          "progress": 6.914893617021277,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TF1qIQbJus7XQ1MqxztG4AAIRNGe7nyKJ-p3639AQ-iFiPk3RQENELy5PlHuqNtznXJIiBX54vbM/pub?gid=1093265483&single=true&output=csv",
+          "slug": "okf-wasserflaschen-konsum",
+          "target": 0,
+          "current": 175,
+          "start": 188,
+          "startYear": "2016",
+          "currentYear": "2016",
           "reason": "SDSN Methode",
           "newTopic": true,
           "spill": true,
@@ -2737,10 +3150,14 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
-          "indicator source": "Global Footprint Network ",
-          "data source": "Global Footprint Network ",
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
+          "indicator source": "2030Watch",
+          "data source": "European Federation of Bottled Waters",
           "license": "",
-          "sourcelink": "http://data.footprintnetwork.org/#/"
+          "sourcelink": "http://www.efbw.org/fileadmin/user_upload/images/Per_capita_consumption_2016_01.JPG"
         }
       ]
     },
@@ -2798,7 +3215,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "13_2",
@@ -2821,7 +3243,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -2848,7 +3275,11 @@
           "pateUrl": "https://germanwatch.org",
           "pateText": "Wir sehen hin, analysieren und mischen uns ein. Dabei konzentrieren wir uns auf die Politik und Wirtschaft des \"globalen Nordens\" mit ihren weltweiten Auswirkungen. Die Lage der besonders benachteiligten Menschen im \"globalen Süden\" bildet den Ausgangspunkt unserer Arbeit. Gemeinsam mit unseren Mitgliedern und Förderern und mit anderen Akteuren der Zivilgesellschaft bilden wir eine starke Lobby für eine nachhaltige Entwicklung.",
           "pateContact": "Jan Burck",
-          "pateMail": "burck@germanwatch.org"
+          "pateMail": "burck@germanwatch.org",
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "13_2",
@@ -2873,7 +3304,11 @@
           "pateUrl": "https://germanwatch.org",
           "pateText": "Wir sehen hin, analysieren und mischen uns ein. Dabei konzentrieren wir uns auf die Politik und Wirtschaft des \"globalen Nordens\" mit ihren weltweiten Auswirkungen. Die Lage der besonders benachteiligten Menschen im \"globalen Süden\" bildet den Ausgangspunkt unserer Arbeit. Gemeinsam mit unseren Mitgliedern und Förderern und mit anderen Akteuren der Zivilgesellschaft bilden wir eine starke Lobby für eine nachhaltige Entwicklung.",
           "pateContact": "Jan Burck",
-          "pateMail": "burck@germanwatch.org"
+          "pateMail": "burck@germanwatch.org",
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "13_3",
@@ -2898,7 +3333,11 @@
           "pateUrl": "https://germanwatch.org",
           "pateText": "Wir sehen hin, analysieren und mischen uns ein. Dabei konzentrieren wir uns auf die Politik und Wirtschaft des \"globalen Nordens\" mit ihren weltweiten Auswirkungen. Die Lage der besonders benachteiligten Menschen im \"globalen Süden\" bildet den Ausgangspunkt unserer Arbeit. Gemeinsam mit unseren Mitgliedern und Förderern und mit anderen Akteuren der Zivilgesellschaft bilden wir eine starke Lobby für eine nachhaltige Entwicklung.",
           "pateContact": "Jan Burck",
-          "pateMail": "burck@germanwatch.org"
+          "pateMail": "burck@germanwatch.org",
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "13_4",
@@ -2923,7 +3362,11 @@
           "pateUrl": "https://germanwatch.org",
           "pateText": "Wir sehen hin, analysieren und mischen uns ein. Dabei konzentrieren wir uns auf die Politik und Wirtschaft des \"globalen Nordens\" mit ihren weltweiten Auswirkungen. Die Lage der besonders benachteiligten Menschen im \"globalen Süden\" bildet den Ausgangspunkt unserer Arbeit. Gemeinsam mit unseren Mitgliedern und Förderern und mit anderen Akteuren der Zivilgesellschaft bilden wir eine starke Lobby für eine nachhaltige Entwicklung.",
           "pateContact": "Jan Burck",
-          "pateMail": "burck@germanwatch.org"
+          "pateMail": "burck@germanwatch.org",
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -2981,7 +3424,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "14_2",
@@ -3004,7 +3452,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "14_3",
@@ -3027,7 +3480,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -3054,7 +3512,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "14_2",
@@ -3079,7 +3541,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -3137,7 +3603,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "15_2",
@@ -3160,7 +3631,12 @@
           "badIndicator": false,
           "spill": false,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "15_3",
@@ -3183,7 +3659,12 @@
           "badIndicator": true,
           "spill": true,
           "modTarget": false,
-          "keep": false
+          "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -3210,7 +3691,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "15_2",
@@ -3235,7 +3720,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "15_3",
@@ -3260,7 +3749,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
@@ -3298,6 +3791,38 @@
     "ind": {
       "dns": [
         {
+          "id": "16_3",
+          "author": "dns",
+          "label": "Corruption Perception Index",
+          "unit": "Punkte",
+          "goal": "Verbesserung gegenüber 2012",
+          "sdg": 16,
+          "progress": 100,
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCvNDaPSLLt9Ji9ao7SFCWCWR52es-OT93tKS64qYIR86kkJkNJ6gzPsiccUHxlfSbkuZjwNkQ3Lg1/pub?gid=0&single=true&output=csv",
+          "slug": "dns-corruption-perception-index",
+          "target": 81,
+          "current": 81,
+          "start": 40,
+          "startYear": "2017",
+          "currentYear": "2017",
+          "reason": "SDSN",
+          "yearlyTarget": false,
+          "badTarget": true,
+          "badIndicator": false,
+          "spill": false,
+          "modTarget": false,
+          "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
+          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
+          "data source": "Transparency International",
+          "license": "",
+          "sourcelink": "https://www.transparency.de/korruptionsindizes/cpi-2017/cpi-ranking-2017/?L=0"
+        },
+        {
           "id": "16_2",
           "author": "dns",
           "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen",
@@ -3319,6 +3844,11 @@
           "spill": true,
           "modTarget": false,
           "keep": false,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": true,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": true,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "Destatis",
           "license": "",
@@ -3346,37 +3876,15 @@
           "spill": false,
           "modTarget": false,
           "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "Bundeskriminalamt",
           "license": "",
           "sourcelink": "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2017/Standardtabellen/standardtabellenFaelle.html?nn=96600"
-        },
-        {
-          "id": "16_3",
-          "author": "dns",
-          "label": "Corruption Perception Index",
-          "unit": "Punkte",
-          "goal": "Verbesserung gegenüber 2012",
-          "sdg": 16,
-          "progress": 100,
-          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCvNDaPSLLt9Ji9ao7SFCWCWR52es-OT93tKS64qYIR86kkJkNJ6gzPsiccUHxlfSbkuZjwNkQ3Lg1/pub?gid=0&single=true&output=csv",
-          "slug": "dns-corruption-perception-index",
-          "target": 81,
-          "current": 81,
-          "start": 40,
-          "startYear": "2017",
-          "currentYear": "2017",
-          "reason": "SDSN",
-          "yearlyTarget": false,
-          "badTarget": true,
-          "badIndicator": false,
-          "spill": false,
-          "modTarget": false,
-          "keep": true,
-          "indicator source": "Deutsche Nachhaltigkeitsstrategie",
-          "data source": "Transparency International",
-          "license": "",
-          "sourcelink": "https://www.transparency.de/korruptionsindizes/cpi-2017/cpi-ranking-2017/?L=0"
         },
         {
           "id": "16_4",
@@ -3400,6 +3908,11 @@
           "spill": true,
           "modTarget": false,
           "keep": true,
+          "dnsIconUebernommen": true,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": true,
           "indicator source": "Deutsche Nachhaltigkeitsstrategie",
           "data source": "Destatis",
           "license": "",
@@ -3431,6 +3944,10 @@
           "pateText": "Das Netzwerk Steuergerechtigkeit ist ein unabhängiges internationales Netzwerk, das 2003 gegründet wurde. Ziel des Netzwerkes ist Forschung, Analyse und Lobbyarbeit zur Frage internationaler Besteuerung und Regulierung des Finanzmarkets. Wir erfassen, analysieren und erklären die Rolle von Steuern und die schädlichen Folgen von Steuervermeidung, Steuerflucht, Steuerwettbewerb und Steueroasen. Unser besondere Fokus sind die internationale Steueroasen.",
           "pateContact": "Markus Meinzer",
           "pateMail": "markus@taxjustice.net",
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
           "indicator source": "2030Watch",
           "data source": "Tax Justice Network",
           "license": "",
@@ -3460,6 +3977,10 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": true,
           "indicator source": "2030Watch",
           "data source": "SIPRI",
           "license": "",
@@ -3489,6 +4010,10 @@
           "pateText": false,
           "pateContact": false,
           "pateMail": false,
+          "okfIconNeuesThema": true,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false,
           "indicator source": "2030Watch",
           "data source": "AccessInfo",
           "license": "",
@@ -3550,7 +4075,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "17_2",
@@ -3573,7 +4103,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         },
         {
           "id": "17_3",
@@ -3596,7 +4131,12 @@
           "badIndicator": false,
           "spill": true,
           "modTarget": false,
-          "keep": true
+          "keep": true,
+          "dnsIconUebernommen": false,
+          "dnsIconUngeeignet": false,
+          "dnsIconNichtBewertbar": false,
+          "dnsIconNichtBerechenbar": false,
+          "dnsIconInternationaleAuswirkungen": false
         }
       ],
       "okf": [
@@ -3623,7 +4163,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "17_2",
@@ -3648,7 +4192,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         },
         {
           "id": "17_3",
@@ -3673,7 +4221,11 @@
           "pateUrl": false,
           "pateText": false,
           "pateContact": false,
-          "pateMail": false
+          "pateMail": false,
+          "okfIconNeuesThema": false,
+          "okfIconUebernommen": false,
+          "okfIconModifiziert": false,
+          "okfIconInternationaleAuswirkungen": false
         }
       ]
     },
