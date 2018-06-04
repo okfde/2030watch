@@ -116,8 +116,14 @@ function processSDGs(sdgs, allIndicators) {
 }
 
 const url_indicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3jgbFv0NlOhd5JuzoMFvelmcTELqc85VpIWn-R7h2TkyVyVYLyOAdpTAdtDmxYFs6bZZCiQkBmWy-/pub?output=csv'
-const indi_headers_dns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit', 'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'nicht2030WKatalog', 'landerVergleich', 'zeitreihe', 'url']
-const indi_headers_okf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'zeitreihe', 'laendervergleich', 'spillover', 'neuesThema', 'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText', 'datenpateContact', 'datenpateMail', 'url', '2030WDatensatz', 'potenziellerDatenpate']
+const indi_headers_dns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit',
+	'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung',
+	'nicht2030WKatalog', 'landerVergleich', 'zeitreihe', 'url', 'dnsIconUebernommen', 'dnsIconUngeeignet', 'dnsIconNichtBewertbar', 'dnsIconNichtBerechenbar', 'dnsIconInternationaleAuswirkungen']
+const indi_headers_okf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert',
+	'ausgangswertJahr', 'begrundung', 'zeitreihe', 'laendervergleich', 'spillover', 'neuesThema',
+	'okfIconNeuesThema', 'okfIconUebernommen', 'okfIconModifiziert', 'okfIconInternationaleAuswirkungen',
+	'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText',
+	'datenpateContact', 'datenpateMail', 'url', '2030WDatensatz', 'potenziellerDatenpate']
 const indi_sdgID = 'sdgId'
 const indi_numbers = ['zielwertJahr2030', 'aktuellerWert', 'ausgangswert']
 const indi_numbers_keys = ['target', 'current', 'start']
@@ -249,6 +255,14 @@ function processIndicatorMeta(indicator) {
 		}
 
 		i['keep'] = indicator['nicht2030WKatalog'] !== 'x' && !i['modTarget']
+
+		// TODO
+		// quick fix to show correct icons
+		i['dnsIconUebernommen'] = indicator['dnsIconUebernommen'] === 'x'
+		i['dnsIconUngeeignet'] = indicator['dnsIconUngeeignet'] === 'x'
+		i['dnsIconNichtBewertbar'] = indicator['dnsIconNichtBewertbar'] === 'x'
+		i['dnsIconNichtBerechenbar'] = indicator['dnsIconNichtBerechenbar'] === 'x'
+		i['dnsIconInternationaleAuswirkungen'] = indicator['dnsIconInternationaleAuswirkungen'] === 'x'
 	}
 
 	if (author === 'okf') {
@@ -260,6 +274,13 @@ function processIndicatorMeta(indicator) {
 		i['pateText'] = indicator['datenpateText'] !== '' ? indicator['datenpateText'] : false
 		i['pateContact'] = indicator['datenpateContact'] !== '' ? indicator['datenpateContact'] : false
 		i['pateMail'] = indicator['datenpateMail'] !== '' ? indicator['datenpateMail'] : false
+
+		// TODO
+		// quick fix to show correct icons
+		i['okfIconNeuesThema'] = indicator['okfIconNeuesThema'] === 'x'
+		i['okfIconUebernommen'] = indicator['okfIconUebernommen'] === 'x' // not used
+		i['okfIconModifiziert'] = indicator['okfIconModifiziert'] === 'x'
+		i['okfIconInternationaleAuswirkungen'] = indicator['okfIconInternationaleAuswirkungen'] === 'x'
 	}
 	return i
 }
