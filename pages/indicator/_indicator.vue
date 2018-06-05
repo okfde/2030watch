@@ -2,7 +2,7 @@
   <div class="page-container">
     <nav class="inpage-nav">
       <div class="wrapper">
-        <a href="/#keyfindings">Übersicht </a>
+        <nuxt-link to="/#keyfindings">Übersicht</nuxt-link>
         <span class="bread-spacer">/</span>
         <nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
       </div>
