@@ -199,6 +199,8 @@
       }
     },
     mounted: function () {
+      console.log(this.$router.options.base)
+      console.log(this.$route)
       this.link = window.location.origin + this.$route.fullPath
     },
     computed: {
