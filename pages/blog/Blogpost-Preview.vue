@@ -2,7 +2,7 @@
   <div class="blog-post">
     <div class="post-img">
       <nuxt-link to="/">
-        <img src="~/assets/img/method_illustration.png" style="max-width:300px" alt="Blogpost Vorschaubild">
+        <img class="preview-image" src="~/assets/img/method_illustration.png" alt="Blogpost Vorschaubild">
       </nuxt-link>
     </div>
     <div class="post-teaser">
@@ -44,6 +44,17 @@ export default {
 
     .post-teaser {
       flex: 1;
+    }
+  }
+
+  .preview-image {
+    max-width: 300px;
+    // TODO
+    @media (max-width: 900px) {
+      max-width: 200px;
+    }
+    @media (max-width: 600px) {
+      display: none
     }
   }
 </style>

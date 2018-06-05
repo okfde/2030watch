@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="blog-image">
-          <img src="~/assets/img/method_illustration.png" style="padding-left:3rem; padding-top:2rem; max-width: 380px;" alt="Blogpost Vorschaubild">
+          <img class="blogpost-image" src="~/assets/img/method_illustration.png" alt="Blogpost Bild">
         </div>
       </header>
       <section class="blog-body wrapper">
@@ -212,6 +212,19 @@
       a {
         padding: 0 10px;
       }
+    }
+  }
+
+  .blogpost-image {
+    padding-left: 3rem;
+    padding-top: 2rem;
+    max-width: 380px;
+    // TODO
+    @media (max-width: 900px) {
+      max-width: 300px;
+    }
+    @media (max-width: 700px) {
+      display: none
     }
   }
 </style>
