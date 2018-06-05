@@ -13,7 +13,7 @@
       <section>
         <small class="caption">Warum?</small>
         <p>
-          Die Nachhaltigkeitsdebatte in Deutschland muss ambitionierter werden.
+          Die Nachhaltigkeitsdebatte in Deutschland muss kritischer werden.
         </p>
       </section>
       <section>

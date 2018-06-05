@@ -6,7 +6,8 @@
       </div>
       <div class="sdg-header sdg-header-vis columns">
         <section class="sdg-legend">
-          <span class="dns">DNS</span>
+          <span class="dns-lang">Deutsche Nachhaltigkeitsstrategie</span>
+          <span class="dns-kurz">DNS</span>
           <span class="okf">2030Watch</span>
         </section>
       </div>
@@ -123,9 +124,26 @@
           margin-left: 10px;
         }
 
-        .dns {
-          color: $color-dns;
+        @media (max-width: 1000px) {
+          .dns-lang {
+            display:none;
+          }
+          .dns-kurz {
+            color: $color-dns;
+          }
         }
+        @media (min-width: 1000px) {
+          .dns-lang {
+            color: $color-dns;
+          }
+          .dns-kurz {
+            display: none;
+          }
+        }
+        // TODO
+        // .dns {
+        //   color: $color-dns;
+        // }
 
         .okf {
           color: $color-okf;
