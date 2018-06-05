@@ -105,7 +105,8 @@
     }
 
     .sdg-header-label {
-      margin-left: calc(1rem + 16px);
+      // margin-left: calc(1rem + 16px);
+      font-weight: bold;
     }
 
     .sdg-header-label, .sdg-header-vis {
@@ -124,7 +125,7 @@
           margin-left: 10px;
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 960px) {
           .dns-lang {
             display:none;
           }
@@ -132,7 +133,7 @@
             color: $color-dns;
           }
         }
-        @media (min-width: 1000px) {
+        @media (min-width: 961px) {
           .dns-lang {
             color: $color-dns;
           }
