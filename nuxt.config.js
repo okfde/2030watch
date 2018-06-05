@@ -1,4 +1,11 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/2030watch/'
+  }
+} : {}
+
 module.exports = {
+  ...routerBase,
   /*
   ** Headers of the page
   */
@@ -10,7 +17,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: '2030Watch diskutiert wie ambitioniert Deutschland die Nachhaltigkeitsziele der Agenda 2030 umsetzt.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Chivo:400,700|Roboto+Mono:400,700', defer: true }
     ]
   },
@@ -29,7 +36,8 @@ module.exports = {
         return '/sdg/' + data
       })
       return [...indicators, ...sdgs]
-    }
+    },
+    fallback: "404.html"
   },
   /*
   ** Customize the progress bar color

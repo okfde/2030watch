@@ -2,7 +2,7 @@
   <div class="page-container">
     <nav class="inpage-nav">
       <div class="wrapper">
-        <a href="/#keyfindings">Übersicht </a>
+        <nuxt-link to="/#keyfindings">Übersicht</nuxt-link>
         <span class="bread-spacer">/</span>
         <nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
       </div>
@@ -130,9 +130,13 @@
         </div>
 
         <div v-if="!indicator['pate']" class="description">
-          <h4>Datenpate</h4>
+          <h4>Werde Datenpate für diesen Indikator</h4>
           <div>
-            Bei Interesse, Datenpate zu werden, wende dich bitte an
+            Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
+            Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für
+            ein Unterziel für sinnvoll halten. Sie legen den Zielwert fest, der bis 2030
+            erreicht werden sollte. Darüber hinaus unterstützen sie das Projekt in der
+            Datenbereitstellung. Bei Interesse, Datenpate zu werden, wende dich bitte an
             <a href="mailto:2030-watch@okfn.de">2030-watch@okfn.de</a>.
           </div>
         </div>
@@ -195,6 +199,8 @@
       }
     },
     mounted: function () {
+      console.log(this.$router.options.base)
+      console.log(this.$route)
       this.link = window.location.origin + this.$route.fullPath
     },
     computed: {
