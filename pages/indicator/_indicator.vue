@@ -4,7 +4,7 @@
       <div class="wrapper">
         <nuxt-link to="/#keyfindings">Übersicht</nuxt-link>
         <span class="bread-spacer">/</span>
-        <nuxt-link :to="'../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
+        <nuxt-link :to="'../../sdg/' + indicator.sdg.slug"> SDG {{ indicator.sdg.sdg}} – {{ indicator.sdg.label }} </nuxt-link><span class="bread-spacer">/</span><span class="bread-current"> {{ indicator.label }}</span>
       </div>
     </nav>
     <header class="inpage-header">
