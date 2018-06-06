@@ -122,8 +122,8 @@
       <section class="blog-footer wrapper">
         <span class="caption">Post teilen</span>
          <span class="social-icons">
-          <a :href="'mailto:?subject=' + encodeURIComponent('Tag der offenen Tür - Die OKF beim BMZ') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
-          <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('Tag der offenen Tür - Die OKF beim BMZ')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
+          <a :href="'mailto:?subject=' + encodeURIComponent('Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
+          <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
           <a :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)" target="_blank" title="Blogpost auf Facebook teilen"><i class="icon-facebook-squared" /></a>
         </span>
       </section>
@@ -140,7 +140,7 @@
     },
     head () {
       return {
-        title: 'Tag der offenen Tür - Die OKF beim BMZ | Blogpost | 2030Watch'
+        title: 'Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch? | Blogpost | 2030Watch'
       }
     },
     data: function () {
