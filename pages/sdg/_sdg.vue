@@ -319,7 +319,7 @@
 
       svg {
         width: 100%;
-        heright: 100%;
+        height: 100%;
       }
     }
   }

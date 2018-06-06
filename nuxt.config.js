@@ -41,7 +41,7 @@ module.exports = {
       })
       return [...indicators, ...sdgs]
     },
-    fallback: "404.html"
+    fallback: '404.html'
   },
   /*
   ** Customize the progress bar color
