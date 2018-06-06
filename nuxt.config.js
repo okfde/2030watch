@@ -1,15 +1,15 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    // base: '/2030watch'
-    base: ''
-  }
-} : {}
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     // base: '/2030watch'
+//     base: ''
+//   }
+// } : {}
 
 module.exports = {
   modules: [
     ['nuxt-matomo', { matomoUrl: '//traffic.okfn.de/', siteId: 14 }]
   ],
-  ...routerBase,
+  // ...routerBase,
   /*
   ** Headers of the page
   */
