@@ -23,7 +23,7 @@
       </ul>
       <ul>
         <li class="btn btn-default btn-newsletter">
-          <a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d">
+          <a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d" target="_blank">
           Newsletter abonnieren</a>
         </li>
         <div class="tracking-info">
