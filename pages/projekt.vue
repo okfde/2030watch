@@ -106,7 +106,7 @@
         {
           title: 'Wie werden Zielwerte berechnet?',
           id: 'methode-zielwerte',
-          body: '<p>Bei der Verwendung der Deutschen Nachhaltigkeitsstrategie (DNS) Indikatoren übernehmen wir die offiziellen Zielwerte.</p><p>Für die ergänzenden Indikatoren wird der Zielwert von uns ausgewählt - beruhend auf internationalen Abkommen, Fachliteratur oder Expertengesprächen.</p><p>In den Fällen, in denen wir keinen Zielwert haben, nehmen wir den Durchschnitt der "5 Top Performer", sprich die fünf besten Werte.</p>'
+          body: '<p>Bei der Verwendung der Deutschen Nachhaltigkeitsstrategie (DNS) Indikatoren übernehmen wir die offiziellen Zielwerte.</p><p>Für die ergänzenden Indikatoren wird der Zielwert von uns ausgewählt – beruhend auf internationalen Abkommen, Fachliteratur oder Expertengesprächen.</p><p>In den Fällen, in denen wir keinen Zielwert haben, nehmen wir den Durchschnitt der "5 Top Performer", sprich die fünf besten Werte.</p>'
         },
         {
           title: 'Woher kommen die aktuellen Werte?',
