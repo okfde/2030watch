@@ -7,7 +7,7 @@
       <section>
         <small class="caption">Was?</small>
         <p>
-          Wir diskutieren anhand von Indikatoren, wie ambitioniert Deutschland die Agenda 2030 umsetzt
+          Wir diskutieren anhand von Indikatoren, wie ambitioniert Deutschland die Agenda 2030 umsetzt.
         </p>
       </section>
       <section>
