@@ -11,19 +11,19 @@
         <li>
           Wir freuen uns über <a title="Sende uns per E-Mail dein Feedback" class="footer-link" href="&#0109;&#097;&#0105;&#0108;&#0116;&#0111;&#058;&#050;&#048;&#051;&#048;&#045;&#0119;&#097;&#0116;&#099;&#0104;&#064;&#0111;&#0107;&#0102;&#0110;&#046;&#0100;&#0101;">Feedback</a>
         </li>
-        <li><a href="https://okfn.de/spenden/">Mit einer Spende unterstützen</a></li>
+        <li><a href="https://okfn.de/spenden/" target="_blank">Mit einer Spende unterstützen</a></li>
         <li>
           <ul class="social-icons">
             <li><a href="mailto:2030-watch@okfn.de"><i class="icon-mail" /></a></li>
-            <li><a href="https://twitter.com/2030watchde"><i class="icon-twitter" /></a></li>
-            <li><a href="https://www.facebook.com/2030-Watch-108979439509739/"><i class="icon-facebook-squared" /></a></li>
-            <li><a href="https://github.com/okfde/2030watch"><i class="icon-github-circled" /></a></li>
+            <li><a href="https://twitter.com/2030watchde" target="_blank"><i class="icon-twitter" /></a></li>
+            <li><a href="https://www.facebook.com/2030-Watch-108979439509739/" target="_blank"><i class="icon-facebook-squared" /></a></li>
+            <li><a href="https://github.com/okfde/2030watch" target="_blank"><i class="icon-github-circled" /></a></li>
           </ul>
         </li>
       </ul>
       <ul>
         <li class="btn btn-default btn-newsletter">
-          <a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d">
+          <a href="http://okfn.us5.list-manage1.com/subscribe?u=929f1e07936386d34833e20d1&id=46ec58c60d" target="_blank">
           Newsletter abonnieren</a>
         </li>
         <div class="tracking-info">

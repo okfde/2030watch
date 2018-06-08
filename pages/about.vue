@@ -81,7 +81,7 @@
                 sowie private Spender.
               </p>
               <p>
-                Mehr Infos hier: <a href="https://okfn.de">okfn.de</a>
+                Mehr Infos hier: <a href="https://okfn.de" target="_blank">okfn.de</a>
               </p>
             </div>
             <div class="section-img">
