@@ -50,7 +50,7 @@
         ziel: [{
           title: 'Was ist das Ziel von 2030Watch?',
           id: 'ziel-2030Watch',
-          body: '<p>Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt.</p><p>Um diese Vision zu verfolgen, will 2030Watch anhand von Indikatoren ein Bild zeichnen, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir</p><p>– eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten,</p><p>– Handlungsfelder beleuchten,</p><p>– die Forderung "Leave no one behind" (Lass niemanden zurück) der Agenda 2030 erfüllen</p><p>– die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.</p>'
+          body: '<p>Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt.</p><p>Um diese Vision zu verfolgen, will 2030Watch anhand von Indikatoren ein Bild zeichnen, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir</p><p>– eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten,</p><p>– Handlungsfelder beleuchten,</p><p>– die Forderung "Leave no one behind" (Lass niemanden zurück) der Agenda 2030 erfüllen und</p><p>– die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.</p>'
         },
         {
           title: 'Wen wollen wir mit 2030Watch erreichen?',
