@@ -19,13 +19,14 @@
         <rect
           v-for="(bar, n) in bars"
           v-if="bar.height >= 0"
-          :title="bar.label + ': ' + bar.value"
           :class="bar.klass"
           :x="bar.x + 'px'"
           :width="bar.width + 'px'"
           :y="bar.y + 'px'"
           :height="bar.height + 'px'"
-          />
+        >
+          <title>{{ bar.label + ': ' + bar.value }}</title>
+        </rect>
         <line
           :x1="labelX + 'px'"
           x2="100%"
@@ -34,9 +35,8 @@
           class="base" />
         <text
           v-for="(bar, n) in bars"
-          alignment-baseline="middle"
           :x="bar.labelX + 'px'"
-          :transform="'rotate(60,' + bar.labelX + ',' + bar.labelY + ')'"
+          :transform="'rotate(90,' + bar.labelX + ',' + bar.labelY + ')'"
           :y="bar.labelY"
           v-html="bar.label"
           />

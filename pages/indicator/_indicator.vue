@@ -215,11 +215,13 @@
       },
       countries () {
         const keys = Object.keys(this.indicator.countries)
-        const values = keys.slice(0, 20).map(key => {
+        const values = keys.slice(0, keys.length - 1).map(key => {
           return [key, this.indicator.countries[key]]
         })
         return values.filter(value => {
-          return value[1] !== null
+          // TODO: offer negative y-axis
+          // right now negative values are cut off
+          return value[1] !== null && value[1] >= 0
         })
       },
       timeline () {

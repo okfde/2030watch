@@ -27,7 +27,9 @@
           :width="dot.width + 'px'"
           :cy="dot.y + 'px'"
           :height="dot.height + 'px'"
-          />
+        >
+          <title>{{ dot.label + ': ' + dot.value }}</title>
+        </circle>
         <line
           :x1="labelX + 'px'"
           x2="100%"
@@ -36,9 +38,8 @@
           class="base" />
         <text
           v-for="(dot, n) in dots"
-          alignment-baseline="middle"
           :x="dot.x + 'px'"
-          :transform="'rotate(60,' + dot.labelX + ',' + dot.labelY + ')'"
+          :transform="'rotate(90,' + dot.labelX + ',' + dot.labelY + ')'"
           :y="dot.labelY"
           v-html="dot.label"
           />
