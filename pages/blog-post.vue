@@ -92,7 +92,7 @@
         </ul>
 
         <div>
-          Außerdem kannst Du bei uns die Daten zu den Indikatoren sowie bald auch die dazugehörigen Grafiken herunterladen und teilen.
+          Außerdem kannst du bei uns die Daten zu den Indikatoren sowie bald auch die dazugehörigen Grafiken herunterladen und teilen.
         </div>
 
         <br />
