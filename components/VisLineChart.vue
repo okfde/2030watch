@@ -38,9 +38,8 @@
           class="base" />
         <text
           v-for="(dot, n) in dots"
-          alignment-baseline="middle"
           :x="dot.x + 'px'"
-          :transform="'rotate(60,' + dot.labelX + ',' + dot.labelY + ')'"
+          :transform="'rotate(90,' + dot.labelX + ',' + dot.labelY + ')'"
           :y="dot.labelY"
           v-html="dot.label"
           />
