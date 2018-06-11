@@ -3,7 +3,7 @@
     <a class="opener" v-on:click="toggle">
       <header>
         <h2 class="carousel-header">
-          Warum brauchen wir andere Indikatoren um Nachhaltigkeit zu messen?
+          Warum brauchen wir andere Indikatoren, um Nachhaltigkeit zu messen?
         </h2>
       </header>
     </a>
@@ -46,7 +46,7 @@
           <li :class="{ 'slide': true, 'active': slide === 1 }">
             <div class="sdg-process-wrapper">
               <p>
-                 Wie weit sind wir vom Ziel entfernt eine nachhaltige Transformation bis 2030 zu erreichen?
+                 Wie weit sind wir vom Ziel entfernt, eine nachhaltige Transformation bis 2030 zu erreichen?
               </p>
               <div class="margin-legend">
                 <VisProgress :vTickLabels="true" :sdg="introSDG" :vLegend="true" :compact="true" />
