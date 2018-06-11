@@ -14,22 +14,10 @@
           <div class="section-wrapper">
             <div class="section-text">
               <p>
-                2030Watch zeigt eine alternative Sichtweise wie gut Deutschland
-                die globalen Nachhaltigkeitsziele umsetzt. Ist Deutschland auf
-                dem Weg einer Transformation wie in der Agenda 2030 vorgesehen?
-                2030Watch untersucht diese Fragen anhand von Indikatoren: Wie
-                wird Nachhaltigkeit gemessen und wie könnte oder sollte man
-                Nachhaltigkeit messen? 2030Watch vergleicht die offiziellen
-                Indikatoren der deutschen Nachhaltigkeitsstrategien mit
-                alternativen Indikatoren.
+                2030Watch zeigt eine ergänzende Sichtweise, wie gut Deutschland die globalen Nachhaltigkeitsziele umsetzt. Ist Deutschland auf dem Weg einer Transformation, wie in der Agenda 2030 vorgesehen? 2030Watch untersucht diese Frage anhand von Indikatoren: Wie wird die Umsetzung zu einer Nachhaltigen Entwicklung in Deutschland gemessen? Was wird übersehen? Wie stellen wir sicher, dass das Prinzip Leave No One Behind (Lass niemanden zurück) nicht außer Acht gelassen wird? ? Dazu vergleicht 2030Watch die offiziellen Indikatoren der deutschen Nachhaltigkeitsstrategien mit zusätzlichen Indikatoren.
               </p>
               <p>
-                2030Watch wird hauptsächlich durch das BMZ im Rahmen des von
-                Engagement Global verwalteten Programms für Entwicklungspolitische
-                Bildung (FEB) sowie von Brot für die Welt und der Landesstelle
-                für Entwicklungszusammenarbeit gefördert. Das vorgesehene Projektbudget
-                für 2017-2018 beträgt ca. 214 000 Euro: 75% des Budgets wurden vom
-                FEB Programm des BMZ getragen, 23% von Brot für die Welt/EED und 2% LEZ Berlin.
+                2030Watch wird hauptsächlich durch das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) im Rahmen des von Engagement Global verwalteten Förderprogramms für Entwicklungspolitische Bildung (FEB) sowie von Brot für die Welt (BfdW) und der Landesstelle für Entwicklungszusammenarbeit (LEZ) gefördert. Das vorgesehene Projektbudget für 2017-2018 beträgt ca. 214 000 Euro: 75% des Budgets werden vom FEB Programm des BMZ getragen, 23% von Brot für die Welt/EED und 2% LEZ Berlin.
               </p>
             </div>
             <div class="section-img">
@@ -54,31 +42,17 @@
 
       <section>
         <div class="wrapper">
-          <h2>Open Knowledge Foundation</h2>
+          <h2>Open Knowledge Foundation Deutschland</h2>
           <div class="section-wrapper">
             <div class="section-text">
               <p>
-                Die Open Knowledge Foundation Deutschland (OKF DE) ist ein
-                gemeinnütziger Verein, der sich für die Verbreitung von freiem
-                Wissen in der Gesellschaft einsetzt. Unsere Projekte schaffen
-                die digitale Infrastruktur für zivilgesellschaftliches Handeln
-                und unterstützen Bürger, Journalisten und Organisationen dabei,
-                ihr Recht auf Information, Transparenz und Beteiligung wahrzunehmen.
+                Die Open Knowledge Foundation Deutschland (OKF) ist ein gemeinnütziger Verein, der sich für die Verbreitung von freiem Wissen in der Gesellschaft einsetzt. Unsere Projekte schaffen die digitale Infrastruktur für zivilgesellschaftliches Handeln und unterstützen Bürger, Journalisten und Organisationen dabei, ihr Recht auf Information, Transparenz und Beteiligung wahrzunehmen.
               </p>
               <p>
-                Unsere Arbeit erstreckt sich auf die Bereiche Politik und
-                Informationsfreiheit, Civic Tech, Forschung, kulturelle Bildung
-                und Jugendförderung.
+                Unsere Arbeit erstreckt sich auf die Bereiche Politik und Informationsfreiheit, Civic Tech, Forschung, kulturelle Bildung und Jugendförderung. Wir sind Teil eines internationalen Netzwerkes von Experten und Freiwilligen in 58 Ländern.
               </p>
               <p>
-                Wir sind Teil eines internationalen Netzwerkes von Experten und
-                Freiwilligen in 58 Ländern.
-              </p>
-              <p>
-                Die Arbeit der OKF DE wird fast ausschließlich durch Einzelprojekte
-                finanziert. Geldgeber sind die EU, staatliche Geber auf nationaler
-                und kommunaler Ebene, Stiftungen, Nichtregierungsorganisationen
-                sowie private Spender.
+                Die Arbeit der OKF wird fast ausschließlich durch Einzelprojekte finanziert. Geldgeber sind die EU, staatliche Geber auf nationaler und kommunaler Ebene, Stiftungen, Nichtregierungsorganisationen sowie private Spender.
               </p>
               <p>
                 Mehr Infos hier: <a href="https://okfn.de" target="_blank">okfn.de</a>
