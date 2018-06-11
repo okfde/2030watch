@@ -19,13 +19,14 @@
         <rect
           v-for="(bar, n) in bars"
           v-if="bar.height >= 0"
-          :title="bar.label + ': ' + bar.value"
           :class="bar.klass"
           :x="bar.x + 'px'"
           :width="bar.width + 'px'"
           :y="bar.y + 'px'"
           :height="bar.height + 'px'"
-          />
+        >
+          <title>{{ bar.label + ': ' + bar.value }}</title>
+        </rect>
         <line
           :x1="labelX + 'px'"
           x2="100%"

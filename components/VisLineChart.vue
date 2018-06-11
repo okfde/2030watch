@@ -27,7 +27,9 @@
           :width="dot.width + 'px'"
           :cy="dot.y + 'px'"
           :height="dot.height + 'px'"
-          />
+        >
+          <title>{{ dot.label + ': ' + dot.value }}</title>
+        </circle>
         <line
           :x1="labelX + 'px'"
           x2="100%"
