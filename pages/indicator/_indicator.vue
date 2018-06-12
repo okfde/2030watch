@@ -115,7 +115,12 @@
                 <td class="title">Indikatorquelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
               </tr>
               <tr v-if="indicator['data source']">
-                <td class="title">Datenquelle</td><td><a :href="indicator['sourcelink']">{{ indicator['data source'] }}</a></td>
+                <td class="title">Datenquelle</td>
+                <td>
+                  <a :href="indicator['sourcelink']" target="_blank">
+                  {{ indicator['data source'] }}
+                  </a>
+                </td>
               </tr>
               <tr v-if="indicator['pate']">
                 <td class="title">Datenpate</td><td>{{ indicator['pate'] }}</td>
