@@ -2,7 +2,7 @@ const _ = require('lodash')
 const { requestURL, parseCSVString, splitJSON, cleanArrayStrings, checkArrayStr, buildNewArray, writeJSONFile, splitHeader, splitContent, extractURL, asyncBatch, filterArray, convertHashToFloat, deleteKeysInHashArray, formatArrayToHash } = require('./utils.js')
 
 // URLS
-const url_sdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRNDMTfVzdgRjXccPA71vnBEoPzF2UtcL-v5rKGj6Dl4hHMlZJ7hJAKH8wRiAOaozR8ZKJUnHrcEDu4/pub?gid=0&single=true&output=csv'
+const url_sdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhzvOoTo2_mxpq4xeQf2z8R665YPxt79-ANi8zyeQi_4AITlPVXnr7n7c1PJAI3MpHI3Skf0qjBqZj/pub?output=csv'
 
 const sdg_header = ['number', 'slug', 'color', 'labelShort', 'labelLong', 'textIntro', 'textIndicators', 'summaryDns', 'summary2030']
 const sdg_numbers = ['number']
@@ -115,7 +115,7 @@ function processSDGs(sdgs, allIndicators) {
 	})
 }
 
-const url_indicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR3jgbFv0NlOhd5JuzoMFvelmcTELqc85VpIWn-R7h2TkyVyVYLyOAdpTAdtDmxYFs6bZZCiQkBmWy-/pub?output=csv'
+const url_indicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS7ahlC5LRwgUGaNsmxhvK4-VLo-Is7H8GjYzYHFjFCthakj6AGiKkrAVp3w5KCYG-d7aThnElewYwi/pub?output=csv'
 const indi_headers_dns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit',
 	'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung',
 	'nicht2030WKatalog', 'landerVergleich', 'zeitreihe', 'url', 'dnsIconUebernommen', 'dnsIconUngeeignet', 'dnsIconNichtBewertbar', 'dnsIconNichtBerechenbar', 'dnsIconInternationaleAuswirkungen']
