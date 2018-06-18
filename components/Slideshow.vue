@@ -27,14 +27,18 @@
           </li>
           <li :class="{ 'slide': true, 'active': slide === 3 }">
             <p>
-              Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig. Daher ergänzt 2030Watch die DNS um die Betrachtung des Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker Handlungs&shy;bedarf Deutschlands offensichtlich.
+              Ergänzend zur Wirtschaft ist 2030Watch das Thema der politischen Partizipation von Frauen ebenso wichtig.
+              Daher ergänzt 2030Watch die Deutsche Nachhaltigkeits&shy;strategie (DNS) um die Betrachtung des
+              Frauenanteils in Parlamenten. Auch beim Anteil von Frauen in Parlamenten wird ein starker
+              Handlungs&shy;bedarf Deutschlands offensichtlich.
             </p>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 4 }">
             <p>
               Zudem weist 2030Watch mit Indikatoren zur ungleichen Verteilung
               von Hausarbeit, Gewalt gegen Frauen und dem Unterschied in Renten&shy;einkommen
-              auf wichtige Themen die in der DNS vernachlässigt werden.
+              auf wichtige Themen hin, die in der Deutschen Nachhaltigkeits&shy;strategie
+              (DNS) vernachlässigt werden.
               <p>
                 Viele weitere spannende Stories und Ergänzungen finden sich in den weiteren SDGs.
                 <div class="carousel-prompt">Go Explore!</div>
@@ -111,7 +115,7 @@
   export default {
     data: function () {
       return {
-        slide: 1,
+        slide: 0,
         slideHeight: 0,
         introSDG: {
           values: {
@@ -135,6 +139,7 @@
     methods: {
       format: format,
       toggle: function () {
+        if (this.slide === 0) this.slide = 1 // show first slide in the initial state
         if (!this.present) {
           // set initialHeight undefined and use calculated slideHeight instead
           this.initialHeight = undefined
@@ -214,10 +219,12 @@
         transition-duration: 0.2s;
         transition-delay: 0s;
         width: 100%;
+        visibility: hidden;
 
         &.active {
           opacity: 1;
           transition-delay: 0.2s;
+          visibility: visible;
         }
       }
     }
