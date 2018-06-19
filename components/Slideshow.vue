@@ -296,6 +296,7 @@
         width: 13px;
         height: 13px;
         margin-right: 10px;
+        margin-top: 1.5rem;
 
         &.past {
           background-color: darken($color-mute,10%);
@@ -334,7 +335,7 @@
   .carousel-prompt {
     font-weight: bold;
     font-size: 1.4rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-transform: uppercase;
     color: $color-okf;
     text-align: center;
