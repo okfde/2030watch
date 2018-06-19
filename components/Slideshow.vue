@@ -77,7 +77,7 @@
               </li>
             </ul>
             <ul class="indicator-list">
-              <li v-for="indicator in indicators_okf_1 ">
+              <li v-for="indicator in indicators_okf_1">
                  <VisIndicator :i="indicator" :compact="true" :tiny="true" color="04A6F0" />
               </li>
             </ul>

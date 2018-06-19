@@ -134,7 +134,7 @@
       font-size: 0.75rem;
       text-align: center;
       font-weight: normal;
-      height: 5rem;
+      height: 3.8rem;
       margin-bottom: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
     }
