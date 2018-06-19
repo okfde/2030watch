@@ -14,7 +14,7 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'DNS Indikator –' : '2030 Indikator –' }}
+            <p>{{ indicator.author === 'dns' ? 'DNS Indikator' : '2030 Indikator' }}
               <span v-if="category">
 
                  <span v-if="indicator.author === 'dns' && indicator.dnsIconUebernommen" title="Übernommen" class="indicator-icon">
@@ -223,10 +223,13 @@
         const values = keys.slice(0, keys.length - 1).map(key => {
           return [key, this.indicator.countries[key]]
         })
+        // filter and sort
         return values.filter(value => {
           // TODO: offer negative y-axis
           // right now negative values are cut off
           return value[1] !== null && value[1] >= 0
+        }).sort((a, b) => {
+          return (a[1] > b[1]) ? 1 : ((b[1] > a[1]) ? -1 : 0)
         })
       },
       timeline () {

@@ -12,7 +12,7 @@
         <ul class="container" ref="slidesText" :style="{ 'height': slideHeight + 'px' }">
           <li :class="{ 'slide': true, 'active': slide === 1 }">
             <p>
-              Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/DE/_Anlagen/Nachhaltigkeit-wiederhergestellt/2017-01-11-nachhaltigkeitsstrategie.pdf;jsessionid=4698A132C6FCD96F5DFADD2C6DE6FF28.s7t1?__blob=publicationFile&v=22" class="dns" target="_blank">„Deutschen Nachhaltig&shy;keits&shy;strategie“ (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetzt und weist auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.
+              Die Bundesregierung hat mit der <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=26" class="dns" target="_blank">„Deutschen Nachhaltig&shy;keits&shy;strategie“ (DNS)</a> die SDGs in nationale Ziele übersetzt. 2030Watch diskutiert anhand von alternativen Indikatoren wie ambitioniert Deutschland die SDGs umsetzt und weist auf fehlende Themen, bessere Zielwerte und mehr Verantwortung hin.
             </p>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 2 }">
