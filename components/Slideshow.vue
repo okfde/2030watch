@@ -316,7 +316,7 @@
     }
   }
   .margin-legend {
-    margin: $spacing / 4 0;
+    margin: $spacing 0;
     height: 60px;
   }
 
