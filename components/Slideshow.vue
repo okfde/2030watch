@@ -50,7 +50,7 @@
           <li :class="{ 'slide': true, 'active': slide === 1 }">
             <div class="sdg-process-wrapper">
               <p>
-                 Wie weit sind wir vom Ziel entfernt, eine nachhaltige Transformation bis 2030 zu erreichen?
+                 Wie weit sind wir vom Ziel entfernt, eine nachhaltige Trans&shy;for&shy;ma&shy;tion bis 2030 zu erreichen?
               </p>
               <div class="margin-legend">
                 <VisProgress :vTickLabels="true" :sdg="introSDG" :vLegend="true" :compact="true" />
@@ -60,9 +60,13 @@
           <li :class="{ 'slide': true, 'active': slide === 2 }">
             <h5 class="caption">Zwei Perspektiven: die Deutsche Nachhaltigkeitsstrategie (DNS) und 2030Watch</h5>
             <div class="sdg-comparison-wrapper">
-              <span class="number-big dns" v-html="format(30)" />
+              <div class="progress-chart" title="DNS">
+                <VisPieChart :value="30" fill="F8B300" :background="'ffffff'" />
+              </div>
               <span class="number-big arrow"><i class="icon-up-big" /></span>
-              <span class="number-big okf" v-html="format(50)" />
+              <div class="progress-chart" title="2030Watch" style="margin-right: 1.8rem;">
+                <VisPieChart :value="50" fill="04A6F0" :background="'ffffff'" />
+              </div>
             </div>
           </li>
           <li :class="{ 'slide': true, 'active': slide === 3 }">
@@ -111,6 +115,7 @@
   import format from '~/assets/js/format.js'
   import VisIndicator from '~/components/VisIndicator.vue'
   import VisProgress from '~/components/VisProgress.vue'
+  import VisPieChart from '~/components/VisPieChart.vue'
 
   export default {
     data: function () {
@@ -189,7 +194,8 @@
     },
     components: {
       VisIndicator,
-      VisProgress
+      VisProgress,
+      VisPieChart
     },
     mounted () {
       const heights = [...this.$refs.slidesImages.getElementsByClassName('slide'), ...this.$refs.slidesText.getElementsByClassName('slide')].map(item => {
@@ -201,136 +207,147 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "~@/assets/style/variables";
+@import "~@/assets/style/variables";
 
-  .intro {
+.intro {
+  position: relative;
+
+  header, section, footer {
+    width: 100%;
+  }
+
+  .container {
     position: relative;
 
-    header, section, footer {
+    .slide {
+      position: absolute;
+      opacity: 0;
+      transition-duration: 0.2s;
+      transition-delay: 0s;
       width: 100%;
-    }
+      visibility: hidden;
 
-    .container {
-      position: relative;
-
-      .slide {
-        position: absolute;
-        opacity: 0;
-        transition-duration: 0.2s;
-        transition-delay: 0s;
-        width: 100%;
-        visibility: hidden;
-
-        &.active {
-          opacity: 1;
-          transition-delay: 0.2s;
-          visibility: visible;
-        }
+      &.active {
+        opacity: 1;
+        transition-delay: 0.2s;
+        visibility: visible;
       }
-    }
-
-    .caption {
-      margin-bottom: 0.5rem;
-    }
-
-    .dns {
-      color: $color-dns;
-    }
-
-    .okf {
-      color: $color-okf;
-    }
-
-    .indicators {
-      .legendProgress {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
-
-     .sdg-comparison-wrapper {
-       display: flex;
-       padding-top: 2em;
-
-       .number-big {
-         flex: 1;
-         text-align: center;
-         font-size: 3em;
-         font-weight: bold;
-
-         &.arrow {
-            color: darken($color-mute,10%);
-            transform: rotate(45deg);
-          }
-       }
-      }
-
-      .indicator-list {
-        padding: $spacing / 2 0;
-        display: inline;
-
-        li {
-          display: inline-block;
-        }
-      }
-    }
-
-    footer {
-      text-align: right;
-
-      .progress {
-        text-align: center;
-
-        .icon {
-          cursor: pointer;
-          display: inline-block;
-          border-radius: 100%;
-          width: 13px;
-          height: 13px;
-          margin-right: 10px;
-
-          &.past {
-            background-color: darken($color-mute,10%);
-          }
-
-          &.future {
-            background-color: rgba(0, 0, 0, .1);
-          }
-        }
-      }
-
-      .btn {
-        margin: 0 $spacing / 2;
-
-        &:last-of-type {
-          margin-right: $spacing * 2;
-        }
-      }
-    }
-    .margin-legend {
-      margin: $spacing / 4 0;
-      height: 60px;
-    }
-
-    .opener {
-      // to have a bigger clickable area
-      display: inline-block;
-      width: 100%;
-    }
-
-    .carousel-header {
-      color: $color-attention;
-      text-decoration: underline;
-    }
-
-    .carousel-prompt {
-      font-weight: bold;
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      text-transform: uppercase;
-      color: $color-okf;
-      text-align: center;
     }
   }
+
+  .caption {
+    margin-bottom: 0.5rem;
+  }
+
+  .dns {
+    color: $color-dns;
+  }
+
+  .okf {
+    color: $color-okf;
+  }
+
+  .indicators {
+    .legendProgress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .sdg-comparison-wrapper {
+      display: flex;
+      padding-top: 2em;
+
+      .number-big {
+        flex: 1;
+        text-align: center;
+        font-size: 3.2em;
+        font-weight: bold;
+
+        &.arrow {
+          color: darken($color-mute,10%);
+          transform: rotate(45deg);
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .indicator-list {
+      padding: $spacing / 2 0;
+      display: inline;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  footer {
+    text-align: right;
+
+    .progress {
+      text-align: center;
+
+      .icon {
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 100%;
+        width: 13px;
+        height: 13px;
+        margin-right: 10px;
+        margin-top: 1.5rem;
+
+        &.past {
+          background-color: darken($color-mute,10%);
+        }
+
+        &.future {
+          background-color: rgba(0, 0, 0, .1);
+        }
+      }
+    }
+
+    .btn {
+      margin: 0 $spacing / 2;
+
+      // &:last-of-type {
+      //   margin-right: $spacing * 2;
+      // }
+    }
+  }
+  .margin-legend {
+    margin: $spacing 0;
+    height: 60px;
+  }
+
+  .opener {
+    // to have a bigger clickable area
+    display: inline-block;
+    width: 100%;
+  }
+
+  .carousel-header {
+    color: $color-attention;
+    text-decoration: underline;
+  }
+
+  .carousel-prompt {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: $color-okf;
+    text-align: center;
+  }
+}
+
+.progress-chart {
+  display: flex;
+
+  > * {
+    max-height: 110px;
+    max-width: 110px;
+  }
+}
 </style>
