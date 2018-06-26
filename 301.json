@@ -1,0 +1,6 @@
+[
+  { "from": "/monitoring", "to": "/projekt" },
+  { "from": "/methodik", "to": "/projekt" },
+  { "from": "/verstehen", "to": "/projekt" },
+  { "from": "/en", "to": "/" }
+]
