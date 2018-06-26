@@ -165,7 +165,10 @@
     },
     head () {
       return {
-        title: 'Impressum | 2030Watch'
+        title: 'Impressum | 2030Watch',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Impressum' }
+        ]
       }
     }
   }

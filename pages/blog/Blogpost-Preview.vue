@@ -22,7 +22,10 @@
 export default {
   head () {
     return {
-      title: 'Blog | 2030Watch'
+      title: 'Blog | 2030Watch',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Blog' }
+      ]
     }
   }
 }

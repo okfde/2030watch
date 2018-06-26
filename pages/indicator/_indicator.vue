@@ -184,7 +184,10 @@
     head () {
       return {
         title: this.indicator.label || 'Indicator',
-        titleTemplate: '%s | 2030Watch'
+        titleTemplate: '%s | 2030Watch',
+        meta: [
+          { hid: 'description', name: 'description', content: this.indicator.label || 'Indicator' }
+        ]
       }
     },
     methods: {

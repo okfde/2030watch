@@ -126,7 +126,10 @@
     },
     head () {
       return {
-        title: 'Über das Projekt | 2030Watch'
+        title: 'Über das Projekt | 2030Watch',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Über das Projekt' }
+        ]
       }
     }
   }

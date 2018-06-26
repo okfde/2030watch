@@ -149,7 +149,10 @@
     },
     head () {
       return {
-        title: 'Über uns | 2030Watch'
+        title: 'Über uns | 2030Watch',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Über uns' }
+        ]
       }
     }
   }

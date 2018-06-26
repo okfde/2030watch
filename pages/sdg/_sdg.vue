@@ -176,7 +176,10 @@
     head () {
       return {
         title: this.sdg.labelShort || 'SDG',
-        titleTemplate: '%s | 2030Watch'
+        titleTemplate: '%s | 2030Watch',
+        meta: [
+          { hid: 'description', name: 'description', content: this.sdg.labelShort || 'SDG' }
+        ]
       }
     },
     data: function () {
