@@ -25,7 +25,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Chivo:400,700|Roboto+Mono:400,700', defer: true }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Chivo:400,700|Roboto+Mono:400,700', defer: true },
+      { rel: 'alternate', href: 'https://2030-watch.de', hreflang: 'de' }
     ]
   },
   css: [
