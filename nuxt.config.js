@@ -14,6 +14,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'de'
+    },
     title: '2030Watch | Wie nachhaltig ist Deutschland?',
     meta: [
       { charset: 'utf-8' },
