@@ -9,9 +9,6 @@ module.exports = {
   modules: [
     ['nuxt-matomo', { matomoUrl: '//traffic.okfn.de/', siteId: 14 }]
   ],
-  serverMiddleware: [
-    '~/middleware/seo.js'
-  ],
   // ...routerBase,
   /*
   ** Headers of the page
