@@ -3,6 +3,7 @@
     <div class="wrapper info-message">
       <span class="info-message-bold">&#9432; Relaunch light:</span> Alle Inhalte gibt es bis 1. September
     </div>
+
     <header class="inpage-header">
       <div class="wrapper">
         <div class="message">
@@ -12,11 +13,9 @@
         </div>
       </div>
     </header>
-    <section class="intro-container">
-      <div class="wrapper">
-        <Slideshow />
-      </div>
-    </section>
+
+    <VisLeiste class="padding-visleiste" :current="false" />
+
     <section>
       <div id="keyfindings" class="wrapper">
         <h2>
@@ -33,6 +32,11 @@
         <VisListe />
       </div>
     </section>
+
+    <div class="wrapper">
+      <Slideshow />
+    </div>
+
     <section>
       <div class="wrapper">
         <KeyFindings />
@@ -45,6 +49,7 @@
   import VisListe from '~/components/VisListe.vue'
   import Slideshow from '~/components/Slideshow.vue'
   import KeyFindings from '~/components/KeyFindings.vue'
+  import VisLeiste from '~/components/VisLeiste.vue'
   import VisProgress from '~/components/VisProgress.vue'
 
   export default {
@@ -62,6 +67,7 @@
       VisListe,
       Slideshow,
       KeyFindings,
+      VisLeiste,
       VisProgress
     }
   }
@@ -81,6 +87,15 @@
   }
 
   .inpage-header {
-    padding: 10vh 0 3vh 0;
+    padding: 7vh 0 7vh 0;
   }
+
+  .padding-visleiste {
+    padding-top: 0;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
 </style>

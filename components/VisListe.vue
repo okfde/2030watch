@@ -6,9 +6,9 @@
       </div>
       <div class="sdg-header sdg-header-vis columns">
         <section class="sdg-legend">
+          <span class="okf">2030Watch</span>
           <span class="dns-lang">Deutsche Nachhaltigkeitsstrategie</span>
           <span class="dns-kurz">DNS</span>
-          <span class="okf">2030Watch</span>
         </section>
       </div>
     </li>
@@ -82,7 +82,7 @@
   @import '~@/assets/style/variables';
 
   .vis-liste {
-    margin: $spacing 0;
+    margin: $spacing / 2 0;
 
     &:hover {
       .sdg-item:not(:hover) {
