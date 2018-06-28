@@ -2,7 +2,7 @@
   <ul class="sdg-leiste">
     <li v-if="sdg.textIntro === 'coming soon'"
       v-for="(sdg, slug) in sdgs"
-      :class="{ 'sdg-item': true, 'enabled': true, 'current': current === slug }"
+      :class="{ 'sdg-band-item': true, 'enabled': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
       :key="slug">
       <span class="sdg-number">{{ sdg.number }}</span>
@@ -11,7 +11,7 @@
       </a>
     </li>
     <li v-else
-      :class="{ 'sdg-item': true, 'enabled': true, 'current': current === slug }"
+      :class="{ 'sdg-band-item': true, 'enabled': true, 'current': current === slug }"
       :style="{ 'background-color': '#' + sdg.color }"
       :key="slug">
       <span class="sdg-number">{{ sdg.number }}</span>
@@ -43,7 +43,7 @@
     transition-duration: 2s; // Duration for size change
   }
 
-  .sdg-item {
+  .sdg-band-item {
     flex: 1;
     transition-duration: 1s;
     overflow: hidden;
