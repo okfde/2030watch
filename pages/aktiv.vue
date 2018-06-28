@@ -35,7 +35,10 @@
     },
     head () {
       return {
-        title: 'Werde aktiv | 2030Watch'
+        title: 'Werde aktiv | 2030Watch',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Werde aktiv' }
+        ]
       }
     }
   }
