@@ -94,6 +94,7 @@ module.exports = {
     if (!err) { callback() }
   },
   filterArray: function (rawContent, id_key, header) {
+    // Filter array to delete empty rows
     // Check if first row is a comment row
     const content = rawContent[0][0] === 'FALSE' ? _.slice(rawContent, 1) : rawContent
     const position = _.indexOf(header, id_key)
@@ -146,6 +147,7 @@ module.exports = {
     return arr
   },
   deleteKeysInHashArray: function (arr, keys) {
+    // Delete keys that are present in objects in array
     return _.map(arr, obj => {
       const o = _.clone(obj)
       _.each(keys, key => {
@@ -155,6 +157,7 @@ module.exports = {
     })
   },
   formatArrayToHash: function (arr, key) {
+    // Buidl associative array
     const hash = _.map(arr, obj => {
       return [obj[key], obj]
     })
