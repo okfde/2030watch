@@ -82,7 +82,7 @@
   @import '~@/assets/style/variables';
 
   .vis-liste {
-    margin: $spacing / 2 0;
+    margin: $spacing * 1.5 0;
 
     &:hover {
       .sdg-item:not(:hover) {

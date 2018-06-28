@@ -21,21 +21,23 @@
         <h2>
           Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
         </h2>
-        <div class="columns columns-gutter">
-          <!-- <section>
+        <!-- <div class="columns columns-gutter">
+          <section>
             <p>2030Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">erweiterten Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Indikatorensets auf einer Skala von 0% (sehr geringe Nachhaltigkeit) bis 100% (sehr hohe Nachhaltigkeit).</p>
-          </section> -->
-          <!-- <section class="legendProgress">
+          </section>
+          <section class="legendProgress">
             <VisProgress :sdg="sampleSDG" :vLegend="true" :compact="false" />
-          </section> -->
-        </div>
+          </section>
+        </div> -->
         <VisListe />
       </div>
     </section>
 
-    <div class="wrapper">
-      <Slideshow />
-    </div>
+    <section style="margin-bottom: 2rem;">
+      <div class="wrapper">
+        <Slideshow />
+      </div>
+    </section>
 
     <section>
       <div class="wrapper">
@@ -92,10 +94,7 @@
 
   .padding-visleiste {
     padding-top: 0;
-  }
-
-  h2 {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
 </style>
