@@ -41,6 +41,11 @@
       </div>
       <div class="indicator-vis">
         <section class="indicators">
+
+          <h2 class="vis-question">
+            Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
+          </h2>
+
           <small class="caption">Indikatorenkatalog</small>
           <section>
             <ul class="indicator-list" ref="indicatorListDNS">
@@ -409,5 +414,9 @@
     & > section {
       padding: 0 !important;
     }
+  }
+
+  .vis-question {
+    padding-left: calc(#{$spacing} + 10px);
   }
 </style>

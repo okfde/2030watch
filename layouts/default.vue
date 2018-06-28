@@ -2,7 +2,6 @@
   <div :class="{ 'page': true, [klasse]: klasse }">
     <header class="page-header columns">
       <strong class="logo"><nuxt-link to="/"><img src="../assets/img/2030watch_logo_white.png" alt="2030Watch Logo"></nuxt-link></strong>
-      <!-- <Infomessage /> -->
       <nav class="page-nav">
         <ul>
           <li><nuxt-link to="/projekt">Das Projekt</nuxt-link></li>
@@ -24,7 +23,6 @@
   import { mapState } from 'vuex'
   import Explainer from '~/components/Explainer.vue'
   import Footer from '~/components/Footer.vue'
-  import Infomessage from '~/components/Infobox.vue'
 
   export default {
     computed: {
@@ -42,8 +40,7 @@
     },
     components: {
       Footer,
-      Explainer,
-      Infomessage
+      Explainer
     }
   }
 </script>
