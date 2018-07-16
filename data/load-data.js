@@ -323,8 +323,8 @@ function processIndicatorMeta(indicator) {
 			i['uncalculable'] = true
 		}
 
-		// If cell for modification starts with number, mark as modified indicator and set new property with reference
-		if (indicator['modifizierterZielwert'].match(/^\d/)) { // starts with number
+		// If cell starts with number, mark as modified indicator and set new property with reference
+		if (indicator['modifizierterZielwert'].match(/^\d/)) {
 			i['modTarget'] = true
 			i['altIndicator'] = indicator['modifizierterZielwert']
 		} else {
@@ -336,7 +336,6 @@ function processIndicatorMeta(indicator) {
 
 		// TODO
 		// quick fix to show correct icons
-		// Should not be done in the backend and based on actual properties
 		i['dnsIconUebernommen'] = indicator['dnsIconUebernommen'] === 'x'
 		i['dnsIconUngeeignet'] = indicator['dnsIconUngeeignet'] === 'x'
 		i['dnsIconNichtBewertbar'] = indicator['dnsIconNichtBewertbar'] === 'x'
@@ -344,7 +343,6 @@ function processIndicatorMeta(indicator) {
 		i['dnsIconInternationaleAuswirkungen'] = indicator['dnsIconInternationaleAuswirkungen'] === 'x'
 	}
 
-	// Special actions if author is okf
 	if (author === 'okf') {
 		// Convert x and j to true and false
 		i['newTopic'] = indicator['neuesThema'] === 'j'
@@ -360,7 +358,6 @@ function processIndicatorMeta(indicator) {
 
 		// TODO
 		// quick fix to show correct icons
-		// Should not be done in the backend and based on actual properties
 		i['okfIconNeuesThema'] = indicator['okfIconNeuesThema'] === 'x'
 		i['okfIconUebernommen'] = indicator['okfIconUebernommen'] === 'x' // not used
 		i['okfIconModifiziert'] = indicator['okfIconModifiziert'] === 'x'
