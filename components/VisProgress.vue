@@ -413,7 +413,7 @@
       transition-duration: 0.2s;
 
       &.sdg-label-tick {
-        fill: #222;
+        fill: #aaa;
         opacity: 1;
         font-size: 0.7rem;
       }
