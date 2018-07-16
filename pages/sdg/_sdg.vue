@@ -261,7 +261,7 @@
         return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['modTarget', 'uncalculable', 'id'])
       },
       indi_dns_not_keep: function () {
-        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['altIndicator'])
+        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['altIndicator', 'id'])
       },
       indi_dns: function () { // Keep sorting order
         return _.concat(this.indi_dns_keep, this.indi_dns_not_keep)
@@ -289,7 +289,7 @@
       },
       linesMod: function () {
         const offset = this.linesNormal.length // indicates space after kept indicators
-        const indicatorsDns = _.filter(this.sdg.ind.dns, indicator => {
+        const indicatorsDns = _.filter(this.indi_dns_not_keep, indicator => {
           return indicator.modTarget
         })
         return _.map(indicatorsDns, (indicator, n) => { // n indicates the space between adjacent indicators
