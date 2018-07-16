@@ -18,7 +18,7 @@
           <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
         <div class="sdg-vis">
-          <VisProgress :sdg="sdg" :vTickLabels="index === 0" />
+          <VisProgress :sdg="sdg" :vTickLabels="index === 0" vTicks="true" />
         </div>
       </nuxt-link>
       <a v-else class="sdg-link disabled" title="Coming soon">
@@ -26,7 +26,7 @@
           <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text">{{ sdg.labelShort }}</span>
         </div>
         <div class="sdg-vis">
-          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" />
+          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" vTicks="true" />
         </div>
       </a>
     </li>

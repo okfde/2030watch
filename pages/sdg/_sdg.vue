@@ -33,7 +33,7 @@
             </div>
             <div class="sdg-process">
               <div class="sdg-process-wrapper">
-                <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="true" />
+                <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
               </div>
             </div>
           </div>
