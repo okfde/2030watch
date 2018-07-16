@@ -197,14 +197,14 @@
           display: inline-block;
           // color: $color-mute;
           color: var(--color);
-          font-size: 0.8rem;
+          font-size: 0.95rem;
         }
 
         .sdg-text {
           line-height: 1.2rem;
           display: inline-block;
           font-weight: bold;
-          font-size: 0.9rem;
+          font-size: 0.95rem;
         }
       }
 

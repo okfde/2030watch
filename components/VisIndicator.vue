@@ -98,7 +98,7 @@
 
   .vis-indicator {
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     background-color: #fff;
     width: 140px;
     line-height: 1rem;
@@ -131,7 +131,7 @@
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-align: center;
       font-weight: normal;
       height: 3.8rem;

@@ -139,7 +139,7 @@
     }
 
     text {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -178,7 +178,7 @@
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .label {

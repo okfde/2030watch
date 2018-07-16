@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   letter-spacing: 0.02em;
   font-weight: bold;
@@ -26,7 +26,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.02em;
   color: $color-okf;
 }
@@ -40,8 +40,7 @@ p + p {
 }
 
 p {
-  font-size: 0.9rem;
-  // max-width: 800px;
+  font-size: 1rem;
 
   .dns {
     color: $color-dns;
@@ -74,26 +73,26 @@ small + p {
 }
 
 .caption, th {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.8;
 }
 
 .label {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 table {
   thead {
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.05em;
     text-align: left;
   }
 
   tbody {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -130,7 +129,7 @@ table {
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 0 0.2rem 0.2rem;
 
       &:hover {

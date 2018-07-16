@@ -330,7 +330,7 @@
       margin-top: $spacing / 2;
       display: block;
       width: 300px;
-      font-size: 0.7em;
+      font-size: 0.8em;
       background-color: #f9f9f9;
       border: 1px solid $color-mute;
     }
