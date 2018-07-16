@@ -46,14 +46,12 @@
             Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
           </h2>
 
-          <small class="caption">Indikatorenkatalog</small>
           <section>
             <ul class="indicator-list" ref="indicatorListDNS">
-              <li ref="labelDNS"><h3 class="dns">DNS</h3></li>
-              <li
-                ref="indicator"
-                v-for="(indicator, n) in indi_dns">
-                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
+              <li ref="labelDNS"><h3 class="dns">Offiziell</h3></li>
+              <li ref="indicator" v-for="(indicator, n) in indi_dns">
+                <VisIndicator :i="indicator" :color="222" :colorScale="true" />
+              </li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
                   <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
@@ -101,6 +99,7 @@
               </li>
             </ul>
           </section>
+
           <section class="indicator-lines">
             <svg ref="indicatorLines">
               <line
@@ -108,21 +107,24 @@
                 :x1="indicator"
                 :x2="indicator"
                 y1="0%"
-                y2="100%" />
+                y2="100%"
+              />
               <path
                 v-for="indicator in linesMod"
                 stroke-dasharray="5, 5"
-                :d="indicator" />
+                :d="indicator"
+              />
             </svg>
           </section>
+
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
               <li ref="labelOKF"><h3 class="okf">2030Watch</h3></li>
+              <li v-for="(indicator, n) in indi_dns_keep">
+                <VisIndicator :i="indicator" :color="222" :colorScale="true" />
+              </li>
               <li
-                v-for="(indicator, n) in indi_dns_keep">
-                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
-              <li
-                v-for="(indicator, n) in sdg.ind.okf">
+                v-for="(indicator, n) in indi_okf">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
             </ul>
           </section>
@@ -259,10 +261,13 @@
         return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['modTarget', 'uncalculable', 'id'])
       },
       indi_dns_not_keep: function () {
-        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id'])
+        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['altIndicator'])
       },
       indi_dns: function () { // Keep sorting order
         return _.concat(this.indi_dns_keep, this.indi_dns_not_keep)
+      },
+      indi_okf: function () {
+        return _.sortBy(this.sdg.ind.okf, 'id')
       },
       dns: function () {
         return this.sdg.values.dns
@@ -283,14 +288,14 @@
         })
       },
       linesMod: function () {
-        const offset = this.linesNormal.length
-        const indicators = _.filter(this.sdg.ind.dns, indicator => {
+        const offset = this.linesNormal.length // indicates space after kept indicators
+        const indicatorsDns = _.filter(this.sdg.ind.dns, indicator => {
           return indicator.modTarget
         })
-        return _.map(indicators, (indicator, n) => {
-          const position = _.findIndex(this.sdg.ind.okf, { 'id': indicator.altIndicator })
+        return _.map(indicatorsDns, (indicator, n) => { // n indicates the space between adjacent indicators
+          const positionOkf = _.findIndex(this.indi_okf, { 'id': indicator.altIndicator })
           const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * this.indicatorMargin * 2)
-          const x2 = (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * this.indicatorMargin * 2)
+          const x2 = (offset + positionOkf + 0.5) * this.indicatorWidth + ((offset + positionOkf) * this.indicatorMargin * 2)
           const y1 = 0
           const y2 = this.indicatorLinesHeight
           return `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
