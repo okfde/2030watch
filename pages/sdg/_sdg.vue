@@ -114,6 +114,7 @@
                 stroke-dasharray="5, 5"
                 :d="indicator"
               />
+
             </svg>
           </section>
 
@@ -198,7 +199,7 @@
     },
     mounted () {
       this.indicatorWidth = this.$refs.indicator[0].clientWidth
-      this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
+      this.indicatorLinesHeight = this.$refs.indicatorLines.getBoundingClientRect().height
       this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
       const marginLeft = Math.max(this.$refs.labelOKF.clientWidth, this.$refs.labelDNS.clientWidth)
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
