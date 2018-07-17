@@ -231,7 +231,7 @@
       calcSizes: function () {
         this.width = (this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth) - this.markerR
         this.scaleX.range([this.markerR, this.width])
-        this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+        this.height = this.$refs.vis.getBoundingClientRect().height || this.$refs.vis.parentNode.getBoundingClientRect().height
         if (typeof this.$refs.okfLabelLegend !== 'undefined') {
           this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
           this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
