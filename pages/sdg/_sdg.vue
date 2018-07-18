@@ -102,30 +102,16 @@
 
           <section class="indicator-lines">
             <svg ref="indicatorLines">
-              <line
-                v-for="indicator in linesNormal"
-                :x1="indicator"
-                :x2="indicator"
-                y1="0%"
-                y2="100%"
-              />
-              <path
-                v-for="indicator in linesMod"
-                stroke-dasharray="5, 5"
-                :d="indicator"
-              />
-
+              <path v-for="indicator in linesMod" stroke-dasharray="5, 5" :d="indicator" />
             </svg>
           </section>
 
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
-              <li ref="labelOKF"><h3 class="okf">2030Watch</h3></li>
-              <li v-for="(indicator, n) in indi_dns_keep">
-                <VisIndicator :i="indicator" :color="222" :colorScale="true" />
+              <li ref="labelOKF">
+                <h3 class="okf">2030Watch</h3>
               </li>
-              <li
-                v-for="(indicator, n) in indi_okf">
+              <li v-for="(indicator, n) in indi_okf">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
             </ul>
           </section>
@@ -296,7 +282,7 @@
         return _.map(indicatorsDns, (indicator, n) => { // n indicates the space between adjacent indicators
           const positionOkf = _.findIndex(this.indi_okf, { 'id': indicator.altIndicator })
           const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * this.indicatorMargin * 2)
-          const x2 = (offset + positionOkf + 0.5) * this.indicatorWidth + ((offset + positionOkf) * this.indicatorMargin * 2)
+          const x2 = (positionOkf + 0.5) * this.indicatorWidth + ((positionOkf) * this.indicatorMargin * 2)
           const y1 = 0
           const y2 = this.indicatorLinesHeight
           return `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`

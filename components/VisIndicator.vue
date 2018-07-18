@@ -1,7 +1,10 @@
 <template>
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
+      <h5>{{ i.label }}</h5>
+
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
+
       <ul class="labels">
 
         <li v-if="i.author === 'dns' && i.dnsIconUebernommen" title="Übernommen">
@@ -31,7 +34,6 @@
         </li>
 
       </ul>
-      <h5>{{ i.label }}</h5>
     </div>
   </nuxt-link>
 </template>
