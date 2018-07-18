@@ -3,10 +3,14 @@
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
       <h5>{{ i.label }}</h5>
 
+      <div>2030 Ziel erreicht zu:</div>
+
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
-      <ul class="labels">
+      <div>IST: {{ i.current }} {{ i.unit }}</div>
+      <div>SOLL: {{ i.target }} {{ i.unit }}</div>
 
+      <ul class="labels">
         <li v-if="i.author === 'dns' && i.dnsIconUebernommen" title="Übernommen">
           <i class="icon-ok-circled" />
         </li>
@@ -32,7 +36,6 @@
         <li v-if="i.author === 'okf' && i.okfIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
           <i class="icon-star-circled" />
         </li>
-
       </ul>
     </div>
   </nuxt-link>
@@ -102,7 +105,7 @@
     width: 100%;
     font-size: 0.8rem;
     background-color: #fff;
-    width: 140px;
+    width: 170px;
     line-height: 1rem;
 
     &:hover {
@@ -133,12 +136,13 @@
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       text-align: center;
       font-weight: normal;
-      height: 3.8rem;
+      height: 2.8rem;
       margin-bottom: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
+      font-weight: bold;
     }
 
     .labels {

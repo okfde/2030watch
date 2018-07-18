@@ -178,7 +178,7 @@
     },
     data: function () {
       return {
-        indicatorWidth: 150, // css default value
+        indicatorWidth: 190, // css default value
         indicatorLinesHeight: 200, // css default value,
         indicatorMargin: 10
       }
