@@ -139,7 +139,7 @@
       font-size: 0.9rem;
       text-align: center;
       font-weight: normal;
-      height: 2.8rem;
+      height: 3rem;
       margin-bottom: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
