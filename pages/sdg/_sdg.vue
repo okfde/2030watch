@@ -24,11 +24,11 @@
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
-          <div class="description description-dns columns columns-gutter">
+          <h2>{{ sdg.labelLong }}</h2>
+          <div class="description columns columns-gutter">
             <div>
-              <h2>Was wird gemessen?</h2>
               <p>
-                {{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch erweiterter Indikatorenkatalog umfasst {{ numberToStringNominativ(sdg.n.alt) }} Indikator{{ sdg.n.okf > 1 ? 'en' : '' }}.
+                {{ sdg.textIndicators }}
               </p>
             </div>
             <div class="sdg-process">
@@ -133,7 +133,7 @@
       </div>
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
-          <section class="description description-dns columns columns-gutter">
+          <section class="description columns columns-gutter">
             <div>
               <hgroup>
                 <h3 class="dns">
@@ -339,7 +339,7 @@
   }
 
   .indicator-overview {
-    margin: 4rem 0;
+    margin: 3rem 0;
     flex-direction: column;
 
     & > section {
