@@ -3,39 +3,26 @@
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
       <h5>{{ i.label }}</h5>
 
-      <div>2030 Ziel erreicht zu:</div>
+      <div style="color:black;">2030 Ziel erreicht zu:</div>
 
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
-      <div>IST: {{ i.current }} {{ i.unit }}</div>
-      <div>SOLL: {{ i.target }} {{ i.unit }}</div>
+      <div style="color:black;">IST: {{ i.current }} {{ i.unit }}</div>
+      <div style="color:black;">SOLL: {{ i.target }} {{ i.unit }}</div>
 
       <ul class="labels">
-        <li v-if="i.author === 'dns' && i.dnsIconUebernommen" title="Übernommen">
-          <i class="icon-ok-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconUngeeignet" title="Ungeeignet">
-          <i class="icon-cancel-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconNichtBewertbar" title="Nicht bewertbarer Zielwert">
+        <li v-if="i.author === 'dns' && i.uncalculable" title="Nicht berechenbar">
           <i class="icon-minus-circled" />
         </li>
-        <li v-if="i.author === 'dns' && i.dnsIconNichtBerechenbar" title="Nicht berechenbar">
-          <i class="icon-help-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
-          <i class="icon-star-circled" />
-        </li>
 
-        <li v-if="i.author === 'okf' && i.okfIconNeuesThema" title="Neues Thema">
+        <li v-if="i.author === 'okf' && i.newIndicator" title="Neuer Indikator">
           <i class="icon-plus-circled" />
         </li>
-        <li v-if="i.author === 'okf' && i.okfIconModifiziert" title="Modifizierter Zielwert">
+
+        <li v-if="i.author === 'okf' && !i.newIndicator" title="Modifiziert">
           <i class="icon-cog-circled" />
         </li>
-        <li v-if="i.author === 'okf' && i.okfIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
-          <i class="icon-star-circled" />
-        </li>
+
       </ul>
     </div>
   </nuxt-link>
