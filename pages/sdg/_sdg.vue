@@ -85,17 +85,17 @@
                   <span style="font-weight:bold;">Nachhaltigkeitsstufen</span>
                   <li>
                     <span class="label">
-                      <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig
+                      <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig  0 % – 40 %
                     </span>
                   </li>
                   <li>
                     <span class="label">
-                      <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel
+                      <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel  40 % – 80 %
                     </span>
                   </li>
                   <li>
                     <span class="label">
-                      <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch
+                      <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
                     </span>
                   </li>
                 </ul>
@@ -265,10 +265,12 @@
         return require('~/assets/img/sdg/E_SDG_goals_icons-individual-rgb-' + ('00' + this.sdg.number).substr(-2) + '.png')
       },
       indi_dns_keep: function () {
-        return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['modTarget', 'uncalculable', 'id'])
+        return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['id'])
       },
+      // modified indicators
       indi_dns_not_keep: function () {
-        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['altIndicator', 'id'])
+        // console.log(_.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id']))
+        return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id'])
       },
       indi_dns: function () { // Keep sorting order
         return _.concat(this.indi_dns_keep, this.indi_dns_not_keep)
@@ -286,23 +288,28 @@
         const amount = this.sdg.n.udns + this.sdg.n.uokf
         return 100 / amount
       },
-      linesNormal: function () {
-        const indicators = _.filter(this.sdg.ind.dns, indicator => {
-          return indicator.keep
-        })
-        return _.map(indicators, (indicator, n) => {
-          return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
-        })
-      },
+      // linesNormal: function () {
+      //   const indicators = _.filter(this.sdg.ind.dns, indicator => {
+      //     return indicator.keep
+      //   })
+      //   return _.map(indicators, (indicator, n) => {
+      //     return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
+      //   })
+      // },
       linesMod: function () {
-        const offset = this.linesNormal.length // indicates space after kept indicators
-        const indicatorsDns = _.filter(this.indi_dns_not_keep, indicator => {
-          return indicator.modTarget
+        const modifiedOkfIndicators = _.sortBy(_.filter(this.sdg.ind.okf, 'moddedTarget'), 'id')
+        let dnsArray = []
+        modifiedOkfIndicators.map(indi => {
+          dnsArray.push(indi.moddedTarget)
         })
-        return _.map(indicatorsDns, (indicator, n) => { // n indicates the space between adjacent indicators
-          const positionOkf = _.findIndex(this.indi_okf, { 'id': indicator.altIndicator })
-          const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * this.indicatorMargin * 2)
-          const x2 = (positionOkf + 0.5) * this.indicatorWidth + ((positionOkf) * this.indicatorMargin * 2)
+        const indicatorsDns = _.filter(this.indi_dns_not_keep, indicator => {
+          return dnsArray.indexOf(indicator.id) > -1
+        })
+        return _.map(indicatorsDns, (indicator) => {
+          const positionDns = _.findIndex(this.indi_dns, { 'id': indicator.id })
+          const positionOkf = _.findIndex(this.indi_okf, { 'moddedTarget': indicator.id })
+          const x1 = (positionDns + 0.5) * this.indicatorWidth + (positionDns * this.indicatorMargin * 2)
+          const x2 = (positionOkf + 0.5) * this.indicatorWidth + (positionOkf * this.indicatorMargin * 2)
           const y1 = 0
           const y2 = this.indicatorLinesHeight
           return `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
