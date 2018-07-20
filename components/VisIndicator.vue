@@ -7,8 +7,8 @@
 
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
-      <div style="color:black;">IST: {{ i.current }} {{ i.unit }}</div>
-      <div style="color:black;">SOLL: {{ i.target }} {{ i.unit }}</div>
+      <div style="color:black;">IST: {{ i.current }} {{ i.unitShort }}</div>
+      <div style="color:black;">SOLL: {{ i.target }} {{ i.unitShort }}</div>
 
       <ul class="labels">
         <li v-if="i.author === 'dns' && i.uncalculable" title="Nicht berechenbar">
@@ -18,7 +18,6 @@
         <li v-if="i.author === 'okf' && i.newIndicator" title="Neuer Indikator">
           <i class="icon-plus-circled" />
         </li>
-
         <li v-if="i.author === 'okf' && !i.newIndicator" title="Modifiziert">
           <i class="icon-cog-circled" />
         </li>
@@ -61,18 +60,12 @@
         'stepsColors'
       ]),
       colorChart: function () {
-        if (this.colorScale) {
-          const range = 100 / this.stepsColors.length
-          const i = Math.min(Math.max(0, this.i.progress), 100)
-          const n = Math.round(i / range)
-          const color = this.stepsColors[n < 1 ? 0 : n - 1]
-          if (typeof color !== 'undefined') {
-            return color.substr(1)
-          } else {
-            return this.color
-          }
+        if (this.i.progress < 40) {
+          return this.stepsColors[0].substr(1)
+        } else if (this.i.progress < 80) {
+          return this.stepsColors[1].substr(1)
         } else {
-          return this.color
+          return this.stepsColors[2].substr(1)
         }
       }
     },
