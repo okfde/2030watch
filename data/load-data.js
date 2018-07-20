@@ -95,7 +95,6 @@ function processSDGs (sdgs, allIndicators) {
 
     // Filter dns indicators for display
     const usableValuesDNS = _.filter(calcubaleValuesDNS, i => {
-      if (i['badIndicator']) { return false }
       if (i['modTarget']) { return false }
       return true
     })
@@ -118,11 +117,8 @@ function processSDGs (sdgs, allIndicators) {
       },
       'n': {
         // Count the amount of indicators for various properties
-        'baT': _.countBy(indiDns, 'badTarget').true || 0,
-        'baI': _.countBy(indiDns, 'badIndicator').true || 0,
         'moT': _.countBy(indiDns, 'modTarget').true || 0,
         'unc': _.countBy(indiDns, 'uncalculable').true || 0,
-        'spi': _.countBy(indiDns, 'spill').true || 0,
         'uokf': usableValuesOKF.length,
         'udns': usableValuesDNS.length,
         'dns': indiDns.length,
@@ -149,17 +145,15 @@ function processSDGs (sdgs, allIndicators) {
 }
 
 // URL to the indicator table
-const urlIndicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS7ahlC5LRwgUGaNsmxhvK4-VLo-Is7H8GjYzYHFjFCthakj6AGiKkrAVp3w5KCYG-d7aThnElewYwi/pub?output=csv'
+// const urlIndicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS7ahlC5LRwgUGaNsmxhvK4-VLo-Is7H8GjYzYHFjFCthakj6AGiKkrAVp3w5KCYG-d7aThnElewYwi/pub?output=csv'
+const urlIndicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNDFUF3uXfVPvHKTP9h_mzL-vp41CPsYBXKKZo6zM5Y1uCpth9CShHjPp4Y_LMXeHa-OyUiQLlcMGf/pub?output=csv'
 
 // List of keys that should be present for the dns indicators
-const indiHeadersDns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'aussageloserZielwert', 'modifizierterZielwert', 'ungeeignetX', 'spillover', 'dnsUnit',
-  'dnsGoal', 'zielwertJahr2030', 'jahrlicherZielwert', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung',
-  'nicht2030WKatalog', 'landerVergleich', 'zeitreihe', 'url', 'dnsIconUebernommen', 'dnsIconUngeeignet', 'dnsIconNichtBewertbar', 'dnsIconNichtBerechenbar', 'dnsIconInternationaleAuswirkungen']
+const indiHeadersDns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'nichtBerechenbar', 'modifizierterZielwert', 'dnsUnit',
+  'dnsGoal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'url']
 // List of keys that should be present for the okf indicators
 const indiHeadersOkf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert',
-  'ausgangswertJahr', 'begrundung', 'zeitreihe', 'laendervergleich', 'spillover', 'neuesThema',
-  'okfIconNeuesThema', 'okfIconUebernommen', 'okfIconModifiziert', 'okfIconInternationaleAuswirkungen',
-  'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText',
+  'ausgangswertJahr', 'begrundung', 'neuerIndikator', 'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText',
   'datenpateContact', 'datenpateMail', 'url', '2030WDatensatz', 'potenziellerDatenpate']
 // Key of the cell that holds the id of the SDG
 const indiSdgID = 'sdgId'
@@ -315,20 +309,7 @@ function processIndicatorMeta (indicator) {
 
   // Special actions if author is dns
   if (author === 'dns') {
-    // Convert x and j to true and false
-    i['yearlyTarget'] = indicator['jaehrlicherZielwert'] === 'x'
-    i['badTarget'] = indicator['aussageloserZielwert'] === 'j'
-    i['badIndicator'] = indicator['ungeeignetX'] === 'x'
-    i['spill'] = indicator['spillover'] === 'j'
-
-    // Set indicator to uncalculable if start, current and target values are not present
-    if (
-      (!indicator['ausgangswert'] && indicator['ausgangswert'] !== 0) ||
-      (!indicator['aktuellerWert'] && indicator['aktuellerWert'] !== 0) ||
-      (!indicator['zielwertJahr2030'] && indicator['zielwertJahr2030'] !== 0)
-    ) {
-      i['uncalculable'] = true
-    }
+    i['uncalculable'] = indicator['nichtBerechenbar'] === 'x'
 
     // If cell starts with number, mark as modified indicator and set new property with reference
     if (indicator['modifizierterZielwert'].match(/^\d/)) {
@@ -338,37 +319,22 @@ function processIndicatorMeta (indicator) {
       i['modTarget'] = false
     }
 
+    // TODO remove
     // Set indicator as keep if indicated and if indicator is not modified
     i['keep'] = indicator['nicht2030WKatalog'] !== 'x' && !i['modTarget']
-
-    // TODO
-    // quick fix to show correct icons
-    i['dnsIconUebernommen'] = indicator['dnsIconUebernommen'] === 'x'
-    i['dnsIconUngeeignet'] = indicator['dnsIconUngeeignet'] === 'x'
-    i['dnsIconNichtBewertbar'] = indicator['dnsIconNichtBewertbar'] === 'x'
-    i['dnsIconNichtBerechenbar'] = indicator['dnsIconNichtBerechenbar'] === 'x'
-    i['dnsIconInternationaleAuswirkungen'] = indicator['dnsIconInternationaleAuswirkungen'] === 'x'
   }
 
   if (author === 'okf') {
     // Convert x and j to true and false
-    i['newTopic'] = indicator['neuesThema'] === 'j'
-    i['spill'] = indicator['spillover'] === 'j'
+    i['newIndicator'] = indicator['neuerIndikator'] === 'x'
 
     // Get detail information for data patreon
-    i['pate'] = indicator['datenpate'] !== 'n' ? indicator['datenpate'] : false
+    i['pate'] = indicator['datenpate'] !== '' ? indicator['datenpate'] : false
     i['pateLogo'] = indicator['datenpateLogo'] !== '' ? indicator['datenpateLogo'] : false
     i['pateUrl'] = indicator['datenpateUrl'] !== '' ? indicator['datenpateUrl'] : false
     i['pateText'] = indicator['datenpateText'] !== '' ? indicator['datenpateText'] : false
     i['pateContact'] = indicator['datenpateContact'] !== '' ? indicator['datenpateContact'] : false
     i['pateMail'] = indicator['datenpateMail'] !== '' ? indicator['datenpateMail'] : false
-
-    // TODO
-    // quick fix to show correct icons
-    i['okfIconNeuesThema'] = indicator['okfIconNeuesThema'] === 'x'
-    i['okfIconUebernommen'] = indicator['okfIconUebernommen'] === 'x' // not used
-    i['okfIconModifiziert'] = indicator['okfIconModifiziert'] === 'x'
-    i['okfIconInternationaleAuswirkungen'] = indicator['okfIconInternationaleAuswirkungen'] === 'x'
   }
   return i
 }
