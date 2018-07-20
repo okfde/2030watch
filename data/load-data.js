@@ -15,7 +15,7 @@ const {
   deleteKeysInHashArray,
   formatArrayToHash } = require('./utils.js')
 
-// URLS
+// URL
 const urlSdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhzvOoTo2_mxpq4xeQf2z8R665YPxt79-ANi8zyeQi_4AITlPVXnr7n7c1PJAI3MpHI3Skf0qjBqZj/pub?output=csv'
 
 // Headers that should be included in the final data file
@@ -82,7 +82,7 @@ function processSDGs (sdgs, allIndicators) {
 
     // Filter okf indicators for display
     const usableValuesOKF = _.filter(indiOkf, i => {
-      if (i['uncalculable']) { return false }
+      // if (i['uncalculable']) { return false }
       return !_.isNaN(i['progress'] || _.isNull(i['progress']))
     })
 
@@ -95,7 +95,7 @@ function processSDGs (sdgs, allIndicators) {
 
     // Filter dns indicators for display
     const usableValuesDNS = _.filter(calcubaleValuesDNS, i => {
-      if (i['modTarget']) { return false }
+      if (!i['keep']) { return false }
       return true
     })
 
@@ -149,11 +149,11 @@ function processSDGs (sdgs, allIndicators) {
 const urlIndicators = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNDFUF3uXfVPvHKTP9h_mzL-vp41CPsYBXKKZo6zM5Y1uCpth9CShHjPp4Y_LMXeHa-OyUiQLlcMGf/pub?output=csv'
 
 // List of keys that should be present for the dns indicators
-const indiHeadersDns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'nichtBerechenbar', 'modifizierterZielwert', 'dnsUnit',
+const indiHeadersDns = ['sdgId', 'sdgName', 'dnsId', 'slug', 'dnsName', 'ubernommen', 'nichtBerechenbar', 'dnsUnit', 'dnsUnitShort',
   'dnsGoal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert', 'ausgangswertJahr', 'begrundung', 'url']
 // List of keys that should be present for the okf indicators
-const indiHeadersOkf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert',
-  'ausgangswertJahr', 'begrundung', 'neuerIndikator', 'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText',
+const indiHeadersOkf = ['2030Id', 'slug', '2030Name', '2030Unit', '2030UnitShort', '2030Goal', 'zielwertJahr2030', 'aktuellerWert', 'aktuellerWertJahr', 'ausgangswert',
+  'ausgangswertJahr', 'begrundung', 'neuerIndikator', 'modifizierterZielwert', 'datenpate', 'datenpateLogo', 'datenpateUrl', 'datenpateText',
   'datenpateContact', 'datenpateMail', 'url', '2030WDatensatz', 'potenziellerDatenpate']
 // Key of the cell that holds the id of the SDG
 const indiSdgID = 'sdgId'
@@ -252,7 +252,7 @@ function markModifiedIndicators (indicators) {
   console.log('Start marking modified indicators')
   // Create list of alternative (modded) indicators
   const targets = _.pull(_.map(indicators, i => {
-    return _.get(i, 'altIndicator')
+    return _.get(i, 'moddedTarget')
   }), undefined)
   console.log('Modified indicators found: ' + targets.join(', '))
   _.each(indicators, i => {
@@ -278,6 +278,7 @@ function processIndicatorMeta (indicator) {
   const id = _.has(indicator, 'dnsId') ? indicator['dnsId'] : indicator['2030Id']
   // Unit of the indicator
   const unit = _.has(indicator, 'dnsUnit') ? indicator['dnsUnit'] : indicator['2030Unit']
+  const unitShort = _.has(indicator, 'dnsUnitShort') ? indicator['dnsUnitShort'] : indicator['2030UnitShort']
   // Goald of the indicator
   const goal = _.has(indicator, 'dnsGoal') ? indicator['dnsGoal'] : indicator['2030Goal']
 
@@ -287,6 +288,7 @@ function processIndicatorMeta (indicator) {
     author,
     label,
     unit,
+    unitShort,
     goal
   }
 
@@ -307,26 +309,22 @@ function processIndicatorMeta (indicator) {
     i[key[1]] = indicator[key[0]]
   })
 
-  // Special actions if author is dns
   if (author === 'dns') {
     i['uncalculable'] = indicator['nichtBerechenbar'] === 'x'
+    // for calculating 2030Watch progress
+    i['keep'] = indicator['ubernommen'] === 'x'
+  }
+
+  if (author === 'okf') {
+    i['newIndicator'] = indicator['neuerIndikator'] === 'x'
 
     // If cell starts with number, mark as modified indicator and set new property with reference
     if (indicator['modifizierterZielwert'].match(/^\d/)) {
       i['modTarget'] = true
-      i['altIndicator'] = indicator['modifizierterZielwert']
+      i['moddedTarget'] = indicator['modifizierterZielwert']
     } else {
       i['modTarget'] = false
     }
-
-    // TODO remove
-    // Set indicator as keep if indicated and if indicator is not modified
-    i['keep'] = indicator['nicht2030WKatalog'] !== 'x' && !i['modTarget']
-  }
-
-  if (author === 'okf') {
-    // Convert x and j to true and false
-    i['newIndicator'] = indicator['neuerIndikator'] === 'x'
 
     // Get detail information for data patreon
     i['pate'] = indicator['datenpate'] !== '' ? indicator['datenpate'] : false
