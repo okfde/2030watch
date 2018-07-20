@@ -31,9 +31,14 @@
                 {{ sdg.textIndicators }}
               </p>
             </div>
-            <div class="sdg-process">
-              <div class="sdg-process-wrapper">
-                <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
+            <div>
+              <div style="margin-bottom:3rem; text-align:center;">
+                Fortschrittsbalken '2030'-Zielerreichung
+              </div>
+              <div class="sdg-process">
+                <div class="sdg-process-wrapper">
+                  <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
+                </div>
               </div>
             </div>
           </div>
@@ -43,7 +48,7 @@
         <section class="indicators">
 
           <h2 class="vis-question">
-            Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
+            Wie nah sind wir einem nachhaltigeren Deutschland in 2030?
           </h2>
 
           <section>
@@ -54,39 +59,20 @@
               </li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
+                  <span style="font-weight:bold">Kategorien</span>
                   <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
                     <span class="label">
-                      <i class="icon-plus-circled" /> Neues Thema
-                    </span>
-                  </li>
-                  <li title="Der Indikator misst keine Veränderung in Bezug auf Nachhaltigkeit und misst die Wirkung einer Maßnahme nur unzureichend.">
-                    <span class="label">
-                      <i class="icon-cancel-circled" /> Ungeeignet
-                    </span>
-                  </li>
-                  <li title="Dieser Indikator ist ein offizieller Indikator der deutschen Nachhaltigkeitsstrategie und wird von 2030Watch ohne Veränderungen übernommen.">
-                    <span class="label">
-                      <i class="icon-ok-circled" /> Übernommen
+                      <i class="icon-plus-circled" /> Neuer Indikator
                     </span>
                   </li>
                   <li title="Dieser Indikator hat keinen genau definierten Zielwert und erlaubt es daher nicht, den Fortschritt bis 2030 zu bewerten.">
                     <span class="label">
-                      <i class="icon-minus-circled" /> Nicht bewertbarer Zielwert
+                      <i class="icon-minus-circled" /> Nicht berechenbar
                     </span>
                   </li>
-                  <li title="Dieser Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
+                  <li title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
-                      <i class="icon-cog-circled" /> Modifizierter Zielwert
-                    </span>
-                  </li>
-                  <li title="Für diesen Indikator kann man auf Grund fehlender Daten den Ziel- oder Ausgangswert nicht berechnen.">
-                    <span class="label">
-                      <i class="icon-help-circled" /> Nicht berechenbar
-                    </span>
-                  </li>
-                  <li title="Dieser Indikator misst internationale Auswirkungen durch Deutschland und zeigt somit die Verantwortung Deutschlands für nachhaltige Rahmenbedingungen in anderen Ländern.">
-                    <span class="label">
-                      <i class="icon-star-circled" /> Internationale Auswirkungen
+                      <i class="icon-cog-circled" /> Modifiziert
                     </span>
                   </li>
                   <!-- <li class="label">
@@ -95,6 +81,23 @@
                       hier
                     </nuxt-link>
                   </li> -->
+                  <br />
+                  <span style="font-weight:bold;">Nachhaltigkeitsstufen</span>
+                  <li>
+                    <span class="label">
+                      <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig
+                    </span>
+                  </li>
+                  <li>
+                    <span class="label">
+                      <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel
+                    </span>
+                  </li>
+                  <li>
+                    <span class="label">
+                      <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch
+                    </span>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -117,13 +120,27 @@
           </section>
         </section>
       </div>
+
+      <div class="wrapper">
+        <section>
+          <h2>Wie wird der Fortschritt berechnet?</h2>
+          <div>
+            Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
+            Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
+            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
+            über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+          </div>
+        </section>
+      </div>
+
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
           <section class="description columns columns-gutter">
             <div>
               <hgroup>
                 <h3 class="dns">
-                  Deutsche Nachhaltigkeitsstrategie Indikatorenkatalog
+                  Deutsche Nachhaltigkeitsstrategie Indikatorenliste
                 </h3>
               </hgroup>
               <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
@@ -137,7 +154,7 @@
             <div>
               <hgroup>
                 <h3 class="okf">
-                  2030Watch Indikatorenkatalog
+                  2030Watch Indikatorenliste
                 </h3>
               </hgroup>
               <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
@@ -156,7 +173,7 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapGetters } from 'vuex'
   import VisLeiste from '~/components/VisLeiste.vue'
   import VisProgress from '~/components/VisProgress.vue'
   import VisIndicator from '~/components/VisIndicator.vue'
@@ -238,6 +255,9 @@
       ...mapState([
         'sdgs'
       ]),
+      ...mapGetters([
+        'stepsColors'
+      ]),
       sdg () {
         return this.sdgs[this.$route.params.sdg]
       },
@@ -314,8 +334,8 @@
 
     .sdg-process-wrapper {
       width: 70%;
-        min-width: 400px;
-        max-height: 5rem;
+      min-width: 400px;
+      max-height: 5rem;
 
       svg {
         width: 100%;
@@ -410,5 +430,13 @@
 
   .vis-question {
     padding-left: calc(#{$spacing} + 10px);
+  }
+
+  .icon {
+    display: inline-block;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
   }
 </style>
