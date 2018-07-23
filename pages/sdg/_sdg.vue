@@ -66,7 +66,9 @@
               </li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
-                  <span class="legend-title">Kategorien</span>
+                  <li>
+                    <div class="legend-title">Kategorien</div>
+                  </li>
                   <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
                     <span class="label">
                       <i class="icon-plus-circled" /> Neuer Indikator
@@ -82,28 +84,31 @@
                       <i class="icon-cog-circled" /> Modifiziert
                     </span>
                   </li>
-                  <!-- <li class="label">
-                    Mehr zu unserer Methode
-                    <nuxt-link to="/projekt">
-                      hier
-                    </nuxt-link>
-                  </li> -->
                   <br />
-                  <span class="legend-title">Nachhaltigkeitsstufen</span>
                   <li>
-                    <span class="label">
+                    <div class="legend-title">Nachhaltigkeitsstufen</div>
+                  </li>
+                  <li>
+                    <span class="label" title="Indikator-Ziel zu 0 % – 40 % erreicht">
                       <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig 0 % – 40 %
                     </span>
                   </li>
                   <li>
-                    <span class="label">
+                    <span class="label" title="Indikator-Ziel zu 40 % – 80 % erreicht">
                       <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel 40 % – 80 %
                     </span>
                   </li>
                   <li>
-                    <span class="label">
+                    <span class="label" title="Indikator-Ziel zu 80 % – 100 % erreicht">
                       <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
                     </span>
+                  </li>
+                  <br />
+                  <li class="label link-to-method">
+                    Mehr zu unserer Methode
+                    <nuxt-link to="/projekt#methode">
+                      hier
+                    </nuxt-link>
                   </li>
                 </ul>
               </li>
@@ -462,5 +467,9 @@
   .legend-title {
     font-weight:bold;
     font-size: 1.1rem;
+  }
+
+  .link-to-method {
+    line-height: 1.2rem;
   }
 </style>
