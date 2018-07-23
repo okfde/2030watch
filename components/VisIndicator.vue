@@ -3,12 +3,14 @@
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
       <h5>{{ i.label }}</h5>
 
-      <div style="color:black;">2030 Ziel erreicht zu:</div>
+      <div class="values value-target">2030 Ziel erreicht zu:</div>
 
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
-      <div style="color:black;">IST: {{ i.current }} {{ i.unitShort }}</div>
-      <div style="color:black;">SOLL: {{ i.target }} {{ i.unitShort }}</div>
+      <div class="values">
+        <div>IST: {{ i.current }} {{ i.unitShort }}</div>
+        <div>SOLL: {{ i.target }} {{ i.unitShort }}</div>
+      </div>
 
       <ul class="labels">
         <li v-if="i.author === 'dns' && i.uncalculable" title="Nicht berechenbar">
@@ -85,7 +87,7 @@
     width: 100%;
     font-size: 0.8rem;
     background-color: #fff;
-    width: 170px;
+    width: 200px;
     line-height: 1rem;
 
     &:hover {
@@ -116,22 +118,24 @@
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 3rem;
-      margin-bottom: 0.5rem;
+      height: 4.2rem;
+      margin-top: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
+      line-height: 1.1rem;
     }
 
     .labels {
       margin: -0.1rem 0 0.1rem;
-      width: 100%;
+      // width: 100%;
       text-align: right;
       min-height: 16px;
       color: $color-mute;
       opacity: 0.8;
+      font-size: 1.1rem;
 
       li {
         margin: 0 0.1rem;
@@ -141,6 +145,18 @@
           margin-right: 0;
         }
       }
+    }
+  }
+
+  .values {
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+
+    div {
+      padding: 0.1rem;
     }
   }
 </style>
