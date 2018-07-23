@@ -3,7 +3,7 @@
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
       <h5>{{ i.label }}</h5>
 
-      <div class="values value-target">2030 Ziel erreicht zu:</div>
+      <div class="values value-target">Indikator-Ziel erreicht zu:</div>
 
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
@@ -153,7 +153,7 @@
     margin-bottom: 0.7rem;
     text-align: center;
     color: black;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     div {
       padding: 0.1rem;
