@@ -32,9 +32,8 @@
               </p>
             </div>
             <div>
-              <div style="padding: 25px;box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);margin: 0; background-color:white;">
-
-                <div style="margin-bottom: 2rem; margin-left: 2rem; font-weight:bold; color:rgba(0, 0, 0, .7)">
+              <div class="progress-box">
+                <div class="label-progress-bar">
                   Fortschrittsbalken '2030'-Zielerreichung
                 </div>
 
@@ -462,6 +461,10 @@
 
   .label {
     font-size: 1rem;
+
+    > i {
+      font-size: 1.1rem
+    }
   }
 
   .legend-title {
@@ -471,5 +474,19 @@
 
   .link-to-method {
     line-height: 1.2rem;
+  }
+
+  .progress-box {
+    padding: 25px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+    margin: 0;
+    background-color: white;
+  }
+
+  .label-progress-bar {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .7);
   }
 </style>
