@@ -32,14 +32,19 @@
               </p>
             </div>
             <div>
-              <div style="margin-bottom:3rem; text-align:center;">
-                Fortschrittsbalken '2030'-Zielerreichung
-              </div>
-              <div class="sdg-process">
-                <div class="sdg-process-wrapper">
-                  <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
+              <div style="padding: 25px;box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);margin: 0; background-color:white;">
+
+                <div style="margin-bottom: 2rem; margin-left: 2rem; font-weight:bold; color:rgba(0, 0, 0, .7)">
+                  Fortschrittsbalken '2030'-Zielerreichung
                 </div>
-              </div>
+
+                <div class="sdg-process">
+                  <div class="sdg-process-wrapper">
+                    <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
+                  </div>
+                </div>
+
+                </div>
             </div>
           </div>
         </div>
@@ -52,14 +57,16 @@
           </h2>
 
           <section>
-            <ul class="indicator-list" ref="indicatorListDNS">
-              <li ref="labelDNS"><h3 class="dns">Offiziell</h3></li>
+            <ul class="indicator-list">
+              <li ref="labelDNS">
+                <h3 class="dns">Offiziell</h3>
+              </li>
               <li ref="indicator" v-for="(indicator, n) in indi_dns">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" />
               </li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
-                  <span style="font-weight:bold">Kategorien</span>
+                  <span class="legend-title">Kategorien</span>
                   <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
                     <span class="label">
                       <i class="icon-plus-circled" /> Neuer Indikator
@@ -82,15 +89,15 @@
                     </nuxt-link>
                   </li> -->
                   <br />
-                  <span style="font-weight:bold;">Nachhaltigkeitsstufen</span>
+                  <span class="legend-title">Nachhaltigkeitsstufen</span>
                   <li>
                     <span class="label">
-                      <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig  0 % – 40 %
+                      <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig 0 % – 40 %
                     </span>
                   </li>
                   <li>
                     <span class="label">
-                      <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel  40 % – 80 %
+                      <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel 40 % – 80 %
                     </span>
                   </li>
                   <li>
@@ -136,11 +143,12 @@
 
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
+          <h2>Indikatorenlisten</h2>
           <section class="description columns columns-gutter">
             <div>
               <hgroup>
                 <h3 class="dns">
-                  Deutsche Nachhaltigkeitsstrategie Indikatorenliste
+                  Deutsche Nachhaltigkeitsstrategie
                 </h3>
               </hgroup>
               <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
@@ -154,7 +162,7 @@
             <div>
               <hgroup>
                 <h3 class="okf">
-                  2030Watch Indikatorenliste
+                  2030Watch
                 </h3>
               </hgroup>
               <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
@@ -203,7 +211,7 @@
     mounted () {
       this.indicatorWidth = this.$refs.indicator[0].clientWidth
       this.indicatorLinesHeight = this.$refs.indicatorLines.getBoundingClientRect().height
-      this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
+      this.$refs.indicatorLegend.style.marginLeft = (this.indicatorWidth + this.indicatorMargin) / 2 + 'px'
       const marginLeft = Math.max(this.$refs.labelOKF.clientWidth, this.$refs.labelDNS.clientWidth)
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
       this.$refs.labelOKF.style.width = marginLeft + 'px'
@@ -442,8 +450,17 @@
   .icon {
     display: inline-block;
     border-radius: 100%;
-    width: 15px;
-    height: 15px;
-    margin-right: 4px;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .legend-title {
+    font-weight:bold;
+    font-size: 1.1rem;
   }
 </style>
