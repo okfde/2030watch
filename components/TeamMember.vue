@@ -8,10 +8,10 @@
       <span class="role">{{ member.role }}</span>
       <div class="socials">
         <a v-if="member.email" :href="'mailto:' + member.email">
-          <i class="icon-mail" title="E-Mail Icon" />
+          <i class="icon-mail" title="E-Mail" />
         </a>
         <a v-if="member.twitter" :href="member.twitter" target="_blank">
-          <i class="icon-twitter" title="Twitter Icon" />
+          <i class="icon-twitter" title="Twitter" />
         </a>
       </div>
     </div>
@@ -60,8 +60,8 @@
       }
 
       .socials {
-        img {
-          margin-right: 10px;
+        i {
+          margin-right: 8px;
         }
       }
     }
