@@ -17,7 +17,7 @@
           <Accordeon :faqs="ziel" />
         </div>
       </section>
-      <section class="wrapper">
+      <section id="methode" class="wrapper">
         <h2>Unsere Methode</h2>
         <Accordeon :faqs="methode" />
       </section>
