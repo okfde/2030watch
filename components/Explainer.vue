@@ -38,7 +38,7 @@
   }
 
   .faq {
-    margin-top: $spacing;
+    margin-top: $spacing / 2;
   }
 
   .page-explainer {
