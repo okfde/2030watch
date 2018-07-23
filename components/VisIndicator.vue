@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
-    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
+    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
       <h5>{{ i.label }}</h5>
 
       <div class="values value-target">2030 Ziel erreicht zu:</div>
