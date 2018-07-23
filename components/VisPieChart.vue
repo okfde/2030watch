@@ -98,7 +98,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 1rem 0;
+    margin: 0.5rem 1.8rem 0;
 
     .vis-number {
       position: absolute;
