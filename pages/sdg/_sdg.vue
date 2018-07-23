@@ -70,17 +70,17 @@
                   </li>
                   <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
                     <span class="label">
-                      <i class="icon-plus-circled" /> Neuer Indikator
+                      <i class="icon-plus-squared" /> Neuer Indikator
                     </span>
                   </li>
                   <li title="Dieser Indikator hat keinen genau definierten Zielwert und erlaubt es daher nicht, den Fortschritt bis 2030 zu bewerten.">
                     <span class="label">
-                      <i class="icon-minus-circled" /> Nicht berechenbar
+                      <i class="icon-minus-squared" /> Nicht berechenbar
                     </span>
                   </li>
                   <li title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
-                      <i class="icon-cog-circled" /> Modifiziert
+                      <i class="icon-pencil-squared" /> Modifiziert
                     </span>
                   </li>
                   <br />

@@ -14,14 +14,14 @@
 
       <ul class="labels">
         <li v-if="i.author === 'dns' && i.uncalculable" title="Nicht berechenbar">
-          <i class="icon-minus-circled" />
+          <i class="icon-minus-squared" />
         </li>
 
         <li v-if="i.author === 'okf' && i.newIndicator" title="Neuer Indikator">
-          <i class="icon-plus-circled" />
+          <i class="icon-plus-squared" />
         </li>
         <li v-if="i.author === 'okf' && !i.newIndicator" title="Modifiziert">
-          <i class="icon-cog-circled" />
+          <i class="icon-pencil-squared" />
         </li>
 
       </ul>
