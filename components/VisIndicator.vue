@@ -2,7 +2,6 @@
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
       <h5>{{ i.label }}</h5>
-
       <div class="values value-target">Indikator-Ziel erreicht zu:</div>
 
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
@@ -20,7 +19,7 @@
         <li v-if="i.author === 'okf' && i.newIndicator" title="Neuer Indikator">
           <i class="icon-plus-squared" />
         </li>
-        <li v-if="i.author === 'okf' && !i.newIndicator" title="Modifiziert">
+        <li v-if="i.author === 'okf' && !i.newIndicator" title="Modifizierter Zielwert">
           <i class="icon-pencil-squared" />
         </li>
 
@@ -121,11 +120,11 @@
       font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 4.2rem;
+      height: 4.5rem;
       margin-top: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
-      line-height: 1.1rem;
+      line-height: 1.15rem;
     }
 
     .labels {
@@ -153,10 +152,15 @@
     margin-bottom: 0.7rem;
     text-align: center;
     color: black;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
 
     div {
-      padding: 0.1rem;
+      padding: 0.2rem;
     }
+  }
+
+  .value-target {
+    font-size: 0.9rem;
   }
 </style>
