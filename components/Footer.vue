@@ -50,6 +50,7 @@
 
   .social-icons {
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 
     li {
       display: inline-block;
