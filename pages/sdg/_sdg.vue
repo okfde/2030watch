@@ -436,7 +436,7 @@
 
     .process {
       display: block;
-      padding: 2rem;
+      padding: 0.5rem;
       text-align: center;
       font-size: 3rem;
       font-weight: bold;
