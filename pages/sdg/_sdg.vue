@@ -34,7 +34,7 @@
             <div>
               <div class="progress-box">
                 <div class="label-progress-bar">
-                  Fortschrittsbalken '2030'-Zielerreichung
+                  SDG-Ziel für 2030 erreicht zu:
                 </div>
 
                 <div class="sdg-process">
