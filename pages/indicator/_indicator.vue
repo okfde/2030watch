@@ -20,7 +20,7 @@
                  <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
                    <i class="icon-plus-squared" />
                  </span>
-                 <span v-if="indicator.modTarget" title="Modifiziert" class="indicator-icon">
+                 <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
                    <i class="icon-pencil-squared" />
                  </span>
                  <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
@@ -234,6 +234,7 @@
       category () {
         const { indicator } = this
         const categories = []
+        // TODO check categories
         if (indicator.author === 'okf') { categories.push('neuer Indikator') }
         if (indicator.badIndicator) { categories.push('ungeeigneter Indikator') }
         if (indicator.keep) { categories.push('übernommener Indikator') }

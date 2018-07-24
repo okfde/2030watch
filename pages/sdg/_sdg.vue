@@ -80,7 +80,7 @@
                   </li>
                   <li title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
-                      <i class="icon-pencil-squared" /> Modifiziert
+                      <i class="icon-pencil-squared" /> Modifizierter Zielwert
                     </span>
                   </li>
                   <br />
@@ -284,8 +284,8 @@
         // console.log(_.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id']))
         return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id'])
       },
-      indi_dns: function () { // Keep sorting order
-        return _.concat(this.indi_dns_keep, this.indi_dns_not_keep)
+      indi_dns: function () { // assure sorting order
+        return _.sortBy(this.sdg.ind.dns, 'id')
       },
       indi_okf: function () {
         return _.sortBy(this.sdg.ind.okf, 'id')
@@ -480,7 +480,6 @@
     padding: 25px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     margin: 0;
-    background-color: white;
   }
 
   .label-progress-bar {
