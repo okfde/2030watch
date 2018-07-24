@@ -7,8 +7,8 @@
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
       <div class="values">
-        <div>IST: {{ i.current }} {{ i.unitShort }}</div>
-        <div>SOLL: {{ i.target }} {{ i.unitShort }}</div>
+        <div>IST: {{ i.current ? i.current : '-' }} <span>{{ i.unitShort }}</span></div>
+        <div>SOLL: {{ i.target != undefined ? i.target : '-' }} <span>{{ i.target != undefined ? i.unitShort : '' }}</span></div>
       </div>
 
       <ul class="labels">
@@ -86,7 +86,7 @@
     width: 100%;
     font-size: 0.8rem;
     background-color: #fff;
-    width: 200px;
+    width: 210px;
     line-height: 1rem;
 
     &:hover {
@@ -129,7 +129,6 @@
 
     .labels {
       margin: -0.1rem 0 0.1rem;
-      // width: 100%;
       text-align: right;
       min-height: 16px;
       color: $color-mute;
@@ -157,6 +156,10 @@
 
     div {
       padding: 0.2rem;
+    }
+
+    span {
+      font-size: 0.9rem;
     }
   }
 
