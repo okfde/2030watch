@@ -89,7 +89,7 @@
       calcSizes: function () {
         const { margin } = this
         this.width = this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth
-        this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+        this.height = this.$refs.vis.getBoundingClientRect().height || this.$refs.vis.parentNode.getBoundingClientRect().height
         this.labelX = Math.min(Math.max(this.width * 0.1, 20), 70) + 5
         this.gutter = Math.min(Math.max(this.width * 0.01, 5), 10)
         this.widthBar = (this.width - this.labelX - (this.gutter * (this.values.length + 1))) / this.values.length
@@ -139,7 +139,7 @@
     }
 
     text {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -178,7 +178,7 @@
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .label {

@@ -33,7 +33,21 @@
           :x1="scaleX.map(tick) + 'px'"
           :y1="height / 2 - 5 + 'px'"
           :x2="scaleX.map(tick) + 'px'"
-          :y2="height / 2 + 5 + 'px'" />
+          :y2="height / 2 + 5 + 'px'"
+        />
+      </g>
+      <g class="tickLines" v-if="vSimpleTicks">
+        <line
+          v-for="tick in [0, 100]"
+          class="tick"
+          stroke-linecap="round"
+          :x1="scaleX.map(tick) + 'px'"
+          :y1="height / 2 - 5 + 'px'"
+          :x2="scaleX.map(tick) + 'px'"
+          :y2="height / 2 + 5 + 'px'"
+        />
+        <text font-size="12px" fill="#aaa" x="1.4%" y="74%">0%</text>
+        <text font-size="12px" fill="#aaa" x="91%" y="74%">100%</text>
       </g>
     </g>
     <line
@@ -62,18 +76,20 @@
         alignment-baseline="hanging"
         dominant-baseline="hanging"
         :text-anchor="labels[0].l"
-        :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
+        :style="{ 'font-size': compact ? '0.8rem' : '1rem' }"
         :x="labels[0].x"
         y="0%"
-        v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)" />
+        v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)"
+      />
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
         :text-anchor="labels[1].l"
-        :style="{ 'font-size': compact ? '0.8rem' : '1.2rem' }"
+        :style="{ 'font-size': compact ? '0.8rem' : '1rem' }"
         :x="labels[1].x"
         y="100%"
-        v-html="(vMarkerLabelsNames ? 'DNS: ' : '') + format(dns)" />
+        v-html="(vMarkerLabelsNames ? 'Offiziell: ' : '') + format(dns)"
+      />
     </g>
     <g v-if="vLegend">
       <!-- <g class="tickLinesLegend" v-if="vTicks">
@@ -175,7 +191,11 @@
       },
       vTicks: { // display ticks
         type: Boolean,
-        default: true
+        default: false
+      },
+      vSimpleTicks: { // display ticks for 0 and 100 %
+        type: Boolean,
+        default: false
       },
       disabled: {
         type: Boolean,
@@ -211,7 +231,7 @@
       calcSizes: function () {
         this.width = (this.$refs.vis.clientWidth || this.$refs.vis.parentNode.clientWidth) - this.markerR
         this.scaleX.range([this.markerR, this.width])
-        this.height = this.$refs.vis.clientHeight || this.$refs.vis.parentNode.clientHeight
+        this.height = this.$refs.vis.getBoundingClientRect().height || this.$refs.vis.parentNode.getBoundingClientRect().height
         if (typeof this.$refs.okfLabelLegend !== 'undefined') {
           this.legendLabelokfWidth = this.$refs.okfLabelLegend.clientWidth
           this.legendLabeldnsWidth = this.$refs.dnsLabelLegend.clientWidth
@@ -393,7 +413,7 @@
       transition-duration: 0.2s;
 
       &.sdg-label-tick {
-        fill: #222;
+        fill: #aaa;
         opacity: 1;
         font-size: 0.7rem;
       }

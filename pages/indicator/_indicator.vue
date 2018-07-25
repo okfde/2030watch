@@ -14,33 +14,17 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'DNS Indikator' : '2030 Indikator' }}
+            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
               <span v-if="category">
 
-                 <span v-if="indicator.author === 'dns' && indicator.dnsIconUebernommen" title="Übernommen" class="indicator-icon">
-                   <i class="icon-ok-circled" />
+                 <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
+                   <i class="icon-plus-squared" />
                  </span>
-                 <span v-if="indicator.author === 'dns' && indicator.dnsIconUngeeignet" title="Ungeeignet" class="indicator-icon">
-                   <i class="icon-cancel-circled" />
+                 <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
+                   <i class="icon-pencil-squared" />
                  </span>
-                 <span v-if="indicator.author === 'dns' && indicator.dnsIconNichtBewertbar" title="Nicht bewertbarer Zielwert" class="indicator-icon">
-                   <i class="icon-minus-circled" />
-                 </span>
-                 <span v-if="indicator.author === 'dns' && indicator.dnsIconNichtBerechenbar" title="Nicht berechenbar" class="indicator-icon">
-                   <i class="icon-help-circled" />
-                 </span>
-                 <span v-if="indicator.author === 'dns' && indicator.dnsIconInternationaleAuswirkungen" title="Internationale Auswirkungen" class="indicator-icon">
-                   <i class="icon-star-circled" />
-                 </span>
-
-                 <span v-if="indicator.author === 'okf' && indicator.okfIconNeuesThema" title="Neues Thema" class="indicator-icon">
-                   <i class="icon-plus-circled" />
-                 </span>
-                 <span v-if="indicator.author === 'okf' && indicator.okfIconModifiziert" title="Modifizierter Zielwert" class="indicator-icon">
-                   <i class="icon-cog-circled" />
-                 </span>
-                 <span v-if="indicator.author === 'okf' && indicator.okfIconInternationaleAuswirkungen" title="Internationale Auswirkungen" class="indicator-icon">
-                   <i class="icon-star-circled" />
+                 <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
+                   <i class="icon-minus-squared" />
                  </span>
 
               </span>
@@ -88,7 +72,7 @@
       <div class="wrapper columns columns-gutter">
         <div class="description">
           <h4>Methodik</h4>
-          <nuxt-link to="/projekt">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+          <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
         </div>
       </div>
 
@@ -250,6 +234,7 @@
       category () {
         const { indicator } = this
         const categories = []
+        // TODO check categories
         if (indicator.author === 'okf') { categories.push('neuer Indikator') }
         if (indicator.badIndicator) { categories.push('ungeeigneter Indikator') }
         if (indicator.keep) { categories.push('übernommener Indikator') }
@@ -330,7 +315,7 @@
       margin-top: $spacing / 2;
       display: block;
       width: 300px;
-      font-size: 0.7em;
+      font-size: 0.8em;
       background-color: #f9f9f9;
       border: 1px solid $color-mute;
     }

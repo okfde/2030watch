@@ -24,17 +24,25 @@
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
-          <div class="description description-dns columns columns-gutter">
+          <h2>{{ sdg.labelLong }}</h2>
+          <div class="description columns columns-gutter">
             <div>
-              <h2>Was wird gemessen?</h2>
               <p>
-                {{ sdg.textIndicators }} Die Deutsche Nachhaltigkeitsstrategie umfasst {{ numberToStringNominativ(sdg.n.dns) }} Indikator{{ sdg.n.dns > 1 ? 'en' : '' }} und 2030Watch erweiterter Indikatorenkatalog umfasst {{ numberToStringNominativ(sdg.n.alt) }} Indikator{{ sdg.n.okf > 1 ? 'en' : '' }}.
+                {{ sdg.textIndicators }}
               </p>
             </div>
-            <div class="sdg-process">
-              <div class="sdg-process-wrapper">
-                <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vTicks="true" />
-              </div>
+            <div>
+              <div class="progress-box">
+                <div :style="{ 'color': '#' + sdg.color }" class="label-progress-bar">
+                  SDG-Ziel für 2030 erreicht zu:
+                </div>
+                <div class="sdg-process">
+                  <div class="sdg-process-wrapper">
+                    <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
+                  </div>
+                </div>
+
+                </div>
             </div>
           </div>
         </div>
@@ -43,131 +51,136 @@
         <section class="indicators">
 
           <h2 class="vis-question">
-            Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
+            Wie nah sind wir einem nachhaltigeren Deutschland in 2030?
           </h2>
 
-          <small class="caption">Indikatorenkatalog</small>
           <section>
-            <ul class="indicator-list" ref="indicatorListDNS">
-              <li ref="labelDNS"><h3 class="dns">DNS</h3></li>
-              <li
-                ref="indicator"
-                v-for="(indicator, n) in indi_dns">
-                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
+            <ul class="indicator-list">
+              <li ref="labelDNS">
+                <h3 class="dns">Offiziell</h3>
+              </li>
+              <li ref="indicator" v-for="(indicator, n) in indi_dns">
+                <VisIndicator :i="indicator" :color="222" :colorScale="true" />
+              </li>
               <li class="legend" ref="indicatorLegend">
                 <ul>
+                  <li>
+                    <div class="legend-title">Kategorien</div>
+                  </li>
                   <li title="Dieser Indikator legt ein neues Thema vor, das noch nicht in der Deutschen Nachhaltigkeitsstrategie beinhaltet ist.">
                     <span class="label">
-                      <i class="icon-plus-circled" /> Neues Thema
-                    </span>
-                  </li>
-                  <li title="Der Indikator misst keine Veränderung in Bezug auf Nachhaltigkeit und misst die Wirkung einer Maßnahme nur unzureichend.">
-                    <span class="label">
-                      <i class="icon-cancel-circled" /> Ungeeignet
-                    </span>
-                  </li>
-                  <li title="Dieser Indikator ist ein offizieller Indikator der deutschen Nachhaltigkeitsstrategie und wird von 2030Watch ohne Veränderungen übernommen.">
-                    <span class="label">
-                      <i class="icon-ok-circled" /> Übernommen
+                      <i class="icon-plus-squared" /> Neuer Indikator
                     </span>
                   </li>
                   <li title="Dieser Indikator hat keinen genau definierten Zielwert und erlaubt es daher nicht, den Fortschritt bis 2030 zu bewerten.">
                     <span class="label">
-                      <i class="icon-minus-circled" /> Nicht bewertbarer Zielwert
+                      <i class="icon-minus-squared" /> Nicht berechenbar
                     </span>
                   </li>
-                  <li title="Dieser Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
+                  <li title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
-                      <i class="icon-cog-circled" /> Modifizierter Zielwert
+                      <i class="icon-pencil-squared" /> Modifizierter Zielwert
                     </span>
                   </li>
-                  <li title="Für diesen Indikator kann man auf Grund fehlender Daten den Ziel- oder Ausgangswert nicht berechnen.">
-                    <span class="label">
-                      <i class="icon-help-circled" /> Nicht berechenbar
+                  <br />
+                  <li>
+                    <div class="legend-title">Nachhaltigkeitsstufen</div>
+                  </li>
+                  <li>
+                    <span class="label" title="Indikator-Ziel zu 0 % – 40 % erreicht">
+                      <i class="icon" :style="{ 'background-color': stepsColors[0] }" /> Niedrig 0 % – 40 %
                     </span>
                   </li>
-                  <li title="Dieser Indikator misst internationale Auswirkungen durch Deutschland und zeigt somit die Verantwortung Deutschlands für nachhaltige Rahmenbedingungen in anderen Ländern.">
-                    <span class="label">
-                      <i class="icon-star-circled" /> Internationale Auswirkungen
+                  <li>
+                    <span class="label" title="Indikator-Ziel zu 40 % – 80 % erreicht">
+                      <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel 40 % – 80 %
                     </span>
                   </li>
-                  <!-- <li class="label">
+                  <li>
+                    <span class="label" title="Indikator-Ziel zu 80 % – 100 % erreicht">
+                      <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
+                    </span>
+                  </li>
+                  <br />
+                  <li class="label link-to-method">
                     Mehr zu unserer Methode
-                    <nuxt-link to="/projekt">
+                    <nuxt-link to="/projekt#methode">
                       hier
                     </nuxt-link>
-                  </li> -->
+                  </li>
                 </ul>
               </li>
             </ul>
           </section>
+
           <section class="indicator-lines">
             <svg ref="indicatorLines">
-              <line
-                v-for="indicator in linesNormal"
-                :x1="indicator"
-                :x2="indicator"
-                y1="0%"
-                y2="100%" />
-              <path
-                v-for="indicator in linesMod"
-                stroke-dasharray="5, 5"
-                :d="indicator" />
+              <path v-for="indicator in linesMod" stroke-dasharray="5, 5" :d="indicator" />
             </svg>
           </section>
+
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
-              <li ref="labelOKF"><h3 class="okf">2030Watch</h3></li>
-              <li
-                v-for="(indicator, n) in indi_dns_keep">
-                <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
-              <li
-                v-for="(indicator, n) in sdg.ind.okf">
+              <li ref="labelOKF">
+                <h3 class="okf">2030Watch</h3>
+              </li>
+              <li v-for="(indicator, n) in indi_okf">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" /></li>
             </ul>
           </section>
         </section>
       </div>
+
       <div class="wrapper">
-        <div class="indicator-overview columns columns-rows">
-          <section class="description description-dns columns columns-gutter">
-            <div>
-              <hgroup>
-                <h3 class="dns">
-                  Deutsche Nachhaltigkeitsstrategie Indikatorenkatalog
-                </h3>
-              </hgroup>
-              <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
-                coming soon
-              </p>
-              <p v-else>
-                {{ sdg.summaryDns }}
-              </p>
-              <span class="process dns" v-html="format(dns)" />
-            </div>
-            <div>
-              <hgroup>
-                <h3 class="okf">
-                  2030Watch Indikatorenkatalog
-                </h3>
-              </hgroup>
-              <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
-                coming soon
-              </p>
-              <p v-else>
-                {{ sdg.summary2030 }}
-              </p>
-              <span class="process okf" v-html="format(okf)" />
-            </div>
-          </section>
+        <h2>Wie wird der Fortschritt berechnet?</h2>
+        <div>
+          Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
+          Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
+          pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
+          über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+          also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
         </div>
+      </div>
+
+      <div class="wrapper">
+        <h3 :style="{ 'color': '#' + sdg.color }">Indikatorenlisten:</h3>
+        <section class="description columns columns-gutter">
+          <div>
+            <hgroup>
+              <h3 class="dns">
+                Deutsche Nachhaltigkeitsstrategie
+              </h3>
+            </hgroup>
+            <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
+              coming soon
+            </p>
+            <p v-else>
+              {{ sdg.summaryDns }}
+            </p>
+            <span class="process dns" v-html="format(dns)" />
+          </div>
+          <div>
+            <hgroup>
+              <h3 class="okf">
+                2030Watch
+              </h3>
+            </hgroup>
+            <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
+              coming soon
+            </p>
+            <p v-else>
+              {{ sdg.summary2030 }}
+            </p>
+            <span class="process okf" v-html="format(okf)" />
+          </div>
+        </section>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapGetters } from 'vuex'
   import VisLeiste from '~/components/VisLeiste.vue'
   import VisProgress from '~/components/VisProgress.vue'
   import VisIndicator from '~/components/VisIndicator.vue'
@@ -189,15 +202,15 @@
     },
     data: function () {
       return {
-        indicatorWidth: 150, // css default value
+        indicatorWidth: 190, // css default value
         indicatorLinesHeight: 200, // css default value,
         indicatorMargin: 10
       }
     },
     mounted () {
       this.indicatorWidth = this.$refs.indicator[0].clientWidth
-      this.indicatorLinesHeight = this.$refs.indicatorLines.clientHeight
-      this.$refs.indicatorLegend.style.marginLeft = this.indicatorWidth + this.indicatorMargin + 'px'
+      this.indicatorLinesHeight = this.$refs.indicatorLines.getBoundingClientRect().height
+      this.$refs.indicatorLegend.style.marginLeft = (this.indicatorWidth + this.indicatorMargin) / 2 + 'px'
       const marginLeft = Math.max(this.$refs.labelOKF.clientWidth, this.$refs.labelDNS.clientWidth)
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
       this.$refs.labelOKF.style.width = marginLeft + 'px'
@@ -249,6 +262,9 @@
       ...mapState([
         'sdgs'
       ]),
+      ...mapGetters([
+        'stepsColors'
+      ]),
       sdg () {
         return this.sdgs[this.$route.params.sdg]
       },
@@ -256,13 +272,18 @@
         return require('~/assets/img/sdg/E_SDG_goals_icons-individual-rgb-' + ('00' + this.sdg.number).substr(-2) + '.png')
       },
       indi_dns_keep: function () {
-        return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['modTarget', 'uncalculable', 'id'])
+        return _.sortBy(_.filter(this.sdg.ind.dns, 'keep'), ['id'])
       },
+      // modified indicators
       indi_dns_not_keep: function () {
+        // console.log(_.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id']))
         return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id'])
       },
-      indi_dns: function () { // Keep sorting order
-        return _.concat(this.indi_dns_keep, this.indi_dns_not_keep)
+      indi_dns: function () { // assure sorting order
+        return _.sortBy(this.sdg.ind.dns, 'id')
+      },
+      indi_okf: function () {
+        return _.sortBy(this.sdg.ind.okf, 'id')
       },
       dns: function () {
         return this.sdg.values.dns
@@ -274,23 +295,28 @@
         const amount = this.sdg.n.udns + this.sdg.n.uokf
         return 100 / amount
       },
-      linesNormal: function () {
-        const indicators = _.filter(this.sdg.ind.dns, indicator => {
-          return indicator.keep
-        })
-        return _.map(indicators, (indicator, n) => {
-          return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
-        })
-      },
+      // linesNormal: function () {
+      //   const indicators = _.filter(this.sdg.ind.dns, indicator => {
+      //     return indicator.keep
+      //   })
+      //   return _.map(indicators, (indicator, n) => {
+      //     return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
+      //   })
+      // },
       linesMod: function () {
-        const offset = this.linesNormal.length
-        const indicators = _.filter(this.sdg.ind.dns, indicator => {
-          return indicator.modTarget
+        const modifiedOkfIndicators = _.sortBy(_.filter(this.sdg.ind.okf, 'moddedTarget'), 'id')
+        let dnsArray = []
+        modifiedOkfIndicators.map(indi => {
+          dnsArray.push(indi.moddedTarget)
         })
-        return _.map(indicators, (indicator, n) => {
-          const position = _.findIndex(this.sdg.ind.okf, { 'id': indicator.altIndicator })
-          const x1 = (n + offset + 0.5) * this.indicatorWidth + ((n + offset) * this.indicatorMargin * 2)
-          const x2 = (n + offset + position + 0.5) * this.indicatorWidth + ((n + offset + position) * this.indicatorMargin * 2)
+        const indicatorsDns = _.filter(this.indi_dns_not_keep, indicator => {
+          return dnsArray.indexOf(indicator.id) > -1
+        })
+        return _.map(indicatorsDns, (indicator) => {
+          const positionDns = _.findIndex(this.indi_dns, { 'id': indicator.id })
+          const positionOkf = _.findIndex(this.indi_okf, { 'moddedTarget': indicator.id })
+          const x1 = (positionDns + 0.5) * this.indicatorWidth + (positionDns * this.indicatorMargin * 2)
+          const x2 = (positionOkf + 0.5) * this.indicatorWidth + (positionOkf * this.indicatorMargin * 2)
           const y1 = 0
           const y2 = this.indicatorLinesHeight
           return `M${x1} ${y1} C${x1} ${y2 / 3}, ${x2}, ${y2 / 3 * 2}, ${x2} ${y2}`
@@ -322,8 +348,8 @@
 
     .sdg-process-wrapper {
       width: 70%;
-        min-width: 400px;
-        max-height: 5rem;
+      min-width: 400px;
+      max-height: 5rem;
 
       svg {
         width: 100%;
@@ -333,7 +359,7 @@
   }
 
   .indicator-overview {
-    margin: 4rem 0;
+    margin: 3rem 0;
     flex-direction: column;
 
     & > section {
@@ -346,7 +372,7 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .02);
     box-shadow: inset 5px 5px 20px 0px rgba(116, 116, 116, 0.25);
-    overflow: scroll;
+    overflow: auto;
     max-width: 100%;
   }
 
@@ -375,7 +401,6 @@
 
     .indicator-lines {
       svg {
-        width: 100%;
         height: 100px;
         margin: 0 10px; // 10px is fixed in js!
 
@@ -405,7 +430,7 @@
 
     .process {
       display: block;
-      padding: 2rem;
+      padding: 0.5rem;
       text-align: center;
       font-size: 3rem;
       font-weight: bold;
@@ -418,5 +443,43 @@
 
   .vis-question {
     padding-left: calc(#{$spacing} + 10px);
+  }
+
+  .icon {
+    display: inline-block;
+    border-radius: 100%;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+  }
+
+  .label {
+    font-size: 1rem;
+
+    > i {
+      font-size: 1.1rem
+    }
+  }
+
+  .legend-title {
+    font-weight:bold;
+    font-size: 1.1rem;
+  }
+
+  .link-to-method {
+    line-height: 1.2rem;
+  }
+
+  .progress-box {
+    padding: 25px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+    margin: 0;
+    background-color: white;
+  }
+
+  .label-progress-bar {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    font-size: 1.1rem;
   }
 </style>

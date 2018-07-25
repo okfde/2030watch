@@ -1,37 +1,29 @@
 <template>
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
-    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="'»' + i.label + '« zu ' + format(i.progress, ...[,,], true) + ' erreicht.'">
+    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
+      <h5>{{ i.label }}</h5>
+      <div class="values value-target">Indikator-Ziel erreicht zu:</div>
+
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
+
+      <div class="values">
+        <div>IST: {{ i.current ? i.current : '-' }} <span>{{ i.unitShort }}</span></div>
+        <div>SOLL: {{ i.target != undefined ? i.target : '-' }} <span>{{ i.target != undefined ? i.unitShort : '' }}</span></div>
+      </div>
+
       <ul class="labels">
-
-        <li v-if="i.author === 'dns' && i.dnsIconUebernommen" title="Übernommen">
-          <i class="icon-ok-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconUngeeignet" title="Ungeeignet">
-          <i class="icon-cancel-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconNichtBewertbar" title="Nicht bewertbarer Zielwert">
-          <i class="icon-minus-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconNichtBerechenbar" title="Nicht berechenbar">
-          <i class="icon-help-circled" />
-        </li>
-        <li v-if="i.author === 'dns' && i.dnsIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
-          <i class="icon-star-circled" />
+        <li v-if="i.author === 'dns' && i.uncalculable" title="Nicht berechenbar">
+          <i class="icon-minus-squared" />
         </li>
 
-        <li v-if="i.author === 'okf' && i.okfIconNeuesThema" title="Neues Thema">
-          <i class="icon-plus-circled" />
+        <li v-if="i.author === 'okf' && i.newIndicator" title="Neuer Indikator">
+          <i class="icon-plus-squared" />
         </li>
-        <li v-if="i.author === 'okf' && i.okfIconModifiziert" title="Modifizierter Zielwert">
-          <i class="icon-cog-circled" />
-        </li>
-        <li v-if="i.author === 'okf' && i.okfIconInternationaleAuswirkungen" title="Internationale Auswirkungen">
-          <i class="icon-star-circled" />
+        <li v-if="i.author === 'okf' && !i.newIndicator" title="Modifizierter Zielwert">
+          <i class="icon-pencil-squared" />
         </li>
 
       </ul>
-      <h5>{{ i.label }}</h5>
     </div>
   </nuxt-link>
 </template>
@@ -69,18 +61,12 @@
         'stepsColors'
       ]),
       colorChart: function () {
-        if (this.colorScale) {
-          const range = 100 / this.stepsColors.length
-          const i = Math.min(Math.max(0, this.i.progress), 100)
-          const n = Math.round(i / range)
-          const color = this.stepsColors[n < 1 ? 0 : n - 1]
-          if (typeof color !== 'undefined') {
-            return color.substr(1)
-          } else {
-            return this.color
-          }
+        if (this.i.progress < 40) {
+          return this.stepsColors[0].substr(1)
+        } else if (this.i.progress < 80) {
+          return this.stepsColors[1].substr(1)
         } else {
-          return this.color
+          return this.stepsColors[2].substr(1)
         }
       }
     },
@@ -98,9 +84,9 @@
 
   .vis-indicator {
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     background-color: #fff;
-    width: 140px;
+    width: 210px;
     line-height: 1rem;
 
     &:hover {
@@ -131,21 +117,23 @@
     h5 {
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.75rem;
+      font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 3.8rem;
-      margin-bottom: 0.5rem;
+      height: 4.5rem;
+      margin-top: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
+      font-weight: bold;
+      line-height: 1.15rem;
     }
 
     .labels {
       margin: -0.1rem 0 0.1rem;
-      width: 100%;
       text-align: right;
       min-height: 16px;
       color: $color-mute;
       opacity: 0.8;
+      font-size: 1.1rem;
 
       li {
         margin: 0 0.1rem;
@@ -156,5 +144,27 @@
         }
       }
     }
+  }
+
+  .values {
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+
+    div {
+      padding: 0.2rem;
+    }
+
+    span {
+      font-size: 0.85rem;
+      line-height: 0.95rem;
+    }
+  }
+
+  .value-target {
+    font-size: 0.9rem;
   }
 </style>

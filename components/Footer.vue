@@ -50,6 +50,7 @@
 
   .social-icons {
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 
     li {
       display: inline-block;
@@ -62,7 +63,8 @@
   }
 
   .tracking-info > p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
 
   .btn-newsletter {
