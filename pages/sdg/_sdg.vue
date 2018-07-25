@@ -372,7 +372,7 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .02);
     box-shadow: inset 5px 5px 20px 0px rgba(116, 116, 116, 0.25);
-    overflow: scroll;
+    overflow: auto;
     max-width: 100%;
   }
 
@@ -401,7 +401,6 @@
 
     .indicator-lines {
       svg {
-        width: 100%;
         height: 100px;
         margin: 0 10px; // 10px is fixed in js!
 
