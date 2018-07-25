@@ -160,6 +160,7 @@
   import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
   import VisLeiste from '~/components/VisLeiste.vue'
+  import _ from 'lodash'
 
   export default {
     validate ({ params, store }) {
@@ -176,8 +177,8 @@
     },
     methods: {
       format: format,
-      buildCSV: function (key, arr) {
-        const rows = [[key, 'value'], ...arr]
+      buildCSV: function (arr) {
+        const rows = [...arr]
         let csvContent = 'data:text/csv;charset=utf-8,'
         rows.forEach(row => {
           csvContent += row.join(',') + '\r\n'
@@ -204,6 +205,15 @@
       },
       hasCountries () {
         return typeof this.indicator.countries !== 'undefined'
+      },
+      metadata () {
+        return [
+          ['metadata', 'value'],
+          // ['title', this.indicator.title],
+          ['datasource', this.indicator['data source']],
+          ['sourcelink', this.indicator.sourcelink],
+          ['license', this.indicator.license]
+        ]
       },
       countries () {
         const keys = Object.keys(this.indicator.countries)
@@ -245,10 +255,12 @@
         return categories.length ? categories.join(', ') : false
       },
       countriesDownload () {
-        return this.buildCSV('country', this.countries)
+        const data = _.concat(this.metadata, [['country', 'value']], this.countries)
+        return this.buildCSV(data)
       },
       timelineDownload () {
-        return this.buildCSV('year', this.timeline)
+        const data = _.concat(this.metadata, [['year', 'value']], this.timeline)
+        return this.buildCSV(data)
       }
     },
     components: {
