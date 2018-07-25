@@ -33,10 +33,9 @@
             </div>
             <div>
               <div class="progress-box">
-                <div class="label-progress-bar">
+                <div :style="{ 'color': '#' + sdg.color }" class="label-progress-bar">
                   SDG-Ziel für 2030 erreicht zu:
                 </div>
-
                 <div class="sdg-process">
                   <div class="sdg-process-wrapper">
                     <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
@@ -133,52 +132,48 @@
       </div>
 
       <div class="wrapper">
-        <section>
-          <h2>Wie wird der Fortschritt berechnet?</h2>
-          <div>
-            Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
-            Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
-            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
-            über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
-            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
-          </div>
-        </section>
+        <h2>Wie wird der Fortschritt berechnet?</h2>
+        <div>
+          Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
+          Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
+          pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
+          über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+          also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+        </div>
       </div>
 
       <div class="wrapper">
-        <div class="indicator-overview columns columns-rows">
-          <h2>Indikatorenlisten</h2>
-          <section class="description columns columns-gutter">
-            <div>
-              <hgroup>
-                <h3 class="dns">
-                  Deutsche Nachhaltigkeitsstrategie
-                </h3>
-              </hgroup>
-              <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
-                coming soon
-              </p>
-              <p v-else>
-                {{ sdg.summaryDns }}
-              </p>
-              <span class="process dns" v-html="format(dns)" />
-            </div>
-            <div>
-              <hgroup>
-                <h3 class="okf">
-                  2030Watch
-                </h3>
-              </hgroup>
-              <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
-                coming soon
-              </p>
-              <p v-else>
-                {{ sdg.summary2030 }}
-              </p>
-              <span class="process okf" v-html="format(okf)" />
-            </div>
-          </section>
-        </div>
+        <h3 :style="{ 'color': '#' + sdg.color }">Indikatorenlisten:</h3>
+        <section class="description columns columns-gutter">
+          <div>
+            <hgroup>
+              <h3 class="dns">
+                Deutsche Nachhaltigkeitsstrategie
+              </h3>
+            </hgroup>
+            <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
+              coming soon
+            </p>
+            <p v-else>
+              {{ sdg.summaryDns }}
+            </p>
+            <span class="process dns" v-html="format(dns)" />
+          </div>
+          <div>
+            <hgroup>
+              <h3 class="okf">
+                2030Watch
+              </h3>
+            </hgroup>
+            <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
+              coming soon
+            </p>
+            <p v-else>
+              {{ sdg.summary2030 }}
+            </p>
+            <span class="process okf" v-html="format(okf)" />
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -480,12 +475,12 @@
     padding: 25px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     margin: 0;
+    background-color: white;
   }
 
   .label-progress-bar {
     margin-bottom: 2rem;
     margin-left: 2rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, .7);
+    font-size: 1.1rem;
   }
 </style>
