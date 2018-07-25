@@ -98,7 +98,7 @@
     align-items: center;
     justify-content: center;
     // margin: 0.5rem 1.8rem 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     height: 3rem;
 
     .vis-number {
