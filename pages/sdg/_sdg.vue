@@ -9,6 +9,7 @@
     <header class="inpage-header">
       <div class="wrapper">
         <small class="caption">SDG {{ sdg.number }}</small>
+
         <section class="columns columns-gutter">
           <div>
             <h1>{{ sdg.labelShort }}</h1>
@@ -334,7 +335,9 @@
   }
 
   .sdg-image {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       max-height: 200px;
