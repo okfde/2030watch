@@ -2,13 +2,22 @@
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
       <h5>{{ i.label }}</h5>
-      <div class="values value-target">Indikator-Ziel erreicht zu:</div>
+      <div class="values value-target">Indikator-Ziel für 2030 erreicht zu:</div>
 
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
       <div class="values">
-        <div>IST: {{ i.current ? i.current : '-' }} <span>{{ i.unitShort }}</span></div>
-        <div>SOLL: {{ i.target != undefined ? i.target : '-' }} <span>{{ i.target != undefined ? i.unitShort : '' }}</span></div>
+        <div class="values-padding">
+          <span class="values-progress">IST: </span>
+          {{ i.current ? i.current : '-' }}
+          <span class="values-unit">{{ i.unitShort }}</span>
+        </div>
+
+        <div class="values-padding">
+          <span class="values-progress">SOLL: </span>
+          {{ i.target != undefined ? i.target : '-' }}
+          <span class="values-unit">{{ i.target != undefined ? i.unitShort : '' }}</span>
+        </div>
       </div>
 
       <ul class="labels">
@@ -120,7 +129,7 @@
       font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 4.5rem;
+      height: 3.4rem;
       margin-top: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
@@ -152,16 +161,20 @@
     text-align: center;
     color: black;
     font-size: 1.1rem;
-    line-height: 1.2rem;
+    line-height: 1.1rem;
+  }
 
-    div {
-      padding: 0.2rem;
-    }
+  .values-padding {
+    padding: 0.2rem;
+  }
 
-    span {
-      font-size: 0.85rem;
-      line-height: 0.95rem;
-    }
+  .values-progress {
+    font-weight: bold;
+  }
+
+  .values-unit {
+    font-size: 0.85rem;
+    line-height: 0.95rem;
   }
 
   .value-target {

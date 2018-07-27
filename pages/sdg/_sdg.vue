@@ -8,9 +8,11 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-        <small class="caption">SDG {{ sdg.number }}</small>
+
         <section class="columns columns-gutter">
           <div>
+            <small class="caption">SDG {{ sdg.number }}</small>
+
             <h1>{{ sdg.labelShort }}</h1>
             <p>{{ sdg.textIntro }}</p>
           </div>
@@ -31,7 +33,8 @@
                 {{ sdg.textIndicators }}
               </p>
             </div>
-            <div>
+
+            <div class="progress-box-wrapper">
               <div class="progress-box">
                 <div :style="{ 'color': '#' + sdg.color }" class="label-progress-bar">
                   SDG-Ziel für 2030 erreicht zu:
@@ -41,9 +44,9 @@
                     <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
                   </div>
                 </div>
-
-                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -132,18 +135,17 @@
       </div>
 
       <div class="wrapper">
-        <h2>Wie wird der Fortschritt berechnet?</h2>
-        <div>
-          Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
-          Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
-          pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
-          über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
-          also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+        <div class="explainer-progress">
+          <h2>Wie wird der Fortschritt berechnet?</h2>
+          <div>
+            Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
+            Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
+            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
+            über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+          </div>
         </div>
-      </div>
 
-      <div class="wrapper">
-        <h3 :style="{ 'color': '#' + sdg.color }">Indikatorenlisten:</h3>
         <section class="description columns columns-gutter">
           <div>
             <hgroup>
@@ -175,6 +177,7 @@
           </div>
         </section>
       </div>
+
     </div>
   </div>
 </template>
@@ -334,7 +337,9 @@
   }
 
   .sdg-image {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       max-height: 200px;
@@ -400,6 +405,9 @@
     }
 
     .indicator-lines {
+      margin-top: -1rem;
+      margin-bottom: -1.5rem;
+
       svg {
         height: 100px;
         margin: 0 10px; // 10px is fixed in js!
@@ -470,16 +478,26 @@
     line-height: 1.2rem;
   }
 
+  .progress-box-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .progress-box {
     padding: 25px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     margin: 0;
     background-color: white;
+    background-color: rgba(0, 0, 0, .002);
   }
 
   .label-progress-bar {
     margin-bottom: 2rem;
     margin-left: 2rem;
     font-size: 1.1rem;
+  }
+
+  .explainer-progress {
+    margin-bottom: 1.3rem;
   }
 </style>
