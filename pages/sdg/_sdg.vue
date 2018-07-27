@@ -32,7 +32,8 @@
                 {{ sdg.textIndicators }}
               </p>
             </div>
-            <div>
+
+            <div class="progress-box-wrapper">
               <div class="progress-box">
                 <div :style="{ 'color': '#' + sdg.color }" class="label-progress-bar">
                   SDG-Ziel für 2030 erreicht zu:
@@ -42,9 +43,9 @@
                     <VisProgress :sdg="sdg" :vMarkerLabels="false" :compact="false" :vMarkerLabelsNames="true" :invert="false" :vSimpleTicks="true" />
                   </div>
                 </div>
-
-                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -403,6 +404,9 @@
     }
 
     .indicator-lines {
+      margin-top: -1rem;
+      margin-bottom: -1.5rem;
+
       svg {
         height: 100px;
         margin: 0 10px; // 10px is fixed in js!
@@ -471,6 +475,11 @@
 
   .link-to-method {
     line-height: 1.2rem;
+  }
+
+  .progress-box-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .progress-box {
