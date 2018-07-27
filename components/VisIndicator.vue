@@ -129,7 +129,7 @@
       font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 4.5rem;
+      height: 3.4rem;
       margin-top: 0.5rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
@@ -161,7 +161,7 @@
     text-align: center;
     color: black;
     font-size: 1.1rem;
-    line-height: 1.2rem;
+    line-height: 1.1rem;
   }
 
   .values-padding {

@@ -8,10 +8,11 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-        <small class="caption">SDG {{ sdg.number }}</small>
 
         <section class="columns columns-gutter">
           <div>
+            <small class="caption">SDG {{ sdg.number }}</small>
+
             <h1>{{ sdg.labelShort }}</h1>
             <p>{{ sdg.textIntro }}</p>
           </div>
@@ -134,18 +135,17 @@
       </div>
 
       <div class="wrapper">
-        <h2>Wie wird der Fortschritt berechnet?</h2>
-        <div>
-          Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
-          Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
-          pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
-          über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
-          also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+        <div class="explainer-progress">
+          <h2>Wie wird der Fortschritt berechnet?</h2>
+          <div>
+            Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
+            Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
+            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
+            über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+          </div>
         </div>
-      </div>
 
-      <div class="wrapper">
-        <h3 :style="{ 'color': '#' + sdg.color }">Indikatorenlisten:</h3>
         <section class="description columns columns-gutter">
           <div>
             <hgroup>
@@ -177,6 +177,7 @@
           </div>
         </section>
       </div>
+
     </div>
   </div>
 </template>
@@ -494,5 +495,9 @@
     margin-bottom: 2rem;
     margin-left: 2rem;
     font-size: 1.1rem;
+  }
+
+  .explainer-progress {
+    margin-bottom: 1.3rem;
   }
 </style>
