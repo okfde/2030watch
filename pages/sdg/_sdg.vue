@@ -478,6 +478,7 @@
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     margin: 0;
     background-color: white;
+    background-color: rgba(0, 0, 0, .002);
   }
 
   .label-progress-bar {
