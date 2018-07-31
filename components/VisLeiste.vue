@@ -16,7 +16,7 @@
       :key="slug">
       <span class="sdg-number">{{ sdg.number }}</span>
       <nuxt-link :to="'/sdg/' + slug" class="sdg-link">
-        {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
+        SDG {{ sdg.number }}&#8239;&mdash;&#8239;{{ sdg.labelShort }}
       </nuxt-link>
     </li>
   </ul>
