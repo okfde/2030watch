@@ -14,33 +14,74 @@
         <section class="columns columns-gutter">
           <div>
             <p>{{ indicator.txtintroduction }}</p>
-            <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
-              <span v-if="category">
-
-                 <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
-                   <i class="icon-plus-squared" />
-                 </span>
-                 <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
-                   <i class="icon-pencil-squared" />
-                 </span>
-                 <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
-                   <i class="icon-minus-squared" />
-                 </span>
-
-              </span>
-            </p>
           </div>
-          <div class="progress">
-            <VisPieChart :value="indicator.progress" fill="ffffff" :background="indicator.sdg.color" />
-          </div>
+          <div></div>
         </section>
+
+        <div class="indicator-categories">
+          <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
+            <span v-if="category">
+               <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
+                 <i class="icon-plus-squared" />
+               </span>
+               <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
+                 <i class="icon-pencil-squared" />
+               </span>
+               <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
+                 <i class="icon-minus-squared" />
+               </span>
+            </span>
+          </p>
+        </div>
       </div>
     </header>
+
     <div class="content">
       <VisLeiste :current="indicator.sdg.slug" />
+
+      <div class="indicator-navigation">
+
+        <span class="navigation-backwards">
+          <span v-if="getCurrentIndicatorCounter !== 0">
+            <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
+             :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
+             :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter - 1].sdg + ' – '
+              + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
+              + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+            >
+              <span class="vis-dl">
+                <i class="icon-angle-left" />
+                <span>
+                  {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
+                </span>
+              </span>
+            </nuxt-link>
+          </span>
+        </span>
+
+        <span class="navigation-forwards">
+          <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
+            <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
+              :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter + 1].color }"
+              :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter + 1].sdg + ' – '
+                + this.indiNav[getCurrentIndicatorCounter + 1].label + ' – '
+                + (this.indiNav[getCurrentIndicatorCounter + 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+            >
+              <span class="vis-dl">
+                <span>
+                  {{ this.indiNav[getCurrentIndicatorCounter + 1].label }}
+                </span>
+                <i class="icon-angle-right" />
+              </span>
+            </nuxt-link>
+          </span>
+        </span>
+
+      </div>
+
       <div class="wrapper">
         <div class="box vis" v-if="hasCountries && countries.length">
-          <h2>Wo steht Deutschland im internationalen Vergleich?</h2>
+          <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
           <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</h5>
           <VisBarChart :values="countries" />
           <div class="vis-dl">
@@ -58,13 +99,17 @@
       </div>
 
       <div class="wrapper">
-        <h2>Wie geht 2030Watch mit diesem Indikator um?</h2>
+        <h2>
+          Weitere Informationen zu diesem Indikator
+        </h2>
       </div>
       <div class="wrapper description">
         <h4>Beschreibung</h4>
         <p>{{ indicator.txtdescription }}</p>
-        <h4>2030Watch-Kategorie</h4>
+        <h4>Kategorie</h4>
         <p>{{ indicator.txtcategory }}</p>
+        <h4>Ausgangswert (Fortschrittsberechnung)</h4>
+        <p>{{ indicator.txtstartingvalue }}</p>
         <h4>Zielwert</h4>
         <p>{{ indicator.txttarget }}</p>
       </div>
@@ -82,14 +127,14 @@
           <table class="box">
             <tbody>
               <tr>
-                <td class="title">Zielwert</td>
+                <td class="title">Zielwert/SOLL</td>
                 <td v-html="format(indicator['target'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td class="title">Aktueller Wert ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
+                <td class="title">Aktueller Wert/IST ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
               </tr>
               <tr>
-                <td class="title">Startwert ({{ indicator['startYear'] }})</td>
+                <td class="title">Ausgangswert Fortschrittsberechnung ({{ indicator['startYear'] }})</td>
                 <td v-html="format(indicator['start'], 1, indicator['unit'])" />
               </tr>
               <tr v-if="indicator['license']">
@@ -160,6 +205,7 @@
   import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
   import VisLeiste from '~/components/VisLeiste.vue'
+  import _ from 'lodash'
 
   export default {
     validate ({ params, store }) {
@@ -175,9 +221,9 @@
       }
     },
     methods: {
-      format: format,
-      buildCSV: function (key, arr) {
-        const rows = [[key, 'value'], ...arr]
+      format,
+      buildCSV: function (arr) {
+        const rows = [...arr]
         let csvContent = 'data:text/csv;charset=utf-8,'
         rows.forEach(row => {
           csvContent += row.join(',') + '\r\n'
@@ -197,13 +243,25 @@
     },
     computed: {
       ...mapState([
-        'data'
+        'data', 'indiNav'
       ]),
+      getCurrentIndicatorCounter () {
+        return _.findIndex(this.indiNav, {id: this.indicator.id, author: this.indicator.author})
+      },
       indicator () {
         return this.data[this.$route.params.indicator]
       },
       hasCountries () {
         return typeof this.indicator.countries !== 'undefined'
+      },
+      metadata () {
+        return [
+          ['metadata', 'value'],
+          // ['title', this.indicator.title],
+          ['datasource', this.indicator['data source']],
+          ['sourcelink', this.indicator.sourcelink],
+          ['license', this.indicator.license]
+        ]
       },
       countries () {
         const keys = Object.keys(this.indicator.countries)
@@ -245,10 +303,12 @@
         return categories.length ? categories.join(', ') : false
       },
       countriesDownload () {
-        return this.buildCSV('country', this.countries)
+        const data = _.concat(this.metadata, [['country', 'value']], this.countries)
+        return this.buildCSV(data)
       },
       timelineDownload () {
-        return this.buildCSV('year', this.timeline)
+        const data = _.concat(this.metadata, [['year', 'value']], this.timeline)
+        return this.buildCSV(data)
       }
     },
     components: {
@@ -265,8 +325,8 @@
 
   .progress {
     display: flex;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
 
     > * {
     max-height: 100px;
@@ -350,4 +410,22 @@
   .indicator-icon {
     margin-left: .5em;
   }
+
+  .indicator-categories {
+    margin-top: 1rem;
+  }
+
+  .indicator-navigation {
+    margin-top: 1rem;
+  }
+
+  .navigation-backwards {
+    margin-left: 1rem;
+  }
+
+  .navigation-forwards {
+    float: right;
+    margin-right: 1rem;
+  }
+
 </style>

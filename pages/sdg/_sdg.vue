@@ -279,7 +279,6 @@
       },
       // modified indicators
       indi_dns_not_keep: function () {
-        // console.log(_.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id']))
         return _.sortBy(_.filter(this.sdg.ind.dns, ['keep', false]), ['id'])
       },
       indi_dns: function () { // assure sorting order

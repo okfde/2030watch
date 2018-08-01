@@ -22,8 +22,6 @@ const urlSdgs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhzvOoTo2_mxpq
 const sdgHeader = ['number', 'slug', 'color', 'labelShort', 'labelLong', 'textIntro', 'textIndicators', 'summaryDns', 'summary2030']
 // row the should be used as key
 const sdgNumbers = ['number']
-// path to where the file with SDG data should be written
-const sdgFile = './sdgs.json'
 
 // Used to set label based on process value
 const sdgRatings = [
@@ -39,32 +37,62 @@ const sdgRatings = [
   }]
 
 // Load SDG data
-console.log('Requesting SDG data…')
+// console.log('Requesting SDG data…')
 requestURL(urlSdgs, raw => {
-  console.log('Parsing SDG data…')
+  // console.log('Parsing SDG data…')
   // Parse csv file
   parseCSVString(raw, json => {
-    console.log('Splitting SDG data…')
+    // console.log('Splitting SDG data…')
     // Split JSON into header and content
     splitJSON(json, splitedJSON => {
       const [rawHeader, content] = splitedJSON
-      console.log('Cleaning SDG header data…')
+      // console.log('Cleaning SDG header data…')
       // Clean header names
       cleanArrayStrings(rawHeader, header => {
-        console.log('Checking SDG header data…')
+        // console.log('Checking SDG header data…')
         // Check if header contains necessary keys
         checkArrayStr(sdgHeader, header, () => {
-          console.log('Building SDG data…')
-          // Create an array with defined keys
+          // console.log('Building SDG data…')
+          // Create an array with defined keys (of sdg file)
           const arr = buildNewArray(sdgHeader, header, content, sdgNumbers)
-          console.log('Requesting Indicator data…')
+          // console.log('Requesting Indicator data…')
           // Request indicator data to merge data
           requestIndicators(arr, indicators => {
-            console.log('Processing SDG data…')
+            // console.log('Processing SDG data…')
+
             const data = processSDGs(arr, indicators)
-            console.log('Writing SDG data…')
+            // console.log('Writing SDG data…')
             // Write merged file to json
-            writeJSONFile(sdgFile, formatArrayToHash(data, 'slug'))
+
+            const indiNavigation = []
+            // create new file
+            data.map(elem => {
+              _.forEach(elem.ind.dns, indi => {
+                indiNavigation.push({
+                  slug: indi.slug,
+                  label: indi.label,
+                  id: indi.id,
+                  author: indi.author,
+                  sdg: indi.sdg,
+                  color: arr[indi.sdg].color
+                })
+              })
+              _.forEach(elem.ind.okf, indi => {
+                indiNavigation.push({
+                  slug: indi.slug,
+                  label: indi.label,
+                  id: indi.id,
+                  author: indi.author,
+                  sdg: indi.sdg,
+                  color: arr[indi.sdg].color
+                })
+              })
+            })
+
+            writeJSONFile('./indiNav.json', indiNavigation)
+
+            // path to where the file with SDG data should be written
+            writeJSONFile('./sdgs.json', formatArrayToHash(data, 'slug'))
           })
         })
       })
@@ -112,8 +140,8 @@ function processSDGs (sdgs, allIndicators) {
       },
       'ind': {
         // Delete unused keys in array
-        'dns': deleteKeysInHashArray(indiDns, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory']),
-        'okf': deleteKeysInHashArray(indiOkf, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory'])
+        'dns': deleteKeysInHashArray(indiDns, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue']),
+        'okf': deleteKeysInHashArray(indiOkf, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue'])
       },
       'n': {
         // Count the amount of indicators for various properties
@@ -167,31 +195,30 @@ const indiSplitKey = '2030Id'
 const indiDnsID = 'dnsId'
 // Key that indicates the id for okf indicators
 const indiOkfID = '2030Id'
-// Target file name for the indicators
-const indiFile = './indicators.json'
 
 // Load indicator meta data
 function requestIndicators (sdgs, callback) {
-  console.log('Requesting indicator data…')
+  // console.log('Requesting indicator data…')
   // Request indicator url
   requestURL(urlIndicators, raw => {
-    console.log('Parsing indicator data…')
+    // console.log('Parsing indicator data…')
     // Parse loaded data
     parseCSVString(raw, json => {
-      console.log('Splitting indicator data…')
+      // console.log('Splitting indicator data…')
       // Split CSV between header and content
       splitJSON(json, splitedJSON => {
         const [rawHeader, content] = splitedJSON
-        console.log('Cleaning indicator header data…')
+        // console.log('Cleaning indicator header data…')
         // Clean array strings
         cleanArrayStrings(rawHeader, header => {
-          console.log('Checking indicator header data…')
+          // console.log('Checking indicator header data…')
           // Check if all required keys are present
           checkArrayStr([...indiHeadersDns, ...indiHeadersOkf], header, () => {
             // Split header based on key to seperate dns and okf headers
             splitHeader(indiSplitKey, header, indiDnsID, indiOkfID, splittedHeader => {
               const [headerDNS, headerOKF, splitPoint] = splittedHeader
-              console.log('Splitting indicator content data…')
+              // console.log('Splitting indicator content data…')
+
               // Split content based on split point generated from header splitting to seperate dns and okf headers
               splitContent(splitPoint, content, splittedContent => {
                 const [rawContentDNS, rawContentOKF] = splittedContent
@@ -206,13 +233,14 @@ function requestIndicators (sdgs, callback) {
 
                 // Merge all indicators in single array
                 const indicators = arrDNS.concat(arrOKF)
+
                 processIndicators(indicators, arr => {
                   callback(arr)
                   // As some indicators reference each other as modified, the targets should also be marked
                   const marked = markModifiedIndicators(arr)
-                  console.log('Writing indicator data…')
+                  // console.log('Writing indicator data…')
                   // Merge SDG data into indictors for links, color, label, … and write to file
-                  writeJSONFile(indiFile, formatArrayToHash(mergeSDGIntoIndicators(sdgs, marked), 'slug'))
+                  writeJSONFile('./indicators.json', formatArrayToHash(mergeSDGIntoIndicators(sdgs, marked), 'slug'))
                 })
               })
             })
@@ -249,12 +277,12 @@ function mergeSDGIntoIndicators (sdgs, indicators) {
 
 function markModifiedIndicators (indicators) {
   // As some indicators reference each other as modified, the targets should also be marked
-  console.log('Start marking modified indicators')
+  // console.log('Start marking modified indicators')
   // Create list of alternative (modded) indicators
   const targets = _.pull(_.map(indicators, i => {
     return _.get(i, 'moddedTarget')
   }), undefined)
-  console.log('Modified indicators found: ' + targets.join(', '))
+  // console.log('Modified indicators found: ' + targets.join(', '))
   _.each(indicators, i => {
     // Only check okf indicators
     if (i['author'] === 'okf') {
@@ -262,7 +290,7 @@ function markModifiedIndicators (indicators) {
       if (_.indexOf(targets, i['id']) >= 0) {
         // Marked as modded target as this is the (alternative) indicator with the new target. The original indicator is marked as mod target
         i['moddedTarget'] = true
-        console.log('Indicator »' + i['label'] + '« marked as modified')
+        // console.log('Indicator »' + i['label'] + '« marked as modified')
       }
     }
   })
@@ -279,7 +307,7 @@ function processIndicatorMeta (indicator) {
   // Unit of the indicator
   const unit = _.has(indicator, 'dnsUnit') ? indicator['dnsUnit'] : indicator['2030Unit']
   const unitShort = _.has(indicator, 'dnsUnitShort') ? indicator['dnsUnitShort'] : indicator['2030UnitShort']
-  // Goald of the indicator
+  // Goal of the indicator
   const goal = _.has(indicator, 'dnsGoal') ? indicator['dnsGoal'] : indicator['2030Goal']
 
   // Construct object with these properties
@@ -358,7 +386,7 @@ function processIndicatorDetail (indicator, callback) {
       // Split data where either temporal or country data starts
       const description = _.fromPairs(_.slice(detailData, 0, endData))
       // Load defined keys into the indicator
-      _.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
+      _.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'txtstartingvalue', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
         indicator[key] = description[key]
       })
 
@@ -381,7 +409,7 @@ function requestIndicatorDetail (indicator, callback) {
   // Request indicator detail data
   const url = indicator['url']
   if (url !== '') {
-    console.log('Requesting indicator detail data for', indicator['label'])
+    // console.log('Requesting indicator detail data for', indicator['label'])
     requestURL(url, raw => {
       parseCSVString(raw, json => {
         callback(json)
