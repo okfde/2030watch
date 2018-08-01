@@ -175,17 +175,17 @@
           </div>
         </div>
 
-        <div v-if="indicator['pate']" class="description">
+        <div v-if="indicator['pate'] && indicator['pateUrl'] && indicator['pateLogo']" class="description">
           <h4>Datenpate</h4>
           <div class="pate-logo">
             <a :href="indicator['pateUrl']" target="_blank">
               <img :src="require(`@/static/img/datenpaten/${indicator['pateLogo']}`)">
             </a>
           </div>
-          <div>
+          <div v-if="indicator['pateText']">
             {{ indicator['pateText'] }}
           </div>
-          <div>
+          <div v-if="indicator['pateContact'] && indicator['pateMail']">
             Kontaktperson:
             <a :href="'mailto:' + indicator['pateMail']">
               {{ indicator['pateContact'] }}
