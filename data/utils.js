@@ -5,21 +5,21 @@ const _ = require('lodash')
 
 module.exports = {
   requestURL: function (url, callback) {
-    console.log('Start fetching document')
+    // console.log('Start fetching document')
     request(url, (err, response, body) => {
-      if (!err && response.statusCode == 200) {
-        console.log('Document successfully fetched')
+      if (!err && response.statusCode === 200) {
+        // console.log('Document successfully fetched')
         callback(body)
       } else {
-        console.log('Could not fetch document')
+        // console.log('Could not fetch document')
       }
     })
   },
   parseCSVString: function (str, callback) {
-    console.log('Start parsing data')
+    // console.log('Start parsing data')
     parseCSV(str, (err, output) => {
       if (!err) {
-        console.log('Data successfully parsed')
+        // console.log('Data successfully parsed')
         callback(output)
       } else {
         console.log('Could not parse data')
@@ -31,7 +31,7 @@ module.exports = {
     if (json.length) {
       const header = _.slice(json, 0, 1)[0]
       const content = _.slice(json, 1)
-      if (content.length == 0) {
+      if (content.length === 0) {
         console.log('No content found')
       } else {
         callback([header, content])
@@ -86,24 +86,25 @@ module.exports = {
     // Check if array has keys
     let err = false
     _.each(keys, id => {
-      if (_.indexOf(arr, id) == -1) {
+      if (_.indexOf(arr, id) === -1) {
         err = true
         console.log('Required column ' + id + ' not found')
       }
     })
     if (!err) { callback() }
   },
-  filterArray: function (rawContent, id_key, header) {
+  filterArray: function (rawContent, idKey, header) {
     // Filter array to delete empty rows
     // Check if first row is a comment row
     const content = rawContent[0][0] === 'FALSE' ? _.slice(rawContent, 1) : rawContent
-    const position = _.indexOf(header, id_key)
+    const position = _.indexOf(header, idKey)
     return _.filter(content, line => {
       return line[position] !== ''
     })
   },
-  buildNewArray: function (keys, header, content, numbers, id_key) {
-    // Construct a new array based on header and rawContent that only contains keys from keys. Also convert values based on numbers
+  buildNewArray: function (keys, header, content, numbers, idKey) {
+    // Construct a new array based on header and rawContent that only contains keys from keys.
+    // Also convert values based on numbers
     const newArr = _.map(content, line => {
       const pairs = []
       for (let i = 0, len = header.length; i < len; i++) {
@@ -157,7 +158,7 @@ module.exports = {
     })
   },
   formatArrayToHash: function (arr, key) {
-    // Buidl associative array
+    // Build associative array
     const hash = _.map(arr, obj => {
       return [obj[key], obj]
     })
