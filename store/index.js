@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import * as data from '../data/indicators.json'
 import * as dataSDGs from '../data/sdgs.json'
+import * as indiNav from '../data/indiNav.json'
 import _ from 'lodash'
 
 Vue.use(Vuex)
@@ -10,7 +11,7 @@ const store = () => new Vuex.Store({
   state: {
     data: data,
     sdgs: dataSDGs,
-    steps: 5
+    indiNav
   },
   getters: {
     indicators (state) {
