@@ -129,11 +129,11 @@
       font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 3.4rem;
-      margin-top: 0.5rem;
+      height: 4rem;
+      margin-top: 0.6rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
-      line-height: 1.15rem;
+      line-height: 1.35rem;
     }
 
     .labels {
