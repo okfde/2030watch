@@ -80,7 +80,7 @@
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
 
-          <bar-chart :height="200" :data="chartData" :options="chartOptions"></bar-chart>
+          <bar-chart :height="200" :data="barChartData" :options="barChartOptions"></bar-chart>
 
           <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</h5>
           <VisBarChart :values="countries" />
@@ -90,6 +90,9 @@
         </div>
         <div class="box vis" v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
+
+          <line-chart :height="200" :data="lineChartData" :options="lineChartOptions"></line-chart>
+
           <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }})</h5>
           <VisLineChart :values="timeline" />
           <div class="vis-dl">
@@ -207,6 +210,7 @@
   import VisLeiste from '~/components/VisLeiste.vue'
   import _ from 'lodash'
   import BarChart from '~/components/BarChart.js'
+  import LineChart from '~/components/LineChart.js'
 
   export default {
     validate ({ params, store }) {
@@ -264,7 +268,7 @@
           ['license', this.indicator.license]
         ]
       },
-      chartData () {
+      barChartData () {
         return {
           labels: this.getCountries,
           datasets: [
@@ -278,7 +282,7 @@
           ]
         }
       },
-      chartOptions () {
+      barChartOptions () {
         return {
           legend: {
             display: false
@@ -312,6 +316,59 @@
           }
         }
       },
+
+      lineChartData () {
+        return {
+          labels: this.getYears,
+          datasets: [
+            {
+              label: this.indicator.unitShort,
+              fill: false,
+              lineTension: 0,
+              backgroundColor: '#3700B3',
+              // strokeColor: 'rgba(220,220,220,1)',
+              // fillColor: 'rgba(220,220,220,0.5)',
+              data: this.getValuesForGermany
+            }
+          ]
+        }
+      },
+
+      lineChartOptions () {
+        return {
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true,
+            displayColors: false,
+            cornerRadius: 0,
+            callbacks: {
+              label: function (tooltipItems, data) {
+                return `${tooltipItems.yLabel} ${data.datasets[tooltipItems.datasetIndex].label}`
+              }
+            }
+          },
+          scales: {
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: `${this.indicator.label} in ${this.indicator.unit}`
+              }
+            }],
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Länder'
+              },
+              ticks: {
+                autoSkip: false
+              }
+            }]
+          }
+        }
+      },
+
       getCountries () {
         const keys = Object.keys(this.indicator.countries)
         let countries = []
@@ -341,6 +398,22 @@
         }).sort((a, b) => {
           return (a[1] > b[1]) ? 1 : ((b[1] > a[1]) ? -1 : 0)
         })
+      },
+      getYears () {
+        const indiTimeline = Object.keys(this.indicator.timeline)
+        let years = []
+        indiTimeline.map(key => {
+          years.push(key)
+        })
+        return years
+      },
+      getValuesForGermany () {
+        const indiTimeline = Object.keys(this.indicator.timeline)
+        let values = []
+        indiTimeline.map(key => {
+          values.push(this.indicator.timeline[key])
+        })
+        return values
       },
       timeline () {
         const years = Object.keys(this.indicator.timeline)
@@ -381,7 +454,8 @@
       VisBarChart,
       VisLineChart,
       VisLeiste,
-      BarChart
+      BarChart,
+      LineChart
     }
   }
 </script>
