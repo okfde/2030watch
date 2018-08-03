@@ -408,6 +408,7 @@
       margin-bottom: -1.5rem;
 
       svg {
+        width: 90%;
         height: 100px;
         margin: 0 10px; // 10px is fixed in js!
 
