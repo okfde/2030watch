@@ -40,7 +40,6 @@
       <VisLeiste :current="indicator.sdg.slug" />
 
       <div class="indicator-navigation">
-
         <span class="navigation-backwards">
           <span v-if="getCurrentIndicatorCounter !== 0">
             <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
@@ -58,7 +57,6 @@
             </nuxt-link>
           </span>
         </span>
-
         <span class="navigation-forwards">
           <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
             <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
@@ -76,12 +74,14 @@
             </nuxt-link>
           </span>
         </span>
-
       </div>
 
       <div class="wrapper">
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
+
+          <bar-chart :height="200" :data="chartData" :options="chartOptions"></bar-chart>
+
           <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</h5>
           <VisBarChart :values="countries" />
           <div class="vis-dl">
@@ -206,6 +206,7 @@
   import format from '~/assets/js/format.js'
   import VisLeiste from '~/components/VisLeiste.vue'
   import _ from 'lodash'
+  import BarChart from '~/components/BarChart.js'
 
   export default {
     validate ({ params, store }) {
@@ -263,6 +264,70 @@
           ['license', this.indicator.license]
         ]
       },
+      chartData () {
+        return {
+          labels: this.getCountries,
+          datasets: [
+            {
+              label: this.indicator.unitShort,
+              backgroundColor: '#3700B3',
+              // strokeColor: 'rgba(220,220,220,1)',
+              // fillColor: 'rgba(220,220,220,0.5)',
+              data: this.getValues
+            }
+          ]
+        }
+      },
+      chartOptions () {
+        return {
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true,
+            displayColors: false,
+            cornerRadius: 0,
+            callbacks: {
+              label: function (tooltipItems, data) {
+                return `${tooltipItems.yLabel} ${data.datasets[tooltipItems.datasetIndex].label}`
+              }
+            }
+          },
+          scales: {
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: `${this.indicator.label} in ${this.indicator.unit} (${this.indicator['currentYear']})`
+              }
+            }],
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Länder'
+              },
+              ticks: {
+                autoSkip: false
+              }
+            }]
+          }
+        }
+      },
+      getCountries () {
+        const keys = Object.keys(this.indicator.countries)
+        let countries = []
+        keys.slice(0, keys.length - 1).map(key => {
+          countries.push(key)
+        })
+        return countries
+      },
+      getValues () {
+        const keys = Object.keys(this.indicator.countries)
+        let values = []
+        keys.slice(0, keys.length - 1).map(key => {
+          values.push(this.indicator.countries[key])
+        })
+        return values
+      },
       countries () {
         const keys = Object.keys(this.indicator.countries)
         const values = keys.slice(0, keys.length - 1).map(key => {
@@ -315,7 +380,8 @@
       VisPieChart,
       VisBarChart,
       VisLineChart,
-      VisLeiste
+      VisLeiste,
+      BarChart
     }
   }
 </script>
