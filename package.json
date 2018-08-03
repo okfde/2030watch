@@ -22,22 +22,22 @@
     "fs": "0.0.1-security",
     "jsonfile": "^4.0.0",
     "lodash": "^4.17.10",
-    "nuxt": "^1.4.1",
+    "nuxt": "^1.4.2",
     "nuxt-matomo": "^0.5.0",
     "request": "^2.87.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
-    "eslint": "^5.1.0",
+    "eslint": "^5.2.0",
     "eslint-config-standard": "^11.0.0",
-    "eslint-loader": "^2.0.0",
+    "eslint-loader": "^2.1.0",
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "node-sass": "^4.9.2",
     "normalize-scss": "^7.0.1",
-    "sass-loader": "^7.0.3"
+    "sass-loader": "^7.1.0"
   }
 }
