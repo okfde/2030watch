@@ -311,6 +311,16 @@
           labels: this.getCountries,
           datasets: [
             {
+              type: 'line',
+              fill: false,
+              borderWidth: 3,
+              data: this.getTargetForCountries,
+              pointRadius: 0,
+              borderColor: 'red',
+              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
+              pointHoverBorderColor: 'rgba(0,0,0,0)'
+            },
+            {
               label: this.indicator.unitShort,
               backgroundColor: '#3700B3',
               // strokeColor: 'rgba(220,220,220,1)',
@@ -366,7 +376,16 @@
               backgroundColor: '#3700B3',
               // strokeColor: 'rgba(220,220,220,1)',
               // fillColor: 'rgba(220,220,220,0.5)',
-              data: this.getValuesForGermany
+              data: this.getValuesForCountries
+            },
+            {
+              fill: false,
+              borderWidth: 3,
+              data: this.getTargetForTimeline,
+              pointRadius: 0,
+              borderColor: 'red',
+              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
+              pointHoverBorderColor: 'rgba(0,0,0,0)'
             }
           ]
         }
@@ -411,15 +430,34 @@
         const keys = Object.keys(this.indicator.countries)
         let countries = []
         keys.slice(0, keys.length - 1).map(key => {
-          countries.push(key)
+          if (this.indicator.countries[key] !== null) {
+            countries.push(key)
+          }
         })
         return countries
       },
       getValues () {
         const keys = Object.keys(this.indicator.countries)
+        // var sortable = []
+        // for (var vehicle in this.indicator.countries) {
+        //   sortable.push([vehicle, this.indicator.countries[vehicle]])
+        // }
+        // sortable.sort(function (a, b) {
+        //   return a[1] - b[1]
+        // })
         let values = []
         keys.slice(0, keys.length - 1).map(key => {
-          values.push(this.indicator.countries[key])
+          if (this.indicator.countries[key] !== null) {
+            values.push(this.indicator.countries[key])
+          }
+        })
+        return values
+      },
+      getTargetForCountries () {
+        const indiTimeline = Object.keys(this.indicator.countries)
+        let values = []
+        indiTimeline.map(key => {
+          values.push(this.indicator.target)
         })
         return values
       },
@@ -445,11 +483,19 @@
         })
         return years
       },
-      getValuesForGermany () {
+      getValuesForCountries () {
         const indiTimeline = Object.keys(this.indicator.timeline)
         let values = []
         indiTimeline.map(key => {
           values.push(this.indicator.timeline[key])
+        })
+        return values
+      },
+      getTargetForTimeline () {
+        const indiTimeline = Object.keys(this.indicator.timeline)
+        let values = []
+        indiTimeline.map(key => {
+          values.push(this.indicator.target)
         })
         return values
       },
