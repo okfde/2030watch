@@ -1,13 +1,5 @@
 [
   {
-    "slug": "dns-materielle-deprivation",
-    "label": "Materielle Deprivation",
-    "id": "1_1",
-    "author": "dns",
-    "sdg": 1,
-    "color": "eb1c2d"
-  },
-  {
     "slug": "dns-erhebliche-materielle-deprivation",
     "label": "Erhebliche materielle Deprivation",
     "id": "1_2",
@@ -16,10 +8,10 @@
     "color": "eb1c2d"
   },
   {
-    "slug": "okf-erhebliche-materielle-deprivation",
-    "label": "Erhebliche materielle Deprivation",
-    "id": "1_2",
-    "author": "okf",
+    "slug": "dns-materielle-deprivation",
+    "label": "Materielle Deprivation",
+    "id": "1_1",
+    "author": "dns",
     "sdg": 1,
     "color": "eb1c2d"
   },
@@ -32,9 +24,17 @@
     "color": "eb1c2d"
   },
   {
-    "slug": "okf-armut-und-ausgrenzung-60+",
-    "label": "Von Armut und sozialer Ausgrenzung bedroht (60+)",
-    "id": "1_4",
+    "slug": "okf-armutsgefaehrdungsquote",
+    "label": "Armutsgefährdungsquote",
+    "id": "1_3",
+    "author": "okf",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "okf-erhebliche-materielle-deprivation",
+    "label": "Erhebliche materielle Deprivation",
+    "id": "1_2",
     "author": "okf",
     "sdg": 1,
     "color": "eb1c2d"
@@ -48,9 +48,9 @@
     "color": "eb1c2d"
   },
   {
-    "slug": "okf-armutsgefaehrdungsquote",
-    "label": "Armutsgefährdungsquote",
-    "id": "1_3",
+    "slug": "okf-armut-und-ausgrenzung-60+",
+    "label": "Von Armut und sozialer Ausgrenzung bedroht (60+)",
+    "id": "1_4",
     "author": "okf",
     "sdg": 1,
     "color": "eb1c2d"
@@ -68,6 +68,14 @@
     "label": "Anteil biologischer Landwirtschaft",
     "id": "2_2",
     "author": "dns",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "okf-antibiotika-landwirtschaft",
+    "label": "Antibiotikaeinsatz in der Landwirtschaft",
+    "id": "2_2",
+    "author": "okf",
     "sdg": 2,
     "color": "d3a029"
   },
@@ -91,14 +99,6 @@
     "slug": "okf-pestizide-landwirtschaft",
     "label": "Einsatz von Pestiziden in der Landwirtschaft",
     "id": "2_3",
-    "author": "okf",
-    "sdg": 2,
-    "color": "d3a029"
-  },
-  {
-    "slug": "okf-antibiotika-landwirtschaft",
-    "label": "Antibiotikaeinsatz in der Landwirtschaft",
-    "id": "2_2",
     "author": "okf",
     "sdg": 2,
     "color": "d3a029"
@@ -128,22 +128,6 @@
     "color": "279b48"
   },
   {
-    "slug": "dns-adipositasquote-11-17j",
-    "label": "Adipositasquote 11-17J",
-    "id": "3_5",
-    "author": "dns",
-    "sdg": 3,
-    "color": "279b48"
-  },
-  {
-    "slug": "dns-vorzeitige-sterblichkeit-maenner",
-    "label": "Vorzeitige Sterblichkeit Männer",
-    "id": "3_2",
-    "author": "dns",
-    "sdg": 3,
-    "color": "279b48"
-  },
-  {
     "slug": "dns-vorzeitige-sterblichkeit-frauen",
     "label": "Vorzeitige Sterblichkeit Frauen",
     "id": "3_1",
@@ -160,10 +144,34 @@
     "color": "279b48"
   },
   {
+    "slug": "dns-adipositasquote-11-17j",
+    "label": "Adipositasquote 11-17J",
+    "id": "3_5",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-vorzeitige-sterblichkeit-maenner",
+    "label": "Vorzeitige Sterblichkeit Männer",
+    "id": "3_2",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
     "slug": "dns-raucherquote-ab-15j",
     "label": "Raucherquote ab 15J",
     "id": "3_4",
     "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "okf-suizidrate",
+    "label": "Suizidrate",
+    "id": "3_2",
+    "author": "okf",
     "sdg": 3,
     "color": "279b48"
   },
@@ -176,12 +184,20 @@
     "color": "279b48"
   },
   {
-    "slug": "okf-suizidrate",
-    "label": "Suizidrate",
-    "id": "3_2",
-    "author": "okf",
-    "sdg": 3,
-    "color": "279b48"
+    "slug": "dns-fruehe-schulabgaenger",
+    "label": "Frühe Schulabgänger, 18-24J",
+    "id": "4_1",
+    "author": "dns",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "dns-ganztagsbetreuung-0-2j",
+    "label": "Ganztagsbetreuung 0-2J",
+    "id": "4_3",
+    "author": "dns",
+    "sdg": 4,
+    "color": "c31f33"
   },
   {
     "slug": "dns-ganztagsbetreuung-3-5j",
@@ -200,18 +216,10 @@
     "color": "c31f33"
   },
   {
-    "slug": "dns-ganztagsbetreuung-0-2j",
-    "label": "Ganztagsbetreuung 0-2J",
-    "id": "4_3",
-    "author": "dns",
-    "sdg": 4,
-    "color": "c31f33"
-  },
-  {
-    "slug": "dns-fruehe-schulabgaenger",
-    "label": "Frühe Schulabgänger, 18-24J",
-    "id": "4_1",
-    "author": "dns",
+    "slug": "okf-bildungsausgaben",
+    "label": "Bildungsausgaben am BIP",
+    "id": "4_2",
+    "author": "okf",
     "sdg": 4,
     "color": "c31f33"
   },
@@ -224,25 +232,9 @@
     "color": "c31f33"
   },
   {
-    "slug": "okf-bildungsausgaben",
-    "label": "Bildungsausgaben am BIP",
-    "id": "4_2",
-    "author": "okf",
-    "sdg": 4,
-    "color": "c31f33"
-  },
-  {
     "slug": "dns-frauen-wirtschaft-dns",
-    "label": "Frauen in Führungspositionen in der Wirtschaft",
+    "label": "Frauen in Aufsichtsräten DAX-30-Unternehmen",
     "id": "5_2",
-    "author": "dns",
-    "sdg": 5,
-    "color": "ef402b"
-  },
-  {
-    "slug": "dns-verdienstabstand-zwischen-frauen-und-maennern",
-    "label": "Verdienstabstand zwischen Frauen und Männern",
-    "id": "5_1",
     "author": "dns",
     "sdg": 5,
     "color": "ef402b"
@@ -256,25 +248,17 @@
     "color": "ef402b"
   },
   {
+    "slug": "dns-verdienstabstand-zwischen-frauen-und-maennern",
+    "label": "Verdienstabstand zwischen Frauen und Männern",
+    "id": "5_1",
+    "author": "dns",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
     "slug": "okf-verteilung-hausarbeit",
     "label": "Ungleiche Verteilung der Hausarbeit",
     "id": "5_3",
-    "author": "okf",
-    "sdg": 5,
-    "color": "ef402b"
-  },
-  {
-    "slug": "okf-gewalt-gegen-frauen",
-    "label": "Gewalt gegen Frauen",
-    "id": "5_5",
-    "author": "okf",
-    "sdg": 5,
-    "color": "ef402b"
-  },
-  {
-    "slug": "okf-frauen-wirtschaft",
-    "label": "Frauen in Führungspositionen in der Wirtschaft",
-    "id": "5_2",
     "author": "okf",
     "sdg": 5,
     "color": "ef402b"
@@ -296,6 +280,30 @@
     "color": "ef402b"
   },
   {
+    "slug": "okf-frauen-wirtschaft",
+    "label": "Frauen in Führungspositionen in der Wirtschaft",
+    "id": "5_2",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "okf-gewalt-gegen-frauen",
+    "label": "Gewalt gegen Frauen",
+    "id": "5_5",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "dns-phosphor-in-fliessgewaessern",
+    "label": "Phosphor in Fließgewässern",
+    "id": "6_1",
+    "author": "dns",
+    "sdg": 6,
+    "color": "00aed9"
+  },
+  {
     "slug": "dns-nitrat-im-grundwasser",
     "label": "Nitrat im Grundwasser",
     "id": "6_2",
@@ -312,10 +320,10 @@
     "color": "00aed9"
   },
   {
-    "slug": "dns-phosphor-in-fliessgewaessern",
-    "label": "Phosphor in Fließgewässern",
-    "id": "6_1",
-    "author": "dns",
+    "slug": "okf-oekologischer-zustand-seen",
+    "label": "Ökologischer Zustand der Seen",
+    "id": "6_2",
+    "author": "okf",
     "sdg": 6,
     "color": "00aed9"
   },
@@ -328,12 +336,12 @@
     "color": "00aed9"
   },
   {
-    "slug": "okf-oekologischer-zustand-seen",
-    "label": "Ökologischer Zustand der Seen",
-    "id": "6_2",
-    "author": "okf",
-    "sdg": 6,
-    "color": "00aed9"
+    "slug": "dns-ee-stromverbrauch",
+    "label": "Anteil des Stroms aus erneuerbarer Energiequellen am Bruttostromverbrauch",
+    "id": "7_4",
+    "author": "dns",
+    "sdg": 7,
+    "color": "fdb713"
   },
   {
     "slug": "dns-Primärenergieverbrauch",
@@ -352,26 +360,10 @@
     "color": "fdb713"
   },
   {
-    "slug": "dns-ee-stromverbrauch",
-    "label": "Anteil des Stroms aus erneuerbarer Energiequellen am Bruttostromverbrauch",
-    "id": "7_4",
-    "author": "dns",
-    "sdg": 7,
-    "color": "fdb713"
-  },
-  {
     "slug": "dns-Endenergieproduktivität",
     "label": "Steigerung der Endenergieproduktivität gegenüber 2008",
     "id": "7_1",
     "author": "dns",
-    "sdg": 7,
-    "color": "fdb713"
-  },
-  {
-    "slug": "okf-bruttoinlandsenergieverbrauch",
-    "label": "Bruttoinlandsenergieverbrauch BIV",
-    "id": "7_2",
-    "author": "okf",
     "sdg": 7,
     "color": "fdb713"
   },
@@ -384,65 +376,17 @@
     "color": "fdb713"
   },
   {
-    "slug": "dns-rohstoffproduktivitaet",
-    "label": "Gesamtrohstoffproduktivität",
-    "id": "8_1",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
-  },
-  {
-    "slug": "dns-staatsdefizit",
-    "label": "Staatsdefizit",
-    "id": "8_2",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
-  },
-  {
-    "slug": "dns-strukturelles-defizit",
-    "label": "Strukturelles Defizit",
-    "id": "8_3",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
-  },
-  {
-    "slug": "dns-staatsschulden",
-    "label": "Staatsschulden % BIP",
-    "id": "8_4",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
-  },
-  {
-    "slug": "dns-anlageinvestitionen",
-    "label": "Bruttoanlageinvestitionen im Verhältnis zum BIP",
-    "id": "8_5",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
+    "slug": "okf-bruttoinlandsenergieverbrauch",
+    "label": "Bruttoinlandsenergieverbrauch BIV",
+    "id": "7_2",
+    "author": "okf",
+    "sdg": 7,
+    "color": "fdb713"
   },
   {
     "slug": "dns-bip",
     "label": "Bruttoinlandsprodukt pro Einwohner",
     "id": "8_6",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
-  },
-  {
-    "slug": "dns-erwerbstaetigenquote-20-64",
-    "label": "Erwerbstätigenquote (20-64Jahre)",
-    "id": "8_7",
-    "author": "dns",
-    "sdg": 8,
-    "color": "8f1838"
-  },
-  {
-    "slug": "dns-erwerbstaetigenquote-60-64",
-    "label": "Erwerbstätigenquote (60-64Jahre)",
-    "id": "8_8",
     "author": "dns",
     "sdg": 8,
     "color": "8f1838"
@@ -456,9 +400,65 @@
     "color": "8f1838"
   },
   {
-    "slug": "okf-armut-trotz-beschaeftigung",
-    "label": "Armut trotz Vollzeitbeschäftigung",
+    "slug": "dns-erwerbstaetigenquote-60-64",
+    "label": "Erwerbstätigenquote (60-64Jahre)",
+    "id": "8_8",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-strukturelles-defizit",
+    "label": "Strukturelles Defizit",
+    "id": "8_3",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-anlageinvestitionen",
+    "label": "Bruttoanlageinvestitionen im Verhältnis zum BIP",
+    "id": "8_5",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-erwerbstaetigenquote-20-64",
+    "label": "Erwerbstätigenquote (20-64Jahre)",
+    "id": "8_7",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-staatsdefizit",
+    "label": "Staatsdefizit",
+    "id": "8_2",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-rohstoffproduktivitaet",
+    "label": "Gesamtrohstoffproduktivität",
     "id": "8_1",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-staatsschulden",
+    "label": "Staatsschulden % BIP",
+    "id": "8_4",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "okf-materialverbrauch-capita",
+    "label": "Inländischer Materialverbrauch",
+    "id": "8_4",
     "author": "okf",
     "sdg": 8,
     "color": "8f1838"
@@ -480,17 +480,17 @@
     "color": "8f1838"
   },
   {
-    "slug": "okf-materialverbrauch-capita",
-    "label": "Inländischer Materialverbrauch",
-    "id": "8_4",
+    "slug": "okf-niedrigloehne",
+    "label": "Anteil der Arbeitnehmer mit Niedriglohn",
+    "id": "8_5",
     "author": "okf",
     "sdg": 8,
     "color": "8f1838"
   },
   {
-    "slug": "okf-niedrigloehne",
-    "label": "Anteil der Arbeitnehmer mit Niedriglohn",
-    "id": "8_5",
+    "slug": "okf-armut-trotz-beschaeftigung",
+    "label": "Armut trotz Vollzeitbeschäftigung",
+    "id": "8_1",
     "author": "okf",
     "sdg": 8,
     "color": "8f1838"
@@ -500,6 +500,14 @@
     "label": "Ausgaben für Forschung und Entwicklung/ BIP",
     "id": "9_1",
     "author": "dns",
+    "sdg": 9,
+    "color": "f36d25"
+  },
+  {
+    "slug": "okf-4G-verbreitung",
+    "label": "4G Verbreitung",
+    "id": "9_2",
+    "author": "okf",
     "sdg": 9,
     "color": "f36d25"
   },
@@ -523,14 +531,6 @@
     "slug": "okf-open-data-index",
     "label": "Open Data Index",
     "id": "9_3",
-    "author": "okf",
-    "sdg": 9,
-    "color": "f36d25"
-  },
-  {
-    "slug": "okf-4G-verbreitung",
-    "label": "4G Verbreitung",
-    "id": "9_2",
     "author": "okf",
     "sdg": 9,
     "color": "f36d25"
@@ -592,25 +592,9 @@
     "color": "f99d26"
   },
   {
-    "slug": "dns-reisezeit-oepnv",
-    "label": "Reisezeit mit öffentlichen Verkehrsmitteln",
-    "id": "11_6",
-    "author": "dns",
-    "sdg": 11,
-    "color": "f99d26"
-  },
-  {
-    "slug": "dns-energieverbrauch-personenverkehr",
-    "label": "Endenergieverbrauch im Personenverkehr",
-    "id": "11_5",
-    "author": "dns",
-    "sdg": 11,
-    "color": "f99d26"
-  },
-  {
-    "slug": "dns-siedlungsdichte",
-    "label": "Siedlungsdichte erhalten",
-    "id": "11_3",
+    "slug": "dns-freiraumflaeche",
+    "label": "Rückgang Freiraumverlust pro Einwohner",
+    "id": "11_2",
     "author": "dns",
     "sdg": 11,
     "color": "f99d26"
@@ -624,14 +608,6 @@
     "color": "f99d26"
   },
   {
-    "slug": "dns-freiraumflaeche",
-    "label": "Rückgang Freiraumverlust pro Einwohner",
-    "id": "11_2",
-    "author": "dns",
-    "sdg": 11,
-    "color": "f99d26"
-  },
-  {
     "slug": "dns-siedlungs-verkehrsflaeche",
     "label": "Anstieg der Siedlungs- Verkehrsfläche",
     "id": "11_1",
@@ -640,26 +616,26 @@
     "color": "f99d26"
   },
   {
-    "slug": "okf-feinstaubbelastung",
-    "label": "PM2.5 Feinstaubbelastung",
+    "slug": "dns-siedlungsdichte",
+    "label": "Siedlungsdichte erhalten",
     "id": "11_3",
-    "author": "okf",
+    "author": "dns",
     "sdg": 11,
     "color": "f99d26"
   },
   {
-    "slug": "okf-wohnkosten",
-    "label": "Überlastung durch Wohnkosten",
-    "id": "11_7",
-    "author": "okf",
+    "slug": "dns-reisezeit-oepnv",
+    "label": "Reisezeit mit öffentlichen Verkehrsmitteln",
+    "id": "11_6",
+    "author": "dns",
     "sdg": 11,
     "color": "f99d26"
   },
   {
-    "slug": "okf-verkehrsverlagerung-personenverkehr",
-    "label": "Verkehrsverlagerung Personenverkehr",
+    "slug": "dns-energieverbrauch-personenverkehr",
+    "label": "Endenergieverbrauch im Personenverkehr",
     "id": "11_5",
-    "author": "okf",
+    "author": "dns",
     "sdg": 11,
     "color": "f99d26"
   },
@@ -680,9 +656,33 @@
     "color": "f99d26"
   },
   {
+    "slug": "okf-feinstaubbelastung",
+    "label": "PM2.5 Feinstaubbelastung",
+    "id": "11_3",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-wohnkosten",
+    "label": "Überlastung durch Wohnkosten",
+    "id": "11_7",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
     "slug": "okf-siedlungsfläche",
     "label": "Anstieg der Siedlungs- und Verkehrsfläche",
     "id": "11_1",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-verkehrsverlagerung-personenverkehr",
+    "label": "Verkehrsverlagerung Personenverkehr",
+    "id": "11_5",
     "author": "okf",
     "sdg": 11,
     "color": "f99d26"
@@ -704,14 +704,6 @@
     "color": "cf8d2a"
   },
   {
-    "slug": "dns-energieverbrauch-konsum",
-    "label": "Energieverbrauch des Konsums",
-    "id": "12_3",
-    "author": "dns",
-    "sdg": 12,
-    "color": "cf8d2a"
-  },
-  {
     "slug": "dns-emas-organisationsstandorte",
     "label": "Umweltmanagement EMAS",
     "id": "12_4",
@@ -723,6 +715,14 @@
     "slug": "dns-produkte-umweltzeichen",
     "label": "Produkte mit Umweltzeichen",
     "id": "12_1",
+    "author": "dns",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "dns-energieverbrauch-konsum",
+    "label": "Energieverbrauch des Konsums",
+    "id": "12_3",
     "author": "dns",
     "sdg": 12,
     "color": "cf8d2a"
@@ -880,17 +880,9 @@
     "color": "3eb049"
   },
   {
-    "slug": "dns-straftaten",
-    "label": "Straftaten",
-    "id": "16_1",
-    "author": "dns",
-    "sdg": 16,
-    "color": "02558b"
-  },
-  {
-    "slug": "dns-corruption-perception-index",
-    "label": "Corruption Perception Index",
-    "id": "16_3",
+    "slug": "dns-sicherung-registrierung-zerstoerung-kleinwaffen",
+    "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen",
+    "id": "16_2",
     "author": "dns",
     "sdg": 16,
     "color": "02558b"
@@ -904,9 +896,17 @@
     "color": "02558b"
   },
   {
-    "slug": "dns-sicherung-registrierung-zerstoerung-kleinwaffen",
-    "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen",
-    "id": "16_2",
+    "slug": "dns-corruption-perception-index",
+    "label": "Corruption Perception Index",
+    "id": "16_3",
+    "author": "dns",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "dns-straftaten",
+    "label": "Straftaten",
+    "id": "16_1",
     "author": "dns",
     "sdg": 16,
     "color": "02558b"
