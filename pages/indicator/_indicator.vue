@@ -82,6 +82,24 @@
 
           <bar-chart :height="200" :data="barChartData" :options="barChartOptions"></bar-chart>
 
+          <div class="vis-dl vis-data-source">
+            Datenquelle:
+            <a :href="indicator.sourcelink">
+              {{ indicator['data source'] }}
+            </a>
+          </div>
+
+          <div class="vis-dl">
+             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
+               <i class="icon-download" /> Daten herunterladen
+             </a>
+          </div>
+
+          <!-- TODO -->
+          <br />
+          <br />
+          <br />
+
           <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</h5>
           <VisBarChart :values="countries" />
           <div class="vis-dl">
@@ -92,6 +110,26 @@
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
 
           <line-chart :height="200" :data="lineChartData" :options="lineChartOptions"></line-chart>
+
+          <div class="vis-dl vis-data-source">
+            Datenquelle:
+            <a :href="indicator.sourcelink">
+              {{ indicator['data source'] }}
+            </a>
+          </div>
+
+          <div class="vis-dl">
+             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">
+               <i class="icon-download" />
+               Daten herunterladen
+             </a>
+          </div>
+
+          <!-- TODO -->
+          <br />
+          <br />
+          <br />
+
 
           <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }})</h5>
           <VisLineChart :values="timeline" />
@@ -566,6 +604,10 @@
   .navigation-forwards {
     float: right;
     margin-right: 1rem;
+  }
+
+  .vis-data-source {
+    margin-bottom: 0.5rem;
   }
 
 </style>
