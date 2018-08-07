@@ -398,6 +398,8 @@ function processIndicatorDetail (indicator, callback) {
       // Build geo data
       if (countriesIndex > 0) {
         const countries = convertHashToFloat(_.fromPairs(_.slice(detailData, countriesIndex + 1, timelineIndex > 0 ? timelineIndex : detailData.length - 1)))
+        // remove null values of countries
+        Object.keys(countries).forEach((key) => (countries[key] === null || isNaN(countries[key])) && delete countries[key])
         indicator['countries'] = countries
       }
     }
