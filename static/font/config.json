@@ -191,6 +191,18 @@
       "css": "angle-circled-down",
       "code": 61754,
       "src": "fontawesome"
+    },
+    {
+      "uid": "3ed68ae14e9cde775121954242a412b2",
+      "css": "sort-name-up",
+      "code": 61789,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3a7b6876c1817ce3b801b86c04a9d0af",
+      "css": "sort-number-up",
+      "code": 61794,
+      "src": "fontawesome"
     }
   ]
 }
