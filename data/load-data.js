@@ -393,6 +393,27 @@ function processIndicatorDetail (indicator, callback) {
       // Build temporal data
       if (timelineIndex > 0) {
         const timeline = convertHashToFloat(_.fromPairs(_.slice(detailData, timelineIndex + 1)))
+
+        // strip null values of the beginning of the timeline
+        let years = Object.keys(timeline)
+        let i = 0
+        while (i < years.length) {
+          if ((timeline[years[i]] !== null && !isNaN(timeline[years[i]]))) {
+            break
+          }
+          delete timeline[years[i]]
+          i++
+        }
+        // strip null values of the end of the timeline (the null values inbetween should be retained)
+        years = Object.keys(timeline)
+        let j = years.length
+        while (j > 0) {
+          if ((timeline[years[j]] !== null && !isNaN(timeline[years[j]]))) {
+            break
+          }
+          delete timeline[years[j]]
+          j--
+        }
         indicator['timeline'] = timeline
       }
       // Build geo data
