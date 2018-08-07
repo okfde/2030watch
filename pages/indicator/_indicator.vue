@@ -80,7 +80,16 @@
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
 
-          <bar-chart :height="200" :data="barChartData" :options="barChartOptions"></bar-chart>
+          <div class="vis-dl" style="margin-bottom: 1rem;">
+             <a v-if="!sortedByValue" class="btn btn-download" @click="updateBarChart()">
+               <i class="icon-sort-number-up" /> Nach Wert sortieren
+             </a>
+             <a v-else class="btn btn-download" @click="updateBarChart()">
+               <i class="icon-sort-name-up" /> Alphabetisch sortieren
+             </a>
+          </div>
+
+          <bar-chart :height="200" :chart-data="datacollection" :options="barChartOptions"></bar-chart>
 
           <div class="vis-dl vis-data-source">
             Datenquelle:
@@ -272,17 +281,45 @@
           csvContent += row.join(',') + '\r\n'
         })
         return encodeURI(csvContent)
+      },
+      updateBarChart () {
+        this.datacollection = {
+          labels: this.sortedByValue ? this.getCountries : this.getCountriesSortedByValue,
+          datasets: [
+            {
+              type: 'line',
+              fill: false,
+              borderWidth: 4,
+              data: this.getTargetForCountries,
+              pointRadius: 0,
+              borderColor: 'red',
+              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
+              pointHoverBorderColor: 'rgba(0,0,0,0)'
+            },
+            {
+              label: this.indicator.unitShort,
+              backgroundColor: '#3700B3',
+              // strokeColor: 'rgba(220,220,220,1)',
+              // fillColor: 'rgba(220,220,220,0.5)',
+              data: this.sortedByValue ? this.getValues : this.getSortedValues
+            }
+          ]
+        }
+        this.sortedByValue = !this.sortedByValue
       }
     },
     data: function () {
       return {
-        link: ''
+        link: '',
+        sortedByValue: false,
+        datacollection: null
       }
     },
     mounted: function () {
       // TODO check for better way to use router base
       const base = this.$router.options.base === '/' ? '' : this.$router.options.base
       this.link = window.location.origin + base + this.$route.fullPath
+      this.updateBarChart()
     },
     computed: {
       ...mapState([
@@ -305,30 +342,6 @@
           ['sourcelink', this.indicator.sourcelink],
           ['license', this.indicator.license]
         ]
-      },
-      barChartData () {
-        return {
-          labels: this.getCountries,
-          datasets: [
-            {
-              type: 'line',
-              fill: false,
-              borderWidth: 3,
-              data: this.getTargetForCountries,
-              pointRadius: 0,
-              borderColor: 'red',
-              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
-              pointHoverBorderColor: 'rgba(0,0,0,0)'
-            },
-            {
-              label: this.indicator.unitShort,
-              backgroundColor: '#3700B3',
-              // strokeColor: 'rgba(220,220,220,1)',
-              // fillColor: 'rgba(220,220,220,0.5)',
-              data: this.getValues
-            }
-          ]
-        }
       },
       barChartOptions () {
         return {
@@ -364,7 +377,6 @@
           }
         }
       },
-
       lineChartData () {
         return {
           labels: this.getYears,
@@ -385,12 +397,12 @@
               pointRadius: 0,
               borderColor: 'red',
               pointHoverBackgroundColor: 'rgba(0,0,0,0)',
-              pointHoverBorderColor: 'rgba(0,0,0,0)'
+              pointHoverBorderColor: 'rgba(0,0,0,0)',
+              spanGaps: false
             }
           ]
         }
       },
-
       lineChartOptions () {
         return {
           legend: {
@@ -425,31 +437,47 @@
           }
         }
       },
-
       getCountries () {
         const keys = Object.keys(this.indicator.countries)
         let countries = []
         keys.slice(0, keys.length - 1).map(key => {
-          if (this.indicator.countries[key] !== null) {
-            countries.push(key)
-          }
+          countries.push(key)
         })
         return countries
       },
       getValues () {
         const keys = Object.keys(this.indicator.countries)
-        // var sortable = []
-        // for (var vehicle in this.indicator.countries) {
-        //   sortable.push([vehicle, this.indicator.countries[vehicle]])
-        // }
-        // sortable.sort(function (a, b) {
-        //   return a[1] - b[1]
-        // })
         let values = []
         keys.slice(0, keys.length - 1).map(key => {
-          if (this.indicator.countries[key] !== null) {
-            values.push(this.indicator.countries[key])
-          }
+          values.push(this.indicator.countries[key])
+        })
+        return values
+      },
+      getCountriesSortedByValue () {
+        var sortable = []
+        for (var country in this.indicator.countries) {
+          sortable.push([country, this.indicator.countries[country]])
+        }
+        sortable.sort(function (a, b) {
+          return a[1] - b[1]
+        })
+        let sortedCountries = []
+        sortable.map(elem => {
+          sortedCountries.push(elem[0])
+        })
+        return sortedCountries
+      },
+      getSortedValues () {
+        var sortable = []
+        for (var country in this.indicator.countries) {
+          sortable.push([country, this.indicator.countries[country]])
+        }
+        sortable.sort(function (a, b) {
+          return a[1] - b[1]
+        })
+        let values = []
+        sortable.map(elem => {
+          values.push(elem[1])
         })
         return values
       },
