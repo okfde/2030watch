@@ -16,7 +16,7 @@
           <ul class="social-icons">
             <li><a href="mailto:2030-watch@okfn.de"><i class="icon-mail" /></a></li>
             <li><a href="https://twitter.com/2030watchde" target="_blank"><i class="icon-twitter" /></a></li>
-            <li><a href="https://www.facebook.com/2030-Watch-108979439509739/" target="_blank"><i class="icon-facebook-squared" /></a></li>
+            <li><a href="https://www.facebook.com/2030-Watch-108979439509739/" target="_blank"><i class="icon-facebook-official" /></a></li>
             <li><a href="https://github.com/okfde/2030watch" target="_blank"><i class="icon-github-circled" /></a></li>
           </ul>
         </li>
