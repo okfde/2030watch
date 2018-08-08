@@ -140,8 +140,8 @@ function processSDGs (sdgs, allIndicators) {
       },
       'ind': {
         // Delete unused keys in array
-        'dns': deleteKeysInHashArray(indiDns, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue']),
-        'okf': deleteKeysInHashArray(indiOkf, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue'])
+        'dns': deleteKeysInHashArray(indiDns, ['countries', 'timeline', 'txtintroduction', 'txt2030target', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue']),
+        'okf': deleteKeysInHashArray(indiOkf, ['countries', 'timeline', 'txtintroduction', 'txt2030target', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue'])
       },
       'n': {
         // Count the amount of indicators for various properties
@@ -386,7 +386,7 @@ function processIndicatorDetail (indicator, callback) {
       // Split data where either temporal or country data starts
       const description = _.fromPairs(_.slice(detailData, 0, endData))
       // Load defined keys into the indicator
-      _.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'txtstartingvalue', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
+      _.forEach(['txtintroduction', 'txt2030target', 'txtdescription', 'txttarget', 'txtcategory', 'txtstartingvalue', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
         indicator[key] = description[key]
       })
 
