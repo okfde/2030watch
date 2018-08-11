@@ -14,7 +14,7 @@
             <small class="caption">SDG {{ sdg.number }}</small>
 
             <h1>{{ sdg.labelShort }}</h1>
-            <p>{{ sdg.textIntro }}</p>
+            <!-- <p>{{ sdg.textIntro }}</p> -->
           </div>
           <div class="sdg-image">
             <img :src="image" :title="sdg.labelShort" />
