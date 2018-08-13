@@ -452,7 +452,10 @@
             onComplete: function () {
               // TODO check for a better solution
               let elemToRender = document.getElementById('captureBarChart')
-              html2canvas(elemToRender).then(canvas => {
+              const options = {
+                logging: false
+              }
+              html2canvas(elemToRender, options).then(canvas => {
                 this.dataURI = canvas.toDataURL('image/png', 1.0)
                 document.getElementById('barChartDownloadButton').href = encodeURI(this.dataURI)
               })
@@ -522,7 +525,10 @@
             onComplete: function () {
               // TODO check for a better solution
               let elemToRender = document.getElementById('captureLineChart')
-              html2canvas(elemToRender).then(canvas => {
+              const options = {
+                logging: false
+              }
+              html2canvas(elemToRender, options).then(canvas => {
                 this.dataURI = canvas.toDataURL('image/png', 1.0)
                 document.getElementById('lineChartDownloadButton').href = encodeURI(this.dataURI)
               })
