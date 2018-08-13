@@ -125,7 +125,7 @@
           </div>
 
           <div class="vis-dl">
-            <a style="margin-right: 1rem;" class="btn btn-download" :href="pngDownload"  v-on:click="renderImage" :download="indicator.slug + '.png'">
+            <a id="barChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
@@ -379,7 +379,8 @@
         link: '',
         sortedByValue: false,
         datacollection: null,
-        canvasToSRC: undefined
+        canvasToSRC: undefined,
+        dataURI: undefined
       }
     },
     mounted: function () {
@@ -441,6 +442,14 @@
                 autoSkip: false
               }
             }]
+          },
+          animation: {
+            onComplete: function () {
+              // TODO check for a nicer solution
+              // it's necessary to wait until the chart is rendered before calling 'toDataURL'
+              this.dataURI = this.canvas.toDataURL('image/png', 1.0)
+              document.getElementById('barChartDownloadButton').href = encodeURI(this.dataURI)
+            }
           }
         }
       },
@@ -622,11 +631,6 @@
       countriesDownload () {
         const data = _.concat(this.metadata, [['country', 'value']], this.countries)
         return this.buildCSV(data)
-      },
-      pngDownload () {
-        if (this.canvasToSRC !== undefined) {
-          return encodeURI(this.canvasToSRC)
-        }
       },
       timelineDownload () {
         const data = _.concat(this.metadata, [['year', 'value']], this.timeline)
