@@ -106,7 +106,7 @@
       <div class="wrapper">
         <div id="captureBarChart" class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
-          <div id="orderButton" class="vis-dl" style="margin-bottom: 1rem;">
+          <div data-html2canvas-ignore class="vis-dl" style="margin-bottom: 1rem;">
              <a v-if="!sortedByValue" class="btn btn-download" @click="updateBarChart()">
                <i class="icon-sort-number-up" /> Nach Wert sortieren
              </a>
@@ -124,7 +124,7 @@
             </a>
           </div>
 
-          <div id="downloadButton" class="vis-dl">
+          <div data-html2canvas-ignore class="vis-dl">
             <a id="barChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
@@ -146,7 +146,7 @@
             </a>
           </div>
 
-          <div class="vis-dl">
+          <div data-html2canvas-ignore class="vis-dl">
             <a id="lineChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
@@ -453,7 +453,8 @@
               // TODO check for a better solution
               let elemToRender = document.getElementById('captureBarChart')
               const options = {
-                logging: false
+                logging: false,
+                imageTimeout: 0
               }
               html2canvas(elemToRender, options).then(canvas => {
                 this.dataURI = canvas.toDataURL('image/png', 1.0)
@@ -526,7 +527,8 @@
               // TODO check for a better solution
               let elemToRender = document.getElementById('captureLineChart')
               const options = {
-                logging: false
+                logging: false,
+                imageTimeout: 0
               }
               html2canvas(elemToRender, options).then(canvas => {
                 this.dataURI = canvas.toDataURL('image/png', 1.0)
