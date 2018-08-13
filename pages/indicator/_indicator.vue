@@ -355,7 +355,7 @@
             {
               type: 'line',
               fill: false,
-              borderWidth: 4,
+              borderWidth: 3,
               data: this.getTargetForCountries,
               pointRadius: 0,
               borderColor: 'red',
