@@ -9,36 +9,57 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-        <small class="caption">SDG {{ indicator.sdg.sdg }} – {{ indicator.sdg.label }}</small>
-        <h1>{{ indicator.label }}</h1>
-        <section class="columns columns-gutter">
-          <div>
-            <p>{{ indicator.txtintroduction }}</p>
-          </div>
-          <div></div>
-        </section>
 
-        <div class="indicator-categories">
-          <p>{{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
-            <span v-if="category">
-               <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
-                 <i class="icon-plus-squared" />
-               </span>
-               <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
-                 <i class="icon-pencil-squared" />
-               </span>
-               <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
-                 <i class="icon-minus-squared" />
-               </span>
-            </span>
-          </p>
+        <div class="columns columns-gutter">
+          <div>
+            <small class="caption">SDG {{ indicator.sdg.sdg }} – {{ indicator.sdg.label }}</small>
+            <h1>{{ indicator.label }}</h1>
+            <p class="txtintroduction">{{ indicator.txtintroduction }}</p>
+          </div>
+          <div class="description">
+            <table class="box" style="border-radius:0px; border:none; padding: 0.5rem 1rem 0.3rem 1.5rem; text-shadow:none;"  :style="{ 'background-color': '#' + indicator.sdg.color}">
+              <tbody style="font-size: 0.85rem;">
+                <tr>
+                  <td class="title">Kategorie</td>
+                  <td style="padding-left: 0.4rem;"> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
+                    <span v-if="category">
+                       <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
+                         <i class="icon-plus-squared" />
+                       </span>
+                       <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
+                         <i class="icon-pencil-squared" />
+                       </span>
+                       <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
+                         <i class="icon-minus-squared" />
+                       </span>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title">IST ({{ indicator['currentYear'] }})</td>
+                  <td style="padding-left: 0.4rem;" v-html="format(indicator['current'], 1, indicator['unit'])" />
+                </tr>
+                <tr>
+                  <td class="title">SOLL (2030)</td>
+                  <td style="padding-left: 0.4rem;" v-html="format(indicator['target'], 1, indicator['unit'])" />
+                </tr>
+                <tr>
+                  <td class="title" style="line-height:1rem;">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
+                  <td style="padding-left: 0.4rem;" v-html="format(indicator['start'], 1, indicator['unit'])" />
+                </tr>
+                <tr>
+                  <td class="title" style="line-height:1rem;">2030-Ziel erreicht zu</td>
+                  <td style="padding-left: 0.4rem;" v-html="format(indicator['progress'], 0)" />
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </header>
 
     <div class="content">
       <VisLeiste :current="indicator.sdg.slug" />
-
       <div class="indicator-navigation">
         <span class="navigation-backwards">
           <span v-if="getCurrentIndicatorCounter !== 0">
@@ -76,10 +97,15 @@
         </span>
       </div>
 
+      <div class="wrapper" v-if="indicator.txt2030target">
+        <h3 style="line-height: 1.5rem;" :style="{ 'color': '#' + indicator.sdg.color}">
+          {{ indicator.txt2030target }}
+        </h3>
+      </div>
+
       <div class="wrapper">
         <div class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
-
           <div class="vis-dl" style="margin-bottom: 1rem;">
              <a v-if="!sortedByValue" class="btn btn-download" @click="updateBarChart()">
                <i class="icon-sort-number-up" /> Nach Wert sortieren
@@ -89,7 +115,7 @@
              </a>
           </div>
 
-          <bar-chart :height="200" :chart-data="datacollection" :options="barChartOptions"></bar-chart>
+          <bar-chart id="barChartDownload" ref="barChartDownload" :height="200" :chart-data="datacollection" :options="barChartOptions"></bar-chart>
 
           <div class="vis-dl vis-data-source">
             Datenquelle:
@@ -99,21 +125,14 @@
           </div>
 
           <div class="vis-dl">
-             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
-               <i class="icon-download" /> Daten herunterladen
-             </a>
+            <a style="margin-right: 1rem;" class="btn btn-download" :href="pngDownload"  v-on:click="renderImage" :download="indicator.slug + '.png'">
+              <i class="icon-file-image" /> PNG herunterladen
+            </a>
+            <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
+              <i class="icon-download" /> Daten herunterladen
+            </a>
           </div>
 
-          <!-- TODO -->
-          <br />
-          <br />
-          <br />
-
-          <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }}), {{ indicator['currentYear'] }}</h5>
-          <VisBarChart :values="countries" />
-          <div class="vis-dl">
-             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'"><i class="icon-download" /> Daten herunterladen</a>
-          </div>
         </div>
         <div class="box vis" v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
@@ -134,50 +153,52 @@
              </a>
           </div>
 
-          <!-- TODO -->
-          <br />
-          <br />
-          <br />
-
-
-          <h5 class="vis-title">{{ indicator.label }} (in {{ indicator.unit }})</h5>
-          <VisLineChart :values="timeline" />
-          <div class="vis-dl">
-             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'"><i class="icon-download" /> Daten herunterladen</a>
-          </div>
         </div>
       </div>
 
-      <div class="wrapper">
-        <h2>
-          Weitere Informationen zu diesem Indikator
-        </h2>
-      </div>
-      <div class="wrapper description">
-        <h4>Beschreibung</h4>
-        <p>{{ indicator.txtdescription }}</p>
-        <h4>Kategorie</h4>
-        <p>{{ indicator.txtcategory }}</p>
-        <h4>Ausgangswert (Fortschrittsberechnung)</h4>
-        <p>{{ indicator.txtstartingvalue }}</p>
-        <h4>Zielwert</h4>
-        <p>{{ indicator.txttarget }}</p>
-      </div>
-
-      <div class="wrapper columns columns-gutter">
-        <div class="description">
-          <h4>Methodik</h4>
+      <div style="padding: 1rem 0 1rem 0; background-color: #EEEEEE">
+        <div class="wrapper">
+          <h2 :style="{ 'color': '#' + indicator.sdg.color}">
+            Weitere Informationen zu diesem Indikator
+          </h2>
+        </div>
+        <div class="wrapper description" style="color: black">
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Beschreibung</h4>
+          <p>{{ indicator.txtdescription }}</p>
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Kategorie</h4>
+          <p>{{ indicator.txtcategory }}</p>
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Ausgangswert (Fortschrittsberechnung)</h4>
+          <p>{{ indicator.txtstartingvalue }}</p>
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Zielwert</h4>
+          <p>{{ indicator.txttarget }}</p>
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
           <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
         </div>
       </div>
 
       <div class="wrapper columns columns-gutter">
         <div class="description">
-          <h4>Indikator-Details</h4>
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Indikator-Details</h4>
           <table class="box">
             <tbody>
               <tr>
-                <td class="title">Zielwert/SOLL</td>
+                <td class="title">Kategorie</td>
+                <td> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
+                  <span v-if="category">
+                     <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
+                       <i class="icon-plus-squared" />
+                     </span>
+                     <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
+                       <i class="icon-pencil-squared" />
+                     </span>
+                     <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
+                       <i class="icon-minus-squared" />
+                     </span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="title">Zielwert/SOLL (2030)</td>
                 <td v-html="format(indicator['target'], 1, indicator['unit'])" />
               </tr>
               <tr>
@@ -206,6 +227,7 @@
               </tr>
             </tbody>
           </table>
+
           <h4 class="caption">Diesen Indikator teilen</h4>
           <a title="Bei Facebook teilen" target="_blank" :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-official" /></a>
           <a title="Bei Twitter teilen" target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
@@ -244,6 +266,45 @@
         </div>
 
       </div>
+
+      <div class="indicator-navigation">
+        <span class="navigation-backwards">
+          <span v-if="getCurrentIndicatorCounter !== 0">
+            <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
+             :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
+             :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter - 1].sdg + ' – '
+              + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
+              + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+            >
+              <span class="vis-dl">
+                <i class="icon-angle-left" />
+                <span>
+                  {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
+                </span>
+              </span>
+            </nuxt-link>
+          </span>
+        </span>
+        <span class="navigation-forwards">
+          <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
+            <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
+              :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter + 1].color }"
+              :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter + 1].sdg + ' – '
+                + this.indiNav[getCurrentIndicatorCounter + 1].label + ' – '
+                + (this.indiNav[getCurrentIndicatorCounter + 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+            >
+              <span class="vis-dl">
+                <span>
+                  {{ this.indiNav[getCurrentIndicatorCounter + 1].label }}
+                </span>
+                <i class="icon-angle-right" />
+              </span>
+            </nuxt-link>
+          </span>
+        </span>
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -282,6 +343,11 @@
         })
         return encodeURI(csvContent)
       },
+      renderImage () {
+        const canvas = this.$refs.barChartDownload.$refs.canvas
+        const image = canvas.toDataURL('image/png', 1.0)
+        this.canvasToSRC = image
+      },
       updateBarChart () {
         this.datacollection = {
           labels: this.sortedByValue ? this.getCountries : this.getCountriesSortedByValue,
@@ -312,7 +378,8 @@
       return {
         link: '',
         sortedByValue: false,
-        datacollection: null
+        datacollection: null,
+        canvasToSRC: undefined
       }
     },
     mounted: function () {
@@ -556,6 +623,11 @@
         const data = _.concat(this.metadata, [['country', 'value']], this.countries)
         return this.buildCSV(data)
       },
+      pngDownload () {
+        if (this.canvasToSRC !== undefined) {
+          return encodeURI(this.canvasToSRC)
+        }
+      },
       timelineDownload () {
         const data = _.concat(this.metadata, [['year', 'value']], this.timeline)
         return this.buildCSV(data)
@@ -602,7 +674,7 @@
 
       td {
         width: 50%;
-        padding: 1em 0;
+        padding: 0.8em 0;
         border-bottom: 1px solid lighten($color-mute,20%);
 
         &.title {
@@ -663,10 +735,6 @@
     margin-left: .5em;
   }
 
-  .indicator-categories {
-    margin-top: 1rem;
-  }
-
   .indicator-navigation {
     margin-top: 1rem;
   }
@@ -684,4 +752,7 @@
     margin-bottom: 0.5rem;
   }
 
+  .txtintroduction {
+    font-size: 1.1rem;
+  }
 </style>
