@@ -409,7 +409,8 @@
       metadata () {
         return [
           ['metadata', 'value'],
-          // ['title', this.indicator.title],
+          ['indicator', this.indicator.label],
+          ['SDG', `${this.indicator.sdg.sdg}: ${this.indicator.sdg.label}`],
           ['datasource', this.indicator['data source']],
           ['sourcelink', this.indicator.sourcelink],
           ['license', this.indicator.license]
