@@ -104,9 +104,9 @@
       </div>
 
       <div class="wrapper">
-        <div class="box vis" v-if="hasCountries && countries.length">
+        <div id="captureBarChart" class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
-          <div class="vis-dl" style="margin-bottom: 1rem;">
+          <div id="orderButton" class="vis-dl" style="margin-bottom: 1rem;">
              <a v-if="!sortedByValue" class="btn btn-download" @click="updateBarChart()">
                <i class="icon-sort-number-up" /> Nach Wert sortieren
              </a>
@@ -124,7 +124,7 @@
             </a>
           </div>
 
-          <div class="vis-dl">
+          <div id="downloadButton" class="vis-dl">
             <a id="barChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
@@ -132,9 +132,9 @@
               <i class="icon-download" /> Daten herunterladen
             </a>
           </div>
-
         </div>
-        <div class="box vis" v-if="hasTimeline && timeline.length">
+
+        <div id="captureLineChart" class="box vis" v-if="hasTimeline && timeline.length">
           <h2>Wie hat sich der Indikator in Deutschland über die Zeit verändert?</h2>
 
           <line-chart :height="200" :data="lineChartData" :options="lineChartOptions"></line-chart>
@@ -147,10 +147,13 @@
           </div>
 
           <div class="vis-dl">
-             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">
-               <i class="icon-download" />
-               Daten herunterladen
-             </a>
+            <a id="lineChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
+              <i class="icon-file-image" /> PNG herunterladen
+            </a>
+            <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">
+              <i class="icon-download" />
+              Daten herunterladen
+            </a>
           </div>
 
         </div>
@@ -319,6 +322,7 @@
   import _ from 'lodash'
   import BarChart from '~/components/BarChart.js'
   import LineChart from '~/components/LineChart.js'
+  import html2canvas from 'html2canvas'
 
   export default {
     validate ({ params, store }) {
@@ -445,10 +449,12 @@
           },
           animation: {
             onComplete: function () {
-              // TODO check for a nicer solution
-              // it's necessary to wait until the chart is rendered before calling 'toDataURL'
-              this.dataURI = this.canvas.toDataURL('image/png', 1.0)
-              document.getElementById('barChartDownloadButton').href = encodeURI(this.dataURI)
+              // TODO check for a better solution
+              let elemToRender = document.getElementById('captureBarChart')
+              html2canvas(elemToRender).then(canvas => {
+                this.dataURI = canvas.toDataURL('image/png', 1.0)
+                document.getElementById('barChartDownloadButton').href = encodeURI(this.dataURI)
+              })
             }
           }
         }
@@ -510,6 +516,16 @@
                 autoSkip: false
               }
             }]
+          },
+          animation: {
+            onComplete: function () {
+              // TODO check for a better solution
+              let elemToRender = document.getElementById('captureLineChart')
+              html2canvas(elemToRender).then(canvas => {
+                this.dataURI = canvas.toDataURL('image/png', 1.0)
+                document.getElementById('lineChartDownloadButton').href = encodeURI(this.dataURI)
+              })
+            }
           }
         }
       },
