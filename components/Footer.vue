@@ -65,6 +65,7 @@
   .tracking-info > p {
     font-size: 0.8rem;
     margin-top: 0.5rem;
+    line-height: 1.2rem;
   }
 
   .btn-newsletter {
