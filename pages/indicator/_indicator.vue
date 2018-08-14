@@ -451,7 +451,7 @@
           animation: {
             onComplete: function () {
               // TODO check for a better solution
-              let elemToRender = document.getElementById('captureBarChart')
+              const elemToRender = document.getElementById('captureBarChart')
               const options = {
                 logging: false,
                 imageTimeout: 0
@@ -525,7 +525,7 @@
           animation: {
             onComplete: function () {
               // TODO check for a better solution
-              let elemToRender = document.getElementById('captureLineChart')
+              const elemToRender = document.getElementById('captureLineChart')
               const options = {
                 logging: false,
                 imageTimeout: 0
