@@ -2,7 +2,7 @@
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
       <h5>{{ i.label }}</h5>
-      <hr style="margin-top:0.3rem;" :class="[ i.author === 'dns' ? 'dns' : 'okf']" />
+      <hr style="margin-top:0.3rem;" :class="[ i.author === 'dns' ? 'hr-dns' : 'hr-okf']" />
       <div class="values value-target">Indikator-Ziel für 2030 erreicht zu:</div>
 
       <!-- No piechart anymore -> TODO change name or add component  -->
@@ -182,4 +182,15 @@
   .value-target {
     font-size: 0.9rem;
   }
+
+  .hr-dns {
+    border: 0;
+    border-top: 2px solid $color-dns;
+  }
+
+  .hr-okf {
+    border: 0;
+    border-top: 2px solid $color-okf;
+  }
+
 </style>
