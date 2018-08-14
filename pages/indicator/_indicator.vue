@@ -17,7 +17,9 @@
             <p class="txtintroduction">{{ indicator.txtintroduction }}</p>
           </div>
           <div class="description">
-            <table class="box" style="border-radius:0px; border:none; padding: 0.5rem 1rem 0.3rem 1.5rem; text-shadow:none;"  :style="{ 'background-color': '#' + indicator.sdg.color}">
+            <table class="box" style="border-radius:0px; border:none; padding: 0.5rem 1rem 0.3rem 1.5rem; text-shadow:none;"
+              :style="{ 'background-color': '#' + indicator.sdg.color}"
+            >
               <tbody style="font-size: 0.85rem;">
                 <tr>
                   <td class="title">Kategorie</td>
@@ -168,12 +170,17 @@
         <div class="wrapper description" style="color: black">
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Beschreibung</h4>
           <p>{{ indicator.txtdescription }}</p>
-          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Kategorie</h4>
-          <p>{{ indicator.txtcategory }}</p>
-          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Ausgangswert (Fortschrittsberechnung)</h4>
-          <p>{{ indicator.txtstartingvalue }}</p>
+
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Zielwert</h4>
           <p>{{ indicator.txttarget }}</p>
+
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Ausgangswert (Fortschrittsberechnung)</h4>
+          <p>{{ indicator.txtstartingvalue }}</p>
+
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Kategorie</h4>
+          <p>{{ indicator.txtcategory }}</p>
+
+
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
           <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
         </div>
@@ -368,7 +375,7 @@
             },
             {
               label: this.indicator.unitShort,
-              backgroundColor: '#3700B3',
+              backgroundColor: '#5D6D7E',
               // strokeColor: 'rgba(220,220,220,1)',
               // fillColor: 'rgba(220,220,220,0.5)',
               data: this.sortedByValue ? this.getValues : this.getSortedValues
@@ -472,7 +479,7 @@
               label: this.indicator.unitShort,
               fill: false,
               lineTension: 0,
-              backgroundColor: '#3700B3',
+              backgroundColor: '#5D6D7E',
               // strokeColor: 'rgba(220,220,220,1)',
               // fillColor: 'rgba(220,220,220,0.5)',
               data: this.getValuesForCountries
@@ -782,6 +789,6 @@
   }
 
   .txtintroduction {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 </style>
