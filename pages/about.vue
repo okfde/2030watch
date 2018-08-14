@@ -67,20 +67,18 @@
 
       <section>
         <div class="wrapper">
-          <h2>Gefördert durch</h2>
+          <h2>Gefördert von</h2>
           <div class="section-wrapper">
             <div class="section-img">
-              <p class="section-description" style="margin-bottom:1.3rem;">
-                Gefördert von
-              </p>
-              <img src="../assets/img/sponsors/EG_LOGO_RGB.jpg" style="margin-bottom:1rem;"
+              <img src="../assets/img/sponsors/EG_LOGO_RGB.jpg"
                 alt="Logo von Engagement Global"
                 width="250px"
+                class="EG-logo"
               >
-              <p class="section-description">
+              <p class="section-description EG-description">
                 im Auftrag des
               </p>
-              <img src="../assets/img/sponsors/BMZ_2017_Office_Farbe_de.png"
+              <img src="../assets/img/sponsors/BMZ.png"
                 alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
                 width="300px"
               >
@@ -203,5 +201,17 @@
     font-size: 0.7rem;
     line-height: 1.0rem;
     color: gray;
+  }
+
+  .section-wrapper {
+    align-items: start;
+  }
+
+  .EG-logo {
+    margin-bottom: 1rem;
+  }
+
+  .EG-description {
+    margin-bottom: 0.3rem;
   }
 </style>
