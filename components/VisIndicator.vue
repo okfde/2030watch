@@ -2,8 +2,10 @@
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
       <h5>{{ i.label }}</h5>
+      <hr style="margin-top:0.3rem;" :class="[ i.author === 'dns' ? 'dns' : 'okf']" />
       <div class="values value-target">Indikator-Ziel für 2030 erreicht zu:</div>
 
+      <!-- No piechart anymore -> TODO change name or add component  -->
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
       <div class="values">
