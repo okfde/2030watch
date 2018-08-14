@@ -70,9 +70,19 @@
           <h2>Gefördert durch</h2>
           <div class="section-wrapper">
             <div class="section-img">
-              <img src="../assets/img/sponsors/BMZ.png"
-                alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
+              <p class="section-description" style="margin-bottom:1.3rem;">
+                Gefördert von
+              </p>
+              <img src="../assets/img/sponsors/EG_LOGO_RGB.jpg" style="margin-bottom:1rem;"
+                alt="Logo von Engagement Global"
                 width="250px"
+              >
+              <p class="section-description">
+                im Auftrag des
+              </p>
+              <img src="../assets/img/sponsors/BMZ_2017_Office_Farbe_de.png"
+                alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
+                width="300px"
               >
               <p class="section-description">
                 Für den Inhalt dieser Publikation ist allein Open Knowledge Foundation Deutschland e.V.
