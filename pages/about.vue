@@ -74,6 +74,11 @@
                 alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
                 width="250px"
               >
+              <p class="section-description">
+                Für den Inhalt dieser Publikation ist allein Open Knowledge Foundation Deutschland e.V.
+                verantwortlich; die hier dargestellten Positionen geben nicht den Standpunkt von Engagement
+                Global gGbH und dem Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung wieder.
+              </p>
             </div>
             <div class="section-img">
               <img src="../assets/img/sponsors/BrotfuerdieWelt.svg"
@@ -181,5 +186,12 @@
         }
       }
     }
+  }
+
+  .section-description {
+    text-align: left;
+    font-size: 0.7rem;
+    line-height: 1.0rem;
+    color: gray;
   }
 </style>
