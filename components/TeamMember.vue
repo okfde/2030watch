@@ -1,11 +1,11 @@
 <template>
   <div class="team-member">
     <div class="avatar">
-      <img :src="member.imgUrl" :alt="'Foto von' + member.name" />
+      <img :src="member.imgUrl" :alt="'Foto von ' + member.name" />
     </div>
     <div class="info">
-      <span class="name">{{ member.name }}</span>
-      <span class="role">{{ member.role }}</span>
+      <div class="name">{{ member.name }}</div>
+      <div class="role">{{ member.role }}</div>
       <div class="socials">
         <a v-if="member.email" :href="'mailto:' + member.email">
           <i class="icon-mail" title="E-Mail" />
