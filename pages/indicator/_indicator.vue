@@ -17,13 +17,11 @@
             <p class="txtintroduction">{{ indicator.txtintroduction }}</p>
           </div>
           <div class="description">
-            <table class="box" style="border-radius:0px; border:none; padding: 0.5rem 1rem 0.3rem 1.5rem; text-shadow:none;"
-              :style="{ 'background-color': '#' + indicator.sdg.color}"
-            >
-              <tbody style="font-size: 0.85rem;">
-                <tr>
-                  <td class="title">Kategorie</td>
-                  <td style="padding-left: 0.4rem;"> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
+            <table class="box header-box" :style="{ 'background-color': sdgColorLighter }" >
+              <tbody>
+                <tr :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }">
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Kategorie</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }"> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
                     <span v-if="category">
                        <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
                          <i class="icon-plus-squared" />
@@ -38,20 +36,20 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="title">IST ({{ indicator['currentYear'] }})</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['current'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">IST ({{ indicator['currentYear'] }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['current'], 1, indicator['unit'])" />
                 </tr>
                 <tr>
-                  <td class="title">SOLL (2030)</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['target'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">SOLL (2030)</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['target'], 1, indicator['unit'])" />
                 </tr>
                 <tr>
-                  <td class="title" style="line-height:1rem;">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['start'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['start'], 1, indicator['unit'])" />
                 </tr>
                 <tr>
-                  <td class="title" style="line-height:1rem;">2030-Ziel erreicht zu</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['progress'], 0)" />
+                  <td class="title">2030-Ziel erreicht zu</td>
+                  <td v-html="format(indicator['progress'], 0)" />
                 </tr>
               </tbody>
             </table>
@@ -100,7 +98,7 @@
       </div>
 
       <div class="wrapper" v-if="indicator.txt2030target">
-        <h3 style="line-height: 1.5rem;" :style="{ 'color': '#' + indicator.sdg.color}">
+        <h3 :style="{ 'color': '#' + indicator.sdg.color}">
           {{ indicator.txt2030target }}
         </h3>
       </div>
@@ -108,7 +106,7 @@
       <div class="wrapper">
         <div id="captureBarChart" class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
-          <div data-html2canvas-ignore class="vis-dl" style="margin-bottom: 1rem;">
+          <div data-html2canvas-ignore class="vis-dl button-container">
              <a v-if="!sortedByValue" class="btn btn-download" @click="updateBarChart()">
                <i class="icon-sort-number-up" /> Nach Wert sortieren
              </a>
@@ -127,7 +125,7 @@
           </div>
 
           <div data-html2canvas-ignore class="vis-dl">
-            <a id="barChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
+            <a id="barChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
@@ -149,7 +147,7 @@
           </div>
 
           <div data-html2canvas-ignore class="vis-dl">
-            <a id="lineChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
+            <a id="lineChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">
@@ -161,7 +159,7 @@
         </div>
       </div>
 
-      <div style="padding: 1rem 0 1rem 0; background-color: #EEEEEE">
+      <div class="info-wrapper">
         <div class="wrapper">
           <h2 :style="{ 'color': '#' + indicator.sdg.color}">
             Weitere Informationen zu diesem Indikator
@@ -183,6 +181,13 @@
 
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
           <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+          <br />
+          <span v-if="indicator.author === 'dns'">
+            &#42; Indikator-Beschreibung und Zielwert sind der
+            <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7"
+              target="_blank"
+            >Deutschen Nachhaltigkeitsstrategie 2016</a> entnommen.
+          </span>
         </div>
       </div>
 
@@ -330,6 +335,7 @@
   import BarChart from '~/components/BarChart.js'
   import LineChart from '~/components/LineChart.js'
   import html2canvas from 'html2canvas'
+  const tinycolor = require('tinycolor2')
 
   export default {
     validate ({ params, store }) {
@@ -391,7 +397,8 @@
         sortedByValue: false,
         datacollection: null,
         canvasToSRC: undefined,
-        dataURI: undefined
+        dataURI: undefined,
+        sdgColorLighter: undefined
       }
     },
     mounted: function () {
@@ -399,6 +406,8 @@
       const base = this.$router.options.base === '/' ? '' : this.$router.options.base
       this.link = window.location.origin + base + this.$route.fullPath
       this.updateBarChart()
+      const color = '#' + this.indicator.sdg.color
+      this.sdgColorLighter = tinycolor(color).darken(7).toString()
     },
     computed: {
       ...mapState([
@@ -711,7 +720,7 @@
       td {
         width: 50%;
         padding: 0.8em 0;
-        border-bottom: 1px solid lighten($color-mute,20%);
+        border-bottom: 1px solid lighten($color-mute, 20%);
 
         &.title {
           font-weight: 600;
@@ -790,5 +799,25 @@
 
   .txtintroduction {
     font-size: 1.2rem;
+  }
+
+  .header-box {
+    border-radius: 0px;
+    border: none;
+    padding: 0.5rem 1rem 0.3rem 1.5rem !important;
+    text-shadow: none;
+  }
+
+  .button-container {
+    margin-bottom: 1rem;
+  }
+
+  .png-download {
+    margin-right: 1rem;
+  }
+
+  .info-wrapper {
+    padding: 1rem 0 1rem 0;
+    background-color: #EEEEEE;
   }
 </style>
