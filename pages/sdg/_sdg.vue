@@ -80,12 +80,11 @@
                       <i class="icon-minus-squared" /> Nicht berechenbar
                     </span>
                   </li>
-                  <li class="legend-sm-margin" title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
+                  <li class="legend-margin" title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
                       <i class="icon-pencil-squared" /> Modifizierter Zielwert
                     </span>
                   </li>
-
                   <li>
                     <div class="legend-title">Nachhaltigkeitsstufen</div>
                   </li>
@@ -99,25 +98,17 @@
                       <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel 40 % – 80 %
                     </span>
                   </li>
-                  <li class="legend-md-margin">
+                  <li class="legend-margin">
                     <span class="label" title="Indikator-Ziel zu 80 % – 100 % erreicht">
                       <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
                     </span>
                   </li>
 
-                  <li class="label legend-supplement legend-md-margin">
+                  <li class="label legend-supplement legend-margin">
                     Mehr zu unserer Methode
                     <nuxt-link to="/projekt#methode">
                       hier
                     </nuxt-link>
-                  </li>
-
-                  <li class="label legend-supplement legend-abs-positioning">
-                    &#42; Indikator-Beschreibung und Zielwert sind der
-                    <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7"
-                      target="_blank"
-                    >Deutschen Nachhaltigkeitsstrategie 2016</a>
-                    entnommen.
                   </li>
                 </ul>
               </li>
@@ -462,7 +453,7 @@
   }
 
   .label {
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     > i {
       font-size: 1.1rem
@@ -477,7 +468,7 @@
   .legend-supplement {
     line-height: 1.2rem;
     width: 380px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .progress-box-wrapper {
@@ -507,15 +498,8 @@
     position: relative;
   }
 
-  .legend-sm-margin {
-    margin-bottom: 0.4rem;
+  .legend-margin {
+    margin-bottom: 1rem !important;
   }
 
-  .legend-md-margin {
-    margin-bottom: 0.7rem !important;
-  }
-
-  .legend-abs-positioning {
-    position: absolute;
-  }
 </style>
