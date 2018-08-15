@@ -1,21 +1,27 @@
 <template>
   <div class="page-container">
-    <div class="wrapper info-message">
-      <span class="info-message-bold">&#9432; Relaunch light:</span> Alle Inhalte gibt es bis 1. September
-    </div>
-
     <header class="inpage-header">
       <div class="wrapper">
         <div class="message">
           <h1>Wie nachhaltig ist Deutschland?</h1>
-          <p>Der Zustand der Welt erfordert eine Transformation zu mehr Gerechtig&shy;keit und Nachhaltiger Entwicklung. Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Trans&shy;formation siebzehn Nachhaltig&shy;keitsziele - den sogenannten „Sustainable Development Goals (SDGs)“ - bis zum Jahr 2030 umzusetzen. Der damit verbundene globale Indikatoren&shy;katalog dient zur Fortschritts&shy;messung.</p>
-          <p>2030Watch diskutiert, wie ambitioniert Deutschland die SDGs umsetzt.</p>
+          <!-- <p>Der Zustand der Welt erfordert eine Transformation zu mehr Gerechtig&shy;keit und Nachhaltiger Entwicklung. Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Trans&shy;formation siebzehn Nachhaltig&shy;keitsziele - den sogenannten „Sustainable Development Goals (SDGs)“ - bis zum Jahr 2030 umzusetzen. Der damit verbundene globale Indikatoren&shy;katalog dient zur Fortschritts&shy;messung.</p>
+          <p>2030Watch diskutiert, wie ambitioniert Deutschland die SDGs umsetzt.</p> -->
+          <p>
+            Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, 17 Nachhaltig­keitsziele – die sogenannten "Sustainable Development Goals (SDGs)"
+            – bis zum Jahr 2030 umzusetzen. 2030Watch diskutiert anhand von Indikatoren wie ambitioniert Deutschland die SDGs umsetzt.
+          </p>
+          <p>
+            <blockquote cite="https://www.2030agenda.de/de/article/peer-review-2018">
+              <p style="font-weight:bold;">
+                "Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten."
+              </p>
+            </blockquote>
+            <cite>– Peer Review zur Deutschen Nachhaltigkeitsstrategie 2018</cite>
+          </p>
         </div>
       </div>
     </header>
-
     <VisLeiste class="padding-visleiste" :current="false" />
-
     <section>
       <div id="keyfindings" class="wrapper">
         <h2>
@@ -33,17 +39,17 @@
       </div>
     </section>
 
-    <section style="margin-bottom: 2rem;">
+    <!-- <section style="margin-bottom: 2rem;">
       <div class="wrapper">
         <Slideshow />
       </div>
-    </section>
+    </section> -->
 
-    <section>
+    <!-- <section>
       <div class="wrapper">
         <KeyFindings />
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -78,16 +84,6 @@
 <style lang="scss" scoped>
   @import "~@/assets/style/variables";
 
-  .info-message {
-    color: $color-okf;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .info-message-bold {
-    font-weight: bold;
-  }
-
   .inpage-header {
     padding: 7vh 0 7vh 0;
   }
@@ -95,6 +91,10 @@
   .padding-visleiste {
     padding-top: 0;
     margin-bottom: 2rem;
+  }
+
+  .message {
+    color: $color-2030;
   }
 
 </style>
