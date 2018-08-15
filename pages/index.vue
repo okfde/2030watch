@@ -55,10 +55,10 @@
 
 <script>
   import VisListe from '~/components/VisListe.vue'
-  import Slideshow from '~/components/Slideshow.vue'
-  import KeyFindings from '~/components/KeyFindings.vue'
+  // import Slideshow from '~/components/Slideshow.vue'
+  // import KeyFindings from '~/components/KeyFindings.vue'
   import VisLeiste from '~/components/VisLeiste.vue'
-  import VisProgress from '~/components/VisProgress.vue'
+  // import VisProgress from '~/components/VisProgress.vue'
 
   export default {
     data: function () {
@@ -73,10 +73,10 @@
     },
     components: {
       VisListe,
-      Slideshow,
-      KeyFindings,
-      VisLeiste,
-      VisProgress
+      // Slideshow,
+      // KeyFindings,
+      VisLeiste
+      // VisProgress
     }
   }
 </script>
