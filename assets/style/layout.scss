@@ -51,11 +51,25 @@
   align-items: center;
 }
 
-.page-header, .page-explainer, .page-footer, .inpage-header {
+.page-header, .inpage-header {
   color: $color-white;
 
   a {
     color: $color-light;
+
+    &:hover, &:focus {
+      color: $color-white;
+    }
+  }
+
+  p a {
+    text-decoration: underline;
+  }
+}
+
+.page-explainer, .page-footer {
+  a {
+    color: $color-white;
 
     &:hover, &:focus {
       color: $color-white;
@@ -110,6 +124,7 @@
 .page-footer, .page-explainer {
   font-size: 0.9em;
   padding: 3rem 0;
+  color: $color-white;
 }
 
 .page-container {
@@ -194,4 +209,8 @@
   border-radius: 4px;
   padding: 2rem;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .24);
+
+  td {
+    line-height: 1.3rem;
+  }
 }
