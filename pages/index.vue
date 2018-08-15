@@ -93,8 +93,4 @@
     margin-bottom: 2rem;
   }
 
-  .message {
-    color: $color-2030;
-  }
-
 </style>
