@@ -6,9 +6,9 @@
       </div>
       <div class="sdg-header sdg-header-vis columns">
         <section class="sdg-legend">
+          Fortschrittsbalken:
           <span class="okf">2030Watch</span>
-          <span class="dns-lang">Deutsche Nachhaltigkeitsstrategie</span>
-          <span class="dns-kurz">DNS</span>
+          <span class="dns">Offiziell</span>
         </section>
       </div>
     </li>
@@ -18,7 +18,7 @@
           <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
         </div>
         <div class="sdg-vis">
-          <VisProgress :sdg="sdg" :vTickLabels="index === 0" :vTicks="true" />
+          <VisProgress :sdg="sdg" :vTickLabels="index === 0" :vTicks="false" />
         </div>
       </nuxt-link>
       <a v-else class="sdg-link disabled" title="Coming soon">
@@ -26,7 +26,7 @@
           <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text">{{ sdg.labelShort }}</span>
         </div>
         <div class="sdg-vis">
-          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" :vTicks="true" />
+          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" :vTicks="false" />
         </div>
       </a>
     </li>
@@ -95,6 +95,7 @@
 
   .sdg-item {
     display: flex;
+    margin-bottom: 1.3rem;
 
     &:first-child {
       pointer-events: none;
@@ -102,16 +103,11 @@
 
     .sdg-header {
       margin-bottom: $spacing / 2;
-    }
-
-    .sdg-header-label {
-      // margin-left: calc(1rem + 16px);
-      font-weight: bold;
+      font-size: 1.1rem;
     }
 
     .sdg-header-label, .sdg-header-vis {
       flex: 1;
-      color: #9B9B9A;
 
       .active {
         font-weight: bold;
@@ -123,31 +119,6 @@
 
         span {
           margin-left: 10px;
-        }
-
-        @media (max-width: 960px) {
-          .dns-lang {
-            display:none;
-          }
-          .dns-kurz {
-            color: $color-dns;
-          }
-        }
-        @media (min-width: 961px) {
-          .dns-lang {
-            color: $color-dns;
-          }
-          .dns-kurz {
-            display: none;
-          }
-        }
-        // TODO
-        // .dns {
-        //   color: $color-dns;
-        // }
-
-        .okf {
-          color: $color-okf;
         }
       }
     }
@@ -193,18 +164,18 @@
           width: 1rem;
           margin-right: 1rem;
           text-align: right;
-          line-height: 1.2rem;
+          line-height: 1.35rem;
           display: inline-block;
           // color: $color-mute;
           color: var(--color);
-          font-size: 0.95rem;
+          font-size: 1.2rem;
         }
 
         .sdg-text {
-          line-height: 1.2rem;
+          line-height: 1.35rem;
           display: inline-block;
           font-weight: bold;
-          font-size: 0.95rem;
+          font-size: 1.2rem;
         }
       }
 
