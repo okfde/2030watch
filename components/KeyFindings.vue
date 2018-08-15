@@ -109,7 +109,6 @@
       td {
         vertical-align: top;
         padding: 5px 0;
-        font-family: $font-family-modern;
 
         .icon {
           display: inline-block;

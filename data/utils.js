@@ -126,15 +126,14 @@ module.exports = {
   },
   asyncBatch: function (arr, processIndicatorMeta, processIndicatorDetail, callback) {
     let n = arr.length
-
     const fullIndicatorsArr = []
-
     _.each(arr, obj => {
       // make async request. Check n if all request have been finished
       obj = processIndicatorMeta(obj)
       processIndicatorDetail(obj, fullIndicator => {
         fullIndicatorsArr.push(fullIndicator)
         n -= 1
+        // TODO: handle errors, e.g., if an indicator URL is not reachable, the script doesn't run through
         if (!n) {
           callback(fullIndicatorsArr)
         }

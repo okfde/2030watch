@@ -67,13 +67,26 @@
 
       <section>
         <div class="wrapper">
-          <h2>Gefördert durch</h2>
+          <h2>Gefördert von</h2>
           <div class="section-wrapper">
             <div class="section-img">
+              <img src="../assets/img/sponsors/EG_LOGO_RGB.jpg"
+                alt="Logo von Engagement Global"
+                width="250px"
+                class="EG-logo"
+              >
+              <p class="section-description EG-description">
+                im Auftrag des
+              </p>
               <img src="../assets/img/sponsors/BMZ.png"
                 alt="Logo des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung"
-                width="250px"
+                width="300px"
               >
+              <p class="section-description">
+                Für den Inhalt dieser Publikation ist allein Open Knowledge Foundation Deutschland e.V.
+                verantwortlich; die hier dargestellten Positionen geben nicht den Standpunkt von Engagement
+                Global gGbH und dem Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung wieder.
+              </p>
             </div>
             <div class="section-img">
               <img src="../assets/img/sponsors/BrotfuerdieWelt.svg"
@@ -181,5 +194,24 @@
         }
       }
     }
+  }
+
+  .section-description {
+    text-align: left;
+    font-size: 0.7rem;
+    line-height: 1.0rem;
+    color: gray;
+  }
+
+  .section-wrapper {
+    align-items: start;
+  }
+
+  .EG-logo {
+    margin-bottom: 1rem;
+  }
+
+  .EG-description {
+    margin-bottom: 0.3rem;
   }
 </style>

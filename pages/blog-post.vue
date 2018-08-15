@@ -119,7 +119,7 @@
          <span class="social-icons">
           <a :href="'mailto:?subject=' + encodeURIComponent('Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
           <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
-          <a :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)" target="_blank" title="Blogpost auf Facebook teilen"><i class="icon-facebook-squared" /></a>
+          <a :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)" target="_blank" title="Blogpost auf Facebook teilen"><i class="icon-facebook-official" /></a>
         </span>
       </section>
     </div>

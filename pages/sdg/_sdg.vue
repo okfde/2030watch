@@ -14,7 +14,7 @@
             <small class="caption">SDG {{ sdg.number }}</small>
 
             <h1>{{ sdg.labelShort }}</h1>
-            <p>{{ sdg.textIntro }}</p>
+            <!-- <p>{{ sdg.textIntro }}</p> -->
           </div>
           <div class="sdg-image">
             <img :src="image" :title="sdg.labelShort" />
@@ -65,7 +65,7 @@
               <li ref="indicator" v-for="(indicator, n) in indi_dns">
                 <VisIndicator :i="indicator" :color="222" :colorScale="true" />
               </li>
-              <li class="legend" ref="indicatorLegend">
+              <li class="legend-rel-positioning" ref="indicatorLegend">
                 <ul>
                   <li>
                     <div class="legend-title">Kategorien</div>
@@ -80,12 +80,12 @@
                       <i class="icon-minus-squared" /> Nicht berechenbar
                     </span>
                   </li>
-                  <li title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
+                  <li class="legend-sm-margin" title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
                       <i class="icon-pencil-squared" /> Modifizierter Zielwert
                     </span>
                   </li>
-                  <br />
+
                   <li>
                     <div class="legend-title">Nachhaltigkeitsstufen</div>
                   </li>
@@ -99,17 +99,25 @@
                       <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel 40 % – 80 %
                     </span>
                   </li>
-                  <li>
+                  <li class="legend-md-margin">
                     <span class="label" title="Indikator-Ziel zu 80 % – 100 % erreicht">
                       <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
                     </span>
                   </li>
-                  <br />
-                  <li class="label link-to-method">
+
+                  <li class="label legend-supplement legend-md-margin">
                     Mehr zu unserer Methode
                     <nuxt-link to="/projekt#methode">
                       hier
                     </nuxt-link>
+                  </li>
+
+                  <li class="label legend-supplement legend-abs-positioning">
+                    &#42; Indikator-Beschreibung und Zielwert sind der
+                    <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7"
+                      target="_blank"
+                    >Deutschen Nachhaltigkeitsstrategie 2016</a>
+                    entnommen.
                   </li>
                 </ul>
               </li>
@@ -297,14 +305,6 @@
         const amount = this.sdg.n.udns + this.sdg.n.uokf
         return 100 / amount
       },
-      // linesNormal: function () {
-      //   const indicators = _.filter(this.sdg.ind.dns, indicator => {
-      //     return indicator.keep
-      //   })
-      //   return _.map(indicators, (indicator, n) => {
-      //     return (n + 0.5) * this.indicatorWidth + (n * this.indicatorMargin * 2) + 'px'
-      //   })
-      // },
       linesMod: function () {
         const modifiedOkfIndicators = _.sortBy(_.filter(this.sdg.ind.okf, 'moddedTarget'), 'id')
         let dnsArray = []
@@ -408,6 +408,7 @@
       margin-bottom: -1.5rem;
 
       svg {
+        width: 90%;
         height: 100px;
         margin: 0 10px; // 10px is fixed in js!
 
@@ -469,12 +470,14 @@
   }
 
   .legend-title {
-    font-weight:bold;
+    font-weight: bold;
     font-size: 1.1rem;
   }
 
-  .link-to-method {
+  .legend-supplement {
     line-height: 1.2rem;
+    width: 380px;
+    font-size: 1rem;
   }
 
   .progress-box-wrapper {
@@ -498,5 +501,21 @@
 
   .explainer-progress {
     margin-bottom: 1.3rem;
+  }
+
+  .legend-rel-positioning {
+    position: relative;
+  }
+
+  .legend-sm-margin {
+    margin-bottom: 0.4rem;
+  }
+
+  .legend-md-margin {
+    margin-bottom: 0.7rem !important;
+  }
+
+  .legend-abs-positioning {
+    position: absolute;
   }
 </style>

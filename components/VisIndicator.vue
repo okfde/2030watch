@@ -1,9 +1,14 @@
 <template>
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
-    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny }" ref="vis" :title="i.label">
-      <h5>{{ i.label }}</h5>
+    <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny, 'position-relative': true }" ref="vis" :title="i.label">
+      <span class="dns-asterisks" v-if="i.author === 'dns'">&#42;</span>
+      <h5>
+        {{ i.label }}
+      </h5>
+      <hr style="margin-top:0.3rem;" :class="[ i.author === 'dns' ? 'hr-dns' : 'hr-okf']" />
       <div class="values value-target">Indikator-Ziel für 2030 erreicht zu:</div>
 
+      <!-- No piechart anymore -> TODO change name or add component  -->
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
       <div class="values">
@@ -129,11 +134,11 @@
       font-size: 1.1rem;
       text-align: center;
       font-weight: normal;
-      height: 3.4rem;
-      margin-top: 0.5rem;
+      height: 4rem;
+      margin-top: 0.6rem;
       color: rgba(0, 0, 0, 0.7);
       font-weight: bold;
-      line-height: 1.15rem;
+      line-height: 1.35rem;
     }
 
     .labels {
@@ -180,4 +185,26 @@
   .value-target {
     font-size: 0.9rem;
   }
+
+  .hr-dns {
+    border: 0;
+    border-top: 2px solid $color-dns;
+  }
+
+  .hr-okf {
+    border: 0;
+    border-top: 2px solid $color-okf;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+
+  .dns-asterisks {
+    position: absolute;
+    right: 10px;
+    color: black;
+    font-size: 0.9rem;
+  }
+
 </style>

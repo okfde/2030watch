@@ -140,8 +140,8 @@ function processSDGs (sdgs, allIndicators) {
       },
       'ind': {
         // Delete unused keys in array
-        'dns': deleteKeysInHashArray(indiDns, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue']),
-        'okf': deleteKeysInHashArray(indiOkf, ['countries', 'timeline', 'txtintroduction', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue'])
+        'dns': deleteKeysInHashArray(indiDns, ['countries', 'timeline', 'txtintroduction', 'txt2030target', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue']),
+        'okf': deleteKeysInHashArray(indiOkf, ['countries', 'timeline', 'txtintroduction', 'txt2030target', 'txttarget', 'txtdescription', 'txtcategory', 'txtstartingvalue'])
       },
       'n': {
         // Count the amount of indicators for various properties
@@ -386,18 +386,41 @@ function processIndicatorDetail (indicator, callback) {
       // Split data where either temporal or country data starts
       const description = _.fromPairs(_.slice(detailData, 0, endData))
       // Load defined keys into the indicator
-      _.forEach(['txtintroduction', 'txtdescription', 'txttarget', 'txtcategory', 'txtstartingvalue', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
+      _.forEach(['txtintroduction', 'txt2030target', 'txtdescription', 'txttarget', 'txtcategory', 'txtstartingvalue', 'indicator source', 'data source', 'license', 'sourcelink'], key => {
         indicator[key] = description[key]
       })
 
       // Build temporal data
       if (timelineIndex > 0) {
         const timeline = convertHashToFloat(_.fromPairs(_.slice(detailData, timelineIndex + 1)))
+
+        // strip null values of the beginning of the timeline
+        let years = Object.keys(timeline)
+        let i = 0
+        while (i < years.length) {
+          if ((timeline[years[i]] !== null && !isNaN(timeline[years[i]]))) {
+            break
+          }
+          delete timeline[years[i]]
+          i++
+        }
+        // strip null values of the end of the timeline (the null values inbetween should be retained)
+        years = Object.keys(timeline)
+        let j = years.length
+        while (j > 0) {
+          if ((timeline[years[j]] !== null && !isNaN(timeline[years[j]]))) {
+            break
+          }
+          delete timeline[years[j]]
+          j--
+        }
         indicator['timeline'] = timeline
       }
       // Build geo data
       if (countriesIndex > 0) {
         const countries = convertHashToFloat(_.fromPairs(_.slice(detailData, countriesIndex + 1, timelineIndex > 0 ? timelineIndex : detailData.length - 1)))
+        // remove null values of countries
+        Object.keys(countries).forEach((key) => (countries[key] === null || isNaN(countries[key])) && delete countries[key])
         indicator['countries'] = countries
       }
     }
