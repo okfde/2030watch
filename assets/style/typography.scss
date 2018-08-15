@@ -1,5 +1,5 @@
 .page-footer, .page-header, .page-explainer, .inpage-header, .inpage-nav {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .dns {
@@ -11,24 +11,39 @@
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.4;
   letter-spacing: 0.02em;
   font-weight: bold;
-  color: $color-okf;
+  // color: $color-okf;
   margin-bottom: $spacing / 2;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   letter-spacing: 0.02em;
-  color: $color-okf;
+  // color: $color-okf;
+}
+
+h4 {
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
 }
 
 p + p {
@@ -72,7 +87,7 @@ small + p {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.8;
+  // opacity: 0.8;
 }
 
 .label {
