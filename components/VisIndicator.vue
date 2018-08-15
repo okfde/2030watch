@@ -1,7 +1,6 @@
 <template>
   <nuxt-link :to="'/indicator/' + i.slug" :title="i.label">
     <div :class="{ 'vis-indicator': true, 'extended': !compact, 'tiny': tiny, 'position-relative': true }" ref="vis" :title="i.label">
-      <span class="dns-asterisks" v-if="i.author === 'dns'">&#42;</span>
       <h5>
         {{ i.label }}
       </h5>
@@ -198,13 +197,6 @@
 
   .position-relative {
     position: relative;
-  }
-
-  .dns-asterisks {
-    position: absolute;
-    right: 10px;
-    color: black;
-    font-size: 0.9rem;
   }
 
 </style>
