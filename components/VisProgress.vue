@@ -76,7 +76,7 @@
         alignment-baseline="hanging"
         dominant-baseline="hanging"
         :text-anchor="labels[0].l"
-        :style="{ 'font-size': compact ? '0.8rem' : '1rem' }"
+        :style="{ 'font-size': compact ? '0.9rem' : '1.1rem' }"
         :x="labels[0].x"
         y="0%"
         v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)"
@@ -85,7 +85,7 @@
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
         :text-anchor="labels[1].l"
-        :style="{ 'font-size': compact ? '0.8rem' : '1rem' }"
+        :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[1].x"
         y="100%"
         v-html="(vMarkerLabelsNames ? 'Offiziell: ' : '') + format(dns)"
@@ -415,7 +415,7 @@
       &.sdg-label-tick {
         fill: #aaa;
         opacity: 1;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
       }
 
       &.sdg-label-total {
