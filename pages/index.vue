@@ -11,12 +11,14 @@
             – bis zum Jahr 2030 umzusetzen. 2030Watch diskutiert anhand von Indikatoren wie ambitioniert Deutschland die SDGs umsetzt.
           </p>
           <p>
-            <blockquote cite="https://www.2030agenda.de/de/article/peer-review-2018">
-              <p style="font-weight:bold;">
-                "Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten."
-              </p>
-            </blockquote>
-            <cite>– Peer Review zur Deutschen Nachhaltigkeitsstrategie 2018</cite>
+            <div class="blockquote-wrapper">
+              <blockquote cite="https://www.2030agenda.de/de/article/peer-review-2018">
+                <p>
+                  "Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten."
+                </p>
+              </blockquote>
+              <cite>– Peer Review zur Deutschen Nachhaltigkeitsstrategie 2018</cite>
+            </div>
           </p>
         </div>
       </div>
@@ -24,41 +26,24 @@
     <VisLeiste class="padding-visleiste" :current="false" />
     <section>
       <div id="keyfindings" class="wrapper">
-        <h2>
-          Wie weit sind wir von einem nachhaltigeren Deutschland in 2030 entfernt?
-        </h2>
-        <!-- <div class="columns columns-gutter">
-          <section>
-            <p>2030Watch stellt dem <span class="dns">offiziellen Indikatorenkatalog</span> der Bundesregierung einen <span class="okf">erweiterten Indikatorenkatalog</span> entgegen, welcher den Fortschritt in Richtung Nachhaltigkeit misst. Die folgende Visualisierung vergleicht den bisher erreichten Fortschritt anhand beider Indikatorensets auf einer Skala von 0% (sehr geringe Nachhaltigkeit) bis 100% (sehr hohe Nachhaltigkeit).</p>
-          </section>
-          <section class="legendProgress">
-            <VisProgress :sdg="sampleSDG" :vLegend="true" :compact="false" />
-          </section>
-        </div> -->
+        <div>
+          <h2 class="inline-h2">
+            Wie nah sind wir dem Ziel, ein nachhaltigeres Deutschland in 2030 zu erreichen?
+          </h2>
+          <h3 class="inline-h3">
+            <span class="dns">Offizielle</span> Indikatoren der Deutschen Nachhaltigkeitsstrategie und
+            <span class="okf">2030Watch</span> Indikatoren zum Handlungsbedarf für deutsche Nachhaltigkeit
+          </h3>
+        </div>
         <VisListe />
       </div>
     </section>
-
-    <!-- <section style="margin-bottom: 2rem;">
-      <div class="wrapper">
-        <Slideshow />
-      </div>
-    </section> -->
-
-    <!-- <section>
-      <div class="wrapper">
-        <KeyFindings />
-      </div>
-    </section> -->
   </div>
 </template>
 
 <script>
   import VisListe from '~/components/VisListe.vue'
-  // import Slideshow from '~/components/Slideshow.vue'
-  // import KeyFindings from '~/components/KeyFindings.vue'
   import VisLeiste from '~/components/VisLeiste.vue'
-  // import VisProgress from '~/components/VisProgress.vue'
 
   export default {
     data: function () {
@@ -73,10 +58,7 @@
     },
     components: {
       VisListe,
-      // Slideshow,
-      // KeyFindings,
       VisLeiste
-      // VisProgress
     }
   }
 </script>
@@ -93,4 +75,27 @@
     margin-bottom: 2rem;
   }
 
+  blockquote {
+    border-left: 4px solid #fff;
+    padding: 0.3rem 1.2rem;
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  .blockquote-wrapper {
+    max-width: 40vw;
+    margin: 0 auto;
+  }
+
+  .inline-h2 {
+    display: inline;
+  }
+
+  .inline-h3 {
+    display: inline;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
 </style>
