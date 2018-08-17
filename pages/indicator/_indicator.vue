@@ -180,14 +180,15 @@
 
 
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
-          <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
-          <br />
-          <span v-if="indicator.author === 'dns'">
+          <p>
+            <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+          </p>
+          <div v-if="indicator.author === 'dns'">
             &#42; Indikator-Beschreibung und Zielwert sind der
             <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7"
               target="_blank"
             >Deutschen Nachhaltigkeitsstrategie 2016</a> entnommen.
-          </span>
+          </div>
         </div>
       </div>
 
