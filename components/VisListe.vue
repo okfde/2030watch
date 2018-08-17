@@ -5,10 +5,8 @@
         <span>Sustainable Development Goals</span>
       </div>
       <div class="sdg-header sdg-header-vis columns">
-        <section class="sdg-legend">
-          Fortschrittsbalken:
-          <span class="okf">2030Watch</span>
-          <span class="dns">Offiziell</span>
+        <section>
+          SDG-Ziel für 2030 erreicht zu:
         </section>
       </div>
     </li>
@@ -112,14 +110,6 @@
       .active {
         font-weight: bold;
         color: $color-default;
-      }
-
-      .sdg-legend {
-        text-align: right;
-
-        span {
-          margin-left: 10px;
-        }
       }
     }
 
