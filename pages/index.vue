@@ -4,8 +4,6 @@
       <div class="wrapper">
         <div class="message">
           <h1>Wie nachhaltig ist Deutschland?</h1>
-          <!-- <p>Der Zustand der Welt erfordert eine Transformation zu mehr Gerechtig&shy;keit und Nachhaltiger Entwicklung. Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, für die Realisierung dieser Trans&shy;formation siebzehn Nachhaltig&shy;keitsziele - den sogenannten „Sustainable Development Goals (SDGs)“ - bis zum Jahr 2030 umzusetzen. Der damit verbundene globale Indikatoren&shy;katalog dient zur Fortschritts&shy;messung.</p>
-          <p>2030Watch diskutiert, wie ambitioniert Deutschland die SDGs umsetzt.</p> -->
           <p>
             Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, 17 Nachhaltig­keitsziele – die sogenannten "Sustainable Development Goals (SDGs)"
             – bis zum Jahr 2030 umzusetzen. 2030Watch diskutiert anhand von Indikatoren wie ambitioniert Deutschland die SDGs umsetzt.
