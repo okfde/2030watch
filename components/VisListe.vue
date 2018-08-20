@@ -82,9 +82,9 @@
     display: flex;
     margin-bottom: 1.3rem;
 
-    &:first-child {
-      pointer-events: none;
-    }
+    // &:first-child {
+    //   pointer-events: none;
+    // }
 
     .sdg-header {
       margin-bottom: $spacing / 2;
