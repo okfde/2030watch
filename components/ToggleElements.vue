@@ -9,8 +9,7 @@
       </div>
     </li> -->
 
-
-    <li v-for="(sdg, index) in sdgsCopy" class="sdg-item" v-bind:key="sdg.number">
+    <li v-for="(sdg, index) in sdgsCopy" class="sdg-item" v-bind:key="sdg.number" style="flex-wrap:wrap">
       <div class="sdg-link" >
         <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-label" :style=" { 'color': '#' + sdg.color }">
           <div class="sdg-number">
@@ -22,7 +21,8 @@
         </nuxt-link>
 
         <a @click="toggle(sdg)" style="font-size:1.4rem;">
-          <i class="icon-angle-down" />
+          <i v-show="sdg.isActive" class="icon-angle-up" />
+          <i v-show="!sdg.isActive" class="icon-angle-down" />
         </a>
 
         <div class="sdg-vis" style="cursor: default;">
@@ -30,19 +30,19 @@
         </div>
       </div>
 
-      <div v-show="sdg.isActive">
-        <div class="dns">
-          <span style="font-weight:bold">Offizielle Indikatoren:</span>
-          <div v-for="elem in sdg.ind.dns">
-            <nuxt-link :to="'indicator/' + elem.slug">
+      <div class="card" v-show="sdg.isActive" style="display:flex;flex-wrap: wrap;">
+        <div class="dns" style="flex:1">
+          <h5 style="font-weight:bold">Offizielle Indikatoren:</h5>
+          <div v-for="elem in sdg.ind.dns" class="dns-link">
+            <nuxt-link :to="'indicator/' + elem.slug" class="dns">
               {{ elem.label }}
             </nuxt-link>
           </div>
         </div>
-        <div class="okf">
-          <span style="font-weight:bold">2030Watch Indikatoren:</span>
+        <div class="okf" style="flex:1">
+          <h5 style="font-weight:bold">2030Watch Indikatoren:</h5>
           <div v-for="elem in sdg.ind.okf">
-            <nuxt-link :to="'indicator/' + elem.slug">
+            <nuxt-link :to="'indicator/' + elem.slug" class="okf">
               {{ elem.label }}
             </nuxt-link>
           </div>
@@ -50,6 +50,7 @@
       </div>
 
     </li>
+
   </ul>
 </template>
 
@@ -60,7 +61,8 @@
     props: ['sdgs'],
     data: function () {
       return {
-        sdgsCopy: this.sdgs
+        sdgsCopy: this.sdgs,
+        showCollapse: true
       }
     },
     methods: {
@@ -87,3 +89,23 @@
     watch: {}
   }
 </script>
+
+<style lang="scss" scoped>
+  @import '~@/assets/style/variables';
+
+  .card {
+    border: 1px solid;
+    border-color: #E0E0E0;
+    // transition: all 1s ease-in-out;
+    border-radius: 3px;
+    padding: 1.3rem;
+    flex: 1;
+    margin-top: 1rem;
+  }
+
+  .dns-link {
+    :hover {
+      color: darken($color-dns, 8%);
+    }
+  }
+</style>
