@@ -10,24 +10,9 @@
         </section>
       </div>
     </li>
-    <li v-for="(sdg, index) in sdgListe" class="sdg-item">
-      <nuxt-link v-if="sdg.textIntro !== 'coming soon'" :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
-        <div class="sdg-label">
-          <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
-        </div>
-        <div class="sdg-vis">
-          <VisProgress :sdg="sdg" :vTickLabels="index === 0" :vTicks="false" />
-        </div>
-      </nuxt-link>
-      <a v-else class="sdg-link disabled" title="Coming soon">
-        <div class="sdg-label disabled">
-          <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text">{{ sdg.labelShort }}</span>
-        </div>
-        <div class="sdg-vis">
-          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" :vTicks="false" />
-        </div>
-      </a>
-    </li>
+
+    <ToggleElements :sdgs="sdgListe" />
+
   </ul>
 </template>
 
@@ -36,6 +21,7 @@
   import VisProgress from '~/components/VisProgress.vue'
   import SortIcon from '~/components/SortIcon.vue'
   import VisDirection from '~/components/VisDirection.vue'
+  import ToggleElements from '~/components/ToggleElements.vue'
   import _ from 'lodash'
 
   export default {
@@ -61,7 +47,8 @@
     components: {
       VisProgress,
       SortIcon,
-      VisDirection
+      VisDirection,
+      ToggleElements
     },
     methods: {
       sort: function (key) {
