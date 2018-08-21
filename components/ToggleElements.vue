@@ -20,7 +20,6 @@
           <VisProgress :sdg="sdg" :vTickLabels="index === 0" :vTicks="false" />
         </div>
       </div>
-
       <transition name="fade">
         <div class="card" v-show="sdg.isActive">
           <div class="dns card-content">
@@ -41,9 +40,7 @@
           </div>
         </div>
       </transition>
-
     </li>
-
   </ul>
 </template>
 

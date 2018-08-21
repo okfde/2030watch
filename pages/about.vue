@@ -84,8 +84,8 @@
               >
               <p class="section-description">
                 Für den Inhalt dieser Publikation ist allein Open Knowledge Foundation Deutschland e.V.
-                verantwortlich; die hier dargestellten Positionen geben nicht den Standpunkt von Engagement
-                Global gGbH und dem Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung wieder.
+                verantwortlich. Die hier dargestellten Positionen geben nicht den Standpunkt von Engagement
+                Global gGmbH und dem Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung wieder.
               </p>
             </div>
             <div class="section-img">
