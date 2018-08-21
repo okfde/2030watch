@@ -10,25 +10,19 @@
         </section>
       </div>
     </li>
-
     <ToggleElements :sdgs="sdgListe" />
-
   </ul>
 </template>
 
 <script>
   import { mapState } from 'vuex'
-  import VisProgress from '~/components/VisProgress.vue'
-  import SortIcon from '~/components/SortIcon.vue'
-  import VisDirection from '~/components/VisDirection.vue'
   import ToggleElements from '~/components/ToggleElements.vue'
   import _ from 'lodash'
 
   export default {
     data: function () {
       return {
-        'sorting': 'number',
-        'reverse': false
+        'sorting': 'number'
       }
     },
     computed: {
@@ -36,30 +30,13 @@
         'sdgs'
       ]),
       sdgListe: function () {
-        const list = _.sortBy(this.sdgs, this.sorting)
-        if (this.reverse) {
-          return _.reverse(list)
-        } else {
-          return list
-        }
+        return _.sortBy(this.sdgs, this.sorting)
       }
     },
     components: {
-      VisProgress,
-      SortIcon,
-      VisDirection,
       ToggleElements
     },
-    methods: {
-      sort: function (key) {
-        if (this.sorting !== key) {
-          this.sorting = key
-          this.reverse = false
-        } else {
-          this.reverse = !this.reverse
-        }
-      }
-    }
+    methods: {}
   }
 </script>
 
