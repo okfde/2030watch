@@ -424,7 +424,14 @@ function processIndicatorDetail (indicator, callback) {
         const countries = convertHashToFloat(_.fromPairs(_.slice(detailData, countriesIndex + 1, timelineIndex > 0 ? timelineIndex : detailData.length - 1)))
         // remove null values of countries
         Object.keys(countries).forEach((key) => (countries[key] === null || isNaN(countries[key])) && delete countries[key])
-        indicator['countries'] = countries
+
+        // order countries alphabetically
+        const ordered = {}
+        Object.keys(countries).sort().forEach(function (key) {
+          ordered[key] = countries[key]
+        })
+
+        indicator['countries'] = ordered
       }
     }
     callback(indicator)
