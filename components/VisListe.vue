@@ -41,6 +41,7 @@
 </script>
 
 <style lang="scss">
+  // TODO not yet scoped: ToggleElements component references this classes
   @import '~@/assets/style/variables';
 
   .vis-liste {
