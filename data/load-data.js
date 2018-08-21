@@ -106,7 +106,10 @@ function processSDGs (sdgs, allIndicators) {
     const indicators = _.filter(allIndicators, ['sdg', sdg['number']])
 
     // Group indicators by author
-    const { dns: indiDns, okf: indiOkf } = _.groupBy(indicators, 'author')
+    let { dns: indiDns, okf: indiOkf } = _.groupBy(indicators, 'author')
+
+    indiDns = _.orderBy(indiDns, 'id')
+    indiOkf = _.orderBy(indiOkf, 'id')
 
     // Filter okf indicators for display
     const usableValuesOKF = _.filter(indiOkf, i => {
