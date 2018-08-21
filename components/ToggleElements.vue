@@ -30,24 +30,26 @@
         </div>
       </div>
 
-      <div class="card" v-show="sdg.isActive" style="display:flex;flex-wrap: wrap;">
-        <div class="dns" style="flex:1">
-          <h5 style="font-weight:bold">Offizielle Indikatoren:</h5>
-          <div v-for="elem in sdg.ind.dns" class="dns-link">
-            <nuxt-link :to="'indicator/' + elem.slug" class="dns">
-              {{ elem.label }}
-            </nuxt-link>
+      <transition name="fade">
+        <div class="card" v-show="sdg.isActive" style="display:flex;flex-wrap: wrap;">
+          <div class="dns" style="flex:1">
+            <h5 style="font-weight:bold">Offizielle Indikatoren:</h5>
+            <div v-for="elem in sdg.ind.dns" class="dns-link">
+              <nuxt-link :to="'indicator/' + elem.slug" class="dns">
+                {{ elem.label }}
+              </nuxt-link>
+            </div>
+          </div>
+          <div class="okf" style="flex:1">
+            <h5 style="font-weight:bold">2030Watch Indikatoren:</h5>
+            <div v-for="elem in sdg.ind.okf">
+              <nuxt-link :to="'indicator/' + elem.slug" class="okf">
+                {{ elem.label }}
+              </nuxt-link>
+            </div>
           </div>
         </div>
-        <div class="okf" style="flex:1">
-          <h5 style="font-weight:bold">2030Watch Indikatoren:</h5>
-          <div v-for="elem in sdg.ind.okf">
-            <nuxt-link :to="'indicator/' + elem.slug" class="okf">
-              {{ elem.label }}
-            </nuxt-link>
-          </div>
-        </div>
-      </div>
+      </transition>
 
     </li>
 
@@ -61,8 +63,7 @@
     props: ['sdgs'],
     data: function () {
       return {
-        sdgsCopy: this.sdgs,
-        showCollapse: true
+        sdgsCopy: this.sdgs
       }
     },
     methods: {
@@ -96,7 +97,6 @@
   .card {
     border: 1px solid;
     border-color: #E0E0E0;
-    // transition: all 1s ease-in-out;
     border-radius: 3px;
     padding: 1.3rem;
     flex: 1;
@@ -107,5 +107,13 @@
     :hover {
       color: darken($color-dns, 8%);
     }
+  }
+
+  .fade-enter-active {
+    transition: opacity .7s;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>
