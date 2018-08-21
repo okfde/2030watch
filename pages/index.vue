@@ -74,9 +74,6 @@
   }
 
   blockquote {
-    border-left: 4px solid #fff;
-    padding: 0.3rem 1.2rem;
-
     p {
       font-weight: bold;
     }
