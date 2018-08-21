@@ -1,30 +1,23 @@
 <template>
   <ul>
-    <!-- <li v-for="item in items" :class="{ activeclass: item.isActive }">
-      <div class="item-text">
-        {{ item }}
-      </div>
-      <div v-show="item.isActive" class="item-desc">
-        {{ item }}
-      </div>
-    </li> -->
-
     <li v-for="(sdg, index) in sdgsCopy" class="sdg-item" v-bind:key="sdg.number" style="flex-wrap:wrap">
       <div class="sdg-link" >
-        <nuxt-link :to="'sdg/' + sdg.slug" class="sdg-label" :style=" { 'color': '#' + sdg.color }">
-          <div class="sdg-number">
-            {{ sdg.number }}
-          </div>
-          <div class="sdg-text" :title="sdg.labelLong">
-            {{ sdg.labelShort }}
-          </div>
-        </nuxt-link>
-
-        <a @click="toggle(sdg)" style="font-size:1.4rem;">
-          <i v-show="sdg.isActive" class="icon-angle-up" />
-          <i v-show="!sdg.isActive" class="icon-angle-down" />
-        </a>
-
+        <div class="sdg-label">
+          <nuxt-link :to="'sdg/' + sdg.slug" :style=" { 'color': '#' + sdg.color }">
+            <div class="sdg-number">
+              {{ sdg.number }}
+            </div>
+            <div class="sdg-text" :title="sdg.labelLong">
+              {{ sdg.labelShort }}
+            </div>
+          </nuxt-link>
+          <a @click="toggle(sdg)" style="font-size:1.4rem; margin-left: 0.8rem;"
+            :style=" { 'color': '#' + sdg.color }"
+          >
+            <i v-show="sdg.isActive" class="icon-angle-up" />
+            <i v-show="!sdg.isActive" class="icon-angle-down" />
+          </a>
+        </div>
         <div class="sdg-vis" style="cursor: default;">
           <VisProgress :sdg="sdg" :vTickLabels="index === 0" :vTicks="false" />
         </div>
