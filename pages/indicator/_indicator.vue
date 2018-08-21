@@ -556,12 +556,7 @@
         }
       },
       getCountries () {
-        const keys = Object.keys(this.indicator.countries)
-        let countries = []
-        keys.slice(0, keys.length - 1).map(key => {
-          countries.push(key)
-        })
-        return countries
+        return Object.keys(this.indicator.countries)
       },
       getValues () {
         const keys = Object.keys(this.indicator.countries)
@@ -612,11 +607,9 @@
         const values = keys.slice(0, keys.length - 1).map(key => {
           return [key, this.indicator.countries[key]]
         })
-        // filter and sort
+        // filter null values
         return values.filter(value => {
-          // TODO: offer negative y-axis
-          // right now negative values are cut off
-          return value[1] !== null && value[1] >= 0
+          return value[1] !== null
         }).sort((a, b) => {
           return (a[1] > b[1]) ? 1 : ((b[1] > a[1]) ? -1 : 0)
         })
