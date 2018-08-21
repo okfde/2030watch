@@ -124,7 +124,7 @@
             </a>
           </div>
 
-          <div data-html2canvas-ignore class="vis-dl">
+          <div data-html2canvas-ignore class="vis-dl" v-if="indicator.id !== '7_2'">
             <a id="barChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
@@ -146,7 +146,7 @@
             </a>
           </div>
 
-          <div data-html2canvas-ignore class="vis-dl">
+          <div data-html2canvas-ignore class="vis-dl" v-if="indicator.id !== '7_2'">
             <a id="lineChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
