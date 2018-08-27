@@ -82,6 +82,7 @@
   .blockquote-wrapper {
     max-width: 40vw;
     margin: 0 auto;
+    color: $color-2030;
   }
 
   .inline-h2 {
