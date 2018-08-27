@@ -181,7 +181,7 @@
 
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
           <p>
-            <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+            <nuxt-link to="/methodik">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
           </p>
           <div v-if="indicator.author === 'dns'">
             &#42; Indikator-Beschreibung und Zielwert sind der

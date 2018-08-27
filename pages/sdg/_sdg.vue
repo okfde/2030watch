@@ -106,7 +106,7 @@
 
                   <li class="label legend-supplement legend-margin">
                     Mehr zu unserer Methode
-                    <nuxt-link to="/projekt#methode">
+                    <nuxt-link to="/methodik">
                       hier
                     </nuxt-link>
                   </li>
