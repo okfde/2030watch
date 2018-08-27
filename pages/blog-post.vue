@@ -29,7 +29,7 @@
       <section class="blog-body wrapper">
 
         <div>
-          Die Thema Nachhaltigkeit wurde letzte Woche mehrmals in Deutschland unter die Lupe genommen. Ein internationales Experten*innen-Gremium stellte gestern einen <a href="https://www.nachhaltigkeitsrat.de/projekte/peer-review/" target="_blank">Bericht</a> (Peer Review) vor. Die Expert*innen kommen darin zu dem Schluss, dass die Deutsche Nachhaltigkeitspolitik bisher noch nicht genügend greift. Gleichzeitig engagierten sich so viele Menschen wie nie zuvor bei den deutschen Aktionstagen "Taten für morgen" zum Thema Nachhaltigkeit. Klar ist, dass wir auf dem Weg zu einem nachhaltigeren Deutschland sind, jedoch nicht ausreichend viele Gleise umgestellt sind. Es steht also zur Debatte, wie (ehrgeizig) wir diese Transformation angehen.
+          Das Thema Nachhaltigkeit wurde letzte Woche mehrmals in Deutschland unter die Lupe genommen. Ein internationales Experten*innen-Gremium stellte gestern einen <a href="https://www.nachhaltigkeitsrat.de/projekte/peer-review/" target="_blank">Bericht</a> (Peer Review) vor. Die Expert*innen kommen darin zu dem Schluss, dass die Deutsche Nachhaltigkeitspolitik bisher noch nicht genügend greift. Gleichzeitig engagierten sich so viele Menschen wie nie zuvor bei den deutschen Aktionstagen "Taten für morgen" zum Thema Nachhaltigkeit. Klar ist, dass wir auf dem Weg zu einem nachhaltigeren Deutschland sind, jedoch nicht ausreichend viele Gleise umgestellt sind. Es steht also zur Debatte, wie (ehrgeizig) wir diese Transformation angehen.
         </div>
 
         <br />
@@ -116,7 +116,7 @@
 
       <section class="blog-footer wrapper">
         <span class="caption">Post teilen</span>
-         <span class="social-icons">
+        <span class="social-icons">
           <a :href="'mailto:?subject=' + encodeURIComponent('Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
           <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
           <a :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)" target="_blank" title="Blogpost auf Facebook teilen"><i class="icon-facebook-official" /></a>
@@ -164,7 +164,7 @@
 
     .blog-title {
       flex: 1;
-      background-color: #fff;
+      background-color: #f9f9f9;
 
       .title-wrapper {
         width: 50%;
@@ -184,11 +184,7 @@
 
     .blog-image {
       flex: 1;
-      // background-color: $color-light;
-      // text-align: center;
-      // padding: $spacing * 6 0;
     }
-
   }
 
   .blog-body {
@@ -208,7 +204,7 @@
   .blog-footer {
     .social-icons {
       a {
-        padding: 0 10px;
+        padding-left: 1.4rem;
       }
     }
   }
@@ -224,5 +220,9 @@
     @media (max-width: 700px) {
       display: none
     }
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 </style>

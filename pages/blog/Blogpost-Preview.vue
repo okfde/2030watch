@@ -11,9 +11,9 @@
         <h3>Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch?</h3>
       </nuxt-link>
       <div>
+        Das Thema Nachhaltigkeit wurde letzte Woche mehrmals in Deutschland unter die Lupe genommen. Ein internationales Experten*innen-Gremium stellte gestern einen <a href="https://www.nachhaltigkeitsrat.de/projekte/peer-review/" target="_blank">Bericht</a> (Peer Review) vor. Die Expert*innen kommen darin zu dem Schluss, dass die Deutsche Nachhaltigkeitspolitik bisher noch nicht genügend greift. Gleichzeitig engagierten sich so viele Menschen wie nie zuvor bei den deutschen Aktionstagen "Taten für morgen" zum Thema Nachhaltigkeit. Klar ist, dass wir auf dem Weg zu einem nachhaltigeren Deutschland sind, jedoch nicht ausreichend viele Gleise umgestellt sind. Es steht also zur Debatte, wie (ehrgeizig) wir diese Transformation angehen.
+        <nuxt-link to="/blog-post"><span>Mehr lesen …</span></nuxt-link>
       </div>
-        Die Thema Nachhaltigkeit wurde letzte Woche mehrmals in Deutschland unter die Lupe genommen. Ein internationales Experten*innen-Gremium stellte gestern einen <a href="https://www.nachhaltigkeitsrat.de/projekte/peer-review/" target="_blank">Bericht</a> (Peer Review) vor. Die Expert*innen kommen darin zu dem Schluss, dass die Deutsche Nachhaltigkeitspolitik bisher noch nicht genügend greift. Gleichzeitig engagierten sich so viele Menschen wie nie zuvor bei den deutschen Aktionstagen "Taten für morgen" zum Thema Nachhaltigkeit. Klar ist, dass wir auf dem Weg zu einem nachhaltigeren Deutschland sind, jedoch nicht ausreichend viele Gleise umgestellt sind. Es steht also zur Debatte, wie (ehrgeizig) wir diese Transformation angehen.
-      <nuxt-link to="/blog-post"><span>Mehr lesen …</span></nuxt-link>
     </div>
   </div>
 </template>
