@@ -1,7 +1,3 @@
-.page-footer, .page-header, .page-explainer, .inpage-header, .inpage-nav {
-  // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 .dns {
   color: $color-dns;
 }
@@ -21,14 +17,12 @@ h2 {
   line-height: 1.4;
   letter-spacing: 0.02em;
   font-weight: bold;
-  // color: $color-okf;
   margin-bottom: $spacing / 2;
 }
 
 h3 {
   font-size: 1.75rem;
   letter-spacing: 0.02em;
-  // color: $color-okf;
 }
 
 h4 {
@@ -87,7 +81,6 @@ small + p {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  // opacity: 0.8;
 }
 
 .label {
@@ -187,7 +180,6 @@ table {
   }
 }
 
-
 @font-face {
   font-family: '2030watch';
   src: url('~static/font/2030watch.eot?23783043');
@@ -211,7 +203,6 @@ table {
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
 
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
@@ -226,9 +217,6 @@ table {
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-pencil:before { content: '\e800'; } /* '' */
