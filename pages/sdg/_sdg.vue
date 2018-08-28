@@ -8,13 +8,11 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-
         <section class="columns columns-gutter">
           <div>
             <small class="caption">SDG {{ sdg.number }}</small>
-
             <h1>{{ sdg.labelShort }}</h1>
-            <!-- <p>{{ sdg.textIntro }}</p> -->
+            <p>{{ sdg.textIntro }}</p>
           </div>
           <div class="sdg-image">
             <img :src="image" :title="sdg.labelShort" />
@@ -33,7 +31,6 @@
                 {{ sdg.textIndicators }}
               </p>
             </div>
-
             <div class="progress-box-wrapper">
               <div class="progress-box">
                 <div :style="{ 'color': '#' + sdg.color }" class="label-progress-bar">
@@ -46,17 +43,14 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
       <div class="indicator-vis">
         <section class="indicators">
-
           <h2 class="vis-question">
             Wie nah sind wir einem nachhaltigeren Deutschland in 2030?
           </h2>
-
           <section>
             <ul class="indicator-list">
               <li ref="labelDNS">
@@ -103,7 +97,6 @@
                       <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
                     </span>
                   </li>
-
                   <li class="label legend-supplement legend-margin">
                     Mehr zu unserer Methode
                     <nuxt-link to="/methodik">
@@ -114,13 +107,11 @@
               </li>
             </ul>
           </section>
-
           <section class="indicator-lines">
             <svg ref="indicatorLines">
               <path v-for="indicator in linesMod" stroke-dasharray="5, 5" :d="indicator" />
             </svg>
           </section>
-
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
               <li ref="labelOKF">
@@ -132,7 +123,6 @@
           </section>
         </section>
       </div>
-
       <div class="wrapper">
         <div class="explainer-progress">
           <h2>Wie wird der Fortschritt berechnet?</h2>
@@ -144,7 +134,6 @@
             also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
           </div>
         </div>
-
         <section class="description columns columns-gutter">
           <div>
             <hgroup>
@@ -176,7 +165,6 @@
           </div>
         </section>
       </div>
-
     </div>
   </div>
 </template>
