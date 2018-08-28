@@ -98,9 +98,7 @@
       </div>
 
       <div class="wrapper" v-if="indicator.txt2030target">
-        <h3 :style="{ 'color': '#' + indicator.sdg.color}">
-          {{ indicator.txt2030target }}
-        </h3>
+        <h2 class="h2-txt2030target">{{ indicator.txt2030target }}</h2>
       </div>
 
       <div class="wrapper">
@@ -165,7 +163,7 @@
             Weitere Informationen zu diesem Indikator
           </h2>
         </div>
-        <div class="wrapper description" style="color: black">
+        <div class="wrapper description">
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Beschreibung</h4>
           <p>{{ indicator.txtdescription }}</p>
 
@@ -225,7 +223,7 @@
                 <td v-html="format(indicator['start'], 1, indicator['unit'])" />
               </tr>
               <tr v-if="indicator['license']">
-                <td class="title">Lizenz</td><td>{{ indicator['license'] }}</td>
+                <td class="title">Nutzungsbedingungen</td><td>{{ indicator['license'] }}</td>
               </tr>
               <tr v-if="indicator['indicator source']">
                 <td class="title">Indikatorquelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
@@ -371,20 +369,8 @@
           labels: this.sortedByValue ? this.getCountries : this.getCountriesSortedByValue,
           datasets: [
             {
-              type: 'line',
-              fill: false,
-              borderWidth: 3,
-              data: this.getTargetForCountries,
-              pointRadius: 0,
-              borderColor: 'red',
-              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
-              pointHoverBorderColor: 'rgba(0,0,0,0)'
-            },
-            {
               label: this.indicator.unitShort,
-              backgroundColor: '#5D6D7E',
-              // strokeColor: 'rgba(220,220,220,1)',
-              // fillColor: 'rgba(220,220,220,0.5)',
+              backgroundColor: '#023753',
               data: this.sortedByValue ? this.getValues : this.getSortedValues
             }
           ]
@@ -489,20 +475,8 @@
               label: this.indicator.unitShort,
               fill: false,
               lineTension: 0,
-              backgroundColor: '#5D6D7E',
-              // strokeColor: 'rgba(220,220,220,1)',
-              // fillColor: 'rgba(220,220,220,0.5)',
+              backgroundColor: '#023753',
               data: this.getValuesForCountries
-            },
-            {
-              fill: false,
-              borderWidth: 3,
-              data: this.getTargetForTimeline,
-              pointRadius: 0,
-              borderColor: 'red',
-              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
-              pointHoverBorderColor: 'rgba(0,0,0,0)',
-              spanGaps: false
             }
           ]
         }
@@ -699,7 +673,6 @@
 
   .description {
     h4 {
-      color: #222;
       padding-bottom: $spacing / 4;
     }
 
@@ -813,5 +786,9 @@
   .info-wrapper {
     padding: 1rem 0 1rem 0;
     background-color: #EEEEEE;
+  }
+
+  .h2-txt2030target {
+    color: $color-default !important;
   }
 </style>
