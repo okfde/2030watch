@@ -1,12 +1,22 @@
 <template>
   <ul class="vis-liste">
-    <li class="sdg-item">
+    <li class="sdg-item" style="margin:0;">
       <div class="sdg-header sdg-header-label">
-        <span>Sustainable Development Goals</span>
+        <span class="sdg-header-sdgs">Sustainable Development Goals</span>
       </div>
       <div class="sdg-header sdg-header-vis columns">
-        <section>
+        <section class="sdg-header-sdgs">
           SDG-Ziel für 2030 erreicht zu:
+        </section>
+      </div>
+    </li>
+    <li class="sdg-item" style="margin:0;">
+      <div class="sdg-header sdg-header-label"></div>
+      <div class="sdg-header sdg-header-vis columns" style="font-size:1rem;">
+        <section class="sdg-legend">
+          <span class="okf">2030Watch</span>
+          <span class="dns-lang">Offizielle Nachhaltigkeitsstrategie</span>
+          <span class="dns-kurz">Offiziell</span>
         </section>
       </div>
     </li>
@@ -62,7 +72,7 @@
 
     .sdg-header {
       margin-bottom: $spacing / 2;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .sdg-header-label, .sdg-header-vis {
@@ -150,4 +160,34 @@
       }
     }
   }
+
+  @media (max-width: 960px) {
+    .dns-lang {
+      display:none;
+    }
+    .dns-kurz {
+      color: $color-dns;
+    }
+  }
+  @media (min-width: 961px) {
+    .dns-lang {
+      color: $color-dns;
+    }
+    .dns-kurz {
+      display: none;
+    }
+  }
+
+  .sdg-legend {
+    text-align: right;
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .sdg-header-sdgs {
+    font-weight: bold;
+    color: $color-2030;
+  }
+
 </style>
