@@ -5,9 +5,9 @@
         {{ i.label }}
       </h5>
       <hr style="margin-top:0.3rem;" :class="[ i.author === 'dns' ? 'hr-dns' : 'hr-okf']" />
-      <div class="values value-target">Indikator-Ziel für 2030 erreicht zu:</div>
+      <div class="value-target">Indikator-Ziel für 2030 erreicht zu:</div>
 
-      <!-- No piechart anymore -> TODO change name or add component  -->
+      <!-- No piechart anymore -> TODO change name or add new component  -->
       <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
       <div class="values">
@@ -166,6 +166,7 @@
     color: black;
     font-size: 1.1rem;
     line-height: 1.1rem;
+    height: 4.3rem;
   }
 
   .values-padding {
@@ -177,12 +178,18 @@
   }
 
   .values-unit {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 0.95rem;
   }
 
   .value-target {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    color: black;
+    line-height: 1.1rem;
+    height: 2.8rem;
   }
 
   .hr-dns {
