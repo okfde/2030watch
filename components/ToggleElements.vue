@@ -22,18 +22,18 @@
       </div>
       <transition name="fade">
         <div class="card" v-show="sdg.isActive">
-          <div class="dns card-content">
-            <h5>Offizielle Indikatoren:</h5>
-            <div v-for="elem in sdg.ind.dns" class="dns-link">
-              <nuxt-link :to="'indicator/' + elem.slug" class="dns">
+          <div class="card-content">
+            <h6 class="dns">Offizielle Indikatoren:</h6>
+            <div v-for="elem in sdg.ind.dns" class="indicator-link">
+              <nuxt-link :to="'indicator/' + elem.slug" class="gray-indicators">
                 {{ elem.label }}
               </nuxt-link>
             </div>
           </div>
-          <div class="okf card-content">
-            <h5>2030Watch Indikatoren:</h5>
-            <div v-for="elem in sdg.ind.okf">
-              <nuxt-link :to="'indicator/' + elem.slug" class="okf">
+          <div class="card-content">
+            <h6 class="okf">2030Watch Indikatoren:</h6>
+            <div v-for="elem in sdg.ind.okf" class="indicator-link">
+              <nuxt-link :to="'indicator/' + elem.slug" class="gray-indicators">
                 {{ elem.label }}
               </nuxt-link>
             </div>
@@ -83,9 +83,6 @@
   @import '~@/assets/style/variables';
 
   .card {
-    border: 1px solid;
-    border-color: #E0E0E0;
-    border-radius: 3px;
     padding: 1.3rem;
     flex: 1;
     margin-top: 1rem;
@@ -97,9 +94,9 @@
     flex: 1;
   }
 
-  .dns-link {
+  .indicator-link {
     :hover {
-      color: darken($color-dns, 8%);
+      color: darken(#757575, 11%);
     }
   }
 
@@ -124,4 +121,7 @@
     cursor: default;
   }
 
+  .gray-indicators {
+    color: #757575;
+  }
 </style>
