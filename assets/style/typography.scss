@@ -150,17 +150,13 @@ table {
 .btn {
   border-radius: 2px;
   padding: $spacing / 4 $spacing / 2 !important;
-  background-color: #FCEA2B;
-  color: #222 !important;
   cursor: pointer;
   text-shadow: none;
-  transition-duration: 0.2s;
   border: none !important;
   display: inline-block;
 
   &:hover, &:focus {
     color: #000 !important;
-    transform: scale(1.03);
   }
 
   &.disabled {
