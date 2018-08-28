@@ -84,9 +84,9 @@
           <p>
             Wir berechnen für jeden Indikator, wie weit er vom jeweiligen Zielwert entfernt ist. Der jeweilige Zielwert wird dann als 100% eingestuft.
             Die Formel um den Fortschritt zu berechnen ist:
-            <div style="text-align:center">
-              <img src="~assets/img/formula.png" alt="Ausgangswert-Aktueller Wert/Ausgangswert-Zielwert" title="Formel zur Fortschrittsberechnung" />
-            </div>
+            <p class="formula">
+              <img src="~assets/img/formula.svg" alt="Ausgangswert-Aktueller Wert/Ausgangswert-Zielwert" title="Formel zur Fortschrittsberechnung" />
+            </p>
             So wird eine Vergleichbarkeit der Fortschritte zwischen den einzelnen Indikatoren hergestellt.
           </p>
         </section>
@@ -170,5 +170,9 @@
 
   section > p > span {
     text-decoration: underline;
+  }
+
+  .formula {
+    text-align: center;
   }
 </style>
