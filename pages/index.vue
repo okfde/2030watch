@@ -82,7 +82,6 @@
   .blockquote-wrapper {
     max-width: 40vw;
     margin: 0 auto;
-    color: $color-2030;
   }
 
   .inline-h2 {
@@ -93,5 +92,17 @@
     display: inline;
     font-size: 1.6rem;
     font-weight: normal;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  .dns {
+    font-weight: bold;
+  }
+
+  .okf {
+    font-weight: bold;
   }
 </style>
