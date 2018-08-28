@@ -37,15 +37,15 @@
                 </tr>
                 <tr>
                   <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">IST ({{ indicator['currentYear'] }})</td>
-                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['current'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['current'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
-                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">SOLL (2030)</td>
-                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['target'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">SOLL ({{ (indicator.id === '1_1' || indicator.id === '1_2' ) && indicator.author === 'dns' ? '2016' : '2030' }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['target'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
                   <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
-                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['start'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['start'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
                   <td class="title">2030-Ziel erreicht zu</td>
@@ -212,15 +212,15 @@
                 </td>
               </tr>
               <tr>
-                <td class="title">Zielwert/SOLL (2030)</td>
-                <td v-html="format(indicator['target'], 1, indicator['unit'])" />
+                <td class="title">Zielwert/SOLL ({{ (indicator.id === '1_1' || indicator.id === '1_2' ) && indicator.author === 'dns' ? '2016' : '2030' }})</td>
+                <td v-html="format(indicator['target'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Aktueller Wert/IST ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
+                <td class="title">Aktueller Wert/IST ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
                 <td class="title">Ausgangswert Fortschrittsberechnung ({{ indicator['startYear'] }})</td>
-                <td v-html="format(indicator['start'], 1, indicator['unit'])" />
+                <td v-html="format(indicator['start'], 1, indicator['unitShort'])" />
               </tr>
               <tr v-if="indicator['license']">
                 <td class="title">Nutzungsbedingungen</td><td>{{ indicator['license'] }}</td>
