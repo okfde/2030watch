@@ -1,9 +1,9 @@
 <template>
   <div class="collapse">
-    <h4 v-on:click="toggle" :title="(visible ? 'Hide' : 'Show') + ' the abstract'">
+    <h3 v-on:click="toggle" :title="(visible ? 'Hide' : 'Show') + ' the abstract'">
       <SortIcon :active="true" :reverse="visible" />
       {{ title }}
-    </h4>
+    </h3>
     <div class="content" ref="content">
       <slot />
     </div>
@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-  h4 {
+  h3 {
     cursor: pointer;
   }
 
