@@ -26,11 +26,12 @@
       <div id="keyfindings" class="wrapper">
         <div>
           <h2 class="inline-h2">
-            Wie nah sind wir dem Ziel, ein nachhaltigeres Deutschland in 2030 zu erreichen?
+            Ein nachhaltigeres Deutschland in 2030 - Wie nah sind wir dem Ziel?
           </h2>
           <h3 class="inline-h3">
-            <span class="dns">Offizielle</span> Indikatoren der Deutschen Nachhaltigkeitsstrategie und
-            <span class="okf">2030Watch</span> Indikatoren zum Handlungsbedarf für deutsche Nachhaltigkeit
+            <span class="dns">Offizielle</span> Indikatoren der Deutschen Nachhaltigkeitsstrategie
+            und <span class="okf">2030Watch</span> Indikatoren zum Handlungsbedarf für deutsche
+            Nachhaltigkeit. Go Explore!
           </h3>
         </div>
         <VisListe />
