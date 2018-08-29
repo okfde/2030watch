@@ -128,10 +128,11 @@
           <h2>Wie wird der Fortschritt berechnet?</h2>
           <div>
             Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
-            Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
-            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
-            über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
-            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+            Der offizielle Fortschritt wird mit einem Mittelwert von allen offiziellen Indikatorenwerten
+            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch
+            wird über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren
+            (um Dopplungen zu vermeiden, werden Indikatoren mit modifizierten Zielwert nur einmal berechnet).
           </div>
         </div>
         <section class="description columns columns-gutter">
