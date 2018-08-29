@@ -249,7 +249,7 @@
           <input type="text" :value="link" />
         </div>
 
-        <div v-if="!indicator['pate']" class="description">
+        <div v-if="!indicator['pate']" class="description" id="datenpate">
           <h4>Werde Datenpate für diesen Indikator</h4>
           <div>
             Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
