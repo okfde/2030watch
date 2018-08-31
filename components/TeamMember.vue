@@ -50,8 +50,8 @@
       }
 
       .name {
-        color: $color-okf;
-        font-weight: 600;
+        font-weight: bold;
+        font-size: 1.25rem;
       }
 
       .role {
