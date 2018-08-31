@@ -31,7 +31,7 @@
           <h3 class="inline-h3">
             <span class="dns">Offizielle</span> Indikatoren der Deutschen Nachhaltigkeitsstrategie
             und <span class="okf">2030Watch</span> Indikatoren zum Handlungsbedarf für deutsche
-            Nachhaltigkeit. Go Explore!
+            Nachhaltigkeit. <em>Go Explore!</em>
           </h3>
         </div>
         <VisListe />
