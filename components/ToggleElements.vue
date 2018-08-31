@@ -11,7 +11,7 @@
               {{ sdg.labelShort }}
             </div>
           </nuxt-link>
-          <a @click="toggle(sdg)" class="toggle-button" :style=" { 'color': '#' + sdg.color }">
+          <a @click="toggle(sdg)" @keypress="toggle(sdg)" tabindex="0" class="toggle-button" :style=" { 'color': '#' + sdg.color }">
             <i v-show="sdg.isActive" class="icon-angle-up" />
             <i v-show="!sdg.isActive" class="icon-angle-down" />
           </a>
