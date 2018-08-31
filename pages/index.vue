@@ -4,16 +4,18 @@
       <div class="wrapper">
         <div class="message">
           <h1>Wie nachhaltig ist Deutschland?</h1>
-          <p>
-            Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, 17 Nachhaltig­keitsziele – die sogenannten "Sustainable Development Goals (SDGs)"
+          <p style="margin-bottom:1.5rem;">
+            Mit der Agenda 2030 haben sich alle UN-Staaten verpflichtet, 17 Nachhaltigkeitsziele – die sogenannten "Sustainable Development Goals (SDGs)"
             – bis zum Jahr 2030 umzusetzen. 2030Watch diskutiert anhand von Indikatoren wie ambitioniert Deutschland die SDGs umsetzt.
           </p>
           <p>
             <div class="blockquote-wrapper">
-              <blockquote cite="https://www.2030agenda.de/de/article/peer-review-2018">
-                Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten.
+              <blockquote cite="https://www.2030agenda.de/de/article/peer-review-2018" class="large-quote">
+                <p style="font-size:1.3rem;margin-bottom:1rem;">
+                  Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten.
+                </p>
+                <cite>– Peer Review zur Deutschen Nachhaltigkeitsstrategie 2018</cite>
               </blockquote>
-              <cite>– Peer Review zur Deutschen Nachhaltigkeitsstrategie 2018</cite>
             </div>
           </p>
         </div>
@@ -73,14 +75,36 @@
   }
 
   blockquote {
+    quotes: "”" "“";
+    position: relative;
     p {
       font-weight: bold;
     }
   }
 
+  blockquote:before {
+    font-size: 180px;
+    line-height: 0.9;
+    left: 0;
+    content: open-quote;
+    font-family: serif;
+    position: absolute;
+    font-weight: bold;
+    color: #BBDEFB;
+  }
+
+  .large-quote {
+    padding-left: 110px;
+  }
+
+  cite:before {
+    content: no-close-quote;
+  }
+
   .blockquote-wrapper {
-    max-width: 40vw;
+    max-width: 50vw;
     margin: 0 auto;
+    position: relative;
   }
 
   .inline-h2 {
