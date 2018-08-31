@@ -72,15 +72,10 @@
 </template>
 
 <script>
-  import BlogpostPreview from '~/pages/blog/Blogpost-Preview.vue'
-
   export default {
-    components: {
-      BlogpostPreview
-    },
     head () {
       return {
-        title: 'Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich? | 31.8.18 | Blogpost | 2030Watch',
+        title: 'Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich? | Blogpost | 2030Watch',
         meta: [
           { hid: 'description', name: 'description', content: 'Blogpost' }
         ]
