@@ -127,15 +127,10 @@
 </template>
 
 <script>
-  import BlogpostPreview from '~/pages/blog/Blogpost-Preview.vue'
-
   export default {
-    components: {
-      BlogpostPreview
-    },
     head () {
       return {
-        title: 'Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch? | 6.6.18 | Blogpost | 2030Watch',
+        title: 'Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch? | Blogpost | 2030Watch',
         meta: [
           { hid: 'description', name: 'description', content: 'Blogpost' }
         ]
@@ -185,8 +180,8 @@
     .blog-image {
       flex: 1;
       display: flex;
-      justify-content: start;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
     }
   }
 
@@ -213,7 +208,7 @@
   }
 
   .blogpost-image {
-    max-width: 400px;
+    max-width: 350px;
 
     // TODO
     @media (max-width: 900px) {
