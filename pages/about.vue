@@ -21,7 +21,7 @@
               </p>
             </div>
             <div class="section-img">
-              <img src="../assets/img/2030watch_logo.png" alt="2030Watch Logo">
+              <img src="../assets/img/2030watch_logo.png" alt="2030Watch Logo" class="img-logos">
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
               </p>
             </div>
             <div class="section-img">
-              <img src="../assets/img/okf_logo.png" alt="OKFN Logo">
+              <img src="../assets/img/okf_logo.png" alt="OKFN Logo" class="img-logos">
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
       <section>
         <div class="wrapper">
           <h2>Gefördert von</h2>
-          <div class="section-wrapper">
+          <div class="section-wrapper section-wrapper-sponsors">
             <div class="section-img">
               <img src="../assets/img/sponsors/EG_LOGO_RGB.jpg"
                 alt="Logo von Engagement Global"
@@ -203,7 +203,7 @@
     color: gray;
   }
 
-  .section-wrapper {
+  .section-wrapper-sponsors {
     align-items: start;
   }
 
@@ -213,5 +213,9 @@
 
   .EG-description {
     margin-bottom: 0.3rem;
+  }
+
+  .img-logos {
+    width: 15rem;
   }
 </style>
