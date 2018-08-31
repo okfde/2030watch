@@ -1,7 +1,7 @@
 <template>
   <div class="blog-post">
     <div class="post-img">
-      <nuxt-link to="/">
+      <nuxt-link to="">
         <img class="preview-image" src="~/assets/img/method_illustration.png" alt="Blogpost Vorschaubild">
       </nuxt-link>
     </div>
