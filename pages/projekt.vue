@@ -8,7 +8,7 @@
     </header>
     <div class="content">
       <section class="wrapper">
-        <h2>Hintergrund</h2>
+        <h2>Das Projekt</h2>
         <Accordeon :faqs="background" />
       </section>
       <section>
@@ -29,8 +29,12 @@
         background: [{
           title: 'Was ist die Agenda 2030?',
           id: 'background-agenda-2030',
-          body: `<p>Die Agenda 2030 wurde im September 2015 auf einem Gipfel der Vereinten Nationen von allen Mitgliedsstaaten verabschiedet. Mit der Agenda 2030 für Nachhaltige Entwicklung hat sich die internationale Staatengemeinschaft dafür ausgesprochen, die globalen Herausforderungen, wirtschaftlichen Fortschritt im Einklang mit sozialer Gerechtigkeit und  im Rahmen der ökologischen Grenzen der Erde zu gestalten, gemeinsam zu lösen.</p>
-          <p>Das Kernstück der Agenda bildet ein ehrgeiziger Katalog mit 17 Zielen für Nachhaltige Entwicklung (Sustainable Development Goals, SDGs). 193 Länder haben sich verpflichtet, die Agenda bis zum Jahr 2030 umzusetzen.</p>`
+          body: `<p>
+          Die Agenda 2030 wurde im September 2015 auf einem Gipfel der Vereinten Nationen von allen Mitgliedsstaaten verabschiedet. Mit der Agenda 2030 für Nachhaltige Entwicklung hat sich die internationale Staatengemeinschaft dafür ausgesprochen, gemeinsam die globalen Herausforderungen und den wirtschaftlichen Fortschritt im Einklang mit sozialer Gerechtigkeit im Rahmen der ökologischen Grenzen der Erde zu gestalten, zu lösen.
+          </p>
+          <p>
+          Das Kernstück der Agenda bildet ein ehrgeiziger Katalog mit 17 Zielen für Nachhaltige Entwicklung (Sustainable Development Goals, SDGs). 193 Länder haben sich verpflichtet, die Agenda bis zum Jahr 2030 umzusetzen.
+          </p>`
         },
         {
           title: 'Was sind die globalen nachhaltigen Entwicklungsziele (SDGs)?',
@@ -48,10 +52,10 @@
           title: 'Was ist das Ziel von 2030Watch?',
           id: 'ziel-2030Watch',
           body: `<p>Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt.</p>
-          <p>Um diese Vision zu verfolgen, will 2030Watch anhand von Indikatoren ein Bild zeichnen, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir</p>
+          <p>Um diese Vision zu verfolgen, zeichnet 2030Watch anhand von Indikatoren ein Bild , wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir</p>
           <p>– eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten,</p>
           <p>– Handlungsfelder beleuchten,</p>
-          <p>– die Forderung "Leave no one behind" (Lass niemanden zurück) der Agenda 2030 erfüllen und</p>
+          <p>– die Forderung “Leave no one behind” (“Lass niemanden zurück”) der Agenda 2030 erfüllen, und</p>
           <p>– die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.</p>`
         },
         {
@@ -65,12 +69,12 @@
           body: `<p>Grundsätzlich verstehen wir 2030Watch als ein politisches Projekt, welches eine ambitionierte Umsetzung der Agenda 2030 fordert.</p>
           <p>Wir sammeln ergänzende Fortschrittsmaßstäbe (Indikatoren), die von zivilgesellschaftlichen Organisationen erarbeiten wurden und vergleichen diese mit dem Nachhaltigkeitsverständnis Deutschlands bei der offiziellen Berichterstattung.</p>
           <p>2030Watch ist nicht gedacht für wissenschaftliche Analysen beispielsweise zu den Wechselwirkungen verschiedener Politikbereiche.</p>
-          <p>Die Inhalte auf unserer Seite sind somit als Diskussionsbeitrag, Standpunktesammlung und eine Positionierung gedacht.</p>`
+          <p>Die Inhalte auf unserer Seite sind somit als Diskussionsbeitrag, Standpunktesammlung und Positionierung gedacht.</p>`
         },
         {
           title: 'Verfälscht 2030Watch damit eine objektive Berichterstattung?',
           id: 'ziel-objektive-berichterstattung',
-          body: `<p>Die 2030 Agenda stellt lediglich einen Rahmen für politische Entscheidungen der nächsten 15 Jahre dar. Viele Ziele und Unterziele der Agenda sind vage formuliert und enthalten noch sehr viel Interpretationsspielraum. Je nachdem wie ein Unterziel interpretiert wird, können unterschiedliche Indikatoren gewählt werden. Jede Auswahl von Indikatoren ist daher von Interessen und politischen Prioritäten geleitet. Das gilt für die Indikatorenauswahl der UN Statistikkommission genauso wie für die Indikatorenauswahl der Bundesregierung und von 2030Watch.</p>
+          body: `<p>Die 2030 Agenda stellt lediglich einen Rahmen für politische Entscheidungen der nächsten 15 Jahre dar (2015-2030). Viele Ziele und Unterziele der Agenda sind vage formuliert und enthalten noch sehr viel Interpretationsspielraum. Je nachdem wie ein Unterziel interpretiert wird, können unterschiedliche Indikatoren gewählt werden. Jede Auswahl von Indikatoren ist daher von Interessen und politischen Prioritäten geleitet. Das gilt für die Indikatorenauswahl der UN Statistikkommission genauso wie für die Indikatorenauswahl der Bundesregierung und von 2030Watch.</p>
           <p>Auch die Festlegung eines Zielwertes je Indikator ist oft eine politische Entscheidung, die nicht objektiv richtig oder objektiv falsch ist. Zum Beispiel gibt es viele mögliche Antworten auf die Frage, welche Arbeitslosenrate Deutschland bis 2030 anstreben soll. Ist eine Arbeitslosenrate von 8% sehr gut oder gut oder sehr schlecht?</p>`
         },
         {
