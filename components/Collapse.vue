@@ -1,8 +1,10 @@
 <template>
   <div class="collapse">
     <h3 v-on:click="toggle" tabindex="0" v-on:keypress="toggle" :title="(visible ? 'Hide' : 'Show') + ' the abstract'">
-      <SortIcon :active="true" :reverse="visible" />
-      {{ title }}
+      <a>
+        <SortIcon :active="true" :reverse="visible" />
+        {{ title }}
+      </a>
     </h3>
     <div class="content" ref="content">
       <slot />
