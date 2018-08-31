@@ -1,6 +1,6 @@
 <template>
   <div class="collapse">
-    <h3 v-on:click="toggle" :title="(visible ? 'Hide' : 'Show') + ' the abstract'">
+    <h3 v-on:click="toggle" tabindex="0" v-on:keypress="toggle" :title="(visible ? 'Hide' : 'Show') + ' the abstract'">
       <SortIcon :active="true" :reverse="visible" />
       {{ title }}
     </h3>
