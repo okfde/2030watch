@@ -44,7 +44,7 @@
         {
           title: 'Wer soll die 2030 Agenda umsetzen?',
           id: 'background-umsetzung',
-          body: `<p>Die 2030 Agenda ist eine freiwillige Selbstverpflichtung der Regierungen aus 193 Ländern. Dazu “übersetzen” alle beteiligten Länder den globalen SDG-Katalog in einen eigenen Fahrplan, um die globalen Nachhaltigkeitsziele umzusetzen. In Deutschland ist die Deutsche Nachhaltigkeitsstrategie (DNS) der zentrale Umsetzungsrahmen der Agenda 2030.</p>
+          body: `<p>Die 2030 Agenda ist eine freiwillige Selbstverpflichtung der Regierungen aus 193 Ländern. Dazu "übersetzen" alle beteiligten Länder den globalen SDG-Katalog in einen eigenen Fahrplan, um die globalen Nachhaltigkeitsziele umzusetzen. In Deutschland ist die Deutsche Nachhaltigkeitsstrategie (DNS) der zentrale Umsetzungsrahmen der Agenda 2030.</p>
           <p>Die United Nations (UN) spielt bei der Koordinierung der 2030 Agenda und der Weiterentwicklung des SDG-Indikatorenkatalogs eine entscheidende Rolle. Zivilgesellschaftliche Gruppen, Wissenschaftler*innen und Unternehmen sind aufgerufen, sich ebenfalls an der Umsetzung der Agenda zu beteiligen, allerdings gibt es dazu keine formelle Selbstverpflichtung.</p>`
         }
         ],
@@ -52,10 +52,10 @@
           title: 'Was ist das Ziel von 2030Watch?',
           id: 'ziel-2030Watch',
           body: `<p>Die Vision von 2030Watch ist es, dass Deutschland die globalen Nachhaltigkeitsziele ambitioniert umsetzt.</p>
-          <p>Um diese Vision zu verfolgen, zeichnet 2030Watch anhand von Indikatoren ein Bild , wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir</p>
+          <p>Um diese Vision zu verfolgen, zeichnet 2030Watch anhand von Indikatoren ein Bild, wie erfolgreich Deutschland die SDGs umsetzt. Indem 2030Watch offizielle Indikatoren der Deutschen Nachhaltigkeitsstrategie mit Indikatoren aus der Zivilgesellschaft ergänzt, wollen wir</p>
           <p>– eine kritische Sichtweise über den Stand der Umsetzung von Nachhaltigkeit in Deutschland anbieten,</p>
           <p>– Handlungsfelder beleuchten,</p>
-          <p>– die Forderung “Leave no one behind” (“Lass niemanden zurück”) der Agenda 2030 erfüllen, und</p>
+          <p>– die Forderung "Leave no one behind" ("Lass niemanden zurück") der Agenda 2030 erfüllen, und</p>
           <p>– die internationale Verantwortung Deutschlands als hochentwickeltes Industrieland hervorheben.</p>`
         },
         {
@@ -80,7 +80,7 @@
         {
           title: 'Wie wird 2030Watch weiterentwickelt?',
           id: 'ziel-2030Watch-weiterentwicklung',
-          body: `<p>Bis Ende des Sommer 2018 wird 2030Watch  zu allen 17 SDGs Indikatorenvorschläge veröffentlichen.  Außerdem überlegen wir, wie wir andere Features wie z.B. ein Mapping schon verbindlicher Abkommen zu den verschiedenen SDGs hinzufügen können. Im Sommer 2018 werden wir noch viele Anpassungen an unsere Webseite 2030Watch unternehmen und freuen uns über euer Feedback hierzu.</p>`
+          body: `<p>Bis Ende des Sommer 2018 wird 2030Watch zu allen 17 SDGs Indikatorenvorschläge veröffentlichen. Außerdem überlegen wir, wie wir andere Features wie z.B. ein Mapping schon verbindlicher Abkommen zu den verschiedenen SDGs hinzufügen können. Im Sommer 2018 werden wir noch viele Anpassungen an unsere Webseite 2030Watch unternehmen und freuen uns über euer Feedback hierzu.</p>`
         }
         ]
       }

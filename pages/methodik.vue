@@ -36,7 +36,7 @@
           <p>b. Die Bundesregierung bezeichnet dieses Unterziel in der Nachhaltigkeitsstrategie als relevant, hat aber keinen eigenen Indikator.</p>
           <p>c. Die Bundesregierung bezeichnet dieses Ziel selbst in offiziellen Verlautbarungen (inkl. internationalen Abkommen) als relevant, hat aber keinen eigenen Indikator.</p>
           <p>3. Deutschland hat aus zivilgesellschaftlicher Sicht zu diesem Unterziel großen Handlungsbedarf. In öffentlichen Aufrufen von respektierten Organisationen wird ein Indikator zu diesem Thema gefordert.</p>
-          <p>4. Disaggregierte Daten “Leave no one behind”</p>
+          <p>4. Disaggregierte Daten "Leave no one behind"</p>
           <p>a. Gender</p>
           <p>b. Kinder, Jugendliche, Erwachsene, Senioren</p>
           <p>c. Menschen mit Migrationshintergrund</p>
@@ -75,7 +75,7 @@
           id: 'methode-zielwerte',
           body: `<p>Bei der Verwendung der Indikatoren der Deutschen Nachhaltigkeitsstrategie übernehmen wir die offiziellen Zielwerte.</p>
           <p>Für die ergänzenden Indikatoren wird der Zielwert von uns ausgewählt - beruhend auf internationalen Abkommen, Fachliteratur oder Expertengesprächen.</p>
-          <p>In den Fällen, in denen wir keinen Zielwert haben, nehmen wir den Durchschnitt der “5 Top Performer”, sprich die fünf besten Werte der vorhandenen Länderreihe.</p>`
+          <p>In den Fällen, in denen wir keinen Zielwert haben, nehmen wir den Durchschnitt der "5 Top Performer", sprich die fünf besten Werte der vorhandenen Länderreihe.</p>`
         },
         {
           title: 'Woher kommen die aktuellen Werte?',

@@ -11,9 +11,7 @@
           <p>
             <div class="blockquote-wrapper">
               <blockquote cite="https://www.2030agenda.de/de/article/peer-review-2018">
-                <p>
-                  "Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten."
-                </p>
+                Allerdings ist noch viel zu tun, um einen erfolgreichen deutschen Weg hin zur Nachhaltigkeit zu gestalten.
               </blockquote>
               <cite>– Peer Review zur Deutschen Nachhaltigkeitsstrategie 2018</cite>
             </div>
