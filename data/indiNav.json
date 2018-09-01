@@ -1,0 +1,994 @@
+[
+  {
+    "slug": "dns-materielle-deprivation",
+    "label": "Materielle Deprivation",
+    "id": "1_1",
+    "author": "dns",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "dns-erhebliche-materielle-deprivation",
+    "label": "Erhebliche materielle Deprivation",
+    "id": "1_2",
+    "author": "dns",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "okf-materielle-deprivation",
+    "label": "Materielle Deprivation",
+    "id": "1_1",
+    "author": "okf",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "okf-erhebliche-materielle-deprivation",
+    "label": "Erhebliche materielle Deprivation",
+    "id": "1_2",
+    "author": "okf",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "okf-armutsgefaehrdungsquote",
+    "label": "Armutsgefährdungsquote",
+    "id": "1_3",
+    "author": "okf",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "okf-armut-und-ausgrenzung",
+    "label": "Von Armut und sozialer Ausgrenzung bedroht",
+    "id": "1_4",
+    "author": "okf",
+    "sdg": 1,
+    "color": "eb1c2d"
+  },
+  {
+    "slug": "dns-stickstoffueberschuss",
+    "label": "Stickstoffüberschuss",
+    "id": "2_1",
+    "author": "dns",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "dns-anteil-biologischer-landwirtschaft",
+    "label": "Anteil biologischer Landwirtschaft",
+    "id": "2_2",
+    "author": "dns",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "okf-stickstoffueberschuss",
+    "label": "Stickstoffüberschuss",
+    "id": "2_1",
+    "author": "okf",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "okf-antibiotika-landwirtschaft",
+    "label": "Antibiotikaeinsatz in der Landwirtschaft",
+    "id": "2_2",
+    "author": "okf",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "okf-pestizide-landwirtschaft",
+    "label": "Einsatz von Pestiziden in der Landwirtschaft",
+    "id": "2_3",
+    "author": "okf",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "okf-fleischkonsum",
+    "label": "Fleischkonsum pro Kopf",
+    "id": "2_4",
+    "author": "okf",
+    "sdg": 2,
+    "color": "d3a029"
+  },
+  {
+    "slug": "dns-vorzeitige-sterblichkeit-frauen",
+    "label": "Vorzeitige Sterblichkeit Frauen",
+    "id": "3_1",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-vorzeitige-sterblichkeit-maenner",
+    "label": "Vorzeitige Sterblichkeit Männer",
+    "id": "3_2",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-raucherquote-12-17j",
+    "label": "Raucherquote 12-17J",
+    "id": "3_3",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-raucherquote-ab-15j",
+    "label": "Raucherquote ab 15J",
+    "id": "3_4",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-adipositasquote-11-17j",
+    "label": "Adipositasquote 11-17J",
+    "id": "3_5",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-adipositasquote-ab-18j",
+    "label": "Adipositasquote ab 18J",
+    "id": "3_6",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-luftschadstoffen-index",
+    "label": "Emmissionen von Luftschadstoffen",
+    "id": "3_7",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-pm10-exposition",
+    "label": "Anteil der Bevölkerung mit PM10 Exposition",
+    "id": "3_8",
+    "author": "dns",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "okf-alkoholkonsum",
+    "label": "Alkoholkonsum",
+    "id": "3_1",
+    "author": "okf",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "okf-suizidrate",
+    "label": "Suizidrate",
+    "id": "3_2",
+    "author": "okf",
+    "sdg": 3,
+    "color": "279b48"
+  },
+  {
+    "slug": "dns-fruehe-schulabgaenger",
+    "label": "Frühe Schulabgänger, 18-24J",
+    "id": "4_1",
+    "author": "dns",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "dns-tertiaerer-oder-postsekundaerer-abschluss",
+    "label": "Tertiärer oder postsekundärer Abschluss, 30-34J",
+    "id": "4_2",
+    "author": "dns",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "dns-ganztagsbetreuung-0-2j",
+    "label": "Ganztagsbetreuung 0-2J",
+    "id": "4_3",
+    "author": "dns",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "dns-ganztagsbetreuung-3-5j",
+    "label": "Ganztagsbetreuung 3-5J",
+    "id": "4_4",
+    "author": "dns",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "okf-bildungsgrad-chancengleichheit",
+    "label": "Sozio-ökonomische Faktoren auf Bildungsgrad",
+    "id": "4_1",
+    "author": "okf",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "okf-bildungsausgaben",
+    "label": "Bildungsausgaben am BIP",
+    "id": "4_2",
+    "author": "okf",
+    "sdg": 4,
+    "color": "c31f33"
+  },
+  {
+    "slug": "dns-verdienstabstand-zwischen-frauen-und-maennern",
+    "label": "Verdienstabstand zwischen Frauen und Männern",
+    "id": "5_1",
+    "author": "dns",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "dns-frauen-wirtschaft-dns",
+    "label": "Frauen in Aufsichtsräten DAX-30-Unternehmen",
+    "id": "5_2",
+    "author": "dns",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "dns-frauen-bildung-eza",
+    "label": "Berufliche Qualifizierungsmaßnahmen EZA für Frauen u. Mädchen",
+    "id": "5_3",
+    "author": "dns",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "okf-frauen-parlamente",
+    "label": "Anteil der Frauen in Parlamenten",
+    "id": "5_1",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "okf-frauen-wirtschaft",
+    "label": "Frauen in Führungspositionen in der Wirtschaft",
+    "id": "5_2",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "okf-verteilung-hausarbeit",
+    "label": "Ungleiche Verteilung der Hausarbeit",
+    "id": "5_3",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "okf-gendergap-renten",
+    "label": "Gendergap im Renteneinkommen (Rentner über 65)",
+    "id": "5_4",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "okf-gewalt-gegen-frauen",
+    "label": "Gewalt gegen Frauen",
+    "id": "5_5",
+    "author": "okf",
+    "sdg": 5,
+    "color": "ef402b"
+  },
+  {
+    "slug": "dns-phosphor-in-fliessgewaessern",
+    "label": "Phosphor in Fließgewässern",
+    "id": "6_1",
+    "author": "dns",
+    "sdg": 6,
+    "color": "00aed9"
+  },
+  {
+    "slug": "dns-nitrat-im-grundwasser",
+    "label": "Nitrat im Grundwasser",
+    "id": "6_2",
+    "author": "dns",
+    "sdg": 6,
+    "color": "00aed9"
+  },
+  {
+    "slug": "dns-trinkwasser-und-sanitaerversorgung",
+    "label": "Deutschland geförderter Zugang zu Trinkwasser- und Sanitärversorgung",
+    "id": "6_3",
+    "author": "dns",
+    "sdg": 6,
+    "color": "00aed9"
+  },
+  {
+    "slug": "okf-oekologischer-zustand-fluesse",
+    "label": "Ökologischer Zustand der Flüsse",
+    "id": "6_1",
+    "author": "okf",
+    "sdg": 6,
+    "color": "00aed9"
+  },
+  {
+    "slug": "okf-oekologischer-zustand-seen",
+    "label": "Ökologischer Zustand der Seen",
+    "id": "6_2",
+    "author": "okf",
+    "sdg": 6,
+    "color": "00aed9"
+  },
+  {
+    "slug": "dns-Endenergieproduktivität",
+    "label": "Steigerung der Endenergieproduktivität",
+    "id": "7_1",
+    "author": "dns",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "dns-Primärenergieverbrauch",
+    "label": "Senkung Primärenergieverbrauch",
+    "id": "7_2",
+    "author": "dns",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "dns-ee-energieverbrauch",
+    "label": "Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch",
+    "id": "7_3",
+    "author": "dns",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "dns-ee-stromverbrauch",
+    "label": "Anteil des Stroms aus erneuerbarer Energiequellen am Bruttostromverbrauch",
+    "id": "7_4",
+    "author": "dns",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "okf-subventionen-fossiler-brennstoffe",
+    "label": "Subventionen fossiler Brennstoffe",
+    "id": "7_1",
+    "author": "okf",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "okf-energieverbrauch-pro-kopf",
+    "label": "Energieverbrauch pro Kopf",
+    "id": "7_2",
+    "author": "okf",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "okf-CO2-emissionen-bei-energiegewinnung-pro-Kopf",
+    "label": "CO2-Emissionen (Energie) pro Kopf",
+    "id": "7_3",
+    "author": "okf",
+    "sdg": 7,
+    "color": "fdb713"
+  },
+  {
+    "slug": "dns-rohstoffproduktivitaet",
+    "label": "Gesamtrohstoffproduktivität",
+    "id": "8_1",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-staatsdefizit",
+    "label": "Staatsdefizit",
+    "id": "8_2",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-strukturelles-defizit",
+    "label": "Strukturelles Defizit",
+    "id": "8_3",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-staatsschulden",
+    "label": "Staatsschulden % BIP",
+    "id": "8_4",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-anlageinvestitionen",
+    "label": "Bruttoanlageinvestitionen im Verhältnis zum BIP",
+    "id": "8_5",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-bip",
+    "label": "Bruttoinlandsprodukt pro Einwohner",
+    "id": "8_6",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-erwerbstaetigenquote-20-64",
+    "label": "Erwerbstätigenquote (20-64Jahre)",
+    "id": "8_7",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-erwerbstaetigenquote-60-64",
+    "label": "Erwerbstätigenquote (60-64Jahre)",
+    "id": "8_8",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-textilbuendnis",
+    "label": "Mitglieder des Textilbündnisses",
+    "id": "8_9",
+    "author": "dns",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "okf-armut-trotz-beschaeftigung",
+    "label": "Armut trotz Vollzeitbeschäftigung",
+    "id": "8_1",
+    "author": "okf",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "okf-sklaverei",
+    "label": "Staatliche Maßnahmen gegen Sklaverei",
+    "id": "8_2",
+    "author": "okf",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "okf-materialverbrauch",
+    "label": "Reduktion des inländischen Materialverbrauchs",
+    "id": "8_3",
+    "author": "okf",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "okf-materialverbrauch-capita",
+    "label": "Inländischer Materialverbrauch",
+    "id": "8_4",
+    "author": "okf",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "okf-niedrigloehne",
+    "label": "Anteil der Arbeitnehmer mit Niedriglohn",
+    "id": "8_5",
+    "author": "okf",
+    "sdg": 8,
+    "color": "8f1838"
+  },
+  {
+    "slug": "dns-forschung-und-entwicklung",
+    "label": "Ausgaben für Forschung und Entwicklung/ BIP",
+    "id": "9_1",
+    "author": "dns",
+    "sdg": 9,
+    "color": "f36d25"
+  },
+  {
+    "slug": "okf-wissenschaftler",
+    "label": "Wissenschaftler*innen / 1000 Beschäftigte",
+    "id": "9_1",
+    "author": "okf",
+    "sdg": 9,
+    "color": "f36d25"
+  },
+  {
+    "slug": "okf-4G-verbreitung",
+    "label": "4G Verbreitung",
+    "id": "9_2",
+    "author": "okf",
+    "sdg": 9,
+    "color": "f36d25"
+  },
+  {
+    "slug": "okf-open-data-index",
+    "label": "Open Data Index",
+    "id": "9_3",
+    "author": "okf",
+    "sdg": 9,
+    "color": "f36d25"
+  },
+  {
+    "slug": "okf-technologietransfer",
+    "label": "Wissentransfereinschränkung durch gesetzliche Bestimmungen (Urheberrecht)",
+    "id": "9_4",
+    "author": "okf",
+    "sdg": 9,
+    "color": "f36d25"
+  },
+  {
+    "slug": "dns-auslaendische-schulabsolventinnen",
+    "label": "Ausländische Schulabsolventinnen",
+    "id": "10_1",
+    "author": "dns",
+    "sdg": 10,
+    "color": "e11484"
+  },
+  {
+    "slug": "dns-gini-koeffizient-dns",
+    "label": "Äquivalenzeinkommen als Gini Koeffizient nach Sozialtransfers",
+    "id": "10_2",
+    "author": "dns",
+    "sdg": 10,
+    "color": "e11484"
+  },
+  {
+    "slug": "okf-palma-ratio",
+    "label": "Palma Ratio",
+    "id": "10_1",
+    "author": "okf",
+    "sdg": 10,
+    "color": "e11484"
+  },
+  {
+    "slug": "okf-gini-koeffizient",
+    "label": "Äquivalenzeinkommen als Gini-Koeffizient nach Sozialtransfers",
+    "id": "10_2",
+    "author": "okf",
+    "sdg": 10,
+    "color": "e11484"
+  },
+  {
+    "slug": "okf-mipex",
+    "label": "MIPEX",
+    "id": "10_3",
+    "author": "okf",
+    "sdg": 10,
+    "color": "e11484"
+  },
+  {
+    "slug": "okf-diskriminierung",
+    "label": "Diskriminierung",
+    "id": "10_4",
+    "author": "okf",
+    "sdg": 10,
+    "color": "e11484"
+  },
+  {
+    "slug": "dns-siedlungs-verkehrsflaeche",
+    "label": "Anstieg der Siedlungs- Verkehrsfläche",
+    "id": "11_1",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-freiraumflaeche",
+    "label": "Rückgang Freiraumverlust pro Einwohner",
+    "id": "11_2",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-siedlungsdichte",
+    "label": "Siedlungsdichte erhalten",
+    "id": "11_3",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-energieverbrauch-gueterverkehr",
+    "label": "Endenergieverbrauch im Güterverkehr",
+    "id": "11_4",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-energieverbrauch-personenverkehr",
+    "label": "Endenergieverbrauch im Personenverkehr",
+    "id": "11_5",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-reisezeit-oepnv",
+    "label": "Reisezeit mit öffentlichen Verkehrsmitteln",
+    "id": "11_6",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-wohnkosten",
+    "label": "Belastung durch Wohnkosten",
+    "id": "11_7",
+    "author": "dns",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-siedlungsfläche",
+    "label": "Anstieg der Siedlungs- und Verkehrsfläche",
+    "id": "11_1",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-freiraumverlust",
+    "label": "Rückgang Freiraumverlust pro Einwohner",
+    "id": "11_2",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-feinstaubbelastung",
+    "label": "PM2.5 Feinstaubbelastung",
+    "id": "11_3",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-verkehrsverlagerung-frachtverkehr",
+    "label": "Verkehrsverlagerung Güterverkehr",
+    "id": "11_4",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-verkehrsverlagerung-personenverkehr",
+    "label": "Verkehrsverlagerung Personenverkehr",
+    "id": "11_5",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-wohnkosten",
+    "label": "Überlastung durch Wohnkosten",
+    "id": "11_6",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "okf-siedlungsabfall",
+    "label": "Siedlungsabfall",
+    "id": "11_7",
+    "author": "okf",
+    "sdg": 11,
+    "color": "f99d26"
+  },
+  {
+    "slug": "dns-produkte-umweltzeichen",
+    "label": "Produkte mit Umweltzeichen",
+    "id": "12_1",
+    "author": "dns",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "dns-emissionen-konsum",
+    "label": "CO2-Emissionen des Konsums",
+    "id": "12_2",
+    "author": "dns",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "dns-energieverbrauch-konsum",
+    "label": "Energieverbrauch des Konsums",
+    "id": "12_3",
+    "author": "dns",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "dns-emas-organisationsstandorte",
+    "label": "Umweltmanagement EMAS",
+    "id": "12_4",
+    "author": "dns",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "okf-verpackungsmuell",
+    "label": "Verpackungsmüll pro Kopf",
+    "id": "12_1",
+    "author": "okf",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "okf-wasserflaschen-konsum",
+    "label": "Verbrauch von Wasser in Flaschen",
+    "id": "12_2",
+    "author": "okf",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "okf-ecological-footprint",
+    "label": "Ökologischer Fußabdruck",
+    "id": "12_3",
+    "author": "okf",
+    "sdg": 12,
+    "color": "cf8d2a"
+  },
+  {
+    "slug": "dns-treibhausgasemmissionen",
+    "label": "Treibhausgasemmissionen",
+    "id": "13_1",
+    "author": "dns",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "dns-internationale-klimafinanzierung",
+    "label": "Internationale Klimafinanzierung",
+    "id": "13_2",
+    "author": "dns",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "okf-germanwatch-index-emissionstrends",
+    "label": "Germanwatch Index: Emissionstrends",
+    "id": "13_1",
+    "author": "okf",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "okf-germanwatch-index-erneuerbare-energien",
+    "label": "Germanwatch Index: Erneuerbare Energien",
+    "id": "13_2",
+    "author": "okf",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "okf-germanwatch-index-energienverbrauch",
+    "label": "Germanwatch Index: Emissionsniveau",
+    "id": "13_3",
+    "author": "okf",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "okf-germanwatch-index-klimapolitik",
+    "label": "Germanwatch Index: Klimapolitik",
+    "id": "13_4",
+    "author": "okf",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "okf-germanwatch-index-effizienz",
+    "label": "Germanwatch Index: Effizienz (Energie- und CO2-Intensität)",
+    "id": "13_5",
+    "author": "okf",
+    "sdg": 13,
+    "color": "48773e"
+  },
+  {
+    "slug": "dns-stickstoffeintrag-ostsee",
+    "label": "Gesamtstickstoffeintrag Ostsee",
+    "id": "14_1",
+    "author": "dns",
+    "sdg": 14,
+    "color": "007dbc"
+  },
+  {
+    "slug": "dns-stickstoffeintrag-nordsee",
+    "label": "Gesamtstickstoffeintrag Nordsee",
+    "id": "14_2",
+    "author": "dns",
+    "sdg": 14,
+    "color": "007dbc"
+  },
+  {
+    "slug": "dns-nachhaltige-fischbestaende",
+    "label": "Anteil nachhaltig befischter Fischbestände",
+    "id": "14_3",
+    "author": "dns",
+    "sdg": 14,
+    "color": "007dbc"
+  },
+  {
+    "slug": "okf-ocean-health-index-food-provision",
+    "label": "Ocean Health Index: Food Provision",
+    "id": "14_1",
+    "author": "okf",
+    "sdg": 14,
+    "color": "007dbc"
+  },
+  {
+    "slug": "okf-ocean-health-index-clean-waters",
+    "label": "Ocean Health Index: Clean Waters",
+    "id": "14_2",
+    "author": "okf",
+    "sdg": 14,
+    "color": "007dbc"
+  },
+  {
+    "slug": "dns-index-artenvielfalt-landschaftsqualitaet",
+    "label": "Index Artenvielfalt u. Landschaftsqualität",
+    "id": "15_1",
+    "author": "dns",
+    "sdg": 15,
+    "color": "3eb049"
+  },
+  {
+    "slug": "dns-eutrophierung-der-oekosysteme",
+    "label": "Eutrophierung der Ökosysteme",
+    "id": "15_2",
+    "author": "dns",
+    "sdg": 15,
+    "color": "3eb049"
+  },
+  {
+    "slug": "dns-redd+-waelder",
+    "label": "EZA für REDD+- Wälder",
+    "id": "15_3",
+    "author": "dns",
+    "sdg": 15,
+    "color": "3eb049"
+  },
+  {
+    "slug": "okf-importierte-biodiversitaet",
+    "label": "Auswirkungen importierter Biodiversität",
+    "id": "15_1",
+    "author": "okf",
+    "sdg": 15,
+    "color": "3eb049"
+  },
+  {
+    "slug": "okf-fsc-waelder",
+    "label": "Anteil FSC zertifizierter Wälder",
+    "id": "15_2",
+    "author": "okf",
+    "sdg": 15,
+    "color": "3eb049"
+  },
+  {
+    "slug": "dns-straftaten",
+    "label": "Straftaten",
+    "id": "16_1",
+    "author": "dns",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "dns-sicherung-registrierung-zerstoerung-kleinwaffen",
+    "label": "Sicherung, Registrierung und Zerstörung von Kleinwaffen",
+    "id": "16_2",
+    "author": "dns",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "dns-corruption-perception-index",
+    "label": "Corruption Perception Index",
+    "id": "16_3",
+    "author": "dns",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "dns-corruption-perception-index-eza-partner",
+    "label": "Corruption Perception Index der EZA Partner",
+    "id": "16_4",
+    "author": "dns",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "okf-financial-secrecy-index",
+    "label": "Financial Secrecy Index",
+    "id": "16_1",
+    "author": "okf",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "okf-volumen-waffenexporte",
+    "label": "Volumen Waffenexporte",
+    "id": "16_2",
+    "author": "okf",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "okf-recht-auf-information-index",
+    "label": "Recht auf Information Index",
+    "id": "16_3",
+    "author": "okf",
+    "sdg": 16,
+    "color": "02558b"
+  },
+  {
+    "slug": "dns-oda-bne",
+    "label": "ODA / BNE",
+    "id": "17_1",
+    "author": "dns",
+    "sdg": 17,
+    "color": "183668"
+  },
+  {
+    "slug": "dns-studierende-forscher-dc-ldc",
+    "label": "Studierende, Forscher aus DCs und LDCs",
+    "id": "17_2",
+    "author": "dns",
+    "sdg": 17,
+    "color": "183668"
+  },
+  {
+    "slug": "dns-importe-ldc",
+    "label": "Anteil der Importe aus LDCs",
+    "id": "17_3",
+    "author": "dns",
+    "sdg": 17,
+    "color": "183668"
+  },
+  {
+    "slug": "okf-entschuldungspolitik",
+    "label": "Nachhaltige Entschuldungspolitik",
+    "id": "17_1",
+    "author": "okf",
+    "sdg": 17,
+    "color": "183668"
+  },
+  {
+    "slug": "okf-handelsbarrieren",
+    "label": "Handelsbarrieren",
+    "id": "17_2",
+    "author": "okf",
+    "sdg": 17,
+    "color": "183668"
+  },
+  {
+    "slug": "okf-oda-qualitaet",
+    "label": "ODA Quality of Implementation",
+    "id": "17_3",
+    "author": "okf",
+    "sdg": 17,
+    "color": "183668"
+  }
+]

@@ -1,0 +1,109 @@
+import Vue from 'vue'
+import NuxtLoading from './components/nuxt-loading.vue'
+
+import '../node_modules/normalize-scss/sass/_normalize.scss'
+
+import '../assets/style/base.scss'
+
+
+let layouts = {
+
+  "_default": () => import('../layouts/default.vue'  /* webpackChunkName: "layouts/default" */).then(m => m.default || m)
+
+}
+
+let resolvedLayouts = {}
+
+export default {
+  head: {"htmlAttrs":{"lang":"de"},"title":"2030Watch | Wie nachhaltig ist Deutschland?","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"2030Watch diskutiert wie ambitioniert Deutschland die Nachhaltigkeitsziele der Agenda 2030 umsetzt."}],"link":[{"rel":"icon","type":"image\u002Fpng","href":"\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Chivo:400,700|Roboto+Mono:400,700","defer":true},{"rel":"alternate","href":"https:\u002F\u002F2030-watch.de","hreflang":"de"}],"style":[],"script":[{"hid":"nuxt-matomo-js","innerHTML":"window['_paq'] = [];window['_paq'].push(['setTrackerUrl', '\u002F\u002Ftraffic.okfn.de\u002Fpiwik.php']);window['_paq'].push(['setSiteId', '14']);","type":"text\u002Fjavascript"},{"src":"\u002F\u002Ftraffic.okfn.de\u002Fpiwik.js","async":true,"defer":true}],"__dangerouslyDisableSanitizersByTagID":{"nuxt-matomo-js":["innerHTML"]}},
+  render(h, props) {
+    const loadingEl = h('nuxt-loading', { ref: 'loading' })
+    const layoutEl = h(this.layout || 'nuxt')
+    const templateEl = h('div', {
+      domProps: {
+        id: '__layout'
+      },
+      key: this.layoutName
+    }, [ layoutEl ])
+
+    const transitionEl = h('transition', {
+      props: {
+        name: 'layout',
+        mode: 'out-in'
+      }
+    }, [ templateEl ])
+
+    return h('div',{
+      domProps: {
+        id: '__nuxt'
+      }
+    }, [
+      loadingEl,
+      transitionEl
+    ])
+  },
+  data: () => ({
+    layout: null,
+    layoutName: ''
+  }),
+  beforeCreate () {
+    Vue.util.defineReactive(this, 'nuxt', this.$options.nuxt)
+  },
+  created () {
+    // Add this.$nuxt in child instances
+    Vue.prototype.$nuxt = this
+    // add to window so we can listen when ready
+    if (typeof window !== 'undefined') {
+      window.$nuxt = this
+    }
+    // Add $nuxt.error()
+    this.error = this.nuxt.error
+  },
+  
+  mounted () {
+    this.$loading = this.$refs.loading
+  },
+  watch: {
+    'nuxt.err': 'errorChanged'
+  },
+  
+  methods: {
+    
+    errorChanged () {
+      if (this.nuxt.err && this.$loading) {
+        if (this.$loading.fail) this.$loading.fail()
+        if (this.$loading.finish) this.$loading.finish()
+      }
+    },
+    
+    setLayout (layout) {
+      if (!layout || !resolvedLayouts['_' + layout]) layout = 'default'
+      this.layoutName = layout
+      let _layout = '_' + layout
+      this.layout = resolvedLayouts[_layout]
+      return this.layout
+    },
+    loadLayout (layout) {
+      if (!layout || !(layouts['_' + layout] || resolvedLayouts['_' + layout])) layout = 'default'
+      let _layout = '_' + layout
+      if (resolvedLayouts[_layout]) {
+        return Promise.resolve(resolvedLayouts[_layout])
+      }
+      return layouts[_layout]()
+      .then((Component) => {
+        resolvedLayouts[_layout] = Component
+        delete layouts[_layout]
+        return resolvedLayouts[_layout]
+      })
+      .catch((e) => {
+        if (this.$nuxt) {
+          return this.$nuxt.error({ statusCode: 500, message: e.message })
+        }
+      })
+    }
+  },
+  components: {
+    NuxtLoading
+  }
+}
+
