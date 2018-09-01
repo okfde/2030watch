@@ -18,8 +18,8 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.2",
-    "csv-parse": "^3.0.0",
-    "d3-scale": "^2.1.2",
+    "csv-parse": "^2.5.0",
+    "d3-scale": "^2.1.0",
     "fs": "0.0.1-security",
     "html2canvas": "^1.0.0-alpha.12",
     "jsonfile": "^4.0.0",
@@ -31,15 +31,15 @@
     "vue-chartjs": "^3.4.0"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
+    "babel-eslint": "^8.2.6",
     "eslint": "^5.4.0",
-    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard": "^11.0.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "node-sass": "^4.9.3",
     "normalize-scss": "^7.0.1",
     "sass-loader": "^7.1.0"
