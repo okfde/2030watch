@@ -15,7 +15,7 @@
           text-anchor="start"
           :x="scaleX.map(0) + 'px'"
           y="0"
-          v-html="format(0)" />
+        >0%</text>
         <text
           class="sdg-label sdg-label-tick"
           alignment-baseline="hanging"
@@ -23,7 +23,7 @@
           text-anchor="end"
           :x="scaleX.map(100) + 'px'"
           y="0"
-          v-html="format(100)" />
+        >100%</text>
       </g>
       <g class="tickLines" v-if="vTicks">
         <line
@@ -76,7 +76,7 @@
         alignment-baseline="hanging"
         dominant-baseline="hanging"
         :text-anchor="labels[0].l"
-        :style="{ 'font-size': compact ? '0.9rem' : '1.1rem' }"
+        :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[0].x"
         y="0%"
         v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)"
@@ -92,42 +92,6 @@
       />
     </g>
     <g v-if="vLegend">
-      <!-- <g class="tickLinesLegend" v-if="vTicks">
-        <text
-          class="ticksLegendLabels"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
-          text-anchor="start"
-          :style="{ fill: stepsColors[0] }"
-          :x="scaleX.map(0) + 'px'"
-          y="0%"
-          v-html="format(0)" />
-        <text
-          class="ticksLegendLabels"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
-          text-anchor="middle"
-          :style="{ fill: '#a5a49f' }"
-          :x="scaleX.map(50) + 'px'"
-          y="0%">Nachhaltigkeit</text>
-        <text
-          class="ticksLegendLabels"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
-          text-anchor="end"
-          :style="{ fill: stepsColors[steps - 1] }"
-          :x="scaleX.map(100) + 'px'"
-          y="0%"
-          v-html="format(100)" />
-        <line
-          v-for="tick in steps"
-          class="tickLegend"
-          :style="{ 'stroke': stepsColors[tick - 1] }"
-          :x1="scaleX.map((tick - 1) * (100 / steps)) + 'px'"
-          :y1="legendLabeldnsHeight"
-          :x2="scaleX.map((tick) * (100 / steps)) + 'px'"
-          :y2="legendLabeldnsHeight" />
-      </g> -->
       <polyline
         class="legendLine"
         :points="`${xOKF},${height - legendLabeldnsHeight} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
