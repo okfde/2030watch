@@ -1,7 +1,3 @@
-.page-footer, .page-header, .page-explainer, .inpage-header, .inpage-nav {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 .dns {
   color: $color-dns;
 }
@@ -11,24 +7,37 @@
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.4;
   letter-spacing: 0.02em;
   font-weight: bold;
-  color: $color-okf;
   margin-bottom: $spacing / 2;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   letter-spacing: 0.02em;
-  color: $color-okf;
+}
+
+h4 {
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
 }
 
 p + p {
@@ -72,7 +81,6 @@ small + p {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.8;
 }
 
 .label {
@@ -142,17 +150,13 @@ table {
 .btn {
   border-radius: 2px;
   padding: $spacing / 4 $spacing / 2 !important;
-  background-color: #FCEA2B;
-  color: #222 !important;
   cursor: pointer;
   text-shadow: none;
-  transition-duration: 0.2s;
   border: none !important;
   display: inline-block;
 
   &:hover, &:focus {
     color: #000 !important;
-    transform: scale(1.03);
   }
 
   &.disabled {
@@ -171,7 +175,6 @@ table {
     background-color: #898989;
   }
 }
-
 
 @font-face {
   font-family: '2030watch';
@@ -196,7 +199,6 @@ table {
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
 
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
@@ -211,9 +213,6 @@ table {
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-pencil:before { content: '\e800'; } /* '' */

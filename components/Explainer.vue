@@ -27,7 +27,6 @@
 </template>
 
 <script>
-
 </script>
 
 <style lang="scss" scoped>
@@ -42,7 +41,7 @@
   }
 
   .page-explainer {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
   }
 
   .caption {

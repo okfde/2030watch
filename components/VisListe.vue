@@ -1,50 +1,38 @@
 <template>
   <ul class="vis-liste">
-    <li class="sdg-item">
+    <li class="sdg-item" style="margin:0;">
       <div class="sdg-header sdg-header-label">
-        <span>Sustainable Development Goals</span>
+        <span class="sdg-header-sdgs">Sustainable Development Goals</span>
       </div>
       <div class="sdg-header sdg-header-vis columns">
-        <section class="sdg-legend">
-          <span class="okf">2030Watch</span>
-          <span class="dns-lang">Deutsche Nachhaltigkeitsstrategie</span>
-          <span class="dns-kurz">DNS</span>
+        <section class="sdg-header-sdgs">
+          SDG-Ziel für 2030 erreicht zu:
         </section>
       </div>
     </li>
-    <li v-for="(sdg, index) in sdgListe" class="sdg-item">
-      <nuxt-link v-if="sdg.textIntro !== 'coming soon'" :to="'sdg/' + sdg.slug" class="sdg-link" :style=" { '--color': '#' + sdg.color }">
-        <div class="sdg-label">
-          <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text" :title="sdg.labelLong">{{ sdg.labelShort }}</span>
-        </div>
-        <div class="sdg-vis">
-          <VisProgress :sdg="sdg" :vTickLabels="index === 0" :vTicks="true" />
-        </div>
-      </nuxt-link>
-      <a v-else class="sdg-link disabled" title="Coming soon">
-        <div class="sdg-label disabled">
-          <span class="sdg-number">{{ sdg.number }}</span> <span class="sdg-text">{{ sdg.labelShort }}</span>
-        </div>
-        <div class="sdg-vis">
-          <VisProgress :disabled="true" :sdg="sdg" :vTickLabels="index === 0" :vTicks="true" />
-        </div>
-      </a>
+    <li class="sdg-item" style="margin:0;">
+      <div class="sdg-header sdg-header-label"></div>
+      <div class="sdg-header sdg-header-vis columns" style="font-size:1rem;">
+        <section class="sdg-legend">
+          <span class="okf">2030Watch</span>
+          <span class="dns-lang">Offizielle Nachhaltigkeitsstrategie</span>
+          <span class="dns-kurz">Offiziell</span>
+        </section>
+      </div>
     </li>
+    <ToggleElements :sdgs="sdgListe" />
   </ul>
 </template>
 
 <script>
   import { mapState } from 'vuex'
-  import VisProgress from '~/components/VisProgress.vue'
-  import SortIcon from '~/components/SortIcon.vue'
-  import VisDirection from '~/components/VisDirection.vue'
+  import ToggleElements from '~/components/ToggleElements.vue'
   import _ from 'lodash'
 
   export default {
     data: function () {
       return {
-        'sorting': 'number',
-        'reverse': false
+        'sorting': 'number'
       }
     },
     computed: {
@@ -52,33 +40,18 @@
         'sdgs'
       ]),
       sdgListe: function () {
-        const list = _.sortBy(this.sdgs, this.sorting)
-        if (this.reverse) {
-          return _.reverse(list)
-        } else {
-          return list
-        }
+        return _.sortBy(this.sdgs, this.sorting)
       }
     },
     components: {
-      VisProgress,
-      SortIcon,
-      VisDirection
+      ToggleElements
     },
-    methods: {
-      sort: function (key) {
-        if (this.sorting !== key) {
-          this.sorting = key
-          this.reverse = false
-        } else {
-          this.reverse = !this.reverse
-        }
-      }
-    }
+    methods: {}
   }
 </script>
 
 <style lang="scss">
+  // TODO not yet scoped: ToggleElements component references this classes
   @import '~@/assets/style/variables';
 
   .vis-liste {
@@ -95,60 +68,19 @@
 
   .sdg-item {
     display: flex;
-
-    &:first-child {
-      pointer-events: none;
-    }
+    margin-bottom: 1.3rem;
 
     .sdg-header {
       margin-bottom: $spacing / 2;
-    }
-
-    .sdg-header-label {
-      // margin-left: calc(1rem + 16px);
-      font-weight: bold;
+      font-size: 1.2rem;
     }
 
     .sdg-header-label, .sdg-header-vis {
       flex: 1;
-      color: #9B9B9A;
 
       .active {
         font-weight: bold;
         color: $color-default;
-      }
-
-      .sdg-legend {
-        text-align: right;
-
-        span {
-          margin-left: 10px;
-        }
-
-        @media (max-width: 960px) {
-          .dns-lang {
-            display:none;
-          }
-          .dns-kurz {
-            color: $color-dns;
-          }
-        }
-        @media (min-width: 961px) {
-          .dns-lang {
-            color: $color-dns;
-          }
-          .dns-kurz {
-            display: none;
-          }
-        }
-        // TODO
-        // .dns {
-        //   color: $color-dns;
-        // }
-
-        .okf {
-          color: $color-okf;
-        }
       }
     }
 
@@ -193,18 +125,18 @@
           width: 1rem;
           margin-right: 1rem;
           text-align: right;
-          line-height: 1.2rem;
+          line-height: 1.35rem;
           display: inline-block;
           // color: $color-mute;
           color: var(--color);
-          font-size: 0.95rem;
+          font-size: 1.2rem;
         }
 
         .sdg-text {
-          line-height: 1.2rem;
+          line-height: 1.35rem;
           display: inline-block;
           font-weight: bold;
-          font-size: 0.95rem;
+          font-size: 1.2rem;
         }
       }
 
@@ -228,4 +160,34 @@
       }
     }
   }
+
+  @media (max-width: 960px) {
+    .dns-lang {
+      display:none;
+    }
+    .dns-kurz {
+      color: $color-dns;
+    }
+  }
+  @media (min-width: 961px) {
+    .dns-lang {
+      color: $color-dns;
+    }
+    .dns-kurz {
+      display: none;
+    }
+  }
+
+  .sdg-legend {
+    text-align: right;
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .sdg-header-sdgs {
+    font-weight: bold;
+    color: $color-2030;
+  }
+
 </style>

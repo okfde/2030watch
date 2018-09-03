@@ -106,7 +106,10 @@ function processSDGs (sdgs, allIndicators) {
     const indicators = _.filter(allIndicators, ['sdg', sdg['number']])
 
     // Group indicators by author
-    const { dns: indiDns, okf: indiOkf } = _.groupBy(indicators, 'author')
+    let { dns: indiDns, okf: indiOkf } = _.groupBy(indicators, 'author')
+
+    indiDns = _.orderBy(indiDns, 'id')
+    indiOkf = _.orderBy(indiOkf, 'id')
 
     // Filter okf indicators for display
     const usableValuesOKF = _.filter(indiOkf, i => {
@@ -421,7 +424,14 @@ function processIndicatorDetail (indicator, callback) {
         const countries = convertHashToFloat(_.fromPairs(_.slice(detailData, countriesIndex + 1, timelineIndex > 0 ? timelineIndex : detailData.length - 1)))
         // remove null values of countries
         Object.keys(countries).forEach((key) => (countries[key] === null || isNaN(countries[key])) && delete countries[key])
-        indicator['countries'] = countries
+
+        // order countries alphabetically
+        const ordered = {}
+        Object.keys(countries).sort().forEach(function (key) {
+          ordered[key] = countries[key]
+        })
+
+        indicator['countries'] = ordered
       }
     }
     callback(indicator)

@@ -17,13 +17,11 @@
             <p class="txtintroduction">{{ indicator.txtintroduction }}</p>
           </div>
           <div class="description">
-            <table class="box" style="border-radius:0px; border:none; padding: 0.5rem 1rem 0.3rem 1.5rem; text-shadow:none;"
-              :style="{ 'background-color': '#' + indicator.sdg.color}"
-            >
-              <tbody style="font-size: 0.85rem;">
-                <tr>
-                  <td class="title">Kategorie</td>
-                  <td style="padding-left: 0.4rem;"> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
+            <table class="box header-box" :style="{ 'background-color': sdgColorLighter }" >
+              <tbody>
+                <tr :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }">
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Kategorie</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }"> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
                     <span v-if="category">
                        <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
                          <i class="icon-plus-squared" />
@@ -38,20 +36,20 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="title">IST ({{ indicator['currentYear'] }})</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['current'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">IST ({{ indicator['currentYear'] }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['current'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
-                  <td class="title">SOLL (2030)</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['target'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">SOLL ({{ (indicator.id === '1_1' || indicator.id === '1_2' ) && indicator.author === 'dns' ? '2016' : '2030' }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['target'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
-                  <td class="title" style="line-height:1rem;">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['start'], 1, indicator['unit'])" />
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['start'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
-                  <td class="title" style="line-height:1rem;">2030-Ziel erreicht zu</td>
-                  <td style="padding-left: 0.4rem;" v-html="format(indicator['progress'], 0)" />
+                  <td class="title">2030-Ziel erreicht zu</td>
+                  <td v-html="format(indicator['progress'], 0)" />
                 </tr>
               </tbody>
             </table>
@@ -100,15 +98,13 @@
       </div>
 
       <div class="wrapper" v-if="indicator.txt2030target">
-        <h3 style="line-height: 1.5rem;" :style="{ 'color': '#' + indicator.sdg.color}">
-          {{ indicator.txt2030target }}
-        </h3>
+        <h2 class="h2-txt2030target">{{ indicator.txt2030target }}</h2>
       </div>
 
       <div class="wrapper">
         <div id="captureBarChart" class="box vis" v-if="hasCountries && countries.length">
           <h2>Wie steht Deutschland im Vergleich zu EU/OECD Ländern?</h2>
-          <div data-html2canvas-ignore class="vis-dl" style="margin-bottom: 1rem;">
+          <div data-html2canvas-ignore class="vis-dl button-container">
              <a v-if="!sortedByValue" class="btn btn-download" @click="updateBarChart()">
                <i class="icon-sort-number-up" /> Nach Wert sortieren
              </a>
@@ -126,8 +122,8 @@
             </a>
           </div>
 
-          <div data-html2canvas-ignore class="vis-dl">
-            <a id="barChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
+          <div data-html2canvas-ignore class="vis-dl" v-if="indicator.id !== '7_2'">
+            <a id="barChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
@@ -148,8 +144,8 @@
             </a>
           </div>
 
-          <div data-html2canvas-ignore class="vis-dl">
-            <a id="lineChartDownloadButton" style="margin-right: 1rem;" class="btn btn-download" :download="indicator.slug + '.png'">
+          <div data-html2canvas-ignore class="vis-dl" v-if="indicator.id !== '7_2'">
+            <a id="lineChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">
@@ -161,13 +157,13 @@
         </div>
       </div>
 
-      <div style="padding: 1rem 0 1rem 0; background-color: #EEEEEE">
+      <div class="info-wrapper">
         <div class="wrapper">
           <h2 :style="{ 'color': '#' + indicator.sdg.color}">
             Weitere Informationen zu diesem Indikator
           </h2>
         </div>
-        <div class="wrapper description" style="color: black">
+        <div class="wrapper description">
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Beschreibung</h4>
           <p>{{ indicator.txtdescription }}</p>
 
@@ -182,7 +178,15 @@
 
 
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
-          <nuxt-link to="/projekt#methode">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+          <p>
+            <nuxt-link to="/methodik">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
+          </p>
+          <div v-if="indicator.author === 'dns'">
+            &#42; Indikator-Beschreibung und Zielwert sind der
+            <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7"
+              target="_blank"
+            >Deutschen Nachhaltigkeitsstrategie 2016</a> entnommen.
+          </div>
         </div>
       </div>
 
@@ -208,18 +212,18 @@
                 </td>
               </tr>
               <tr>
-                <td class="title">Zielwert/SOLL (2030)</td>
-                <td v-html="format(indicator['target'], 1, indicator['unit'])" />
+                <td class="title">Zielwert/SOLL ({{ (indicator.id === '1_1' || indicator.id === '1_2' ) && indicator.author === 'dns' ? '2016' : '2030' }})</td>
+                <td v-html="format(indicator['target'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Aktueller Wert/IST ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unit'])" />
+                <td class="title">Aktueller Wert/IST ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
                 <td class="title">Ausgangswert Fortschrittsberechnung ({{ indicator['startYear'] }})</td>
-                <td v-html="format(indicator['start'], 1, indicator['unit'])" />
+                <td v-html="format(indicator['start'], 1, indicator['unitShort'])" />
               </tr>
               <tr v-if="indicator['license']">
-                <td class="title">Lizenz</td><td>{{ indicator['license'] }}</td>
+                <td class="title">Nutzungsbedingungen</td><td>{{ indicator['license'] }}</td>
               </tr>
               <tr v-if="indicator['indicator source']">
                 <td class="title">Indikatorquelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
@@ -245,7 +249,7 @@
           <input type="text" :value="link" />
         </div>
 
-        <div v-if="!indicator['pate']" class="description">
+        <div v-if="!indicator['pate']" class="description" id="datenpate">
           <h4>Werde Datenpate für diesen Indikator</h4>
           <div>
             Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
@@ -330,6 +334,7 @@
   import BarChart from '~/components/BarChart.js'
   import LineChart from '~/components/LineChart.js'
   import html2canvas from 'html2canvas'
+  const tinycolor = require('tinycolor2')
 
   export default {
     validate ({ params, store }) {
@@ -364,20 +369,8 @@
           labels: this.sortedByValue ? this.getCountries : this.getCountriesSortedByValue,
           datasets: [
             {
-              type: 'line',
-              fill: false,
-              borderWidth: 3,
-              data: this.getTargetForCountries,
-              pointRadius: 0,
-              borderColor: 'red',
-              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
-              pointHoverBorderColor: 'rgba(0,0,0,0)'
-            },
-            {
               label: this.indicator.unitShort,
-              backgroundColor: '#5D6D7E',
-              // strokeColor: 'rgba(220,220,220,1)',
-              // fillColor: 'rgba(220,220,220,0.5)',
+              backgroundColor: '#023753',
               data: this.sortedByValue ? this.getValues : this.getSortedValues
             }
           ]
@@ -391,7 +384,8 @@
         sortedByValue: false,
         datacollection: null,
         canvasToSRC: undefined,
-        dataURI: undefined
+        dataURI: undefined,
+        sdgColorLighter: undefined
       }
     },
     mounted: function () {
@@ -399,6 +393,8 @@
       const base = this.$router.options.base === '/' ? '' : this.$router.options.base
       this.link = window.location.origin + base + this.$route.fullPath
       this.updateBarChart()
+      const color = '#' + this.indicator.sdg.color
+      this.sdgColorLighter = tinycolor(color).darken(7).toString()
     },
     computed: {
       ...mapState([
@@ -479,20 +475,8 @@
               label: this.indicator.unitShort,
               fill: false,
               lineTension: 0,
-              backgroundColor: '#5D6D7E',
-              // strokeColor: 'rgba(220,220,220,1)',
-              // fillColor: 'rgba(220,220,220,0.5)',
+              backgroundColor: '#023753',
               data: this.getValuesForCountries
-            },
-            {
-              fill: false,
-              borderWidth: 3,
-              data: this.getTargetForTimeline,
-              pointRadius: 0,
-              borderColor: 'red',
-              pointHoverBackgroundColor: 'rgba(0,0,0,0)',
-              pointHoverBorderColor: 'rgba(0,0,0,0)',
-              spanGaps: false
             }
           ]
         }
@@ -546,12 +530,7 @@
         }
       },
       getCountries () {
-        const keys = Object.keys(this.indicator.countries)
-        let countries = []
-        keys.slice(0, keys.length - 1).map(key => {
-          countries.push(key)
-        })
-        return countries
+        return Object.keys(this.indicator.countries)
       },
       getValues () {
         const keys = Object.keys(this.indicator.countries)
@@ -602,11 +581,9 @@
         const values = keys.slice(0, keys.length - 1).map(key => {
           return [key, this.indicator.countries[key]]
         })
-        // filter and sort
+        // filter null values
         return values.filter(value => {
-          // TODO: offer negative y-axis
-          // right now negative values are cut off
-          return value[1] !== null && value[1] >= 0
+          return value[1] !== null
         }).sort((a, b) => {
           return (a[1] > b[1]) ? 1 : ((b[1] > a[1]) ? -1 : 0)
         })
@@ -696,7 +673,6 @@
 
   .description {
     h4 {
-      color: #222;
       padding-bottom: $spacing / 4;
     }
 
@@ -711,7 +687,7 @@
       td {
         width: 50%;
         padding: 0.8em 0;
-        border-bottom: 1px solid lighten($color-mute,20%);
+        border-bottom: 1px solid lighten($color-mute, 20%);
 
         &.title {
           font-weight: 600;
@@ -790,5 +766,29 @@
 
   .txtintroduction {
     font-size: 1.2rem;
+  }
+
+  .header-box {
+    border-radius: 0px;
+    border: none;
+    padding: 0.5rem 1rem 0.3rem 1.5rem !important;
+    text-shadow: none;
+  }
+
+  .button-container {
+    margin-bottom: 1rem;
+  }
+
+  .png-download {
+    margin-right: 1rem;
+  }
+
+  .info-wrapper {
+    padding: 1rem 0 1rem 0;
+    background-color: #EEEEEE;
+  }
+
+  .h2-txt2030target {
+    color: $color-default !important;
   }
 </style>

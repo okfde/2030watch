@@ -8,13 +8,11 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-
         <section class="columns columns-gutter">
           <div>
             <small class="caption">SDG {{ sdg.number }}</small>
-
             <h1>{{ sdg.labelShort }}</h1>
-            <!-- <p>{{ sdg.textIntro }}</p> -->
+            <p>{{ sdg.textIntro }}</p>
           </div>
           <div class="sdg-image">
             <img :src="image" :title="sdg.labelShort" />
@@ -33,7 +31,6 @@
                 {{ sdg.textIndicators }}
               </p>
             </div>
-
             <div class="progress-box-wrapper">
               <div class="progress-box">
                 <div :style="{ 'color': '#' + sdg.color }" class="label-progress-bar">
@@ -46,17 +43,14 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
       <div class="indicator-vis">
         <section class="indicators">
-
           <h2 class="vis-question">
             Wie nah sind wir einem nachhaltigeren Deutschland in 2030?
           </h2>
-
           <section>
             <ul class="indicator-list">
               <li ref="labelDNS">
@@ -80,12 +74,11 @@
                       <i class="icon-minus-squared" /> Nicht berechenbar
                     </span>
                   </li>
-                  <li class="legend-sm-margin" title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
+                  <li class="legend-margin" title="Der Zielwert ist unzureichend und 2030Watch schlägt einen neuen Zielwert vor.">
                     <span class="label">
                       <i class="icon-pencil-squared" /> Modifizierter Zielwert
                     </span>
                   </li>
-
                   <li>
                     <div class="legend-title">Nachhaltigkeitsstufen</div>
                   </li>
@@ -99,37 +92,26 @@
                       <i class="icon" :style="{ 'background-color': stepsColors[1] }" /> Mittel 40 % – 80 %
                     </span>
                   </li>
-                  <li class="legend-md-margin">
+                  <li class="legend-margin">
                     <span class="label" title="Indikator-Ziel zu 80 % – 100 % erreicht">
                       <i class="icon" :style="{ 'background-color': stepsColors[2] }" /> Hoch 80 % – 100 %
                     </span>
                   </li>
-
-                  <li class="label legend-supplement legend-md-margin">
+                  <li class="label legend-supplement legend-margin">
                     Mehr zu unserer Methode
-                    <nuxt-link to="/projekt#methode">
+                    <nuxt-link to="/methodik">
                       hier
                     </nuxt-link>
-                  </li>
-
-                  <li class="label legend-supplement legend-abs-positioning">
-                    &#42; Indikator-Beschreibung und Zielwert sind der
-                    <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7"
-                      target="_blank"
-                    >Deutschen Nachhaltigkeitsstrategie 2016</a>
-                    entnommen.
                   </li>
                 </ul>
               </li>
             </ul>
           </section>
-
           <section class="indicator-lines">
             <svg ref="indicatorLines">
               <path v-for="indicator in linesMod" stroke-dasharray="5, 5" :d="indicator" />
             </svg>
           </section>
-
           <section>
             <ul class="indicator-list" ref="indicatorListOKF">
               <li ref="labelOKF">
@@ -141,19 +123,18 @@
           </section>
         </section>
       </div>
-
       <div class="wrapper">
         <div class="explainer-progress">
           <h2>Wie wird der Fortschritt berechnet?</h2>
           <div>
             Der Fortschritt bezieht sich auf das definierte Ziel für das Jahr 2030.
-            Der offizielle Fortschritt wird mit einem Mittelwert von allen Indikatorenwerten
-            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch wird
-            über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
-            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren.
+            Der offizielle Fortschritt wird mit einem Mittelwert von allen offiziellen Indikatorenwerten
+            pro jeweiligem SDG berechnet. Der Fortschritt auf der Seite von 2030Watch
+            wird über den Mittelwert der jeweiligen erweiterten Indikatorenliste berechnet:
+            also alle berechenbaren offiziellen Indikatoren plus neue 2030Watch Indikatoren
+            (um Dopplungen zu vermeiden, werden Indikatoren mit modifizierten Zielwert nur einmal berechnet).
           </div>
         </div>
-
         <section class="description columns columns-gutter">
           <div>
             <hgroup>
@@ -185,7 +166,6 @@
           </div>
         </section>
       </div>
-
     </div>
   </div>
 </template>
@@ -462,7 +442,7 @@
   }
 
   .label {
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     > i {
       font-size: 1.1rem
@@ -477,7 +457,7 @@
   .legend-supplement {
     line-height: 1.2rem;
     width: 380px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .progress-box-wrapper {
@@ -507,15 +487,8 @@
     position: relative;
   }
 
-  .legend-sm-margin {
-    margin-bottom: 0.4rem;
+  .legend-margin {
+    margin-bottom: 1rem !important;
   }
 
-  .legend-md-margin {
-    margin-bottom: 0.7rem !important;
-  }
-
-  .legend-abs-positioning {
-    position: absolute;
-  }
 </style>

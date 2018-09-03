@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import BlogpostPreview from '~/pages/blog/Blogpost-Preview.vue'
+  import BlogpostPreview from '~/pages/blog/BlogpostPreview.vue'
 
   export default {
     components: {
