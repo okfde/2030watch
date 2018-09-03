@@ -101,7 +101,6 @@
     height: 2.8rem;
 
     .vis-number {
-      // position: absolute;
       text-align: center;
       width: 100%;
       font-weight: bold;
