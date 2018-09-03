@@ -1,24 +1,32 @@
 # 2030Watch
 
-## Build Setup
+
+## Local setup
 
 ``` bash
-# install dependencies
-$ npm install # Or yarn install
 
-# serve with hot reload at localhost:3010
+# Install dependencies
+$ npm install
+
+# Generate data files and move them into the data folder
+$ node data/load-data.js && mv indiNav.json sdgs.json indicators.json ./data/
+
+# Serve with hot reload at localhost:3010
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
 ```
 
-## Generate data files
+
+## Deployment
+
+### Generate the dist folder for publishing with GitHub Pages
+
+``` bash
+
+$ npm run generate:gh-pages
 
 ```
-$ node data/load-data.js
-```
+
+### Move the generated files and folders to the gh-pages branch
+
+And keep the existing CNAME file in the gh-pages branch.
