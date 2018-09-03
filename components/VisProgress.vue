@@ -79,8 +79,7 @@
         :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[0].x"
         y="0%"
-        v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)"
-      />
+      >{{ okfValue }}</text>
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
@@ -88,8 +87,7 @@
         :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[1].x"
         y="100%"
-        v-html="(vMarkerLabelsNames ? 'Offiziell: ' : '') + format(dns)"
-      />
+      >{{ dnsValue }}</text>
     </g>
     <g v-if="vLegend">
       <polyline
@@ -180,12 +178,16 @@
         legendLabeldnsHeight: 20,
         legendLabelSteps: 0,
         legendLabelDistance: 3,
-        scaleX: new Scale().domain([0, 100]).range([0, 0])
+        scaleX: new Scale().domain([0, 100]).range([0, 0]),
+        okfValue: undefined,
+        dnsValue: undefined
       }
     },
     mounted: function () {
       this.calcSizes()
       window.addEventListener('resize', this.calcSizes, false)
+      this.okfValue = (this.vMarkerLabelsNames ? '2030Watch: ' : '') + format(this.okf, 0, '%', true)
+      this.dnsValue = (this.vMarkerLabelsNames ? 'Offiziell: ' : '') + format(this.dns, 0, '%', true)
     },
     methods: {
       format: format,
