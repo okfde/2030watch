@@ -148,7 +148,6 @@
             <p v-else>
               {{ sdg.summaryDns }}
             </p>
-            <span class="process dns" v-html="format(dns)" />
           </div>
           <div>
             <hgroup>
@@ -162,6 +161,13 @@
             <p v-else>
               {{ sdg.summary2030 }}
             </p>
+          </div>
+        </section>
+        <section class="description columns columns-gutter">
+          <div>
+            <span class="process dns" v-html="format(dns)" />
+          </div>
+          <div>
             <span class="process okf" v-html="format(okf)" />
           </div>
         </section>
@@ -413,7 +419,7 @@
     }
 
     p {
-      flex: 1;
+      flex: 0 1 auto;
     }
 
     .process {
