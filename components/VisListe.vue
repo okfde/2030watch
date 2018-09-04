@@ -110,7 +110,6 @@
 
           .sdg-vis {
             margin: 0;
-            height: 100%;
           }
         }
       }
