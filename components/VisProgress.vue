@@ -231,8 +231,9 @@
         if (!this.width) {
           return [{ 'x': 0 + 'px', 'l': 'start' }, { 'x': 0 + 'px', 'l': 'start' }]
         }
-        const { markerR } = this
-        const distance = markerR / 2
+        // const { markerR } = this
+        // const distance = markerR / 2
+        const distance = 0
         let dns = this.xDNS
         let okf = this.xOKF
 
