@@ -42,8 +42,8 @@
           :x2="scaleX.map(tick) + 'px'"
           :y2="height / 2 + 5 + 'px'"
         />
-        <text font-size="12px" fill="#aaa" x="1.4%" y="70%">0%</text>
-        <text font-size="12px" fill="#aaa" x="91%" y="70%">100%</text>
+        <text font-size="12px" fill="#aaa" :x="scaleX.map(0) + 'px'" y="70%">0%</text>
+        <text font-size="12px" fill="#aaa" :x="scaleX.map(93) + 'px'" y="70%">100%</text>
       </g>
     </g>
     <line
