@@ -24,7 +24,7 @@
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
-          <h2>{{ sdg.labelLong }}</h2>
+          <h2 class="indicator-label">{{ sdg.labelLong }}</h2>
           <div class="description columns columns-gutter">
             <div>
               <p>
@@ -412,6 +412,7 @@
     flex-direction: rows;
     justify-content: space-between;
     padding: 0;
+    flex:0 1 auto;
 
     div {
       display: flex;
@@ -497,4 +498,7 @@
     margin-bottom: 1rem !important;
   }
 
+  .indicator-label {
+    flex: 0 1 auto;
+  }
 </style>
