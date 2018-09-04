@@ -337,9 +337,7 @@
     justify-content: center;
 
     .sdg-process-wrapper {
-      width: 70%;
       min-width: 400px;
-      max-height: 5rem;
 
       svg {
         width: 100%;
@@ -476,12 +474,11 @@
     padding: 25px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     margin: 0;
-    background-color: white;
-    background-color: rgba(0, 0, 0, .002);
+    background-color: rgba(0, 0, 0, .02);
   }
 
   .label-progress-bar {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     margin-left: 2rem;
     font-size: 1.1rem;
   }
