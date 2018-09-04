@@ -10,19 +10,15 @@
       <g v-if="vTickLabels" class="tickLabels">
         <text
           class="sdg-label sdg-label-tick"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
           text-anchor="start"
           :x="scaleX.map(0) + 'px'"
-          y="0"
+          y="10"
         >0%</text>
         <text
           class="sdg-label sdg-label-tick"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
           text-anchor="end"
           :x="scaleX.map(100) + 'px'"
-          y="0"
+          y="10"
         >100%</text>
       </g>
       <g class="tickLines" v-if="vTicks">
@@ -46,8 +42,8 @@
           :x2="scaleX.map(tick) + 'px'"
           :y2="height / 2 + 5 + 'px'"
         />
-        <text font-size="12px" fill="#aaa" x="1.4%" y="74%">0%</text>
-        <text font-size="12px" fill="#aaa" x="91%" y="74%">100%</text>
+        <text font-size="12px" fill="#aaa" x="1.4%" y="70%">0%</text>
+        <text font-size="12px" fill="#aaa" x="91%" y="70%">100%</text>
       </g>
     </g>
     <line
@@ -73,12 +69,10 @@
       <text
         ref="okf"
         :class="{ 'sdg-label': true, 'sdg-label-total': true, 'invert': invert }"
-        alignment-baseline="hanging"
-        dominant-baseline="hanging"
         :text-anchor="labels[0].l"
         :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[0].x"
-        y="0%"
+        y="20%"
       >{{ okfValue }}</text>
       <text
         ref="dns"
@@ -86,7 +80,7 @@
         :text-anchor="labels[1].l"
         :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[1].x"
-        y="100%"
+        y="95%"
       >{{ dnsValue }}</text>
     </g>
     <g v-if="vLegend">
