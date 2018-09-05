@@ -123,11 +123,9 @@
 
         .sdg-number {
           width: 1rem;
-          margin-right: 1rem;
-          text-align: right;
+          margin-right: 0.9rem;
           line-height: 1.35rem;
           display: inline-block;
-          // color: $color-mute;
           color: var(--color);
           font-size: 1.2rem;
         }
@@ -201,6 +199,7 @@
 
     .sdg-header-vis-mobile {
       flex: 3 !important;
+      text-align: right;
     }
 
     .sdg-header-sdgs-mobile {
