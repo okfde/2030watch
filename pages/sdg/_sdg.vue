@@ -498,4 +498,17 @@
   .indicator-label {
     flex: 0 1 auto;
   }
+
+  @media screen and (max-width: $on-palm) {
+    .sdg-process > .sdg-process-wrapper {
+      min-width: 300px;
+    }
+    .label-progress-bar {
+      margin-left: 1rem;
+    }
+    .progress-box-wrapper {
+      margin-top: 1.5rem;
+    }
+  }
+
 </style>
