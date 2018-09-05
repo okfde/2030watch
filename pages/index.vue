@@ -115,6 +115,7 @@
     display: inline;
     font-size: 1.6rem;
     font-weight: normal;
+    line-height: 1.6;
   }
 
   h1 {
