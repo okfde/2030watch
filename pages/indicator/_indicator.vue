@@ -791,4 +791,8 @@
   .h2-txt2030target {
     color: $color-default !important;
   }
+
+  .inpage-header {
+    padding-bottom: $spacing;
+  }
 </style>
