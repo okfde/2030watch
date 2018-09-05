@@ -748,7 +748,7 @@
   }
 
   .indicator-navigation {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .navigation-backwards {

@@ -365,7 +365,7 @@
   }
 
   .indicators {
-    margin: 0 auto;
+    margin: 2rem auto;
 
     section {
       padding: $spacing / 2 $spacing;
@@ -485,6 +485,7 @@
 
   .explainer-progress {
     margin-bottom: 1.3rem;
+    margin-top: 3rem;
   }
 
   .legend-rel-positioning {

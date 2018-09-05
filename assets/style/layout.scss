@@ -129,7 +129,7 @@
 
 .page-container {
   & > * {
-    padding: $spacing 0;
+    padding: $spacing 0 $spacing / 2 0;
   }
 
   & > .inpage-nav, & > .content {
