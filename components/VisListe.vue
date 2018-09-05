@@ -2,9 +2,10 @@
   <ul class="vis-liste">
     <li class="sdg-item" style="margin:0;">
       <div class="sdg-header sdg-header-label">
-        <span class="sdg-header-sdgs">Sustainable Development Goals</span>
+        <span class="sdg-header-sdgs sdg-header-sdgs-desktop">Sustainable Development Goals</span>
+        <span class="sdg-header-sdgs sdg-header-sdgs-mobile">SDGs</span>
       </div>
-      <div class="sdg-header sdg-header-vis columns">
+      <div class="sdg-header sdg-header-vis sdg-header-vis-mobile columns">
         <section class="sdg-header-sdgs">
           SDG-Ziel für 2030 erreicht zu:
         </section>
@@ -187,6 +188,24 @@
   .sdg-header-sdgs {
     font-weight: bold;
     color: $color-2030;
+  }
+
+  .sdg-header-sdgs-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .sdg-header-sdgs-desktop {
+      display: none;
+    }
+
+    .sdg-header-vis-mobile {
+      flex: 3 !important;
+    }
+
+    .sdg-header-sdgs-mobile {
+      display: inline;
+    }
   }
 
 </style>
