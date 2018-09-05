@@ -83,8 +83,8 @@
   }
 
   blockquote:before {
-    font-size: 180px;
-    line-height: 0.9;
+    font-size: 11rem;;
+    line-height: 0.85;
     left: 0;
     content: open-quote;
     font-family: serif;
@@ -127,5 +127,19 @@
 
   .okf {
     font-weight: bold;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .blockquote-wrapper {
+      max-width: 100vw;
+    }
+
+    blockquote:before {
+      font-size: 8rem;
+    }
+
+    .large-quote {
+      padding-left: 70px;
+    }
   }
 </style>
