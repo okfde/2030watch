@@ -57,9 +57,9 @@
   }
 
   .content {
-    margin-left: 18px;
     transition: height .5s;
     height: 0;
     overflow: hidden;
+    margin-top: 1rem;
   }
 </style>
