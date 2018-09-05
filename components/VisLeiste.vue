@@ -36,6 +36,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~@/assets/style/variables';
   .sdg-leiste {
     display: flex;
     height: 25px;
@@ -96,6 +97,12 @@
         opacity: 1;
         transition-duration: 1.5s; // Duration for text appearance
       }
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .sdg-band-item {
+      font-size: 0.5rem;
     }
   }
 </style>

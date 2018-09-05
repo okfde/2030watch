@@ -10,20 +10,16 @@
       <g v-if="vTickLabels" class="tickLabels">
         <text
           class="sdg-label sdg-label-tick"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
           text-anchor="start"
           :x="scaleX.map(0) + 'px'"
-          y="0"
-          v-html="format(0)" />
+          y="10"
+        >0%</text>
         <text
           class="sdg-label sdg-label-tick"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
           text-anchor="end"
           :x="scaleX.map(100) + 'px'"
-          y="0"
-          v-html="format(100)" />
+          y="10"
+        >100%</text>
       </g>
       <g class="tickLines" v-if="vTicks">
         <line
@@ -46,8 +42,8 @@
           :x2="scaleX.map(tick) + 'px'"
           :y2="height / 2 + 5 + 'px'"
         />
-        <text font-size="12px" fill="#aaa" x="1.4%" y="74%">0%</text>
-        <text font-size="12px" fill="#aaa" x="91%" y="74%">100%</text>
+        <text font-size="12px" fill="#aaa" :x="scaleX.map(0) + 'px'" y="70%">0%</text>
+        <text font-size="12px" fill="#aaa" :x="scaleX.map(93) + 'px'" y="70%">100%</text>
       </g>
     </g>
     <line
@@ -73,61 +69,21 @@
       <text
         ref="okf"
         :class="{ 'sdg-label': true, 'sdg-label-total': true, 'invert': invert }"
-        alignment-baseline="hanging"
-        dominant-baseline="hanging"
         :text-anchor="labels[0].l"
-        :style="{ 'font-size': compact ? '0.9rem' : '1.1rem' }"
+        :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[0].x"
-        y="0%"
-        v-html="(vMarkerLabelsNames ? '2030Watch: ' : '') + format(okf)"
-      />
+        y="20%"
+      >{{ okfValue }}</text>
       <text
         ref="dns"
         :class="{ 'sdg-label': true, 'sdg-label-dns': true, 'invert': invert }"
         :text-anchor="labels[1].l"
         :style="{ 'font-size': compact ? '0.8rem' : '1.1rem' }"
         :x="labels[1].x"
-        y="100%"
-        v-html="(vMarkerLabelsNames ? 'Offiziell: ' : '') + format(dns)"
-      />
+        y="95%"
+      >{{ dnsValue }}</text>
     </g>
     <g v-if="vLegend">
-      <!-- <g class="tickLinesLegend" v-if="vTicks">
-        <text
-          class="ticksLegendLabels"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
-          text-anchor="start"
-          :style="{ fill: stepsColors[0] }"
-          :x="scaleX.map(0) + 'px'"
-          y="0%"
-          v-html="format(0)" />
-        <text
-          class="ticksLegendLabels"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
-          text-anchor="middle"
-          :style="{ fill: '#a5a49f' }"
-          :x="scaleX.map(50) + 'px'"
-          y="0%">Nachhaltigkeit</text>
-        <text
-          class="ticksLegendLabels"
-          alignment-baseline="hanging"
-          dominant-baseline="hanging"
-          text-anchor="end"
-          :style="{ fill: stepsColors[steps - 1] }"
-          :x="scaleX.map(100) + 'px'"
-          y="0%"
-          v-html="format(100)" />
-        <line
-          v-for="tick in steps"
-          class="tickLegend"
-          :style="{ 'stroke': stepsColors[tick - 1] }"
-          :x1="scaleX.map((tick - 1) * (100 / steps)) + 'px'"
-          :y1="legendLabeldnsHeight"
-          :x2="scaleX.map((tick) * (100 / steps)) + 'px'"
-          :y2="legendLabeldnsHeight" />
-      </g> -->
       <polyline
         class="legendLine"
         :points="`${xOKF},${height - legendLabeldnsHeight} ${xOKF},${height - legendLabeldnsHeight - legendLabelSteps * 2}`" />
@@ -216,12 +172,16 @@
         legendLabeldnsHeight: 20,
         legendLabelSteps: 0,
         legendLabelDistance: 3,
-        scaleX: new Scale().domain([0, 100]).range([0, 0])
+        scaleX: new Scale().domain([0, 100]).range([0, 0]),
+        okfValue: undefined,
+        dnsValue: undefined
       }
     },
     mounted: function () {
       this.calcSizes()
       window.addEventListener('resize', this.calcSizes, false)
+      this.okfValue = (this.vMarkerLabelsNames ? '2030Watch: ' : '') + format(this.okf, 0, '%', true)
+      this.dnsValue = (this.vMarkerLabelsNames ? 'Offiziell: ' : '') + format(this.dns, 0, '%', true)
     },
     methods: {
       format: format,
@@ -271,8 +231,9 @@
         if (!this.width) {
           return [{ 'x': 0 + 'px', 'l': 'start' }, { 'x': 0 + 'px', 'l': 'start' }]
         }
-        const { markerR } = this
-        const distance = markerR / 2
+        // const { markerR } = this
+        // const distance = markerR / 2
+        const distance = 0
         let dns = this.xDNS
         let okf = this.xOKF
 

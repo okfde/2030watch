@@ -97,12 +97,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin: 0.5rem 1.8rem 0;
     margin-bottom: 2rem;
     height: 2.8rem;
 
     .vis-number {
-      position: absolute;
       text-align: center;
       width: 100%;
       font-weight: bold;

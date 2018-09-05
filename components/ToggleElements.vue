@@ -22,7 +22,7 @@
       </div>
       <transition name="fade">
         <div class="card" v-show="sdg.isActive">
-          <div class="card-content">
+          <div class="card-content card-content-mobile">
             <h6 class="dns">Offizielle Indikatoren:</h6>
             <div v-for="elem in sdg.ind.dns" class="indicator-link">
               <nuxt-link :to="'indicator/' + elem.slug" class="gray-indicators">
@@ -30,7 +30,7 @@
               </nuxt-link>
             </div>
           </div>
-          <div class="card-content">
+          <div class="card-content card-content-okf">
             <h6 class="okf">2030Watch Indikatoren:</h6>
             <div v-for="elem in sdg.ind.okf" class="indicator-link">
               <nuxt-link :to="'indicator/' + elem.slug" class="gray-indicators">
@@ -83,15 +83,18 @@
   @import '~@/assets/style/variables';
 
   .card {
-    padding: 1.3rem;
+    padding: 1.9rem;
     flex: 1;
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
   }
 
   .card-content {
     flex: 1;
+  }
+
+  .card-content-okf {
+    margin-left: 0.8rem;
   }
 
   .indicator-link {
@@ -124,4 +127,18 @@
   .gray-indicators {
     color: #757575;
   }
+
+  @media screen and (max-width: $on-palm) {
+    .card {
+      flex-direction: column;
+      padding: 0 0 0 1.5rem;
+    }
+    .card-content-mobile {
+      margin-bottom: 1.2rem;
+    }
+    .card-content-okf {
+      margin-left: 0;
+    }
+  }
+
 </style>

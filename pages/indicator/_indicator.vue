@@ -748,7 +748,7 @@
   }
 
   .indicator-navigation {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .navigation-backwards {
@@ -790,5 +790,9 @@
 
   .h2-txt2030target {
     color: $color-default !important;
+  }
+
+  .inpage-header {
+    padding-bottom: $spacing;
   }
 </style>

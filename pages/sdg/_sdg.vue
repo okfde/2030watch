@@ -24,7 +24,7 @@
       <VisLeiste :current="sdg.slug" />
       <div class="wrapper">
         <div class="indicator-overview columns columns-rows">
-          <h2>{{ sdg.labelLong }}</h2>
+          <h2 class="indicator-label">{{ sdg.labelLong }}</h2>
           <div class="description columns columns-gutter">
             <div>
               <p>
@@ -148,7 +148,6 @@
             <p v-else>
               {{ sdg.summaryDns }}
             </p>
-            <span class="process dns" v-html="format(dns)" />
           </div>
           <div>
             <hgroup>
@@ -162,6 +161,13 @@
             <p v-else>
               {{ sdg.summary2030 }}
             </p>
+          </div>
+        </section>
+        <section class="description columns columns-gutter">
+          <div>
+            <span class="process dns" v-html="format(dns)" />
+          </div>
+          <div>
             <span class="process okf" v-html="format(okf)" />
           </div>
         </section>
@@ -331,9 +337,7 @@
     justify-content: center;
 
     .sdg-process-wrapper {
-      width: 70%;
       min-width: 400px;
-      max-height: 5rem;
 
       svg {
         width: 100%;
@@ -361,7 +365,7 @@
   }
 
   .indicators {
-    margin: 0 auto;
+    margin: 2rem auto;
 
     section {
       padding: $spacing / 2 $spacing;
@@ -406,6 +410,7 @@
     flex-direction: rows;
     justify-content: space-between;
     padding: 0;
+    flex:0 1 auto;
 
     div {
       display: flex;
@@ -413,7 +418,7 @@
     }
 
     p {
-      flex: 1;
+      flex: 0 1 auto;
     }
 
     .process {
@@ -469,18 +474,18 @@
     padding: 25px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
     margin: 0;
-    background-color: white;
-    background-color: rgba(0, 0, 0, .002);
+    background-color: rgba(0, 0, 0, .02);
   }
 
   .label-progress-bar {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     margin-left: 2rem;
     font-size: 1.1rem;
   }
 
   .explainer-progress {
     margin-bottom: 1.3rem;
+    margin-top: 3rem;
   }
 
   .legend-rel-positioning {
@@ -489,6 +494,22 @@
 
   .legend-margin {
     margin-bottom: 1rem !important;
+  }
+
+  .indicator-label {
+    flex: 0 1 auto;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .sdg-process > .sdg-process-wrapper {
+      min-width: 300px;
+    }
+    .label-progress-bar {
+      margin-left: 1rem;
+    }
+    .progress-box-wrapper {
+      margin-top: 1.5rem;
+    }
   }
 
 </style>
