@@ -11,8 +11,3 @@ npm-debug.log
 dist
 
 .DS_Store
-
-# data files
-data/indicators.json
-data/indiNav.json
-data/sdgs.json
