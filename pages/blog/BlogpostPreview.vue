@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="blog-post">
       <div class="post-teaser">
         <span class="caption">31. August 2018</span>
@@ -80,16 +79,33 @@ export default {
 
   .preview-image {
     max-width: 380px;
-    // TODO
-    @media (max-width: 900px) {
-      max-width: 200px;
-    }
-    @media (max-width: 600px) {
-      display: none
-    }
   }
 
   .blog-post-title {
     margin-bottom: 0.7rem;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .blog-post {
+      flex-direction: column;
+    }
+
+    .post-img {
+      order: 2;
+    }
+
+    .post-teaser {
+      order: 1;
+    }
+
+    .preview-image {
+      max-width: 300px;
+    }
+
+    .blog-post {
+      & > * {
+        padding: $spacing / 2 0;
+      }
+    }
   }
 </style>
