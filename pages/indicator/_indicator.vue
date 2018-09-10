@@ -9,7 +9,6 @@
     </nav>
     <header class="inpage-header">
       <div class="wrapper">
-
         <div class="columns columns-gutter">
           <div>
             <small class="caption">SDG {{ indicator.sdg.sdg }} – {{ indicator.sdg.label }}</small>
@@ -192,8 +191,8 @@
 
       <div class="wrapper columns columns-gutter">
         <div class="description">
-          <h4 :style="{ 'color': '#' + indicator.sdg.color}">Indikator-Details</h4>
-          <table class="box">
+          <h4 :style="{ 'color': '#' + indicator.sdg.color}" class="h4-title">Indikator-Details</h4>
+          <table class="box table-fixed">
             <tbody>
               <tr>
                 <td class="title">Kategorie</td>
@@ -212,21 +211,24 @@
                 </td>
               </tr>
               <tr>
-                <td class="title">Zielwert/SOLL ({{ (indicator.id === '1_1' || indicator.id === '1_2' ) && indicator.author === 'dns' ? '2016' : '2030' }})</td>
+                <td class="title">Zielwert/SOLL<br />({{ (indicator.id === '1_1' || indicator.id === '1_2' ) && indicator.author === 'dns' ? '2016' : '2030' }})</td>
                 <td v-html="format(indicator['target'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Aktueller Wert/IST ({{ indicator['currentYear'] }})</td><td v-html="format(indicator['current'], 1, indicator['unitShort'])" />
+                <td class="title">Aktueller Wert/IST<br />({{ indicator['currentYear'] }})</td>
+                <td v-html="format(indicator['current'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Ausgangswert Fortschrittsberechnung ({{ indicator['startYear'] }})</td>
+                <td class="title">Ausgangswert Fortschrittsberechnung<br />({{ indicator['startYear'] }})</td>
                 <td v-html="format(indicator['start'], 1, indicator['unitShort'])" />
               </tr>
               <tr v-if="indicator['license']">
-                <td class="title">Nutzungsbedingungen</td><td>{{ indicator['license'] }}</td>
+                <td class="title">Nutzungsbedingungen</td>
+                <td class="table-fixed-hidden-overflow" :title="indicator['license']">{{ indicator['license'] }}</td>
               </tr>
               <tr v-if="indicator['indicator source']">
-                <td class="title">Indikatorquelle</td><td>{{ indicator['indicator source'] || '—'  }}</td>
+                <td class="title">Indikatorquelle</td>
+                <td>{{ indicator['indicator source'] || '—'  }}</td>
               </tr>
               <tr v-if="indicator['data source']">
                 <td class="title">Datenquelle</td>
@@ -241,16 +243,10 @@
               </tr>
             </tbody>
           </table>
-
-          <h4 class="caption">Diesen Indikator teilen</h4>
-          <a title="Bei Facebook teilen" target="_blank" :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-official" /></a>
-          <a title="Bei Twitter teilen" target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
-          <a title="Per E-Mail teilen" :href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
-          <input type="text" :value="link" />
         </div>
 
         <div v-if="!indicator['pate']" class="description" id="datenpate">
-          <h4>Werde Datenpate für diesen Indikator</h4>
+          <h4 class="h4-title">Werde Datenpate für diesen Indikator</h4>
           <div>
             Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
             Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für
@@ -262,7 +258,7 @@
         </div>
 
         <div v-if="indicator['pate'] && indicator['pateUrl'] && indicator['pateLogo']" class="description">
-          <h4>Datenpate</h4>
+          <h4 class="h4-title">Datenpate</h4>
           <div class="pate-logo">
             <a :href="indicator['pateUrl']" target="_blank">
               <img :src="require(`@/static/img/datenpaten/${indicator['pateLogo']}`)">
@@ -278,7 +274,17 @@
             </a>
           </div>
         </div>
+      </div>
 
+      <div class="wrapper columns columns-gutter sharing">
+        <div class="description">
+          <h4 class="caption">Diesen Indikator teilen</h4>
+          <a title="Bei Facebook teilen" target="_blank" :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-official" /></a>
+          <a title="Bei Twitter teilen" target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
+          <a title="Per E-Mail teilen" :href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
+          <input type="text" :value="link" />
+        </div>
+        <div></div>
       </div>
 
       <div class="indicator-navigation">
@@ -685,8 +691,7 @@
       margin-bottom: $spacing;
 
       td {
-        width: 50%;
-        padding: 0.8em 0;
+        padding: 0.8em 0.2rem;
         border-bottom: 1px solid lighten($color-mute, 20%);
 
         &.title {
@@ -725,8 +730,6 @@
     }
 
     .vis-title {
-      // text-align: center;
-      // padding: $spacing / 2;
       padding: 0 0 0 $spacing / 2;
       font-weight: 600;
     }
@@ -740,7 +743,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
   }
 
   .indicator-icon {
@@ -794,5 +796,48 @@
 
   .inpage-header {
     padding-bottom: $spacing;
+  }
+
+  .h4-title {
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .txtintroduction {
+      margin-bottom: 2rem;
+    }
+
+    .box {
+      padding: 1rem;
+    }
+
+    .png-download {
+      margin-right: 0rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .sharing {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .description table {
+      padding: 1rem;
+    }
+
+    .indicator-icon {
+      margin-left: 0;
+    }
+  }
+
+  .table-fixed {
+    table-layout: fixed;
+  }
+
+  .table-fixed-hidden-overflow  {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 </style>
