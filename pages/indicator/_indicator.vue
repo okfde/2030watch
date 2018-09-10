@@ -506,7 +506,7 @@
             xAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'Länder'
+                labelString: 'Jahre'
               },
               ticks: {
                 autoSkip: false
