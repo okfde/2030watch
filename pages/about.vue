@@ -88,13 +88,13 @@
                 Global gGmbH und dem Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung wieder.
               </p>
             </div>
-            <div class="section-img">
+            <div class="section-img mobile-logos">
               <img src="../assets/img/sponsors/BrotfuerdieWelt.svg"
                 alt="Logo von Brot für die Welt"
                 width="150px"
               >
             </div>
-            <div class="section-img">
+            <div class="section-img mobile-logos">
               <img src="../assets/img/sponsors/LEZ.png"
                 alt="Logo der Landesstelle für Entwicklungszusammenarbeit"
                 width="250px"
@@ -107,7 +107,7 @@
       <section>
         <div class="wrapper">
           <h2>Finanzberichte</h2>
-          <div class="section-wrapper">
+          <div class="section-wrapper section-wrapper-financial-report">
             <div class="section-text">
               <p>
                 Coming soon
@@ -217,5 +217,23 @@
 
   .img-logos {
     width: 15rem;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .content .section-wrapper {
+      flex-direction: column;
+    }
+
+    .img-logos, .mobile-logos {
+      margin-top: 2.5rem;
+    }
+
+    .section-wrapper-sponsors {
+      align-items: center;
+    }
+
+    .section-wrapper-financial-report {
+      flex-direction: unset !important;
+    }
   }
 </style>
