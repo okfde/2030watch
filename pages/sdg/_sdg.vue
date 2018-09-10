@@ -142,12 +142,17 @@
                 Deutsche Nachhaltigkeitsstrategie
               </h3>
             </hgroup>
-            <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
-              coming soon
-            </p>
-            <p v-else>
-              {{ sdg.summaryDns }}
-            </p>
+            <div ref="summarydns" class="summarydns">
+              <p v-if="sdg.summaryDns === 'coming soon' || sdg.summaryDns === ''">
+                coming soon
+              </p>
+              <p v-else>
+                {{ sdg.summaryDns }}
+              </p>
+            </div>
+            <div>
+              <span class="process dns" v-html="format(dns)" />
+            </div>
           </div>
           <div>
             <hgroup>
@@ -155,20 +160,17 @@
                 2030Watch
               </h3>
             </hgroup>
-            <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
-              coming soon
-            </p>
-            <p v-else>
-              {{ sdg.summary2030 }}
-            </p>
-          </div>
-        </section>
-        <section class="description columns columns-gutter">
-          <div>
-            <span class="process dns" v-html="format(dns)" />
-          </div>
-          <div>
-            <span class="process okf" v-html="format(okf)" />
+            <div ref="summaryokf" class="summaryokf">
+              <p v-if="sdg.summary2030 === 'coming soon' || sdg.summary2030 === ''">
+                coming soon
+              </p>
+              <p v-else>
+                {{ sdg.summary2030 }}
+              </p>
+            </div>
+            <div>
+              <span class="process okf" v-html="format(okf)" />
+            </div>
           </div>
         </section>
       </div>
@@ -212,6 +214,11 @@
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
       this.$refs.labelOKF.style.width = marginLeft + 'px'
       this.$refs.labelDNS.style.width = marginLeft + 'px'
+      if (screen.width > 600) {
+        const heightsummary = Math.max(this.$refs.summaryokf.getBoundingClientRect().height, this.$refs.summarydns.getBoundingClientRect().height)
+        this.$refs.summaryokf.style.height = heightsummary + 'px'
+        this.$refs.summarydns.style.height = heightsummary + 'px'
+      }
     },
     components: {
       VisLeiste,
@@ -504,12 +511,21 @@
     .sdg-process > .sdg-process-wrapper {
       min-width: 300px;
     }
+
     .label-progress-bar {
       margin-left: 1rem;
     }
+
     .progress-box-wrapper {
       margin-top: 1.5rem;
     }
-  }
 
+    .summarydns {
+      height: auto;
+    }
+
+    .summaryokf {
+      height: unset;
+    }
+  }
 </style>
