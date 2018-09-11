@@ -77,13 +77,16 @@
       return {
         title: 'Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich? | Blogpost | 2030Watch',
         meta: [
-          { hid: 'description', name: 'description', content: 'Blogpost' }
+          { hid: 'description', name: 'description', content: 'Blogpost' },
+          { hid: 'og-image', property: 'og:image', content: window.location.origin + this.base + this.socialImage },
+          { hid: 'og-url', property: 'og:url', content: this.link }
         ]
       }
     },
     data: function () {
       return {
-        link: ''
+        link: '',
+        socialImage: 'img/lena-bell-68534-unsplash.jpg'
       }
     },
     mounted: function () {

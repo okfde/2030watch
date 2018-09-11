@@ -279,9 +279,9 @@
       <div class="wrapper columns columns-gutter sharing">
         <div class="description">
           <h4 class="caption">Diesen Indikator teilen</h4>
-          <a title="Bei Facebook teilen" target="_blank" :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-official" /></a>
-          <a title="Bei Twitter teilen" target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
           <a title="Per E-Mail teilen" :href="'mailto:?subject=' + encodeURIComponent(indicator.label) + '&body=' + encodeURIComponent(link)"><i class="icon-mail" /></a>
+          <a title="Bei Twitter teilen" target="_blank" :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(indicator.label)"><i class="icon-twitter" /></a>
+          <a title="Bei Facebook teilen" target="_blank" :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)"><i class="icon-facebook-official" /></a>
           <input type="text" :value="link" />
         </div>
         <div></div>
@@ -351,7 +351,8 @@
         title: this.indicator.label || 'Indicator',
         titleTemplate: '%s | 2030Watch',
         meta: [
-          { hid: 'description', name: 'description', content: this.indicator.label || 'Indicator' }
+          { hid: 'description', name: 'description', content: this.indicator.label || 'Indicator' },
+          { hid: 'og-description', property: 'og:description', content: this.indicator.txtintroduction }
         ]
       }
     },
