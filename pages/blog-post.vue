@@ -133,8 +133,8 @@
         title: 'Gleise auf Nachhaltigkeit umstellen – wie weit ist der Weg eigentlich noch? | Blogpost | 2030Watch',
         meta: [
           { hid: 'description', name: 'description', content: 'Blogpost' },
-          { hid: 'og-image', property: 'og:image', content: window.location.origin + this.base + this.socialImage },
-          { hid: 'og-url', property: 'og:url', content: this.link }
+          { hid: 'og:image', property: 'og:image', content: window.location.origin + this.base + this.socialImage },
+          { hid: 'og:url', property: 'og:url', content: this.link }
         ]
       }
     },
