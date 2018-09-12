@@ -224,7 +224,7 @@
               </tr>
               <tr v-if="indicator['license']">
                 <td class="title">Nutzungsbedingungen</td>
-                <td class="table-fixed-hidden-overflow" :title="indicator['license']">{{ indicator['license'] }}</td>
+                <td class="td-break-urls" :title="indicator['license']">{{ indicator['license'] }}</td>
               </tr>
               <tr v-if="indicator['indicator source']">
                 <td class="title">Indikatorquelle</td>
@@ -803,6 +803,10 @@
     margin-bottom: 0.5rem;
   }
 
+  .sharing {
+    margin-bottom: 3rem !important;
+  }
+
   @media screen and (max-width: $on-palm) {
     .txtintroduction {
       margin-bottom: 2rem;
@@ -836,10 +840,9 @@
     table-layout: fixed;
   }
 
-  .table-fixed-hidden-overflow  {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  .td-break-urls  {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   .description-datenpate {
