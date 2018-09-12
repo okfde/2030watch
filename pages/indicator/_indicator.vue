@@ -219,7 +219,7 @@
                 <td v-html="format(indicator['current'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Ausgangswert Fortschrittsberechnung<br />({{ indicator['startYear'] }})</td>
+                <td class="title">Ausgangswert Fortschrittsberechnung<br /><span v-if="indicator['startYear']">({{ indicator['startYear'] }})</span></td>
                 <td v-html="format(indicator['start'], 1, indicator['unitShort'])" />
               </tr>
               <tr v-if="indicator['license']">
