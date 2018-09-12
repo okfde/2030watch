@@ -239,26 +239,26 @@
                 </td>
               </tr>
               <tr v-if="indicator['pate']">
-                <td class="title">Datenpate</td><td>{{ indicator['pate'] }}</td>
+                <td class="title">Datenpatenschaft</td><td>{{ indicator['pate'] }}</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div v-if="!indicator['pate']" class="description" id="datenpate">
-          <h4 class="h4-title">Werde Datenpate für diesen Indikator</h4>
+          <h4 class="h4-title">Werde Datenpate/Datenpatin für diesen Indikator</h4>
           <div>
-            Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben.
+            Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten oder eine Datenpatin zu haben.
             Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für
             ein Unterziel für sinnvoll halten. Sie legen den Zielwert fest, der bis 2030
             erreicht werden sollte. Darüber hinaus unterstützen sie das Projekt in der
-            Datenbereitstellung. Bei Interesse, Datenpate zu werden, wende dich bitte an
+            Datenbereitstellung. Bei Interesse, Datenpatin oder Datenpate zu werden, wende dich bitte an
             <a href="mailto:2030-watch@okfn.de">2030-watch@okfn.de</a>.
           </div>
         </div>
 
-        <div v-if="indicator['pate'] && indicator['pateUrl'] && indicator['pateLogo']" class="description">
-          <h4 class="h4-title">Datenpate</h4>
+        <div v-if="indicator['pate'] && indicator['pateUrl'] && indicator['pateLogo']" class="description description-datenpate">
+          <h4 class="h4-title">Datenpate/Datenpatin</h4>
           <div class="pate-logo">
             <a :href="indicator['pateUrl']" target="_blank">
               <img :src="require(`@/static/img/datenpaten/${indicator['pateLogo']}`)">
@@ -840,5 +840,10 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+
+  .description-datenpate {
+    display: flex;
+    flex-direction: column;
   }
 </style>
