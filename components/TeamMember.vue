@@ -32,7 +32,6 @@
     align-items: center;
     width: 50%;
     padding-bottom: $spacing * 2;
-    padding-left: $spacing * 2;
 
     .avatar {
       margin-right: 20px;
@@ -64,6 +63,13 @@
           margin-right: 8px;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    .team-member {
+      width: 100%;
+      padding-bottom: $spacing * 1.5;
     }
   }
 </style>

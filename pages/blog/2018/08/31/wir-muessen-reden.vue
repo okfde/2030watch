@@ -154,17 +154,37 @@
 
   .blogpost-image {
     max-width: 400px;
-
-    // TODO
-    @media (max-width: 900px) {
-      max-width: 300px;
-    }
-    @media (max-width: 700px) {
-      display: none
-    }
   }
 
   h2 {
     font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: $on-laptop) {
+    .blogpost-image {
+      display: none;
+    }
+
+    .blog-header {
+      height: auto;
+      position: inherit;
+    }
+
+    .blog-header .blog-image {
+      flex: none;
+    }
+
+    .blog-header {
+      .blog-title {
+        background-color: inherit;
+        .title-wrapper {
+          width: 80%;
+          .back-btn {
+            position: inherit;
+            width: inherit;
+          }
+        }
+      }
+    }
   }
 </style>
