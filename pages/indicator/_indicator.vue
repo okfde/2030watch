@@ -60,8 +60,8 @@
     <div class="content">
       <VisLeiste :current="indicator.sdg.slug" />
 
-      <div class="wrapper indicator-navigation-top">
-        <div class="indicator-navigation">
+      <div class="wrapper">
+        <div class="indicator-navigation indicator-navigation-top">
           <span v-if="getCurrentIndicatorCounter !== 0">
             <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
             :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
@@ -825,11 +825,7 @@
     }
 
     .indicator-navigation-top {
-      margin-bottom: 1.5rem;
-    }
-
-    .info-wrapper {
-      padding: 0;
+      margin-bottom: 2rem;
     }
   }
 

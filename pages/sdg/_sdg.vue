@@ -507,6 +507,12 @@
     flex: 0 1 auto;
   }
 
+  @media screen and (max-width: $on-laptop) {
+    .progress-box-wrapper {
+      margin-top: 1.5rem;
+    }
+  }
+
   @media screen and (max-width: $on-palm) {
     .sdg-process > .sdg-process-wrapper {
       min-width: 300px;
