@@ -59,41 +59,42 @@
 
     <div class="content">
       <VisLeiste :current="indicator.sdg.slug" />
-      <div class="indicator-navigation">
-        <span class="navigation-backwards">
+
+      <div class="wrapper">
+        <div class="indicator-navigation">
           <span v-if="getCurrentIndicatorCounter !== 0">
             <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
-             :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
-             :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter - 1].sdg + ' – '
-              + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
-              + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+            :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
+            :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter - 1].sdg + ' – '
+            + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
+            + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
             >
-              <span class="vis-dl">
-                <i class="icon-angle-left" />
-                <span>
-                  {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
-                </span>
+            <span class="vis-dl">
+              <i class="icon-angle-left" />
+              <span>
+                {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
               </span>
-            </nuxt-link>
-          </span>
+            </span>
+          </nuxt-link>
         </span>
-        <span class="navigation-forwards">
-          <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
-            <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
-              :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter + 1].color }"
-              :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter + 1].sdg + ' – '
-                + this.indiNav[getCurrentIndicatorCounter + 1].label + ' – '
-                + (this.indiNav[getCurrentIndicatorCounter + 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
-            >
-              <span class="vis-dl">
-                <span>
-                  {{ this.indiNav[getCurrentIndicatorCounter + 1].label }}
+          <span class="navigation-forwards">
+            <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
+              <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
+                :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter + 1].color }"
+                :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter + 1].sdg + ' – '
+                  + this.indiNav[getCurrentIndicatorCounter + 1].label + ' – '
+                  + (this.indiNav[getCurrentIndicatorCounter + 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+              >
+                <span class="vis-dl">
+                  <span>
+                    {{ this.indiNav[getCurrentIndicatorCounter + 1].label }}
+                  </span>
+                  <i class="icon-angle-right" />
                 </span>
-                <i class="icon-angle-right" />
-              </span>
-            </nuxt-link>
+              </nuxt-link>
+            </span>
           </span>
-        </span>
+        </div>
       </div>
 
       <div class="wrapper" v-if="indicator.txt2030target">
@@ -122,7 +123,7 @@
           </div>
 
           <div data-html2canvas-ignore class="vis-dl" v-if="indicator.id !== '7_2'">
-            <a id="barChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
+            <a id="barChartDownloadButton" class="btn btn-download png-download mobile-invisible" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="countriesDownload" :download="indicator.slug + '-countries.csv'">
@@ -144,7 +145,7 @@
           </div>
 
           <div data-html2canvas-ignore class="vis-dl" v-if="indicator.id !== '7_2'">
-            <a id="lineChartDownloadButton" class="btn btn-download png-download" :download="indicator.slug + '.png'">
+            <a id="lineChartDownloadButton" class="btn btn-download png-download mobile-invisible" :download="indicator.slug + '.png'">
               <i class="icon-file-image" /> PNG herunterladen
             </a>
             <a class="btn btn-download" :href="timelineDownload" :download="indicator.slug + '-timeline.csv'">
@@ -215,15 +216,15 @@
                 <td v-html="format(indicator['target'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Aktueller Wert/IST<br />({{ indicator['currentYear'] }})</td>
+                <td class="title">Aktueller Wert/&shy;IST<br />({{ indicator['currentYear'] }})</td>
                 <td v-html="format(indicator['current'], 1, indicator['unitShort'])" />
               </tr>
               <tr>
-                <td class="title">Ausgangswert Fortschrittsberechnung<br /><span v-if="indicator['startYear']">({{ indicator['startYear'] }})</span></td>
+                <td class="title">Ausgangswert Fortschritts&shy;berechnung<br /><span v-if="indicator['startYear']">({{ indicator['startYear'] }})</span></td>
                 <td v-html="format(indicator['start'], 1, indicator['unitShort'])" />
               </tr>
               <tr v-if="indicator['license']">
-                <td class="title">Nutzungsbedingungen</td>
+                <td class="title">Nutzungs&shy;bedingungen</td>
                 <td class="td-break-urls" :title="indicator['license']">{{ indicator['license'] }}</td>
               </tr>
               <tr v-if="indicator['indicator source']">
@@ -287,43 +288,42 @@
         <div></div>
       </div>
 
-      <div class="indicator-navigation">
-        <span class="navigation-backwards">
+      <div class="wrapper">
+        <div class="indicator-navigation">
           <span v-if="getCurrentIndicatorCounter !== 0">
             <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
-             :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
-             :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter - 1].sdg + ' – '
-              + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
-              + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+            :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter - 1].color }"
+            :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter - 1].sdg + ' – '
+            + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
+            + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
             >
-              <span class="vis-dl">
-                <i class="icon-angle-left" />
-                <span>
-                  {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
-                </span>
+            <span class="vis-dl">
+              <i class="icon-angle-left" />
+              <span>
+                {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
               </span>
-            </nuxt-link>
-          </span>
+            </span>
+          </nuxt-link>
         </span>
-        <span class="navigation-forwards">
-          <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
-            <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
-              :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter + 1].color }"
-              :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter + 1].sdg + ' – '
-                + this.indiNav[getCurrentIndicatorCounter + 1].label + ' – '
-                + (this.indiNav[getCurrentIndicatorCounter + 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
-            >
-              <span class="vis-dl">
-                <span>
-                  {{ this.indiNav[getCurrentIndicatorCounter + 1].label }}
+          <span class="navigation-forwards">
+            <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
+              <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
+                :style="{ 'color': '#' + this.indiNav[getCurrentIndicatorCounter + 1].color }"
+                :title="'SDG ' + this.indiNav[getCurrentIndicatorCounter + 1].sdg + ' – '
+                  + this.indiNav[getCurrentIndicatorCounter + 1].label + ' – '
+                  + (this.indiNav[getCurrentIndicatorCounter + 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
+              >
+                <span class="vis-dl">
+                  <span>
+                    {{ this.indiNav[getCurrentIndicatorCounter + 1].label }}
+                  </span>
+                  <i class="icon-angle-right" />
                 </span>
-                <i class="icon-angle-right" />
-              </span>
-            </nuxt-link>
+              </nuxt-link>
+            </span>
           </span>
-        </span>
+        </div>
       </div>
-
 
     </div>
   </div>
@@ -754,13 +754,8 @@
     margin-top: 2rem;
   }
 
-  .navigation-backwards {
-    margin-left: 1rem;
-  }
-
   .navigation-forwards {
     float: right;
-    margin-right: 1rem;
   }
 
   .vis-data-source {
