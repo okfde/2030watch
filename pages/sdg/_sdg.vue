@@ -214,7 +214,7 @@
       this.$refs.indicatorLines.style.marginLeft = marginLeft + this.indicatorMargin * 3 + 'px'
       this.$refs.labelOKF.style.width = marginLeft + 'px'
       this.$refs.labelDNS.style.width = marginLeft + 'px'
-      if (window.innerWidth > 600) {
+      if (window.innerWidth > 800) {
         const heightsummary = Math.max(this.$refs.summaryokf.getBoundingClientRect().height, this.$refs.summarydns.getBoundingClientRect().height)
         this.$refs.summaryokf.style.height = heightsummary + 'px'
         this.$refs.summarydns.style.height = heightsummary + 'px'
@@ -527,11 +527,11 @@
     .summaryokf {
       height: unset;
     }
-    
+
     .process {
       font-size: 2rem;
     }
-    
+
     .section-summarydns {
       margin-bottom: 1.5rem;
     }

@@ -162,7 +162,7 @@
     font-size: 1.4rem;
   }
 
-  @media screen and (max-width: $on-palm) {
+  @media screen and (max-width: $on-laptop) {
     .blogpost-image {
       display: none;
     }

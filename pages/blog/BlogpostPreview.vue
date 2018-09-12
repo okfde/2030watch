@@ -85,7 +85,7 @@ export default {
     margin-bottom: 0.7rem;
   }
 
-  @media screen and (max-width: $on-palm) {
+  @media screen and (max-width: $on-laptop) {
     .blog-post {
       flex-direction: column;
     }

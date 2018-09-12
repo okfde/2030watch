@@ -43,7 +43,7 @@
                   <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['target'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
-                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Ausgangswert Berechnung ({{ indicator['startYear'] }})</td>
+                  <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Ausgangswert Berechnung <span v-if="indicator['startYear']">({{ indicator['startYear'] }})</span></td>
                   <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" v-html="format(indicator['start'], 1, indicator['unitShort'])" />
                 </tr>
                 <tr>
@@ -60,7 +60,7 @@
     <div class="content">
       <VisLeiste :current="indicator.sdg.slug" />
 
-      <div class="wrapper">
+      <div class="wrapper indicator-navigation-top">
         <div class="indicator-navigation">
           <span v-if="getCurrentIndicatorCounter !== 0">
             <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter - 1].slug"
@@ -802,7 +802,7 @@
     margin-bottom: 3rem !important;
   }
 
-  @media screen and (max-width: $on-palm) {
+  @media screen and (max-width: $on-laptop) {
     .txtintroduction {
       margin-bottom: 2rem;
     }
@@ -811,14 +811,8 @@
       padding: 1rem;
     }
 
-    .png-download {
-      margin-right: 0rem;
-      margin-bottom: 0.5rem;
-      margin-top: 0.5rem;
-    }
-
     .sharing {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       margin-bottom: 1.5rem;
     }
 
@@ -828,6 +822,14 @@
 
     .indicator-icon {
       margin-left: 0;
+    }
+
+    .indicator-navigation-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .info-wrapper {
+      padding: 0;
     }
   }
 

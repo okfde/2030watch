@@ -219,7 +219,7 @@
     width: 15rem;
   }
 
-  @media screen and (max-width: $on-palm) {
+  @media screen and (max-width: $on-laptop) {
     .content .section-wrapper {
       flex-direction: column;
     }
