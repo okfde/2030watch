@@ -27,6 +27,4 @@ $ npm run generate:gh-pages
 
 ```
 
-### Move the generated files and folders to the gh-pages branch
-
-And keep the existing CNAME file in the gh-pages branch.
+### Move and push the generated files and folders to the gh-pages branch
