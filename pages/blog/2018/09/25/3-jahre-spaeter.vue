@@ -18,8 +18,8 @@
         <div class="blog-title">
           <div class="title-wrapper">
             <div class="back-btn"><nuxt-link to="/blog">&larr; Übersicht Artikel</nuxt-link></div>
-            <div class="caption">31. August 2018</div>
-            <h2>Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich?</h2>
+            <div class="caption">25. September 2018</div>
+            <h2>3 Jahre später – Wo bleibt das Versprechen einer Transformation?</h2>
           </div>
         </div>
         <div class="blog-image">
@@ -29,32 +29,35 @@
       <section class="blog-body wrapper">
 
         <div>
-          Ab sofort ist unsere Projektseite zur nationalen Umsetzung der globalen Nachhaltigkeitsziele in Deutschland mit allen 17 Zielen und ihren Indikatoren komplett. Auf <nuxt-link to="/">2030-watch.de</nuxt-link> könnt ihr mehr über die Fortschritte der offiziellen Ziele und ihre jeweiligen Indikatoren lernen. Zudem bieten wir zahlreiche ergänzende Indikatoren zur Erweiterung des Nachhaltigkeitsbildes in Deutschland. So könnt ihr einen Perspektivwechsel erleben und der Frage nachgehen: Wie ambitioniert ist die Nachhaltigkeitsdebatte in Deutschland? Wir tun das, weil viele offizielle Ziele zahnlos erscheinen, andere wiederum zu schwach angesetzt sind und manche relevanten Themen schlichtweg gar nicht vorkommen. Die Nachhaltigkeitsstrategie eines der reichsten Länder der Welt kann und sollte sich ein umfassenderes Bild zur Aufgabe machen – inländisch sowie international.
+          Vor 3 Jahren wurde am 25. September 2015 die Agenda 2030 als ein historisches Dokument unter dem Titel <a target="_blank" href="http://www.un.org/Depts/german/gv-70/band1/ar70001.pdf">Transformation unserer Welt</a> von 193 Mitgliedstaaten verabschiedet. Neben der Anerkennung der planetaren Grenzen und Wechselwirkungen von ökologischer Tragfähigkeit, sozialer Gerechtigkeit und Wirtschaftsmodellen wurde das Prinzip der gemeinsamen aber unterschiedlichen Verantwortlichkeiten verankert. Die Verantwortung der reichen Länder für ihre überdurchschnittlichen Auswirkungen auf soziale und ökologische globale Rahmenbedingungen war damit ein zentrales Versprechen der Agenda 2030. Drei Jahre später fragen wir, wurde dieses Versprechen eingehalten?
         </div>
 
         <br />
 
         <div>
-          <h3>Wer, wenn nicht wir?</h3>
-          Wir untersuchen die Nachhaltigkeitsstrategie Deutschlands also aus mehreren Motivationen heraus. Deutschland ist ein hochentwickeltes und konsumstarkes Industrieland mit einem hohen Wohlstandsstatus, der teilweise über Nutzung von Ressourcen Dritter erreicht wird. Allein aus diesem Grund stehen wir in der Verantwortung, Wirkungen unseres (Konsum-)Lebens auf uns und Dritte zu berücksichtigen. Hier zu nennen ist zuallererst der <nuxt-link to="/indicator/okf-ecological-footprint/">ökologische Fußabdruck</nuxt-link>, der bis dato im offiziellen Indikatorkatalog fehlt. Ein weiteres anschauliches Beispiel ist das <nuxt-link to="/indicator/okf-verpackungsmuell/">Verpackungsmüllaufkommen pro Kopf</nuxt-link>. Hier gehören wir zu den Spitzenreitern in Europa. Beide Indikatoren haben wir <nuxt-link to="/sdg/konsum/">SDG 12 Nachhaltiger Konsum und Produktion</nuxt-link> zugeordnet und fordern Wirtschaft, Industrie, Staat und Bürgerinnen zu einem Über- und Umdenken auf. Auch der <nuxt-link to="/indicator/okf-pestizide-landwirtschaft/">Einsatz von Pestiziden in der Landwirtschaft</nuxt-link> in <nuxt-link to="/sdg/ernaehrung/">SDG 2 Kein Hunger</nuxt-link> erzeugt Folgen. Der Einsatz solcher und anderer (oft durch naturverträgliche substituierbarer) Substanzen spielt sozial, ökonomisch und ökologisch über unsere Grenzen hinaus eine weittragende Rolle.
+          In Deutschland wurde die Agenda 2030 in die <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.html?nn=437032" target="_blank">Deutsche Nachhaltigkeitsstrategie</a> übersetzt, die mit 63 Indikatoren die Ziele einer nachhaltigen Transformation bis 2030 darstellt. Bei den Zielen dieser Strategie kommt die Verantwortung, die Deutschland als Industrienation hat, jedoch viel zu kurz. Insgesamt liegt der Schwerpunkt stark auf nationalen Indikatoren. Dabei werden viele der in der Agenda 2030 vereinbarten Unterziele ausgelassen. Beispielsweise gibt es in der Nachhaltigkeitsstrategie der Bundesregierung keine Indikatoren zur internationalen Schuldenpolitik, zu einem globalen Handelssystem oder zu Transparenz und Bürgerbeteiligung. Nur einige wenige Indikatoren messen die internationale Verantwortung Deutschlands. Und oft sind diese Ziele bezogen auf Entwicklungszusammenarbeit. Dies widerspricht dem Ansatzes der Agenda 2030, der die Verantwortung für eine nachhaltige Entwicklung nicht in dem klassischen Nord-Süd Entwicklungsgeflecht sieht.
         </div>
 
         <br />
 
         <div>
-          Auch anders gelagerte politische und wirtschaftliche Strategien und Umsetzungen müssen reformiert werden: So wird über <nuxt-link to="/sdg/infrastruktur/">SDG 9</nuxt-link> das Ziel verfolgt, den Aufbau und Erhalt von widerstandsfähigen Infrastrukturen, die Förderung von breitenwirksamer und nachhaltiger Industrialisierung und Innovationen für eine Nachhaltige Entwicklung zu sichern. Doch bisher findet sich im <a href="https://www.bundesregierung.de/Content/Infomaterial/BPA/Bestellservice/Deutsche_Nachhaltigkeitsstrategie_Neuauflage_2016.pdf?__blob=publicationFile&v=7" target="_blank">Katalog der Deutschen Nachhaltigkeitsstrategie</a> nur ein einzelner offizieller Indikator, der diesen komplexen Kontext beschreibt: <nuxt-link to="/indicator/dns-forschung-und-entwicklung/">Investitionen in Forschung und Entwicklung</nuxt-link>. Deshalb fordern wir, weitere Themen mit einzubeziehen und schlagen gleich vier weitere Indikatoren vor, wie die Anzahl von <nuxt-link to="/indicator/okf-wissenschaftler/">"Wissenschaftler*innen in Forschung und Entwicklung"</nuxt-link> im Vergleich sonstiger Beschäftigter zu berücksichtigen oder den Grad an Bereitstellung offener Daten in Form des <nuxt-link to="/indicator/okf-open-data-index/">"Open Data Index"</nuxt-link>.
+          Die sogenannten "spillover" Auswirkungen der reichen Länder auf Rahmenbedingungen in anderen Ländern ist nicht nur kompliziert, sondern wurden auch lange als nicht so wichtig eingestuft; daher wurden auch für lange Zeit keine Indikatoren hierzu entwickelt bzw. keine Daten erhoben, um Deutschlands Wirkung im Ausland abzubilden. Heute fehlen gute Fortschrittsmaßstäbe, die abbilden, wie gut Deutschland der Agenda 2030 gerecht wird. Das heißt aber nicht, dass wir die Auswirkung Deutschlands im Ausland gar nicht messen können. Auf <a href="/">2030-watch.de</a> schlagen wir folgende ergänzende Indikatoren vor.
         </div>
 
-        <br />
+        <ul>
+          <li>
+            SDG 2: Messen unseres <nuxt-link to="/indicator/okf-fleischkonsum">Fleischkonsums pro Kopf</nuxt-link>. Der Konsum von Fleisch liegt nicht direkt im Einflussbereich der Bundesregierung. Allerdings setzt die deutsche Agrarpolitik die Rahmenbedingungen, die die intensive Fleischproduktion zu Niedrigpreisen ermöglicht und damit einen negativen Umwelteinfluss im In- und Ausland hat.
+          </li>
+          <li>
+            SDG 12: Messen unseres <nuxt-link to="/indicator/okf-ecological-footprint">Ökologischen Fussabdrucks</nuxt-link>, um darauf hinzuweisen, dass ein riesiger Umschwung für Deutschland nötig ist, um innerhalb der planetaren Grenzen zu leben.
+          </li>
+          <li>
+            SDG 16: Messen des <nuxt-link to="/indicator/okf-volumen-waffenexporte">Volumens von deutschen Waffenexporten</nuxt-link>. Wir kommen nicht umhin, das Volumen unserer exportierten Waffen als widersprüchlichen Aspekt von  Friedensentwicklung und -erhalt zu berücksichtigen. Daher sollte nicht nur die Anzahl der Projekte zur Beseitigung von Kleinwaffen gemessen werden, sondern auch die vergangene und zukünftige Verbreitung von deutschen Waffen genauestens beachtet werden. Dafür kann die Messung der Volumina von deutschen Waffenexporten dienen.
+          </li>
+        </ul>
 
         <div>
-          Wir streben mit den Vorschlägen an, die Nachhaltigkeitsdebatte um relevante bisher noch nicht ausreichend berücksichtigte Aspekte zu erweitern, um eine umfassendere Bewertung für eine zukunftsfähige Entwicklung zu fördern.
-        </div>
-
-        <br />
-
-        <div>
-          Die von uns recherchierten Indikatoren sind aus zahlreichen Expert*innen-Quellen. Dazu haben wir die Datenpatenschaften ins Leben gerufen. Ziel von 2030Watch ist es, für jeden Indikator einen Datenpaten zu haben. Datenpaten sind Fachorganisationen, die einen Indikator "adoptieren", den sie für ein Unterziel für sinnvoll halten. Darüber hinaus unterstützen sie das Projekt in der Datenbereitstellung. Bei Interesse, Datenpate zu werden, wendet euch bitte an <a href="mailto:2030-watch@okfn.de">2030-watch@okfn.de</a>. Bei dieser Gelegenheit möchten wir unseren Datenpat*innen herzlichst für ihre Unterstützung bedanken.
+          Das sind nur einige Indikatoren von 2030Watch, um dem transformativen Geist der Agenda 2030 gerecht zu werden. Natürlich ist es oft nicht einfach, angemessene Indikatoren zu finden. Allerdings sollte die Bundesregierung in Zukunft etwas ambitionierter sein. Vor allem im Hinblick auf Umwelt, Klima und Konsum ist die deutsche Gesellschaft kein Vorzeigemodell und das sollte auch in den Indikatoren sichtbar sein.
         </div>
 
       </section>
@@ -62,8 +65,8 @@
       <section class="blog-footer wrapper">
         <span class="caption">Post teilen</span>
         <span class="social-icons">
-          <a :href="'mailto:?subject=' + encodeURIComponent('Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich?') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
-          <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich?')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
+          <a :href="'mailto:?subject=' + encodeURIComponent('3 Jahre später – Wo bleibt das Versprechen einer Transformation?') + '&body=' + encodeURIComponent(link)" title="Blogpost per E-Mail teilen"><i class="icon-mail" /></a>
+          <a :href="'https://twitter.com/share?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent('3 Jahre später – Wo bleibt das Versprechen einer Transformation?')" target="_blank" title="Blogpost auf Twitter teilen"><i class="icon-twitter" /></a>
           <a :href="'https://facebook.com/sharer.php?u=' + encodeURIComponent(link)" target="_blank" title="Blogpost auf Facebook teilen"><i class="icon-facebook-official" /></a>
         </span>
       </section>
@@ -75,7 +78,7 @@
   export default {
     head () {
       return {
-        title: 'Wir müssen reden – Wie ambitioniert ist unsere Nachhaltigkeitsdebatte wirklich? | Blogpost | 2030Watch',
+        title: '3 Jahre später – Wo bleibt das Versprechen einer Transformation? | Blogpost | 2030Watch',
         meta: [
           { hid: 'description', name: 'description', content: 'Blogpost' }
         ]
