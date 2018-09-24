@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="blog-image">
-          <img class="blogpost-image" src="~/assets/img/lena-bell-68534-unsplash.jpg" alt="Blogpost Bild">
+          <img class="blogpost-image" src="~/assets/img/method_illustration.png" alt="Blogpost Bild">
         </div>
       </header>
       <section class="blog-body wrapper">
@@ -41,7 +41,7 @@
         <br />
 
         <div>
-          Die sogenannten "spillover" Auswirkungen der reichen Länder auf Rahmenbedingungen in anderen Ländern ist nicht nur kompliziert, sondern wurden auch lange als nicht so wichtig eingestuft; daher wurden auch für lange Zeit keine Indikatoren hierzu entwickelt bzw. keine Daten erhoben, um Deutschlands Wirkung im Ausland abzubilden. Heute fehlen gute Fortschrittsmaßstäbe, die abbilden, wie gut Deutschland der Agenda 2030 gerecht wird. Das heißt aber nicht, dass wir die Auswirkung Deutschlands im Ausland gar nicht messen können. Auf <a href="/">2030-watch.de</a> schlagen wir folgende ergänzende Indikatoren vor.
+          Die sogenannten "spillover" Auswirkungen der reichen Länder auf Rahmenbedingungen in anderen Ländern ist nicht nur kompliziert, sondern wurden auch lange als nicht so wichtig eingestuft; daher wurden auch für lange Zeit keine Indikatoren hierzu entwickelt bzw. keine Daten erhoben, um Deutschlands Wirkung im Ausland abzubilden. Heute fehlen gute Fortschrittsmaßstäbe, die abbilden, wie gut Deutschland der Agenda 2030 gerecht wird. Das heißt aber nicht, dass wir die Auswirkung Deutschlands im Ausland gar nicht messen können. Auf <a href="/">2030-watch.de</a> schlagen wir folgende ergänzende Indikatoren vor:
         </div>
 
         <ul>
@@ -129,7 +129,7 @@
       flex: 1;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
     }
   }
 
@@ -156,7 +156,7 @@
   }
 
   .blogpost-image {
-    max-width: 400px;
+    max-width: 350px;
   }
 
   h2 {
