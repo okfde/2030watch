@@ -14,7 +14,7 @@
           </nuxt-link>
         </div>
         <div>
-          Vor 3 Jahren wurde am 25. September 2015 die Agenda 2030 als ein historisches Dokument unter dem Titel Transformation unserer Welt von 193 Mitgliedstaaten verabschiedet. Neben der Anerkennung der planetaren Grenzen und Wechselwirkungen von ökologischer Tragfähigkeit, sozialer Gerechtigkeit und Wirtschaftsmodellen wurde das Prinzip der gemeinsamen aber unterschiedlichen Verantwortlichkeiten verankert. Die Verantwortung der reichen Länder für ihre überdurchschnittlichen Auswirkungen auf soziale und ökologische globale Rahmenbedingungen war damit ein zentrales Versprechen der Agenda 2030. Drei Jahre später fragen wir, wurde dieses Versprechen eingehalten?
+          Vor 3 Jahren wurde am 25. September 2015 die Agenda 2030 als ein historisches Dokument unter dem Titel <a target="_blank" href="http://www.un.org/Depts/german/gv-70/band1/ar70001.pdf">Transformation unserer Welt</a> von 193 Mitgliedstaaten verabschiedet. Neben der Anerkennung der planetaren Grenzen und Wechselwirkungen von ökologischer Tragfähigkeit, sozialer Gerechtigkeit und Wirtschaftsmodellen wurde das Prinzip der gemeinsamen aber unterschiedlichen Verantwortlichkeiten verankert. Die Verantwortung der reichen Länder für ihre überdurchschnittlichen Auswirkungen auf soziale und ökologische globale Rahmenbedingungen war damit ein zentrales Versprechen der Agenda 2030. Drei Jahre später fragen wir, wurde dieses Versprechen eingehalten?
           <nuxt-link to="/blog/2018/09/25/3-jahre-spaeter"><span>Mehr lesen …</span></nuxt-link>
         </div>
       </div>
