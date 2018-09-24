@@ -1,6 +1,26 @@
 <template>
   <div>
     <div class="blog-post">
+      <div class="post-img">
+        <nuxt-link to="">
+          <img class="preview-image" src="~/assets/img/method_illustration.png" alt="Blogpost Vorschaubild">
+        </nuxt-link>
+      </div>
+      <div class="post-teaser">
+        <span class="caption">25. September 2018</span>
+        <div class="blog-post-title">
+          <nuxt-link to="/blog/2018/09/25/3-jahre-spaeter">
+            <h3>Title</h3>
+          </nuxt-link>
+        </div>
+        <div>
+          Teaser Text
+          <nuxt-link to="/blog/2018/09/25/3-jahre-spaeter"><span>Mehr lesen …</span></nuxt-link>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-post">
       <div class="post-teaser">
         <span class="caption">31. August 2018</span>
         <div class="blog-post-title">
