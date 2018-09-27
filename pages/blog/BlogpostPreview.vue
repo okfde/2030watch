@@ -1,6 +1,26 @@
 <template>
   <div>
     <div class="blog-post">
+      <div class="post-img">
+        <nuxt-link to="">
+          <img class="preview-image" src="~/assets/img/method_illustration.png" alt="Blogpost Vorschaubild">
+        </nuxt-link>
+      </div>
+      <div class="post-teaser">
+        <span class="caption">25. September 2018</span>
+        <div class="blog-post-title">
+          <nuxt-link to="/blog/2018/09/25/3-jahre-spaeter">
+            <h3>3 Jahre später – Wo bleibt das Versprechen einer Transformation?</h3>
+          </nuxt-link>
+        </div>
+        <div>
+          Vor 3 Jahren wurde am 25. September 2015 die Agenda 2030 als ein historisches Dokument unter dem Titel <a target="_blank" href="http://www.un.org/Depts/german/gv-70/band1/ar70001.pdf">Transformation unserer Welt</a> von 193 Mitgliedstaaten verabschiedet. Neben der Anerkennung der planetaren Grenzen und Wechselwirkungen von ökologischer Tragfähigkeit, sozialer Gerechtigkeit und Wirtschaftsmodellen wurde das Prinzip der gemeinsamen aber unterschiedlichen Verantwortlichkeiten verankert. Die Verantwortung der reichen Länder für ihre überdurchschnittlichen Auswirkungen auf soziale und ökologische globale Rahmenbedingungen war damit ein zentrales Versprechen der Agenda 2030. Drei Jahre später fragen wir, wurde dieses Versprechen eingehalten?
+          <nuxt-link to="/blog/2018/09/25/3-jahre-spaeter"><span>Mehr lesen …</span></nuxt-link>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-post">
       <div class="post-teaser">
         <span class="caption">31. August 2018</span>
         <div class="blog-post-title">

@@ -41,7 +41,7 @@
         <br />
 
         <div>
-          2030Watch untersucht anhand von Indikatoren, wie ambitioniert Deutschland die globalen Nachhaltigkeitsziele umsetzt. Die 2030Watch Indikatoren zeigen, dass der Handlungsbedarf in Deutschland noch viel größer ist, als es sich die Bundesregierung zum Ziel gemacht hat. Zum Beispiel hat sich die Bundesregierung bei <nuxt-link :to="'../sdg/gleichstellung'">SDG 5</nuxt-link> - Geschlechtergerechtigkeit - ein Ziel bei <nuxt-link :to="'../indicator/dns-frauen-wirtschaft-dns'">Frauen in Führungspositionen</nuxt-link> für 2030 gesetzt, dass aber seit 2016 bereits gesetzliche Pflicht ist. 2030Watch bewertet daher dieses Ziel als wenig ambitioniert und fordert einen höheren Zielwert. Damit benennen wir einen größeren Handlungsbedarf.
+          2030Watch untersucht anhand von Indikatoren, wie ambitioniert Deutschland die globalen Nachhaltigkeitsziele umsetzt. Die 2030Watch Indikatoren zeigen, dass der Handlungsbedarf in Deutschland noch viel größer ist, als es sich die Bundesregierung zum Ziel gemacht hat. Zum Beispiel hat sich die Bundesregierung bei <nuxt-link to="/sdg/gleichstellung">SDG 5</nuxt-link> - Geschlechtergerechtigkeit - ein Ziel bei <nuxt-link to="/indicator/dns-frauen-wirtschaft-dns">Frauen in Führungspositionen</nuxt-link> für 2030 gesetzt, dass aber seit 2016 bereits gesetzliche Pflicht ist. 2030Watch bewertet daher dieses Ziel als wenig ambitioniert und fordert einen höheren Zielwert. Damit benennen wir einen größeren Handlungsbedarf.
         </div>
 
         <br />
@@ -59,7 +59,7 @@
         <br />
 
         <div>
-          Stattdessen hat sich die Bundesregierung bei <nuxt-link :to="'../sdg/konsum'">SDG 12</nuxt-link> - Nachhaltiger Konsum und Produktion - zum Ziel gesetzt, Konsum von Nachhaltigen Produkten zu erhöhen, ohne auf die allgemeine Plastikverbräuche einzugehen. 2030Watch fordert ein Umdenken weg vom besseren Konsum zu weniger Konsum und zieht hierzu Indikatoren zu <nuxt-link :to="'../indicator/okf-verpackungsmuell'">Verpackungsmüll</nuxt-link> und <nuxt-link :to="'../indicator/okf-wasserflaschen-konsum'">Verbrauch von Wasserflaschen</nuxt-link> hinzu, um auf die untragbaren Umweltkosten hinzuweisen.
+          Stattdessen hat sich die Bundesregierung bei <nuxt-link to="/sdg/konsum">SDG 12</nuxt-link> - Nachhaltiger Konsum und Produktion - zum Ziel gesetzt, Konsum von Nachhaltigen Produkten zu erhöhen, ohne auf die allgemeine Plastikverbräuche einzugehen. 2030Watch fordert ein Umdenken weg vom besseren Konsum zu weniger Konsum und zieht hierzu Indikatoren zu <nuxt-link to="/indicator/okf-verpackungsmuell">Verpackungsmüll</nuxt-link> und <nuxt-link to="/indicator/okf-wasserflaschen-konsum">Verbrauch von Wasserflaschen</nuxt-link> hinzu, um auf die untragbaren Umweltkosten hinzuweisen.
         </div>
 
         <br />
