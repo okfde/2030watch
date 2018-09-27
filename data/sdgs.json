@@ -8,7 +8,7 @@
     "textIntro": "Nach wie vor leben über 800 Millionen Menschen weltweit in extremer Armut, davon sind ungefähr 70% Frauen.",
     "textIndicators": "SDG 1 beinhaltet neben der Überwindung extremer Armut auch ein Unterziel zur Überwindung relativer Armut, welches sich an nationalen Definitionen orientiert sowie Ziele für einen Basisschutz durch Sozialschutzsysteme ebenso wie Zugang zu Ressourcen und Dienstleistungen für Arme und Schwache. Je nach dem, welche Indikatoren zur Fortschrittsmessung herangezogen werden, wird die Zielerreichung eines nachhaltigeren Deutschlands bis 2030 unterschiedlich bewertet. Die Fortschrittsberechnung der offiziellen Deutschen Nachhaltigkeitsstrategie umfasst 2 Indikatoren. Die von 2030Watch erweiterte Indikatorenliste umfasst 5 Indikatoren.",
     "summaryDns": "Die Deutsche Nachhaltigkeitsstrategie umfasst 2 Indikatoren und misst den Anteil der Bevölkerung, der materielle Entbehrung in Deutschland erfährt. Auf dieser Grundlage würde sich folgender Fortschritt bei diesem Nachhaltigkeitsziel berechnen:",
-    "summary2030": "2030Watch erweiterte Indikatorenliste umfasst 5 Indikatoren mit angepassten Zielwerten für die 2 offiziellen Indikatoren sowie 3 neue Indikatoren, um auf relative Armut vor allen Dingen unter älteren Menschen und Migranten/innen hinzuweisen. Aus diesem ergänzenden Indikatorenset würde sich folgender Fortschritt bei diesem Nachhaltigkeitsziel berechnen:",
+    "summary2030": "2030Watch erweiterte Indikatorenliste umfasst 5 Indikatoren mit angepassten Zielwerten für die 2 offiziellen Indikatoren sowie 2 neue Indikatoren, um auf relative Armut hinzuweisen. Aus diesem ergänzenden Indikatorenset würde sich folgender Fortschritt bei diesem Nachhaltigkeitsziel berechnen:",
     "values": {
       "dns": 445.2631578947368,
       "okf": 31.34257522612417
@@ -3736,8 +3736,8 @@
     "summaryDns": "Die Deutsche Nachhaltigkeitsstrategie umfasst 3 Indikatoren und misst Transfers zwischen Deutschland und dem globalen Süden. Auf dieser Grundlage würde sich folgender Fortschritt bei diesem Nachhaltigkeitsziel berechnen:",
     "summary2030": "2030Watch schlägt eine erweiterte Indikatorenliste vor. Diese erweiterte Indikatorenliste beinhaltet 3 offizielle Indikatoren und fügt 3 Indikatoren hinzu, um die Debatte zu SDG 17 thematisch zu erweitern und macht damit auf Qualität anstatt Quantität der deutschen Entwicklungszusammenarbeit aufmerksam. Aus diesem ergänzenden Indikatorenset würde sich folgender Fortschritt bei diesem Nachhaltigkeitsziel berechnen:",
     "values": {
-      "dns": 64.79387310415333,
-      "okf": 40.37382637214705
+      "dns": 57.23990386503552,
+      "okf": 36.59684175258814
     },
     "ind": {
       "dns": [
@@ -3769,16 +3769,16 @@
           "id": "17_2",
           "author": "dns",
           "label": "Studierende, Forscher aus DCs und LDCs",
-          "unit": "%",
-          "unitShort": "%",
+          "unit": "Anzahl",
+          "unitShort": "Anzahl",
           "goal": "Steigerung um 10% bis 2020 gegenüber 2015, danach Verstetigung",
           "sdg": 17,
-          "progress": 75.1196136627425,
+          "progress": 52.457705945389044,
           "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vToQUUDc2lFQaDGUqSd2MxekW7oJOCMQSc-cg8olSC-fiRTfo8iRLCTXnvodxbi0EwCJ4aWcp90WgcX/pub?gid=1093265483&single=true&output=csv",
           "slug": "dns-studierende-forscher-dc-ldc",
           "target": 286508.4,
           "current": 215258,
-          "start": 136.641,
+          "start": 136641,
           "startYear": "2008",
           "currentYear": "2015",
           "reason": "Basisjahr",
@@ -3918,7 +3918,7 @@
     },
     "rating": {
       "dns": "mittlere Nachhaltigkeit",
-      "okf": "mittlere Nachhaltigkeit"
+      "okf": "geringe Nachhaltigkeit"
     }
   }
 }

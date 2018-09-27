@@ -14,8 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: '2030Watch diskutiert wie ambitioniert Deutschland die Nachhaltigkeitsziele der Agenda 2030 umsetzt.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-      { rel: 'alternate', href: 'https://2030-watch.de', hreflang: 'de' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
   css: [
