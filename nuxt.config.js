@@ -1,4 +1,13 @@
 module.exports = {
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          selector: to.hash
+        }
+      }
+    }
+  },
   modules: [
     ['nuxt-matomo', { matomoUrl: '//traffic.okfn.de/', siteId: 14 }]
   ],
