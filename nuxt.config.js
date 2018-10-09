@@ -1,10 +1,12 @@
 module.exports = {
   router: {
-    scrollBehavior: function (to, from, savedPosition) {
+    scrollBehavior (to, from, savedPosition) {
       if (to.hash) {
-        return {
-          selector: to.hash
-        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve({selector: to.hash})
+          }, 500)
+        })
       }
       if (savedPosition) {
         return savedPosition
