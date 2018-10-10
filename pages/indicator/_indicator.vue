@@ -331,7 +331,7 @@
 
 <script>
   import { mapState } from 'vuex'
-  import VisPieChart from '~/components/VisPieChart.vue'
+  import VisPercentage from '~/components/VisPercentage.vue'
   import VisBarChart from '~/components/VisBarChart.vue'
   import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
@@ -654,7 +654,7 @@
       }
     },
     components: {
-      VisPieChart,
+      VisPercentage,
       VisBarChart,
       VisLineChart,
       VisLeiste,
