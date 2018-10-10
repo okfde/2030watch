@@ -21,16 +21,14 @@
                 <tr :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }">
                   <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }" class="title">Kategorie</td>
                   <td :style="{ 'border-bottom': '1px solid #' + indicator.sdg.color }"> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
-                    <span v-if="category">
-                       <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
-                         <i class="icon-plus-squared" />
-                       </span>
-                       <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
-                         <i class="icon-pencil-squared" />
-                       </span>
-                       <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
-                         <i class="icon-minus-squared" />
-                       </span>
+                    <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
+                      <i class="icon-plus-squared" />
+                    </span>
+                    <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
+                      <i class="icon-pencil-squared" />
+                    </span>
+                    <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
+                      <i class="icon-minus-squared" />
                     </span>
                   </td>
                 </tr>
@@ -176,7 +174,6 @@
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Kategorie</h4>
           <p>{{ indicator.txtcategory }}</p>
 
-
           <h4 :style="{ 'color': '#' + indicator.sdg.color}">Methodik</h4>
           <p>
             <nuxt-link to="/methodik">Hier</nuxt-link> erfährst du mehr darüber wie Indikatoren berechnet und in Kategorien eingeteilt werden.
@@ -198,17 +195,15 @@
               <tr>
                 <td class="title">Kategorie</td>
                 <td> {{ indicator.author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator' }}
-                  <span v-if="category">
-                     <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
-                       <i class="icon-plus-squared" />
-                     </span>
-                     <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
-                       <i class="icon-pencil-squared" />
-                     </span>
-                     <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
-                       <i class="icon-minus-squared" />
-                     </span>
-                  </span>
+                  <span v-if="indicator.newIndicator" title="Neuer Indikator" class="indicator-icon">
+                     <i class="icon-plus-squared" />
+                   </span>
+                   <span v-if="indicator.modTarget" title="Modifizierter Zielwert" class="indicator-icon">
+                     <i class="icon-pencil-squared" />
+                   </span>
+                   <span v-if="indicator.uncalculable" title="Nicht berechenbar" class="indicator-icon">
+                     <i class="icon-minus-squared" />
+                   </span>
                 </td>
               </tr>
               <tr>
@@ -628,19 +623,6 @@
       },
       hasTimeline () {
         return typeof this.indicator.timeline !== 'undefined'
-      },
-      category () {
-        const { indicator } = this
-        const categories = []
-        // TODO check categories
-        if (indicator.author === 'okf') { categories.push('neuer Indikator') }
-        if (indicator.badIndicator) { categories.push('ungeeigneter Indikator') }
-        if (indicator.keep) { categories.push('übernommener Indikator') }
-        if (indicator.badTarget) { categories.push('aussageloser Zielwert') }
-        if (indicator.modTarget) { categories.push('modifizierter Zielwert') }
-        if (indicator.uncalculable) { categories.push('nicht berechenbar') }
-        if (indicator.spill) { categories.push('Spillover') }
-        return categories.length ? categories.join(', ') : false
       },
       countriesDownload () {
         const data = _.concat(this.metadata, [['country', 'value']], this.countries)
