@@ -42,12 +42,9 @@ h6 {
   letter-spacing: 0.02em;
 }
 
-p + p {
-  margin-top: 1em;
-}
-
 p {
   font-size: 1rem;
+  margin-top: 1em;
 
   .dns {
     color: $color-dns;

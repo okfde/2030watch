@@ -331,7 +331,7 @@
 
 <script>
   import { mapState } from 'vuex'
-  import VisPieChart from '~/components/VisPieChart.vue'
+  import VisPercentage from '~/components/VisPercentage.vue'
   import VisBarChart from '~/components/VisBarChart.vue'
   import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
@@ -397,8 +397,9 @@
     },
     mounted: function () {
       // TODO check for better way to use router base
-      const base = this.$router.options.base === '/' ? '' : this.$router.options.base
-      this.link = window.location.origin + base + this.$route.fullPath
+      // const base = this.$router.options.base === '/' ? '' : this.$router.options.base
+      // this.link = window.location.origin + base + this.$route.fullPath
+      this.link = window.location.href
       this.updateBarChart()
       const color = '#' + this.indicator.sdg.color
       this.sdgColorLighter = tinycolor(color).darken(7).toString()
@@ -654,7 +655,7 @@
       }
     },
     components: {
-      VisPieChart,
+      VisPercentage,
       VisBarChart,
       VisLineChart,
       VisLeiste,

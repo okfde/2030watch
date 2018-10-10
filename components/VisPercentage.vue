@@ -1,17 +1,10 @@
 <template>
-  <div class="vis-piechart">
+  <div class="vis-chart">
     <span
       :class="{ 'vis-number': true, 'tiny': tiny }"
       :style="{ color: '#' + fill, 'font-size': size }"
       v-html="format(value)"
     />
-    <!-- <svg class="vis-process" viewBox="-1 -1 2 2">
-      <circle cx="0" cy="0" r="1" fill="rgba(0, 0, 0, .1)" />
-      <g style="transform: rotate(-0.25turn)">
-        <path :d="path" :fill="'#' + fill"></path>
-      </g>
-      <circle cx="0" cy="0" r="0.7" :fill="'#' + background" />
-    </svg> -->
   </div>
 </template>
 
@@ -34,7 +27,7 @@
     return [x, y]
   }
 
-  function getPieChart (value) {
+  function getChart (value) {
     const percent = value
 
     const startX = getCoordinatesForPercent(0)[0]
@@ -71,17 +64,9 @@
     },
     computed: {
       path () {
-        return getPieChart(getValueInRange(this.value / 100))
+        return getChart(getValueInRange(this.value / 100))
       },
       size () {
-        // const chars = this.format(this.value).toString().split('&')[0].length
-        // if (chars <= 2) {
-        //   return '1.6rem'
-        // }
-        // if (chars === 3) {
-        //   return '1.2rem'
-        // }
-        // return '1rem'
         return '3.2rem'
       }
     },
@@ -92,7 +77,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .vis-piechart {
+  .vis-chart {
     position: relative;
     display: flex;
     align-items: center;

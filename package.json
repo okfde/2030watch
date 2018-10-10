@@ -27,7 +27,8 @@
     "nuxt-matomo": "^0.5.0",
     "request": "^2.88.0",
     "tinycolor2": "^1.4.1",
-    "vue-chartjs": "^3.4.0"
+    "vue-chartjs": "^3.4.0",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

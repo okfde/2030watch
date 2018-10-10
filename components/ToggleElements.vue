@@ -57,8 +57,7 @@
     methods: {
       toggle: function (sdg) {
         sdg.isActive = !sdg.isActive
-        // TODO find another solution
-        // this is a workaround since the update doesn't get detected (!)
+        // this is a workaround since the update doesn't get detected otherwise
         this.sdgsCopy.splice(0, 0)
       },
       addActivityStatus: function () {
