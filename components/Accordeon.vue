@@ -35,4 +35,14 @@
       font-weight: bold;
     }
   }
+
+  ul {
+    padding: 0;
+  }
+
+  ul li, ol li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 </style>
