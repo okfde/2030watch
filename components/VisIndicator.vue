@@ -7,8 +7,7 @@
       <hr style="margin-top:0.3rem;" :class="[ i.author === 'dns' ? 'hr-dns' : 'hr-okf']" />
       <div class="value-target">Indikator-Ziel für 2030 erreicht zu:</div>
 
-      <!-- No piechart anymore -> TODO change name or add new component  -->
-      <VisPieChart :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
+      <VisPercentage :value="i.progress" :fill="colorChart" background="ffffff" :tiny="tiny" />
 
       <div class="values">
         <div class="values-padding">
@@ -43,7 +42,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import VisPieChart from '~/components/VisPieChart.vue'
+  import VisPercentage from '~/components/VisPercentage.vue'
   import format from '~/assets/js/format.js'
 
   export default {
@@ -87,7 +86,7 @@
       format: format
     },
     components: {
-      VisPieChart
+      VisPercentage
     }
   }
 </script>
@@ -205,5 +204,4 @@
   .position-relative {
     position: relative;
   }
-
 </style>
