@@ -46,4 +46,7 @@
 </script>
 
 <style lang="scss" scoped>
+  .page-nav > ul{
+    padding: 0;
+  }
 </style>
