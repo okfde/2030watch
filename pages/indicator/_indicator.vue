@@ -397,8 +397,9 @@
     },
     mounted: function () {
       // TODO check for better way to use router base
-      const base = this.$router.options.base === '/' ? '' : this.$router.options.base
-      this.link = window.location.origin + base + this.$route.fullPath
+      // const base = this.$router.options.base === '/' ? '' : this.$router.options.base
+      // this.link = window.location.origin + base + this.$route.fullPath
+      this.link = window.location.href
       this.updateBarChart()
       const color = '#' + this.indicator.sdg.color
       this.sdgColorLighter = tinycolor(color).darken(7).toString()

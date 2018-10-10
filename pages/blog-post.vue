@@ -138,9 +138,10 @@
       }
     },
     mounted: function () {
+      this.link = window.location.href
       // TODO check for better way to use router base
-      const base = this.$router.options.base === '/' ? '' : this.$router.options.base
-      this.link = window.location.origin + base + this.$route.fullPath
+      // const base = this.$router.options.base === '/' ? '' : this.$router.options.base
+      // this.link = window.location.origin + base + this.$route.fullPath
     }
   }
 </script>
