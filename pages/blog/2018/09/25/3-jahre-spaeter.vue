@@ -3,14 +3,10 @@
     <header class="inpage-header">
       <div class="wrapper">
         <h1>Blog</h1>
-        <section class="columns columns-gutter">
-          <div>
-            <p>
-              Hier erfährst du mehr zu aktuellen Themen rund um 2030Watch und unseren Aktivitäten.<br />
-              Du möchtest über ein Thema, welches wir als Indikator haben, bloggen, dann melde dich bei uns.
-            </p>
-          </div>
-        </section>
+        <p>
+          Hier erfährst du mehr zu aktuellen Themen rund um 2030Watch und unseren Aktivitäten.<br />
+          Du möchtest über ein Thema, welches wir als Indikator haben, bloggen, dann melde dich bei uns.
+        </p>
       </div>
     </header>
     <div class="content">
@@ -117,20 +113,6 @@ Das sind nur einige Indikatoren von 2030Watch, um dem transformativen Geist der 
       display: flex;
       justify-content: center;
       align-items: flex-end;
-    }
-  }
-
-  .blog-body {
-    p, ul {
-      margin: 0 0 $spacing 0;
-    }
-
-    ul {
-      padding-left: $spacing;
-
-      li {
-        list-style-type: circle;
-      }
     }
   }
 
