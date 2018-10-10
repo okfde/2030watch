@@ -48,6 +48,16 @@
 <style lang="scss" scoped>
   @import '~@/assets/style/variables';
 
+  ul {
+    padding: 0;
+  }
+
+  ul li, ol li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
   .social-icons {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
