@@ -11,11 +11,12 @@ branches:
   - master
 
 install:
-  - npm install
-  - npm run generate:gh-pages
+  - npm ci
 
 script:
-  - echo "Skipping tests"
+  - node data/load-data.js
+  - mv indiNav.json sdgs.json indicators.json ./data/
+  - npm run generate:gh-pages
 
 deploy:
   provider: pages
