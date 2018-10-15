@@ -38,7 +38,7 @@
     <div class="tracking-info">
       <p>2030Watch nutzt statt den üblichen externen Dienstleistern die datenschutzfreundlichere
       Technologie von <a target="_blank" href="https://matomo.org">Matomo</a>, um statistische
-      Auswertungen der Seitennutzung zu erhalten. Wenn sie dies nicht wollen, klicken Sie bitte
+      Auswertungen der Seitennutzung zu erhalten. Wenn Sie dies nicht wollen, klicken Sie bitte
       <a target="_blank" href="https://traffic.okfn.de/index.php?module=CoreAdminHome&action=optOut&language=de">hier</a>
       und entfernen Sie den Haken. Näheres in <a target="_blank" href="https://okfn.de/impressum/#datenschutzerklaerung">unserer Datenschutzerklärung</a>.</p>
     </div>
