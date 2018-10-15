@@ -327,8 +327,6 @@
 <script>
   import { mapState } from 'vuex'
   import VisPercentage from '~/components/VisPercentage.vue'
-  import VisBarChart from '~/components/VisBarChart.vue'
-  import VisLineChart from '~/components/VisLineChart.vue'
   import format from '~/assets/js/format.js'
   import VisLeiste from '~/components/VisLeiste.vue'
   import _ from 'lodash'
@@ -635,8 +633,6 @@
     },
     components: {
       VisPercentage,
-      VisBarChart,
-      VisLineChart,
       VisLeiste,
       BarChart,
       LineChart
