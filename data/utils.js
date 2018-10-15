@@ -34,7 +34,7 @@ module.exports = {
       if (content.length === 0) {
         console.log('No content found')
       } else {
-        callback([header, content])
+        callback([header, content]) // eslint-disable-line standard/no-callback-literal
       }
     } else {
       console.log('No content found')
@@ -48,7 +48,7 @@ module.exports = {
       const headerOKF = _.slice(header, splitPoint)
 
       if (_.indexOf(headerDNS, dnsID) !== -1 && _.indexOf(headerOKF, okfID) !== -1) {
-        callback([headerDNS, headerOKF, splitPoint])
+        callback([headerDNS, headerOKF, splitPoint]) // eslint-disable-line standard/no-callback-literal
       } else {
         console.log('No column found for indicator id (' + dnsID + ', ' + okfID + ')')
       }
@@ -64,7 +64,7 @@ module.exports = {
       dnsArr.push(_.slice(row, 0, splitPoint))
       okfArr.push(_.slice(row, splitPoint))
     })
-    callback([dnsArr, okfArr])
+    callback([dnsArr, okfArr]) // eslint-disable-line standard/no-callback-literal
   },
   writeJSONFile: function (file, obj) {
     jsonfile.writeFile(file, obj, { spaces: 2 }, err => {
