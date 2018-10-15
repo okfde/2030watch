@@ -19,7 +19,18 @@ $ npm run dev
 ```
 
 
-## Deployment
+## Automatic deployment
+
+After pushing/merging your feature branch into the master branch Travis CI builds the static files and deploys them to GitHub Pages. For this Travis executes the followings steps:
+
+```
+node data/load-data.js // load and assemble the current data
+mv indiNav.json sdgs.json indicators.json ./data/ // move the generated files into the data folder
+npm run generate:gh-pages // generate the static files
+```
+
+
+## Manual deployment (not done anymore)
 
 ### Generate the dist folder for publishing with GitHub Pages
 

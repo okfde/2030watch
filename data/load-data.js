@@ -449,7 +449,7 @@ function requestIndicatorDetail (indicator, callback) {
       })
     })
   } else {
-    callback(false)
+    callback(false) // eslint-disable-line standard/no-callback-literal
   }
 }
 
