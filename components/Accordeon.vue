@@ -2,7 +2,7 @@
   <ul>
     <li v-for="item in faqs" class="item" :id="item.id">
       <Collapse :title="item.title">
-        <div v-html="item.body"></div>
+        <vue-markdown>{{ item.body }}</vue-markdown>
       </Collapse>
     </li>
   </ul>
@@ -10,11 +10,13 @@
 
 <script>
   import Collapse from '~/components/Collapse.vue'
+  import VueMarkdown from 'vue-markdown'
 
   export default {
     props: ['faqs'],
     components: {
-      Collapse
+      Collapse,
+      VueMarkdown
     }
   }
 </script>
