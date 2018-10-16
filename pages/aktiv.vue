@@ -25,14 +25,6 @@
 
 <script>
   export default {
-    computed: {
-    },
-    methods: {
-    },
-    directives: {
-    },
-    components: {
-    },
     head () {
       return {
         title: 'Werde aktiv | 2030Watch',
@@ -49,19 +41,14 @@
 
   .content {
     section {
-
        &:nth-child(even){
         background: $color-light;
       }
-
       .wrapper {
-
         .activity {
           margin-bottom: $spacing;
-
           ul {
             padding-left: $spacing;
-
             li {
               list-style-type: circle;
             }
@@ -70,5 +57,4 @@
       }
     }
   }
-
 </style>
