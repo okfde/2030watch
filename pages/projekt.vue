@@ -51,7 +51,7 @@ Das Kernstück der Agenda bildet ein ehrgeiziger Katalog mit 17 Zielen für nach
           body: `
 Die 2030 Agenda ist eine freiwillige Selbstverpflichtung der Regierungen aus 193 Ländern. Dazu "übersetzen" alle beteiligten Länder den globalen SDG-Katalog in einen eigenen Fahrplan, um die globalen Nachhaltigkeitsziele umzusetzen. In Deutschland ist die Deutsche Nachhaltigkeitsstrategie (DNS) der zentrale Umsetzungsrahmen der Agenda 2030.
 
-Die United Nations (UN) spielt bei der Koordinierung der 2030 Agenda und der Weiterentwicklung des SDG-Indikatorenkatalogs eine entscheidende Rolle. Zivilgesellschaftliche Gruppen, Wissenschaftler*innen und Unternehmen sind aufgerufen, sich ebenfalls an der Umsetzung der Agenda zu beteiligen, allerdings gibt es dazu keine formelle Selbstverpflichtung.
+Die United Nations (UN) spielt bei der Koordinierung der 2030 Agenda und der Weiterentwicklung des SDG-Indikatorenkatalogs eine entscheidende Rolle. Zivilgesellschaftliche Gruppen, Wissenschaftler&ast;innen und Unternehmen sind aufgerufen, sich ebenfalls an der Umsetzung der Agenda zu beteiligen, allerdings gibt es dazu keine formelle Selbstverpflichtung.
           `
         }
         ],
@@ -72,7 +72,7 @@ Um diese Vision zu verfolgen, zeichnet 2030Watch anhand von Indikatoren ein Bild
           title: 'Wen wollen wir mit 2030Watch erreichen?',
           id: 'ziel-wen-erreichen',
           body: `
-Wir wollen mit 2030Watch mehrere Zielgruppen erreichen: primär zivilgesellschaftliche Organisationen wie Vereine und Bürgerinitiativen, die zu SDG Themen arbeiten und interessierte Bürgerinnen und Bürger. Darüber hinaus hoffen wir, auch Journalist*innen und Politiker*innen sowie Nichtregierungsorganisationen zu erreichen.
+Wir wollen mit 2030Watch mehrere Zielgruppen erreichen: primär zivilgesellschaftliche Organisationen wie Vereine und Bürgerinitiativen, die zu SDG Themen arbeiten und interessierte Bürgerinnen und Bürger. Darüber hinaus hoffen wir, auch Journalist&ast;innen und Politiker&ast;innen sowie Nichtregierungsorganisationen zu erreichen.
           `
         },
         {

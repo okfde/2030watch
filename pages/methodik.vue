@@ -31,7 +31,7 @@ Auf 2030-watch.de werden hierzu weitere Indikatoren hinzugezogen, die größtent
           title: 'Wie hat 2030Watch Indikatoren ausgewählt?',
           id: 'methode-indikatoren-auswahl',
           body: `
-Die ergänzenden Indikatoren hat 2030Watch geprüft und nach eigener Bewertung ausgewählt. Die Auswahl beruht auf unserer Recherche, Indikatorvorschlägen nichtstaatlicher Akteure und auf Gesprächen mit Expert*innen aus Zivilgesellschaft und Forschung.
+Die ergänzenden Indikatoren hat 2030Watch geprüft und nach eigener Bewertung ausgewählt. Die Auswahl beruht auf unserer Recherche, Indikatorvorschlägen nichtstaatlicher Akteure und auf Gesprächen mit Expert&ast;innen aus Zivilgesellschaft und Forschung.
 
 Unsere Auswahlkriterien sind:
 1. Das SDG Unterziel ist für Deutschland relevant.
