@@ -21,6 +21,11 @@ $color-2030:        #023753;
 
 $darker: 7%;
 
+:export {
+  colorDns: $color-dns;
+  color2030: $color-2030;
+}
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
