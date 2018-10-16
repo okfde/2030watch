@@ -333,6 +333,7 @@
   import BarChart from '~/components/BarChart.js'
   import LineChart from '~/components/LineChart.js'
   import html2canvas from 'html2canvas'
+  import variables from '~/assets/style/variables.scss'
   const tinycolor = require('tinycolor2')
 
   export default {
@@ -365,13 +366,31 @@
         this.canvasToSRC = image
       },
       updateBarChart () {
+        // initialize array with colors for single bars
+        let colorArray = []
+        for (let i = 0; i < this.getCountries.length; i++) {
+          colorArray.push(variables.color2030)
+        }
+        let indexGermany, labels, values
+        // locate position of Germany and change bar color
+        // assemble labels and values
+        if (this.sortedByValue) {
+          indexGermany = this.getCountries.indexOf('Germany')
+          labels = this.getCountries
+          values = this.getValues
+        } else {
+          indexGermany = this.getCountriesSortedByValue.indexOf('Germany')
+          labels = this.getCountriesSortedByValue
+          values = this.getSortedValues
+        }
+        colorArray[indexGermany] = variables.colorDns
         this.datacollection = {
-          labels: this.sortedByValue ? this.getCountries : this.getCountriesSortedByValue,
+          labels: labels,
           datasets: [
             {
               label: this.indicator.unitShort,
-              backgroundColor: '#023753',
-              data: this.sortedByValue ? this.getValues : this.getSortedValues
+              backgroundColor: colorArray,
+              data: values
             }
           ]
         }
