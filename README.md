@@ -3,18 +3,24 @@
 [![Build Status](https://travis-ci.org/okfde/2030watch.svg?branch=master)](https://travis-ci.org/okfde/2030watch)
 
 
-## Local setup
+## Setup
+
+### Requirements
+
+* [Node.js and npm](https://nodejs.org/en/download/package-manager/) (included in Node.js)
+
+### Build
 
 ``` bash
 
 # Install dependencies
-$ npm install
+npm install
 
 # Generate data files and move them into the data folder
-$ node data/load-data.js && mv indiNav.json sdgs.json indicators.json ./data/
+node data/load-data.js && mv indiNav.json sdgs.json indicators.json ./data/
 
 # Serve with hot reload at localhost:3010
-$ npm run dev
+npm run dev
 
 ```
 
@@ -36,7 +42,7 @@ npm run generate:gh-pages // generate the static files
 
 ``` bash
 
-$ npm run generate:gh-pages
+npm run generate:gh-pages
 
 ```
 
