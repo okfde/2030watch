@@ -1,3 +1,13 @@
+const routes = () => {
+  const indicators = Object.keys(JSON.parse(require('fs').readFileSync('data/indicators.json', 'utf8'))).map((data) => {
+    return '/indicator/' + data
+  })
+  const sdgs = Object.keys(JSON.parse(require('fs').readFileSync('data/sdgs.json', 'utf8'))).map((data) => {
+    return '/sdg/' + data
+  })
+  return [...indicators, ...sdgs]
+}
+
 module.exports = {
   router: {
     scrollBehavior: function (to, from, savedPosition) {
@@ -16,7 +26,8 @@ module.exports = {
     }
   },
   modules: [
-    ['nuxt-matomo', { matomoUrl: '//traffic.okfn.de/', siteId: 14 }]
+    ['nuxt-matomo', { matomoUrl: '//traffic.okfn.de/', siteId: 14 }],
+    ['@nuxtjs/sitemap', { path: '/sitemap.xml', generate: true, hostname: 'https://www.2030-watch.de', routes: routes }]
   ],
   // Page headers
   head: {
@@ -40,15 +51,7 @@ module.exports = {
     '@/assets/style/base.scss'
   ],
   generate: {
-    routes: function () {
-      const indicators = Object.keys(JSON.parse(require('fs').readFileSync('data/indicators.json', 'utf8'))).map((data) => {
-        return '/indicator/' + data
-      })
-      const sdgs = Object.keys(JSON.parse(require('fs').readFileSync('data/sdgs.json', 'utf8'))).map((data) => {
-        return '/sdg/' + data
-      })
-      return [...indicators, ...sdgs]
-    },
+    routes: routes,
     fallback: '404.html'
   },
   /*
