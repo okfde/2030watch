@@ -16,6 +16,7 @@
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^0.1.1",
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.2",
     "csv-parse": "^2.5.0",
