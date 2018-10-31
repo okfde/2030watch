@@ -110,7 +110,7 @@
           <div class="section-wrapper section-wrapper-financial-report">
             <div class="section-text">
               <p>
-                Coming soon
+                <a href="/document/Finanzuebersicht_2030Watch_2016-2018.pdf">Finanzübersicht</a>
               </p>
             </div>
           </div>
