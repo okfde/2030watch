@@ -1,5 +1,27 @@
 <template>
   <div>
+  <div class="blog-post">
+      <div class="post-img">
+        <nuxt-link to="">
+          <img class="preview-image" src="~/assets/img/BUB_Logo_RGB.jpg" alt="Blogpost Vorschaubild">
+        </nuxt-link>
+      </div>
+      <div class="post-teaser">
+        <span class="caption">20. November 2018</span>
+        <div class="blog-post-title">
+          <nuxt-link to="/blog/2018/11/20/bits-baeume-rueckblick">
+            <h3>Bits&Bäume - eine Konferenz, die Communities zusammen bringt!</h3>
+          </nuxt-link>
+        </div>
+        <div>
+         Ein kleiner Rückblick zur Bits & Bäume Konferenz
+Die Konferenz “Bits&Bäume” in der TU Berlin ist am letzten Wochenende (17.11. bis 18.11.2018) erfolgreich zu Ende gegangen. 10 Organisationen haben sich vor anderthalb Jahren zusammengeschlossen und als ein gemeinsamer Trägerkreis aus der netz-, umwelt- und entwicklungspolitischen Szene die Konferenz mit viel Liebe zum Detail organisiert. Auch der Trägerverein von 2030Watch, die Open Knowledge Foundation (OKF), gehört dazu und hat tatkräftig mitgemischt. Auch 2030Watch war mit dabei! 
+          <nuxt-link to="/blog/2018/11/20/bits-baeume-rueckblick"><span>Mehr lesen …</span></nuxt-link>
+        </div>
+      </div>
+    </div>
+  
+  
     <div class="blog-post">
       <div class="post-img">
         <nuxt-link to="">
