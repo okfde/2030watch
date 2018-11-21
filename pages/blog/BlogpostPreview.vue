@@ -14,7 +14,7 @@
           </nuxt-link>
         </div>
         <div>
-         Ein kleiner Rückblick zur Bits & Bäume Konferenz
+         Ein kleiner Rückblick zur Bits&Bäume Konferenz</br>
 Die Konferenz “Bits&Bäume” in der TU Berlin ist am letzten Wochenende (17.11. bis 18.11.2018) erfolgreich zu Ende gegangen. 10 Organisationen haben sich vor anderthalb Jahren zusammengeschlossen und als ein gemeinsamer Trägerkreis aus der netz-, umwelt- und entwicklungspolitischen Szene die Konferenz mit viel Liebe zum Detail organisiert. Auch der Trägerverein von 2030Watch, die Open Knowledge Foundation (OKF), gehört dazu und hat tatkräftig mitgemischt. Auch 2030Watch war mit dabei! 
           <nuxt-link to="/blog/2018/11/20/bits-baeume-rueckblick"><span>Mehr lesen …</span></nuxt-link>
         </div>
