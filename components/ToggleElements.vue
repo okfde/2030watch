@@ -23,7 +23,7 @@
       <transition name="fade">
         <div class="card" v-show="sdg.isActive">
           <div class="card-content card-content-mobile">
-            <h6 class="dns">Offizielle Indikatoren:</h6>
+            <h6 class="dns subtitle-margin">Offizielle Indikatoren:</h6>
             <div v-for="elem in sdg.ind.dns" class="indicator-link">
               <nuxt-link :to="'indicator/' + elem.slug" class="gray-indicators">
                 {{ elem.label }}
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="card-content card-content-okf">
-            <h6 class="okf">2030Watch Indikatoren:</h6>
+            <h6 class="okf subtitle-margin">2030Watch Indikatoren:</h6>
             <div v-for="elem in sdg.ind.okf" class="indicator-link">
               <nuxt-link :to="'indicator/' + elem.slug" class="gray-indicators">
                 {{ elem.label }}
@@ -81,6 +81,10 @@
 <style lang="scss" scoped>
   @import '~@/assets/style/variables';
 
+  .subtitle-margin {
+    margin-bottom: 0.5rem;
+  }
+
   .card {
     padding: 1.9rem;
     flex: 1;
@@ -97,6 +101,7 @@
   }
 
   .indicator-link {
+    margin-bottom: 0.5rem;
     :hover {
       color: darken(#757575, 11%);
     }

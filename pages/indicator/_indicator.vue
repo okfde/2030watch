@@ -67,14 +67,14 @@
             + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
             + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
             >
-            <span class="vis-dl">
-              <i class="icon-angle-left" />
-              <span>
-                {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
+              <span class="vis-dl">
+                <i class="icon-angle-left" />
+                <span>
+                  {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
+                </span>
               </span>
-            </span>
-          </nuxt-link>
-        </span>
+            </nuxt-link>
+          </span>
           <span class="navigation-forwards">
             <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
               <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
@@ -384,6 +384,7 @@
           values = this.getSortedValues
         }
         colorArray[indexGermany] = variables.colorDns
+
         this.datacollection = {
           labels: labels,
           datasets: [
@@ -552,7 +553,7 @@
       getValues () {
         const keys = Object.keys(this.indicator.countries)
         let values = []
-        keys.slice(0, keys.length - 1).map(key => {
+        keys.slice(0, keys.length).map(key => {
           values.push(this.indicator.countries[key])
         })
         return values
@@ -783,6 +784,7 @@
 
   .h2-txt2030target {
     color: $color-default !important;
+    clear: both;
   }
 
   .inpage-header {
