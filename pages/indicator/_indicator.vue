@@ -384,6 +384,7 @@
           values = this.getSortedValues
         }
         colorArray[indexGermany] = variables.colorDns
+
         this.datacollection = {
           labels: labels,
           datasets: [
@@ -552,7 +553,7 @@
       getValues () {
         const keys = Object.keys(this.indicator.countries)
         let values = []
-        keys.slice(0, keys.length - 1).map(key => {
+        keys.slice(0, keys.length).map(key => {
           values.push(this.indicator.countries[key])
         })
         return values
