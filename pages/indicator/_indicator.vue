@@ -67,14 +67,14 @@
             + this.indiNav[getCurrentIndicatorCounter - 1].label + ' – '
             + (this.indiNav[getCurrentIndicatorCounter - 1].author === 'dns' ? 'Offizieller Indikator' : '2030Watch Indikator') "
             >
-            <span class="vis-dl">
-              <i class="icon-angle-left" />
-              <span>
-                {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
+              <span class="vis-dl">
+                <i class="icon-angle-left" />
+                <span>
+                  {{ this.indiNav[getCurrentIndicatorCounter - 1].label }}
+                </span>
               </span>
-            </span>
-          </nuxt-link>
-        </span>
+            </nuxt-link>
+          </span>
           <span class="navigation-forwards">
             <span v-if="getCurrentIndicatorCounter !== this.indiNav.length - 1">
               <nuxt-link :to="'/indicator/' + this.indiNav[getCurrentIndicatorCounter + 1].slug"
@@ -784,6 +784,7 @@
 
   .h2-txt2030target {
     color: $color-default !important;
+    clear: both;
   }
 
   .inpage-header {
