@@ -42,6 +42,9 @@
     height: 25px;
     list-style: none;
     transition-duration: 2s; // Duration for size change
+    // chrome's user agent stylesheet sets padding to 40px after (re)loading indicator view
+    // this fixes the misplaced sdg-bar
+    padding-inline-start: 0px;
   }
 
   .sdg-band-item {
