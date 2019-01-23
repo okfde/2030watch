@@ -27,18 +27,6 @@
         </div>
       </section>
 
-      <section>
-        <div class="wrapper">
-          <h2>Team</h2>
-          <div class="section-wrapper">
-            <team-member
-              v-for="(member, key) in team"
-              :key="key"
-              :member="member"
-            ></team-member>
-          </div>
-        </div>
-      </section>
 
       <section>
         <div class="wrapper">
