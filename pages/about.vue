@@ -17,7 +17,7 @@
                 2030Watch zeigt eine ergänzende Sichtweise, wie gut Deutschland die globalen Nachhaltigkeitsziele umsetzt. Ist Deutschland auf dem Weg einer Transformation, wie in der Agenda 2030 vorgesehen? 2030Watch untersucht diese Frage anhand von Indikatoren: Wie wird die Umsetzung zu einer Nachhaltigen Entwicklung in Deutschland gemessen? Was wird übersehen? Wie stellen wir sicher, dass das Prinzip "Leave No One Behind" (Lass niemanden zurück) nicht außer Acht gelassen wird? Dazu vergleicht 2030Watch die offiziellen Indikatoren der deutschen Nachhaltigkeitsstrategien mit zusätzlichen Indikatoren.
               </p>
               <p>
-                2030Watch wird hauptsächlich durch das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) im Rahmen des von Engagement Global verwalteten Förderprogramms für Entwicklungspolitische Bildung (FEB) sowie von Brot für die Welt (BfdW) und der Landesstelle für Entwicklungszusammenarbeit (LEZ) gefördert. Das vorgesehene Projektbudget für 2017-2018 beträgt ca. 214 000 Euro: 75% des Budgets werden vom FEB Programm des BMZ getragen, 23% von Brot für die Welt/EED und 2% LEZ Berlin.
+                2030Watch wurde hauptsächlich durch das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) im Rahmen des von Engagement Global verwalteten Förderprogramms für Entwicklungspolitische Bildung (FEB) sowie von Brot für die Welt (BfdW) und der Landesstelle für Entwicklungszusammenarbeit (LEZ) gefördert. Das vorgesehene Projektbudget für 2017-2018 betrug ca. 214 000 Euro: 75% des Budgets wurden vom FEB Programm des BMZ getragen, 23% von Brot für die Welt/EED und 2% LEZ Berlin.
               </p>
             </div>
             <div class="section-img">
