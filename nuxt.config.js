@@ -26,7 +26,6 @@ module.exports = {
     }
   },
   modules: [
-    ['nuxt-matomo', { matomoUrl: '//traffic.okfn.de/', siteId: 14 }],
     ['@nuxtjs/sitemap', { path: '/sitemap.xml', generate: true, hostname: 'https://www.2030-watch.de', routes: routes }]
   ],
   // Page headers
